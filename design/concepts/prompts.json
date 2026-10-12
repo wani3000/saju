@@ -1,0 +1,25 @@
+{
+  "tool": "built-in image_gen",
+  "displayOrder": [
+    {
+      "option": 1,
+      "name": "맑은 관계",
+      "file": "01-clear.png",
+      "prompt": "Create realistic production-quality Korean mobile web UI concept named '맑은 관계'. Redesign the attached reference completely for OLDER ADULTS: the reference is a problem example of tiny text and too many services, NOT assets to copy. No original brand, mascots or copied copy. Target dimensions 390x844 proportions, app content only, no device bezel OS status bar or browser chrome. One focused result screen. White base, deep teal accent, black high contrast Korean sans serif; body 20px equivalent, headings 30px equivalent, buttons 56px, generous whitespace. Top back label '뒤로', small brand '가까운 사이'. Large title '나와 민수님의 궁합'. Readable result headline '함께 있으면 편안한 사이'. Two short sentences '서로의 속도를 존중하면' '더 좋은 관계가 될 수 있어요.' Supporting '결과 공유하기' button. BELOW the result show heading '나와 가까운 사람' and very simple relationship map center '나', near node '민수', distant node '지영', solid subtle connecting lines, labeled large and clear, no percentages. Bottom one fullwidth primary button '한 명 더 추가하기 · 2,900원'. Small but readable note '첫 한 명은 무료예요'. No nested cards, no shop, no extra tabs or dashboards. Differentiate sections using spacing and thin dividers. Purposeful uncluttered friendly trustworthy design. This is one independent concept, not comparison sheet. Date anchor 2026-10-09, no dates need showing."
+    },
+    {
+      "option": 2,
+      "name": "따뜻한 인연",
+      "file": "02-warm.png",
+      "prompt": "Create realistic production-quality Korean mobile web UI concept named '따뜻한 인연'. Redesign attached reference for OLDER ADULTS; reference illustrates tiny illegible text and product clutter to remove, do not copy brand or mascot. Target 390x844 proportions single mobile RESULT SCREEN, content only no device bezel or OS chrome. Warm ivory surface, dark cocoa text, restrained terracotta primary color. Elegant oversized Korean headline 30px, clean Korean sans body 20px minimum equivalent. More editorial stacked reading layout than a dashboard: top '뒤로' and '가까운 사이'; eyebrow '나와 민수님의 궁합'; large 3-line friendly sentence '서로를 이해할수록\\n더 가까워지는\\n사이예요'. Short clearly separated note '잘 맞는 점' then '서로에게 든든한 힘이 돼요.' Underlined supporting action '이 결과 공유하기'. BELOW result, a simple warm relationship map titled '우리 사이 지도', center large circle '나', closer circular node '민수', outer node '지영', names clearly legible; no decorative astrology, no numerical scores. One fullwidth 56px tall primary CTA at bottom '한 명 더 추가하기 · 2,900원'. One readable note '첫 한 명 무료 · 다음부터 2,900원'. Spacious separation rather than many cards; no nested cards, shop, extra menus, badges. Focus only one result, sharing, and map. Clean mature respectful aesthetic distinct from technology dashboard. One concept per image. Current date anchor 2026-10-09, no dates needed."
+    },
+    {
+      "option": 3,
+      "name": "또렷한 사이",
+      "file": "03-bold.png",
+      "prompt": "Create realistic production-quality Korean mobile web UI independent direction named '또렷한 사이'. Use attached site screenshot solely as negative UX reference: replace tiny text, clutter, navy mascot store; no copying assets brand. Target screen 390x844 aspect, mobile page content only no phone device OS chrome. Older adult accessibility: extraordinarily readable 20px body, 32px headings, black text white background, bold cobalt blue actions, 56px buttons, strong spacing. Single focused compatibility RESULT screen with broad typography and clean structured horizontal sections. Top '뒤로' and '가까운 사이'. Two simple initials/name blocks '나' and '민수' followed by strong large title '서로 힘이 되는 사이'. One short paragraph '생각이 달라도 대화로\\n잘 맞춰갈 수 있어요.' Supporting wide outlined action '궁합 결과 공유하기'. Below a fine divider, heading '가까운 사람 지도'. A minimal concentric ring diagram, center bold blue '나', inner person '민수', farther person '지영'; do not draw complex graph edges; large names not tiny glyphs. A short accessible supporting line '이름을 누르면 결과를 볼 수 있어요'. Bottom single cobalt primary action '한 명 더 추가하기 · 2,900원'. Do not add percent scores, shopping cards, tab bar, dashboard metrics, illustration or unnecessary UI. Differentiate via hierarchy alignment and separators; no cards within cards. Clear confident utility-first visual system, not corporate admin. Date anchor 2026-10-09, no actual dates needed. Only one concept image."
+    }
+  ],
+  "status": "awaiting_selection",
+  "note": "Preview mockups, not working app. Generated portraits are fictitious concept assets, not a requirement to collect user photos."
+}

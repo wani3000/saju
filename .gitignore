@@ -1,0 +1,15 @@
+.env
+.env.*
+!.env.example
+node_modules/
+.next/
+coverage/
+test-results/
+playwright-report/
+*.log
+.DS_Store
+__pycache__/
+
+# Downloaded research sources are pinned in engines.lock.json
+research/engines/
+research/validation/build/

@@ -1,0 +1,1598 @@
+{
+  "fixtureDates": 738,
+  "fixtureTerms": 48,
+  "engines": {
+    "ssaju": {
+      "checks": {
+        "solarToLunar": {
+          "passed": 684,
+          "failed": 54
+        },
+        "lunarToSolar": {
+          "passed": 708,
+          "failed": 30
+        },
+        "dayPillar": {
+          "passed": 738,
+          "failed": 0
+        },
+        "solarTermBoundary": {
+          "passed": 27,
+          "failed": 21
+        },
+        "invalidInput": {
+          "passed": 3,
+          "failed": 0
+        },
+        "midnightPolicy": {
+          "passed": 1,
+          "failed": 0
+        }
+      },
+      "failures": [
+        {
+          "type": "solarToLunar",
+          "input": [
+            2023,
+            1,
+            22
+          ],
+          "expected": {
+            "year": 2023,
+            "month": 1,
+            "day": 1,
+            "isLeapMonth": false
+          },
+          "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n    day: 1,\n    isLeapMonth: false,\n    month: 1,\n+   year: 1900\n-   year: 2023\n  }\n"
+        },
+        {
+          "type": "solarToLunar",
+          "input": [
+            2023,
+            2,
+            20
+          ],
+          "expected": {
+            "year": 2023,
+            "month": 2,
+            "day": 1,
+            "isLeapMonth": false
+          },
+          "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n    day: 1,\n    isLeapMonth: false,\n+   month: 1,\n-   month: 2,\n    year: 2023\n  }\n"
+        },
+        {
+          "type": "solarToLunar",
+          "input": [
+            2023,
+            3,
+            22
+          ],
+          "expected": {
+            "year": 2023,
+            "month": 2,
+            "day": 1,
+            "isLeapMonth": true
+          },
+          "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n    day: 1,\n+   isLeapMonth: false,\n+   month: 1,\n-   isLeapMonth: true,\n-   month: 2,\n    year: 2023\n  }\n"
+        },
+        {
+          "type": "solarToLunar",
+          "input": [
+            2023,
+            4,
+            20
+          ],
+          "expected": {
+            "year": 2023,
+            "month": 3,
+            "day": 1,
+            "isLeapMonth": false
+          },
+          "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n    day: 1,\n+   isLeapMonth: true,\n+   month: 1,\n-   isLeapMonth: false,\n-   month: 3,\n    year: 2023\n  }\n"
+        },
+        {
+          "type": "solarToLunar",
+          "input": [
+            2023,
+            5,
+            19
+          ],
+          "expected": {
+            "year": 2023,
+            "month": 3,
+            "day": 30,
+            "isLeapMonth": false
+          },
+          "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n+   day: 1,\n-   day: 30,\n    isLeapMonth: false,\n+   month: 1,\n-   month: 3,\n    year: 2023\n  }\n"
+        },
+        {
+          "type": "lunarToSolar",
+          "input": [
+            2023,
+            3,
+            30,
+            false
+          ],
+          "expected": {
+            "year": 2023,
+            "month": 5,
+            "day": 19
+          },
+          "message": "invalid lunar day: 2023-3 has at most 29 days"
+        },
+        {
+          "type": "solarToLunar",
+          "input": [
+            2023,
+            5,
+            20
+          ],
+          "expected": {
+            "year": 2023,
+            "month": 4,
+            "day": 1,
+            "isLeapMonth": false
+          },
+          "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n+   day: 2,\n-   day: 1,\n    isLeapMonth: false,\n    month: 4,\n    year: 2023\n  }\n"
+        },
+        {
+          "type": "lunarToSolar",
+          "input": [
+            2023,
+            4,
+            1,
+            false
+          ],
+          "expected": {
+            "year": 2023,
+            "month": 5,
+            "day": 20
+          },
+          "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n+   day: 19,\n-   day: 20,\n    month: 5,\n    year: 2023\n  }\n"
+        },
+        {
+          "type": "solarToLunar",
+          "input": [
+            2023,
+            5,
+            21
+          ],
+          "expected": {
+            "year": 2023,
+            "month": 4,
+            "day": 2,
+            "isLeapMonth": false
+          },
+          "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n+   day: 3,\n-   day: 2,\n    isLeapMonth: false,\n    month: 4,\n    year: 2023\n  }\n"
+        },
+        {
+          "type": "lunarToSolar",
+          "input": [
+            2023,
+            4,
+            2,
+            false
+          ],
+          "expected": {
+            "year": 2023,
+            "month": 5,
+            "day": 21
+          },
+          "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n+   day: 20,\n-   day: 21,\n    month: 5,\n    year: 2023\n  }\n"
+        },
+        {
+          "type": "solarToLunar",
+          "input": [
+            2023,
+            5,
+            22
+          ],
+          "expected": {
+            "year": 2023,
+            "month": 4,
+            "day": 3,
+            "isLeapMonth": false
+          },
+          "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n+   day: 4,\n-   day: 3,\n    isLeapMonth: false,\n    month: 4,\n    year: 2023\n  }\n"
+        },
+        {
+          "type": "lunarToSolar",
+          "input": [
+            2023,
+            4,
+            3,
+            false
+          ],
+          "expected": {
+            "year": 2023,
+            "month": 5,
+            "day": 22
+          },
+          "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n+   day: 21,\n-   day: 22,\n    month: 5,\n    year: 2023\n  }\n"
+        },
+        {
+          "type": "solarToLunar",
+          "input": [
+            2023,
+            5,
+            23
+          ],
+          "expected": {
+            "year": 2023,
+            "month": 4,
+            "day": 4,
+            "isLeapMonth": false
+          },
+          "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n+   day: 5,\n-   day: 4,\n    isLeapMonth: false,\n    month: 4,\n    year: 2023\n  }\n"
+        },
+        {
+          "type": "lunarToSolar",
+          "input": [
+            2023,
+            4,
+            4,
+            false
+          ],
+          "expected": {
+            "year": 2023,
+            "month": 5,
+            "day": 23
+          },
+          "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n+   day: 22,\n-   day: 23,\n    month: 5,\n    year: 2023\n  }\n"
+        },
+        {
+          "type": "solarToLunar",
+          "input": [
+            2023,
+            5,
+            24
+          ],
+          "expected": {
+            "year": 2023,
+            "month": 4,
+            "day": 5,
+            "isLeapMonth": false
+          },
+          "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n+   day: 6,\n-   day: 5,\n    isLeapMonth: false,\n    month: 4,\n    year: 2023\n  }\n"
+        },
+        {
+          "type": "lunarToSolar",
+          "input": [
+            2023,
+            4,
+            5,
+            false
+          ],
+          "expected": {
+            "year": 2023,
+            "month": 5,
+            "day": 24
+          },
+          "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n+   day: 23,\n-   day: 24,\n    month: 5,\n    year: 2023\n  }\n"
+        },
+        {
+          "type": "solarToLunar",
+          "input": [
+            2023,
+            5,
+            25
+          ],
+          "expected": {
+            "year": 2023,
+            "month": 4,
+            "day": 6,
+            "isLeapMonth": false
+          },
+          "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n+   day: 7,\n-   day: 6,\n    isLeapMonth: false,\n    month: 4,\n    year: 2023\n  }\n"
+        },
+        {
+          "type": "lunarToSolar",
+          "input": [
+            2023,
+            4,
+            6,
+            false
+          ],
+          "expected": {
+            "year": 2023,
+            "month": 5,
+            "day": 25
+          },
+          "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n+   day: 24,\n-   day: 25,\n    month: 5,\n    year: 2023\n  }\n"
+        },
+        {
+          "type": "solarToLunar",
+          "input": [
+            2023,
+            5,
+            26
+          ],
+          "expected": {
+            "year": 2023,
+            "month": 4,
+            "day": 7,
+            "isLeapMonth": false
+          },
+          "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n+   day: 8,\n-   day: 7,\n    isLeapMonth: false,\n    month: 4,\n    year: 2023\n  }\n"
+        },
+        {
+          "type": "lunarToSolar",
+          "input": [
+            2023,
+            4,
+            7,
+            false
+          ],
+          "expected": {
+            "year": 2023,
+            "month": 5,
+            "day": 26
+          },
+          "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n+   day: 25,\n-   day: 26,\n    month: 5,\n    year: 2023\n  }\n"
+        },
+        {
+          "type": "solarToLunar",
+          "input": [
+            2023,
+            5,
+            27
+          ],
+          "expected": {
+            "year": 2023,
+            "month": 4,
+            "day": 8,
+            "isLeapMonth": false
+          },
+          "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n+   day: 9,\n-   day: 8,\n    isLeapMonth: false,\n    month: 4,\n    year: 2023\n  }\n"
+        },
+        {
+          "type": "lunarToSolar",
+          "input": [
+            2023,
+            4,
+            8,
+            false
+          ],
+          "expected": {
+            "year": 2023,
+            "month": 5,
+            "day": 27
+          },
+          "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n+   day: 26,\n-   day: 27,\n    month: 5,\n    year: 2023\n  }\n"
+        },
+        {
+          "type": "solarToLunar",
+          "input": [
+            2023,
+            5,
+            28
+          ],
+          "expected": {
+            "year": 2023,
+            "month": 4,
+            "day": 9,
+            "isLeapMonth": false
+          },
+          "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n+   day: 10,\n-   day: 9,\n    isLeapMonth: false,\n    month: 4,\n    year: 2023\n  }\n"
+        },
+        {
+          "type": "lunarToSolar",
+          "input": [
+            2023,
+            4,
+            9,
+            false
+          ],
+          "expected": {
+            "year": 2023,
+            "month": 5,
+            "day": 28
+          },
+          "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n+   day: 27,\n-   day: 28,\n    month: 5,\n    year: 2023\n  }\n"
+        },
+        {
+          "type": "solarToLunar",
+          "input": [
+            2023,
+            5,
+            29
+          ],
+          "expected": {
+            "year": 2023,
+            "month": 4,
+            "day": 10,
+            "isLeapMonth": false
+          },
+          "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n+   day: 11,\n-   day: 10,\n    isLeapMonth: false,\n    month: 4,\n    year: 2023\n  }\n"
+        },
+        {
+          "type": "lunarToSolar",
+          "input": [
+            2023,
+            4,
+            10,
+            false
+          ],
+          "expected": {
+            "year": 2023,
+            "month": 5,
+            "day": 29
+          },
+          "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n+   day: 28,\n-   day: 29,\n    month: 5,\n    year: 2023\n  }\n"
+        },
+        {
+          "type": "solarToLunar",
+          "input": [
+            2023,
+            5,
+            30
+          ],
+          "expected": {
+            "year": 2023,
+            "month": 4,
+            "day": 11,
+            "isLeapMonth": false
+          },
+          "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n+   day: 12,\n-   day: 11,\n    isLeapMonth: false,\n    month: 4,\n    year: 2023\n  }\n"
+        },
+        {
+          "type": "lunarToSolar",
+          "input": [
+            2023,
+            4,
+            11,
+            false
+          ],
+          "expected": {
+            "year": 2023,
+            "month": 5,
+            "day": 30
+          },
+          "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n+   day: 29,\n-   day: 30,\n    month: 5,\n    year: 2023\n  }\n"
+        },
+        {
+          "type": "solarToLunar",
+          "input": [
+            2023,
+            5,
+            31
+          ],
+          "expected": {
+            "year": 2023,
+            "month": 4,
+            "day": 12,
+            "isLeapMonth": false
+          },
+          "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n+   day: 13,\n-   day: 12,\n    isLeapMonth: false,\n    month: 4,\n    year: 2023\n  }\n"
+        },
+        {
+          "type": "lunarToSolar",
+          "input": [
+            2023,
+            4,
+            12,
+            false
+          ],
+          "expected": {
+            "year": 2023,
+            "month": 5,
+            "day": 31
+          },
+          "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n+   day: 30,\n-   day: 31,\n    month: 5,\n    year: 2023\n  }\n"
+        },
+        {
+          "type": "solarToLunar",
+          "input": [
+            2023,
+            6,
+            1
+          ],
+          "expected": {
+            "year": 2023,
+            "month": 4,
+            "day": 13,
+            "isLeapMonth": false
+          },
+          "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n+   day: 14,\n-   day: 13,\n    isLeapMonth: false,\n    month: 4,\n    year: 2023\n  }\n"
+        },
+        {
+          "type": "lunarToSolar",
+          "input": [
+            2023,
+            4,
+            13,
+            false
+          ],
+          "expected": {
+            "year": 2023,
+            "month": 6,
+            "day": 1
+          },
+          "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n+   day: 31,\n+   month: 5,\n-   day: 1,\n-   month: 6,\n    year: 2023\n  }\n"
+        },
+        {
+          "type": "solarToLunar",
+          "input": [
+            2023,
+            6,
+            2
+          ],
+          "expected": {
+            "year": 2023,
+            "month": 4,
+            "day": 14,
+            "isLeapMonth": false
+          },
+          "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n+   day: 15,\n-   day: 14,\n    isLeapMonth: false,\n    month: 4,\n    year: 2023\n  }\n"
+        },
+        {
+          "type": "lunarToSolar",
+          "input": [
+            2023,
+            4,
+            14,
+            false
+          ],
+          "expected": {
+            "year": 2023,
+            "month": 6,
+            "day": 2
+          },
+          "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n+   day: 1,\n-   day: 2,\n    month: 6,\n    year: 2023\n  }\n"
+        },
+        {
+          "type": "solarToLunar",
+          "input": [
+            2023,
+            6,
+            3
+          ],
+          "expected": {
+            "year": 2023,
+            "month": 4,
+            "day": 15,
+            "isLeapMonth": false
+          },
+          "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n+   day: 16,\n-   day: 15,\n    isLeapMonth: false,\n    month: 4,\n    year: 2023\n  }\n"
+        },
+        {
+          "type": "lunarToSolar",
+          "input": [
+            2023,
+            4,
+            15,
+            false
+          ],
+          "expected": {
+            "year": 2023,
+            "month": 6,
+            "day": 3
+          },
+          "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n+   day: 2,\n-   day: 3,\n    month: 6,\n    year: 2023\n  }\n"
+        },
+        {
+          "type": "solarToLunar",
+          "input": [
+            2023,
+            6,
+            4
+          ],
+          "expected": {
+            "year": 2023,
+            "month": 4,
+            "day": 16,
+            "isLeapMonth": false
+          },
+          "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n+   day: 17,\n-   day: 16,\n    isLeapMonth: false,\n    month: 4,\n    year: 2023\n  }\n"
+        },
+        {
+          "type": "lunarToSolar",
+          "input": [
+            2023,
+            4,
+            16,
+            false
+          ],
+          "expected": {
+            "year": 2023,
+            "month": 6,
+            "day": 4
+          },
+          "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n+   day: 3,\n-   day: 4,\n    month: 6,\n    year: 2023\n  }\n"
+        },
+        {
+          "type": "solarToLunar",
+          "input": [
+            2023,
+            6,
+            5
+          ],
+          "expected": {
+            "year": 2023,
+            "month": 4,
+            "day": 17,
+            "isLeapMonth": false
+          },
+          "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n+   day: 18,\n-   day: 17,\n    isLeapMonth: false,\n    month: 4,\n    year: 2023\n  }\n"
+        },
+        {
+          "type": "lunarToSolar",
+          "input": [
+            2023,
+            4,
+            17,
+            false
+          ],
+          "expected": {
+            "year": 2023,
+            "month": 6,
+            "day": 5
+          },
+          "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n+   day: 4,\n-   day: 5,\n    month: 6,\n    year: 2023\n  }\n"
+        },
+        {
+          "type": "solarToLunar",
+          "input": [
+            2023,
+            6,
+            6
+          ],
+          "expected": {
+            "year": 2023,
+            "month": 4,
+            "day": 18,
+            "isLeapMonth": false
+          },
+          "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n+   day: 19,\n-   day: 18,\n    isLeapMonth: false,\n    month: 4,\n    year: 2023\n  }\n"
+        },
+        {
+          "type": "lunarToSolar",
+          "input": [
+            2023,
+            4,
+            18,
+            false
+          ],
+          "expected": {
+            "year": 2023,
+            "month": 6,
+            "day": 6
+          },
+          "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n+   day: 5,\n-   day: 6,\n    month: 6,\n    year: 2023\n  }\n"
+        },
+        {
+          "type": "solarToLunar",
+          "input": [
+            2023,
+            6,
+            7
+          ],
+          "expected": {
+            "year": 2023,
+            "month": 4,
+            "day": 19,
+            "isLeapMonth": false
+          },
+          "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n+   day: 20,\n-   day: 19,\n    isLeapMonth: false,\n    month: 4,\n    year: 2023\n  }\n"
+        },
+        {
+          "type": "lunarToSolar",
+          "input": [
+            2023,
+            4,
+            19,
+            false
+          ],
+          "expected": {
+            "year": 2023,
+            "month": 6,
+            "day": 7
+          },
+          "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n+   day: 6,\n-   day: 7,\n    month: 6,\n    year: 2023\n  }\n"
+        },
+        {
+          "type": "solarToLunar",
+          "input": [
+            2023,
+            6,
+            8
+          ],
+          "expected": {
+            "year": 2023,
+            "month": 4,
+            "day": 20,
+            "isLeapMonth": false
+          },
+          "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n+   day: 21,\n-   day: 20,\n    isLeapMonth: false,\n    month: 4,\n    year: 2023\n  }\n"
+        },
+        {
+          "type": "lunarToSolar",
+          "input": [
+            2023,
+            4,
+            20,
+            false
+          ],
+          "expected": {
+            "year": 2023,
+            "month": 6,
+            "day": 8
+          },
+          "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n+   day: 7,\n-   day: 8,\n    month: 6,\n    year: 2023\n  }\n"
+        },
+        {
+          "type": "solarToLunar",
+          "input": [
+            2023,
+            6,
+            9
+          ],
+          "expected": {
+            "year": 2023,
+            "month": 4,
+            "day": 21,
+            "isLeapMonth": false
+          },
+          "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n+   day: 22,\n-   day: 21,\n    isLeapMonth: false,\n    month: 4,\n    year: 2023\n  }\n"
+        },
+        {
+          "type": "lunarToSolar",
+          "input": [
+            2023,
+            4,
+            21,
+            false
+          ],
+          "expected": {
+            "year": 2023,
+            "month": 6,
+            "day": 9
+          },
+          "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n+   day: 8,\n-   day: 9,\n    month: 6,\n    year: 2023\n  }\n"
+        },
+        {
+          "type": "solarToLunar",
+          "input": [
+            2023,
+            6,
+            10
+          ],
+          "expected": {
+            "year": 2023,
+            "month": 4,
+            "day": 22,
+            "isLeapMonth": false
+          },
+          "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n+   day: 23,\n-   day: 22,\n    isLeapMonth: false,\n    month: 4,\n    year: 2023\n  }\n"
+        },
+        {
+          "type": "lunarToSolar",
+          "input": [
+            2023,
+            4,
+            22,
+            false
+          ],
+          "expected": {
+            "year": 2023,
+            "month": 6,
+            "day": 10
+          },
+          "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n+   day: 9,\n-   day: 10,\n    month: 6,\n    year: 2023\n  }\n"
+        },
+        {
+          "type": "solarToLunar",
+          "input": [
+            2023,
+            6,
+            11
+          ],
+          "expected": {
+            "year": 2023,
+            "month": 4,
+            "day": 23,
+            "isLeapMonth": false
+          },
+          "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n+   day: 24,\n-   day: 23,\n    isLeapMonth: false,\n    month: 4,\n    year: 2023\n  }\n"
+        },
+        {
+          "type": "lunarToSolar",
+          "input": [
+            2023,
+            4,
+            23,
+            false
+          ],
+          "expected": {
+            "year": 2023,
+            "month": 6,
+            "day": 11
+          },
+          "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n+   day: 10,\n-   day: 11,\n    month: 6,\n    year: 2023\n  }\n"
+        },
+        {
+          "type": "solarToLunar",
+          "input": [
+            2023,
+            6,
+            12
+          ],
+          "expected": {
+            "year": 2023,
+            "month": 4,
+            "day": 24,
+            "isLeapMonth": false
+          },
+          "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n+   day: 25,\n-   day: 24,\n    isLeapMonth: false,\n    month: 4,\n    year: 2023\n  }\n"
+        },
+        {
+          "type": "lunarToSolar",
+          "input": [
+            2023,
+            4,
+            24,
+            false
+          ],
+          "expected": {
+            "year": 2023,
+            "month": 6,
+            "day": 12
+          },
+          "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n+   day: 11,\n-   day: 12,\n    month: 6,\n    year: 2023\n  }\n"
+        },
+        {
+          "type": "solarToLunar",
+          "input": [
+            2023,
+            6,
+            13
+          ],
+          "expected": {
+            "year": 2023,
+            "month": 4,
+            "day": 25,
+            "isLeapMonth": false
+          },
+          "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n+   day: 26,\n-   day: 25,\n    isLeapMonth: false,\n    month: 4,\n    year: 2023\n  }\n"
+        },
+        {
+          "type": "lunarToSolar",
+          "input": [
+            2023,
+            4,
+            25,
+            false
+          ],
+          "expected": {
+            "year": 2023,
+            "month": 6,
+            "day": 13
+          },
+          "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n+   day: 12,\n-   day: 13,\n    month: 6,\n    year: 2023\n  }\n"
+        },
+        {
+          "type": "solarToLunar",
+          "input": [
+            2023,
+            6,
+            14
+          ],
+          "expected": {
+            "year": 2023,
+            "month": 4,
+            "day": 26,
+            "isLeapMonth": false
+          },
+          "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n+   day: 27,\n-   day: 26,\n    isLeapMonth: false,\n    month: 4,\n    year: 2023\n  }\n"
+        },
+        {
+          "type": "lunarToSolar",
+          "input": [
+            2023,
+            4,
+            26,
+            false
+          ],
+          "expected": {
+            "year": 2023,
+            "month": 6,
+            "day": 14
+          },
+          "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n+   day: 13,\n-   day: 14,\n    month: 6,\n    year: 2023\n  }\n"
+        },
+        {
+          "type": "solarToLunar",
+          "input": [
+            2023,
+            6,
+            15
+          ],
+          "expected": {
+            "year": 2023,
+            "month": 4,
+            "day": 27,
+            "isLeapMonth": false
+          },
+          "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n+   day: 28,\n-   day: 27,\n    isLeapMonth: false,\n    month: 4,\n    year: 2023\n  }\n"
+        },
+        {
+          "type": "lunarToSolar",
+          "input": [
+            2023,
+            4,
+            27,
+            false
+          ],
+          "expected": {
+            "year": 2023,
+            "month": 6,
+            "day": 15
+          },
+          "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n+   day: 14,\n-   day: 15,\n    month: 6,\n    year: 2023\n  }\n"
+        },
+        {
+          "type": "solarToLunar",
+          "input": [
+            2023,
+            6,
+            16
+          ],
+          "expected": {
+            "year": 2023,
+            "month": 4,
+            "day": 28,
+            "isLeapMonth": false
+          },
+          "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n+   day: 29,\n-   day: 28,\n    isLeapMonth: false,\n    month: 4,\n    year: 2023\n  }\n"
+        },
+        {
+          "type": "lunarToSolar",
+          "input": [
+            2023,
+            4,
+            28,
+            false
+          ],
+          "expected": {
+            "year": 2023,
+            "month": 6,
+            "day": 16
+          },
+          "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n+   day: 15,\n-   day: 16,\n    month: 6,\n    year: 2023\n  }\n"
+        },
+        {
+          "type": "solarToLunar",
+          "input": [
+            2023,
+            6,
+            17
+          ],
+          "expected": {
+            "year": 2023,
+            "month": 4,
+            "day": 29,
+            "isLeapMonth": false
+          },
+          "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n+   day: 30,\n-   day: 29,\n    isLeapMonth: false,\n    month: 4,\n    year: 2023\n  }\n"
+        },
+        {
+          "type": "lunarToSolar",
+          "input": [
+            2023,
+            4,
+            29,
+            false
+          ],
+          "expected": {
+            "year": 2023,
+            "month": 6,
+            "day": 17
+          },
+          "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n+   day: 16,\n-   day: 17,\n    month: 6,\n    year: 2023\n  }\n"
+        },
+        {
+          "type": "solarToLunar",
+          "input": [
+            2023,
+            6,
+            18
+          ],
+          "expected": {
+            "year": 2023,
+            "month": 5,
+            "day": 1,
+            "isLeapMonth": false
+          },
+          "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n    day: 1,\n    isLeapMonth: false,\n+   month: 1,\n-   month: 5,\n    year: 2023\n  }\n"
+        },
+        {
+          "type": "solarToLunar",
+          "input": [
+            2023,
+            7,
+            18
+          ],
+          "expected": {
+            "year": 2023,
+            "month": 6,
+            "day": 1,
+            "isLeapMonth": false
+          },
+          "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n    day: 1,\n    isLeapMonth: false,\n+   month: 1,\n-   month: 6,\n    year: 2023\n  }\n"
+        },
+        {
+          "type": "solarToLunar",
+          "input": [
+            2023,
+            8,
+            16
+          ],
+          "expected": {
+            "year": 2023,
+            "month": 7,
+            "day": 1,
+            "isLeapMonth": false
+          },
+          "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n    day: 1,\n    isLeapMonth: false,\n+   month: 1,\n-   month: 7,\n    year: 2023\n  }\n"
+        },
+        {
+          "type": "solarToLunar",
+          "input": [
+            2023,
+            9,
+            15
+          ],
+          "expected": {
+            "year": 2023,
+            "month": 8,
+            "day": 1,
+            "isLeapMonth": false
+          },
+          "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n    day: 1,\n    isLeapMonth: false,\n+   month: 1,\n-   month: 8,\n    year: 2023\n  }\n"
+        },
+        {
+          "type": "solarToLunar",
+          "input": [
+            2023,
+            10,
+            15
+          ],
+          "expected": {
+            "year": 2023,
+            "month": 9,
+            "day": 1,
+            "isLeapMonth": false
+          },
+          "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n    day: 1,\n    isLeapMonth: false,\n+   month: 1,\n-   month: 9,\n    year: 2023\n  }\n"
+        },
+        {
+          "type": "solarToLunar",
+          "input": [
+            2023,
+            11,
+            13
+          ],
+          "expected": {
+            "year": 2023,
+            "month": 10,
+            "day": 1,
+            "isLeapMonth": false
+          },
+          "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n    day: 1,\n    isLeapMonth: false,\n+   month: 1,\n-   month: 10,\n    year: 2023\n  }\n"
+        },
+        {
+          "type": "solarToLunar",
+          "input": [
+            2023,
+            12,
+            13
+          ],
+          "expected": {
+            "year": 2023,
+            "month": 11,
+            "day": 1,
+            "isLeapMonth": false
+          },
+          "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n    day: 1,\n    isLeapMonth: false,\n+   month: 1,\n-   month: 11,\n    year: 2023\n  }\n"
+        },
+        {
+          "type": "solarToLunar",
+          "input": [
+            2024,
+            1,
+            11
+          ],
+          "expected": {
+            "year": 2023,
+            "month": 12,
+            "day": 1,
+            "isLeapMonth": false
+          },
+          "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n    day: 1,\n    isLeapMonth: false,\n+   month: 1,\n-   month: 12,\n    year: 2023\n  }\n"
+        },
+        {
+          "type": "solarToLunar",
+          "input": [
+            2024,
+            2,
+            10
+          ],
+          "expected": {
+            "year": 2024,
+            "month": 1,
+            "day": 1,
+            "isLeapMonth": false
+          },
+          "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n    day: 1,\n    isLeapMonth: false,\n    month: 1,\n+   year: 1900\n-   year: 2024\n  }\n"
+        },
+        {
+          "type": "solarToLunar",
+          "input": [
+            2024,
+            3,
+            10
+          ],
+          "expected": {
+            "year": 2024,
+            "month": 2,
+            "day": 1,
+            "isLeapMonth": false
+          },
+          "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n    day: 1,\n    isLeapMonth: false,\n+   month: 1,\n-   month: 2,\n    year: 2024\n  }\n"
+        },
+        {
+          "type": "solarToLunar",
+          "input": [
+            2024,
+            4,
+            9
+          ],
+          "expected": {
+            "year": 2024,
+            "month": 3,
+            "day": 1,
+            "isLeapMonth": false
+          },
+          "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n    day: 1,\n    isLeapMonth: false,\n+   month: 1,\n-   month: 3,\n    year: 2024\n  }\n"
+        },
+        {
+          "type": "solarToLunar",
+          "input": [
+            2024,
+            5,
+            8
+          ],
+          "expected": {
+            "year": 2024,
+            "month": 4,
+            "day": 1,
+            "isLeapMonth": false
+          },
+          "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n    day: 1,\n    isLeapMonth: false,\n+   month: 1,\n-   month: 4,\n    year: 2024\n  }\n"
+        },
+        {
+          "type": "solarToLunar",
+          "input": [
+            2024,
+            6,
+            6
+          ],
+          "expected": {
+            "year": 2024,
+            "month": 5,
+            "day": 1,
+            "isLeapMonth": false
+          },
+          "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n    day: 1,\n    isLeapMonth: false,\n+   month: 1,\n-   month: 5,\n    year: 2024\n  }\n"
+        },
+        {
+          "type": "solarToLunar",
+          "input": [
+            2024,
+            7,
+            6
+          ],
+          "expected": {
+            "year": 2024,
+            "month": 6,
+            "day": 1,
+            "isLeapMonth": false
+          },
+          "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n    day: 1,\n    isLeapMonth: false,\n+   month: 1,\n-   month: 6,\n    year: 2024\n  }\n"
+        },
+        {
+          "type": "solarToLunar",
+          "input": [
+            2024,
+            8,
+            4
+          ],
+          "expected": {
+            "year": 2024,
+            "month": 7,
+            "day": 1,
+            "isLeapMonth": false
+          },
+          "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n    day: 1,\n    isLeapMonth: false,\n+   month: 1,\n-   month: 7,\n    year: 2024\n  }\n"
+        },
+        {
+          "type": "solarToLunar",
+          "input": [
+            2024,
+            9,
+            3
+          ],
+          "expected": {
+            "year": 2024,
+            "month": 8,
+            "day": 1,
+            "isLeapMonth": false
+          },
+          "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n    day: 1,\n    isLeapMonth: false,\n+   month: 1,\n-   month: 8,\n    year: 2024\n  }\n"
+        },
+        {
+          "type": "solarToLunar",
+          "input": [
+            2024,
+            10,
+            3
+          ],
+          "expected": {
+            "year": 2024,
+            "month": 9,
+            "day": 1,
+            "isLeapMonth": false
+          },
+          "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n    day: 1,\n    isLeapMonth: false,\n+   month: 1,\n-   month: 9,\n    year: 2024\n  }\n"
+        },
+        {
+          "type": "solarToLunar",
+          "input": [
+            2024,
+            11,
+            1
+          ],
+          "expected": {
+            "year": 2024,
+            "month": 10,
+            "day": 1,
+            "isLeapMonth": false
+          },
+          "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n    day: 1,\n    isLeapMonth: false,\n+   month: 1,\n-   month: 10,\n    year: 2024\n  }\n"
+        },
+        {
+          "type": "solarToLunar",
+          "input": [
+            2024,
+            12,
+            1
+          ],
+          "expected": {
+            "year": 2024,
+            "month": 11,
+            "day": 1,
+            "isLeapMonth": false
+          },
+          "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n    day: 1,\n    isLeapMonth: false,\n+   month: 1,\n-   month: 11,\n    year: 2024\n  }\n"
+        },
+        {
+          "type": "solarToLunar",
+          "input": [
+            2024,
+            12,
+            31
+          ],
+          "expected": {
+            "year": 2024,
+            "month": 12,
+            "day": 1,
+            "isLeapMonth": false
+          },
+          "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n    day: 1,\n    isLeapMonth: false,\n+   month: 1,\n-   month: 12,\n    year: 2024\n  }\n"
+        },
+        {
+          "type": "solarTermBoundary",
+          "input": {
+            "name": "소한",
+            "year": 2023,
+            "month": 1,
+            "day": 6,
+            "hour": 0,
+            "minute": 4
+          },
+          "expected": "자",
+          "message": "Expected values to be strictly deep-equal:\n\n'축' !== '자'\n"
+        },
+        {
+          "type": "solarTermBoundary",
+          "input": {
+            "name": "입춘",
+            "year": 2023,
+            "month": 2,
+            "day": 4,
+            "hour": 11,
+            "minute": 42
+          },
+          "expected": "축",
+          "message": "Expected values to be strictly deep-equal:\n\n'인' !== '축'\n"
+        },
+        {
+          "type": "solarTermBoundary",
+          "input": {
+            "name": "경칩",
+            "year": 2023,
+            "month": 3,
+            "day": 6,
+            "hour": 5,
+            "minute": 35
+          },
+          "expected": "인",
+          "message": "Expected values to be strictly deep-equal:\n\n'묘' !== '인'\n"
+        },
+        {
+          "type": "solarTermBoundary",
+          "input": {
+            "name": "청명",
+            "year": 2023,
+            "month": 4,
+            "day": 5,
+            "hour": 10,
+            "minute": 12
+          },
+          "expected": "묘",
+          "message": "Expected values to be strictly deep-equal:\n\n'진' !== '묘'\n"
+        },
+        {
+          "type": "solarTermBoundary",
+          "input": {
+            "name": "망종",
+            "year": 2023,
+            "month": 6,
+            "day": 6,
+            "hour": 7,
+            "minute": 19
+          },
+          "expected": "오",
+          "message": "Expected values to be strictly deep-equal:\n\n'사' !== '오'\n"
+        },
+        {
+          "type": "solarTermBoundary",
+          "input": {
+            "name": "소서",
+            "year": 2023,
+            "month": 7,
+            "day": 7,
+            "hour": 17,
+            "minute": 32
+          },
+          "expected": "미",
+          "message": "Expected values to be strictly deep-equal:\n\n'오' !== '미'\n"
+        },
+        {
+          "type": "solarTermBoundary",
+          "input": {
+            "name": "백로",
+            "year": 2023,
+            "month": 9,
+            "day": 8,
+            "hour": 6,
+            "minute": 26
+          },
+          "expected": "신",
+          "message": "Expected values to be strictly deep-equal:\n\n'유' !== '신'\n"
+        },
+        {
+          "type": "solarTermBoundary",
+          "input": {
+            "name": "한로",
+            "year": 2023,
+            "month": 10,
+            "day": 8,
+            "hour": 22,
+            "minute": 15
+          },
+          "expected": "유",
+          "message": "Expected values to be strictly deep-equal:\n\n'술' !== '유'\n"
+        },
+        {
+          "type": "solarTermBoundary",
+          "input": {
+            "name": "입동",
+            "year": 2023,
+            "month": 11,
+            "day": 8,
+            "hour": 1,
+            "minute": 35
+          },
+          "expected": "술",
+          "message": "Expected values to be strictly deep-equal:\n\n'해' !== '술'\n"
+        },
+        {
+          "type": "solarTermBoundary",
+          "input": {
+            "name": "대설",
+            "year": 2023,
+            "month": 12,
+            "day": 7,
+            "hour": 18,
+            "minute": 32
+          },
+          "expected": "해",
+          "message": "Expected values to be strictly deep-equal:\n\n'자' !== '해'\n"
+        },
+        {
+          "type": "solarTermBoundary",
+          "input": {
+            "name": "소한",
+            "year": 2024,
+            "month": 1,
+            "day": 6,
+            "hour": 5,
+            "minute": 48
+          },
+          "expected": "자",
+          "message": "Expected values to be strictly deep-equal:\n\n'축' !== '자'\n"
+        },
+        {
+          "type": "solarTermBoundary",
+          "input": {
+            "name": "입춘",
+            "year": 2024,
+            "month": 2,
+            "day": 4,
+            "hour": 17,
+            "minute": 26
+          },
+          "expected": "축",
+          "message": "Expected values to be strictly deep-equal:\n\n'인' !== '축'\n"
+        },
+        {
+          "type": "solarTermBoundary",
+          "input": {
+            "name": "경칩",
+            "year": 2024,
+            "month": 3,
+            "day": 5,
+            "hour": 11,
+            "minute": 22
+          },
+          "expected": "인",
+          "message": "Expected values to be strictly deep-equal:\n\n'묘' !== '인'\n"
+        },
+        {
+          "type": "solarTermBoundary",
+          "input": {
+            "name": "청명",
+            "year": 2024,
+            "month": 4,
+            "day": 4,
+            "hour": 16,
+            "minute": 1
+          },
+          "expected": "묘",
+          "message": "Expected values to be strictly deep-equal:\n\n'진' !== '묘'\n"
+        },
+        {
+          "type": "solarTermBoundary",
+          "input": {
+            "name": "입하",
+            "year": 2024,
+            "month": 5,
+            "day": 5,
+            "hour": 9,
+            "minute": 9
+          },
+          "expected": "진",
+          "message": "Expected values to be strictly deep-equal:\n\n'사' !== '진'\n"
+        },
+        {
+          "type": "solarTermBoundary",
+          "input": {
+            "name": "망종",
+            "year": 2024,
+            "month": 6,
+            "day": 5,
+            "hour": 13,
+            "minute": 9
+          },
+          "expected": "사",
+          "message": "Expected values to be strictly deep-equal:\n\n'오' !== '사'\n"
+        },
+        {
+          "type": "solarTermBoundary",
+          "input": {
+            "name": "소서",
+            "year": 2024,
+            "month": 7,
+            "day": 6,
+            "hour": 23,
+            "minute": 19
+          },
+          "expected": "오",
+          "message": "Expected values to be strictly deep-equal:\n\n'미' !== '오'\n"
+        },
+        {
+          "type": "solarTermBoundary",
+          "input": {
+            "name": "백로",
+            "year": 2024,
+            "month": 9,
+            "day": 7,
+            "hour": 12,
+            "minute": 10
+          },
+          "expected": "신",
+          "message": "Expected values to be strictly deep-equal:\n\n'유' !== '신'\n"
+        },
+        {
+          "type": "solarTermBoundary",
+          "input": {
+            "name": "한로",
+            "year": 2024,
+            "month": 10,
+            "day": 8,
+            "hour": 3,
+            "minute": 59
+          },
+          "expected": "유",
+          "message": "Expected values to be strictly deep-equal:\n\n'술' !== '유'\n"
+        },
+        {
+          "type": "solarTermBoundary",
+          "input": {
+            "name": "입동",
+            "year": 2024,
+            "month": 11,
+            "day": 7,
+            "hour": 7,
+            "minute": 19
+          },
+          "expected": "술",
+          "message": "Expected values to be strictly deep-equal:\n\n'해' !== '술'\n"
+        },
+        {
+          "type": "solarTermBoundary",
+          "input": {
+            "name": "대설",
+            "year": 2024,
+            "month": 12,
+            "day": 7,
+            "hour": 0,
+            "minute": 16
+          },
+          "expected": "해",
+          "message": "Expected values to be strictly deep-equal:\n\n'자' !== '해'\n"
+        }
+      ]
+    },
+    "manseryeok": {
+      "checks": {
+        "solarToLunar": {
+          "passed": 738,
+          "failed": 0
+        },
+        "lunarToSolar": {
+          "passed": 738,
+          "failed": 0
+        },
+        "dayPillar": {
+          "passed": 738,
+          "failed": 0
+        },
+        "solarTermBoundary": {
+          "passed": 48,
+          "failed": 0
+        },
+        "invalidInput": {
+          "passed": 3,
+          "failed": 0
+        },
+        "midnightPolicy": {
+          "passed": 1,
+          "failed": 0
+        }
+      },
+      "failures": []
+    }
+  }
+}

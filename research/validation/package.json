@@ -1,0 +1,13 @@
+{
+  "name": "saju-engine-validation",
+  "private": true,
+  "type": "module",
+  "devDependencies": {
+    "esbuild": "0.28.2"
+  },
+  "scripts": {
+    "build": "node build.mjs",
+    "compare": "node run-comparison.mjs",
+    "test": "node --test adapter.test.mjs"
+  }
+}

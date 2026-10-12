@@ -1,0 +1,798 @@
+{
+  "total": 1524,
+  "passed": 1425,
+  "failures": [
+    {
+      "year": 1900,
+      "month": 1,
+      "day": 15,
+      "hour": 12,
+      "offsetMinutes": 507.8666666666667,
+      "actual": 540
+    },
+    {
+      "year": 1900,
+      "month": 2,
+      "day": 15,
+      "hour": 12,
+      "offsetMinutes": 507.8666666666667,
+      "actual": 540
+    },
+    {
+      "year": 1900,
+      "month": 3,
+      "day": 15,
+      "hour": 12,
+      "offsetMinutes": 507.8666666666667,
+      "actual": 540
+    },
+    {
+      "year": 1900,
+      "month": 4,
+      "day": 15,
+      "hour": 12,
+      "offsetMinutes": 507.8666666666667,
+      "actual": 540
+    },
+    {
+      "year": 1900,
+      "month": 5,
+      "day": 15,
+      "hour": 12,
+      "offsetMinutes": 507.8666666666667,
+      "actual": 540
+    },
+    {
+      "year": 1900,
+      "month": 6,
+      "day": 15,
+      "hour": 12,
+      "offsetMinutes": 507.8666666666667,
+      "actual": 540
+    },
+    {
+      "year": 1900,
+      "month": 7,
+      "day": 15,
+      "hour": 12,
+      "offsetMinutes": 507.8666666666667,
+      "actual": 540
+    },
+    {
+      "year": 1900,
+      "month": 8,
+      "day": 15,
+      "hour": 12,
+      "offsetMinutes": 507.8666666666667,
+      "actual": 540
+    },
+    {
+      "year": 1900,
+      "month": 9,
+      "day": 15,
+      "hour": 12,
+      "offsetMinutes": 507.8666666666667,
+      "actual": 540
+    },
+    {
+      "year": 1900,
+      "month": 10,
+      "day": 15,
+      "hour": 12,
+      "offsetMinutes": 507.8666666666667,
+      "actual": 540
+    },
+    {
+      "year": 1900,
+      "month": 11,
+      "day": 15,
+      "hour": 12,
+      "offsetMinutes": 507.8666666666667,
+      "actual": 540
+    },
+    {
+      "year": 1900,
+      "month": 12,
+      "day": 15,
+      "hour": 12,
+      "offsetMinutes": 507.8666666666667,
+      "actual": 540
+    },
+    {
+      "year": 1901,
+      "month": 1,
+      "day": 15,
+      "hour": 12,
+      "offsetMinutes": 507.8666666666667,
+      "actual": 540
+    },
+    {
+      "year": 1901,
+      "month": 2,
+      "day": 15,
+      "hour": 12,
+      "offsetMinutes": 507.8666666666667,
+      "actual": 540
+    },
+    {
+      "year": 1901,
+      "month": 3,
+      "day": 15,
+      "hour": 12,
+      "offsetMinutes": 507.8666666666667,
+      "actual": 540
+    },
+    {
+      "year": 1901,
+      "month": 4,
+      "day": 15,
+      "hour": 12,
+      "offsetMinutes": 507.8666666666667,
+      "actual": 540
+    },
+    {
+      "year": 1901,
+      "month": 5,
+      "day": 15,
+      "hour": 12,
+      "offsetMinutes": 507.8666666666667,
+      "actual": 540
+    },
+    {
+      "year": 1901,
+      "month": 6,
+      "day": 15,
+      "hour": 12,
+      "offsetMinutes": 507.8666666666667,
+      "actual": 540
+    },
+    {
+      "year": 1901,
+      "month": 7,
+      "day": 15,
+      "hour": 12,
+      "offsetMinutes": 507.8666666666667,
+      "actual": 540
+    },
+    {
+      "year": 1901,
+      "month": 8,
+      "day": 15,
+      "hour": 12,
+      "offsetMinutes": 507.8666666666667,
+      "actual": 540
+    },
+    {
+      "year": 1901,
+      "month": 9,
+      "day": 15,
+      "hour": 12,
+      "offsetMinutes": 507.8666666666667,
+      "actual": 540
+    },
+    {
+      "year": 1901,
+      "month": 10,
+      "day": 15,
+      "hour": 12,
+      "offsetMinutes": 507.8666666666667,
+      "actual": 540
+    },
+    {
+      "year": 1901,
+      "month": 11,
+      "day": 15,
+      "hour": 12,
+      "offsetMinutes": 507.8666666666667,
+      "actual": 540
+    },
+    {
+      "year": 1901,
+      "month": 12,
+      "day": 15,
+      "hour": 12,
+      "offsetMinutes": 507.8666666666667,
+      "actual": 540
+    },
+    {
+      "year": 1902,
+      "month": 1,
+      "day": 15,
+      "hour": 12,
+      "offsetMinutes": 507.8666666666667,
+      "actual": 540
+    },
+    {
+      "year": 1902,
+      "month": 2,
+      "day": 15,
+      "hour": 12,
+      "offsetMinutes": 507.8666666666667,
+      "actual": 540
+    },
+    {
+      "year": 1902,
+      "month": 3,
+      "day": 15,
+      "hour": 12,
+      "offsetMinutes": 507.8666666666667,
+      "actual": 540
+    },
+    {
+      "year": 1902,
+      "month": 4,
+      "day": 15,
+      "hour": 12,
+      "offsetMinutes": 507.8666666666667,
+      "actual": 540
+    },
+    {
+      "year": 1902,
+      "month": 5,
+      "day": 15,
+      "hour": 12,
+      "offsetMinutes": 507.8666666666667,
+      "actual": 540
+    },
+    {
+      "year": 1902,
+      "month": 6,
+      "day": 15,
+      "hour": 12,
+      "offsetMinutes": 507.8666666666667,
+      "actual": 540
+    },
+    {
+      "year": 1902,
+      "month": 7,
+      "day": 15,
+      "hour": 12,
+      "offsetMinutes": 507.8666666666667,
+      "actual": 540
+    },
+    {
+      "year": 1902,
+      "month": 8,
+      "day": 15,
+      "hour": 12,
+      "offsetMinutes": 507.8666666666667,
+      "actual": 540
+    },
+    {
+      "year": 1902,
+      "month": 9,
+      "day": 15,
+      "hour": 12,
+      "offsetMinutes": 507.8666666666667,
+      "actual": 540
+    },
+    {
+      "year": 1902,
+      "month": 10,
+      "day": 15,
+      "hour": 12,
+      "offsetMinutes": 507.8666666666667,
+      "actual": 540
+    },
+    {
+      "year": 1902,
+      "month": 11,
+      "day": 15,
+      "hour": 12,
+      "offsetMinutes": 507.8666666666667,
+      "actual": 540
+    },
+    {
+      "year": 1902,
+      "month": 12,
+      "day": 15,
+      "hour": 12,
+      "offsetMinutes": 507.8666666666667,
+      "actual": 540
+    },
+    {
+      "year": 1903,
+      "month": 1,
+      "day": 15,
+      "hour": 12,
+      "offsetMinutes": 507.8666666666667,
+      "actual": 540
+    },
+    {
+      "year": 1903,
+      "month": 2,
+      "day": 15,
+      "hour": 12,
+      "offsetMinutes": 507.8666666666667,
+      "actual": 540
+    },
+    {
+      "year": 1903,
+      "month": 3,
+      "day": 15,
+      "hour": 12,
+      "offsetMinutes": 507.8666666666667,
+      "actual": 540
+    },
+    {
+      "year": 1903,
+      "month": 4,
+      "day": 15,
+      "hour": 12,
+      "offsetMinutes": 507.8666666666667,
+      "actual": 540
+    },
+    {
+      "year": 1903,
+      "month": 5,
+      "day": 15,
+      "hour": 12,
+      "offsetMinutes": 507.8666666666667,
+      "actual": 540
+    },
+    {
+      "year": 1903,
+      "month": 6,
+      "day": 15,
+      "hour": 12,
+      "offsetMinutes": 507.8666666666667,
+      "actual": 540
+    },
+    {
+      "year": 1903,
+      "month": 7,
+      "day": 15,
+      "hour": 12,
+      "offsetMinutes": 507.8666666666667,
+      "actual": 540
+    },
+    {
+      "year": 1903,
+      "month": 8,
+      "day": 15,
+      "hour": 12,
+      "offsetMinutes": 507.8666666666667,
+      "actual": 540
+    },
+    {
+      "year": 1903,
+      "month": 9,
+      "day": 15,
+      "hour": 12,
+      "offsetMinutes": 507.8666666666667,
+      "actual": 540
+    },
+    {
+      "year": 1903,
+      "month": 10,
+      "day": 15,
+      "hour": 12,
+      "offsetMinutes": 507.8666666666667,
+      "actual": 540
+    },
+    {
+      "year": 1903,
+      "month": 11,
+      "day": 15,
+      "hour": 12,
+      "offsetMinutes": 507.8666666666667,
+      "actual": 540
+    },
+    {
+      "year": 1903,
+      "month": 12,
+      "day": 15,
+      "hour": 12,
+      "offsetMinutes": 507.8666666666667,
+      "actual": 540
+    },
+    {
+      "year": 1904,
+      "month": 1,
+      "day": 15,
+      "hour": 12,
+      "offsetMinutes": 507.8666666666667,
+      "actual": 540
+    },
+    {
+      "year": 1904,
+      "month": 2,
+      "day": 15,
+      "hour": 12,
+      "offsetMinutes": 507.8666666666667,
+      "actual": 540
+    },
+    {
+      "year": 1904,
+      "month": 3,
+      "day": 15,
+      "hour": 12,
+      "offsetMinutes": 507.8666666666667,
+      "actual": 540
+    },
+    {
+      "year": 1904,
+      "month": 4,
+      "day": 15,
+      "hour": 12,
+      "offsetMinutes": 507.8666666666667,
+      "actual": 540
+    },
+    {
+      "year": 1904,
+      "month": 5,
+      "day": 15,
+      "hour": 12,
+      "offsetMinutes": 507.8666666666667,
+      "actual": 540
+    },
+    {
+      "year": 1904,
+      "month": 6,
+      "day": 15,
+      "hour": 12,
+      "offsetMinutes": 507.8666666666667,
+      "actual": 540
+    },
+    {
+      "year": 1904,
+      "month": 7,
+      "day": 15,
+      "hour": 12,
+      "offsetMinutes": 507.8666666666667,
+      "actual": 540
+    },
+    {
+      "year": 1904,
+      "month": 8,
+      "day": 15,
+      "hour": 12,
+      "offsetMinutes": 507.8666666666667,
+      "actual": 540
+    },
+    {
+      "year": 1904,
+      "month": 9,
+      "day": 15,
+      "hour": 12,
+      "offsetMinutes": 507.8666666666667,
+      "actual": 540
+    },
+    {
+      "year": 1904,
+      "month": 10,
+      "day": 15,
+      "hour": 12,
+      "offsetMinutes": 507.8666666666667,
+      "actual": 540
+    },
+    {
+      "year": 1904,
+      "month": 11,
+      "day": 15,
+      "hour": 12,
+      "offsetMinutes": 507.8666666666667,
+      "actual": 540
+    },
+    {
+      "year": 1904,
+      "month": 12,
+      "day": 15,
+      "hour": 12,
+      "offsetMinutes": 507.8666666666667,
+      "actual": 540
+    },
+    {
+      "year": 1905,
+      "month": 1,
+      "day": 15,
+      "hour": 12,
+      "offsetMinutes": 507.8666666666667,
+      "actual": 540
+    },
+    {
+      "year": 1905,
+      "month": 2,
+      "day": 15,
+      "hour": 12,
+      "offsetMinutes": 507.8666666666667,
+      "actual": 540
+    },
+    {
+      "year": 1905,
+      "month": 3,
+      "day": 15,
+      "hour": 12,
+      "offsetMinutes": 507.8666666666667,
+      "actual": 540
+    },
+    {
+      "year": 1905,
+      "month": 4,
+      "day": 15,
+      "hour": 12,
+      "offsetMinutes": 507.8666666666667,
+      "actual": 540
+    },
+    {
+      "year": 1905,
+      "month": 5,
+      "day": 15,
+      "hour": 12,
+      "offsetMinutes": 507.8666666666667,
+      "actual": 540
+    },
+    {
+      "year": 1905,
+      "month": 6,
+      "day": 15,
+      "hour": 12,
+      "offsetMinutes": 507.8666666666667,
+      "actual": 540
+    },
+    {
+      "year": 1905,
+      "month": 7,
+      "day": 15,
+      "hour": 12,
+      "offsetMinutes": 507.8666666666667,
+      "actual": 540
+    },
+    {
+      "year": 1905,
+      "month": 8,
+      "day": 15,
+      "hour": 12,
+      "offsetMinutes": 507.8666666666667,
+      "actual": 540
+    },
+    {
+      "year": 1905,
+      "month": 9,
+      "day": 15,
+      "hour": 12,
+      "offsetMinutes": 507.8666666666667,
+      "actual": 540
+    },
+    {
+      "year": 1905,
+      "month": 10,
+      "day": 15,
+      "hour": 12,
+      "offsetMinutes": 507.8666666666667,
+      "actual": 540
+    },
+    {
+      "year": 1905,
+      "month": 11,
+      "day": 15,
+      "hour": 12,
+      "offsetMinutes": 507.8666666666667,
+      "actual": 540
+    },
+    {
+      "year": 1905,
+      "month": 12,
+      "day": 15,
+      "hour": 12,
+      "offsetMinutes": 507.8666666666667,
+      "actual": 540
+    },
+    {
+      "year": 1906,
+      "month": 1,
+      "day": 15,
+      "hour": 12,
+      "offsetMinutes": 507.8666666666667,
+      "actual": 540
+    },
+    {
+      "year": 1906,
+      "month": 2,
+      "day": 15,
+      "hour": 12,
+      "offsetMinutes": 507.8666666666667,
+      "actual": 540
+    },
+    {
+      "year": 1906,
+      "month": 3,
+      "day": 15,
+      "hour": 12,
+      "offsetMinutes": 507.8666666666667,
+      "actual": 540
+    },
+    {
+      "year": 1906,
+      "month": 4,
+      "day": 15,
+      "hour": 12,
+      "offsetMinutes": 507.8666666666667,
+      "actual": 540
+    },
+    {
+      "year": 1906,
+      "month": 5,
+      "day": 15,
+      "hour": 12,
+      "offsetMinutes": 507.8666666666667,
+      "actual": 540
+    },
+    {
+      "year": 1906,
+      "month": 6,
+      "day": 15,
+      "hour": 12,
+      "offsetMinutes": 507.8666666666667,
+      "actual": 540
+    },
+    {
+      "year": 1906,
+      "month": 7,
+      "day": 15,
+      "hour": 12,
+      "offsetMinutes": 507.8666666666667,
+      "actual": 540
+    },
+    {
+      "year": 1906,
+      "month": 8,
+      "day": 15,
+      "hour": 12,
+      "offsetMinutes": 507.8666666666667,
+      "actual": 540
+    },
+    {
+      "year": 1906,
+      "month": 9,
+      "day": 15,
+      "hour": 12,
+      "offsetMinutes": 507.8666666666667,
+      "actual": 540
+    },
+    {
+      "year": 1906,
+      "month": 10,
+      "day": 15,
+      "hour": 12,
+      "offsetMinutes": 507.8666666666667,
+      "actual": 540
+    },
+    {
+      "year": 1906,
+      "month": 11,
+      "day": 15,
+      "hour": 12,
+      "offsetMinutes": 507.8666666666667,
+      "actual": 540
+    },
+    {
+      "year": 1906,
+      "month": 12,
+      "day": 15,
+      "hour": 12,
+      "offsetMinutes": 507.8666666666667,
+      "actual": 540
+    },
+    {
+      "year": 1907,
+      "month": 1,
+      "day": 15,
+      "hour": 12,
+      "offsetMinutes": 507.8666666666667,
+      "actual": 540
+    },
+    {
+      "year": 1907,
+      "month": 2,
+      "day": 15,
+      "hour": 12,
+      "offsetMinutes": 507.8666666666667,
+      "actual": 540
+    },
+    {
+      "year": 1907,
+      "month": 3,
+      "day": 15,
+      "hour": 12,
+      "offsetMinutes": 507.8666666666667,
+      "actual": 540
+    },
+    {
+      "year": 1907,
+      "month": 4,
+      "day": 15,
+      "hour": 12,
+      "offsetMinutes": 507.8666666666667,
+      "actual": 540
+    },
+    {
+      "year": 1907,
+      "month": 5,
+      "day": 15,
+      "hour": 12,
+      "offsetMinutes": 507.8666666666667,
+      "actual": 540
+    },
+    {
+      "year": 1907,
+      "month": 6,
+      "day": 15,
+      "hour": 12,
+      "offsetMinutes": 507.8666666666667,
+      "actual": 540
+    },
+    {
+      "year": 1907,
+      "month": 7,
+      "day": 15,
+      "hour": 12,
+      "offsetMinutes": 507.8666666666667,
+      "actual": 540
+    },
+    {
+      "year": 1907,
+      "month": 8,
+      "day": 15,
+      "hour": 12,
+      "offsetMinutes": 507.8666666666667,
+      "actual": 540
+    },
+    {
+      "year": 1907,
+      "month": 9,
+      "day": 15,
+      "hour": 12,
+      "offsetMinutes": 507.8666666666667,
+      "actual": 540
+    },
+    {
+      "year": 1907,
+      "month": 10,
+      "day": 15,
+      "hour": 12,
+      "offsetMinutes": 507.8666666666667,
+      "actual": 540
+    },
+    {
+      "year": 1907,
+      "month": 11,
+      "day": 15,
+      "hour": 12,
+      "offsetMinutes": 507.8666666666667,
+      "actual": 540
+    },
+    {
+      "year": 1907,
+      "month": 12,
+      "day": 15,
+      "hour": 12,
+      "offsetMinutes": 507.8666666666667,
+      "actual": 540
+    },
+    {
+      "year": 1908,
+      "month": 1,
+      "day": 15,
+      "hour": 12,
+      "offsetMinutes": 507.8666666666667,
+      "actual": 540
+    },
+    {
+      "year": 1908,
+      "month": 2,
+      "day": 15,
+      "hour": 12,
+      "offsetMinutes": 507.8666666666667,
+      "actual": 540
+    },
+    {
+      "year": 1908,
+      "month": 3,
+      "day": 15,
+      "hour": 12,
+      "offsetMinutes": 507.8666666666667,
+      "actual": 540
+    }
+  ]
+}

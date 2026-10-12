@@ -1,0 +1,18 @@
+[
+  {
+    "name": "ssaju",
+    "repository": "https://github.com/golbin/ssaju.git",
+    "commit": "07b608a778be6dac8669e04b9ab794c441959208",
+    "packageVersion": "0.2.0",
+    "license": "MIT",
+    "usage": "research_only_not_production"
+  },
+  {
+    "name": "manseryeok",
+    "repository": "https://github.com/yhj1024/manseryeok.git",
+    "commit": "fba3253d7305b8b61189bd78318a7a27ed8c9b09",
+    "packageVersion": "2.0.0",
+    "license": "MIT",
+    "usage": "research_only_not_production"
+  }
+]
