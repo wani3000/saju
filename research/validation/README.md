@@ -10,7 +10,7 @@ pnpm install --frozen-lockfile --ignore-scripts
 node build.mjs
 node run-comparison.mjs
 node check-timezones.mjs
-node --test adapter.test.mjs
+pnpm test
 ```
 
 원본이 없는 새 환경에서는 `engines.lock.json`의 repository를 `research/engines/<name>`에 clone하고 해당 commit으로 checkout한다. 최신 HEAD를 검증된 커밋 대신 사용하지 않는다.
@@ -22,3 +22,9 @@ fixtures에는 당시 수집한 KASI 원문과 파생 기대값, IANA 월별 정
 현재 어댑터는 연구용이며 productionApproved=false다. 1908년 이전을 차단하고 시간 미상을 임의의 정오로 확정하지 않는다. 역사적 시각 처리와 운영 범위 확정은 남아 있다. 이 어댑터를 결제 상품에 연결하지 않는다.
 
 2026-10-12 복원 환경(Node 22.17.0, pnpm 11.25.0)에서도 위 명령과 기존 결과를 재현했다. build.mjs는 현재 작업 디렉터리와 무관하게 스크립트 위치를 기준으로 실행한다. 프로젝트 루트에서도 `node research/validation/build.mjs`를 사용할 수 있다.
+
+## 시간대 경계 판정 · 2026-10-13
+
+`resolve-wall-time.mjs`는 fixtures/seoul-transitions.json의 고정 자료를 사용한다. `python3 collect-transitions.py`는 현재 호스트의 Asia/Seoul TZif를 읽어 전환표와 Python zoneinfo 기대값을 갱신한다. 갱신 시 출처 해시와 변경 diff를 검토해야 한다. 기본 테스트에는 Python이나 시스템 시간대 DB가 필요하지 않다.
+
+`pnpm test`는 22개 테스트를 실행하며 1,918개 시간대 사례를 포함한다. 시간 모름에 UTC를 발명하지 않으며, 알고 입력한 시각이 중복/누락이면 오류를 반환한다. civilTime은 사주 기둥의 역사적 시간 보정 적용 완료를 뜻하지 않는다. 기존 기둥 계산 검증과 운영 승인은 남아 있다.

@@ -8,6 +8,6 @@
   "scripts": {
     "build": "node build.mjs",
     "compare": "node run-comparison.mjs",
-    "test": "node --test adapter.test.mjs"
+    "test": "node --test *.test.mjs"
   }
 }

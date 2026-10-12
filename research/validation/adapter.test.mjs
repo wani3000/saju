@@ -12,3 +12,9 @@ test('known time requires a real hour and minute',()=>{assert.throws(()=>calcula
 test('unvalidated pre-1908 era is rejected',()=>assert.throws(()=>calculateProfile({...base,year:1900})));
 test('solar input cannot carry lunar leap flag',()=>assert.throws(()=>calculateProfile({...base,leap:true})));
 test('deterministic and no production approval claim',()=>{const a=calculateProfile(base);assert.deepEqual(a,calculateProfile(base));assert.equal(a.policy.productionApproved,false);});
+
+test('historical nonexistent birth time is rejected before chart output',()=>assert.throws(()=>calculateProfile({...base,year:1988,month:5,day:8,timeKnown:true,hour:2,minute:30}),/NONEXISTENT_BIRTH_TIME/));
+test('historical duplicated birth time is not silently resolved',()=>assert.throws(()=>calculateProfile({...base,year:1988,month:10,day:9,timeKnown:true,hour:2,minute:30}),/AMBIGUOUS_BIRTH_TIME/));
+test('valid historical time exposes civil instant but retains research status',()=>{const r=calculateProfile({...base,year:1988,month:5,day:8,timeKnown:true,hour:3,minute:0});assert.equal(r.civilTime.candidates[0].utc,'1988-05-07T17:00:00.000Z');assert.equal(r.policy.productionApproved,false);});
+test('unknown time on a DST date stays unknown',()=>{const r=calculateProfile({...base,year:1988,month:5,day:8});assert.equal(r.pillars.hour,null);assert.equal(r.civilTime,undefined);});
+test('callers cannot mutate the shared policy for later profiles',()=>{const r=calculateProfile(base);assert.throws(()=>{r.policy.productionApproved=true;},TypeError);assert.equal(calculateProfile(base).policy.productionApproved,false);});

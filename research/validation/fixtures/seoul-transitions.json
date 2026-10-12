@@ -1,0 +1,125 @@
+{
+  "zone": "Asia/Seoul",
+  "source": "IANA TZif from host zoneinfo",
+  "sourceSha256": "2c8f4bb15dd77090b497e2a841ff3323ecbbae4f9dbb9edead2f8dd8fb5d8bb4",
+  "referenceUrl": "https://data.iana.org/time-zones/tzdb-2025b/asia",
+  "note": "Reference URL documents the rules; this artifact is pinned by the host TZif hash, not claimed to be tzdb 2025b.",
+  "collectedOn": "2026-10-13",
+  "minYear": 1900,
+  "maxYear": 2026,
+  "initialOffsetSeconds": 30472,
+  "transitions": [
+    {
+      "utcSeconds": -1948782472,
+      "offsetSeconds": 30600
+    },
+    {
+      "utcSeconds": -1830414600,
+      "offsetSeconds": 32400
+    },
+    {
+      "utcSeconds": -681210000,
+      "offsetSeconds": 36000
+    },
+    {
+      "utcSeconds": -672228000,
+      "offsetSeconds": 32400
+    },
+    {
+      "utcSeconds": -654771600,
+      "offsetSeconds": 36000
+    },
+    {
+      "utcSeconds": -640864800,
+      "offsetSeconds": 32400
+    },
+    {
+      "utcSeconds": -623408400,
+      "offsetSeconds": 36000
+    },
+    {
+      "utcSeconds": -609415200,
+      "offsetSeconds": 32400
+    },
+    {
+      "utcSeconds": -588848400,
+      "offsetSeconds": 36000
+    },
+    {
+      "utcSeconds": -577965600,
+      "offsetSeconds": 32400
+    },
+    {
+      "utcSeconds": -498128400,
+      "offsetSeconds": 30600
+    },
+    {
+      "utcSeconds": -462702600,
+      "offsetSeconds": 34200
+    },
+    {
+      "utcSeconds": -451733400,
+      "offsetSeconds": 30600
+    },
+    {
+      "utcSeconds": -429784200,
+      "offsetSeconds": 34200
+    },
+    {
+      "utcSeconds": -418296600,
+      "offsetSeconds": 30600
+    },
+    {
+      "utcSeconds": -399544200,
+      "offsetSeconds": 34200
+    },
+    {
+      "utcSeconds": -387451800,
+      "offsetSeconds": 30600
+    },
+    {
+      "utcSeconds": -368094600,
+      "offsetSeconds": 34200
+    },
+    {
+      "utcSeconds": -356002200,
+      "offsetSeconds": 30600
+    },
+    {
+      "utcSeconds": -336645000,
+      "offsetSeconds": 34200
+    },
+    {
+      "utcSeconds": -324552600,
+      "offsetSeconds": 30600
+    },
+    {
+      "utcSeconds": -305195400,
+      "offsetSeconds": 34200
+    },
+    {
+      "utcSeconds": -293103000,
+      "offsetSeconds": 30600
+    },
+    {
+      "utcSeconds": -264933000,
+      "offsetSeconds": 32400
+    },
+    {
+      "utcSeconds": 547578000,
+      "offsetSeconds": 36000
+    },
+    {
+      "utcSeconds": 560883600,
+      "offsetSeconds": 32400
+    },
+    {
+      "utcSeconds": 579027600,
+      "offsetSeconds": 36000
+    },
+    {
+      "utcSeconds": 592333200,
+      "offsetSeconds": 32400
+    }
+  ]
+}
