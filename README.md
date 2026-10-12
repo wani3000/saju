@@ -4,12 +4,14 @@
 
 ## 현재 상태
 
-- 기준일: 2026-10-09.
-- 기획 문서와 P01 1차 계산 검증 완료. 연구용 어댑터 및 테스트 코드가 있으며 앱·실제 DB·결제는 아직 없다.
-- [계산 엔진 검증 결과](docs/engine-validation.md): 기존 우선 후보의 오류를 재현하고 비교 후보를 선정했다. 운영 채택 검증은 진행 중이다.
-- 요청한 위치: `/Users/hanwha/Documents/github/saju-relationship`.
-- 현재 프로젝트 위치: `/Users/hanwha/Documents/github/saju-relationship`. 2026-10-09 권한 변경 후 배치 및 파일 검증 완료.
-- 2026-10-12 로컬 Git 저장소(main)를 초기화했다. 로컬 초기 커밋을 준비했다. GitHub 저장소 생성·업로드·외부 서비스 생성·유료 계약·배포는 아직 하지 않았다.
+- 기준일: 2026-10-12.
+- Google Drive 인수인계 ZIP의 SHA-256을 확인하고 bundle에서 기존 Git 이력을 복원했다.
+- 현재 작업 위치: `/Users/chulwan/Documents/Codex/2026-10-12/oxaz1234-gmail-com-google-drive-3/saju`.
+- 원격 저장소: https://github.com/wani3000/saju (main).
+- 기획 문서와 P01 1차 계산 검증 코드가 있으며 앱·실제 DB·결제는 아직 없다.
+- 고정 커밋의 엔진을 복구하여 기존 비교 결과와 어댑터 테스트 12개 통과를 재현했다. 실행 환경은 Node 22.17.0, pnpm 11.25.0이다.
+- [계산 엔진 검증 결과](docs/engine-validation.md)의 운영 채택 조건은 미완료다.
+- P02의 기존 시안 3개는 최종 선택이 아니다. 귀여운 독창적 캐릭터 방향과 sajuham.app 실제 화면 평가가 다음 작업이다.
 - doryeong.app은 공개 화면을 참고한 서비스다. 이 폴더는 해당 사이트의 소스 복사본이나 인수한 저장소가 아니다. 캐릭터·상표·문구를 그대로 복제하지 않는다.
 
 ## 제품 기준
@@ -50,6 +52,6 @@
 
 ## 프로젝트 확인
 
-요청한 `문서/github/saju-relationship`에 배치했다. 앞으로 이 폴더를 기준으로 작업한다. 이전 Codex 작업 폴더의 복사본은 준비 당시 자료다.
+현재 작업 경로는 위의 복원 위치를 사용한다. 과거 PC 배치 기록은 docs/11-decisions.md에 보존한다.
 
 프로젝트 루트에서 `python3 tools/check_docs.py`로 문서 연결을 확인한다. 이 검사는 문서만 확인하며 앱·DB·결제 테스트가 아니다.

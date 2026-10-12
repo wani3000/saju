@@ -20,3 +20,5 @@ fixtures에는 당시 수집한 KASI 원문과 파생 기대값, IANA 월별 정
 `run-comparison.mjs`는 후보의 실패를 수집하는 평가 도구라 exit 0이 후보 통과를 뜻하지 않는다. 판정은 reports/comparison.json을 읽는다. `adapter.test.mjs`는 실제 단언에 실패하면 exit 1이다.
 
 현재 어댑터는 연구용이며 productionApproved=false다. 1908년 이전을 차단하고 시간 미상을 임의의 정오로 확정하지 않는다. 역사적 시각 처리와 운영 범위 확정은 남아 있다. 이 어댑터를 결제 상품에 연결하지 않는다.
+
+2026-10-12 복원 환경(Node 22.17.0, pnpm 11.25.0)에서도 위 명령과 기존 결과를 재현했다. build.mjs는 현재 작업 디렉터리와 무관하게 스크립트 위치를 기준으로 실행한다. 프로젝트 루트에서도 `node research/validation/build.mjs`를 사용할 수 있다.
