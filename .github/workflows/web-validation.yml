@@ -1,0 +1,39 @@
+name: Web validation
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '22.17.0'
+      - run: npm install --global pnpm@11.25.0
+      - run: node research/validation/restore-engines.mjs
+      - run: pnpm --dir research/validation install --frozen-lockfile --ignore-scripts
+      - run: npm ci --prefix web
+      - run: npm test --prefix web
+      - run: npm run db:check --prefix web
+      - run: npm run build --prefix web
+      - name: HTTP integration journey
+        working-directory: web
+        shell: bash
+        run: |
+          npm start > /tmp/saju-web.log 2>&1 &
+          server_pid=$!
+          trap 'kill "$server_pid"' EXIT
+          for attempt in {1..30}; do
+            if curl -fsS http://127.0.0.1:4180/ > /dev/null; then break; fi
+            sleep 1
+          done
+          npm run test:http
+      - run: python3 tools/check_docs.py

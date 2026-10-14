@@ -1,0 +1,19 @@
+{
+  "date": "2026-10-14",
+  "selectedMock": "../../../../design/characters/tigers/02-tiger.png",
+  "tool": "built-in image_gen",
+  "assets": [
+    {
+      "file": "pair-v1.png",
+      "prompt": "Create production app illustration asset from supplied selected UI mock. Extract/recreate ONLY the two plush baby tiger cubs touching cheeks, preserving exactly their very cute rounded silhouettes, warm orange and ivory coloring, velvety fine fur, dark brown rounded stripes, left tiger one eye winking, right cream tiger eyes closed smiling, tiny rounded paws and curling tails. Their full bodies face forward while heads lean together. Include the three small orange excitement marks above heads as in reference. No text, no logos, no UI, no background, no ground slab. TRUE transparent background with delicate neutral contact shadow only directly under paws. Composition tightly framed horizontally, cubs fully visible with 4% breathing room, approximately 1100x850 landscape asset for a 350x270 CSS px homepage hero. Match source animal identities and proportions precisely, do not add any props. Built-in edit, supporting image is selected app mock; everything except tigers/accent marks removed."
+    },
+    {
+      "file": "orange-v1.png",
+      "prompt": "Create a SINGLE transparent avatar asset of the orange baby tiger from the attached UI mock, original cute plush tiger identity exactly preserved. Head and upper chest only, straight-on, large round head and tiny ears, cream muzzle, rounded chocolate brown stripes, short velvety orange fur, rosy cheeks, round glossy dot eyes open, tiny smiling mouth, friendly and reassuring. Composition fits 1:1 square icon with safe 8% margins, no circular frame, no background, no props, no lettering, no other animal. Extremely clear recognizable silhouette at 64 CSS pixels, rendered at high resolution 1024x1024. TRUE transparency."
+    },
+    {
+      "file": "cream-v1.png",
+      "prompt": "Create a SINGLE transparent avatar asset of the IVORY CREAM baby tiger from the attached selected UI mock, original plush tiger identity exactly preserved. Head and upper chest only, straight-on, enormous rounded head and tiny ears, warm vanilla cream fur with rounded chocolate brown stripes, white cream muzzle, rosy cheeks, happy closed eyes curved in smile, tiny brown nose and smiling mouth. Match the reference right-hand tiger. Short velvety plush fur, gentle warm light. Composition fits 1:1 square icon with safe 8% margins, no circle frame, no background, no props, no lettering, no other animal. Extremely clear recognizable silhouette at 64 CSS pixels, rendered at high resolution 1024x1024. TRUE transparency."
+    }
+  ]
+}

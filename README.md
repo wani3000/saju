@@ -8,7 +8,7 @@
 - 10월 12일 ZIP의 체크섬을 대조하고 Git 이력을 복원했다. 10월 14일 별도 분기에서는 [캐릭터 설계](docs/13-character-plan.md)를 선별 통합했다.
 - 현재 작업 위치: `/Users/chulwan/Documents/Codex/2026-10-12/oxaz1234-gmail-com-google-drive-3/saju`.
 - 원격 저장소: https://github.com/wani3000/saju (main).
-- 기획·계산 연구 코드와 [호랑이 클릭 시안](prototype/README.md)이 있다. 실제 계산을 연결한 운영 앱·DB·결제는 아직 없다.
+- [Next.js 서버 연결 앱](web/README.md)을 구현했다. 입력·결과 DB 저장, 연구 계산, 무료권, 지도·공유 링크와 모의 결제가 동작한다. 정식 인증·실결제·운영 출시는 아직이다. 기존 [클릭 시안](prototype/README.md)은 보존했다.
 - 고정 커밋의 엔진을 복구하여 기존 비교 결과와 어댑터 테스트 12개 통과를 재현했다. 실행 환경은 Node 22.17.0, pnpm 11.25.0이다.
 - [계산 엔진 검증 결과](docs/engine-validation.md)의 운영 채택 조건은 미완료다.
 - [개발 실행 계획](docs/development-plan.md): [역사적 시각 계산 경로](docs/historical-clock-validation.md)를 보강했으며 29개 테스트와 시간대 1,918개 사례·달력 738일·절기 전후 48개 입력 대조를 통과했다.
@@ -52,7 +52,7 @@
 
 > README.md와 AGENTS.md, TASKS.md를 읽고 P01 계산 엔진 검증부터 진행해. 아직 유료 계약이나 실서비스 배포는 하지 말고, 검증 결과와 다음 진행 가능 여부를 기록해.
 
-로컬 시안은 `cd prototype && npm ci && npm run dev -- --host 127.0.0.1 --port 4173`으로 실행한다. 연구 엔진의 운영 검증과 Next.js 앱 골격은 별도 단계다. 인증·PG 계정이 없어도 합성 데이터와 결제 모의 환경으로 앞 단계를 진행할 수 있다.
+로컬 시안은 `cd prototype && npm ci && npm run dev -- --host 127.0.0.1 --port 4173`으로 실행한다. 서버 연결 앱은 `cd web && npm ci && npm run dev`로 4180 포트에서 실행한다. [현재 구현 상태](docs/server-app-status.md)를 먼저 확인한다. 연구 엔진의 운영 검증은 계속 별도 단계다. 인증·PG 계정이 없어도 합성 데이터와 결제 모의 환경으로 앞 단계를 진행할 수 있다.
 
 ## 프로젝트 확인
 

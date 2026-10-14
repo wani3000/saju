@@ -1,0 +1,37 @@
+{
+  "name": "saju-web",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "engine": "node scripts/prepare-engine.mjs",
+    "dev": "npm run engine && next dev --webpack --hostname 127.0.0.1 --port 4180",
+    "build": "npm run engine && next build --webpack",
+    "start": "next start --hostname 127.0.0.1 --port 4180",
+    "test": "npm run engine && tsx --test tests/*.test.ts",
+    "typecheck": "tsc --noEmit",
+    "worker": "tsx scripts/worker.ts",
+    "db:check": "tsx scripts/db-check.ts",
+    "test:http": "node tests/http.mjs"
+  },
+  "dependencies": {
+    "@electric-sql/pglite": "0.5.9",
+    "@fontsource/jua": "5.3.0",
+    "@fontsource/noto-sans-kr": "5.3.1",
+    "@tosspayments/tosspayments-sdk": "2.9.0",
+    "next": "16.4.0",
+    "pg": "8.23.1",
+    "react": "19.2.7",
+    "react-dom": "19.2.7",
+    "zod": "4.1.12"
+  },
+  "devDependencies": {
+    "@types/node": "22.19.15",
+    "@types/pg": "8.15.6",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "esbuild": "0.28.2",
+    "tsx": "4.23.15",
+    "typescript": "5.9.3"
+  }
+}

@@ -30,3 +30,7 @@ Drive의 2026-10-14 ZIP은 bfa9bd5 분기이며 현재 main의 전체 작업을 
 ## 2026-10-14 호랑이 UI 후속 구현
 
 사용자가 호랑이 2번을 선택했다. 최신 로컬 UI는 [prototype 실행 안내](prototype/README.md)를 따른다. 입력부터 예시 결과·지도·문구 복사가 동작한다. 이전 '시안 선택 대기' 기록은 과거 상태다. Next.js 운영 앱, 실제 계산 연결, DB, 인증, PG는 다음 단계다.
+
+## 최신 서버 연결 앱 (2026-10-14)
+
+[web/README.md](web/README.md)를 읽고 `web/`에서 실행한다. 포트 4180이며 로컬 DB 저장·연구 계산·공유·모의 결제가 동작한다. `prototype/`은 이전 UX 시안이다. [구현 상태](docs/server-app-status.md), [QA](web/qa.md), TASKS.md의 남은 외부 조건을 확인한다. Drive ZIP 이후 변경은 GitHub main을 기준으로 받는다.
