@@ -3,7 +3,7 @@
   "tool": "built-in image_gen",
   "reference": "../01-birds.png",
   "speciesSelected": "tiger",
-  "visualSelected": null,
+  "visualSelected": 2,
   "options": [
     {
       "displayOrder": 1,

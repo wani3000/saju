@@ -26,3 +26,7 @@ AGENTS.md → README.md → TASKS.md → docs/11-decisions.md → docs/engine-va
 - 다음 단계는 시안 선택 후 결과·지도 확장 및 P03 합성 데이터 앱 골격. 운영 DB·실결제·공개 배포는 별도 요청 전 실행하지 않는다.
 
 Drive의 2026-10-14 ZIP은 bfa9bd5 분기이며 현재 main의 전체 작업을 포함하지 않는다. 해당 ZIP으로 이 checkout을 덮어쓰거나 과거 접근 차단 기록을 현재 상태로 일반화하지 않는다.
+
+## 2026-10-14 호랑이 UI 후속 구현
+
+사용자가 호랑이 2번을 선택했다. 최신 로컬 UI는 [prototype 실행 안내](prototype/README.md)를 따른다. 입력부터 예시 결과·지도·문구 복사가 동작한다. 이전 '시안 선택 대기' 기록은 과거 상태다. Next.js 운영 앱, 실제 계산 연결, DB, 인증, PG는 다음 단계다.
