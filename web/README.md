@@ -64,7 +64,7 @@ npm run test:http
 
 NICEPAY 결제 준비 → 서명·20분 반환 토큰 확인 → 거래 소속 조회 → 서버 승인 → 거래 조회 → 이용권 흐름을 구현했다. 웹훅도 서명과 현재 거래를 확인한다. 전액 취소 후 조회가 확인되어야 환불 완료로 기록한다. API 응답을 주입하는 테스트는 통과했지만 실제 NICEPAY 테스트 상점 왕복은 아직 하지 않았다. 승인 전 `ready` 거래 조회 가능 여부도 실제 상점에서 확인해야 한다.
 
-Supabase에 카카오 공급자를 활성화하고 `.env.example`의 URL·publishable key·APP_ORIGIN을 설정한다. redirect allowlist에는 정확한 `APP_ORIGIN/auth/callback`을 등록한다. 서버가 PKCE 코드를 교환하고 `getUser()`로 확인한 식별자만 연결한다. 이미 계정이 있으면 사용자가 합치기/전환을 고른다. 합치기는 현재 입력 기준이 같을 때만 허용하며 주문·결과·공유·무료 이용 이력을 함께 이관한다. 이메일·카카오 프로필·출생 정보를 인증사로 보내지 않는다. 외부 OAuth 왕복은 프로젝트 설정 후 검증한다.
+Supabase에 카카오 공급자를 활성화하고 `.env.example`의 URL·publishable key·APP_ORIGIN을 설정한다. redirect allowlist에는 정확한 `APP_ORIGIN/auth/callback`을 등록한다. 서버가 PKCE 코드를 교환하고 `getUser()`로 확인한 식별자만 연결한다. 이미 계정이 있으면 사용자가 합치기/전환을 고른다. 합치기는 현재 입력 기준이 같을 때만 허용하며 주문·결과·공유·무료 이용 이력을 함께 이관한다. 사주 입력·결제 정보는 인증사로 보내지 않고 앱 DB에는 확인된 로그인 식별자만 저장한다. 외부 OAuth 왕복은 프로젝트 설정 후 검증한다.
 
 ```sh
 npm run db:migrate
@@ -79,3 +79,5 @@ npm run maintenance
 개인정보 삭제는 초안·생일·차트·결과·공유·세션·복구 코드를 지운다. 미확정 결제는 먼저 대사하도록 막으며, 최소 주문·동의·무료 사용 이력과 삭제된 로그인 식별자는 남긴다. 삭제 후 늦은 환불 통보는 주문만 종결하고 결과를 복구하지 않는다. 이 보존 범위는 개발 정책이며 운영용 개인정보 처리방침 승인으로 간주하지 않는다.
 
 공식 연동 근거: [NICEPAY 서버 승인](https://github.com/nicepayments/nicepay-manual/blob/main/api/payment-window-server.md), [조회](https://github.com/nicepayments/nicepay-manual/blob/main/api/status-transaction.md), [취소](https://github.com/nicepayments/nicepay-manual/blob/main/api/cancel.md), [웹훅](https://github.com/nicepayments/nicepay-manual/blob/main/api/hook.md), [Supabase PKCE](https://supabase.com/docs/guides/auth/sessions/pkce-flow).
+
+`003_server_access.sql`은 모든 테이블에 RLS 기본 거절을 적용한다. 마이그레이션 소유자 외 서버 계정은 `runtime-role.sql`의 정책이 필요하다. 호스팅이 anon 역할에 기본 테이블 권한을 부여하더라도 정책이 없어 행을 읽거나 쓸 수 없음을 별도 PostgreSQL 역할로 검증한다. 이후 새 테이블도 RLS와 서버 전용 정책을 함께 추가한다.

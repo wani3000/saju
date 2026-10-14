@@ -21,6 +21,37 @@ try {
   await admin.query(
     "GRANT USAGE,SELECT ON ALL SEQUENCES IN SCHEMA public TO saju_runtime",
   );
+  for (const table of [
+    "accounts",
+    "sessions",
+    "drafts",
+    "comparisons",
+    "free_claims",
+    "orders",
+    "entitlements",
+    "generation_jobs",
+    "results",
+    "shares",
+    "payment_attempts",
+    "payment_events",
+    "mock_payments",
+    "consent_records",
+    "rate_limits",
+    "auth_identities",
+    "oauth_attempts",
+    "merge_tickets",
+    "operational_events",
+    "nicepay_attempts",
+    "schema_migrations",
+  ])
+    await admin.query(
+      `CREATE POLICY saju_server_access ON ${table} TO saju_runtime USING (true) WITH CHECK (true)`,
+    );
+  await admin.query("CREATE ROLE saju_anon LOGIN NOSUPERUSER");
+  await admin.query("GRANT USAGE ON SCHEMA public TO saju_anon");
+  await admin.query(
+    "GRANT SELECT,INSERT,UPDATE,DELETE ON ALL TABLES IN SCHEMA public TO saju_anon",
+  );
   process.env.DATABASE_URL = process.env.DATABASE_URL!.replace(
     "saju_admin@",
     "saju_runtime@",
@@ -80,6 +111,31 @@ try {
     const renew = await s.newSession(b, guest.owner);
     assert.equal(await erasePersonalData(a, guest.owner, true), false);
     assert.equal(await s.sessionOwner(a, renew.secret), guest.owner);
+    const runtimeUrl = process.env.DATABASE_URL!;
+    process.env.DATABASE_URL = runtimeUrl.replace(
+      "saju_runtime@",
+      "saju_anon@",
+    );
+    const anon = await openDatabase();
+    try {
+      assert.equal((await anon.query("SELECT * FROM results")).rows.length, 0);
+      assert.equal((await anon.query("SELECT * FROM accounts")).rows.length, 0);
+      await assert.rejects(
+        anon.query("INSERT INTO accounts(id) VALUES($1)", [randomUUID()]),
+        { code: "42501" },
+      );
+      assert.equal(
+        (await anon.query("UPDATE accounts SET kind='member' RETURNING id"))
+          .rows.length,
+        0,
+      );
+    } finally {
+      await anon.close();
+      process.env.DATABASE_URL = runtimeUrl;
+    }
+    console.log(
+      "Hosted anonymous role with table grants: RLS reads/writes denied.",
+    );
     console.log(
       "PostgreSQL: two connection pools, 12 concurrent free requests, SKIP LOCKED, duplicate approval, refund fencing, active-guest retention and restricted-role DDL denial passed.",
     );

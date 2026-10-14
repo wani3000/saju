@@ -92,7 +92,7 @@ export function database() {
     else if (
       !(await one(
         db,
-        "SELECT name FROM schema_migrations WHERE name='002_operations.sql'",
+        "SELECT name FROM schema_migrations WHERE name='003_server_access.sql'",
       ))
     )
       throw new Error("RUN_MIGRATIONS_FIRST");
