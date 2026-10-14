@@ -1,3 +1,4 @@
+import { NicepayTestProvider, nicepayCredentials } from "./nicepay";
 import { randomUUID } from "node:crypto";
 import { AppError } from "../domain/model";
 import { one, type Database, type Row } from "./db";
@@ -101,9 +102,14 @@ export class TossTestProvider implements Provider {
   }
 }
 export function providerFor(db: Database, name: string): Provider {
-  return name === "mock"
-    ? new MockProvider(db)
-    : new TossTestProvider(process.env.TOSS_SECRET_KEY ?? "");
+  if (name === "mock") return new MockProvider(db);
+  if (name === "nicepay-test") {
+    const { client, secret } = nicepayCredentials();
+    return new NicepayTestProvider(client, secret);
+  }
+  if (name === "toss-test")
+    return new TossTestProvider(process.env.TOSS_SECRET_KEY ?? "");
+  throw new Error("UNKNOWN_PAYMENT_PROVIDER");
 }
 export async function ownedOrder(db: Database, owner: string, id: string) {
   const o = await one(db, "SELECT * FROM orders WHERE id=$1 AND owner_id=$2", [
@@ -120,7 +126,16 @@ export async function applyPayment(
   p: Payment,
 ) {
   return db.transaction(async (tx) => {
-    await lockOwner(tx, owner);
+    const account = await one(
+      tx,
+      "SELECT deleted_at,merged_into FROM accounts WHERE id=$1 FOR UPDATE",
+      [owner],
+    );
+    if (!account || account.merged_into)
+      throw new AppError("UNAUTHORIZED", 401);
+    // Erasure keeps minimal financial records. A late refund may still close them,
+    // while a late approval must never regenerate erased personal results.
+    if (account.deleted_at && p.status !== "CANCELED") return;
     const o = await one(
       tx,
       "SELECT * FROM orders WHERE id=$1 AND owner_id=$2 FOR UPDATE",
@@ -228,7 +243,8 @@ export async function confirmPayment(
     let receipt: Payment;
     if (["confirming", "confirmation_unknown"].includes(o.state)) {
       try {
-        receipt = await p.lookup(o);
+        receipt = await p.lookup({ ...o, payment_key: key });
+        if (receipt.status === "READY") receipt = await p.confirm(o, key);
       } catch (e) {
         if (!(e instanceof PaymentNotFound)) throw e;
         receipt = await p.confirm(o, key);
@@ -268,6 +284,12 @@ export async function reconcilePayment(
     let receipt;
     try {
       receipt = await gateway.lookup(o);
+      if (
+        receipt.status === "READY" &&
+        o.payment_key &&
+        ["confirming", "confirmation_unknown"].includes(o.state)
+      )
+        receipt = await gateway.confirm(o, o.payment_key);
     } catch (e) {
       if (
         !(e instanceof PaymentNotFound) ||

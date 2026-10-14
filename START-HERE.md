@@ -34,3 +34,8 @@ Drive의 2026-10-14 ZIP은 bfa9bd5 분기이며 현재 main의 전체 작업을 
 ## 최신 서버 연결 앱 (2026-10-14)
 
 [web/README.md](web/README.md)를 읽고 `web/`에서 실행한다. 포트 4180이며 로컬 DB 저장·연구 계산·공유·모의 결제가 동작한다. `prototype/`은 이전 UX 시안이다. [구현 상태](docs/server-app-status.md), [QA](web/qa.md), TASKS.md의 남은 외부 조건을 확인한다. Drive ZIP 이후 변경은 GitHub main을 기준으로 받는다.
+
+
+### 최신 후속 구현 (2026-10-14)
+
+우선 결제사는 사용자의 전자책 플랫폼과 같은 NICEPAY다. `web/.env.example`·`web/README.md`에 sandbox 설정, Supabase 카카오 PKCE, 명시적 보관함 합치기, 삭제/만료/대사 CLI와 실제 PostgreSQL 동시성·백업 복원 명령을 추가했다. 운영 연결·궁합 규칙 감수는 아직 남아 있으며 기존 연구 모드 차단을 제거하지 않는다.

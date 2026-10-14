@@ -4,6 +4,10 @@ import { z } from "zod";
 import { database } from "@/server/db";
 import { AppError } from "@/domain/model";
 import * as service from "@/server/service";
+import { authClient, authEnabled } from "@/server/auth";
+import { startIdentity, finishIdentity } from "@/server/identity";
+import { prepareNicepay } from "@/server/nicepay-checkout";
+import { erasePersonalData } from "@/server/operations";
 import * as payment from "@/server/payments";
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -96,15 +100,59 @@ async function handle(req: NextRequest) {
     if (path === "state" && req.method === "GET")
       return send({
         ...(await service.state(db, owner)),
+        authEnabled: authEnabled(),
         provider: process.env.PAYMENT_PROVIDER ?? "mock",
         tossClientKey: process.env.TOSS_CLIENT_KEY?.startsWith("test_ck_")
           ? process.env.TOSS_CLIENT_KEY
           : null,
       });
+    if (path === "auth/start" && req.method === "POST") {
+      const res = send({});
+      const auth = authClient(req, res);
+      const attempt = await startIdentity(db, owner);
+      const { data, error } = await auth.auth.signInWithOAuth({
+        provider: "kakao",
+        options: {
+          redirectTo: process.env.APP_ORIGIN + "/auth/callback",
+          skipBrowserRedirect: true,
+        },
+      });
+      if (error || !data.url) throw new AppError("AUTH_UNAVAILABLE", 503);
+      res.cookies.set("saju_auth", attempt, {
+        httpOnly: true,
+        sameSite: "lax",
+        secure: req.nextUrl.protocol === "https:",
+        path: "/",
+        maxAge: 600,
+      });
+      const response = send({ url: data.url });
+      for (const c of res.cookies.getAll()) response.cookies.set(c);
+      return response;
+    }
+    if (path === "auth/finish" && req.method === "POST") {
+      if (body.choice !== "merge" && body.choice !== "switch")
+        throw new AppError("INVALID_CHOICE");
+      const target = await finishIdentity(
+        db,
+        owner,
+        req.cookies.get("saju_merge")?.value ?? "",
+        body.choice === "merge",
+      );
+      const session = await service.newSession(db, target);
+      const res = sessionCookie(send({ ok: true }), session.secret, req);
+      res.cookies.delete("saju_merge");
+      return res;
+    }
     if (path === "draft" && req.method === "POST")
       return send(await service.saveDraft(db, owner, body.pair, body.revision));
     if (path === "recovery-code" && req.method === "POST")
       return send({ code: await service.recoveryCode(db, owner) });
+    if (path === "account" && req.method === "DELETE") {
+      await erasePersonalData(db, owner);
+      const res = send({ ok: true });
+      res.cookies.delete(cookieName);
+      return res;
+    }
     if (path === "logout" && req.method === "POST") {
       await db.query("DELETE FROM sessions WHERE token_hash=$1", [
         service.hash(req.cookies.get(cookieName)!.value),
@@ -153,6 +201,20 @@ async function handle(req: NextRequest) {
       return send({ ok: true });
     }
     if (parts[0] === "orders" && req.method === "POST") {
+      if (parts[2] === "prepare")
+        return send(
+          await prepareNicepay(
+            db,
+            owner,
+            id,
+            process.env.APP_ORIGIN ?? req.nextUrl.origin,
+          ),
+        );
+      if (
+        parts[2] === "confirm" &&
+        (await payment.ownedOrder(db, owner, id)).provider === "nicepay-test"
+      )
+        throw new AppError("SIGNED_RETURN_REQUIRED", 403);
       if (parts[2] === "confirm")
         await payment.confirmPayment(
           db,

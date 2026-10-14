@@ -117,6 +117,16 @@ cookie = "";
 r = await request("recover", { code });
 assert.equal(r.status, 200);
 assert.equal((await (await request("state")).json()).results.length, 1);
+r = await request("auth/start", {});
+assert.equal(r.status, 503);
+r = await request("auth/finish", { choice: "merge" });
+assert.equal(r.status, 401);
+r = await request("account", undefined, { method: "DELETE" });
+assert.equal(r.status, 200);
+r = await request("state");
+assert.equal(r.status, 401);
+r = await request("recover", { code });
+assert.equal(r.status, 401);
 console.log(
-  "HTTP journey passed: CSRF, cookie, persistence, free result, public redaction/revocation, ownership, recovery, mock payment/refund, webhook gate.",
+  "HTTP journey passed: CSRF, cookie, persistence, free result, public redaction/revocation, ownership, recovery, mock payment/refund, webhook gate, unconfigured OAuth, invalid merge ticket, erasure and revoked recovery.",
 );

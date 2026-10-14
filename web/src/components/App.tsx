@@ -16,6 +16,8 @@ type Order = {
 };
 type State = {
   kind: string;
+  authEnabled: boolean;
+  authLinked: boolean;
   draft: Pair | null;
   revision: number;
   free: string;
@@ -69,6 +71,8 @@ export default function App() {
     [aliases, setAliases] = useState<[string, string]>(["나", "상대방"]),
     [shareLink, setShareLink] = useState(""),
     [mapPage, setMapPage] = useState(0);
+  const [authReview, setAuthReview] = useState(false);
+  const [eraseConfirmed, setEraseConfirmed] = useState(false);
   const [mapGroup, setMapGroup] = useState("");
   const ownerGeneration = useRef(0);
   const revision = useRef(0),
@@ -124,6 +128,19 @@ export default function App() {
         if (!alive) return;
         await refresh(true);
         const params = new URLSearchParams(window.location.search);
+        if (params.has("auth")) {
+          const outcome = params.get("auth");
+          window.history.replaceState({}, "", window.location.pathname);
+          setView("account");
+          setAuthReview(outcome === "review");
+          setNotice(
+            outcome === "failed"
+              ? "로그인을 마치지 못했어요. 다시 시도해 주세요."
+              : outcome === "review"
+                ? "이미 보관함이 있어요. 아래에서 어떻게 열지 선택해 주세요."
+                : "로그인에 보관함을 연결했어요.",
+          );
+        }
         const order = params.get("orderId"),
           key = params.get("paymentKey"),
           amount = params.get("amount");
@@ -138,6 +155,14 @@ export default function App() {
             await refresh();
             navigate("map");
           });
+        } else if (params.has("paymentReturn")) {
+          window.history.replaceState({}, "", window.location.pathname);
+          await api("process", {});
+          await refresh();
+          setView("account");
+          setNotice(
+            "이용 내역에서 결제 상태를 확인해 주세요. 확인 중이면 다시 결제하지 말고 상태 확인을 눌러 주세요.",
+          );
         } else if (params.has("code")) {
           window.history.replaceState({}, "", window.location.pathname);
           setError("결제가 완료되지 않았어요. 입력과 주문은 보관했어요.");
@@ -234,6 +259,12 @@ export default function App() {
       await refresh();
       setSelected(order.comparison_id);
       navigate("result");
+      return;
+    }
+    if (order.provider === "nicepay-test") {
+      const checkout = await api(`orders/${order.id}/prepare`, {});
+      const { openNicepay } = await import("./nicepay-client");
+      await openNicepay(checkout);
       return;
     }
     if (!data?.tossClientKey)
@@ -423,7 +454,11 @@ export default function App() {
                 </h2>
                 <p>
                   지금은 무료 연구 체험입니다. 추가 이용은{" "}
-                  {data.provider === "mock" ? "모의 결제" : "Toss 테스트 결제"}
+                  {data.provider === "mock"
+                    ? "모의 결제"
+                    : data.provider === "nicepay-test"
+                      ? "NICEPAY 테스트 결제"
+                      : "Toss 테스트 결제"}
                   로 진행하며 실제 돈은 청구되지 않아요.
                 </p>
                 <p>
@@ -881,6 +916,54 @@ export default function App() {
             <>
               <section className="card">
                 <h2>내 이야기 보관하기</h2>
+                {data.authEnabled && !data.authLinked && (
+                  <button
+                    className="primary"
+                    disabled={busy}
+                    onClick={() =>
+                      act(async () => {
+                        if (pair) await persist(pair);
+                        const r = await api("auth/start", {});
+                        window.location.assign(r.url);
+                      })
+                    }
+                  >
+                    카카오 로그인으로 보관하기
+                  </button>
+                )}
+                {data.authLinked && <p>카카오 로그인에 연결된 보관함이에요.</p>}
+                {!data.authEnabled && (
+                  <p className="hint">카카오 로그인 연결을 준비하고 있어요.</p>
+                )}
+                {authReview && (
+                  <section className="card">
+                    <h3>기존 보관함을 찾았어요</h3>
+                    <p>
+                      합치기는 내 생일이 같은 경우에만 가능해요. 기존 보관함만
+                      열면 현재 내용은 여기에 남아요. 전환 전에 복구 코드를
+                      보관해 주세요.
+                    </p>
+                    {(["merge", "switch"] as const).map((choice) => (
+                      <button
+                        key={choice}
+                        className="secondary"
+                        disabled={busy}
+                        onClick={() =>
+                          act(async () => {
+                            ownerGeneration.current++;
+                            await saveChain.current.catch(() => {});
+                            await api("auth/finish", { choice });
+                            window.location.assign("/");
+                          })
+                        }
+                      >
+                        {choice === "merge"
+                          ? "내용을 합쳐서 열기"
+                          : "기존 보관함만 열기"}
+                      </button>
+                    ))}
+                  </section>
+                )}
                 <p>
                   현재 브라우저에서 30일 동안 다시 볼 수 있어요. 복구 코드를
                   보관하면 다른 브라우저에서도 이 보관함을 열 수 있어요.
@@ -960,6 +1043,54 @@ export default function App() {
                   }
                 >
                   코드로 보관함 전환
+                </button>
+              </section>
+              <section className="card">
+                <h2>이 브라우저에서 나가기</h2>
+                <p>다시 들어오려면 로그인 연결이나 복구 코드가 필요해요.</p>
+                <button
+                  className="secondary"
+                  disabled={busy}
+                  onClick={() =>
+                    act(async () => {
+                      ownerGeneration.current++;
+                      await saveChain.current.catch(() => {});
+                      await api("logout", {});
+                      window.location.assign("/");
+                    })
+                  }
+                >
+                  보관함에서 나가기
+                </button>
+              </section>
+              <section className="card">
+                <h2>내 정보 지우기</h2>
+                <p>
+                  입력한 생일, 결과와 공유 링크를 지워요. 복구 코드로도 되돌릴
+                  수 없어요. 주문·동의·무료 이용 기록은 남으며 삭제가 환불을
+                  뜻하지는 않아요.
+                </p>
+                <label>
+                  <input
+                    type="checkbox"
+                    checked={eraseConfirmed}
+                    onChange={(e) => setEraseConfirmed(e.target.checked)}
+                  />{" "}
+                  내용을 확인했고 내 정보를 지울게요
+                </label>
+                <button
+                  className="secondary"
+                  disabled={busy || !eraseConfirmed}
+                  onClick={() =>
+                    act(async () => {
+                      ownerGeneration.current++;
+                      await saveChain.current.catch(() => {});
+                      await api("account", undefined, "DELETE");
+                      window.location.assign("/");
+                    })
+                  }
+                >
+                  내 정보 삭제
                 </button>
               </section>
               <h2>테스트 이용 내역</h2>

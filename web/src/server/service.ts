@@ -13,7 +13,11 @@ export const hash = (s: string) => createHash("sha256").update(s).digest("hex");
 export const token = () => randomBytes(32).toString("base64url");
 export async function lockOwner(tx: Sql, owner: string) {
   if (
-    !(await one(tx, "SELECT id FROM accounts WHERE id=$1 FOR UPDATE", [owner]))
+    !(await one(
+      tx,
+      "SELECT id FROM accounts WHERE id=$1 AND deleted_at IS NULL AND merged_into IS NULL FOR UPDATE",
+      [owner],
+    ))
   )
     throw new AppError("UNAUTHORIZED", 401, "다시 시작해 주세요.");
 }
@@ -25,6 +29,7 @@ export async function newSession(db: Database, owner?: string) {
       await tx.query("INSERT INTO accounts(id) VALUES($1)", [id]);
       await tx.query("INSERT INTO free_claims(owner_id) VALUES($1)", [id]);
     }
+    if (owner) await lockOwner(tx, owner);
     await tx.query("INSERT INTO sessions(token_hash,owner_id) VALUES($1,$2)", [
       hash(secret),
       id,
@@ -37,7 +42,7 @@ export async function sessionOwner(db: Sql, secret: string | undefined) {
   return (
     await one(
       db,
-      "SELECT owner_id FROM sessions WHERE token_hash=$1 AND expires_at>now()",
+      "SELECT s.owner_id FROM sessions s JOIN accounts a ON a.id=s.owner_id WHERE s.token_hash=$1 AND s.expires_at>now() AND a.deleted_at IS NULL AND a.merged_into IS NULL",
       [hash(secret)],
     )
   )?.owner_id as string | undefined;
@@ -101,7 +106,7 @@ export async function recover(db: Database, secret: string) {
     throw new AppError("INVALID_RECOVERY", 401, "복구 코드를 확인해 주세요.");
   const account = await one(
     db,
-    "SELECT id FROM accounts WHERE recovery_hash=$1",
+    "SELECT id FROM accounts WHERE recovery_hash=$1 AND deleted_at IS NULL AND merged_into IS NULL",
     [hash(secret)],
   );
   if (!account)
@@ -123,7 +128,7 @@ export async function createComparison(
       422,
       "연구용 계산과 입력 정보 저장 안내에 동의해 주세요.",
     );
-  if (!["mock", "toss-test"].includes(provider))
+  if (!["mock", "toss-test", "nicepay-test"].includes(provider))
     throw new AppError("LIVE_DISABLED", 503);
   const { pair, charts } = validatePair(input);
   const fingerprint = (input: typeof pair, profiles: typeof charts) =>
@@ -259,6 +264,11 @@ export async function state(db: Sql, owner: string) {
   );
   return {
     kind: account?.kind,
+    authLinked: Boolean(
+      await one(db, "SELECT subject FROM auth_identities WHERE owner_id=$1", [
+        owner,
+      ]),
+    ),
     draft: draft?.data ?? null,
     revision: draft?.revision ?? 0,
     free: claim?.state,

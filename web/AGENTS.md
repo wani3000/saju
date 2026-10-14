@@ -7,7 +7,7 @@
 - 생일, 복구 코드, 세션, 공유 토큰, 결제키는 로그·Git에 넣지 않는다.
 - 입력 스키마, 소유권, 무료권, 결제, 공유 변경 시 서비스 테스트와 HTTP 여정을 실행한다.
 - `npm run build`, `npm test`, 실행 서버에 `npm run test:http`가 기본 검증이다. 실제 브라우저는 CUA로 확인한다.
-- PostgreSQL 연결 문자열과 Toss 테스트 키 없이 실연동 검증을 완료했다고 쓰지 않는다.
+- 실제 외부 OAuth·NICEPAY 상점 왕복 없이 실연동 검증을 완료했다고 쓰지 않는다. 로컬 PostgreSQL 검증과 운영 DB 검증을 구분한다.
 
 <!-- BEGIN:nextjs-agent-rules -->
 
