@@ -4,15 +4,15 @@
 
 ## 현재 상태
 
-- 기준일: 2026-10-13.
-- Google Drive 인수인계 ZIP의 SHA-256을 확인하고 bundle에서 기존 Git 이력을 복원했다.
+- 기준일: 2026-10-14.
+- 10월 12일 ZIP의 체크섬을 대조하고 Git 이력을 복원했다. 10월 14일 별도 분기에서는 [캐릭터 설계](docs/13-character-plan.md)를 선별 통합했다.
 - 현재 작업 위치: `/Users/chulwan/Documents/Codex/2026-10-12/oxaz1234-gmail-com-google-drive-3/saju`.
 - 원격 저장소: https://github.com/wani3000/saju (main).
 - 기획 문서와 P01 1차 계산 검증 코드가 있으며 앱·실제 DB·결제는 아직 없다.
 - 고정 커밋의 엔진을 복구하여 기존 비교 결과와 어댑터 테스트 12개 통과를 재현했다. 실행 환경은 Node 22.17.0, pnpm 11.25.0이다.
 - [계산 엔진 검증 결과](docs/engine-validation.md)의 운영 채택 조건은 미완료다.
 - [개발 실행 계획](docs/development-plan.md): 시간대 경계 판정 코드와 어댑터를 보강했으며 22개 테스트·1,918개 사례 대조를 통과했다.
-- 사주햄찌 공개 흐름 분석 완료. [새 캐릭터 시안 3개](design/characters/README.md)를 생성했으며 선택 후 앱 골격을 구현한다.
+- 사주햄찌 홈·궁합 상세·로그인 공개 3단계 분석 완료. 로그인 이후는 미검증이다. [새 캐릭터 시안 3개](design/characters/README.md)를 생성했으며 선택 후 앱 골격을 구현한다.
 - doryeong.app은 공개 화면을 참고한 서비스다. 이 폴더는 해당 사이트의 소스 복사본이나 인수한 저장소가 아니다. 캐릭터·상표·문구를 그대로 복제하지 않는다.
 
 ## 제품 기준
@@ -40,6 +40,9 @@
 10. [순차 개발 계획](docs/10-roadmap.md): 의존성과 단계별 완료 조건.
 11. [결정 사항과 준비물](docs/11-decisions.md): 확정 기준과 남은 선택.
 12. [출처와 기존 사이트 관찰](docs/12-references.md): 확인한 근거와 한계.
+13. [캐릭터 적용 설계](docs/13-character-plan.md): 화면별 역할, 표시 데이터, 공유 스냅샷.
+
+다른 PC에서는 [START-HERE.md](START-HERE.md)를 따른다. Drive ZIP과 현재 main의 차이는 [통합 기록](docs/handoff-integration-2026-10-14.md)에 정리했다.
 
 실제 진행 상태는 [TASKS.md](TASKS.md), 작업 원칙은 [AGENTS.md](AGENTS.md)를 따른다.
 
