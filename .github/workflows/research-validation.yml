@@ -1,0 +1,34 @@
+name: Research validation
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: '22.17.0'
+      - name: Install pinned package manager
+        run: npm install --global pnpm@11.25.0
+      - name: Restore pinned research engines
+        run: node research/validation/restore-engines.mjs
+      - name: Install validation dependencies
+        run: pnpm --dir research/validation install --frozen-lockfile --ignore-scripts
+      - name: Check documentation
+        run: python3 tools/check_docs.py
+      - name: Build verified engine sources
+        run: node research/validation/build.mjs
+      - name: Validate research adapter
+        run: pnpm --dir research/validation test

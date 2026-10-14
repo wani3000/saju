@@ -24,3 +24,27 @@ export function resolveSeoulWallTime({year, month, day, hour, minute, second = 0
   return {status: ['nonexistent', 'unique', 'ambiguous'][candidates.length], candidates,
     zone: data.zone, sourceSha256: data.sourceSha256};
 }
+
+/** Actual UTC intervals belonging to a civil date, including gap/fold days.
+ * Each half-open interval has one offset; no assumed birth time is chosen.
+ */
+export function resolveSeoulDate({year, month, day} = {}) {
+  resolveSeoulWallTime({year, month, day, hour:12, minute:0}); // date/range validation only
+  const startWallMs = Date.UTC(year, month - 1, day);
+  const endWallMs = startWallMs + 86400000;
+  let startUTCms = -Infinity;
+  let offsetSeconds = data.initialOffsetSeconds;
+  const intervals = [];
+  for (let i = 0; i <= data.transitions.length; i++) {
+    const transition = data.transitions[i];
+    const endUTCms = transition ? transition.utcSeconds * 1000 : Infinity;
+    const start = Math.max(startUTCms, startWallMs - offsetSeconds * 1000);
+    const end = Math.min(endUTCms, endWallMs - offsetSeconds * 1000);
+    if (start < end) intervals.push({startUTCms:start, endUTCms:end, offsetSeconds});
+    if (transition) {
+      startUTCms = endUTCms;
+      offsetSeconds = transition.offsetSeconds;
+    }
+  }
+  return {zone:data.zone, sourceSha256:data.sourceSha256, intervals};
+}
