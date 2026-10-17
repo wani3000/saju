@@ -131,13 +131,13 @@ export async function maintenance(db: Database) {
       unresolved++;
     }
   }
-  await runJobs(db);
+  const jobs = await runJobs(db);
   const expired = await expireData(db);
   await db.query(
     "INSERT INTO operational_events(kind,outcome) VALUES('maintenance',$1)",
-    [unresolved ? "needs_attention" : "completed"],
+    [unresolved || jobs.retriedOrFailed ? "needs_attention" : "completed"],
   );
-  return { recovered, unresolved, expired };
+  return { recovered, unresolved, expired, jobs };
 }
 export async function health(db: Database) {
   const row = await one(

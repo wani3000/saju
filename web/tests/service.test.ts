@@ -438,3 +438,80 @@ test("map groups separate changed self birth snapshots and ignore names", async 
   (changed.charts.me as { solar: { year: number } }).solar.year = 1980;
   assert.notEqual(selfGroup(r), selfGroup(changed));
 });
+
+test("three crashed workers terminate the lease, release free reservation and permit manual retry", async () => {
+  const id = await owner();
+  const c = await s.createComparison(db, id, pair(), randomUUID(), true);
+  let stale;
+  for (let n = 0; n < 3; n++) {
+    stale = await s.claimJob(db, id);
+    assert.ok(stale);
+    await db.query(
+      "UPDATE generation_jobs SET lease_until=now()-interval '1 second' WHERE comparison_id=$1",
+      [c.id],
+    );
+  }
+  assert.equal(await s.claimJob(db, id), null);
+  assert.equal((await s.state(db, id)).free, "available");
+  const job = (await one(
+    db,
+    "SELECT * FROM generation_jobs WHERE comparison_id=$1",
+    [c.id],
+  ))!;
+  assert.equal(job.state, "failed");
+  assert.equal(job.attempts, 3);
+  assert.equal(job.error_code, "LEASE_EXHAUSTED");
+  assert.equal(await s.finishJob(db, stale!), false);
+  await s.retryJob(db, id, c.id);
+  await s.runJobs(db, id);
+  assert.equal((await s.state(db, id)).results.length, 1);
+});
+test("one failing result does not stop other owners; error payload is never persisted", async () => {
+  const broken = await owner(),
+    healthy = await owner();
+  const a = await s.createComparison(db, broken, pair(), randomUUID(), true);
+  const b = await s.createComparison(db, healthy, pair(), randomUUID(), true);
+  const report = await s.runJobs(db, undefined, async (job) => {
+    if (job.comparison_id === a.id)
+      throw new Error("PRIVATE_INPUT_MUST_NOT_BE_LOGGED");
+    return s.finishJob(db, job);
+  });
+  assert.ok(report.completed >= 1);
+  assert.equal(report.retriedOrFailed, 3);
+  assert.ok(await s.result(db, healthy, b.id));
+  const job = (await one(
+    db,
+    "SELECT * FROM generation_jobs WHERE comparison_id=$1",
+    [a.id],
+  ))!;
+  assert.equal(job.error_code, "GENERATION_FAILED");
+  assert.equal(job.state, "failed");
+  assert.equal((await s.state(db, broken)).free, "available");
+});
+test("paid job crash limit preserves entitlement and manual retry does not create a new order", async () => {
+  const id = await owner(),
+    o = await paidOrder(id);
+  await p.confirmPayment(db, id, o.id, "mock_" + o.id, 2900);
+  for (let n = 0; n < 3; n++) {
+    await s.claimJob(db, id);
+    await db.query(
+      "UPDATE generation_jobs SET lease_until=now()-interval '1 second' WHERE comparison_id=$1",
+      [o.comparison_id],
+    );
+  }
+  assert.equal(await s.claimJob(db, id), null);
+  assert.equal(
+    (await one(db, "SELECT state FROM entitlements WHERE comparison_id=$1", [
+      o.comparison_id,
+    ]))!.state,
+    "active",
+  );
+  await s.retryJob(db, id, o.comparison_id);
+  await s.runJobs(db, id);
+  assert.ok(await s.result(db, id, o.comparison_id));
+  assert.equal(
+    (await db.query("SELECT * FROM orders WHERE owner_id=$1", [id])).rows
+      .length,
+    1,
+  );
+});

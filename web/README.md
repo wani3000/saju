@@ -81,3 +81,9 @@ npm run maintenance
 공식 연동 근거: [NICEPAY 서버 승인](https://github.com/nicepayments/nicepay-manual/blob/main/api/payment-window-server.md), [조회](https://github.com/nicepayments/nicepay-manual/blob/main/api/status-transaction.md), [취소](https://github.com/nicepayments/nicepay-manual/blob/main/api/cancel.md), [웹훅](https://github.com/nicepayments/nicepay-manual/blob/main/api/hook.md), [Supabase PKCE](https://supabase.com/docs/guides/auth/sessions/pkce-flow).
 
 `003_server_access.sql`은 모든 테이블에 RLS 기본 거절을 적용한다. 마이그레이션 소유자 외 서버 계정은 `runtime-role.sql`의 정책이 필요하다. 호스팅이 anon 역할에 기본 테이블 권한을 부여하더라도 정책이 없어 행을 읽거나 쓸 수 없음을 별도 PostgreSQL 역할로 검증한다. 이후 새 테이블도 RLS와 서버 전용 정책을 함께 추가한다.
+
+## 반복 중단과 요청 크기 제한
+
+작업은 자동 실행 3회까지만 시도한다. 실패를 기록하지 못한 프로세스 중단도 lease 만료 후 횟수에 포함하며, 3회 만료 시 `LEASE_EXHAUSTED`로 종결한다. 무료 예약은 반환하고 유료 이용권은 보존한다. 화면에서 다시 시도하면 같은 비교·구매 권한으로 새 실행 횟수를 시작한다. 한 작업의 오류나 계정 삭제로 다른 계정 작업이 중단되지 않으며 DB 장애 자체는 호출자에게 실패로 전달한다. `worker`와 `maintenance`는 완료·재시도 처리·건너뜀 건수를 출력하고 원문 오류/개인정보는 출력하지 않는다. 자동 지수 지연이나 호스팅 스케줄러는 아직 추가하지 않았다.
+
+API·PG 반환·웹훅은 요청 본문을 읽는 중 16KiB를 넘으면 413, 읽기 시간이 10초를 넘으면 408로 중단한다. Content-Length 유무와 관계없이 UTF-8 바이트를 계산한다. 프록시 레벨의 연결/전송 제한은 실제 호스팅에서 별도로 설정해야 한다.

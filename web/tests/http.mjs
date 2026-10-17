@@ -127,6 +127,27 @@ r = await request("state");
 assert.equal(r.status, 401);
 r = await request("recover", { code });
 assert.equal(r.status, 401);
+const oversized = new ReadableStream({
+  start(c) {
+    c.enqueue(new TextEncoder().encode("가".repeat(6000)));
+    c.close();
+  },
+});
+r = await fetch(base + "/api/session", {
+  method: "POST",
+  headers: { Origin: base, "Content-Type": "application/json" },
+  body: oversized,
+  duplex: "half",
+});
+assert.equal(r.status, 413);
+assert.equal((await r.json()).code, "TOO_LARGE");
+r = await fetch(base + "/api/session", {
+  method: "POST",
+  headers: { Origin: base, "Content-Type": "application/json" },
+  body: new Uint8Array([0xff]),
+});
+assert.equal(r.status, 400);
+assert.equal((await r.json()).code, "INVALID_ENCODING");
 console.log(
-  "HTTP journey passed: CSRF, cookie, persistence, free result, public redaction/revocation, ownership, recovery, mock payment/refund, webhook gate, unconfigured OAuth, invalid merge ticket, erasure and revoked recovery.",
+  "HTTP journey passed: CSRF, cookie, persistence, free result, public redaction/revocation, ownership, recovery, mock payment/refund, webhook gate, unconfigured OAuth, invalid merge ticket, erasure, revoked recovery, streamed byte limits and encoding.",
 );

@@ -1,3 +1,5 @@
+import { readRequestBody } from "@/server/request-body";
+import { AppError } from "@/domain/model";
 import { NextRequest, NextResponse } from "next/server";
 import { z } from "zod";
 import { database, one } from "@/server/db";
@@ -14,8 +16,7 @@ export async function POST(req: NextRequest) {
   try {
     const db = await database();
     await rateLimit(db, "toss-webhook", 60);
-    const raw = await req.text();
-    if (raw.length > 16384) return new Response(null, { status: 413 });
+    const raw = await readRequestBody(req);
     const event = z
       .object({
         eventType: z.enum(["PAYMENT_STATUS_CHANGED", "CANCEL_STATUS_CHANGED"]),
@@ -39,7 +40,9 @@ export async function POST(req: NextRequest) {
       { ok: true },
       { headers: { "Cache-Control": "no-store" } },
     );
-  } catch {
+  } catch (error) {
+    if (error instanceof AppError && [400, 408, 413].includes(error.status))
+      return new Response(null, { status: error.status });
     return NextResponse.json({ code: "EVENT_NOT_VERIFIED" }, { status: 503 });
   }
 }

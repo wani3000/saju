@@ -1,3 +1,5 @@
+import { readRequestBody } from "@/server/request-body";
+import { AppError } from "@/domain/model";
 import { database, one } from "@/server/db";
 import { rateLimit, hash } from "@/server/service";
 import { paymentEvent } from "@/server/payments";
@@ -8,10 +10,7 @@ export async function POST(req: Request) {
   if (process.env.PAYMENT_PROVIDER !== "nicepay-test")
     return new Response("Unavailable", { status: 503 });
   try {
-    if (Number(req.headers.get("content-length") ?? 0) > 16384)
-      return new Response("Too large", { status: 413 });
-    const raw = await req.text();
-    if (raw.length > 16384) return new Response("Too large", { status: 413 });
+    const raw = await readRequestBody(req);
     const f = z
       .object({
         orderId: z.uuid(),
@@ -43,7 +42,9 @@ export async function POST(req: Request) {
     return new Response("OK", {
       headers: { "Content-Type": "text/html", "Cache-Control": "no-store" },
     });
-  } catch {
+  } catch (error) {
+    if (error instanceof AppError && [400, 408, 413].includes(error.status))
+      return new Response(null, { status: error.status });
     return new Response("Retry", { status: 503 });
   }
 }

@@ -218,3 +218,36 @@ test("late provider cancellation closes retained order after erasure without res
     0,
   );
 });
+
+test("erasure during a failed worker does not stop the next owner or restore deleted data", async () => {
+  const erased = await s.newSession(db),
+    healthy = await s.newSession(db);
+  const c = await s.createComparison(
+    db,
+    erased.owner,
+    pair(),
+    randomUUID(),
+    true,
+  );
+  const h = await s.createComparison(
+    db,
+    healthy.owner,
+    pair(),
+    randomUUID(),
+    true,
+  );
+  const report = await s.runJobs(db, undefined, async (job) => {
+    if (job.comparison_id === c.id) {
+      await erasePersonalData(db, erased.owner);
+      throw new Error("TRANSIENT_WORK_ERROR");
+    }
+    return s.finishJob(db, job);
+  });
+  assert.equal(report.skipped, 1);
+  assert.ok(await s.result(db, healthy.owner, h.id));
+  assert.equal(
+    (await db.query("SELECT * FROM results WHERE owner_id=$1", [erased.owner]))
+      .rows.length,
+    0,
+  );
+});

@@ -111,6 +111,46 @@ try {
     const renew = await s.newSession(b, guest.owner);
     assert.equal(await erasePersonalData(a, guest.owner, true), false);
     assert.equal(await s.sessionOwner(a, renew.secret), guest.owner);
+    const crashOwner = (await s.newSession(a)).owner;
+    const crashComparison = await s.createComparison(
+      a,
+      crashOwner,
+      pair(),
+      randomUUID(),
+      true,
+    );
+    for (let n = 0; n < 3; n++) {
+      assert.ok(await s.claimJob(a, crashOwner));
+      await b.query(
+        "UPDATE generation_jobs SET lease_until=now()-interval '1 second' WHERE comparison_id=$1",
+        [crashComparison.id],
+      );
+    }
+    assert.deepEqual(
+      await Promise.all([s.claimJob(a, crashOwner), s.claimJob(b, crashOwner)]),
+      [null, null],
+    );
+    const released = await one(
+      a,
+      "SELECT state,generation FROM free_claims WHERE owner_id=$1",
+      [crashOwner],
+    );
+    assert.equal(released!.state, "available");
+    assert.equal(released!.generation, 2);
+    assert.equal(
+      (await one(
+        a,
+        "SELECT attempts,state FROM generation_jobs WHERE comparison_id=$1",
+        [crashComparison.id],
+      ))!.state,
+      "failed",
+    );
+    await s.retryJob(a, crashOwner, crashComparison.id);
+    await s.runJobs(b, crashOwner);
+    assert.ok(await s.result(a, crashOwner, crashComparison.id));
+    console.log(
+      "Concurrent exhausted-lease cleanup releases free reservation once; manual retry succeeds.",
+    );
     const runtimeUrl = process.env.DATABASE_URL!;
     process.env.DATABASE_URL = runtimeUrl.replace(
       "saju_runtime@",

@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { randomUUID } from "node:crypto";
 import { z } from "zod";
+import { readRequestBody } from "@/server/request-body";
 import { database } from "@/server/db";
 import { AppError } from "@/domain/model";
 import * as service from "@/server/service";
@@ -54,8 +55,6 @@ async function handle(req: NextRequest) {
           403,
           "원래 앱 화면에서 다시 시도해 주세요.",
         );
-      if (Number(req.headers.get("content-length") ?? 0) > 16384)
-        throw new AppError("TOO_LARGE", 413);
     }
     // This development app is closed to public deployment until auth/content/PG review is complete.
     if (
@@ -65,8 +64,7 @@ async function handle(req: NextRequest) {
       throw new AppError("LOCAL_ONLY", 503, "현재 로컬 개발용 서비스예요.");
     let body: Record<string, any> = {};
     if (req.method === "POST") {
-      const raw = await req.text();
-      if (raw.length > 16384) throw new AppError("TOO_LARGE", 413);
+      const raw = await readRequestBody(req);
       try {
         body = raw ? JSON.parse(raw) : {};
       } catch {

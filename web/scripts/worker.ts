@@ -1,5 +1,8 @@
 import { database } from "../src/server/db";
 import { runJobs } from "../src/server/service";
 const db = await database();
-await runJobs(db);
-await db.close();
+try {
+  console.log(JSON.stringify(await runJobs(db)));
+} finally {
+  await db.close();
+}

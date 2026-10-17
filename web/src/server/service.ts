@@ -382,24 +382,59 @@ export async function retryJob(db: Database, owner: string, id: string) {
     await tx.query("UPDATE comparisons SET state='queued' WHERE id=$1", [id]);
   });
 }
+async function failJob(tx: Sql, job: Record<string, any>, code: string) {
+  const terminal = job.attempts >= 3;
+  await tx.query(
+    "UPDATE generation_jobs SET state=$2,error_code=$3,fence=fence+1,lease_until=NULL WHERE comparison_id=$1",
+    [job.comparison_id, terminal ? "failed" : "queued", code],
+  );
+  await tx.query("UPDATE comparisons SET state=$2 WHERE id=$1", [
+    job.comparison_id,
+    terminal ? "failed" : "queued",
+  ]);
+  if (terminal && job.free_generation !== null)
+    await tx.query(
+      "UPDATE free_claims SET state='available',comparison_id=NULL,generation=generation+1 WHERE owner_id=$1 AND state='reserved' AND comparison_id=$2 AND generation=$3",
+      [job.owner_id, job.comparison_id, job.free_generation],
+    );
+}
 export async function claimJob(db: Database, owner?: string) {
-  return db.transaction(async (tx) => {
-    const job = await one(
-      tx,
-      `SELECT * FROM generation_jobs WHERE (state='queued' OR (state='running' AND lease_until<now())) ${owner ? "AND owner_id=$1" : ""} ORDER BY comparison_id LIMIT 1 FOR UPDATE SKIP LOCKED`,
-      owner ? [owner] : [],
-    );
-    if (!job) return null;
-    const current = await one(
-      tx,
-      "UPDATE generation_jobs SET state='running',attempts=attempts+1,fence=fence+1,lease_until=now()+interval '1 minute' WHERE comparison_id=$1 RETURNING *",
-      [job.comparison_id],
-    );
-    await tx.query("UPDATE comparisons SET state='processing' WHERE id=$1", [
-      job.comparison_id,
-    ]);
-    return current!;
-  });
+  // Bound cleanup work per call; another batch can continue after many exhausted leases.
+  for (let checked = 0; checked < 32; checked++) {
+    const claimed = await db.transaction(async (tx) => {
+      // All mutations take account before job locks, including refund, merge and erasure.
+      const account = await one(
+        tx,
+        `SELECT a.id FROM accounts a WHERE a.deleted_at IS NULL AND a.merged_into IS NULL
+        ${owner ? "AND a.id=$1" : ""} AND EXISTS(SELECT 1 FROM generation_jobs j WHERE j.owner_id=a.id AND (j.state='queued' OR (j.state='running' AND j.lease_until<now())))
+        ORDER BY a.id LIMIT 1 FOR UPDATE OF a SKIP LOCKED`,
+        owner ? [owner] : [],
+      );
+      if (!account) return null;
+      const job = await one(
+        tx,
+        "SELECT * FROM generation_jobs WHERE owner_id=$1 AND (state='queued' OR (state='running' AND lease_until<now())) ORDER BY comparison_id LIMIT 1 FOR UPDATE SKIP LOCKED",
+        [account.id],
+      );
+      if (!job) return null;
+      if (job.attempts >= 3) {
+        await failJob(tx, job, "LEASE_EXHAUSTED");
+        return { exhausted: true } as const;
+      }
+      const current = await one(
+        tx,
+        "UPDATE generation_jobs SET state='running',attempts=attempts+1,fence=fence+1,lease_until=now()+interval '1 minute' WHERE comparison_id=$1 RETURNING *",
+        [job.comparison_id],
+      );
+      await tx.query("UPDATE comparisons SET state='processing' WHERE id=$1", [
+        job.comparison_id,
+      ]);
+      return { job: current! };
+    });
+    if (!claimed) return null;
+    if ("job" in claimed) return claimed.job;
+  }
+  return null;
 }
 export async function finishJob(
   db: Database,
@@ -437,24 +472,7 @@ export async function finishJob(
       return false;
     }
     if (fail) {
-      const terminal = live.attempts >= 3;
-      await tx.query(
-        "UPDATE generation_jobs SET state=$2,error_code=$3 WHERE comparison_id=$1",
-        [
-          job.comparison_id,
-          terminal ? "failed" : "queued",
-          "GENERATION_FAILED",
-        ],
-      );
-      await tx.query("UPDATE comparisons SET state=$2 WHERE id=$1", [
-        job.comparison_id,
-        terminal ? "failed" : "queued",
-      ]);
-      if (terminal && free)
-        await tx.query(
-          "UPDATE free_claims SET state='available',comparison_id=NULL,generation=generation+1 WHERE owner_id=$1",
-          [job.owner_id],
-        );
+      await failJob(tx, live, "GENERATION_FAILED");
       return false;
     }
     const c = (await one(tx, "SELECT * FROM comparisons WHERE id=$1", [
@@ -489,10 +507,37 @@ export async function finishJob(
     return true;
   });
 }
-export async function runJobs(db: Database, owner?: string) {
+export async function runJobs(
+  db: Database,
+  owner?: string,
+  execute = (job: Record<string, any>) => finishJob(db, job),
+) {
+  const report = { completed: 0, retriedOrFailed: 0, skipped: 0 };
   for (let i = 0; i < 8; i++) {
     const job = await claimJob(db, owner);
     if (!job) break;
-    await finishJob(db, job);
+    try {
+      if (await execute(job)) report.completed++;
+      else report.skipped++;
+    } catch (error) {
+      if (error instanceof AppError && error.code === "UNAUTHORIZED") {
+        report.skipped++;
+        continue;
+      }
+      // Persist a bounded retry without logging payloads or original exception messages.
+      // If the database itself is unavailable this throws; the lease remains recoverable.
+      try {
+        await finishJob(db, job, true);
+        report.retriedOrFailed++;
+      } catch (recoveryError) {
+        if (
+          recoveryError instanceof AppError &&
+          recoveryError.code === "UNAUTHORIZED"
+        )
+          report.skipped++;
+        else throw recoveryError;
+      }
+    }
   }
+  return report;
 }
