@@ -133,17 +133,64 @@ export async function maintenance(db: Database) {
   }
   const jobs = await runJobs(db);
   const expired = await expireData(db);
+  const status = await health(db);
   await db.query(
     "INSERT INTO operational_events(kind,outcome) VALUES('maintenance',$1)",
-    [unresolved || jobs.retriedOrFailed ? "needs_attention" : "completed"],
+    [
+      status.status === "needs_attention" || unresolved
+        ? "needs_attention"
+        : "completed",
+    ],
   );
-  return { recovered, unresolved, expired, jobs };
+  return { recovered, unresolved, expired, jobs, health: status };
 }
 export async function health(db: Database) {
-  const row = await one(
+  // One statement gives all counters the same database snapshot. Never select payloads or IDs.
+  const row = (await one(
     db,
-    `SELECT (SELECT count(*)::int FROM generation_jobs WHERE state IN ('queued','running','failed')) AS jobs,
- (SELECT count(*)::int FROM orders WHERE state IN ('confirming','confirmation_unknown','refund_pending')) AS payments`,
-  );
-  return { mode: "research", jobs: row!.jobs, payments: row!.payments };
+    `WITH jobs AS (
+      SELECT count(*) FILTER (WHERE state='queued')::int AS queued,
+        count(*) FILTER (WHERE state='running')::int AS running,
+        count(*) FILTER (WHERE state='failed')::int AS failed,
+        count(*) FILTER (WHERE state='running' AND (lease_until IS NULL OR lease_until<now()))::int AS expired_leases,
+        coalesce(floor(max(extract(epoch FROM now()-lease_until)) FILTER (WHERE state='running' AND lease_until<now())),0)::float8 AS oldest_expired_lease_seconds
+      FROM generation_jobs
+    ), payments AS (
+      SELECT count(*) FILTER (WHERE state='confirming')::int AS confirming,
+        count(*) FILTER (WHERE state='confirmation_unknown')::int AS confirmation_unknown,
+        count(*) FILTER (WHERE state='refund_pending')::int AS refund_pending,
+        coalesce(greatest(0,floor(max(extract(epoch FROM now()-created_at)))),0)::float8 AS oldest_pending_order_seconds
+      FROM orders WHERE state IN ('confirming','confirmation_unknown','refund_pending')
+    ) SELECT * FROM jobs CROSS JOIN payments`,
+  ))!;
+  const jobs = {
+    queued: row.queued as number,
+    running: row.running as number,
+    failed: row.failed as number,
+    expiredLeases: row.expired_leases as number,
+    oldestExpiredLeaseSeconds: row.oldest_expired_lease_seconds as number,
+  };
+  const payments = {
+    confirming: row.confirming as number,
+    confirmationUnknown: row.confirmation_unknown as number,
+    refundPending: row.refund_pending as number,
+    // This is order age, not time spent in its current payment state.
+    oldestPendingOrderSeconds: row.oldest_pending_order_seconds as number,
+  };
+  const reasons: string[] = [];
+  if (jobs.failed) reasons.push("FAILED_JOBS");
+  if (jobs.expiredLeases) reasons.push("EXPIRED_LEASES");
+  if (
+    payments.confirming ||
+    payments.confirmationUnknown ||
+    payments.refundPending
+  )
+    reasons.push("PENDING_PAYMENTS");
+  return {
+    mode: "research" as const,
+    status: reasons.length ? ("needs_attention" as const) : ("ok" as const),
+    reasons,
+    jobs,
+    payments,
+  };
 }

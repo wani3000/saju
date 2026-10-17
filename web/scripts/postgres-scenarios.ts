@@ -1,9 +1,10 @@
 import assert from "node:assert/strict";
 import { randomUUID } from "node:crypto";
+import { spawnSync } from "node:child_process";
 import { openDatabase, migrate, one } from "../src/server/db";
 import * as s from "../src/server/service";
 import * as p from "../src/server/payments";
-import { erasePersonalData } from "../src/server/operations";
+import { erasePersonalData, health } from "../src/server/operations";
 import { samplePerson } from "../src/domain/model";
 const admin = await openDatabase();
 try {
@@ -126,6 +127,16 @@ try {
         [crashComparison.id],
       );
     }
+    const check = spawnSync(
+      process.execPath,
+      ["--import", "tsx", "scripts/maintenance.ts", "--health"],
+      { encoding: "utf8" },
+    );
+    assert.equal(check.status, 2);
+    assert.equal(check.stderr, "");
+    const report = JSON.parse(check.stdout);
+    assert.equal(report.status, "needs_attention");
+    assert.equal(report.jobs.expiredLeases, 1);
     assert.deepEqual(
       await Promise.all([s.claimJob(a, crashOwner), s.claimJob(b, crashOwner)]),
       [null, null],
@@ -148,8 +159,9 @@ try {
     await s.retryJob(a, crashOwner, crashComparison.id);
     await s.runJobs(b, crashOwner);
     assert.ok(await s.result(a, crashOwner, crashComparison.id));
+    assert.equal((await health(a)).status, "ok");
     console.log(
-      "Concurrent exhausted-lease cleanup releases free reservation once; manual retry succeeds.",
+      "Concurrent exhausted-lease cleanup releases free reservation once; health CLI exits 2 until manual recovery succeeds.",
     );
     const runtimeUrl = process.env.DATABASE_URL!;
     process.env.DATABASE_URL = runtimeUrl.replace(

@@ -88,15 +88,21 @@ export function database() {
   return (globalDb.sajuDb ??= (async () => {
     assertMode();
     const db = await openDatabase();
-    if (!process.env.DATABASE_URL) await migrate(db);
-    else if (
-      !(await one(
-        db,
-        "SELECT name FROM schema_migrations WHERE name='003_server_access.sql'",
-      ))
-    )
-      throw new Error("RUN_MIGRATIONS_FIRST");
-    return db;
+    try {
+      if (!process.env.DATABASE_URL) await migrate(db);
+      else if (
+        !(await one(
+          db,
+          "SELECT name FROM schema_migrations WHERE name='003_server_access.sql'",
+        ))
+      )
+        throw new Error("RUN_MIGRATIONS_FIRST");
+      return db;
+    } catch (error) {
+      // Initialization can fail before the caller receives a handle to close.
+      await db.close();
+      throw error;
+    }
   })());
 }
 export function assertMode() {

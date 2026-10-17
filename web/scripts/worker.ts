@@ -1,8 +1,4 @@
-import { database } from "../src/server/db";
-import { runJobs } from "../src/server/service";
-const db = await database();
-try {
-  console.log(JSON.stringify(await runJobs(db)));
-} finally {
-  await db.close();
-}
+import { operationalCommand } from "../src/server/operational-command";
+const result = await operationalCommand("worker");
+console.log(JSON.stringify(result.report));
+process.exitCode = result.exitCode;

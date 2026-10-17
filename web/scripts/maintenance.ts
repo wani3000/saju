@@ -1,14 +1,6 @@
-import { database } from "../src/server/db";
-import { maintenance, health } from "../src/server/operations";
-const db = await database();
-try {
-  console.log(
-    JSON.stringify(
-      process.argv.includes("--health")
-        ? await health(db)
-        : await maintenance(db),
-    ),
-  );
-} finally {
-  await db.close();
-}
+import { operationalCommand } from "../src/server/operational-command";
+const result = await operationalCommand(
+  process.argv.includes("--health") ? "health" : "maintenance",
+);
+console.log(JSON.stringify(result.report));
+process.exitCode = result.exitCode;

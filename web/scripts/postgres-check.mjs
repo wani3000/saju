@@ -3,6 +3,7 @@ import { mkdtemp, rm } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import path from "node:path";
 import { spawnSync } from "node:child_process";
+import assert from "node:assert/strict";
 const bin = process.env.PG_BIN ?? "/opt/homebrew/opt/postgresql@17/bin";
 const dir = await mkdtemp(path.join(tmpdir(), "saju-pg-"));
 function run(command, args, extra = {}) {
@@ -54,12 +55,45 @@ try {
   ]);
   const testUrl = url.replace("/postgres?", "/saju_test?"),
     restoreUrl = url.replace("/postgres?", "/saju_restore?");
+  const uninitialized = spawnSync(
+    process.execPath,
+    ["--import", "tsx", "scripts/maintenance.ts", "--health"],
+    {
+      encoding: "utf8",
+      timeout: 10000,
+      env: { ...process.env, DATABASE_URL: testUrl },
+    },
+  );
+  assert.equal(uninitialized.status, 1);
+  assert.equal(uninitialized.stderr, "");
+  assert.deepEqual(JSON.parse(uninitialized.stdout), {
+    status: "error",
+    code: "OPERATION_FAILED",
+  });
   console.log(
     run(
       process.execPath,
       ["--import", "tsx", "scripts/postgres-scenarios.ts"],
       { env: { ...process.env, DATABASE_URL: testUrl } },
     ),
+  );
+  for (const args of [
+    ["scripts/maintenance.ts", "--health"],
+    ["scripts/maintenance.ts"],
+    ["scripts/worker.ts"],
+  ]) {
+    const report = JSON.parse(
+      run(process.execPath, ["--import", "tsx", ...args], {
+        env: {
+          ...process.env,
+          DATABASE_URL: testUrl.replace("saju_admin@", "saju_runtime@"),
+        },
+      }),
+    );
+    assert.equal((report.health ?? report).status, "ok");
+  }
+  console.log(
+    "Operational CLIs: uninitialized DB exits 1 without raw errors; recovered DB exits 0.",
   );
   run(path.join(bin, "pg_dump"), [
     "--format=custom",
