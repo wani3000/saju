@@ -1,0 +1,71 @@
+{
+  "source": "NAOJ long-term phenomena, UT+0, default delta-T, minute precision",
+  "years": [
+    1908,
+    1912,
+    1948,
+    1954,
+    1961,
+    1988,
+    2000,
+    2024
+  ],
+  "timestamps": 192,
+  "sameDisplayedMinute": 189,
+  "maxAbsoluteDifferenceSeconds": 60,
+  "differences": [
+    {
+      "year": 1954,
+      "index": 22,
+      "longitude": 255,
+      "sourceUT": "1954-12-07T15:29:00Z",
+      "engineUTC": "1954-12-07T15:28:00.000Z",
+      "differenceSeconds": -60
+    },
+    {
+      "year": 1988,
+      "index": 18,
+      "longitude": 195,
+      "sourceUT": "1988-10-08T01:44:00Z",
+      "engineUTC": "1988-10-08T01:45:00.000Z",
+      "differenceSeconds": 60
+    },
+    {
+      "year": 2024,
+      "index": 21,
+      "longitude": 240,
+      "sourceUT": "2024-11-21T19:56:00Z",
+      "engineUTC": "2024-11-21T19:57:00.000Z",
+      "differenceSeconds": 60
+    }
+  ],
+  "boundaries": [
+    {
+      "minutesFromSource": 1,
+      "probes": 192,
+      "mismatches": [
+        {
+          "sourceYear": 1954,
+          "index": 22,
+          "direction": -1,
+          "local": {
+            "year": 1954,
+            "month": 12,
+            "day": 7,
+            "hour": 23,
+            "minute": 58
+          },
+          "expectedBranch": "해",
+          "actualBranch": "자"
+        }
+      ]
+    },
+    {
+      "minutesFromSource": 2,
+      "probes": 192,
+      "mismatches": []
+    }
+  ],
+  "productionApproved": false,
+  "conclusion": "Independent-source comparison only. Minute differences and one-minute boundary disagreements require adjudication; two-minute agreement does not establish exact boundaries or approve production."
+}

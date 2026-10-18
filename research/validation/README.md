@@ -35,3 +35,17 @@ fixtures에는 당시 수집한 KASI 원문과 파생 기대값, IANA 월별 정
 현재 정책은 research-civil-midnight-v3다. 연월주는 역사적 UTC, 일시주는 현지 시계·자정 기준으로 분리해 계산한다. 시간 모름은 유효한 날짜 구간 전체의 후보를 보존한다. 29개 테스트가 통과했으며 상세 근거와 한계는 [검증 기록](../../docs/historical-clock-validation.md)에 있다.
 
 원본 복원 명령은 기존 checkout을 덮어쓰지 않는다. 다른 HEAD나 변경 파일이 있으면 사용자의 작업을 보존한 뒤 정확한 commit을 직접 복원한다. build.mjs가 원본 검증을 선행한다. licenses 폴더에는 두 후보의 MIT 고지를 보존한다.
+
+## 2026-10-19 NAOJ 독립 절입 대조
+
+8개 표본 연도·192개 절기 시각을 NAOJ 장기 계산과 대조했다. 189건은 표시 분이 같고 3건은 1분 차이가 있다. 월 경계 전후 최소 1분 입력 192건 중 1954-12-07 23:58 한 건이 불일치한다. 최소 2분 입력 192건과 시간 모름 날짜 96건의 후보 보존은 일치한다. **34개 연구 테스트의 성공에는 알려진 불일치의 재현 검사가 포함되며 운영 정확도 통과가 아니다.**
+
+```sh
+python3 research/validation/collect-naoj.py --check
+node research/validation/compare-naoj.mjs --check
+pnpm --dir research/validation test
+# 현재 운영 승인 미완료이므로 종료 코드 2가 정상:
+node research/validation/compare-naoj.mjs --check --release-check
+```
+
+새 출처를 의도적으로 수집할 때만 `python3 research/validation/collect-naoj.py --download --retrieved YYYY-MM-DD`를 쓴다. 기본 실행은 저장된 원문만 파싱하고 fixture를 재작성하며 `--check`는 읽기 전용이다. 갱신 후 출처·ΔT·해시·보고서 차이를 검토한다. (C) NAOJ, [이용 안내](https://eco.mtk.nao.ac.jp/koyomi/site/). 분 단위 정밀도, UT/UTC, 역사 역산과 실제 당시 발행물의 차이는 [검증 기록](../../docs/historical-clock-validation.md)을 따른다. 원문은 EUC-JP이며 앱 런타임이나 사용자 계산에 다운로드 자료를 직접 주입하지 않는다.

@@ -1,0 +1,1602 @@
+{
+  "attribution": "(C) NAOJ — Ephemeris Computation Office",
+  "usage": "https://eco.mtk.nao.ac.jp/koyomi/site/",
+  "timeScale": "UT+0 as displayed by NAOJ; minute precision; not second-exact UTC",
+  "limitations": "Modern retrospective calculation, not the historical published almanac. Default delta-T model retained per source. No DST in source; apply pinned Seoul offsets separately.",
+  "sources": [
+    {
+      "year": 1908,
+      "url": "https://eco.mtk.nao.ac.jp/cgi-bin/koyomi/cande/phenomena_sy.cgi?year=1908&lst=0&phenom=50&jg=1&dtm=0",
+      "file": "1908.html",
+      "retrieved": "2026-10-19",
+      "sha256": "bcd110ea68e53085d2b1ca5ca9a2631b6da9e6a93dfb470dfe84dfb9b2b9e2c8"
+    },
+    {
+      "year": 1912,
+      "url": "https://eco.mtk.nao.ac.jp/cgi-bin/koyomi/cande/phenomena_sy.cgi?year=1912&lst=0&phenom=50&jg=1&dtm=0",
+      "file": "1912.html",
+      "retrieved": "2026-10-19",
+      "sha256": "8e35e7930047bae04c265d9e092c4d535332567ab7890d541e4b43a495051d57"
+    },
+    {
+      "year": 1948,
+      "url": "https://eco.mtk.nao.ac.jp/cgi-bin/koyomi/cande/phenomena_sy.cgi?year=1948&lst=0&phenom=50&jg=1&dtm=0",
+      "file": "1948.html",
+      "retrieved": "2026-10-19",
+      "sha256": "f0b7def9243a298675d8a1286cd33ac18c5dc09fedfd863f15d720dcba6188c4"
+    },
+    {
+      "year": 1954,
+      "url": "https://eco.mtk.nao.ac.jp/cgi-bin/koyomi/cande/phenomena_sy.cgi?year=1954&lst=0&phenom=50&jg=1&dtm=0",
+      "file": "1954.html",
+      "retrieved": "2026-10-19",
+      "sha256": "4e0de4874f506662952a8eb17daa5e8d5630e7a59c5cfe9a58253cad5b65059b"
+    },
+    {
+      "year": 1961,
+      "url": "https://eco.mtk.nao.ac.jp/cgi-bin/koyomi/cande/phenomena_sy.cgi?year=1961&lst=0&phenom=50&jg=1&dtm=0",
+      "file": "1961.html",
+      "retrieved": "2026-10-19",
+      "sha256": "79183df6979e92154cc419c37208b7b7033af6abd8a9328d2c884730388e7328"
+    },
+    {
+      "year": 1988,
+      "url": "https://eco.mtk.nao.ac.jp/cgi-bin/koyomi/cande/phenomena_sy.cgi?year=1988&lst=0&phenom=50&jg=1&dtm=0",
+      "file": "1988.html",
+      "retrieved": "2026-10-19",
+      "sha256": "a88528960cafeb7723c405c45ae9484fcde9162baa7421a48cc0097b02214a92"
+    },
+    {
+      "year": 2000,
+      "url": "https://eco.mtk.nao.ac.jp/cgi-bin/koyomi/cande/phenomena_sy.cgi?year=2000&lst=0&phenom=50&jg=1&dtm=0",
+      "file": "2000.html",
+      "retrieved": "2026-10-19",
+      "sha256": "88bab8f7edd7fe39d2de8c966ea9c6e7a8a8cdb23612f6b5a05a02d554bea791"
+    },
+    {
+      "year": 2024,
+      "url": "https://eco.mtk.nao.ac.jp/cgi-bin/koyomi/cande/phenomena_sy.cgi?year=2024&lst=0&phenom=50&jg=1&dtm=0",
+      "file": "2024.html",
+      "retrieved": "2026-10-19",
+      "sha256": "d2c07b0b8a1dee11f08cb5c7507a03608e1a5ba12719fac401758784632fdb24"
+    }
+  ],
+  "terms": [
+    {
+      "index": 0,
+      "name": "小寒",
+      "longitude": 285,
+      "ut": "1908-01-06T17:01:00Z",
+      "sourceYear": 1908,
+      "deltaT": "8.7s (S2020)"
+    },
+    {
+      "index": 1,
+      "name": "大寒",
+      "longitude": 300,
+      "ut": "1908-01-21T10:28:00Z",
+      "sourceYear": 1908,
+      "deltaT": "8.7s (S2020)"
+    },
+    {
+      "index": 2,
+      "name": "立春",
+      "longitude": 315,
+      "ut": "1908-02-05T04:47:00Z",
+      "sourceYear": 1908,
+      "deltaT": "8.7s (S2020)"
+    },
+    {
+      "index": 3,
+      "name": "雨水",
+      "longitude": 330,
+      "ut": "1908-02-20T00:54:00Z",
+      "sourceYear": 1908,
+      "deltaT": "8.7s (S2020)"
+    },
+    {
+      "index": 4,
+      "name": "啓蟄",
+      "longitude": 345,
+      "ut": "1908-03-05T23:14:00Z",
+      "sourceYear": 1908,
+      "deltaT": "8.7s (S2020)"
+    },
+    {
+      "index": 5,
+      "name": "春分",
+      "longitude": 0,
+      "ut": "1908-03-21T00:27:00Z",
+      "sourceYear": 1908,
+      "deltaT": "8.7s (S2020)"
+    },
+    {
+      "index": 6,
+      "name": "清明",
+      "longitude": 15,
+      "ut": "1908-04-05T04:40:00Z",
+      "sourceYear": 1908,
+      "deltaT": "8.7s (S2020)"
+    },
+    {
+      "index": 7,
+      "name": "穀雨",
+      "longitude": 30,
+      "ut": "1908-04-20T12:11:00Z",
+      "sourceYear": 1908,
+      "deltaT": "8.7s (S2020)"
+    },
+    {
+      "index": 8,
+      "name": "立夏",
+      "longitude": 45,
+      "ut": "1908-05-05T22:38:00Z",
+      "sourceYear": 1908,
+      "deltaT": "8.7s (S2020)"
+    },
+    {
+      "index": 9,
+      "name": "小満",
+      "longitude": 60,
+      "ut": "1908-05-21T11:58:00Z",
+      "sourceYear": 1908,
+      "deltaT": "8.7s (S2020)"
+    },
+    {
+      "index": 10,
+      "name": "芒種",
+      "longitude": 75,
+      "ut": "1908-06-06T03:19:00Z",
+      "sourceYear": 1908,
+      "deltaT": "8.7s (S2020)"
+    },
+    {
+      "index": 11,
+      "name": "夏至",
+      "longitude": 90,
+      "ut": "1908-06-21T20:19:00Z",
+      "sourceYear": 1908,
+      "deltaT": "8.7s (S2020)"
+    },
+    {
+      "index": 12,
+      "name": "小暑",
+      "longitude": 105,
+      "ut": "1908-07-07T13:48:00Z",
+      "sourceYear": 1908,
+      "deltaT": "8.7s (S2020)"
+    },
+    {
+      "index": 13,
+      "name": "大暑",
+      "longitude": 120,
+      "ut": "1908-07-23T07:14:00Z",
+      "sourceYear": 1908,
+      "deltaT": "8.7s (S2020)"
+    },
+    {
+      "index": 14,
+      "name": "立秋",
+      "longitude": 135,
+      "ut": "1908-08-07T23:27:00Z",
+      "sourceYear": 1908,
+      "deltaT": "8.7s (S2020)"
+    },
+    {
+      "index": 15,
+      "name": "処暑",
+      "longitude": 150,
+      "ut": "1908-08-23T13:57:00Z",
+      "sourceYear": 1908,
+      "deltaT": "8.7s (S2020)"
+    },
+    {
+      "index": 16,
+      "name": "白露",
+      "longitude": 165,
+      "ut": "1908-09-08T01:52:00Z",
+      "sourceYear": 1908,
+      "deltaT": "8.7s (S2020)"
+    },
+    {
+      "index": 17,
+      "name": "秋分",
+      "longitude": 180,
+      "ut": "1908-09-23T10:58:00Z",
+      "sourceYear": 1908,
+      "deltaT": "8.7s (S2020)"
+    },
+    {
+      "index": 18,
+      "name": "寒露",
+      "longitude": 195,
+      "ut": "1908-10-08T16:51:00Z",
+      "sourceYear": 1908,
+      "deltaT": "8.7s (S2020)"
+    },
+    {
+      "index": 19,
+      "name": "霜降",
+      "longitude": 210,
+      "ut": "1908-10-23T19:37:00Z",
+      "sourceYear": 1908,
+      "deltaT": "8.7s (S2020)"
+    },
+    {
+      "index": 20,
+      "name": "立冬",
+      "longitude": 225,
+      "ut": "1908-11-07T19:22:00Z",
+      "sourceYear": 1908,
+      "deltaT": "8.7s (S2020)"
+    },
+    {
+      "index": 21,
+      "name": "小雪",
+      "longitude": 240,
+      "ut": "1908-11-22T16:35:00Z",
+      "sourceYear": 1908,
+      "deltaT": "8.7s (S2020)"
+    },
+    {
+      "index": 22,
+      "name": "大雪",
+      "longitude": 255,
+      "ut": "1908-12-07T11:44:00Z",
+      "sourceYear": 1908,
+      "deltaT": "8.7s (S2020)"
+    },
+    {
+      "index": 23,
+      "name": "冬至",
+      "longitude": 270,
+      "ut": "1908-12-22T05:33:00Z",
+      "sourceYear": 1908,
+      "deltaT": "8.7s (S2020)"
+    },
+    {
+      "index": 0,
+      "name": "小寒",
+      "longitude": 285,
+      "ut": "1912-01-06T16:07:00Z",
+      "sourceYear": 1912,
+      "deltaT": "13.8s (S2020)"
+    },
+    {
+      "index": 1,
+      "name": "大寒",
+      "longitude": 300,
+      "ut": "1912-01-21T09:29:00Z",
+      "sourceYear": 1912,
+      "deltaT": "13.8s (S2020)"
+    },
+    {
+      "index": 2,
+      "name": "立春",
+      "longitude": 315,
+      "ut": "1912-02-05T03:54:00Z",
+      "sourceYear": 1912,
+      "deltaT": "13.8s (S2020)"
+    },
+    {
+      "index": 3,
+      "name": "雨水",
+      "longitude": 330,
+      "ut": "1912-02-19T23:56:00Z",
+      "sourceYear": 1912,
+      "deltaT": "13.8s (S2020)"
+    },
+    {
+      "index": 4,
+      "name": "啓蟄",
+      "longitude": 345,
+      "ut": "1912-03-05T22:21:00Z",
+      "sourceYear": 1912,
+      "deltaT": "13.8s (S2020)"
+    },
+    {
+      "index": 5,
+      "name": "春分",
+      "longitude": 0,
+      "ut": "1912-03-20T23:29:00Z",
+      "sourceYear": 1912,
+      "deltaT": "13.8s (S2020)"
+    },
+    {
+      "index": 6,
+      "name": "清明",
+      "longitude": 15,
+      "ut": "1912-04-05T03:48:00Z",
+      "sourceYear": 1912,
+      "deltaT": "13.8s (S2020)"
+    },
+    {
+      "index": 7,
+      "name": "穀雨",
+      "longitude": 30,
+      "ut": "1912-04-20T11:12:00Z",
+      "sourceYear": 1912,
+      "deltaT": "13.8s (S2020)"
+    },
+    {
+      "index": 8,
+      "name": "立夏",
+      "longitude": 45,
+      "ut": "1912-05-05T21:47:00Z",
+      "sourceYear": 1912,
+      "deltaT": "13.8s (S2020)"
+    },
+    {
+      "index": 9,
+      "name": "小満",
+      "longitude": 60,
+      "ut": "1912-05-21T10:57:00Z",
+      "sourceYear": 1912,
+      "deltaT": "13.8s (S2020)"
+    },
+    {
+      "index": 10,
+      "name": "芒種",
+      "longitude": 75,
+      "ut": "1912-06-06T02:27:00Z",
+      "sourceYear": 1912,
+      "deltaT": "13.8s (S2020)"
+    },
+    {
+      "index": 11,
+      "name": "夏至",
+      "longitude": 90,
+      "ut": "1912-06-21T19:17:00Z",
+      "sourceYear": 1912,
+      "deltaT": "13.8s (S2020)"
+    },
+    {
+      "index": 12,
+      "name": "小暑",
+      "longitude": 105,
+      "ut": "1912-07-07T12:57:00Z",
+      "sourceYear": 1912,
+      "deltaT": "13.8s (S2020)"
+    },
+    {
+      "index": 13,
+      "name": "大暑",
+      "longitude": 120,
+      "ut": "1912-07-23T06:14:00Z",
+      "sourceYear": 1912,
+      "deltaT": "13.8s (S2020)"
+    },
+    {
+      "index": 14,
+      "name": "立秋",
+      "longitude": 135,
+      "ut": "1912-08-07T22:37:00Z",
+      "sourceYear": 1912,
+      "deltaT": "13.8s (S2020)"
+    },
+    {
+      "index": 15,
+      "name": "処暑",
+      "longitude": 150,
+      "ut": "1912-08-23T13:01:00Z",
+      "sourceYear": 1912,
+      "deltaT": "13.8s (S2020)"
+    },
+    {
+      "index": 16,
+      "name": "白露",
+      "longitude": 165,
+      "ut": "1912-09-08T01:06:00Z",
+      "sourceYear": 1912,
+      "deltaT": "13.8s (S2020)"
+    },
+    {
+      "index": 17,
+      "name": "秋分",
+      "longitude": 180,
+      "ut": "1912-09-23T10:08:00Z",
+      "sourceYear": 1912,
+      "deltaT": "13.8s (S2020)"
+    },
+    {
+      "index": 18,
+      "name": "寒露",
+      "longitude": 195,
+      "ut": "1912-10-08T16:07:00Z",
+      "sourceYear": 1912,
+      "deltaT": "13.8s (S2020)"
+    },
+    {
+      "index": 19,
+      "name": "霜降",
+      "longitude": 210,
+      "ut": "1912-10-23T18:50:00Z",
+      "sourceYear": 1912,
+      "deltaT": "13.8s (S2020)"
+    },
+    {
+      "index": 20,
+      "name": "立冬",
+      "longitude": 225,
+      "ut": "1912-11-07T18:39:00Z",
+      "sourceYear": 1912,
+      "deltaT": "13.8s (S2020)"
+    },
+    {
+      "index": 21,
+      "name": "小雪",
+      "longitude": 240,
+      "ut": "1912-11-22T15:48:00Z",
+      "sourceYear": 1912,
+      "deltaT": "13.8s (S2020)"
+    },
+    {
+      "index": 22,
+      "name": "大雪",
+      "longitude": 255,
+      "ut": "1912-12-07T10:59:00Z",
+      "sourceYear": 1912,
+      "deltaT": "13.8s (S2020)"
+    },
+    {
+      "index": 23,
+      "name": "冬至",
+      "longitude": 270,
+      "ut": "1912-12-22T04:45:00Z",
+      "sourceYear": 1912,
+      "deltaT": "13.8s (S2020)"
+    },
+    {
+      "index": 0,
+      "name": "小寒",
+      "longitude": 285,
+      "ut": "1948-01-06T10:00:00Z",
+      "sourceYear": 1948,
+      "deltaT": "28.2s (S2020)"
+    },
+    {
+      "index": 1,
+      "name": "大寒",
+      "longitude": 300,
+      "ut": "1948-01-21T03:18:00Z",
+      "sourceYear": 1948,
+      "deltaT": "28.2s (S2020)"
+    },
+    {
+      "index": 2,
+      "name": "立春",
+      "longitude": 315,
+      "ut": "1948-02-04T21:42:00Z",
+      "sourceYear": 1948,
+      "deltaT": "28.2s (S2020)"
+    },
+    {
+      "index": 3,
+      "name": "雨水",
+      "longitude": 330,
+      "ut": "1948-02-19T17:37:00Z",
+      "sourceYear": 1948,
+      "deltaT": "28.2s (S2020)"
+    },
+    {
+      "index": 4,
+      "name": "啓蟄",
+      "longitude": 345,
+      "ut": "1948-03-05T15:58:00Z",
+      "sourceYear": 1948,
+      "deltaT": "28.2s (S2020)"
+    },
+    {
+      "index": 5,
+      "name": "春分",
+      "longitude": 0,
+      "ut": "1948-03-20T16:57:00Z",
+      "sourceYear": 1948,
+      "deltaT": "28.2s (S2020)"
+    },
+    {
+      "index": 6,
+      "name": "清明",
+      "longitude": 15,
+      "ut": "1948-04-04T21:09:00Z",
+      "sourceYear": 1948,
+      "deltaT": "28.2s (S2020)"
+    },
+    {
+      "index": 7,
+      "name": "穀雨",
+      "longitude": 30,
+      "ut": "1948-04-20T04:25:00Z",
+      "sourceYear": 1948,
+      "deltaT": "28.2s (S2020)"
+    },
+    {
+      "index": 8,
+      "name": "立夏",
+      "longitude": 45,
+      "ut": "1948-05-05T14:52:00Z",
+      "sourceYear": 1948,
+      "deltaT": "28.2s (S2020)"
+    },
+    {
+      "index": 9,
+      "name": "小満",
+      "longitude": 60,
+      "ut": "1948-05-21T03:58:00Z",
+      "sourceYear": 1948,
+      "deltaT": "28.2s (S2020)"
+    },
+    {
+      "index": 10,
+      "name": "芒種",
+      "longitude": 75,
+      "ut": "1948-06-05T19:20:00Z",
+      "sourceYear": 1948,
+      "deltaT": "28.2s (S2020)"
+    },
+    {
+      "index": 11,
+      "name": "夏至",
+      "longitude": 90,
+      "ut": "1948-06-21T12:11:00Z",
+      "sourceYear": 1948,
+      "deltaT": "28.2s (S2020)"
+    },
+    {
+      "index": 12,
+      "name": "小暑",
+      "longitude": 105,
+      "ut": "1948-07-07T05:43:00Z",
+      "sourceYear": 1948,
+      "deltaT": "28.2s (S2020)"
+    },
+    {
+      "index": 13,
+      "name": "大暑",
+      "longitude": 120,
+      "ut": "1948-07-22T23:07:00Z",
+      "sourceYear": 1948,
+      "deltaT": "28.2s (S2020)"
+    },
+    {
+      "index": 14,
+      "name": "立秋",
+      "longitude": 135,
+      "ut": "1948-08-07T15:26:00Z",
+      "sourceYear": 1948,
+      "deltaT": "28.2s (S2020)"
+    },
+    {
+      "index": 15,
+      "name": "処暑",
+      "longitude": 150,
+      "ut": "1948-08-23T06:03:00Z",
+      "sourceYear": 1948,
+      "deltaT": "28.2s (S2020)"
+    },
+    {
+      "index": 16,
+      "name": "白露",
+      "longitude": 165,
+      "ut": "1948-09-07T18:05:00Z",
+      "sourceYear": 1948,
+      "deltaT": "28.2s (S2020)"
+    },
+    {
+      "index": 17,
+      "name": "秋分",
+      "longitude": 180,
+      "ut": "1948-09-23T03:22:00Z",
+      "sourceYear": 1948,
+      "deltaT": "28.2s (S2020)"
+    },
+    {
+      "index": 18,
+      "name": "寒露",
+      "longitude": 195,
+      "ut": "1948-10-08T09:20:00Z",
+      "sourceYear": 1948,
+      "deltaT": "28.2s (S2020)"
+    },
+    {
+      "index": 19,
+      "name": "霜降",
+      "longitude": 210,
+      "ut": "1948-10-23T12:18:00Z",
+      "sourceYear": 1948,
+      "deltaT": "28.2s (S2020)"
+    },
+    {
+      "index": 20,
+      "name": "立冬",
+      "longitude": 225,
+      "ut": "1948-11-07T12:07:00Z",
+      "sourceYear": 1948,
+      "deltaT": "28.2s (S2020)"
+    },
+    {
+      "index": 21,
+      "name": "小雪",
+      "longitude": 240,
+      "ut": "1948-11-22T09:29:00Z",
+      "sourceYear": 1948,
+      "deltaT": "28.2s (S2020)"
+    },
+    {
+      "index": 22,
+      "name": "大雪",
+      "longitude": 255,
+      "ut": "1948-12-07T04:38:00Z",
+      "sourceYear": 1948,
+      "deltaT": "28.2s (S2020)"
+    },
+    {
+      "index": 23,
+      "name": "冬至",
+      "longitude": 270,
+      "ut": "1948-12-21T22:33:00Z",
+      "sourceYear": 1948,
+      "deltaT": "28.2s (S2020)"
+    },
+    {
+      "index": 0,
+      "name": "小寒",
+      "longitude": 285,
+      "ut": "1954-01-05T20:45:00Z",
+      "sourceYear": 1954,
+      "deltaT": "30.2s (S2020)"
+    },
+    {
+      "index": 1,
+      "name": "大寒",
+      "longitude": 300,
+      "ut": "1954-01-20T14:11:00Z",
+      "sourceYear": 1954,
+      "deltaT": "30.2s (S2020)"
+    },
+    {
+      "index": 2,
+      "name": "立春",
+      "longitude": 315,
+      "ut": "1954-02-04T08:31:00Z",
+      "sourceYear": 1954,
+      "deltaT": "30.2s (S2020)"
+    },
+    {
+      "index": 3,
+      "name": "雨水",
+      "longitude": 330,
+      "ut": "1954-02-19T04:32:00Z",
+      "sourceYear": 1954,
+      "deltaT": "30.2s (S2020)"
+    },
+    {
+      "index": 4,
+      "name": "啓蟄",
+      "longitude": 345,
+      "ut": "1954-03-06T02:49:00Z",
+      "sourceYear": 1954,
+      "deltaT": "30.2s (S2020)"
+    },
+    {
+      "index": 5,
+      "name": "春分",
+      "longitude": 0,
+      "ut": "1954-03-21T03:53:00Z",
+      "sourceYear": 1954,
+      "deltaT": "30.2s (S2020)"
+    },
+    {
+      "index": 6,
+      "name": "清明",
+      "longitude": 15,
+      "ut": "1954-04-05T07:59:00Z",
+      "sourceYear": 1954,
+      "deltaT": "30.2s (S2020)"
+    },
+    {
+      "index": 7,
+      "name": "穀雨",
+      "longitude": 30,
+      "ut": "1954-04-20T15:20:00Z",
+      "sourceYear": 1954,
+      "deltaT": "30.2s (S2020)"
+    },
+    {
+      "index": 8,
+      "name": "立夏",
+      "longitude": 45,
+      "ut": "1954-05-06T01:38:00Z",
+      "sourceYear": 1954,
+      "deltaT": "30.2s (S2020)"
+    },
+    {
+      "index": 9,
+      "name": "小満",
+      "longitude": 60,
+      "ut": "1954-05-21T14:47:00Z",
+      "sourceYear": 1954,
+      "deltaT": "30.2s (S2020)"
+    },
+    {
+      "index": 10,
+      "name": "芒種",
+      "longitude": 75,
+      "ut": "1954-06-06T06:01:00Z",
+      "sourceYear": 1954,
+      "deltaT": "30.2s (S2020)"
+    },
+    {
+      "index": 11,
+      "name": "夏至",
+      "longitude": 90,
+      "ut": "1954-06-21T22:54:00Z",
+      "sourceYear": 1954,
+      "deltaT": "30.2s (S2020)"
+    },
+    {
+      "index": 12,
+      "name": "小暑",
+      "longitude": 105,
+      "ut": "1954-07-07T16:19:00Z",
+      "sourceYear": 1954,
+      "deltaT": "30.2s (S2020)"
+    },
+    {
+      "index": 13,
+      "name": "大暑",
+      "longitude": 120,
+      "ut": "1954-07-23T09:45:00Z",
+      "sourceYear": 1954,
+      "deltaT": "30.2s (S2020)"
+    },
+    {
+      "index": 14,
+      "name": "立秋",
+      "longitude": 135,
+      "ut": "1954-08-08T01:59:00Z",
+      "sourceYear": 1954,
+      "deltaT": "30.2s (S2020)"
+    },
+    {
+      "index": 15,
+      "name": "処暑",
+      "longitude": 150,
+      "ut": "1954-08-23T16:36:00Z",
+      "sourceYear": 1954,
+      "deltaT": "30.2s (S2020)"
+    },
+    {
+      "index": 16,
+      "name": "白露",
+      "longitude": 165,
+      "ut": "1954-09-08T04:38:00Z",
+      "sourceYear": 1954,
+      "deltaT": "30.2s (S2020)"
+    },
+    {
+      "index": 17,
+      "name": "秋分",
+      "longitude": 180,
+      "ut": "1954-09-23T13:55:00Z",
+      "sourceYear": 1954,
+      "deltaT": "30.2s (S2020)"
+    },
+    {
+      "index": 18,
+      "name": "寒露",
+      "longitude": 195,
+      "ut": "1954-10-08T19:57:00Z",
+      "sourceYear": 1954,
+      "deltaT": "30.2s (S2020)"
+    },
+    {
+      "index": 19,
+      "name": "霜降",
+      "longitude": 210,
+      "ut": "1954-10-23T22:56:00Z",
+      "sourceYear": 1954,
+      "deltaT": "30.2s (S2020)"
+    },
+    {
+      "index": 20,
+      "name": "立冬",
+      "longitude": 225,
+      "ut": "1954-11-07T22:51:00Z",
+      "sourceYear": 1954,
+      "deltaT": "30.2s (S2020)"
+    },
+    {
+      "index": 21,
+      "name": "小雪",
+      "longitude": 240,
+      "ut": "1954-11-22T20:14:00Z",
+      "sourceYear": 1954,
+      "deltaT": "30.2s (S2020)"
+    },
+    {
+      "index": 22,
+      "name": "大雪",
+      "longitude": 255,
+      "ut": "1954-12-07T15:29:00Z",
+      "sourceYear": 1954,
+      "deltaT": "30.2s (S2020)"
+    },
+    {
+      "index": 23,
+      "name": "冬至",
+      "longitude": 270,
+      "ut": "1954-12-22T09:24:00Z",
+      "sourceYear": 1954,
+      "deltaT": "30.2s (S2020)"
+    },
+    {
+      "index": 0,
+      "name": "小寒",
+      "longitude": 285,
+      "ut": "1961-01-05T13:43:00Z",
+      "sourceYear": 1961,
+      "deltaT": "34.0s (予測値)"
+    },
+    {
+      "index": 1,
+      "name": "大寒",
+      "longitude": 300,
+      "ut": "1961-01-20T07:01:00Z",
+      "sourceYear": 1961,
+      "deltaT": "34.0s (予測値)"
+    },
+    {
+      "index": 2,
+      "name": "立春",
+      "longitude": 315,
+      "ut": "1961-02-04T01:22:00Z",
+      "sourceYear": 1961,
+      "deltaT": "34.0s (予測値)"
+    },
+    {
+      "index": 3,
+      "name": "雨水",
+      "longitude": 330,
+      "ut": "1961-02-18T21:16:00Z",
+      "sourceYear": 1961,
+      "deltaT": "34.0s (予測値)"
+    },
+    {
+      "index": 4,
+      "name": "啓蟄",
+      "longitude": 345,
+      "ut": "1961-03-05T19:35:00Z",
+      "sourceYear": 1961,
+      "deltaT": "34.0s (予測値)"
+    },
+    {
+      "index": 5,
+      "name": "春分",
+      "longitude": 0,
+      "ut": "1961-03-20T20:32:00Z",
+      "sourceYear": 1961,
+      "deltaT": "34.0s (予測値)"
+    },
+    {
+      "index": 6,
+      "name": "清明",
+      "longitude": 15,
+      "ut": "1961-04-05T00:42:00Z",
+      "sourceYear": 1961,
+      "deltaT": "34.0s (予測値)"
+    },
+    {
+      "index": 7,
+      "name": "穀雨",
+      "longitude": 30,
+      "ut": "1961-04-20T07:55:00Z",
+      "sourceYear": 1961,
+      "deltaT": "34.0s (予測値)"
+    },
+    {
+      "index": 8,
+      "name": "立夏",
+      "longitude": 45,
+      "ut": "1961-05-05T18:21:00Z",
+      "sourceYear": 1961,
+      "deltaT": "34.0s (予測値)"
+    },
+    {
+      "index": 9,
+      "name": "小満",
+      "longitude": 60,
+      "ut": "1961-05-21T07:22:00Z",
+      "sourceYear": 1961,
+      "deltaT": "34.0s (予測値)"
+    },
+    {
+      "index": 10,
+      "name": "芒種",
+      "longitude": 75,
+      "ut": "1961-06-05T22:46:00Z",
+      "sourceYear": 1961,
+      "deltaT": "34.0s (予測値)"
+    },
+    {
+      "index": 11,
+      "name": "夏至",
+      "longitude": 90,
+      "ut": "1961-06-21T15:30:00Z",
+      "sourceYear": 1961,
+      "deltaT": "34.0s (予測値)"
+    },
+    {
+      "index": 12,
+      "name": "小暑",
+      "longitude": 105,
+      "ut": "1961-07-07T09:07:00Z",
+      "sourceYear": 1961,
+      "deltaT": "34.0s (予測値)"
+    },
+    {
+      "index": 13,
+      "name": "大暑",
+      "longitude": 120,
+      "ut": "1961-07-23T02:24:00Z",
+      "sourceYear": 1961,
+      "deltaT": "34.0s (予測値)"
+    },
+    {
+      "index": 14,
+      "name": "立秋",
+      "longitude": 135,
+      "ut": "1961-08-07T18:48:00Z",
+      "sourceYear": 1961,
+      "deltaT": "34.0s (予測値)"
+    },
+    {
+      "index": 15,
+      "name": "処暑",
+      "longitude": 150,
+      "ut": "1961-08-23T09:19:00Z",
+      "sourceYear": 1961,
+      "deltaT": "34.0s (予測値)"
+    },
+    {
+      "index": 16,
+      "name": "白露",
+      "longitude": 165,
+      "ut": "1961-09-07T21:29:00Z",
+      "sourceYear": 1961,
+      "deltaT": "34.0s (予測値)"
+    },
+    {
+      "index": 17,
+      "name": "秋分",
+      "longitude": 180,
+      "ut": "1961-09-23T06:42:00Z",
+      "sourceYear": 1961,
+      "deltaT": "34.0s (予測値)"
+    },
+    {
+      "index": 18,
+      "name": "寒露",
+      "longitude": 195,
+      "ut": "1961-10-08T12:51:00Z",
+      "sourceYear": 1961,
+      "deltaT": "34.0s (予測値)"
+    },
+    {
+      "index": 19,
+      "name": "霜降",
+      "longitude": 210,
+      "ut": "1961-10-23T15:47:00Z",
+      "sourceYear": 1961,
+      "deltaT": "34.0s (予測値)"
+    },
+    {
+      "index": 20,
+      "name": "立冬",
+      "longitude": 225,
+      "ut": "1961-11-07T15:46:00Z",
+      "sourceYear": 1961,
+      "deltaT": "34.0s (予測値)"
+    },
+    {
+      "index": 21,
+      "name": "小雪",
+      "longitude": 240,
+      "ut": "1961-11-22T13:08:00Z",
+      "sourceYear": 1961,
+      "deltaT": "34.0s (予測値)"
+    },
+    {
+      "index": 22,
+      "name": "大雪",
+      "longitude": 255,
+      "ut": "1961-12-07T08:26:00Z",
+      "sourceYear": 1961,
+      "deltaT": "34.0s (予測値)"
+    },
+    {
+      "index": 23,
+      "name": "冬至",
+      "longitude": 270,
+      "ut": "1961-12-22T02:19:00Z",
+      "sourceYear": 1961,
+      "deltaT": "34.0s (予測値)"
+    },
+    {
+      "index": 0,
+      "name": "小寒",
+      "longitude": 285,
+      "ut": "1988-01-06T03:04:00Z",
+      "sourceYear": 1988,
+      "deltaT": "56.0s (予測値)"
+    },
+    {
+      "index": 1,
+      "name": "大寒",
+      "longitude": 300,
+      "ut": "1988-01-20T20:24:00Z",
+      "sourceYear": 1988,
+      "deltaT": "56.0s (予測値)"
+    },
+    {
+      "index": 2,
+      "name": "立春",
+      "longitude": 315,
+      "ut": "1988-02-04T14:43:00Z",
+      "sourceYear": 1988,
+      "deltaT": "56.0s (予測値)"
+    },
+    {
+      "index": 3,
+      "name": "雨水",
+      "longitude": 330,
+      "ut": "1988-02-19T10:35:00Z",
+      "sourceYear": 1988,
+      "deltaT": "56.0s (予測値)"
+    },
+    {
+      "index": 4,
+      "name": "啓蟄",
+      "longitude": 345,
+      "ut": "1988-03-05T08:47:00Z",
+      "sourceYear": 1988,
+      "deltaT": "56.0s (予測値)"
+    },
+    {
+      "index": 5,
+      "name": "春分",
+      "longitude": 0,
+      "ut": "1988-03-20T09:39:00Z",
+      "sourceYear": 1988,
+      "deltaT": "56.0s (予測値)"
+    },
+    {
+      "index": 6,
+      "name": "清明",
+      "longitude": 15,
+      "ut": "1988-04-04T13:39:00Z",
+      "sourceYear": 1988,
+      "deltaT": "56.0s (予測値)"
+    },
+    {
+      "index": 7,
+      "name": "穀雨",
+      "longitude": 30,
+      "ut": "1988-04-19T20:45:00Z",
+      "sourceYear": 1988,
+      "deltaT": "56.0s (予測値)"
+    },
+    {
+      "index": 8,
+      "name": "立夏",
+      "longitude": 45,
+      "ut": "1988-05-05T07:02:00Z",
+      "sourceYear": 1988,
+      "deltaT": "56.0s (予測値)"
+    },
+    {
+      "index": 9,
+      "name": "小満",
+      "longitude": 60,
+      "ut": "1988-05-20T19:57:00Z",
+      "sourceYear": 1988,
+      "deltaT": "56.0s (予測値)"
+    },
+    {
+      "index": 10,
+      "name": "芒種",
+      "longitude": 75,
+      "ut": "1988-06-05T11:15:00Z",
+      "sourceYear": 1988,
+      "deltaT": "56.0s (予測値)"
+    },
+    {
+      "index": 11,
+      "name": "夏至",
+      "longitude": 90,
+      "ut": "1988-06-21T03:57:00Z",
+      "sourceYear": 1988,
+      "deltaT": "56.0s (予測値)"
+    },
+    {
+      "index": 12,
+      "name": "小暑",
+      "longitude": 105,
+      "ut": "1988-07-06T21:33:00Z",
+      "sourceYear": 1988,
+      "deltaT": "56.0s (予測値)"
+    },
+    {
+      "index": 13,
+      "name": "大暑",
+      "longitude": 120,
+      "ut": "1988-07-22T14:51:00Z",
+      "sourceYear": 1988,
+      "deltaT": "56.0s (予測値)"
+    },
+    {
+      "index": 14,
+      "name": "立秋",
+      "longitude": 135,
+      "ut": "1988-08-07T07:20:00Z",
+      "sourceYear": 1988,
+      "deltaT": "56.0s (予測値)"
+    },
+    {
+      "index": 15,
+      "name": "処暑",
+      "longitude": 150,
+      "ut": "1988-08-22T21:54:00Z",
+      "sourceYear": 1988,
+      "deltaT": "56.0s (予測値)"
+    },
+    {
+      "index": 16,
+      "name": "白露",
+      "longitude": 165,
+      "ut": "1988-09-07T10:12:00Z",
+      "sourceYear": 1988,
+      "deltaT": "56.0s (予測値)"
+    },
+    {
+      "index": 17,
+      "name": "秋分",
+      "longitude": 180,
+      "ut": "1988-09-22T19:29:00Z",
+      "sourceYear": 1988,
+      "deltaT": "56.0s (予測値)"
+    },
+    {
+      "index": 18,
+      "name": "寒露",
+      "longitude": 195,
+      "ut": "1988-10-08T01:44:00Z",
+      "sourceYear": 1988,
+      "deltaT": "56.0s (予測値)"
+    },
+    {
+      "index": 19,
+      "name": "霜降",
+      "longitude": 210,
+      "ut": "1988-10-23T04:44:00Z",
+      "sourceYear": 1988,
+      "deltaT": "56.0s (予測値)"
+    },
+    {
+      "index": 20,
+      "name": "立冬",
+      "longitude": 225,
+      "ut": "1988-11-07T04:49:00Z",
+      "sourceYear": 1988,
+      "deltaT": "56.0s (予測値)"
+    },
+    {
+      "index": 21,
+      "name": "小雪",
+      "longitude": 240,
+      "ut": "1988-11-22T02:12:00Z",
+      "sourceYear": 1988,
+      "deltaT": "56.0s (予測値)"
+    },
+    {
+      "index": 22,
+      "name": "大雪",
+      "longitude": 255,
+      "ut": "1988-12-06T21:34:00Z",
+      "sourceYear": 1988,
+      "deltaT": "56.0s (予測値)"
+    },
+    {
+      "index": 23,
+      "name": "冬至",
+      "longitude": 270,
+      "ut": "1988-12-21T15:28:00Z",
+      "sourceYear": 1988,
+      "deltaT": "56.0s (予測値)"
+    },
+    {
+      "index": 0,
+      "name": "小寒",
+      "longitude": 285,
+      "ut": "2000-01-06T01:01:00Z",
+      "sourceYear": 2000,
+      "deltaT": "64.0s (予測値)"
+    },
+    {
+      "index": 1,
+      "name": "大寒",
+      "longitude": 300,
+      "ut": "2000-01-20T18:23:00Z",
+      "sourceYear": 2000,
+      "deltaT": "64.0s (予測値)"
+    },
+    {
+      "index": 2,
+      "name": "立春",
+      "longitude": 315,
+      "ut": "2000-02-04T12:40:00Z",
+      "sourceYear": 2000,
+      "deltaT": "64.0s (予測値)"
+    },
+    {
+      "index": 3,
+      "name": "雨水",
+      "longitude": 330,
+      "ut": "2000-02-19T08:33:00Z",
+      "sourceYear": 2000,
+      "deltaT": "64.0s (予測値)"
+    },
+    {
+      "index": 4,
+      "name": "啓蟄",
+      "longitude": 345,
+      "ut": "2000-03-05T06:43:00Z",
+      "sourceYear": 2000,
+      "deltaT": "64.0s (予測値)"
+    },
+    {
+      "index": 5,
+      "name": "春分",
+      "longitude": 0,
+      "ut": "2000-03-20T07:35:00Z",
+      "sourceYear": 2000,
+      "deltaT": "64.0s (予測値)"
+    },
+    {
+      "index": 6,
+      "name": "清明",
+      "longitude": 15,
+      "ut": "2000-04-04T11:32:00Z",
+      "sourceYear": 2000,
+      "deltaT": "64.0s (予測値)"
+    },
+    {
+      "index": 7,
+      "name": "穀雨",
+      "longitude": 30,
+      "ut": "2000-04-19T18:40:00Z",
+      "sourceYear": 2000,
+      "deltaT": "64.0s (予測値)"
+    },
+    {
+      "index": 8,
+      "name": "立夏",
+      "longitude": 45,
+      "ut": "2000-05-05T04:50:00Z",
+      "sourceYear": 2000,
+      "deltaT": "64.0s (予測値)"
+    },
+    {
+      "index": 9,
+      "name": "小満",
+      "longitude": 60,
+      "ut": "2000-05-20T17:49:00Z",
+      "sourceYear": 2000,
+      "deltaT": "64.0s (予測値)"
+    },
+    {
+      "index": 10,
+      "name": "芒種",
+      "longitude": 75,
+      "ut": "2000-06-05T08:59:00Z",
+      "sourceYear": 2000,
+      "deltaT": "64.0s (予測値)"
+    },
+    {
+      "index": 11,
+      "name": "夏至",
+      "longitude": 90,
+      "ut": "2000-06-21T01:48:00Z",
+      "sourceYear": 2000,
+      "deltaT": "64.0s (予測値)"
+    },
+    {
+      "index": 12,
+      "name": "小暑",
+      "longitude": 105,
+      "ut": "2000-07-06T19:14:00Z",
+      "sourceYear": 2000,
+      "deltaT": "64.0s (予測値)"
+    },
+    {
+      "index": 13,
+      "name": "大暑",
+      "longitude": 120,
+      "ut": "2000-07-22T12:43:00Z",
+      "sourceYear": 2000,
+      "deltaT": "64.0s (予測値)"
+    },
+    {
+      "index": 14,
+      "name": "立秋",
+      "longitude": 135,
+      "ut": "2000-08-07T05:03:00Z",
+      "sourceYear": 2000,
+      "deltaT": "64.0s (予測値)"
+    },
+    {
+      "index": 15,
+      "name": "処暑",
+      "longitude": 150,
+      "ut": "2000-08-22T19:49:00Z",
+      "sourceYear": 2000,
+      "deltaT": "64.0s (予測値)"
+    },
+    {
+      "index": 16,
+      "name": "白露",
+      "longitude": 165,
+      "ut": "2000-09-07T07:59:00Z",
+      "sourceYear": 2000,
+      "deltaT": "64.0s (予測値)"
+    },
+    {
+      "index": 17,
+      "name": "秋分",
+      "longitude": 180,
+      "ut": "2000-09-22T17:28:00Z",
+      "sourceYear": 2000,
+      "deltaT": "64.0s (予測値)"
+    },
+    {
+      "index": 18,
+      "name": "寒露",
+      "longitude": 195,
+      "ut": "2000-10-07T23:38:00Z",
+      "sourceYear": 2000,
+      "deltaT": "64.0s (予測値)"
+    },
+    {
+      "index": 19,
+      "name": "霜降",
+      "longitude": 210,
+      "ut": "2000-10-23T02:47:00Z",
+      "sourceYear": 2000,
+      "deltaT": "64.0s (予測値)"
+    },
+    {
+      "index": 20,
+      "name": "立冬",
+      "longitude": 225,
+      "ut": "2000-11-07T02:48:00Z",
+      "sourceYear": 2000,
+      "deltaT": "64.0s (予測値)"
+    },
+    {
+      "index": 21,
+      "name": "小雪",
+      "longitude": 240,
+      "ut": "2000-11-22T00:19:00Z",
+      "sourceYear": 2000,
+      "deltaT": "64.0s (予測値)"
+    },
+    {
+      "index": 22,
+      "name": "大雪",
+      "longitude": 255,
+      "ut": "2000-12-06T19:37:00Z",
+      "sourceYear": 2000,
+      "deltaT": "64.0s (予測値)"
+    },
+    {
+      "index": 23,
+      "name": "冬至",
+      "longitude": 270,
+      "ut": "2000-12-21T13:37:00Z",
+      "sourceYear": 2000,
+      "deltaT": "64.0s (予測値)"
+    },
+    {
+      "index": 0,
+      "name": "小寒",
+      "longitude": 285,
+      "ut": "2024-01-05T20:49:00Z",
+      "sourceYear": 2024,
+      "deltaT": "69.0s (予測値)"
+    },
+    {
+      "index": 1,
+      "name": "大寒",
+      "longitude": 300,
+      "ut": "2024-01-20T14:07:00Z",
+      "sourceYear": 2024,
+      "deltaT": "69.0s (予測値)"
+    },
+    {
+      "index": 2,
+      "name": "立春",
+      "longitude": 315,
+      "ut": "2024-02-04T08:27:00Z",
+      "sourceYear": 2024,
+      "deltaT": "69.0s (予測値)"
+    },
+    {
+      "index": 3,
+      "name": "雨水",
+      "longitude": 330,
+      "ut": "2024-02-19T04:13:00Z",
+      "sourceYear": 2024,
+      "deltaT": "69.0s (予測値)"
+    },
+    {
+      "index": 4,
+      "name": "啓蟄",
+      "longitude": 345,
+      "ut": "2024-03-05T02:23:00Z",
+      "sourceYear": 2024,
+      "deltaT": "69.0s (予測値)"
+    },
+    {
+      "index": 5,
+      "name": "春分",
+      "longitude": 0,
+      "ut": "2024-03-20T03:06:00Z",
+      "sourceYear": 2024,
+      "deltaT": "69.0s (予測値)"
+    },
+    {
+      "index": 6,
+      "name": "清明",
+      "longitude": 15,
+      "ut": "2024-04-04T07:02:00Z",
+      "sourceYear": 2024,
+      "deltaT": "69.0s (予測値)"
+    },
+    {
+      "index": 7,
+      "name": "穀雨",
+      "longitude": 30,
+      "ut": "2024-04-19T14:00:00Z",
+      "sourceYear": 2024,
+      "deltaT": "69.0s (予測値)"
+    },
+    {
+      "index": 8,
+      "name": "立夏",
+      "longitude": 45,
+      "ut": "2024-05-05T00:10:00Z",
+      "sourceYear": 2024,
+      "deltaT": "69.0s (予測値)"
+    },
+    {
+      "index": 9,
+      "name": "小満",
+      "longitude": 60,
+      "ut": "2024-05-20T13:00:00Z",
+      "sourceYear": 2024,
+      "deltaT": "69.0s (予測値)"
+    },
+    {
+      "index": 10,
+      "name": "芒種",
+      "longitude": 75,
+      "ut": "2024-06-05T04:10:00Z",
+      "sourceYear": 2024,
+      "deltaT": "69.0s (予測値)"
+    },
+    {
+      "index": 11,
+      "name": "夏至",
+      "longitude": 90,
+      "ut": "2024-06-20T20:51:00Z",
+      "sourceYear": 2024,
+      "deltaT": "69.0s (予測値)"
+    },
+    {
+      "index": 12,
+      "name": "小暑",
+      "longitude": 105,
+      "ut": "2024-07-06T14:20:00Z",
+      "sourceYear": 2024,
+      "deltaT": "69.0s (予測値)"
+    },
+    {
+      "index": 13,
+      "name": "大暑",
+      "longitude": 120,
+      "ut": "2024-07-22T07:44:00Z",
+      "sourceYear": 2024,
+      "deltaT": "69.0s (予測値)"
+    },
+    {
+      "index": 14,
+      "name": "立秋",
+      "longitude": 135,
+      "ut": "2024-08-07T00:09:00Z",
+      "sourceYear": 2024,
+      "deltaT": "69.0s (予測値)"
+    },
+    {
+      "index": 15,
+      "name": "処暑",
+      "longitude": 150,
+      "ut": "2024-08-22T14:55:00Z",
+      "sourceYear": 2024,
+      "deltaT": "69.0s (予測値)"
+    },
+    {
+      "index": 16,
+      "name": "白露",
+      "longitude": 165,
+      "ut": "2024-09-07T03:11:00Z",
+      "sourceYear": 2024,
+      "deltaT": "69.0s (予測値)"
+    },
+    {
+      "index": 17,
+      "name": "秋分",
+      "longitude": 180,
+      "ut": "2024-09-22T12:44:00Z",
+      "sourceYear": 2024,
+      "deltaT": "69.0s (予測値)"
+    },
+    {
+      "index": 18,
+      "name": "寒露",
+      "longitude": 195,
+      "ut": "2024-10-07T19:00:00Z",
+      "sourceYear": 2024,
+      "deltaT": "69.0s (予測値)"
+    },
+    {
+      "index": 19,
+      "name": "霜降",
+      "longitude": 210,
+      "ut": "2024-10-22T22:15:00Z",
+      "sourceYear": 2024,
+      "deltaT": "69.0s (予測値)"
+    },
+    {
+      "index": 20,
+      "name": "立冬",
+      "longitude": 225,
+      "ut": "2024-11-06T22:20:00Z",
+      "sourceYear": 2024,
+      "deltaT": "69.0s (予測値)"
+    },
+    {
+      "index": 21,
+      "name": "小雪",
+      "longitude": 240,
+      "ut": "2024-11-21T19:56:00Z",
+      "sourceYear": 2024,
+      "deltaT": "69.0s (予測値)"
+    },
+    {
+      "index": 22,
+      "name": "大雪",
+      "longitude": 255,
+      "ut": "2024-12-06T15:17:00Z",
+      "sourceYear": 2024,
+      "deltaT": "69.0s (予測値)"
+    },
+    {
+      "index": 23,
+      "name": "冬至",
+      "longitude": 270,
+      "ut": "2024-12-21T09:21:00Z",
+      "sourceYear": 2024,
+      "deltaT": "69.0s (予測値)"
+    }
+  ]
+}

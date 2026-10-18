@@ -1,0 +1,58 @@
+[
+  {
+    "year": 1908,
+    "url": "https://eco.mtk.nao.ac.jp/cgi-bin/koyomi/cande/phenomena_sy.cgi?year=1908&lst=0&phenom=50&jg=1&dtm=0",
+    "file": "1908.html",
+    "retrieved": "2026-10-19",
+    "sha256": "bcd110ea68e53085d2b1ca5ca9a2631b6da9e6a93dfb470dfe84dfb9b2b9e2c8"
+  },
+  {
+    "year": 1912,
+    "url": "https://eco.mtk.nao.ac.jp/cgi-bin/koyomi/cande/phenomena_sy.cgi?year=1912&lst=0&phenom=50&jg=1&dtm=0",
+    "file": "1912.html",
+    "retrieved": "2026-10-19",
+    "sha256": "8e35e7930047bae04c265d9e092c4d535332567ab7890d541e4b43a495051d57"
+  },
+  {
+    "year": 1948,
+    "url": "https://eco.mtk.nao.ac.jp/cgi-bin/koyomi/cande/phenomena_sy.cgi?year=1948&lst=0&phenom=50&jg=1&dtm=0",
+    "file": "1948.html",
+    "retrieved": "2026-10-19",
+    "sha256": "f0b7def9243a298675d8a1286cd33ac18c5dc09fedfd863f15d720dcba6188c4"
+  },
+  {
+    "year": 1954,
+    "url": "https://eco.mtk.nao.ac.jp/cgi-bin/koyomi/cande/phenomena_sy.cgi?year=1954&lst=0&phenom=50&jg=1&dtm=0",
+    "file": "1954.html",
+    "retrieved": "2026-10-19",
+    "sha256": "4e0de4874f506662952a8eb17daa5e8d5630e7a59c5cfe9a58253cad5b65059b"
+  },
+  {
+    "year": 1961,
+    "url": "https://eco.mtk.nao.ac.jp/cgi-bin/koyomi/cande/phenomena_sy.cgi?year=1961&lst=0&phenom=50&jg=1&dtm=0",
+    "file": "1961.html",
+    "retrieved": "2026-10-19",
+    "sha256": "79183df6979e92154cc419c37208b7b7033af6abd8a9328d2c884730388e7328"
+  },
+  {
+    "year": 1988,
+    "url": "https://eco.mtk.nao.ac.jp/cgi-bin/koyomi/cande/phenomena_sy.cgi?year=1988&lst=0&phenom=50&jg=1&dtm=0",
+    "file": "1988.html",
+    "retrieved": "2026-10-19",
+    "sha256": "a88528960cafeb7723c405c45ae9484fcde9162baa7421a48cc0097b02214a92"
+  },
+  {
+    "year": 2000,
+    "url": "https://eco.mtk.nao.ac.jp/cgi-bin/koyomi/cande/phenomena_sy.cgi?year=2000&lst=0&phenom=50&jg=1&dtm=0",
+    "file": "2000.html",
+    "retrieved": "2026-10-19",
+    "sha256": "88bab8f7edd7fe39d2de8c966ea9c6e7a8a8cdb23612f6b5a05a02d554bea791"
+  },
+  {
+    "year": 2024,
+    "url": "https://eco.mtk.nao.ac.jp/cgi-bin/koyomi/cande/phenomena_sy.cgi?year=2024&lst=0&phenom=50&jg=1&dtm=0",
+    "file": "2024.html",
+    "retrieved": "2026-10-19",
+    "sha256": "d2c07b0b8a1dee11f08cb5c7507a03608e1a5ba12719fac401758784632fdb24"
+  }
+]
