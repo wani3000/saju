@@ -394,28 +394,22 @@ export default function App() {
           {(view === "me" || view === "other") && (
             <>
               <PersonForm
+                key={view}
                 person={view === "me" ? pair.me : pair.other}
                 other={view === "other"}
-                onChange={(p) => {
-                  setPair({ ...pair, [view === "me" ? "me" : "other"]: p });
-                  requestKey.current = "";
-                }}
-              />
-              <p className="save-status" role="status">
-                {saved}
-              </p>
-              <button
-                className="primary"
-                disabled={busy}
-                onClick={() =>
+                busy={busy}
+                saved={saved}
+                onContinue={() =>
                   act(async () => {
                     await persist(pair);
                     navigate(view === "me" ? "other" : "review");
                   })
                 }
-              >
-                저장하고 다음
-              </button>
+                onChange={(p) => {
+                  setPair({ ...pair, [view === "me" ? "me" : "other"]: p });
+                  requestKey.current = "";
+                }}
+              />
             </>
           )}
           {view === "review" && (

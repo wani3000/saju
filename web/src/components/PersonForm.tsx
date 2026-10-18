@@ -1,20 +1,59 @@
 "use client";
-import { useId } from "react";
+import { useId, useRef, useState } from "react";
 import { type Person, samplePerson } from "@/domain/model";
+import { personInputErrors, type InputField } from "@/domain/person-input";
 export default function PersonForm({
   person,
   onChange,
   other = false,
+  onContinue,
+  busy,
+  saved,
 }: {
   person: Person;
   onChange: (p: Person) => void;
   other?: boolean;
+  onContinue: () => void;
+  busy: boolean;
+  saved: string;
 }) {
   const id = useId();
+  const form = useRef<HTMLFormElement>(null);
+  const [attempted, setAttempted] = useState(false);
+  const errors = attempted ? personInputErrors(person) : {};
+  const fieldProps = (key: InputField) => ({
+    "aria-invalid": errors[key] ? (true as const) : undefined,
+    "aria-describedby": errors[key] ? `${id}-${key}-error` : undefined,
+  });
+  const fieldError = (key: InputField) =>
+    errors[key] ? (
+      <span className="field-error" id={`${id}-${key}-error`}>
+        {errors[key]}
+      </span>
+    ) : null;
   const change = (key: keyof Person, value: string | boolean) =>
     onChange({ ...person, [key]: value });
   return (
-    <div className="person-form">
+    <form
+      className="person-form"
+      ref={form}
+      noValidate
+      aria-busy={busy}
+      onSubmit={(event) => {
+        event.preventDefault();
+        if (busy) return;
+        setAttempted(true);
+        if (Object.keys(personInputErrors(person)).length) {
+          requestAnimationFrame(() =>
+            form.current
+              ?.querySelector<HTMLInputElement>('[aria-invalid="true"]')
+              ?.focus(),
+          );
+          return;
+        }
+        onContinue();
+      }}
+    >
       <div className="row between">
         <h2>{other ? "상대방" : "나"}의 정보</h2>
         <button
@@ -25,15 +64,22 @@ export default function PersonForm({
           가상 정보 채우기
         </button>
       </div>
+      {Object.keys(errors).length > 0 && (
+        <p className="error" role="alert">
+          입력한 내용을 확인해 주세요. 수정할 곳을 각 입력칸 아래에 표시했어요.
+        </p>
+      )}
       <label htmlFor={`${id}-name`}>부를 이름</label>
       <input
         id={`${id}-name`}
+        {...fieldProps("name")}
         value={person.name}
         maxLength={10}
         onChange={(e) => change("name", e.target.value)}
         placeholder="별명 1~10자"
         autoComplete="off"
       />
+      {fieldError("name")}
       {other && (
         <>
           <label htmlFor={`${id}-relation`}>어떤 사이인가요?</label>
@@ -52,17 +98,23 @@ export default function PersonForm({
         <legend>생년월일</legend>
         <div className="date-grid">
           {(["year", "month", "day"] as const).map((key, i) => (
-            <label key={key} htmlFor={`${id}-${key}`}>
-              <span className="field-caption">{["년", "월", "일"][i]}</span>
-              <input
-                id={`${id}-${key}`}
-                inputMode="numeric"
-                value={person[key]}
-                maxLength={i === 0 ? 4 : 2}
-                onChange={(e) => change(key, e.target.value.replace(/\D/g, ""))}
-                placeholder={["1990", "3", "12"][i]}
-              />
-            </label>
+            <div key={key}>
+              <label htmlFor={`${id}-${key}`}>
+                <span className="field-caption">{["년", "월", "일"][i]}</span>
+                <input
+                  id={`${id}-${key}`}
+                  {...fieldProps(key)}
+                  inputMode="numeric"
+                  value={person[key]}
+                  maxLength={i === 0 ? 4 : 2}
+                  onChange={(e) =>
+                    change(key, e.target.value.replace(/\D/g, ""))
+                  }
+                  placeholder={["1990", "3", "12"][i]}
+                />
+              </label>
+              {fieldError(key)}
+            </div>
           ))}
         </div>
         <div className="row">
@@ -111,18 +163,22 @@ export default function PersonForm({
         {person.timeKnown && (
           <div className="time-grid">
             {(["hour", "minute"] as const).map((key, i) => (
-              <label htmlFor={`${id}-${key}`} key={key}>
-                {i === 0 ? "시 (0~23)" : "분 (0~59)"}
-                <input
-                  id={`${id}-${key}`}
-                  inputMode="numeric"
-                  value={person[key]}
-                  maxLength={2}
-                  onChange={(e) =>
-                    change(key, e.target.value.replace(/\D/g, ""))
-                  }
-                />
-              </label>
+              <div key={key}>
+                <label htmlFor={`${id}-${key}`}>
+                  {i === 0 ? "시 (0~23)" : "분 (0~59)"}
+                  <input
+                    id={`${id}-${key}`}
+                    {...fieldProps(key)}
+                    inputMode="numeric"
+                    value={person[key]}
+                    maxLength={2}
+                    onChange={(e) =>
+                      change(key, e.target.value.replace(/\D/g, ""))
+                    }
+                  />
+                </label>
+                {fieldError(key)}
+              </div>
             ))}
           </div>
         )}
@@ -132,6 +188,12 @@ export default function PersonForm({
         <br />
         시간을 모르면 시주를 만들지 않아요.
       </p>
-    </div>
+      <p className="save-status" role="status">
+        {saved}
+      </p>
+      <button className="primary" type="submit" disabled={busy}>
+        {busy ? "저장 중…" : "저장하고 다음"}
+      </button>
+    </form>
   );
 }
