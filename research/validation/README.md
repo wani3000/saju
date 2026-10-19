@@ -124,3 +124,13 @@ node research/validation/audit-context-rules.mjs --release-check
 ```
 
 전체 연구 92개 검사 통과. 신규 15개는 원문 PDF와 쪽 해시·후보 상관관계·16개 주변 조합 전수 비교·원전 예시·관계 유형 불변성·과거 보고서 재현을 포함한다. 조건 사례 8개와 관계 초안 4개는 `reports/context-rule-audit.json`, `reports/context-reading-drafts.md`로 함께 생성한다. 원전 구절과 코드가 대응한다는 검토는 예측 타당성이나 운영 승인이 아니다.
+
+## 원전의 명시적 통근·합 방해 판단
+
+`source-judgments.mjs`는 『子平真詮』의 통근 11사례와 갑기 사이 경/을 방해 사례를 `ziping-explicit-judgments-research-v1`으로 분류한다. 정성적 뿌리 등급은 수치가 아니며, 미수록 사례는 무근·합화 성공으로 바꾸지 않는다. 기존 관찰과 버전은 보존한다. [감수 범위](../../docs/source-judgments-review.md), [읽기용 16사례](reports/source-judgment-drafts.md)를 따른다.
+
+```sh
+node research/validation/audit-source-judgments.mjs --check
+# 운영 미승인으로 종료 코드 2
+node research/validation/audit-source-judgments.mjs --release-check
+```

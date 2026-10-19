@@ -1,0 +1,28 @@
+{
+  "sourceId": "ziping-1926-nlc-46443-vol2",
+  "pdfFile": "ziping-1926-vol2.pdf",
+  "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+  "pdfBytes": 2088007,
+  "pages": [
+    {
+      "file": "ziping-1926-page-20.png",
+      "pdfPage": 20,
+      "printedPage": 7,
+      "sha256": "4672fcb19a74c8c8af352cd177e5be981998254bea2bad33e1735fc7457b6fd6"
+    },
+    {
+      "file": "ziping-1926-page-21.png",
+      "pdfPage": 21,
+      "printedPage": 8,
+      "sha256": "0a10e2766c6ce29f9307883b78d09125d0c34a385b8b8e0a01fabd74aeefdc64"
+    },
+    {
+      "file": "ziping-1926-page-22.png",
+      "pdfPage": 22,
+      "printedPage": 9,
+      "sha256": "5f0370102770ae334ce7a0177d5855be6fc38eba926f86d3c8a6be5257e384db"
+    }
+  ],
+  "transcriptionFile": "judgment-transcription.json",
+  "transcriptionSha256": "e9cb22645b1120ce77e4305d29fb6449d393f06787c0cac9dd5e11bb2f3f6124"
+}

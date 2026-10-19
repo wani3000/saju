@@ -1,0 +1,12 @@
+{
+  "sourceId": "ziping-1926-nlc-46443-vol2",
+  "review": "Codex visual collation, 2026-10-19. Public-domain original, punctuation added. Selected examples only; no expert or production approval.",
+  "sections": [
+    {"id":"root-classes","pdfPages":[21],"text":"長生祿刃，根之重者也；墓庫餘氣，根之輕者也。","usage":"Qualitative classes, not numeric weights or a complete strength decision."},
+    {"id":"tomb-examples","pdfPages":[21],"text":"得一比肩，不如得支中一墓庫，如甲逢未、丙逢戌之類。乙逢戌、丁逢丑，不作此論，以戌中無藏木、丑中無藏火也。","usage":"Register the two positive and two explicitly excluded tomb examples. Excluded-as-tomb is not a whole-chart rootlessness judgment."},
+    {"id":"residual-examples","pdfPages":[21],"text":"得二比肩，不如得一餘氣，如乙逢辰、丁逢未之類。","usage":"Register these two residual examples; do not convert the comparison into a 2:1 score."},
+    {"id":"heavy-root-examples","pdfPages":[21],"text":"得三比肩，不如得一長生祿刃，如甲逢亥寅卯之類。陰長生不作此論。","usage":"甲亥/寅/卯 are heavy-class examples. Do not infer a three-point weight or extend the class to yin-stem birth stages."},
+    {"id":"yin-birth-presence","pdfPages":[21,22],"text":"然乙逢午、丁逢酉之類，亦為有根。","usage":"Presence under this author's convention, with no heavy grade assigned. Kept distinct from same-element hidden-stem observations."},
+    {"id":"specific-intervening-obstruction","pdfPages":[20],"text":"如甲與己合，而甲己中間以庚隔之，則甲豈能越尅我之庚而合己。以乙間之，則己豈能越尅我之乙以合甲。此制於勢也，合而不敢合也。","usage":"Recognize only 甲己 with intervening 庚 or 乙 as this source's obstruction examples. Other pairs and absence of these examples do not establish a successful transformation."}
+  ]
+}

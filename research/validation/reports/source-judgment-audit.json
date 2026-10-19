@@ -1,0 +1,3852 @@
+{
+  "ruleVersion": "ziping-explicit-judgments-research-v1",
+  "productionApproved": false,
+  "scope": "Synthetic structures for explicit source examples; not verified historical people, birthdays or predictions.",
+  "cases": [
+    {
+      "id": "root-example:갑미",
+      "analysis": {
+        "ruleVersion": "ziping-explicit-judgments-research-v1",
+        "productionApproved": false,
+        "dependencies": {
+          "contextRuleVersion": "month-combination-context-research-v1",
+          "natalRuleVersion": "natal-definitions-research-v1",
+          "symbolRuleVersion": "symbol-relations-research-v1",
+          "engineVersion": "research-civil-midnight-v5"
+        },
+        "review": {
+          "status": "source-collated-partial-convention",
+          "reviewer": "Codex",
+          "date": "2026-10-19"
+        },
+        "interpretationReview": {
+          "status": "pending"
+        },
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "rootAssessments": [
+          {
+            "position": "year",
+            "alternatives": [
+              {
+                "status": "not-covered-by-selected-examples",
+                "stem": "갑",
+                "branch": "자",
+                "kind": null,
+                "grade": null,
+                "weight": null,
+                "sources": [],
+                "witnesses": [
+                  {
+                    "day": "갑자",
+                    "year": "임자"
+                  }
+                ],
+                "certainty": "all-candidates",
+                "jointFeasibility": "universal-over-supplied-candidates"
+              }
+            ],
+            "coverage": "not-covered-by-selected-examples"
+          },
+          {
+            "position": "month",
+            "alternatives": [
+              {
+                "status": "source-example",
+                "id": "root-example:갑미",
+                "stem": "갑",
+                "branch": "미",
+                "kind": "tomb",
+                "grade": "light",
+                "weight": null,
+                "sources": [
+                  {
+                    "id": "ziping-1926-nlc-46443-vol2",
+                    "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                    "transcriptionSha256": "e9cb22645b1120ce77e4305d29fb6449d393f06787c0cac9dd5e11bb2f3f6124",
+                    "sectionId": "tomb-examples",
+                    "pdfPages": [
+                      21
+                    ]
+                  },
+                  {
+                    "id": "ziping-1926-nlc-46443-vol2",
+                    "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                    "transcriptionSha256": "e9cb22645b1120ce77e4305d29fb6449d393f06787c0cac9dd5e11bb2f3f6124",
+                    "sectionId": "root-classes",
+                    "pdfPages": [
+                      21
+                    ]
+                  }
+                ],
+                "witnesses": [
+                  {
+                    "day": "갑자",
+                    "month": "을미"
+                  }
+                ],
+                "certainty": "all-candidates",
+                "jointFeasibility": "universal-over-supplied-candidates"
+              }
+            ],
+            "coverage": "selected-examples-cover-all-candidates"
+          },
+          {
+            "position": "day",
+            "alternatives": [
+              {
+                "status": "not-covered-by-selected-examples",
+                "stem": "갑",
+                "branch": "자",
+                "kind": null,
+                "grade": null,
+                "weight": null,
+                "sources": [],
+                "witnesses": [
+                  {
+                    "day": "갑자"
+                  }
+                ],
+                "certainty": "all-candidates",
+                "jointFeasibility": "universal-over-supplied-candidates"
+              }
+            ],
+            "coverage": "not-covered-by-selected-examples"
+          },
+          {
+            "position": "hour",
+            "alternatives": [
+              {
+                "status": "not-covered-by-selected-examples",
+                "stem": "갑",
+                "branch": "신",
+                "kind": null,
+                "grade": null,
+                "weight": null,
+                "sources": [],
+                "witnesses": [
+                  {
+                    "day": "갑자",
+                    "hour": "경신"
+                  }
+                ],
+                "certainty": "all-candidates",
+                "jointFeasibility": "universal-over-supplied-candidates"
+              }
+            ],
+            "coverage": "not-covered-by-selected-examples"
+          }
+        ],
+        "combinationAssessments": [
+          {
+            "id": "month:hour:stem-combination:을경",
+            "positions": [
+              "month",
+              "hour"
+            ],
+            "ruleId": "stem-combination:을경",
+            "pairCertainty": "all-candidates",
+            "status": "not-covered-by-selected-examples",
+            "contextScope": "conditional-on-pair-within-observed-positions",
+            "contextAlternatives": [
+              {
+                "blockers": []
+              }
+            ],
+            "pairJointFeasibility": "universal-over-supplied-candidates",
+            "obstructionJointFeasibility": "not-applicable",
+            "unobservedPositions": [],
+            "sources": [],
+            "transformation": {
+              "status": "not-adjudicated",
+              "element": null
+            }
+          }
+        ],
+        "strength": null,
+        "favorableElement": null,
+        "score": null,
+        "limitations": [
+          "No inference from unmatched examples",
+          "No whole-chart strength from root grades or month alone",
+          "No numeric grade weights or peer equivalence ratios",
+          "No automatic transformation from absence of obstruction",
+          "No cross-profile extension or relationship prediction",
+          "Qualitative light/heavy is this source convention, not a measured predictive strength.",
+          "Yin-birth root examples may have no same-element hidden stem; the two definitions remain separate.",
+          "Candidate-dependent evidence is not a confirmed feasible joint chart or probability.",
+          "Unknown hour remains unobserved; selected examples do not exhaust roots or obstructions."
+        ]
+      },
+      "draft": {
+        "contentVersion": "source-judgment-copy-v1",
+        "ruleVersion": "ziping-explicit-judgments-research-v1",
+        "dependencies": {
+          "contextRuleVersion": "month-combination-context-research-v1",
+          "natalRuleVersion": "natal-definitions-research-v1",
+          "symbolRuleVersion": "symbol-relations-research-v1",
+          "engineVersion": "research-civil-midnight-v5"
+        },
+        "productionApproved": false,
+        "status": "editorial-draft-not-approved",
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "notice": "한 판본의 명시적 예에 한정한 연구용 해석입니다. 입력 후보 전체에서 확인된 문장만 싣습니다.",
+        "statements": [
+          {
+            "id": "month:root-example:갑미",
+            "text": "『子平真詮』의 해당 구절은 일간 갑·월주 지지 미의 조합을 묘고의 예로 들며, 이 판본에서 가벼운 뿌리로 분류합니다. 이 분류만으로 신강·신약을 정하지 않습니다.",
+            "basis": "edition-specific-traditional-interpretation",
+            "sources": [
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "transcriptionSha256": "e9cb22645b1120ce77e4305d29fb6449d393f06787c0cac9dd5e11bb2f3f6124",
+                "sectionId": "tomb-examples",
+                "pdfPages": [
+                  21
+                ]
+              },
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "transcriptionSha256": "e9cb22645b1120ce77e4305d29fb6449d393f06787c0cac9dd5e11bb2f3f6124",
+                "sectionId": "root-classes",
+                "pdfPages": [
+                  21
+                ]
+              }
+            ]
+          }
+        ],
+        "omittedCandidateDependentFacts": 0,
+        "strength": null,
+        "score": null
+      }
+    },
+    {
+      "id": "root-example:병술",
+      "analysis": {
+        "ruleVersion": "ziping-explicit-judgments-research-v1",
+        "productionApproved": false,
+        "dependencies": {
+          "contextRuleVersion": "month-combination-context-research-v1",
+          "natalRuleVersion": "natal-definitions-research-v1",
+          "symbolRuleVersion": "symbol-relations-research-v1",
+          "engineVersion": "research-civil-midnight-v5"
+        },
+        "review": {
+          "status": "source-collated-partial-convention",
+          "reviewer": "Codex",
+          "date": "2026-10-19"
+        },
+        "interpretationReview": {
+          "status": "pending"
+        },
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "rootAssessments": [
+          {
+            "position": "year",
+            "alternatives": [
+              {
+                "status": "not-covered-by-selected-examples",
+                "stem": "병",
+                "branch": "자",
+                "kind": null,
+                "grade": null,
+                "weight": null,
+                "sources": [],
+                "witnesses": [
+                  {
+                    "day": "병자",
+                    "year": "임자"
+                  }
+                ],
+                "certainty": "all-candidates",
+                "jointFeasibility": "universal-over-supplied-candidates"
+              }
+            ],
+            "coverage": "not-covered-by-selected-examples"
+          },
+          {
+            "position": "month",
+            "alternatives": [
+              {
+                "status": "source-example",
+                "id": "root-example:병술",
+                "stem": "병",
+                "branch": "술",
+                "kind": "tomb",
+                "grade": "light",
+                "weight": null,
+                "sources": [
+                  {
+                    "id": "ziping-1926-nlc-46443-vol2",
+                    "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                    "transcriptionSha256": "e9cb22645b1120ce77e4305d29fb6449d393f06787c0cac9dd5e11bb2f3f6124",
+                    "sectionId": "tomb-examples",
+                    "pdfPages": [
+                      21
+                    ]
+                  },
+                  {
+                    "id": "ziping-1926-nlc-46443-vol2",
+                    "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                    "transcriptionSha256": "e9cb22645b1120ce77e4305d29fb6449d393f06787c0cac9dd5e11bb2f3f6124",
+                    "sectionId": "root-classes",
+                    "pdfPages": [
+                      21
+                    ]
+                  }
+                ],
+                "witnesses": [
+                  {
+                    "day": "병자",
+                    "month": "갑술"
+                  }
+                ],
+                "certainty": "all-candidates",
+                "jointFeasibility": "universal-over-supplied-candidates"
+              }
+            ],
+            "coverage": "selected-examples-cover-all-candidates"
+          },
+          {
+            "position": "day",
+            "alternatives": [
+              {
+                "status": "not-covered-by-selected-examples",
+                "stem": "병",
+                "branch": "자",
+                "kind": null,
+                "grade": null,
+                "weight": null,
+                "sources": [],
+                "witnesses": [
+                  {
+                    "day": "병자"
+                  }
+                ],
+                "certainty": "all-candidates",
+                "jointFeasibility": "universal-over-supplied-candidates"
+              }
+            ],
+            "coverage": "not-covered-by-selected-examples"
+          },
+          {
+            "position": "hour",
+            "alternatives": [
+              {
+                "status": "not-covered-by-selected-examples",
+                "stem": "병",
+                "branch": "신",
+                "kind": null,
+                "grade": null,
+                "weight": null,
+                "sources": [],
+                "witnesses": [
+                  {
+                    "day": "병자",
+                    "hour": "경신"
+                  }
+                ],
+                "certainty": "all-candidates",
+                "jointFeasibility": "universal-over-supplied-candidates"
+              }
+            ],
+            "coverage": "not-covered-by-selected-examples"
+          }
+        ],
+        "combinationAssessments": [],
+        "strength": null,
+        "favorableElement": null,
+        "score": null,
+        "limitations": [
+          "No inference from unmatched examples",
+          "No whole-chart strength from root grades or month alone",
+          "No numeric grade weights or peer equivalence ratios",
+          "No automatic transformation from absence of obstruction",
+          "No cross-profile extension or relationship prediction",
+          "Qualitative light/heavy is this source convention, not a measured predictive strength.",
+          "Yin-birth root examples may have no same-element hidden stem; the two definitions remain separate.",
+          "Candidate-dependent evidence is not a confirmed feasible joint chart or probability.",
+          "Unknown hour remains unobserved; selected examples do not exhaust roots or obstructions."
+        ]
+      },
+      "draft": {
+        "contentVersion": "source-judgment-copy-v1",
+        "ruleVersion": "ziping-explicit-judgments-research-v1",
+        "dependencies": {
+          "contextRuleVersion": "month-combination-context-research-v1",
+          "natalRuleVersion": "natal-definitions-research-v1",
+          "symbolRuleVersion": "symbol-relations-research-v1",
+          "engineVersion": "research-civil-midnight-v5"
+        },
+        "productionApproved": false,
+        "status": "editorial-draft-not-approved",
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "notice": "한 판본의 명시적 예에 한정한 연구용 해석입니다. 입력 후보 전체에서 확인된 문장만 싣습니다.",
+        "statements": [
+          {
+            "id": "month:root-example:병술",
+            "text": "『子平真詮』의 해당 구절은 일간 병·월주 지지 술의 조합을 묘고의 예로 들며, 이 판본에서 가벼운 뿌리로 분류합니다. 이 분류만으로 신강·신약을 정하지 않습니다.",
+            "basis": "edition-specific-traditional-interpretation",
+            "sources": [
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "transcriptionSha256": "e9cb22645b1120ce77e4305d29fb6449d393f06787c0cac9dd5e11bb2f3f6124",
+                "sectionId": "tomb-examples",
+                "pdfPages": [
+                  21
+                ]
+              },
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "transcriptionSha256": "e9cb22645b1120ce77e4305d29fb6449d393f06787c0cac9dd5e11bb2f3f6124",
+                "sectionId": "root-classes",
+                "pdfPages": [
+                  21
+                ]
+              }
+            ]
+          }
+        ],
+        "omittedCandidateDependentFacts": 0,
+        "strength": null,
+        "score": null
+      }
+    },
+    {
+      "id": "root-example:을술",
+      "analysis": {
+        "ruleVersion": "ziping-explicit-judgments-research-v1",
+        "productionApproved": false,
+        "dependencies": {
+          "contextRuleVersion": "month-combination-context-research-v1",
+          "natalRuleVersion": "natal-definitions-research-v1",
+          "symbolRuleVersion": "symbol-relations-research-v1",
+          "engineVersion": "research-civil-midnight-v5"
+        },
+        "review": {
+          "status": "source-collated-partial-convention",
+          "reviewer": "Codex",
+          "date": "2026-10-19"
+        },
+        "interpretationReview": {
+          "status": "pending"
+        },
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "rootAssessments": [
+          {
+            "position": "year",
+            "alternatives": [
+              {
+                "status": "not-covered-by-selected-examples",
+                "stem": "을",
+                "branch": "자",
+                "kind": null,
+                "grade": null,
+                "weight": null,
+                "sources": [],
+                "witnesses": [
+                  {
+                    "day": "을축",
+                    "year": "임자"
+                  }
+                ],
+                "certainty": "all-candidates",
+                "jointFeasibility": "universal-over-supplied-candidates"
+              }
+            ],
+            "coverage": "not-covered-by-selected-examples"
+          },
+          {
+            "position": "month",
+            "alternatives": [
+              {
+                "status": "source-example",
+                "id": "root-example:을술",
+                "stem": "을",
+                "branch": "술",
+                "kind": "excluded-as-tomb",
+                "grade": null,
+                "weight": null,
+                "sources": [
+                  {
+                    "id": "ziping-1926-nlc-46443-vol2",
+                    "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                    "transcriptionSha256": "e9cb22645b1120ce77e4305d29fb6449d393f06787c0cac9dd5e11bb2f3f6124",
+                    "sectionId": "tomb-examples",
+                    "pdfPages": [
+                      21
+                    ]
+                  }
+                ],
+                "witnesses": [
+                  {
+                    "day": "을축",
+                    "month": "갑술"
+                  }
+                ],
+                "certainty": "all-candidates",
+                "jointFeasibility": "universal-over-supplied-candidates"
+              }
+            ],
+            "coverage": "selected-examples-cover-all-candidates"
+          },
+          {
+            "position": "day",
+            "alternatives": [
+              {
+                "status": "not-covered-by-selected-examples",
+                "stem": "을",
+                "branch": "축",
+                "kind": null,
+                "grade": null,
+                "weight": null,
+                "sources": [],
+                "witnesses": [
+                  {
+                    "day": "을축"
+                  }
+                ],
+                "certainty": "all-candidates",
+                "jointFeasibility": "universal-over-supplied-candidates"
+              }
+            ],
+            "coverage": "not-covered-by-selected-examples"
+          },
+          {
+            "position": "hour",
+            "alternatives": [
+              {
+                "status": "not-covered-by-selected-examples",
+                "stem": "을",
+                "branch": "신",
+                "kind": null,
+                "grade": null,
+                "weight": null,
+                "sources": [],
+                "witnesses": [
+                  {
+                    "day": "을축",
+                    "hour": "경신"
+                  }
+                ],
+                "certainty": "all-candidates",
+                "jointFeasibility": "universal-over-supplied-candidates"
+              }
+            ],
+            "coverage": "not-covered-by-selected-examples"
+          }
+        ],
+        "combinationAssessments": [
+          {
+            "id": "day:hour:stem-combination:을경",
+            "positions": [
+              "day",
+              "hour"
+            ],
+            "ruleId": "stem-combination:을경",
+            "pairCertainty": "all-candidates",
+            "status": "not-covered-by-selected-examples",
+            "contextScope": "conditional-on-pair-within-observed-positions",
+            "contextAlternatives": [
+              {
+                "blockers": []
+              }
+            ],
+            "pairJointFeasibility": "universal-over-supplied-candidates",
+            "obstructionJointFeasibility": "not-applicable",
+            "unobservedPositions": [],
+            "sources": [],
+            "transformation": {
+              "status": "not-adjudicated",
+              "element": null
+            }
+          }
+        ],
+        "strength": null,
+        "favorableElement": null,
+        "score": null,
+        "limitations": [
+          "No inference from unmatched examples",
+          "No whole-chart strength from root grades or month alone",
+          "No numeric grade weights or peer equivalence ratios",
+          "No automatic transformation from absence of obstruction",
+          "No cross-profile extension or relationship prediction",
+          "Qualitative light/heavy is this source convention, not a measured predictive strength.",
+          "Yin-birth root examples may have no same-element hidden stem; the two definitions remain separate.",
+          "Candidate-dependent evidence is not a confirmed feasible joint chart or probability.",
+          "Unknown hour remains unobserved; selected examples do not exhaust roots or obstructions."
+        ]
+      },
+      "draft": {
+        "contentVersion": "source-judgment-copy-v1",
+        "ruleVersion": "ziping-explicit-judgments-research-v1",
+        "dependencies": {
+          "contextRuleVersion": "month-combination-context-research-v1",
+          "natalRuleVersion": "natal-definitions-research-v1",
+          "symbolRuleVersion": "symbol-relations-research-v1",
+          "engineVersion": "research-civil-midnight-v5"
+        },
+        "productionApproved": false,
+        "status": "editorial-draft-not-approved",
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "notice": "한 판본의 명시적 예에 한정한 연구용 해석입니다. 입력 후보 전체에서 확인된 문장만 싣습니다.",
+        "statements": [
+          {
+            "id": "month:root-example:을술",
+            "text": "『子平真詮』의 해당 구절은 일간 을·월주 지지 술의 조합을 묘고 뿌리의 예에서 제외합니다. 이는 다른 위치에도 뿌리가 없다는 뜻이 아닙니다.",
+            "basis": "edition-specific-traditional-interpretation",
+            "sources": [
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "transcriptionSha256": "e9cb22645b1120ce77e4305d29fb6449d393f06787c0cac9dd5e11bb2f3f6124",
+                "sectionId": "tomb-examples",
+                "pdfPages": [
+                  21
+                ]
+              }
+            ]
+          }
+        ],
+        "omittedCandidateDependentFacts": 0,
+        "strength": null,
+        "score": null
+      }
+    },
+    {
+      "id": "root-example:정축",
+      "analysis": {
+        "ruleVersion": "ziping-explicit-judgments-research-v1",
+        "productionApproved": false,
+        "dependencies": {
+          "contextRuleVersion": "month-combination-context-research-v1",
+          "natalRuleVersion": "natal-definitions-research-v1",
+          "symbolRuleVersion": "symbol-relations-research-v1",
+          "engineVersion": "research-civil-midnight-v5"
+        },
+        "review": {
+          "status": "source-collated-partial-convention",
+          "reviewer": "Codex",
+          "date": "2026-10-19"
+        },
+        "interpretationReview": {
+          "status": "pending"
+        },
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "rootAssessments": [
+          {
+            "position": "year",
+            "alternatives": [
+              {
+                "status": "not-covered-by-selected-examples",
+                "stem": "정",
+                "branch": "자",
+                "kind": null,
+                "grade": null,
+                "weight": null,
+                "sources": [],
+                "witnesses": [
+                  {
+                    "day": "정축",
+                    "year": "임자"
+                  }
+                ],
+                "certainty": "all-candidates",
+                "jointFeasibility": "universal-over-supplied-candidates"
+              }
+            ],
+            "coverage": "not-covered-by-selected-examples"
+          },
+          {
+            "position": "month",
+            "alternatives": [
+              {
+                "status": "source-example",
+                "id": "root-example:정축",
+                "stem": "정",
+                "branch": "축",
+                "kind": "excluded-as-tomb",
+                "grade": null,
+                "weight": null,
+                "sources": [
+                  {
+                    "id": "ziping-1926-nlc-46443-vol2",
+                    "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                    "transcriptionSha256": "e9cb22645b1120ce77e4305d29fb6449d393f06787c0cac9dd5e11bb2f3f6124",
+                    "sectionId": "tomb-examples",
+                    "pdfPages": [
+                      21
+                    ]
+                  }
+                ],
+                "witnesses": [
+                  {
+                    "day": "정축",
+                    "month": "을축"
+                  }
+                ],
+                "certainty": "all-candidates",
+                "jointFeasibility": "universal-over-supplied-candidates"
+              }
+            ],
+            "coverage": "selected-examples-cover-all-candidates"
+          },
+          {
+            "position": "day",
+            "alternatives": [
+              {
+                "status": "source-example",
+                "id": "root-example:정축",
+                "stem": "정",
+                "branch": "축",
+                "kind": "excluded-as-tomb",
+                "grade": null,
+                "weight": null,
+                "sources": [
+                  {
+                    "id": "ziping-1926-nlc-46443-vol2",
+                    "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                    "transcriptionSha256": "e9cb22645b1120ce77e4305d29fb6449d393f06787c0cac9dd5e11bb2f3f6124",
+                    "sectionId": "tomb-examples",
+                    "pdfPages": [
+                      21
+                    ]
+                  }
+                ],
+                "witnesses": [
+                  {
+                    "day": "정축"
+                  }
+                ],
+                "certainty": "all-candidates",
+                "jointFeasibility": "universal-over-supplied-candidates"
+              }
+            ],
+            "coverage": "selected-examples-cover-all-candidates"
+          },
+          {
+            "position": "hour",
+            "alternatives": [
+              {
+                "status": "not-covered-by-selected-examples",
+                "stem": "정",
+                "branch": "신",
+                "kind": null,
+                "grade": null,
+                "weight": null,
+                "sources": [],
+                "witnesses": [
+                  {
+                    "day": "정축",
+                    "hour": "경신"
+                  }
+                ],
+                "certainty": "all-candidates",
+                "jointFeasibility": "universal-over-supplied-candidates"
+              }
+            ],
+            "coverage": "not-covered-by-selected-examples"
+          }
+        ],
+        "combinationAssessments": [
+          {
+            "id": "month:hour:stem-combination:을경",
+            "positions": [
+              "month",
+              "hour"
+            ],
+            "ruleId": "stem-combination:을경",
+            "pairCertainty": "all-candidates",
+            "status": "not-covered-by-selected-examples",
+            "contextScope": "conditional-on-pair-within-observed-positions",
+            "contextAlternatives": [
+              {
+                "blockers": []
+              }
+            ],
+            "pairJointFeasibility": "universal-over-supplied-candidates",
+            "obstructionJointFeasibility": "not-applicable",
+            "unobservedPositions": [],
+            "sources": [],
+            "transformation": {
+              "status": "not-adjudicated",
+              "element": null
+            }
+          },
+          {
+            "id": "year:day:stem-combination:정임",
+            "positions": [
+              "year",
+              "day"
+            ],
+            "ruleId": "stem-combination:정임",
+            "pairCertainty": "all-candidates",
+            "status": "not-covered-by-selected-examples",
+            "contextScope": "conditional-on-pair-within-observed-positions",
+            "contextAlternatives": [
+              {
+                "blockers": []
+              }
+            ],
+            "pairJointFeasibility": "universal-over-supplied-candidates",
+            "obstructionJointFeasibility": "not-applicable",
+            "unobservedPositions": [],
+            "sources": [],
+            "transformation": {
+              "status": "not-adjudicated",
+              "element": null
+            }
+          }
+        ],
+        "strength": null,
+        "favorableElement": null,
+        "score": null,
+        "limitations": [
+          "No inference from unmatched examples",
+          "No whole-chart strength from root grades or month alone",
+          "No numeric grade weights or peer equivalence ratios",
+          "No automatic transformation from absence of obstruction",
+          "No cross-profile extension or relationship prediction",
+          "Qualitative light/heavy is this source convention, not a measured predictive strength.",
+          "Yin-birth root examples may have no same-element hidden stem; the two definitions remain separate.",
+          "Candidate-dependent evidence is not a confirmed feasible joint chart or probability.",
+          "Unknown hour remains unobserved; selected examples do not exhaust roots or obstructions."
+        ]
+      },
+      "draft": {
+        "contentVersion": "source-judgment-copy-v1",
+        "ruleVersion": "ziping-explicit-judgments-research-v1",
+        "dependencies": {
+          "contextRuleVersion": "month-combination-context-research-v1",
+          "natalRuleVersion": "natal-definitions-research-v1",
+          "symbolRuleVersion": "symbol-relations-research-v1",
+          "engineVersion": "research-civil-midnight-v5"
+        },
+        "productionApproved": false,
+        "status": "editorial-draft-not-approved",
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "notice": "한 판본의 명시적 예에 한정한 연구용 해석입니다. 입력 후보 전체에서 확인된 문장만 싣습니다.",
+        "statements": [
+          {
+            "id": "month:root-example:정축",
+            "text": "『子平真詮』의 해당 구절은 일간 정·월주 지지 축의 조합을 묘고 뿌리의 예에서 제외합니다. 이는 다른 위치에도 뿌리가 없다는 뜻이 아닙니다.",
+            "basis": "edition-specific-traditional-interpretation",
+            "sources": [
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "transcriptionSha256": "e9cb22645b1120ce77e4305d29fb6449d393f06787c0cac9dd5e11bb2f3f6124",
+                "sectionId": "tomb-examples",
+                "pdfPages": [
+                  21
+                ]
+              }
+            ]
+          },
+          {
+            "id": "day:root-example:정축",
+            "text": "『子平真詮』의 해당 구절은 일간 정·일주 지지 축의 조합을 묘고 뿌리의 예에서 제외합니다. 이는 다른 위치에도 뿌리가 없다는 뜻이 아닙니다.",
+            "basis": "edition-specific-traditional-interpretation",
+            "sources": [
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "transcriptionSha256": "e9cb22645b1120ce77e4305d29fb6449d393f06787c0cac9dd5e11bb2f3f6124",
+                "sectionId": "tomb-examples",
+                "pdfPages": [
+                  21
+                ]
+              }
+            ]
+          }
+        ],
+        "omittedCandidateDependentFacts": 0,
+        "strength": null,
+        "score": null
+      }
+    },
+    {
+      "id": "root-example:을진",
+      "analysis": {
+        "ruleVersion": "ziping-explicit-judgments-research-v1",
+        "productionApproved": false,
+        "dependencies": {
+          "contextRuleVersion": "month-combination-context-research-v1",
+          "natalRuleVersion": "natal-definitions-research-v1",
+          "symbolRuleVersion": "symbol-relations-research-v1",
+          "engineVersion": "research-civil-midnight-v5"
+        },
+        "review": {
+          "status": "source-collated-partial-convention",
+          "reviewer": "Codex",
+          "date": "2026-10-19"
+        },
+        "interpretationReview": {
+          "status": "pending"
+        },
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "rootAssessments": [
+          {
+            "position": "year",
+            "alternatives": [
+              {
+                "status": "not-covered-by-selected-examples",
+                "stem": "을",
+                "branch": "자",
+                "kind": null,
+                "grade": null,
+                "weight": null,
+                "sources": [],
+                "witnesses": [
+                  {
+                    "day": "을축",
+                    "year": "임자"
+                  }
+                ],
+                "certainty": "all-candidates",
+                "jointFeasibility": "universal-over-supplied-candidates"
+              }
+            ],
+            "coverage": "not-covered-by-selected-examples"
+          },
+          {
+            "position": "month",
+            "alternatives": [
+              {
+                "status": "source-example",
+                "id": "root-example:을진",
+                "stem": "을",
+                "branch": "진",
+                "kind": "residual",
+                "grade": "light",
+                "weight": null,
+                "sources": [
+                  {
+                    "id": "ziping-1926-nlc-46443-vol2",
+                    "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                    "transcriptionSha256": "e9cb22645b1120ce77e4305d29fb6449d393f06787c0cac9dd5e11bb2f3f6124",
+                    "sectionId": "residual-examples",
+                    "pdfPages": [
+                      21
+                    ]
+                  },
+                  {
+                    "id": "ziping-1926-nlc-46443-vol2",
+                    "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                    "transcriptionSha256": "e9cb22645b1120ce77e4305d29fb6449d393f06787c0cac9dd5e11bb2f3f6124",
+                    "sectionId": "root-classes",
+                    "pdfPages": [
+                      21
+                    ]
+                  }
+                ],
+                "witnesses": [
+                  {
+                    "day": "을축",
+                    "month": "갑진"
+                  }
+                ],
+                "certainty": "all-candidates",
+                "jointFeasibility": "universal-over-supplied-candidates"
+              }
+            ],
+            "coverage": "selected-examples-cover-all-candidates"
+          },
+          {
+            "position": "day",
+            "alternatives": [
+              {
+                "status": "not-covered-by-selected-examples",
+                "stem": "을",
+                "branch": "축",
+                "kind": null,
+                "grade": null,
+                "weight": null,
+                "sources": [],
+                "witnesses": [
+                  {
+                    "day": "을축"
+                  }
+                ],
+                "certainty": "all-candidates",
+                "jointFeasibility": "universal-over-supplied-candidates"
+              }
+            ],
+            "coverage": "not-covered-by-selected-examples"
+          },
+          {
+            "position": "hour",
+            "alternatives": [
+              {
+                "status": "not-covered-by-selected-examples",
+                "stem": "을",
+                "branch": "신",
+                "kind": null,
+                "grade": null,
+                "weight": null,
+                "sources": [],
+                "witnesses": [
+                  {
+                    "day": "을축",
+                    "hour": "경신"
+                  }
+                ],
+                "certainty": "all-candidates",
+                "jointFeasibility": "universal-over-supplied-candidates"
+              }
+            ],
+            "coverage": "not-covered-by-selected-examples"
+          }
+        ],
+        "combinationAssessments": [
+          {
+            "id": "day:hour:stem-combination:을경",
+            "positions": [
+              "day",
+              "hour"
+            ],
+            "ruleId": "stem-combination:을경",
+            "pairCertainty": "all-candidates",
+            "status": "not-covered-by-selected-examples",
+            "contextScope": "conditional-on-pair-within-observed-positions",
+            "contextAlternatives": [
+              {
+                "blockers": []
+              }
+            ],
+            "pairJointFeasibility": "universal-over-supplied-candidates",
+            "obstructionJointFeasibility": "not-applicable",
+            "unobservedPositions": [],
+            "sources": [],
+            "transformation": {
+              "status": "not-adjudicated",
+              "element": null
+            }
+          }
+        ],
+        "strength": null,
+        "favorableElement": null,
+        "score": null,
+        "limitations": [
+          "No inference from unmatched examples",
+          "No whole-chart strength from root grades or month alone",
+          "No numeric grade weights or peer equivalence ratios",
+          "No automatic transformation from absence of obstruction",
+          "No cross-profile extension or relationship prediction",
+          "Qualitative light/heavy is this source convention, not a measured predictive strength.",
+          "Yin-birth root examples may have no same-element hidden stem; the two definitions remain separate.",
+          "Candidate-dependent evidence is not a confirmed feasible joint chart or probability.",
+          "Unknown hour remains unobserved; selected examples do not exhaust roots or obstructions."
+        ]
+      },
+      "draft": {
+        "contentVersion": "source-judgment-copy-v1",
+        "ruleVersion": "ziping-explicit-judgments-research-v1",
+        "dependencies": {
+          "contextRuleVersion": "month-combination-context-research-v1",
+          "natalRuleVersion": "natal-definitions-research-v1",
+          "symbolRuleVersion": "symbol-relations-research-v1",
+          "engineVersion": "research-civil-midnight-v5"
+        },
+        "productionApproved": false,
+        "status": "editorial-draft-not-approved",
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "notice": "한 판본의 명시적 예에 한정한 연구용 해석입니다. 입력 후보 전체에서 확인된 문장만 싣습니다.",
+        "statements": [
+          {
+            "id": "month:root-example:을진",
+            "text": "『子平真詮』의 해당 구절은 일간 을·월주 지지 진의 조합을 여기의 예로 들며, 이 판본에서 가벼운 뿌리로 분류합니다. 이 분류만으로 신강·신약을 정하지 않습니다.",
+            "basis": "edition-specific-traditional-interpretation",
+            "sources": [
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "transcriptionSha256": "e9cb22645b1120ce77e4305d29fb6449d393f06787c0cac9dd5e11bb2f3f6124",
+                "sectionId": "residual-examples",
+                "pdfPages": [
+                  21
+                ]
+              },
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "transcriptionSha256": "e9cb22645b1120ce77e4305d29fb6449d393f06787c0cac9dd5e11bb2f3f6124",
+                "sectionId": "root-classes",
+                "pdfPages": [
+                  21
+                ]
+              }
+            ]
+          }
+        ],
+        "omittedCandidateDependentFacts": 0,
+        "strength": null,
+        "score": null
+      }
+    },
+    {
+      "id": "root-example:정미",
+      "analysis": {
+        "ruleVersion": "ziping-explicit-judgments-research-v1",
+        "productionApproved": false,
+        "dependencies": {
+          "contextRuleVersion": "month-combination-context-research-v1",
+          "natalRuleVersion": "natal-definitions-research-v1",
+          "symbolRuleVersion": "symbol-relations-research-v1",
+          "engineVersion": "research-civil-midnight-v5"
+        },
+        "review": {
+          "status": "source-collated-partial-convention",
+          "reviewer": "Codex",
+          "date": "2026-10-19"
+        },
+        "interpretationReview": {
+          "status": "pending"
+        },
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "rootAssessments": [
+          {
+            "position": "year",
+            "alternatives": [
+              {
+                "status": "not-covered-by-selected-examples",
+                "stem": "정",
+                "branch": "자",
+                "kind": null,
+                "grade": null,
+                "weight": null,
+                "sources": [],
+                "witnesses": [
+                  {
+                    "day": "정축",
+                    "year": "임자"
+                  }
+                ],
+                "certainty": "all-candidates",
+                "jointFeasibility": "universal-over-supplied-candidates"
+              }
+            ],
+            "coverage": "not-covered-by-selected-examples"
+          },
+          {
+            "position": "month",
+            "alternatives": [
+              {
+                "status": "source-example",
+                "id": "root-example:정미",
+                "stem": "정",
+                "branch": "미",
+                "kind": "residual",
+                "grade": "light",
+                "weight": null,
+                "sources": [
+                  {
+                    "id": "ziping-1926-nlc-46443-vol2",
+                    "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                    "transcriptionSha256": "e9cb22645b1120ce77e4305d29fb6449d393f06787c0cac9dd5e11bb2f3f6124",
+                    "sectionId": "residual-examples",
+                    "pdfPages": [
+                      21
+                    ]
+                  },
+                  {
+                    "id": "ziping-1926-nlc-46443-vol2",
+                    "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                    "transcriptionSha256": "e9cb22645b1120ce77e4305d29fb6449d393f06787c0cac9dd5e11bb2f3f6124",
+                    "sectionId": "root-classes",
+                    "pdfPages": [
+                      21
+                    ]
+                  }
+                ],
+                "witnesses": [
+                  {
+                    "day": "정축",
+                    "month": "을미"
+                  }
+                ],
+                "certainty": "all-candidates",
+                "jointFeasibility": "universal-over-supplied-candidates"
+              }
+            ],
+            "coverage": "selected-examples-cover-all-candidates"
+          },
+          {
+            "position": "day",
+            "alternatives": [
+              {
+                "status": "source-example",
+                "id": "root-example:정축",
+                "stem": "정",
+                "branch": "축",
+                "kind": "excluded-as-tomb",
+                "grade": null,
+                "weight": null,
+                "sources": [
+                  {
+                    "id": "ziping-1926-nlc-46443-vol2",
+                    "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                    "transcriptionSha256": "e9cb22645b1120ce77e4305d29fb6449d393f06787c0cac9dd5e11bb2f3f6124",
+                    "sectionId": "tomb-examples",
+                    "pdfPages": [
+                      21
+                    ]
+                  }
+                ],
+                "witnesses": [
+                  {
+                    "day": "정축"
+                  }
+                ],
+                "certainty": "all-candidates",
+                "jointFeasibility": "universal-over-supplied-candidates"
+              }
+            ],
+            "coverage": "selected-examples-cover-all-candidates"
+          },
+          {
+            "position": "hour",
+            "alternatives": [
+              {
+                "status": "not-covered-by-selected-examples",
+                "stem": "정",
+                "branch": "신",
+                "kind": null,
+                "grade": null,
+                "weight": null,
+                "sources": [],
+                "witnesses": [
+                  {
+                    "day": "정축",
+                    "hour": "경신"
+                  }
+                ],
+                "certainty": "all-candidates",
+                "jointFeasibility": "universal-over-supplied-candidates"
+              }
+            ],
+            "coverage": "not-covered-by-selected-examples"
+          }
+        ],
+        "combinationAssessments": [
+          {
+            "id": "month:hour:stem-combination:을경",
+            "positions": [
+              "month",
+              "hour"
+            ],
+            "ruleId": "stem-combination:을경",
+            "pairCertainty": "all-candidates",
+            "status": "not-covered-by-selected-examples",
+            "contextScope": "conditional-on-pair-within-observed-positions",
+            "contextAlternatives": [
+              {
+                "blockers": []
+              }
+            ],
+            "pairJointFeasibility": "universal-over-supplied-candidates",
+            "obstructionJointFeasibility": "not-applicable",
+            "unobservedPositions": [],
+            "sources": [],
+            "transformation": {
+              "status": "not-adjudicated",
+              "element": null
+            }
+          },
+          {
+            "id": "year:day:stem-combination:정임",
+            "positions": [
+              "year",
+              "day"
+            ],
+            "ruleId": "stem-combination:정임",
+            "pairCertainty": "all-candidates",
+            "status": "not-covered-by-selected-examples",
+            "contextScope": "conditional-on-pair-within-observed-positions",
+            "contextAlternatives": [
+              {
+                "blockers": []
+              }
+            ],
+            "pairJointFeasibility": "universal-over-supplied-candidates",
+            "obstructionJointFeasibility": "not-applicable",
+            "unobservedPositions": [],
+            "sources": [],
+            "transformation": {
+              "status": "not-adjudicated",
+              "element": null
+            }
+          }
+        ],
+        "strength": null,
+        "favorableElement": null,
+        "score": null,
+        "limitations": [
+          "No inference from unmatched examples",
+          "No whole-chart strength from root grades or month alone",
+          "No numeric grade weights or peer equivalence ratios",
+          "No automatic transformation from absence of obstruction",
+          "No cross-profile extension or relationship prediction",
+          "Qualitative light/heavy is this source convention, not a measured predictive strength.",
+          "Yin-birth root examples may have no same-element hidden stem; the two definitions remain separate.",
+          "Candidate-dependent evidence is not a confirmed feasible joint chart or probability.",
+          "Unknown hour remains unobserved; selected examples do not exhaust roots or obstructions."
+        ]
+      },
+      "draft": {
+        "contentVersion": "source-judgment-copy-v1",
+        "ruleVersion": "ziping-explicit-judgments-research-v1",
+        "dependencies": {
+          "contextRuleVersion": "month-combination-context-research-v1",
+          "natalRuleVersion": "natal-definitions-research-v1",
+          "symbolRuleVersion": "symbol-relations-research-v1",
+          "engineVersion": "research-civil-midnight-v5"
+        },
+        "productionApproved": false,
+        "status": "editorial-draft-not-approved",
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "notice": "한 판본의 명시적 예에 한정한 연구용 해석입니다. 입력 후보 전체에서 확인된 문장만 싣습니다.",
+        "statements": [
+          {
+            "id": "month:root-example:정미",
+            "text": "『子平真詮』의 해당 구절은 일간 정·월주 지지 미의 조합을 여기의 예로 들며, 이 판본에서 가벼운 뿌리로 분류합니다. 이 분류만으로 신강·신약을 정하지 않습니다.",
+            "basis": "edition-specific-traditional-interpretation",
+            "sources": [
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "transcriptionSha256": "e9cb22645b1120ce77e4305d29fb6449d393f06787c0cac9dd5e11bb2f3f6124",
+                "sectionId": "residual-examples",
+                "pdfPages": [
+                  21
+                ]
+              },
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "transcriptionSha256": "e9cb22645b1120ce77e4305d29fb6449d393f06787c0cac9dd5e11bb2f3f6124",
+                "sectionId": "root-classes",
+                "pdfPages": [
+                  21
+                ]
+              }
+            ]
+          },
+          {
+            "id": "day:root-example:정축",
+            "text": "『子平真詮』의 해당 구절은 일간 정·일주 지지 축의 조합을 묘고 뿌리의 예에서 제외합니다. 이는 다른 위치에도 뿌리가 없다는 뜻이 아닙니다.",
+            "basis": "edition-specific-traditional-interpretation",
+            "sources": [
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "transcriptionSha256": "e9cb22645b1120ce77e4305d29fb6449d393f06787c0cac9dd5e11bb2f3f6124",
+                "sectionId": "tomb-examples",
+                "pdfPages": [
+                  21
+                ]
+              }
+            ]
+          }
+        ],
+        "omittedCandidateDependentFacts": 0,
+        "strength": null,
+        "score": null
+      }
+    },
+    {
+      "id": "root-example:갑해",
+      "analysis": {
+        "ruleVersion": "ziping-explicit-judgments-research-v1",
+        "productionApproved": false,
+        "dependencies": {
+          "contextRuleVersion": "month-combination-context-research-v1",
+          "natalRuleVersion": "natal-definitions-research-v1",
+          "symbolRuleVersion": "symbol-relations-research-v1",
+          "engineVersion": "research-civil-midnight-v5"
+        },
+        "review": {
+          "status": "source-collated-partial-convention",
+          "reviewer": "Codex",
+          "date": "2026-10-19"
+        },
+        "interpretationReview": {
+          "status": "pending"
+        },
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "rootAssessments": [
+          {
+            "position": "year",
+            "alternatives": [
+              {
+                "status": "not-covered-by-selected-examples",
+                "stem": "갑",
+                "branch": "자",
+                "kind": null,
+                "grade": null,
+                "weight": null,
+                "sources": [],
+                "witnesses": [
+                  {
+                    "day": "갑자",
+                    "year": "임자"
+                  }
+                ],
+                "certainty": "all-candidates",
+                "jointFeasibility": "universal-over-supplied-candidates"
+              }
+            ],
+            "coverage": "not-covered-by-selected-examples"
+          },
+          {
+            "position": "month",
+            "alternatives": [
+              {
+                "status": "source-example",
+                "id": "root-example:갑해",
+                "stem": "갑",
+                "branch": "해",
+                "kind": "birth",
+                "grade": "heavy",
+                "weight": null,
+                "sources": [
+                  {
+                    "id": "ziping-1926-nlc-46443-vol2",
+                    "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                    "transcriptionSha256": "e9cb22645b1120ce77e4305d29fb6449d393f06787c0cac9dd5e11bb2f3f6124",
+                    "sectionId": "heavy-root-examples",
+                    "pdfPages": [
+                      21
+                    ]
+                  },
+                  {
+                    "id": "ziping-1926-nlc-46443-vol2",
+                    "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                    "transcriptionSha256": "e9cb22645b1120ce77e4305d29fb6449d393f06787c0cac9dd5e11bb2f3f6124",
+                    "sectionId": "root-classes",
+                    "pdfPages": [
+                      21
+                    ]
+                  }
+                ],
+                "witnesses": [
+                  {
+                    "day": "갑자",
+                    "month": "을해"
+                  }
+                ],
+                "certainty": "all-candidates",
+                "jointFeasibility": "universal-over-supplied-candidates"
+              }
+            ],
+            "coverage": "selected-examples-cover-all-candidates"
+          },
+          {
+            "position": "day",
+            "alternatives": [
+              {
+                "status": "not-covered-by-selected-examples",
+                "stem": "갑",
+                "branch": "자",
+                "kind": null,
+                "grade": null,
+                "weight": null,
+                "sources": [],
+                "witnesses": [
+                  {
+                    "day": "갑자"
+                  }
+                ],
+                "certainty": "all-candidates",
+                "jointFeasibility": "universal-over-supplied-candidates"
+              }
+            ],
+            "coverage": "not-covered-by-selected-examples"
+          },
+          {
+            "position": "hour",
+            "alternatives": [
+              {
+                "status": "not-covered-by-selected-examples",
+                "stem": "갑",
+                "branch": "신",
+                "kind": null,
+                "grade": null,
+                "weight": null,
+                "sources": [],
+                "witnesses": [
+                  {
+                    "day": "갑자",
+                    "hour": "경신"
+                  }
+                ],
+                "certainty": "all-candidates",
+                "jointFeasibility": "universal-over-supplied-candidates"
+              }
+            ],
+            "coverage": "not-covered-by-selected-examples"
+          }
+        ],
+        "combinationAssessments": [
+          {
+            "id": "month:hour:stem-combination:을경",
+            "positions": [
+              "month",
+              "hour"
+            ],
+            "ruleId": "stem-combination:을경",
+            "pairCertainty": "all-candidates",
+            "status": "not-covered-by-selected-examples",
+            "contextScope": "conditional-on-pair-within-observed-positions",
+            "contextAlternatives": [
+              {
+                "blockers": []
+              }
+            ],
+            "pairJointFeasibility": "universal-over-supplied-candidates",
+            "obstructionJointFeasibility": "not-applicable",
+            "unobservedPositions": [],
+            "sources": [],
+            "transformation": {
+              "status": "not-adjudicated",
+              "element": null
+            }
+          }
+        ],
+        "strength": null,
+        "favorableElement": null,
+        "score": null,
+        "limitations": [
+          "No inference from unmatched examples",
+          "No whole-chart strength from root grades or month alone",
+          "No numeric grade weights or peer equivalence ratios",
+          "No automatic transformation from absence of obstruction",
+          "No cross-profile extension or relationship prediction",
+          "Qualitative light/heavy is this source convention, not a measured predictive strength.",
+          "Yin-birth root examples may have no same-element hidden stem; the two definitions remain separate.",
+          "Candidate-dependent evidence is not a confirmed feasible joint chart or probability.",
+          "Unknown hour remains unobserved; selected examples do not exhaust roots or obstructions."
+        ]
+      },
+      "draft": {
+        "contentVersion": "source-judgment-copy-v1",
+        "ruleVersion": "ziping-explicit-judgments-research-v1",
+        "dependencies": {
+          "contextRuleVersion": "month-combination-context-research-v1",
+          "natalRuleVersion": "natal-definitions-research-v1",
+          "symbolRuleVersion": "symbol-relations-research-v1",
+          "engineVersion": "research-civil-midnight-v5"
+        },
+        "productionApproved": false,
+        "status": "editorial-draft-not-approved",
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "notice": "한 판본의 명시적 예에 한정한 연구용 해석입니다. 입력 후보 전체에서 확인된 문장만 싣습니다.",
+        "statements": [
+          {
+            "id": "month:root-example:갑해",
+            "text": "『子平真詮』의 해당 구절은 일간 갑·월주 지지 해의 조합을 장생의 예로 들며, 이 판본에서 무거운 뿌리로 분류합니다. 이 분류만으로 신강·신약을 정하지 않습니다.",
+            "basis": "edition-specific-traditional-interpretation",
+            "sources": [
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "transcriptionSha256": "e9cb22645b1120ce77e4305d29fb6449d393f06787c0cac9dd5e11bb2f3f6124",
+                "sectionId": "heavy-root-examples",
+                "pdfPages": [
+                  21
+                ]
+              },
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "transcriptionSha256": "e9cb22645b1120ce77e4305d29fb6449d393f06787c0cac9dd5e11bb2f3f6124",
+                "sectionId": "root-classes",
+                "pdfPages": [
+                  21
+                ]
+              }
+            ]
+          }
+        ],
+        "omittedCandidateDependentFacts": 0,
+        "strength": null,
+        "score": null
+      }
+    },
+    {
+      "id": "root-example:갑인",
+      "analysis": {
+        "ruleVersion": "ziping-explicit-judgments-research-v1",
+        "productionApproved": false,
+        "dependencies": {
+          "contextRuleVersion": "month-combination-context-research-v1",
+          "natalRuleVersion": "natal-definitions-research-v1",
+          "symbolRuleVersion": "symbol-relations-research-v1",
+          "engineVersion": "research-civil-midnight-v5"
+        },
+        "review": {
+          "status": "source-collated-partial-convention",
+          "reviewer": "Codex",
+          "date": "2026-10-19"
+        },
+        "interpretationReview": {
+          "status": "pending"
+        },
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "rootAssessments": [
+          {
+            "position": "year",
+            "alternatives": [
+              {
+                "status": "not-covered-by-selected-examples",
+                "stem": "갑",
+                "branch": "자",
+                "kind": null,
+                "grade": null,
+                "weight": null,
+                "sources": [],
+                "witnesses": [
+                  {
+                    "day": "갑자",
+                    "year": "임자"
+                  }
+                ],
+                "certainty": "all-candidates",
+                "jointFeasibility": "universal-over-supplied-candidates"
+              }
+            ],
+            "coverage": "not-covered-by-selected-examples"
+          },
+          {
+            "position": "month",
+            "alternatives": [
+              {
+                "status": "source-example",
+                "id": "root-example:갑인",
+                "stem": "갑",
+                "branch": "인",
+                "kind": "salary",
+                "grade": "heavy",
+                "weight": null,
+                "sources": [
+                  {
+                    "id": "ziping-1926-nlc-46443-vol2",
+                    "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                    "transcriptionSha256": "e9cb22645b1120ce77e4305d29fb6449d393f06787c0cac9dd5e11bb2f3f6124",
+                    "sectionId": "heavy-root-examples",
+                    "pdfPages": [
+                      21
+                    ]
+                  },
+                  {
+                    "id": "ziping-1926-nlc-46443-vol2",
+                    "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                    "transcriptionSha256": "e9cb22645b1120ce77e4305d29fb6449d393f06787c0cac9dd5e11bb2f3f6124",
+                    "sectionId": "root-classes",
+                    "pdfPages": [
+                      21
+                    ]
+                  }
+                ],
+                "witnesses": [
+                  {
+                    "day": "갑자",
+                    "month": "갑인"
+                  }
+                ],
+                "certainty": "all-candidates",
+                "jointFeasibility": "universal-over-supplied-candidates"
+              }
+            ],
+            "coverage": "selected-examples-cover-all-candidates"
+          },
+          {
+            "position": "day",
+            "alternatives": [
+              {
+                "status": "not-covered-by-selected-examples",
+                "stem": "갑",
+                "branch": "자",
+                "kind": null,
+                "grade": null,
+                "weight": null,
+                "sources": [],
+                "witnesses": [
+                  {
+                    "day": "갑자"
+                  }
+                ],
+                "certainty": "all-candidates",
+                "jointFeasibility": "universal-over-supplied-candidates"
+              }
+            ],
+            "coverage": "not-covered-by-selected-examples"
+          },
+          {
+            "position": "hour",
+            "alternatives": [
+              {
+                "status": "not-covered-by-selected-examples",
+                "stem": "갑",
+                "branch": "신",
+                "kind": null,
+                "grade": null,
+                "weight": null,
+                "sources": [],
+                "witnesses": [
+                  {
+                    "day": "갑자",
+                    "hour": "경신"
+                  }
+                ],
+                "certainty": "all-candidates",
+                "jointFeasibility": "universal-over-supplied-candidates"
+              }
+            ],
+            "coverage": "not-covered-by-selected-examples"
+          }
+        ],
+        "combinationAssessments": [],
+        "strength": null,
+        "favorableElement": null,
+        "score": null,
+        "limitations": [
+          "No inference from unmatched examples",
+          "No whole-chart strength from root grades or month alone",
+          "No numeric grade weights or peer equivalence ratios",
+          "No automatic transformation from absence of obstruction",
+          "No cross-profile extension or relationship prediction",
+          "Qualitative light/heavy is this source convention, not a measured predictive strength.",
+          "Yin-birth root examples may have no same-element hidden stem; the two definitions remain separate.",
+          "Candidate-dependent evidence is not a confirmed feasible joint chart or probability.",
+          "Unknown hour remains unobserved; selected examples do not exhaust roots or obstructions."
+        ]
+      },
+      "draft": {
+        "contentVersion": "source-judgment-copy-v1",
+        "ruleVersion": "ziping-explicit-judgments-research-v1",
+        "dependencies": {
+          "contextRuleVersion": "month-combination-context-research-v1",
+          "natalRuleVersion": "natal-definitions-research-v1",
+          "symbolRuleVersion": "symbol-relations-research-v1",
+          "engineVersion": "research-civil-midnight-v5"
+        },
+        "productionApproved": false,
+        "status": "editorial-draft-not-approved",
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "notice": "한 판본의 명시적 예에 한정한 연구용 해석입니다. 입력 후보 전체에서 확인된 문장만 싣습니다.",
+        "statements": [
+          {
+            "id": "month:root-example:갑인",
+            "text": "『子平真詮』의 해당 구절은 일간 갑·월주 지지 인의 조합을 록의 예로 들며, 이 판본에서 무거운 뿌리로 분류합니다. 이 분류만으로 신강·신약을 정하지 않습니다.",
+            "basis": "edition-specific-traditional-interpretation",
+            "sources": [
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "transcriptionSha256": "e9cb22645b1120ce77e4305d29fb6449d393f06787c0cac9dd5e11bb2f3f6124",
+                "sectionId": "heavy-root-examples",
+                "pdfPages": [
+                  21
+                ]
+              },
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "transcriptionSha256": "e9cb22645b1120ce77e4305d29fb6449d393f06787c0cac9dd5e11bb2f3f6124",
+                "sectionId": "root-classes",
+                "pdfPages": [
+                  21
+                ]
+              }
+            ]
+          }
+        ],
+        "omittedCandidateDependentFacts": 0,
+        "strength": null,
+        "score": null
+      }
+    },
+    {
+      "id": "root-example:갑묘",
+      "analysis": {
+        "ruleVersion": "ziping-explicit-judgments-research-v1",
+        "productionApproved": false,
+        "dependencies": {
+          "contextRuleVersion": "month-combination-context-research-v1",
+          "natalRuleVersion": "natal-definitions-research-v1",
+          "symbolRuleVersion": "symbol-relations-research-v1",
+          "engineVersion": "research-civil-midnight-v5"
+        },
+        "review": {
+          "status": "source-collated-partial-convention",
+          "reviewer": "Codex",
+          "date": "2026-10-19"
+        },
+        "interpretationReview": {
+          "status": "pending"
+        },
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "rootAssessments": [
+          {
+            "position": "year",
+            "alternatives": [
+              {
+                "status": "not-covered-by-selected-examples",
+                "stem": "갑",
+                "branch": "자",
+                "kind": null,
+                "grade": null,
+                "weight": null,
+                "sources": [],
+                "witnesses": [
+                  {
+                    "day": "갑자",
+                    "year": "임자"
+                  }
+                ],
+                "certainty": "all-candidates",
+                "jointFeasibility": "universal-over-supplied-candidates"
+              }
+            ],
+            "coverage": "not-covered-by-selected-examples"
+          },
+          {
+            "position": "month",
+            "alternatives": [
+              {
+                "status": "source-example",
+                "id": "root-example:갑묘",
+                "stem": "갑",
+                "branch": "묘",
+                "kind": "blade",
+                "grade": "heavy",
+                "weight": null,
+                "sources": [
+                  {
+                    "id": "ziping-1926-nlc-46443-vol2",
+                    "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                    "transcriptionSha256": "e9cb22645b1120ce77e4305d29fb6449d393f06787c0cac9dd5e11bb2f3f6124",
+                    "sectionId": "heavy-root-examples",
+                    "pdfPages": [
+                      21
+                    ]
+                  },
+                  {
+                    "id": "ziping-1926-nlc-46443-vol2",
+                    "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                    "transcriptionSha256": "e9cb22645b1120ce77e4305d29fb6449d393f06787c0cac9dd5e11bb2f3f6124",
+                    "sectionId": "root-classes",
+                    "pdfPages": [
+                      21
+                    ]
+                  }
+                ],
+                "witnesses": [
+                  {
+                    "day": "갑자",
+                    "month": "을묘"
+                  }
+                ],
+                "certainty": "all-candidates",
+                "jointFeasibility": "universal-over-supplied-candidates"
+              }
+            ],
+            "coverage": "selected-examples-cover-all-candidates"
+          },
+          {
+            "position": "day",
+            "alternatives": [
+              {
+                "status": "not-covered-by-selected-examples",
+                "stem": "갑",
+                "branch": "자",
+                "kind": null,
+                "grade": null,
+                "weight": null,
+                "sources": [],
+                "witnesses": [
+                  {
+                    "day": "갑자"
+                  }
+                ],
+                "certainty": "all-candidates",
+                "jointFeasibility": "universal-over-supplied-candidates"
+              }
+            ],
+            "coverage": "not-covered-by-selected-examples"
+          },
+          {
+            "position": "hour",
+            "alternatives": [
+              {
+                "status": "not-covered-by-selected-examples",
+                "stem": "갑",
+                "branch": "신",
+                "kind": null,
+                "grade": null,
+                "weight": null,
+                "sources": [],
+                "witnesses": [
+                  {
+                    "day": "갑자",
+                    "hour": "경신"
+                  }
+                ],
+                "certainty": "all-candidates",
+                "jointFeasibility": "universal-over-supplied-candidates"
+              }
+            ],
+            "coverage": "not-covered-by-selected-examples"
+          }
+        ],
+        "combinationAssessments": [
+          {
+            "id": "month:hour:stem-combination:을경",
+            "positions": [
+              "month",
+              "hour"
+            ],
+            "ruleId": "stem-combination:을경",
+            "pairCertainty": "all-candidates",
+            "status": "not-covered-by-selected-examples",
+            "contextScope": "conditional-on-pair-within-observed-positions",
+            "contextAlternatives": [
+              {
+                "blockers": []
+              }
+            ],
+            "pairJointFeasibility": "universal-over-supplied-candidates",
+            "obstructionJointFeasibility": "not-applicable",
+            "unobservedPositions": [],
+            "sources": [],
+            "transformation": {
+              "status": "not-adjudicated",
+              "element": null
+            }
+          }
+        ],
+        "strength": null,
+        "favorableElement": null,
+        "score": null,
+        "limitations": [
+          "No inference from unmatched examples",
+          "No whole-chart strength from root grades or month alone",
+          "No numeric grade weights or peer equivalence ratios",
+          "No automatic transformation from absence of obstruction",
+          "No cross-profile extension or relationship prediction",
+          "Qualitative light/heavy is this source convention, not a measured predictive strength.",
+          "Yin-birth root examples may have no same-element hidden stem; the two definitions remain separate.",
+          "Candidate-dependent evidence is not a confirmed feasible joint chart or probability.",
+          "Unknown hour remains unobserved; selected examples do not exhaust roots or obstructions."
+        ]
+      },
+      "draft": {
+        "contentVersion": "source-judgment-copy-v1",
+        "ruleVersion": "ziping-explicit-judgments-research-v1",
+        "dependencies": {
+          "contextRuleVersion": "month-combination-context-research-v1",
+          "natalRuleVersion": "natal-definitions-research-v1",
+          "symbolRuleVersion": "symbol-relations-research-v1",
+          "engineVersion": "research-civil-midnight-v5"
+        },
+        "productionApproved": false,
+        "status": "editorial-draft-not-approved",
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "notice": "한 판본의 명시적 예에 한정한 연구용 해석입니다. 입력 후보 전체에서 확인된 문장만 싣습니다.",
+        "statements": [
+          {
+            "id": "month:root-example:갑묘",
+            "text": "『子平真詮』의 해당 구절은 일간 갑·월주 지지 묘의 조합을 인의 예로 들며, 이 판본에서 무거운 뿌리로 분류합니다. 이 분류만으로 신강·신약을 정하지 않습니다.",
+            "basis": "edition-specific-traditional-interpretation",
+            "sources": [
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "transcriptionSha256": "e9cb22645b1120ce77e4305d29fb6449d393f06787c0cac9dd5e11bb2f3f6124",
+                "sectionId": "heavy-root-examples",
+                "pdfPages": [
+                  21
+                ]
+              },
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "transcriptionSha256": "e9cb22645b1120ce77e4305d29fb6449d393f06787c0cac9dd5e11bb2f3f6124",
+                "sectionId": "root-classes",
+                "pdfPages": [
+                  21
+                ]
+              }
+            ]
+          }
+        ],
+        "omittedCandidateDependentFacts": 0,
+        "strength": null,
+        "score": null
+      }
+    },
+    {
+      "id": "root-example:을오",
+      "analysis": {
+        "ruleVersion": "ziping-explicit-judgments-research-v1",
+        "productionApproved": false,
+        "dependencies": {
+          "contextRuleVersion": "month-combination-context-research-v1",
+          "natalRuleVersion": "natal-definitions-research-v1",
+          "symbolRuleVersion": "symbol-relations-research-v1",
+          "engineVersion": "research-civil-midnight-v5"
+        },
+        "review": {
+          "status": "source-collated-partial-convention",
+          "reviewer": "Codex",
+          "date": "2026-10-19"
+        },
+        "interpretationReview": {
+          "status": "pending"
+        },
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "rootAssessments": [
+          {
+            "position": "year",
+            "alternatives": [
+              {
+                "status": "not-covered-by-selected-examples",
+                "stem": "을",
+                "branch": "자",
+                "kind": null,
+                "grade": null,
+                "weight": null,
+                "sources": [],
+                "witnesses": [
+                  {
+                    "day": "을축",
+                    "year": "임자"
+                  }
+                ],
+                "certainty": "all-candidates",
+                "jointFeasibility": "universal-over-supplied-candidates"
+              }
+            ],
+            "coverage": "not-covered-by-selected-examples"
+          },
+          {
+            "position": "month",
+            "alternatives": [
+              {
+                "status": "source-example",
+                "id": "root-example:을오",
+                "stem": "을",
+                "branch": "오",
+                "kind": "yin-birth-root",
+                "grade": null,
+                "weight": null,
+                "sources": [
+                  {
+                    "id": "ziping-1926-nlc-46443-vol2",
+                    "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                    "transcriptionSha256": "e9cb22645b1120ce77e4305d29fb6449d393f06787c0cac9dd5e11bb2f3f6124",
+                    "sectionId": "yin-birth-presence",
+                    "pdfPages": [
+                      21,
+                      22
+                    ]
+                  }
+                ],
+                "witnesses": [
+                  {
+                    "day": "을축",
+                    "month": "갑오"
+                  }
+                ],
+                "certainty": "all-candidates",
+                "jointFeasibility": "universal-over-supplied-candidates"
+              }
+            ],
+            "coverage": "selected-examples-cover-all-candidates"
+          },
+          {
+            "position": "day",
+            "alternatives": [
+              {
+                "status": "not-covered-by-selected-examples",
+                "stem": "을",
+                "branch": "축",
+                "kind": null,
+                "grade": null,
+                "weight": null,
+                "sources": [],
+                "witnesses": [
+                  {
+                    "day": "을축"
+                  }
+                ],
+                "certainty": "all-candidates",
+                "jointFeasibility": "universal-over-supplied-candidates"
+              }
+            ],
+            "coverage": "not-covered-by-selected-examples"
+          },
+          {
+            "position": "hour",
+            "alternatives": [
+              {
+                "status": "not-covered-by-selected-examples",
+                "stem": "을",
+                "branch": "신",
+                "kind": null,
+                "grade": null,
+                "weight": null,
+                "sources": [],
+                "witnesses": [
+                  {
+                    "day": "을축",
+                    "hour": "경신"
+                  }
+                ],
+                "certainty": "all-candidates",
+                "jointFeasibility": "universal-over-supplied-candidates"
+              }
+            ],
+            "coverage": "not-covered-by-selected-examples"
+          }
+        ],
+        "combinationAssessments": [
+          {
+            "id": "day:hour:stem-combination:을경",
+            "positions": [
+              "day",
+              "hour"
+            ],
+            "ruleId": "stem-combination:을경",
+            "pairCertainty": "all-candidates",
+            "status": "not-covered-by-selected-examples",
+            "contextScope": "conditional-on-pair-within-observed-positions",
+            "contextAlternatives": [
+              {
+                "blockers": []
+              }
+            ],
+            "pairJointFeasibility": "universal-over-supplied-candidates",
+            "obstructionJointFeasibility": "not-applicable",
+            "unobservedPositions": [],
+            "sources": [],
+            "transformation": {
+              "status": "not-adjudicated",
+              "element": null
+            }
+          }
+        ],
+        "strength": null,
+        "favorableElement": null,
+        "score": null,
+        "limitations": [
+          "No inference from unmatched examples",
+          "No whole-chart strength from root grades or month alone",
+          "No numeric grade weights or peer equivalence ratios",
+          "No automatic transformation from absence of obstruction",
+          "No cross-profile extension or relationship prediction",
+          "Qualitative light/heavy is this source convention, not a measured predictive strength.",
+          "Yin-birth root examples may have no same-element hidden stem; the two definitions remain separate.",
+          "Candidate-dependent evidence is not a confirmed feasible joint chart or probability.",
+          "Unknown hour remains unobserved; selected examples do not exhaust roots or obstructions."
+        ]
+      },
+      "draft": {
+        "contentVersion": "source-judgment-copy-v1",
+        "ruleVersion": "ziping-explicit-judgments-research-v1",
+        "dependencies": {
+          "contextRuleVersion": "month-combination-context-research-v1",
+          "natalRuleVersion": "natal-definitions-research-v1",
+          "symbolRuleVersion": "symbol-relations-research-v1",
+          "engineVersion": "research-civil-midnight-v5"
+        },
+        "productionApproved": false,
+        "status": "editorial-draft-not-approved",
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "notice": "한 판본의 명시적 예에 한정한 연구용 해석입니다. 입력 후보 전체에서 확인된 문장만 싣습니다.",
+        "statements": [
+          {
+            "id": "month:root-example:을오",
+            "text": "『子平真詮』의 해당 구절은 일간 을·월주 지지 오의 조합을 음간 장생의 뿌리가 있는 예로 다루지만, 무거운 뿌리 등급은 적용하지 않습니다.",
+            "basis": "edition-specific-traditional-interpretation",
+            "sources": [
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "transcriptionSha256": "e9cb22645b1120ce77e4305d29fb6449d393f06787c0cac9dd5e11bb2f3f6124",
+                "sectionId": "yin-birth-presence",
+                "pdfPages": [
+                  21,
+                  22
+                ]
+              }
+            ]
+          }
+        ],
+        "omittedCandidateDependentFacts": 0,
+        "strength": null,
+        "score": null
+      }
+    },
+    {
+      "id": "root-example:정유",
+      "analysis": {
+        "ruleVersion": "ziping-explicit-judgments-research-v1",
+        "productionApproved": false,
+        "dependencies": {
+          "contextRuleVersion": "month-combination-context-research-v1",
+          "natalRuleVersion": "natal-definitions-research-v1",
+          "symbolRuleVersion": "symbol-relations-research-v1",
+          "engineVersion": "research-civil-midnight-v5"
+        },
+        "review": {
+          "status": "source-collated-partial-convention",
+          "reviewer": "Codex",
+          "date": "2026-10-19"
+        },
+        "interpretationReview": {
+          "status": "pending"
+        },
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "rootAssessments": [
+          {
+            "position": "year",
+            "alternatives": [
+              {
+                "status": "not-covered-by-selected-examples",
+                "stem": "정",
+                "branch": "자",
+                "kind": null,
+                "grade": null,
+                "weight": null,
+                "sources": [],
+                "witnesses": [
+                  {
+                    "day": "정축",
+                    "year": "임자"
+                  }
+                ],
+                "certainty": "all-candidates",
+                "jointFeasibility": "universal-over-supplied-candidates"
+              }
+            ],
+            "coverage": "not-covered-by-selected-examples"
+          },
+          {
+            "position": "month",
+            "alternatives": [
+              {
+                "status": "source-example",
+                "id": "root-example:정유",
+                "stem": "정",
+                "branch": "유",
+                "kind": "yin-birth-root",
+                "grade": null,
+                "weight": null,
+                "sources": [
+                  {
+                    "id": "ziping-1926-nlc-46443-vol2",
+                    "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                    "transcriptionSha256": "e9cb22645b1120ce77e4305d29fb6449d393f06787c0cac9dd5e11bb2f3f6124",
+                    "sectionId": "yin-birth-presence",
+                    "pdfPages": [
+                      21,
+                      22
+                    ]
+                  }
+                ],
+                "witnesses": [
+                  {
+                    "day": "정축",
+                    "month": "을유"
+                  }
+                ],
+                "certainty": "all-candidates",
+                "jointFeasibility": "universal-over-supplied-candidates"
+              }
+            ],
+            "coverage": "selected-examples-cover-all-candidates"
+          },
+          {
+            "position": "day",
+            "alternatives": [
+              {
+                "status": "source-example",
+                "id": "root-example:정축",
+                "stem": "정",
+                "branch": "축",
+                "kind": "excluded-as-tomb",
+                "grade": null,
+                "weight": null,
+                "sources": [
+                  {
+                    "id": "ziping-1926-nlc-46443-vol2",
+                    "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                    "transcriptionSha256": "e9cb22645b1120ce77e4305d29fb6449d393f06787c0cac9dd5e11bb2f3f6124",
+                    "sectionId": "tomb-examples",
+                    "pdfPages": [
+                      21
+                    ]
+                  }
+                ],
+                "witnesses": [
+                  {
+                    "day": "정축"
+                  }
+                ],
+                "certainty": "all-candidates",
+                "jointFeasibility": "universal-over-supplied-candidates"
+              }
+            ],
+            "coverage": "selected-examples-cover-all-candidates"
+          },
+          {
+            "position": "hour",
+            "alternatives": [
+              {
+                "status": "not-covered-by-selected-examples",
+                "stem": "정",
+                "branch": "신",
+                "kind": null,
+                "grade": null,
+                "weight": null,
+                "sources": [],
+                "witnesses": [
+                  {
+                    "day": "정축",
+                    "hour": "경신"
+                  }
+                ],
+                "certainty": "all-candidates",
+                "jointFeasibility": "universal-over-supplied-candidates"
+              }
+            ],
+            "coverage": "not-covered-by-selected-examples"
+          }
+        ],
+        "combinationAssessments": [
+          {
+            "id": "month:hour:stem-combination:을경",
+            "positions": [
+              "month",
+              "hour"
+            ],
+            "ruleId": "stem-combination:을경",
+            "pairCertainty": "all-candidates",
+            "status": "not-covered-by-selected-examples",
+            "contextScope": "conditional-on-pair-within-observed-positions",
+            "contextAlternatives": [
+              {
+                "blockers": []
+              }
+            ],
+            "pairJointFeasibility": "universal-over-supplied-candidates",
+            "obstructionJointFeasibility": "not-applicable",
+            "unobservedPositions": [],
+            "sources": [],
+            "transformation": {
+              "status": "not-adjudicated",
+              "element": null
+            }
+          },
+          {
+            "id": "year:day:stem-combination:정임",
+            "positions": [
+              "year",
+              "day"
+            ],
+            "ruleId": "stem-combination:정임",
+            "pairCertainty": "all-candidates",
+            "status": "not-covered-by-selected-examples",
+            "contextScope": "conditional-on-pair-within-observed-positions",
+            "contextAlternatives": [
+              {
+                "blockers": []
+              }
+            ],
+            "pairJointFeasibility": "universal-over-supplied-candidates",
+            "obstructionJointFeasibility": "not-applicable",
+            "unobservedPositions": [],
+            "sources": [],
+            "transformation": {
+              "status": "not-adjudicated",
+              "element": null
+            }
+          }
+        ],
+        "strength": null,
+        "favorableElement": null,
+        "score": null,
+        "limitations": [
+          "No inference from unmatched examples",
+          "No whole-chart strength from root grades or month alone",
+          "No numeric grade weights or peer equivalence ratios",
+          "No automatic transformation from absence of obstruction",
+          "No cross-profile extension or relationship prediction",
+          "Qualitative light/heavy is this source convention, not a measured predictive strength.",
+          "Yin-birth root examples may have no same-element hidden stem; the two definitions remain separate.",
+          "Candidate-dependent evidence is not a confirmed feasible joint chart or probability.",
+          "Unknown hour remains unobserved; selected examples do not exhaust roots or obstructions."
+        ]
+      },
+      "draft": {
+        "contentVersion": "source-judgment-copy-v1",
+        "ruleVersion": "ziping-explicit-judgments-research-v1",
+        "dependencies": {
+          "contextRuleVersion": "month-combination-context-research-v1",
+          "natalRuleVersion": "natal-definitions-research-v1",
+          "symbolRuleVersion": "symbol-relations-research-v1",
+          "engineVersion": "research-civil-midnight-v5"
+        },
+        "productionApproved": false,
+        "status": "editorial-draft-not-approved",
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "notice": "한 판본의 명시적 예에 한정한 연구용 해석입니다. 입력 후보 전체에서 확인된 문장만 싣습니다.",
+        "statements": [
+          {
+            "id": "month:root-example:정유",
+            "text": "『子平真詮』의 해당 구절은 일간 정·월주 지지 유의 조합을 음간 장생의 뿌리가 있는 예로 다루지만, 무거운 뿌리 등급은 적용하지 않습니다.",
+            "basis": "edition-specific-traditional-interpretation",
+            "sources": [
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "transcriptionSha256": "e9cb22645b1120ce77e4305d29fb6449d393f06787c0cac9dd5e11bb2f3f6124",
+                "sectionId": "yin-birth-presence",
+                "pdfPages": [
+                  21,
+                  22
+                ]
+              }
+            ]
+          },
+          {
+            "id": "day:root-example:정축",
+            "text": "『子平真詮』의 해당 구절은 일간 정·일주 지지 축의 조합을 묘고 뿌리의 예에서 제외합니다. 이는 다른 위치에도 뿌리가 없다는 뜻이 아닙니다.",
+            "basis": "edition-specific-traditional-interpretation",
+            "sources": [
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "transcriptionSha256": "e9cb22645b1120ce77e4305d29fb6449d393f06787c0cac9dd5e11bb2f3f6124",
+                "sectionId": "tomb-examples",
+                "pdfPages": [
+                  21
+                ]
+              }
+            ]
+          }
+        ],
+        "omittedCandidateDependentFacts": 0,
+        "strength": null,
+        "score": null
+      }
+    },
+    {
+      "id": "intervening-gyeong",
+      "analysis": {
+        "ruleVersion": "ziping-explicit-judgments-research-v1",
+        "productionApproved": false,
+        "dependencies": {
+          "contextRuleVersion": "month-combination-context-research-v1",
+          "natalRuleVersion": "natal-definitions-research-v1",
+          "symbolRuleVersion": "symbol-relations-research-v1",
+          "engineVersion": "research-civil-midnight-v5"
+        },
+        "review": {
+          "status": "source-collated-partial-convention",
+          "reviewer": "Codex",
+          "date": "2026-10-19"
+        },
+        "interpretationReview": {
+          "status": "pending"
+        },
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "rootAssessments": [
+          {
+            "position": "year",
+            "alternatives": [
+              {
+                "status": "not-covered-by-selected-examples",
+                "stem": "기",
+                "branch": "자",
+                "kind": null,
+                "grade": null,
+                "weight": null,
+                "sources": [],
+                "witnesses": [
+                  {
+                    "day": "기축",
+                    "year": "갑자"
+                  }
+                ],
+                "certainty": "all-candidates",
+                "jointFeasibility": "universal-over-supplied-candidates"
+              }
+            ],
+            "coverage": "not-covered-by-selected-examples"
+          },
+          {
+            "position": "month",
+            "alternatives": [
+              {
+                "status": "not-covered-by-selected-examples",
+                "stem": "기",
+                "branch": "오",
+                "kind": null,
+                "grade": null,
+                "weight": null,
+                "sources": [],
+                "witnesses": [
+                  {
+                    "day": "기축",
+                    "month": "경오"
+                  }
+                ],
+                "certainty": "all-candidates",
+                "jointFeasibility": "universal-over-supplied-candidates"
+              }
+            ],
+            "coverage": "not-covered-by-selected-examples"
+          },
+          {
+            "position": "day",
+            "alternatives": [
+              {
+                "status": "not-covered-by-selected-examples",
+                "stem": "기",
+                "branch": "축",
+                "kind": null,
+                "grade": null,
+                "weight": null,
+                "sources": [],
+                "witnesses": [
+                  {
+                    "day": "기축"
+                  }
+                ],
+                "certainty": "all-candidates",
+                "jointFeasibility": "universal-over-supplied-candidates"
+              }
+            ],
+            "coverage": "not-covered-by-selected-examples"
+          },
+          {
+            "position": "hour",
+            "alternatives": [
+              {
+                "status": "not-covered-by-selected-examples",
+                "stem": "기",
+                "branch": "묘",
+                "kind": null,
+                "grade": null,
+                "weight": null,
+                "sources": [],
+                "witnesses": [
+                  {
+                    "day": "기축",
+                    "hour": "정묘"
+                  }
+                ],
+                "certainty": "all-candidates",
+                "jointFeasibility": "universal-over-supplied-candidates"
+              }
+            ],
+            "coverage": "not-covered-by-selected-examples"
+          }
+        ],
+        "combinationAssessments": [
+          {
+            "id": "year:day:stem-combination:갑기",
+            "positions": [
+              "year",
+              "day"
+            ],
+            "ruleId": "stem-combination:갑기",
+            "pairCertainty": "all-candidates",
+            "status": "source-obstruction-present",
+            "contextScope": "conditional-on-pair-within-observed-positions",
+            "contextAlternatives": [
+              {
+                "blockers": [
+                  {
+                    "position": "month",
+                    "stem": "경",
+                    "target": "year"
+                  }
+                ]
+              }
+            ],
+            "pairJointFeasibility": "universal-over-supplied-candidates",
+            "obstructionJointFeasibility": "universal-over-supplied-candidates",
+            "unobservedPositions": [],
+            "sources": [
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "transcriptionSha256": "e9cb22645b1120ce77e4305d29fb6449d393f06787c0cac9dd5e11bb2f3f6124",
+                "sectionId": "specific-intervening-obstruction",
+                "pdfPages": [
+                  20
+                ]
+              }
+            ],
+            "transformation": {
+              "status": "not-adjudicated",
+              "element": null
+            }
+          }
+        ],
+        "strength": null,
+        "favorableElement": null,
+        "score": null,
+        "limitations": [
+          "No inference from unmatched examples",
+          "No whole-chart strength from root grades or month alone",
+          "No numeric grade weights or peer equivalence ratios",
+          "No automatic transformation from absence of obstruction",
+          "No cross-profile extension or relationship prediction",
+          "Qualitative light/heavy is this source convention, not a measured predictive strength.",
+          "Yin-birth root examples may have no same-element hidden stem; the two definitions remain separate.",
+          "Candidate-dependent evidence is not a confirmed feasible joint chart or probability.",
+          "Unknown hour remains unobserved; selected examples do not exhaust roots or obstructions."
+        ]
+      },
+      "draft": {
+        "contentVersion": "source-judgment-copy-v1",
+        "ruleVersion": "ziping-explicit-judgments-research-v1",
+        "dependencies": {
+          "contextRuleVersion": "month-combination-context-research-v1",
+          "natalRuleVersion": "natal-definitions-research-v1",
+          "symbolRuleVersion": "symbol-relations-research-v1",
+          "engineVersion": "research-civil-midnight-v5"
+        },
+        "productionApproved": false,
+        "status": "editorial-draft-not-approved",
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "notice": "한 판본의 명시적 예에 한정한 연구용 해석입니다. 입력 후보 전체에서 확인된 문장만 싣습니다.",
+        "statements": [
+          {
+            "id": "obstruction:year:day:stem-combination:갑기",
+            "text": "연주·일주의 갑·기 합 짝 사이에서 원문이 합을 가로막는 예로 든 경 또는 을이 확인됩니다. 이 판본의 방해 조건에 해당하며, 다른 합화 조건 전체를 판정한 것은 아닙니다.",
+            "basis": "edition-specific-traditional-interpretation",
+            "sources": [
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "transcriptionSha256": "e9cb22645b1120ce77e4305d29fb6449d393f06787c0cac9dd5e11bb2f3f6124",
+                "sectionId": "specific-intervening-obstruction",
+                "pdfPages": [
+                  20
+                ]
+              }
+            ]
+          }
+        ],
+        "omittedCandidateDependentFacts": 0,
+        "strength": null,
+        "score": null
+      }
+    },
+    {
+      "id": "intervening-eul",
+      "analysis": {
+        "ruleVersion": "ziping-explicit-judgments-research-v1",
+        "productionApproved": false,
+        "dependencies": {
+          "contextRuleVersion": "month-combination-context-research-v1",
+          "natalRuleVersion": "natal-definitions-research-v1",
+          "symbolRuleVersion": "symbol-relations-research-v1",
+          "engineVersion": "research-civil-midnight-v5"
+        },
+        "review": {
+          "status": "source-collated-partial-convention",
+          "reviewer": "Codex",
+          "date": "2026-10-19"
+        },
+        "interpretationReview": {
+          "status": "pending"
+        },
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "rootAssessments": [
+          {
+            "position": "year",
+            "alternatives": [
+              {
+                "status": "not-covered-by-selected-examples",
+                "stem": "기",
+                "branch": "자",
+                "kind": null,
+                "grade": null,
+                "weight": null,
+                "sources": [],
+                "witnesses": [
+                  {
+                    "day": "기축",
+                    "year": "갑자"
+                  }
+                ],
+                "certainty": "all-candidates",
+                "jointFeasibility": "universal-over-supplied-candidates"
+              }
+            ],
+            "coverage": "not-covered-by-selected-examples"
+          },
+          {
+            "position": "month",
+            "alternatives": [
+              {
+                "status": "not-covered-by-selected-examples",
+                "stem": "기",
+                "branch": "묘",
+                "kind": null,
+                "grade": null,
+                "weight": null,
+                "sources": [],
+                "witnesses": [
+                  {
+                    "day": "기축",
+                    "month": "을묘"
+                  }
+                ],
+                "certainty": "all-candidates",
+                "jointFeasibility": "universal-over-supplied-candidates"
+              }
+            ],
+            "coverage": "not-covered-by-selected-examples"
+          },
+          {
+            "position": "day",
+            "alternatives": [
+              {
+                "status": "not-covered-by-selected-examples",
+                "stem": "기",
+                "branch": "축",
+                "kind": null,
+                "grade": null,
+                "weight": null,
+                "sources": [],
+                "witnesses": [
+                  {
+                    "day": "기축"
+                  }
+                ],
+                "certainty": "all-candidates",
+                "jointFeasibility": "universal-over-supplied-candidates"
+              }
+            ],
+            "coverage": "not-covered-by-selected-examples"
+          },
+          {
+            "position": "hour",
+            "alternatives": [
+              {
+                "status": "not-covered-by-selected-examples",
+                "stem": "기",
+                "branch": "묘",
+                "kind": null,
+                "grade": null,
+                "weight": null,
+                "sources": [],
+                "witnesses": [
+                  {
+                    "day": "기축",
+                    "hour": "정묘"
+                  }
+                ],
+                "certainty": "all-candidates",
+                "jointFeasibility": "universal-over-supplied-candidates"
+              }
+            ],
+            "coverage": "not-covered-by-selected-examples"
+          }
+        ],
+        "combinationAssessments": [
+          {
+            "id": "year:day:stem-combination:갑기",
+            "positions": [
+              "year",
+              "day"
+            ],
+            "ruleId": "stem-combination:갑기",
+            "pairCertainty": "all-candidates",
+            "status": "source-obstruction-present",
+            "contextScope": "conditional-on-pair-within-observed-positions",
+            "contextAlternatives": [
+              {
+                "blockers": [
+                  {
+                    "position": "month",
+                    "stem": "을",
+                    "target": "day"
+                  }
+                ]
+              }
+            ],
+            "pairJointFeasibility": "universal-over-supplied-candidates",
+            "obstructionJointFeasibility": "universal-over-supplied-candidates",
+            "unobservedPositions": [],
+            "sources": [
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "transcriptionSha256": "e9cb22645b1120ce77e4305d29fb6449d393f06787c0cac9dd5e11bb2f3f6124",
+                "sectionId": "specific-intervening-obstruction",
+                "pdfPages": [
+                  20
+                ]
+              }
+            ],
+            "transformation": {
+              "status": "not-adjudicated",
+              "element": null
+            }
+          }
+        ],
+        "strength": null,
+        "favorableElement": null,
+        "score": null,
+        "limitations": [
+          "No inference from unmatched examples",
+          "No whole-chart strength from root grades or month alone",
+          "No numeric grade weights or peer equivalence ratios",
+          "No automatic transformation from absence of obstruction",
+          "No cross-profile extension or relationship prediction",
+          "Qualitative light/heavy is this source convention, not a measured predictive strength.",
+          "Yin-birth root examples may have no same-element hidden stem; the two definitions remain separate.",
+          "Candidate-dependent evidence is not a confirmed feasible joint chart or probability.",
+          "Unknown hour remains unobserved; selected examples do not exhaust roots or obstructions."
+        ]
+      },
+      "draft": {
+        "contentVersion": "source-judgment-copy-v1",
+        "ruleVersion": "ziping-explicit-judgments-research-v1",
+        "dependencies": {
+          "contextRuleVersion": "month-combination-context-research-v1",
+          "natalRuleVersion": "natal-definitions-research-v1",
+          "symbolRuleVersion": "symbol-relations-research-v1",
+          "engineVersion": "research-civil-midnight-v5"
+        },
+        "productionApproved": false,
+        "status": "editorial-draft-not-approved",
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "notice": "한 판본의 명시적 예에 한정한 연구용 해석입니다. 입력 후보 전체에서 확인된 문장만 싣습니다.",
+        "statements": [
+          {
+            "id": "obstruction:year:day:stem-combination:갑기",
+            "text": "연주·일주의 갑·기 합 짝 사이에서 원문이 합을 가로막는 예로 든 경 또는 을이 확인됩니다. 이 판본의 방해 조건에 해당하며, 다른 합화 조건 전체를 판정한 것은 아닙니다.",
+            "basis": "edition-specific-traditional-interpretation",
+            "sources": [
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "transcriptionSha256": "e9cb22645b1120ce77e4305d29fb6449d393f06787c0cac9dd5e11bb2f3f6124",
+                "sectionId": "specific-intervening-obstruction",
+                "pdfPages": [
+                  20
+                ]
+              }
+            ]
+          }
+        ],
+        "omittedCandidateDependentFacts": 0,
+        "strength": null,
+        "score": null
+      }
+    },
+    {
+      "id": "candidate-only-obstruction",
+      "analysis": {
+        "ruleVersion": "ziping-explicit-judgments-research-v1",
+        "productionApproved": false,
+        "dependencies": {
+          "contextRuleVersion": "month-combination-context-research-v1",
+          "natalRuleVersion": "natal-definitions-research-v1",
+          "symbolRuleVersion": "symbol-relations-research-v1",
+          "engineVersion": "research-civil-midnight-v5"
+        },
+        "review": {
+          "status": "source-collated-partial-convention",
+          "reviewer": "Codex",
+          "date": "2026-10-19"
+        },
+        "interpretationReview": {
+          "status": "pending"
+        },
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "rootAssessments": [
+          {
+            "position": "year",
+            "alternatives": [
+              {
+                "status": "not-covered-by-selected-examples",
+                "stem": "기",
+                "branch": "자",
+                "kind": null,
+                "grade": null,
+                "weight": null,
+                "sources": [],
+                "witnesses": [
+                  {
+                    "day": "기축",
+                    "year": "갑자"
+                  }
+                ],
+                "certainty": "all-candidates",
+                "jointFeasibility": "universal-over-supplied-candidates"
+              }
+            ],
+            "coverage": "not-covered-by-selected-examples"
+          },
+          {
+            "position": "month",
+            "alternatives": [
+              {
+                "status": "not-covered-by-selected-examples",
+                "stem": "기",
+                "branch": "오",
+                "kind": null,
+                "grade": null,
+                "weight": null,
+                "sources": [],
+                "witnesses": [
+                  {
+                    "day": "기축",
+                    "month": "경오"
+                  }
+                ],
+                "certainty": "candidate-dependent",
+                "jointFeasibility": "not-established-from-marginal-candidates"
+              },
+              {
+                "status": "not-covered-by-selected-examples",
+                "stem": "기",
+                "branch": "인",
+                "kind": null,
+                "grade": null,
+                "weight": null,
+                "sources": [],
+                "witnesses": [
+                  {
+                    "day": "기축",
+                    "month": "병인"
+                  }
+                ],
+                "certainty": "candidate-dependent",
+                "jointFeasibility": "not-established-from-marginal-candidates"
+              }
+            ],
+            "coverage": "not-covered-by-selected-examples"
+          },
+          {
+            "position": "day",
+            "alternatives": [
+              {
+                "status": "not-covered-by-selected-examples",
+                "stem": "기",
+                "branch": "축",
+                "kind": null,
+                "grade": null,
+                "weight": null,
+                "sources": [],
+                "witnesses": [
+                  {
+                    "day": "기축"
+                  }
+                ],
+                "certainty": "all-candidates",
+                "jointFeasibility": "universal-over-supplied-candidates"
+              }
+            ],
+            "coverage": "not-covered-by-selected-examples"
+          },
+          {
+            "position": "hour",
+            "alternatives": [
+              {
+                "status": "not-covered-by-selected-examples",
+                "stem": "기",
+                "branch": "묘",
+                "kind": null,
+                "grade": null,
+                "weight": null,
+                "sources": [],
+                "witnesses": [
+                  {
+                    "day": "기축",
+                    "hour": "정묘"
+                  }
+                ],
+                "certainty": "all-candidates",
+                "jointFeasibility": "universal-over-supplied-candidates"
+              }
+            ],
+            "coverage": "not-covered-by-selected-examples"
+          }
+        ],
+        "combinationAssessments": [
+          {
+            "id": "year:day:stem-combination:갑기",
+            "positions": [
+              "year",
+              "day"
+            ],
+            "ruleId": "stem-combination:갑기",
+            "pairCertainty": "all-candidates",
+            "status": "candidate-dependent-obstruction",
+            "contextScope": "conditional-on-pair-within-observed-positions",
+            "contextAlternatives": [
+              {
+                "blockers": []
+              },
+              {
+                "blockers": [
+                  {
+                    "position": "month",
+                    "stem": "경",
+                    "target": "year"
+                  }
+                ]
+              }
+            ],
+            "pairJointFeasibility": "universal-over-supplied-candidates",
+            "obstructionJointFeasibility": "not-established-from-marginal-candidates",
+            "unobservedPositions": [],
+            "sources": [
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "transcriptionSha256": "e9cb22645b1120ce77e4305d29fb6449d393f06787c0cac9dd5e11bb2f3f6124",
+                "sectionId": "specific-intervening-obstruction",
+                "pdfPages": [
+                  20
+                ]
+              }
+            ],
+            "transformation": {
+              "status": "not-adjudicated",
+              "element": null
+            }
+          }
+        ],
+        "strength": null,
+        "favorableElement": null,
+        "score": null,
+        "limitations": [
+          "No inference from unmatched examples",
+          "No whole-chart strength from root grades or month alone",
+          "No numeric grade weights or peer equivalence ratios",
+          "No automatic transformation from absence of obstruction",
+          "No cross-profile extension or relationship prediction",
+          "Qualitative light/heavy is this source convention, not a measured predictive strength.",
+          "Yin-birth root examples may have no same-element hidden stem; the two definitions remain separate.",
+          "Candidate-dependent evidence is not a confirmed feasible joint chart or probability.",
+          "Unknown hour remains unobserved; selected examples do not exhaust roots or obstructions."
+        ]
+      },
+      "draft": {
+        "contentVersion": "source-judgment-copy-v1",
+        "ruleVersion": "ziping-explicit-judgments-research-v1",
+        "dependencies": {
+          "contextRuleVersion": "month-combination-context-research-v1",
+          "natalRuleVersion": "natal-definitions-research-v1",
+          "symbolRuleVersion": "symbol-relations-research-v1",
+          "engineVersion": "research-civil-midnight-v5"
+        },
+        "productionApproved": false,
+        "status": "editorial-draft-not-approved",
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "notice": "한 판본의 명시적 예에 한정한 연구용 해석입니다. 입력 후보 전체에서 확인된 문장만 싣습니다.",
+        "statements": [],
+        "omittedCandidateDependentFacts": 1,
+        "strength": null,
+        "score": null
+      }
+    },
+    {
+      "id": "uncovered-is-not-transformation",
+      "analysis": {
+        "ruleVersion": "ziping-explicit-judgments-research-v1",
+        "productionApproved": false,
+        "dependencies": {
+          "contextRuleVersion": "month-combination-context-research-v1",
+          "natalRuleVersion": "natal-definitions-research-v1",
+          "symbolRuleVersion": "symbol-relations-research-v1",
+          "engineVersion": "research-civil-midnight-v5"
+        },
+        "review": {
+          "status": "source-collated-partial-convention",
+          "reviewer": "Codex",
+          "date": "2026-10-19"
+        },
+        "interpretationReview": {
+          "status": "pending"
+        },
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "rootAssessments": [
+          {
+            "position": "year",
+            "alternatives": [
+              {
+                "status": "not-covered-by-selected-examples",
+                "stem": "기",
+                "branch": "자",
+                "kind": null,
+                "grade": null,
+                "weight": null,
+                "sources": [],
+                "witnesses": [
+                  {
+                    "day": "기축",
+                    "year": "갑자"
+                  }
+                ],
+                "certainty": "all-candidates",
+                "jointFeasibility": "universal-over-supplied-candidates"
+              }
+            ],
+            "coverage": "not-covered-by-selected-examples"
+          },
+          {
+            "position": "month",
+            "alternatives": [
+              {
+                "status": "not-covered-by-selected-examples",
+                "stem": "기",
+                "branch": "인",
+                "kind": null,
+                "grade": null,
+                "weight": null,
+                "sources": [],
+                "witnesses": [
+                  {
+                    "day": "기축",
+                    "month": "병인"
+                  }
+                ],
+                "certainty": "all-candidates",
+                "jointFeasibility": "universal-over-supplied-candidates"
+              }
+            ],
+            "coverage": "not-covered-by-selected-examples"
+          },
+          {
+            "position": "day",
+            "alternatives": [
+              {
+                "status": "not-covered-by-selected-examples",
+                "stem": "기",
+                "branch": "축",
+                "kind": null,
+                "grade": null,
+                "weight": null,
+                "sources": [],
+                "witnesses": [
+                  {
+                    "day": "기축"
+                  }
+                ],
+                "certainty": "all-candidates",
+                "jointFeasibility": "universal-over-supplied-candidates"
+              }
+            ],
+            "coverage": "not-covered-by-selected-examples"
+          },
+          {
+            "position": "hour",
+            "alternatives": [
+              {
+                "status": "not-covered-by-selected-examples",
+                "stem": "기",
+                "branch": "묘",
+                "kind": null,
+                "grade": null,
+                "weight": null,
+                "sources": [],
+                "witnesses": [
+                  {
+                    "day": "기축",
+                    "hour": "정묘"
+                  }
+                ],
+                "certainty": "all-candidates",
+                "jointFeasibility": "universal-over-supplied-candidates"
+              }
+            ],
+            "coverage": "not-covered-by-selected-examples"
+          }
+        ],
+        "combinationAssessments": [
+          {
+            "id": "year:day:stem-combination:갑기",
+            "positions": [
+              "year",
+              "day"
+            ],
+            "ruleId": "stem-combination:갑기",
+            "pairCertainty": "all-candidates",
+            "status": "not-covered-by-selected-examples",
+            "contextScope": "conditional-on-pair-within-observed-positions",
+            "contextAlternatives": [
+              {
+                "blockers": []
+              }
+            ],
+            "pairJointFeasibility": "universal-over-supplied-candidates",
+            "obstructionJointFeasibility": "not-applicable",
+            "unobservedPositions": [],
+            "sources": [],
+            "transformation": {
+              "status": "not-adjudicated",
+              "element": null
+            }
+          }
+        ],
+        "strength": null,
+        "favorableElement": null,
+        "score": null,
+        "limitations": [
+          "No inference from unmatched examples",
+          "No whole-chart strength from root grades or month alone",
+          "No numeric grade weights or peer equivalence ratios",
+          "No automatic transformation from absence of obstruction",
+          "No cross-profile extension or relationship prediction",
+          "Qualitative light/heavy is this source convention, not a measured predictive strength.",
+          "Yin-birth root examples may have no same-element hidden stem; the two definitions remain separate.",
+          "Candidate-dependent evidence is not a confirmed feasible joint chart or probability.",
+          "Unknown hour remains unobserved; selected examples do not exhaust roots or obstructions."
+        ]
+      },
+      "draft": {
+        "contentVersion": "source-judgment-copy-v1",
+        "ruleVersion": "ziping-explicit-judgments-research-v1",
+        "dependencies": {
+          "contextRuleVersion": "month-combination-context-research-v1",
+          "natalRuleVersion": "natal-definitions-research-v1",
+          "symbolRuleVersion": "symbol-relations-research-v1",
+          "engineVersion": "research-civil-midnight-v5"
+        },
+        "productionApproved": false,
+        "status": "editorial-draft-not-approved",
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "notice": "한 판본의 명시적 예에 한정한 연구용 해석입니다. 입력 후보 전체에서 확인된 문장만 싣습니다.",
+        "statements": [],
+        "omittedCandidateDependentFacts": 0,
+        "strength": null,
+        "score": null
+      }
+    },
+    {
+      "id": "unknown-hour-ipchun",
+      "analysis": {
+        "ruleVersion": "ziping-explicit-judgments-research-v1",
+        "productionApproved": false,
+        "dependencies": {
+          "contextRuleVersion": "month-combination-context-research-v1",
+          "natalRuleVersion": "natal-definitions-research-v1",
+          "symbolRuleVersion": "symbol-relations-research-v1",
+          "engineVersion": "research-civil-midnight-v5"
+        },
+        "review": {
+          "status": "source-collated-partial-convention",
+          "reviewer": "Codex",
+          "date": "2026-10-19"
+        },
+        "interpretationReview": {
+          "status": "pending"
+        },
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day"
+            ],
+            "omittedPositions": [
+              "hour"
+            ],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": true
+          }
+        ],
+        "rootAssessments": [
+          {
+            "position": "year",
+            "alternatives": [
+              {
+                "status": "not-covered-by-selected-examples",
+                "stem": "무",
+                "branch": "묘",
+                "kind": null,
+                "grade": null,
+                "weight": null,
+                "sources": [],
+                "witnesses": [
+                  {
+                    "day": "무술",
+                    "year": "계묘"
+                  }
+                ],
+                "certainty": "candidate-dependent",
+                "jointFeasibility": "not-established-from-marginal-candidates"
+              },
+              {
+                "status": "not-covered-by-selected-examples",
+                "stem": "무",
+                "branch": "진",
+                "kind": null,
+                "grade": null,
+                "weight": null,
+                "sources": [],
+                "witnesses": [
+                  {
+                    "day": "무술",
+                    "year": "갑진"
+                  }
+                ],
+                "certainty": "candidate-dependent",
+                "jointFeasibility": "not-established-from-marginal-candidates"
+              }
+            ],
+            "coverage": "not-covered-by-selected-examples"
+          },
+          {
+            "position": "month",
+            "alternatives": [
+              {
+                "status": "not-covered-by-selected-examples",
+                "stem": "무",
+                "branch": "인",
+                "kind": null,
+                "grade": null,
+                "weight": null,
+                "sources": [],
+                "witnesses": [
+                  {
+                    "day": "무술",
+                    "month": "병인"
+                  }
+                ],
+                "certainty": "candidate-dependent",
+                "jointFeasibility": "not-established-from-marginal-candidates"
+              },
+              {
+                "status": "not-covered-by-selected-examples",
+                "stem": "무",
+                "branch": "축",
+                "kind": null,
+                "grade": null,
+                "weight": null,
+                "sources": [],
+                "witnesses": [
+                  {
+                    "day": "무술",
+                    "month": "을축"
+                  }
+                ],
+                "certainty": "candidate-dependent",
+                "jointFeasibility": "not-established-from-marginal-candidates"
+              }
+            ],
+            "coverage": "not-covered-by-selected-examples"
+          },
+          {
+            "position": "day",
+            "alternatives": [
+              {
+                "status": "not-covered-by-selected-examples",
+                "stem": "무",
+                "branch": "술",
+                "kind": null,
+                "grade": null,
+                "weight": null,
+                "sources": [],
+                "witnesses": [
+                  {
+                    "day": "무술"
+                  }
+                ],
+                "certainty": "all-candidates",
+                "jointFeasibility": "universal-over-supplied-candidates"
+              }
+            ],
+            "coverage": "not-covered-by-selected-examples"
+          }
+        ],
+        "combinationAssessments": [
+          {
+            "id": "year:day:stem-combination:무계",
+            "positions": [
+              "year",
+              "day"
+            ],
+            "ruleId": "stem-combination:무계",
+            "pairCertainty": "candidate-dependent",
+            "status": "not-covered-by-selected-examples",
+            "contextScope": "conditional-on-pair-within-observed-positions",
+            "contextAlternatives": [
+              {
+                "blockers": []
+              },
+              {
+                "blockers": []
+              }
+            ],
+            "pairJointFeasibility": "not-established-from-marginal-candidates",
+            "obstructionJointFeasibility": "not-applicable",
+            "unobservedPositions": [
+              "hour"
+            ],
+            "sources": [],
+            "transformation": {
+              "status": "not-adjudicated",
+              "element": null
+            }
+          }
+        ],
+        "strength": null,
+        "favorableElement": null,
+        "score": null,
+        "limitations": [
+          "No inference from unmatched examples",
+          "No whole-chart strength from root grades or month alone",
+          "No numeric grade weights or peer equivalence ratios",
+          "No automatic transformation from absence of obstruction",
+          "No cross-profile extension or relationship prediction",
+          "Qualitative light/heavy is this source convention, not a measured predictive strength.",
+          "Yin-birth root examples may have no same-element hidden stem; the two definitions remain separate.",
+          "Candidate-dependent evidence is not a confirmed feasible joint chart or probability.",
+          "Unknown hour remains unobserved; selected examples do not exhaust roots or obstructions."
+        ]
+      },
+      "draft": {
+        "contentVersion": "source-judgment-copy-v1",
+        "ruleVersion": "ziping-explicit-judgments-research-v1",
+        "dependencies": {
+          "contextRuleVersion": "month-combination-context-research-v1",
+          "natalRuleVersion": "natal-definitions-research-v1",
+          "symbolRuleVersion": "symbol-relations-research-v1",
+          "engineVersion": "research-civil-midnight-v5"
+        },
+        "productionApproved": false,
+        "status": "editorial-draft-not-approved",
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day"
+            ],
+            "omittedPositions": [
+              "hour"
+            ],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": true
+          }
+        ],
+        "notice": "한 판본의 명시적 예에 한정한 연구용 해석입니다. 입력 후보 전체에서 확인된 문장만 싣습니다.",
+        "statements": [],
+        "omittedCandidateDependentFacts": 0,
+        "strength": null,
+        "score": null
+      }
+    }
+  ]
+}
