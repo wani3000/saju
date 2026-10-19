@@ -144,3 +144,13 @@ node research/validation/audit-seasonal-review.mjs --check
 # 운영 미승인: 종료 코드 2
 node research/validation/audit-seasonal-review.mjs --release-check
 ```
+
+### 오월·중화·다섯 합의 출처 대조
+
+`extended-source-review.mjs`는 1940년 오월 29일 대조, 『命理集成』의 다섯 합 월령·예외월·중복 검사, 『滴天髓闡微』 강약 네 원문 명조 대조를 통합한다. 기존 연구 버전은 보존한다. [근거와 범위](../../docs/extended-source-review.md), [보고서](reports/extended-source-drafts.md).
+
+```sh
+node research/validation/audit-extended-sources.mjs --check
+# 운영 미승인 종료 코드 2
+node research/validation/audit-extended-sources.mjs --release-check
+```

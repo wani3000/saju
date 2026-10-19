@@ -68,3 +68,5 @@
 현재 작업 경로는 위의 복원 위치를 사용한다. 과거 PC 배치 기록은 docs/11-decisions.md에 보존한다.
 
 프로젝트 루트에서 `python3 tools/check_docs.py`로 문서 연결을 확인한다. 이 검사는 문서만 확인하며 앱·DB·결제 테스트가 아니다.
+
+오월 29일의 추가 판본 대조와 중화·다섯 합의 출처별 조건은 [후속 감수](docs/extended-source-review.md)에 정리했다. [21사례 보고서](research/validation/reports/extended-source-drafts.md)는 원문 사례 및 조건 검토이며 운영 강약·합화 엔진의 승인이 아니다.

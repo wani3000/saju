@@ -1,0 +1,3654 @@
+{
+  "ruleVersion": "cross-source-strength-transformation-review-v1",
+  "productionApproved": false,
+  "examplePolicy": "Source charts are historical text examples; month screens are synthetic structural charts, not real birth profiles.",
+  "transformationCases": [
+    {
+      "id": "갑기-primary",
+      "review": {
+        "ruleVersion": "cross-source-strength-transformation-review-v1",
+        "productionApproved": false,
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "status": "listed-season-needs-review",
+        "alternatives": [
+          {
+            "pair": "갑기",
+            "targetElement": "토",
+            "monthRoute": "primary-month",
+            "presence": "observed",
+            "partnerPositions": [
+              "hour"
+            ],
+            "cardinality": "source-rule-met",
+            "status": "listed-season-needs-review",
+            "hourSupportRoute": "not-adjudicated",
+            "moderation": "not-adjudicated",
+            "transformationEstablished": null,
+            "transformedElement": null
+          }
+        ],
+        "common": {
+          "pair": "갑기",
+          "monthRoute": "primary-month",
+          "presence": "observed",
+          "cardinality": "source-rule-met"
+        },
+        "transformationEstablished": null,
+        "transformedElement": null,
+        "candidatePolicy": "Universal over supplied marginal combinations; partial combinations are not proved jointly feasible. No probabilities.",
+        "sourcePolicy": "Mingli Jicheng quotation of Sanming Tonghui: one-of-each screen is an explicit research generalization of the paragraph, not a universal rule across editions.",
+        "unresolved": [
+          "Hour-only support route has no reviewed complete algorithm",
+          "Seasonal qualification and pair cardinality are not sufficient",
+          "Day strength and transformation moderation are distinct; no threshold is transferred between them",
+          "Competing source conventions and intervening obstruction require separate review"
+        ],
+        "sources": [
+          {
+            "sourceId": "mingli-1932",
+            "sectionId": "five-pair-months",
+            "pdfPages": [
+              28
+            ],
+            "url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/NLC416-13jh001663-59235_%E5%91%BD%E7%90%86%E9%9B%86%E6%88%90.pdf",
+            "pdfSha256": "dbb50d8f5daf8a30269273a3e5dc787133deabd944e76e28d592e58a97348501"
+          },
+          {
+            "sourceId": "mingli-1932",
+            "sectionId": "pair-cardinality-and-hour-route",
+            "pdfPages": [
+              28
+            ],
+            "url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/NLC416-13jh001663-59235_%E5%91%BD%E7%90%86%E9%9B%86%E6%88%90.pdf",
+            "pdfSha256": "dbb50d8f5daf8a30269273a3e5dc787133deabd944e76e28d592e58a97348501"
+          },
+          {
+            "sourceId": "mingli-1932",
+            "sectionId": "true-false-not-binary-season",
+            "pdfPages": [
+              30
+            ],
+            "url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/NLC416-13jh001663-59235_%E5%91%BD%E7%90%86%E9%9B%86%E6%88%90.pdf",
+            "pdfSha256": "dbb50d8f5daf8a30269273a3e5dc787133deabd944e76e28d592e58a97348501"
+          }
+        ]
+      }
+    },
+    {
+      "id": "갑기-additional",
+      "review": {
+        "ruleVersion": "cross-source-strength-transformation-review-v1",
+        "productionApproved": false,
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "status": "listed-season-needs-review",
+        "alternatives": [
+          {
+            "pair": "갑기",
+            "targetElement": "토",
+            "monthRoute": "additional-month",
+            "presence": "observed",
+            "partnerPositions": [
+              "hour"
+            ],
+            "cardinality": "source-rule-met",
+            "status": "listed-season-needs-review",
+            "hourSupportRoute": "not-adjudicated",
+            "moderation": "not-adjudicated",
+            "transformationEstablished": null,
+            "transformedElement": null
+          }
+        ],
+        "common": {
+          "pair": "갑기",
+          "monthRoute": "additional-month",
+          "presence": "observed",
+          "cardinality": "source-rule-met"
+        },
+        "transformationEstablished": null,
+        "transformedElement": null,
+        "candidatePolicy": "Universal over supplied marginal combinations; partial combinations are not proved jointly feasible. No probabilities.",
+        "sourcePolicy": "Mingli Jicheng quotation of Sanming Tonghui: one-of-each screen is an explicit research generalization of the paragraph, not a universal rule across editions.",
+        "unresolved": [
+          "Hour-only support route has no reviewed complete algorithm",
+          "Seasonal qualification and pair cardinality are not sufficient",
+          "Day strength and transformation moderation are distinct; no threshold is transferred between them",
+          "Competing source conventions and intervening obstruction require separate review"
+        ],
+        "sources": [
+          {
+            "sourceId": "mingli-1932",
+            "sectionId": "five-pair-months",
+            "pdfPages": [
+              28
+            ],
+            "url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/NLC416-13jh001663-59235_%E5%91%BD%E7%90%86%E9%9B%86%E6%88%90.pdf",
+            "pdfSha256": "dbb50d8f5daf8a30269273a3e5dc787133deabd944e76e28d592e58a97348501"
+          },
+          {
+            "sourceId": "mingli-1932",
+            "sectionId": "pair-cardinality-and-hour-route",
+            "pdfPages": [
+              28
+            ],
+            "url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/NLC416-13jh001663-59235_%E5%91%BD%E7%90%86%E9%9B%86%E6%88%90.pdf",
+            "pdfSha256": "dbb50d8f5daf8a30269273a3e5dc787133deabd944e76e28d592e58a97348501"
+          },
+          {
+            "sourceId": "mingli-1932",
+            "sectionId": "true-false-not-binary-season",
+            "pdfPages": [
+              30
+            ],
+            "url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/NLC416-13jh001663-59235_%E5%91%BD%E7%90%86%E9%9B%86%E6%88%90.pdf",
+            "pdfSha256": "dbb50d8f5daf8a30269273a3e5dc787133deabd944e76e28d592e58a97348501"
+          }
+        ]
+      }
+    },
+    {
+      "id": "갑기-unlisted",
+      "review": {
+        "ruleVersion": "cross-source-strength-transformation-review-v1",
+        "productionApproved": false,
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "status": "unlisted-season-needs-review",
+        "alternatives": [
+          {
+            "pair": "갑기",
+            "targetElement": "토",
+            "monthRoute": "unlisted-month",
+            "presence": "observed",
+            "partnerPositions": [
+              "hour"
+            ],
+            "cardinality": "source-rule-met",
+            "status": "unlisted-season-needs-review",
+            "hourSupportRoute": "not-adjudicated",
+            "moderation": "not-adjudicated",
+            "transformationEstablished": null,
+            "transformedElement": null
+          }
+        ],
+        "common": {
+          "pair": "갑기",
+          "monthRoute": "unlisted-month",
+          "presence": "observed",
+          "cardinality": "source-rule-met"
+        },
+        "transformationEstablished": null,
+        "transformedElement": null,
+        "candidatePolicy": "Universal over supplied marginal combinations; partial combinations are not proved jointly feasible. No probabilities.",
+        "sourcePolicy": "Mingli Jicheng quotation of Sanming Tonghui: one-of-each screen is an explicit research generalization of the paragraph, not a universal rule across editions.",
+        "unresolved": [
+          "Hour-only support route has no reviewed complete algorithm",
+          "Seasonal qualification and pair cardinality are not sufficient",
+          "Day strength and transformation moderation are distinct; no threshold is transferred between them",
+          "Competing source conventions and intervening obstruction require separate review"
+        ],
+        "sources": [
+          {
+            "sourceId": "mingli-1932",
+            "sectionId": "five-pair-months",
+            "pdfPages": [
+              28
+            ],
+            "url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/NLC416-13jh001663-59235_%E5%91%BD%E7%90%86%E9%9B%86%E6%88%90.pdf",
+            "pdfSha256": "dbb50d8f5daf8a30269273a3e5dc787133deabd944e76e28d592e58a97348501"
+          },
+          {
+            "sourceId": "mingli-1932",
+            "sectionId": "pair-cardinality-and-hour-route",
+            "pdfPages": [
+              28
+            ],
+            "url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/NLC416-13jh001663-59235_%E5%91%BD%E7%90%86%E9%9B%86%E6%88%90.pdf",
+            "pdfSha256": "dbb50d8f5daf8a30269273a3e5dc787133deabd944e76e28d592e58a97348501"
+          },
+          {
+            "sourceId": "mingli-1932",
+            "sectionId": "true-false-not-binary-season",
+            "pdfPages": [
+              30
+            ],
+            "url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/NLC416-13jh001663-59235_%E5%91%BD%E7%90%86%E9%9B%86%E6%88%90.pdf",
+            "pdfSha256": "dbb50d8f5daf8a30269273a3e5dc787133deabd944e76e28d592e58a97348501"
+          }
+        ]
+      }
+    },
+    {
+      "id": "을경-primary",
+      "review": {
+        "ruleVersion": "cross-source-strength-transformation-review-v1",
+        "productionApproved": false,
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "status": "listed-season-needs-review",
+        "alternatives": [
+          {
+            "pair": "을경",
+            "targetElement": "금",
+            "monthRoute": "primary-month",
+            "presence": "observed",
+            "partnerPositions": [
+              "hour"
+            ],
+            "cardinality": "source-rule-met",
+            "status": "listed-season-needs-review",
+            "hourSupportRoute": "not-adjudicated",
+            "moderation": "not-adjudicated",
+            "transformationEstablished": null,
+            "transformedElement": null
+          }
+        ],
+        "common": {
+          "pair": "을경",
+          "monthRoute": "primary-month",
+          "presence": "observed",
+          "cardinality": "source-rule-met"
+        },
+        "transformationEstablished": null,
+        "transformedElement": null,
+        "candidatePolicy": "Universal over supplied marginal combinations; partial combinations are not proved jointly feasible. No probabilities.",
+        "sourcePolicy": "Mingli Jicheng quotation of Sanming Tonghui: one-of-each screen is an explicit research generalization of the paragraph, not a universal rule across editions.",
+        "unresolved": [
+          "Hour-only support route has no reviewed complete algorithm",
+          "Seasonal qualification and pair cardinality are not sufficient",
+          "Day strength and transformation moderation are distinct; no threshold is transferred between them",
+          "Competing source conventions and intervening obstruction require separate review"
+        ],
+        "sources": [
+          {
+            "sourceId": "mingli-1932",
+            "sectionId": "five-pair-months",
+            "pdfPages": [
+              28
+            ],
+            "url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/NLC416-13jh001663-59235_%E5%91%BD%E7%90%86%E9%9B%86%E6%88%90.pdf",
+            "pdfSha256": "dbb50d8f5daf8a30269273a3e5dc787133deabd944e76e28d592e58a97348501"
+          },
+          {
+            "sourceId": "mingli-1932",
+            "sectionId": "pair-cardinality-and-hour-route",
+            "pdfPages": [
+              28
+            ],
+            "url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/NLC416-13jh001663-59235_%E5%91%BD%E7%90%86%E9%9B%86%E6%88%90.pdf",
+            "pdfSha256": "dbb50d8f5daf8a30269273a3e5dc787133deabd944e76e28d592e58a97348501"
+          },
+          {
+            "sourceId": "mingli-1932",
+            "sectionId": "true-false-not-binary-season",
+            "pdfPages": [
+              30
+            ],
+            "url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/NLC416-13jh001663-59235_%E5%91%BD%E7%90%86%E9%9B%86%E6%88%90.pdf",
+            "pdfSha256": "dbb50d8f5daf8a30269273a3e5dc787133deabd944e76e28d592e58a97348501"
+          }
+        ]
+      }
+    },
+    {
+      "id": "을경-additional",
+      "review": {
+        "ruleVersion": "cross-source-strength-transformation-review-v1",
+        "productionApproved": false,
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "status": "listed-season-needs-review",
+        "alternatives": [
+          {
+            "pair": "을경",
+            "targetElement": "금",
+            "monthRoute": "additional-month",
+            "presence": "observed",
+            "partnerPositions": [
+              "hour"
+            ],
+            "cardinality": "source-rule-met",
+            "status": "listed-season-needs-review",
+            "hourSupportRoute": "not-adjudicated",
+            "moderation": "not-adjudicated",
+            "transformationEstablished": null,
+            "transformedElement": null
+          }
+        ],
+        "common": {
+          "pair": "을경",
+          "monthRoute": "additional-month",
+          "presence": "observed",
+          "cardinality": "source-rule-met"
+        },
+        "transformationEstablished": null,
+        "transformedElement": null,
+        "candidatePolicy": "Universal over supplied marginal combinations; partial combinations are not proved jointly feasible. No probabilities.",
+        "sourcePolicy": "Mingli Jicheng quotation of Sanming Tonghui: one-of-each screen is an explicit research generalization of the paragraph, not a universal rule across editions.",
+        "unresolved": [
+          "Hour-only support route has no reviewed complete algorithm",
+          "Seasonal qualification and pair cardinality are not sufficient",
+          "Day strength and transformation moderation are distinct; no threshold is transferred between them",
+          "Competing source conventions and intervening obstruction require separate review"
+        ],
+        "sources": [
+          {
+            "sourceId": "mingli-1932",
+            "sectionId": "five-pair-months",
+            "pdfPages": [
+              28
+            ],
+            "url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/NLC416-13jh001663-59235_%E5%91%BD%E7%90%86%E9%9B%86%E6%88%90.pdf",
+            "pdfSha256": "dbb50d8f5daf8a30269273a3e5dc787133deabd944e76e28d592e58a97348501"
+          },
+          {
+            "sourceId": "mingli-1932",
+            "sectionId": "pair-cardinality-and-hour-route",
+            "pdfPages": [
+              28
+            ],
+            "url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/NLC416-13jh001663-59235_%E5%91%BD%E7%90%86%E9%9B%86%E6%88%90.pdf",
+            "pdfSha256": "dbb50d8f5daf8a30269273a3e5dc787133deabd944e76e28d592e58a97348501"
+          },
+          {
+            "sourceId": "mingli-1932",
+            "sectionId": "true-false-not-binary-season",
+            "pdfPages": [
+              30
+            ],
+            "url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/NLC416-13jh001663-59235_%E5%91%BD%E7%90%86%E9%9B%86%E6%88%90.pdf",
+            "pdfSha256": "dbb50d8f5daf8a30269273a3e5dc787133deabd944e76e28d592e58a97348501"
+          }
+        ]
+      }
+    },
+    {
+      "id": "을경-unlisted",
+      "review": {
+        "ruleVersion": "cross-source-strength-transformation-review-v1",
+        "productionApproved": false,
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "status": "unlisted-season-needs-review",
+        "alternatives": [
+          {
+            "pair": "을경",
+            "targetElement": "금",
+            "monthRoute": "unlisted-month",
+            "presence": "observed",
+            "partnerPositions": [
+              "hour"
+            ],
+            "cardinality": "source-rule-met",
+            "status": "unlisted-season-needs-review",
+            "hourSupportRoute": "not-adjudicated",
+            "moderation": "not-adjudicated",
+            "transformationEstablished": null,
+            "transformedElement": null
+          }
+        ],
+        "common": {
+          "pair": "을경",
+          "monthRoute": "unlisted-month",
+          "presence": "observed",
+          "cardinality": "source-rule-met"
+        },
+        "transformationEstablished": null,
+        "transformedElement": null,
+        "candidatePolicy": "Universal over supplied marginal combinations; partial combinations are not proved jointly feasible. No probabilities.",
+        "sourcePolicy": "Mingli Jicheng quotation of Sanming Tonghui: one-of-each screen is an explicit research generalization of the paragraph, not a universal rule across editions.",
+        "unresolved": [
+          "Hour-only support route has no reviewed complete algorithm",
+          "Seasonal qualification and pair cardinality are not sufficient",
+          "Day strength and transformation moderation are distinct; no threshold is transferred between them",
+          "Competing source conventions and intervening obstruction require separate review"
+        ],
+        "sources": [
+          {
+            "sourceId": "mingli-1932",
+            "sectionId": "five-pair-months",
+            "pdfPages": [
+              28
+            ],
+            "url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/NLC416-13jh001663-59235_%E5%91%BD%E7%90%86%E9%9B%86%E6%88%90.pdf",
+            "pdfSha256": "dbb50d8f5daf8a30269273a3e5dc787133deabd944e76e28d592e58a97348501"
+          },
+          {
+            "sourceId": "mingli-1932",
+            "sectionId": "pair-cardinality-and-hour-route",
+            "pdfPages": [
+              28
+            ],
+            "url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/NLC416-13jh001663-59235_%E5%91%BD%E7%90%86%E9%9B%86%E6%88%90.pdf",
+            "pdfSha256": "dbb50d8f5daf8a30269273a3e5dc787133deabd944e76e28d592e58a97348501"
+          },
+          {
+            "sourceId": "mingli-1932",
+            "sectionId": "true-false-not-binary-season",
+            "pdfPages": [
+              30
+            ],
+            "url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/NLC416-13jh001663-59235_%E5%91%BD%E7%90%86%E9%9B%86%E6%88%90.pdf",
+            "pdfSha256": "dbb50d8f5daf8a30269273a3e5dc787133deabd944e76e28d592e58a97348501"
+          }
+        ]
+      }
+    },
+    {
+      "id": "병신-primary",
+      "review": {
+        "ruleVersion": "cross-source-strength-transformation-review-v1",
+        "productionApproved": false,
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "status": "listed-season-needs-review",
+        "alternatives": [
+          {
+            "pair": "병신",
+            "targetElement": "수",
+            "monthRoute": "primary-month",
+            "presence": "observed",
+            "partnerPositions": [
+              "hour"
+            ],
+            "cardinality": "source-rule-met",
+            "status": "listed-season-needs-review",
+            "hourSupportRoute": "not-adjudicated",
+            "moderation": "not-adjudicated",
+            "transformationEstablished": null,
+            "transformedElement": null
+          }
+        ],
+        "common": {
+          "pair": "병신",
+          "monthRoute": "primary-month",
+          "presence": "observed",
+          "cardinality": "source-rule-met"
+        },
+        "transformationEstablished": null,
+        "transformedElement": null,
+        "candidatePolicy": "Universal over supplied marginal combinations; partial combinations are not proved jointly feasible. No probabilities.",
+        "sourcePolicy": "Mingli Jicheng quotation of Sanming Tonghui: one-of-each screen is an explicit research generalization of the paragraph, not a universal rule across editions.",
+        "unresolved": [
+          "Hour-only support route has no reviewed complete algorithm",
+          "Seasonal qualification and pair cardinality are not sufficient",
+          "Day strength and transformation moderation are distinct; no threshold is transferred between them",
+          "Competing source conventions and intervening obstruction require separate review"
+        ],
+        "sources": [
+          {
+            "sourceId": "mingli-1932",
+            "sectionId": "five-pair-months",
+            "pdfPages": [
+              28
+            ],
+            "url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/NLC416-13jh001663-59235_%E5%91%BD%E7%90%86%E9%9B%86%E6%88%90.pdf",
+            "pdfSha256": "dbb50d8f5daf8a30269273a3e5dc787133deabd944e76e28d592e58a97348501"
+          },
+          {
+            "sourceId": "mingli-1932",
+            "sectionId": "pair-cardinality-and-hour-route",
+            "pdfPages": [
+              28
+            ],
+            "url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/NLC416-13jh001663-59235_%E5%91%BD%E7%90%86%E9%9B%86%E6%88%90.pdf",
+            "pdfSha256": "dbb50d8f5daf8a30269273a3e5dc787133deabd944e76e28d592e58a97348501"
+          },
+          {
+            "sourceId": "mingli-1932",
+            "sectionId": "true-false-not-binary-season",
+            "pdfPages": [
+              30
+            ],
+            "url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/NLC416-13jh001663-59235_%E5%91%BD%E7%90%86%E9%9B%86%E6%88%90.pdf",
+            "pdfSha256": "dbb50d8f5daf8a30269273a3e5dc787133deabd944e76e28d592e58a97348501"
+          }
+        ]
+      }
+    },
+    {
+      "id": "병신-additional",
+      "review": {
+        "ruleVersion": "cross-source-strength-transformation-review-v1",
+        "productionApproved": false,
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "status": "listed-season-needs-review",
+        "alternatives": [
+          {
+            "pair": "병신",
+            "targetElement": "수",
+            "monthRoute": "additional-month",
+            "presence": "observed",
+            "partnerPositions": [
+              "hour"
+            ],
+            "cardinality": "source-rule-met",
+            "status": "listed-season-needs-review",
+            "hourSupportRoute": "not-adjudicated",
+            "moderation": "not-adjudicated",
+            "transformationEstablished": null,
+            "transformedElement": null
+          }
+        ],
+        "common": {
+          "pair": "병신",
+          "monthRoute": "additional-month",
+          "presence": "observed",
+          "cardinality": "source-rule-met"
+        },
+        "transformationEstablished": null,
+        "transformedElement": null,
+        "candidatePolicy": "Universal over supplied marginal combinations; partial combinations are not proved jointly feasible. No probabilities.",
+        "sourcePolicy": "Mingli Jicheng quotation of Sanming Tonghui: one-of-each screen is an explicit research generalization of the paragraph, not a universal rule across editions.",
+        "unresolved": [
+          "Hour-only support route has no reviewed complete algorithm",
+          "Seasonal qualification and pair cardinality are not sufficient",
+          "Day strength and transformation moderation are distinct; no threshold is transferred between them",
+          "Competing source conventions and intervening obstruction require separate review"
+        ],
+        "sources": [
+          {
+            "sourceId": "mingli-1932",
+            "sectionId": "five-pair-months",
+            "pdfPages": [
+              28
+            ],
+            "url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/NLC416-13jh001663-59235_%E5%91%BD%E7%90%86%E9%9B%86%E6%88%90.pdf",
+            "pdfSha256": "dbb50d8f5daf8a30269273a3e5dc787133deabd944e76e28d592e58a97348501"
+          },
+          {
+            "sourceId": "mingli-1932",
+            "sectionId": "pair-cardinality-and-hour-route",
+            "pdfPages": [
+              28
+            ],
+            "url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/NLC416-13jh001663-59235_%E5%91%BD%E7%90%86%E9%9B%86%E6%88%90.pdf",
+            "pdfSha256": "dbb50d8f5daf8a30269273a3e5dc787133deabd944e76e28d592e58a97348501"
+          },
+          {
+            "sourceId": "mingli-1932",
+            "sectionId": "true-false-not-binary-season",
+            "pdfPages": [
+              30
+            ],
+            "url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/NLC416-13jh001663-59235_%E5%91%BD%E7%90%86%E9%9B%86%E6%88%90.pdf",
+            "pdfSha256": "dbb50d8f5daf8a30269273a3e5dc787133deabd944e76e28d592e58a97348501"
+          }
+        ]
+      }
+    },
+    {
+      "id": "병신-unlisted",
+      "review": {
+        "ruleVersion": "cross-source-strength-transformation-review-v1",
+        "productionApproved": false,
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "status": "unlisted-season-needs-review",
+        "alternatives": [
+          {
+            "pair": "병신",
+            "targetElement": "수",
+            "monthRoute": "unlisted-month",
+            "presence": "observed",
+            "partnerPositions": [
+              "hour"
+            ],
+            "cardinality": "source-rule-met",
+            "status": "unlisted-season-needs-review",
+            "hourSupportRoute": "not-adjudicated",
+            "moderation": "not-adjudicated",
+            "transformationEstablished": null,
+            "transformedElement": null
+          }
+        ],
+        "common": {
+          "pair": "병신",
+          "monthRoute": "unlisted-month",
+          "presence": "observed",
+          "cardinality": "source-rule-met"
+        },
+        "transformationEstablished": null,
+        "transformedElement": null,
+        "candidatePolicy": "Universal over supplied marginal combinations; partial combinations are not proved jointly feasible. No probabilities.",
+        "sourcePolicy": "Mingli Jicheng quotation of Sanming Tonghui: one-of-each screen is an explicit research generalization of the paragraph, not a universal rule across editions.",
+        "unresolved": [
+          "Hour-only support route has no reviewed complete algorithm",
+          "Seasonal qualification and pair cardinality are not sufficient",
+          "Day strength and transformation moderation are distinct; no threshold is transferred between them",
+          "Competing source conventions and intervening obstruction require separate review"
+        ],
+        "sources": [
+          {
+            "sourceId": "mingli-1932",
+            "sectionId": "five-pair-months",
+            "pdfPages": [
+              28
+            ],
+            "url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/NLC416-13jh001663-59235_%E5%91%BD%E7%90%86%E9%9B%86%E6%88%90.pdf",
+            "pdfSha256": "dbb50d8f5daf8a30269273a3e5dc787133deabd944e76e28d592e58a97348501"
+          },
+          {
+            "sourceId": "mingli-1932",
+            "sectionId": "pair-cardinality-and-hour-route",
+            "pdfPages": [
+              28
+            ],
+            "url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/NLC416-13jh001663-59235_%E5%91%BD%E7%90%86%E9%9B%86%E6%88%90.pdf",
+            "pdfSha256": "dbb50d8f5daf8a30269273a3e5dc787133deabd944e76e28d592e58a97348501"
+          },
+          {
+            "sourceId": "mingli-1932",
+            "sectionId": "true-false-not-binary-season",
+            "pdfPages": [
+              30
+            ],
+            "url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/NLC416-13jh001663-59235_%E5%91%BD%E7%90%86%E9%9B%86%E6%88%90.pdf",
+            "pdfSha256": "dbb50d8f5daf8a30269273a3e5dc787133deabd944e76e28d592e58a97348501"
+          }
+        ]
+      }
+    },
+    {
+      "id": "정임-primary",
+      "review": {
+        "ruleVersion": "cross-source-strength-transformation-review-v1",
+        "productionApproved": false,
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "status": "listed-season-needs-review",
+        "alternatives": [
+          {
+            "pair": "정임",
+            "targetElement": "목",
+            "monthRoute": "primary-month",
+            "presence": "observed",
+            "partnerPositions": [
+              "hour"
+            ],
+            "cardinality": "source-rule-met",
+            "status": "listed-season-needs-review",
+            "hourSupportRoute": "not-adjudicated",
+            "moderation": "not-adjudicated",
+            "transformationEstablished": null,
+            "transformedElement": null
+          }
+        ],
+        "common": {
+          "pair": "정임",
+          "monthRoute": "primary-month",
+          "presence": "observed",
+          "cardinality": "source-rule-met"
+        },
+        "transformationEstablished": null,
+        "transformedElement": null,
+        "candidatePolicy": "Universal over supplied marginal combinations; partial combinations are not proved jointly feasible. No probabilities.",
+        "sourcePolicy": "Mingli Jicheng quotation of Sanming Tonghui: one-of-each screen is an explicit research generalization of the paragraph, not a universal rule across editions.",
+        "unresolved": [
+          "Hour-only support route has no reviewed complete algorithm",
+          "Seasonal qualification and pair cardinality are not sufficient",
+          "Day strength and transformation moderation are distinct; no threshold is transferred between them",
+          "Competing source conventions and intervening obstruction require separate review"
+        ],
+        "sources": [
+          {
+            "sourceId": "mingli-1932",
+            "sectionId": "five-pair-months",
+            "pdfPages": [
+              28
+            ],
+            "url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/NLC416-13jh001663-59235_%E5%91%BD%E7%90%86%E9%9B%86%E6%88%90.pdf",
+            "pdfSha256": "dbb50d8f5daf8a30269273a3e5dc787133deabd944e76e28d592e58a97348501"
+          },
+          {
+            "sourceId": "mingli-1932",
+            "sectionId": "pair-cardinality-and-hour-route",
+            "pdfPages": [
+              28
+            ],
+            "url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/NLC416-13jh001663-59235_%E5%91%BD%E7%90%86%E9%9B%86%E6%88%90.pdf",
+            "pdfSha256": "dbb50d8f5daf8a30269273a3e5dc787133deabd944e76e28d592e58a97348501"
+          },
+          {
+            "sourceId": "mingli-1932",
+            "sectionId": "true-false-not-binary-season",
+            "pdfPages": [
+              30
+            ],
+            "url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/NLC416-13jh001663-59235_%E5%91%BD%E7%90%86%E9%9B%86%E6%88%90.pdf",
+            "pdfSha256": "dbb50d8f5daf8a30269273a3e5dc787133deabd944e76e28d592e58a97348501"
+          }
+        ]
+      }
+    },
+    {
+      "id": "정임-additional",
+      "review": {
+        "ruleVersion": "cross-source-strength-transformation-review-v1",
+        "productionApproved": false,
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "status": "listed-season-needs-review",
+        "alternatives": [
+          {
+            "pair": "정임",
+            "targetElement": "목",
+            "monthRoute": "additional-month",
+            "presence": "observed",
+            "partnerPositions": [
+              "hour"
+            ],
+            "cardinality": "source-rule-met",
+            "status": "listed-season-needs-review",
+            "hourSupportRoute": "not-adjudicated",
+            "moderation": "not-adjudicated",
+            "transformationEstablished": null,
+            "transformedElement": null
+          }
+        ],
+        "common": {
+          "pair": "정임",
+          "monthRoute": "additional-month",
+          "presence": "observed",
+          "cardinality": "source-rule-met"
+        },
+        "transformationEstablished": null,
+        "transformedElement": null,
+        "candidatePolicy": "Universal over supplied marginal combinations; partial combinations are not proved jointly feasible. No probabilities.",
+        "sourcePolicy": "Mingli Jicheng quotation of Sanming Tonghui: one-of-each screen is an explicit research generalization of the paragraph, not a universal rule across editions.",
+        "unresolved": [
+          "Hour-only support route has no reviewed complete algorithm",
+          "Seasonal qualification and pair cardinality are not sufficient",
+          "Day strength and transformation moderation are distinct; no threshold is transferred between them",
+          "Competing source conventions and intervening obstruction require separate review"
+        ],
+        "sources": [
+          {
+            "sourceId": "mingli-1932",
+            "sectionId": "five-pair-months",
+            "pdfPages": [
+              28
+            ],
+            "url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/NLC416-13jh001663-59235_%E5%91%BD%E7%90%86%E9%9B%86%E6%88%90.pdf",
+            "pdfSha256": "dbb50d8f5daf8a30269273a3e5dc787133deabd944e76e28d592e58a97348501"
+          },
+          {
+            "sourceId": "mingli-1932",
+            "sectionId": "pair-cardinality-and-hour-route",
+            "pdfPages": [
+              28
+            ],
+            "url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/NLC416-13jh001663-59235_%E5%91%BD%E7%90%86%E9%9B%86%E6%88%90.pdf",
+            "pdfSha256": "dbb50d8f5daf8a30269273a3e5dc787133deabd944e76e28d592e58a97348501"
+          },
+          {
+            "sourceId": "mingli-1932",
+            "sectionId": "true-false-not-binary-season",
+            "pdfPages": [
+              30
+            ],
+            "url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/NLC416-13jh001663-59235_%E5%91%BD%E7%90%86%E9%9B%86%E6%88%90.pdf",
+            "pdfSha256": "dbb50d8f5daf8a30269273a3e5dc787133deabd944e76e28d592e58a97348501"
+          }
+        ]
+      }
+    },
+    {
+      "id": "정임-unlisted",
+      "review": {
+        "ruleVersion": "cross-source-strength-transformation-review-v1",
+        "productionApproved": false,
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "status": "unlisted-season-needs-review",
+        "alternatives": [
+          {
+            "pair": "정임",
+            "targetElement": "목",
+            "monthRoute": "unlisted-month",
+            "presence": "observed",
+            "partnerPositions": [
+              "hour"
+            ],
+            "cardinality": "source-rule-met",
+            "status": "unlisted-season-needs-review",
+            "hourSupportRoute": "not-adjudicated",
+            "moderation": "not-adjudicated",
+            "transformationEstablished": null,
+            "transformedElement": null
+          }
+        ],
+        "common": {
+          "pair": "정임",
+          "monthRoute": "unlisted-month",
+          "presence": "observed",
+          "cardinality": "source-rule-met"
+        },
+        "transformationEstablished": null,
+        "transformedElement": null,
+        "candidatePolicy": "Universal over supplied marginal combinations; partial combinations are not proved jointly feasible. No probabilities.",
+        "sourcePolicy": "Mingli Jicheng quotation of Sanming Tonghui: one-of-each screen is an explicit research generalization of the paragraph, not a universal rule across editions.",
+        "unresolved": [
+          "Hour-only support route has no reviewed complete algorithm",
+          "Seasonal qualification and pair cardinality are not sufficient",
+          "Day strength and transformation moderation are distinct; no threshold is transferred between them",
+          "Competing source conventions and intervening obstruction require separate review"
+        ],
+        "sources": [
+          {
+            "sourceId": "mingli-1932",
+            "sectionId": "five-pair-months",
+            "pdfPages": [
+              28
+            ],
+            "url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/NLC416-13jh001663-59235_%E5%91%BD%E7%90%86%E9%9B%86%E6%88%90.pdf",
+            "pdfSha256": "dbb50d8f5daf8a30269273a3e5dc787133deabd944e76e28d592e58a97348501"
+          },
+          {
+            "sourceId": "mingli-1932",
+            "sectionId": "pair-cardinality-and-hour-route",
+            "pdfPages": [
+              28
+            ],
+            "url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/NLC416-13jh001663-59235_%E5%91%BD%E7%90%86%E9%9B%86%E6%88%90.pdf",
+            "pdfSha256": "dbb50d8f5daf8a30269273a3e5dc787133deabd944e76e28d592e58a97348501"
+          },
+          {
+            "sourceId": "mingli-1932",
+            "sectionId": "true-false-not-binary-season",
+            "pdfPages": [
+              30
+            ],
+            "url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/NLC416-13jh001663-59235_%E5%91%BD%E7%90%86%E9%9B%86%E6%88%90.pdf",
+            "pdfSha256": "dbb50d8f5daf8a30269273a3e5dc787133deabd944e76e28d592e58a97348501"
+          }
+        ]
+      }
+    },
+    {
+      "id": "무계-primary",
+      "review": {
+        "ruleVersion": "cross-source-strength-transformation-review-v1",
+        "productionApproved": false,
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "status": "listed-season-needs-review",
+        "alternatives": [
+          {
+            "pair": "무계",
+            "targetElement": "화",
+            "monthRoute": "primary-month",
+            "presence": "observed",
+            "partnerPositions": [
+              "hour"
+            ],
+            "cardinality": "source-rule-met",
+            "status": "listed-season-needs-review",
+            "hourSupportRoute": "not-adjudicated",
+            "moderation": "not-adjudicated",
+            "transformationEstablished": null,
+            "transformedElement": null
+          }
+        ],
+        "common": {
+          "pair": "무계",
+          "monthRoute": "primary-month",
+          "presence": "observed",
+          "cardinality": "source-rule-met"
+        },
+        "transformationEstablished": null,
+        "transformedElement": null,
+        "candidatePolicy": "Universal over supplied marginal combinations; partial combinations are not proved jointly feasible. No probabilities.",
+        "sourcePolicy": "Mingli Jicheng quotation of Sanming Tonghui: one-of-each screen is an explicit research generalization of the paragraph, not a universal rule across editions.",
+        "unresolved": [
+          "Hour-only support route has no reviewed complete algorithm",
+          "Seasonal qualification and pair cardinality are not sufficient",
+          "Day strength and transformation moderation are distinct; no threshold is transferred between them",
+          "Competing source conventions and intervening obstruction require separate review"
+        ],
+        "sources": [
+          {
+            "sourceId": "mingli-1932",
+            "sectionId": "five-pair-months",
+            "pdfPages": [
+              28
+            ],
+            "url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/NLC416-13jh001663-59235_%E5%91%BD%E7%90%86%E9%9B%86%E6%88%90.pdf",
+            "pdfSha256": "dbb50d8f5daf8a30269273a3e5dc787133deabd944e76e28d592e58a97348501"
+          },
+          {
+            "sourceId": "mingli-1932",
+            "sectionId": "pair-cardinality-and-hour-route",
+            "pdfPages": [
+              28
+            ],
+            "url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/NLC416-13jh001663-59235_%E5%91%BD%E7%90%86%E9%9B%86%E6%88%90.pdf",
+            "pdfSha256": "dbb50d8f5daf8a30269273a3e5dc787133deabd944e76e28d592e58a97348501"
+          },
+          {
+            "sourceId": "mingli-1932",
+            "sectionId": "true-false-not-binary-season",
+            "pdfPages": [
+              30
+            ],
+            "url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/NLC416-13jh001663-59235_%E5%91%BD%E7%90%86%E9%9B%86%E6%88%90.pdf",
+            "pdfSha256": "dbb50d8f5daf8a30269273a3e5dc787133deabd944e76e28d592e58a97348501"
+          }
+        ]
+      }
+    },
+    {
+      "id": "무계-additional",
+      "review": {
+        "ruleVersion": "cross-source-strength-transformation-review-v1",
+        "productionApproved": false,
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "status": "listed-season-needs-review",
+        "alternatives": [
+          {
+            "pair": "무계",
+            "targetElement": "화",
+            "monthRoute": "additional-month",
+            "presence": "observed",
+            "partnerPositions": [
+              "hour"
+            ],
+            "cardinality": "source-rule-met",
+            "status": "listed-season-needs-review",
+            "hourSupportRoute": "not-adjudicated",
+            "moderation": "not-adjudicated",
+            "transformationEstablished": null,
+            "transformedElement": null
+          }
+        ],
+        "common": {
+          "pair": "무계",
+          "monthRoute": "additional-month",
+          "presence": "observed",
+          "cardinality": "source-rule-met"
+        },
+        "transformationEstablished": null,
+        "transformedElement": null,
+        "candidatePolicy": "Universal over supplied marginal combinations; partial combinations are not proved jointly feasible. No probabilities.",
+        "sourcePolicy": "Mingli Jicheng quotation of Sanming Tonghui: one-of-each screen is an explicit research generalization of the paragraph, not a universal rule across editions.",
+        "unresolved": [
+          "Hour-only support route has no reviewed complete algorithm",
+          "Seasonal qualification and pair cardinality are not sufficient",
+          "Day strength and transformation moderation are distinct; no threshold is transferred between them",
+          "Competing source conventions and intervening obstruction require separate review"
+        ],
+        "sources": [
+          {
+            "sourceId": "mingli-1932",
+            "sectionId": "five-pair-months",
+            "pdfPages": [
+              28
+            ],
+            "url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/NLC416-13jh001663-59235_%E5%91%BD%E7%90%86%E9%9B%86%E6%88%90.pdf",
+            "pdfSha256": "dbb50d8f5daf8a30269273a3e5dc787133deabd944e76e28d592e58a97348501"
+          },
+          {
+            "sourceId": "mingli-1932",
+            "sectionId": "pair-cardinality-and-hour-route",
+            "pdfPages": [
+              28
+            ],
+            "url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/NLC416-13jh001663-59235_%E5%91%BD%E7%90%86%E9%9B%86%E6%88%90.pdf",
+            "pdfSha256": "dbb50d8f5daf8a30269273a3e5dc787133deabd944e76e28d592e58a97348501"
+          },
+          {
+            "sourceId": "mingli-1932",
+            "sectionId": "true-false-not-binary-season",
+            "pdfPages": [
+              30
+            ],
+            "url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/NLC416-13jh001663-59235_%E5%91%BD%E7%90%86%E9%9B%86%E6%88%90.pdf",
+            "pdfSha256": "dbb50d8f5daf8a30269273a3e5dc787133deabd944e76e28d592e58a97348501"
+          }
+        ]
+      }
+    },
+    {
+      "id": "무계-unlisted",
+      "review": {
+        "ruleVersion": "cross-source-strength-transformation-review-v1",
+        "productionApproved": false,
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "status": "unlisted-season-needs-review",
+        "alternatives": [
+          {
+            "pair": "무계",
+            "targetElement": "화",
+            "monthRoute": "unlisted-month",
+            "presence": "observed",
+            "partnerPositions": [
+              "hour"
+            ],
+            "cardinality": "source-rule-met",
+            "status": "unlisted-season-needs-review",
+            "hourSupportRoute": "not-adjudicated",
+            "moderation": "not-adjudicated",
+            "transformationEstablished": null,
+            "transformedElement": null
+          }
+        ],
+        "common": {
+          "pair": "무계",
+          "monthRoute": "unlisted-month",
+          "presence": "observed",
+          "cardinality": "source-rule-met"
+        },
+        "transformationEstablished": null,
+        "transformedElement": null,
+        "candidatePolicy": "Universal over supplied marginal combinations; partial combinations are not proved jointly feasible. No probabilities.",
+        "sourcePolicy": "Mingli Jicheng quotation of Sanming Tonghui: one-of-each screen is an explicit research generalization of the paragraph, not a universal rule across editions.",
+        "unresolved": [
+          "Hour-only support route has no reviewed complete algorithm",
+          "Seasonal qualification and pair cardinality are not sufficient",
+          "Day strength and transformation moderation are distinct; no threshold is transferred between them",
+          "Competing source conventions and intervening obstruction require separate review"
+        ],
+        "sources": [
+          {
+            "sourceId": "mingli-1932",
+            "sectionId": "five-pair-months",
+            "pdfPages": [
+              28
+            ],
+            "url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/NLC416-13jh001663-59235_%E5%91%BD%E7%90%86%E9%9B%86%E6%88%90.pdf",
+            "pdfSha256": "dbb50d8f5daf8a30269273a3e5dc787133deabd944e76e28d592e58a97348501"
+          },
+          {
+            "sourceId": "mingli-1932",
+            "sectionId": "pair-cardinality-and-hour-route",
+            "pdfPages": [
+              28
+            ],
+            "url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/NLC416-13jh001663-59235_%E5%91%BD%E7%90%86%E9%9B%86%E6%88%90.pdf",
+            "pdfSha256": "dbb50d8f5daf8a30269273a3e5dc787133deabd944e76e28d592e58a97348501"
+          },
+          {
+            "sourceId": "mingli-1932",
+            "sectionId": "true-false-not-binary-season",
+            "pdfPages": [
+              30
+            ],
+            "url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/NLC416-13jh001663-59235_%E5%91%BD%E7%90%86%E9%9B%86%E6%88%90.pdf",
+            "pdfSha256": "dbb50d8f5daf8a30269273a3e5dc787133deabd944e76e28d592e58a97348501"
+          }
+        ]
+      }
+    }
+  ],
+  "moderationCases": [
+    {
+      "id": "wood-too-strong",
+      "review": {
+        "ruleVersion": "cross-source-strength-transformation-review-v1",
+        "productionApproved": false,
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "status": "source-example-matched",
+        "matches": [
+          {
+            "exampleId": "wood-too-strong",
+            "sourceLabel": "木太旺",
+            "category": "too-strong",
+            "match": "exact-source-chart",
+            "jointFeasibility": "fixed-chart",
+            "source": {
+              "sourceId": "ditian-1947",
+              "sectionId": "wood-too-strong",
+              "pdfPages": [
+                178
+              ],
+              "url": "https://upload.wikimedia.org/wikipedia/commons/d/db/SSID-11335994_%E6%BB%B4%E5%A4%A9%E9%AB%93%E9%97%A1%E5%BE%AE.pdf",
+              "pdfSha256": "d6a7d1daf6513ce9fb9940ff8331b96804c10cdafbeac00d4d3d0a37229e1803"
+            }
+          }
+        ],
+        "classification": null,
+        "score": null,
+        "moderation": null,
+        "policy": "Exact reference-case recognition only. No nearest-neighbour inference, default balance, majority, numeric threshold or life outcome.",
+        "criteria": [
+          {
+            "id": "season-not-sufficient",
+            "source": {
+              "sourceId": "ditian-1947",
+              "sectionId": "strength-extremes",
+              "pdfPages": [
+                175,
+                176,
+                177,
+                188
+              ],
+              "url": "https://upload.wikimedia.org/wikipedia/commons/d/db/SSID-11335994_%E6%BB%B4%E5%A4%A9%E9%AB%93%E9%97%A1%E5%BE%AE.pdf",
+              "pdfSha256": "d6a7d1daf6513ce9fb9940ff8331b96804c10cdafbeac00d4d3d0a37229e1803"
+            }
+          },
+          {
+            "id": "roots-not-visible-count",
+            "source": {
+              "sourceId": "ditian-1947",
+              "sectionId": "strength-extremes",
+              "pdfPages": [
+                175,
+                176,
+                177,
+                188
+              ],
+              "url": "https://upload.wikimedia.org/wikipedia/commons/d/db/SSID-11335994_%E6%BB%B4%E5%A4%A9%E9%AB%93%E9%97%A1%E5%BE%AE.pdf",
+              "pdfSha256": "d6a7d1daf6513ce9fb9940ff8331b96804c10cdafbeac00d4d3d0a37229e1803"
+            }
+          },
+          {
+            "id": "too-and-extreme-are-distinct",
+            "source": {
+              "sourceId": "ditian-1947",
+              "sectionId": "strength-extremes",
+              "pdfPages": [
+                175,
+                176,
+                177,
+                188
+              ],
+              "url": "https://upload.wikimedia.org/wikipedia/commons/d/db/SSID-11335994_%E6%BB%B4%E5%A4%A9%E9%AB%93%E9%97%A1%E5%BE%AE.pdf",
+              "pdfSha256": "d6a7d1daf6513ce9fb9940ff8331b96804c10cdafbeac00d4d3d0a37229e1803"
+            }
+          },
+          {
+            "id": "moderation-is-relational-not-a-zero-score",
+            "source": {
+              "sourceId": "ditian-1947",
+              "sectionId": "moderation",
+              "pdfPages": [
+                188,
+                189
+              ],
+              "url": "https://upload.wikimedia.org/wikipedia/commons/d/db/SSID-11335994_%E6%BB%B4%E5%A4%A9%E9%AB%93%E9%97%A1%E5%BE%AE.pdf",
+              "pdfSha256": "d6a7d1daf6513ce9fb9940ff8331b96804c10cdafbeac00d4d3d0a37229e1803"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "wood-extremely-strong",
+      "review": {
+        "ruleVersion": "cross-source-strength-transformation-review-v1",
+        "productionApproved": false,
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "status": "source-example-matched",
+        "matches": [
+          {
+            "exampleId": "wood-extremely-strong",
+            "sourceLabel": "木旺極",
+            "category": "extremely-strong",
+            "match": "exact-source-chart",
+            "jointFeasibility": "fixed-chart",
+            "source": {
+              "sourceId": "ditian-1947",
+              "sectionId": "wood-extremely-strong",
+              "pdfPages": [
+                179
+              ],
+              "url": "https://upload.wikimedia.org/wikipedia/commons/d/db/SSID-11335994_%E6%BB%B4%E5%A4%A9%E9%AB%93%E9%97%A1%E5%BE%AE.pdf",
+              "pdfSha256": "d6a7d1daf6513ce9fb9940ff8331b96804c10cdafbeac00d4d3d0a37229e1803"
+            }
+          }
+        ],
+        "classification": null,
+        "score": null,
+        "moderation": null,
+        "policy": "Exact reference-case recognition only. No nearest-neighbour inference, default balance, majority, numeric threshold or life outcome.",
+        "criteria": [
+          {
+            "id": "season-not-sufficient",
+            "source": {
+              "sourceId": "ditian-1947",
+              "sectionId": "strength-extremes",
+              "pdfPages": [
+                175,
+                176,
+                177,
+                188
+              ],
+              "url": "https://upload.wikimedia.org/wikipedia/commons/d/db/SSID-11335994_%E6%BB%B4%E5%A4%A9%E9%AB%93%E9%97%A1%E5%BE%AE.pdf",
+              "pdfSha256": "d6a7d1daf6513ce9fb9940ff8331b96804c10cdafbeac00d4d3d0a37229e1803"
+            }
+          },
+          {
+            "id": "roots-not-visible-count",
+            "source": {
+              "sourceId": "ditian-1947",
+              "sectionId": "strength-extremes",
+              "pdfPages": [
+                175,
+                176,
+                177,
+                188
+              ],
+              "url": "https://upload.wikimedia.org/wikipedia/commons/d/db/SSID-11335994_%E6%BB%B4%E5%A4%A9%E9%AB%93%E9%97%A1%E5%BE%AE.pdf",
+              "pdfSha256": "d6a7d1daf6513ce9fb9940ff8331b96804c10cdafbeac00d4d3d0a37229e1803"
+            }
+          },
+          {
+            "id": "too-and-extreme-are-distinct",
+            "source": {
+              "sourceId": "ditian-1947",
+              "sectionId": "strength-extremes",
+              "pdfPages": [
+                175,
+                176,
+                177,
+                188
+              ],
+              "url": "https://upload.wikimedia.org/wikipedia/commons/d/db/SSID-11335994_%E6%BB%B4%E5%A4%A9%E9%AB%93%E9%97%A1%E5%BE%AE.pdf",
+              "pdfSha256": "d6a7d1daf6513ce9fb9940ff8331b96804c10cdafbeac00d4d3d0a37229e1803"
+            }
+          },
+          {
+            "id": "moderation-is-relational-not-a-zero-score",
+            "source": {
+              "sourceId": "ditian-1947",
+              "sectionId": "moderation",
+              "pdfPages": [
+                188,
+                189
+              ],
+              "url": "https://upload.wikimedia.org/wikipedia/commons/d/db/SSID-11335994_%E6%BB%B4%E5%A4%A9%E9%AB%93%E9%97%A1%E5%BE%AE.pdf",
+              "pdfSha256": "d6a7d1daf6513ce9fb9940ff8331b96804c10cdafbeac00d4d3d0a37229e1803"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "wood-too-weak",
+      "review": {
+        "ruleVersion": "cross-source-strength-transformation-review-v1",
+        "productionApproved": false,
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "status": "source-example-matched",
+        "matches": [
+          {
+            "exampleId": "wood-too-weak",
+            "sourceLabel": "木太衰",
+            "category": "too-weak",
+            "match": "exact-source-chart",
+            "jointFeasibility": "fixed-chart",
+            "source": {
+              "sourceId": "ditian-1947",
+              "sectionId": "wood-too-weak",
+              "pdfPages": [
+                179
+              ],
+              "url": "https://upload.wikimedia.org/wikipedia/commons/d/db/SSID-11335994_%E6%BB%B4%E5%A4%A9%E9%AB%93%E9%97%A1%E5%BE%AE.pdf",
+              "pdfSha256": "d6a7d1daf6513ce9fb9940ff8331b96804c10cdafbeac00d4d3d0a37229e1803"
+            }
+          }
+        ],
+        "classification": null,
+        "score": null,
+        "moderation": null,
+        "policy": "Exact reference-case recognition only. No nearest-neighbour inference, default balance, majority, numeric threshold or life outcome.",
+        "criteria": [
+          {
+            "id": "season-not-sufficient",
+            "source": {
+              "sourceId": "ditian-1947",
+              "sectionId": "strength-extremes",
+              "pdfPages": [
+                175,
+                176,
+                177,
+                188
+              ],
+              "url": "https://upload.wikimedia.org/wikipedia/commons/d/db/SSID-11335994_%E6%BB%B4%E5%A4%A9%E9%AB%93%E9%97%A1%E5%BE%AE.pdf",
+              "pdfSha256": "d6a7d1daf6513ce9fb9940ff8331b96804c10cdafbeac00d4d3d0a37229e1803"
+            }
+          },
+          {
+            "id": "roots-not-visible-count",
+            "source": {
+              "sourceId": "ditian-1947",
+              "sectionId": "strength-extremes",
+              "pdfPages": [
+                175,
+                176,
+                177,
+                188
+              ],
+              "url": "https://upload.wikimedia.org/wikipedia/commons/d/db/SSID-11335994_%E6%BB%B4%E5%A4%A9%E9%AB%93%E9%97%A1%E5%BE%AE.pdf",
+              "pdfSha256": "d6a7d1daf6513ce9fb9940ff8331b96804c10cdafbeac00d4d3d0a37229e1803"
+            }
+          },
+          {
+            "id": "too-and-extreme-are-distinct",
+            "source": {
+              "sourceId": "ditian-1947",
+              "sectionId": "strength-extremes",
+              "pdfPages": [
+                175,
+                176,
+                177,
+                188
+              ],
+              "url": "https://upload.wikimedia.org/wikipedia/commons/d/db/SSID-11335994_%E6%BB%B4%E5%A4%A9%E9%AB%93%E9%97%A1%E5%BE%AE.pdf",
+              "pdfSha256": "d6a7d1daf6513ce9fb9940ff8331b96804c10cdafbeac00d4d3d0a37229e1803"
+            }
+          },
+          {
+            "id": "moderation-is-relational-not-a-zero-score",
+            "source": {
+              "sourceId": "ditian-1947",
+              "sectionId": "moderation",
+              "pdfPages": [
+                188,
+                189
+              ],
+              "url": "https://upload.wikimedia.org/wikipedia/commons/d/db/SSID-11335994_%E6%BB%B4%E5%A4%A9%E9%AB%93%E9%97%A1%E5%BE%AE.pdf",
+              "pdfSha256": "d6a7d1daf6513ce9fb9940ff8331b96804c10cdafbeac00d4d3d0a37229e1803"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "wood-extremely-weak",
+      "review": {
+        "ruleVersion": "cross-source-strength-transformation-review-v1",
+        "productionApproved": false,
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "status": "source-example-matched",
+        "matches": [
+          {
+            "exampleId": "wood-extremely-weak",
+            "sourceLabel": "木衰極",
+            "category": "extremely-weak",
+            "match": "exact-source-chart",
+            "jointFeasibility": "fixed-chart",
+            "source": {
+              "sourceId": "ditian-1947",
+              "sectionId": "wood-extremely-weak",
+              "pdfPages": [
+                180
+              ],
+              "url": "https://upload.wikimedia.org/wikipedia/commons/d/db/SSID-11335994_%E6%BB%B4%E5%A4%A9%E9%AB%93%E9%97%A1%E5%BE%AE.pdf",
+              "pdfSha256": "d6a7d1daf6513ce9fb9940ff8331b96804c10cdafbeac00d4d3d0a37229e1803"
+            }
+          }
+        ],
+        "classification": null,
+        "score": null,
+        "moderation": null,
+        "policy": "Exact reference-case recognition only. No nearest-neighbour inference, default balance, majority, numeric threshold or life outcome.",
+        "criteria": [
+          {
+            "id": "season-not-sufficient",
+            "source": {
+              "sourceId": "ditian-1947",
+              "sectionId": "strength-extremes",
+              "pdfPages": [
+                175,
+                176,
+                177,
+                188
+              ],
+              "url": "https://upload.wikimedia.org/wikipedia/commons/d/db/SSID-11335994_%E6%BB%B4%E5%A4%A9%E9%AB%93%E9%97%A1%E5%BE%AE.pdf",
+              "pdfSha256": "d6a7d1daf6513ce9fb9940ff8331b96804c10cdafbeac00d4d3d0a37229e1803"
+            }
+          },
+          {
+            "id": "roots-not-visible-count",
+            "source": {
+              "sourceId": "ditian-1947",
+              "sectionId": "strength-extremes",
+              "pdfPages": [
+                175,
+                176,
+                177,
+                188
+              ],
+              "url": "https://upload.wikimedia.org/wikipedia/commons/d/db/SSID-11335994_%E6%BB%B4%E5%A4%A9%E9%AB%93%E9%97%A1%E5%BE%AE.pdf",
+              "pdfSha256": "d6a7d1daf6513ce9fb9940ff8331b96804c10cdafbeac00d4d3d0a37229e1803"
+            }
+          },
+          {
+            "id": "too-and-extreme-are-distinct",
+            "source": {
+              "sourceId": "ditian-1947",
+              "sectionId": "strength-extremes",
+              "pdfPages": [
+                175,
+                176,
+                177,
+                188
+              ],
+              "url": "https://upload.wikimedia.org/wikipedia/commons/d/db/SSID-11335994_%E6%BB%B4%E5%A4%A9%E9%AB%93%E9%97%A1%E5%BE%AE.pdf",
+              "pdfSha256": "d6a7d1daf6513ce9fb9940ff8331b96804c10cdafbeac00d4d3d0a37229e1803"
+            }
+          },
+          {
+            "id": "moderation-is-relational-not-a-zero-score",
+            "source": {
+              "sourceId": "ditian-1947",
+              "sectionId": "moderation",
+              "pdfPages": [
+                188,
+                189
+              ],
+              "url": "https://upload.wikimedia.org/wikipedia/commons/d/db/SSID-11335994_%E6%BB%B4%E5%A4%A9%E9%AB%93%E9%97%A1%E5%BE%AE.pdf",
+              "pdfSha256": "d6a7d1daf6513ce9fb9940ff8331b96804c10cdafbeac00d4d3d0a37229e1803"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "integratedCases": [
+    {
+      "id": "ordinary",
+      "review": {
+        "ruleVersion": "cross-source-strength-transformation-review-v1",
+        "productionApproved": false,
+        "dependencies": {
+          "engineVersion": "research-civil-midnight-v5",
+          "natalRuleVersion": "natal-definitions-research-v1",
+          "contextRuleVersion": "month-combination-context-research-v1",
+          "judgmentRuleVersion": "ziping-explicit-judgments-research-v1",
+          "commandRuleVersion": "yuanhai-command-nominal-days-v1"
+        },
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day"
+            ],
+            "omittedPositions": [
+              "hour"
+            ],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "seasonalCommand": {
+          "ruleVersion": "yuanhai-command-nominal-days-v1",
+          "engineVersion": "research-civil-midnight-v5",
+          "productionApproved": false,
+          "elapsedPolicy": "elapsed-86400-seconds; half-open intervals; no stretching or terminal clamping",
+          "source": {
+            "id": "yuanhai-1926-ntl-9900014379",
+            "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+            "transcriptionSha256": "3c2bef1a4c92ff21373516338bf739b78a73aff0ed285e20a299f5ba64b75fb3",
+            "sectionId": "command-allocation",
+            "pdfPages": [
+              53,
+              54
+            ]
+          },
+          "reviewMarginSeconds": 120,
+          "verifiedErrorBound": false,
+          "timeKnown": false,
+          "monthBranches": [
+            "인"
+          ],
+          "confirmedStem": "무",
+          "status": "single-command",
+          "alternatives": [
+            {
+              "branch": "인",
+              "status": "single-command",
+              "candidateStems": [
+                "무"
+              ],
+              "confirmedStem": "무",
+              "unallocated": false,
+              "source": {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "transcriptionSha256": "3c2bef1a4c92ff21373516338bf739b78a73aff0ed285e20a299f5ba64b75fb3",
+                "sectionId": "command-allocation",
+                "pdfPages": [
+                  53,
+                  54
+                ]
+              },
+              "nominalDays": 30
+            }
+          ]
+        },
+        "午Collation": {
+          "status": "29-days-corroborated-correction-unresolved",
+          "source": {
+            "sourceId": "yuanhai-1940",
+            "sectionId": "午-collation",
+            "pdfPages": [
+              18,
+              32,
+              33
+            ],
+            "url": "https://upload.wikimedia.org/wikipedia/commons/1/12/NLC416-12jh002712-40330_%E5%A2%9E%E8%A3%9C%E6%B7%B5%E6%B5%B7%E5%AD%90%E5%B9%B3%E9%9F%B3%E7%BE%A9%E8%A9%95%E8%A8%BB.pdf",
+            "pdfSha256": "bec8b389191895f7d95e194b8f4f6d1e2ade15f8a97b0d9751bf65ddf593995e"
+          }
+        },
+        "strength": {
+          "status": "not-adjudicated",
+          "classification": null,
+          "score": null,
+          "reviewReasons": [
+            "SOURCE_DOES_NOT_DEFINE_TOTAL_STRENGTH_THRESHOLDS",
+            "ROOT_CONVENTION_ONLY_PARTIALLY_REVIEWED",
+            "HOUR_UNOBSERVED",
+            "SUPPORT_AND_OUTPUT_WEALTH_CONTROL_COEXIST"
+          ],
+          "commandRelations": [
+            {
+              "dayStem": "갑",
+              "targetStem": "무",
+              "direction": "day-controls-target",
+              "samePolarity": true,
+              "label": "편재",
+              "terminologyPolicy": "korean-ten-gods-research-v1",
+              "sources": [
+                {
+                  "id": "yuanhai-1926-ntl-9900014379",
+                  "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                  "pdfPage": 51,
+                  "sectionId": "element-cycles"
+                },
+                {
+                  "id": "yuanhai-1926-ntl-9900014379",
+                  "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                  "pdfPage": 56,
+                  "sectionId": "day-reference-officer-wealth"
+                },
+                {
+                  "id": "yuanhai-1926-ntl-9900014379",
+                  "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                  "pdfPage": 107,
+                  "sectionId": "indirect-wealth-examples"
+                }
+              ],
+              "certainty": "all-candidates"
+            }
+          ],
+          "monthExposures": [
+            {
+              "position": "year",
+              "stem": "갑",
+              "witnesses": [
+                {
+                  "month": "병인",
+                  "year": "갑진"
+                }
+              ],
+              "certainty": "all-candidates",
+              "jointFeasibility": "universal-over-supplied-candidates",
+              "id": "month-exposure:year:갑",
+              "sources": [
+                {
+                  "id": "ziping-1926-nlc-46443-vol2",
+                  "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                  "pdfPages": [
+                    26,
+                    27
+                  ],
+                  "sectionId": "month-exposure"
+                },
+                {
+                  "id": "yuanhai-1926-ntl-9900014379",
+                  "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                  "pdfPage": 54,
+                  "sectionId": "hidden-stems"
+                }
+              ]
+            },
+            {
+              "position": "month",
+              "stem": "병",
+              "witnesses": [
+                {
+                  "month": "병인"
+                }
+              ],
+              "certainty": "all-candidates",
+              "jointFeasibility": "universal-over-supplied-candidates",
+              "id": "month-exposure:month:병",
+              "sources": [
+                {
+                  "id": "ziping-1926-nlc-46443-vol2",
+                  "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                  "pdfPages": [
+                    26,
+                    27
+                  ],
+                  "sectionId": "month-exposure"
+                },
+                {
+                  "id": "yuanhai-1926-ntl-9900014379",
+                  "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                  "pdfPage": 54,
+                  "sectionId": "hidden-stems"
+                }
+              ]
+            }
+          ],
+          "hiddenStemRootObservations": [
+            {
+              "position": "year",
+              "hiddenStem": "을",
+              "match": "same-element-other-polarity",
+              "witnesses": [
+                {
+                  "day": "갑진",
+                  "year": "갑진"
+                }
+              ],
+              "certainty": "all-candidates",
+              "jointFeasibility": "universal-over-supplied-candidates",
+              "id": "root:year:을:same-element-other-polarity",
+              "sources": [
+                {
+                  "id": "ziping-1926-nlc-46443-vol2",
+                  "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                  "pdfPages": [
+                    21,
+                    22
+                  ],
+                  "sectionId": "root-context"
+                },
+                {
+                  "id": "yuanhai-1926-ntl-9900014379",
+                  "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                  "pdfPage": 54,
+                  "sectionId": "hidden-stems"
+                }
+              ],
+              "rootGrade": null
+            },
+            {
+              "position": "month",
+              "hiddenStem": "갑",
+              "match": "exact-stem",
+              "witnesses": [
+                {
+                  "day": "갑진",
+                  "month": "병인"
+                }
+              ],
+              "certainty": "all-candidates",
+              "jointFeasibility": "universal-over-supplied-candidates",
+              "id": "root:month:갑:exact-stem",
+              "sources": [
+                {
+                  "id": "ziping-1926-nlc-46443-vol2",
+                  "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                  "pdfPages": [
+                    21,
+                    22
+                  ],
+                  "sectionId": "root-context"
+                },
+                {
+                  "id": "yuanhai-1926-ntl-9900014379",
+                  "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                  "pdfPage": 54,
+                  "sectionId": "hidden-stems"
+                }
+              ],
+              "rootGrade": null
+            },
+            {
+              "position": "day",
+              "hiddenStem": "을",
+              "match": "same-element-other-polarity",
+              "witnesses": [
+                {
+                  "day": "갑진"
+                }
+              ],
+              "certainty": "all-candidates",
+              "jointFeasibility": "universal-over-supplied-candidates",
+              "id": "root:day:을:same-element-other-polarity",
+              "sources": [
+                {
+                  "id": "ziping-1926-nlc-46443-vol2",
+                  "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                  "pdfPages": [
+                    21,
+                    22
+                  ],
+                  "sectionId": "root-context"
+                },
+                {
+                  "id": "yuanhai-1926-ntl-9900014379",
+                  "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                  "pdfPage": 54,
+                  "sectionId": "hidden-stems"
+                }
+              ],
+              "rootGrade": null
+            }
+          ],
+          "sourceRootAssessments": [
+            {
+              "position": "year",
+              "alternatives": [
+                {
+                  "status": "not-covered-by-selected-examples",
+                  "stem": "갑",
+                  "branch": "진",
+                  "kind": null,
+                  "grade": null,
+                  "weight": null,
+                  "sources": [],
+                  "witnesses": [
+                    {
+                      "day": "갑진",
+                      "year": "갑진"
+                    }
+                  ],
+                  "certainty": "all-candidates",
+                  "jointFeasibility": "universal-over-supplied-candidates"
+                }
+              ],
+              "coverage": "not-covered-by-selected-examples"
+            },
+            {
+              "position": "month",
+              "alternatives": [
+                {
+                  "status": "source-example",
+                  "id": "root-example:갑인",
+                  "stem": "갑",
+                  "branch": "인",
+                  "kind": "salary",
+                  "grade": "heavy",
+                  "weight": null,
+                  "sources": [
+                    {
+                      "id": "ziping-1926-nlc-46443-vol2",
+                      "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                      "transcriptionSha256": "e9cb22645b1120ce77e4305d29fb6449d393f06787c0cac9dd5e11bb2f3f6124",
+                      "sectionId": "heavy-root-examples",
+                      "pdfPages": [
+                        21
+                      ]
+                    },
+                    {
+                      "id": "ziping-1926-nlc-46443-vol2",
+                      "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                      "transcriptionSha256": "e9cb22645b1120ce77e4305d29fb6449d393f06787c0cac9dd5e11bb2f3f6124",
+                      "sectionId": "root-classes",
+                      "pdfPages": [
+                        21
+                      ]
+                    }
+                  ],
+                  "witnesses": [
+                    {
+                      "day": "갑진",
+                      "month": "병인"
+                    }
+                  ],
+                  "certainty": "all-candidates",
+                  "jointFeasibility": "universal-over-supplied-candidates"
+                }
+              ],
+              "coverage": "selected-examples-cover-all-candidates"
+            },
+            {
+              "position": "day",
+              "alternatives": [
+                {
+                  "status": "not-covered-by-selected-examples",
+                  "stem": "갑",
+                  "branch": "진",
+                  "kind": null,
+                  "grade": null,
+                  "weight": null,
+                  "sources": [],
+                  "witnesses": [
+                    {
+                      "day": "갑진"
+                    }
+                  ],
+                  "certainty": "all-candidates",
+                  "jointFeasibility": "universal-over-supplied-candidates"
+                }
+              ],
+              "coverage": "not-covered-by-selected-examples"
+            }
+          ],
+          "factors": [
+            {
+              "id": "year:visible:갑:비견",
+              "position": "year",
+              "layer": "visible",
+              "targetStem": "갑",
+              "label": "비견",
+              "direction": "same-element",
+              "samePolarity": true,
+              "terminologyPolicy": "korean-ten-gods-research-v1",
+              "certainty": "all-candidates",
+              "jointFeasibility": "universal-over-supplied-candidates",
+              "witnesses": [
+                {
+                  "dayPillar": "갑진",
+                  "targetPillar": "갑진"
+                }
+              ],
+              "sources": [
+                {
+                  "id": "yuanhai-1926-ntl-9900014379",
+                  "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                  "pdfPage": 52,
+                  "sectionId": "relation-directions"
+                },
+                {
+                  "id": "yuanhai-1926-ntl-9900014379",
+                  "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                  "pdfPage": 112,
+                  "sectionId": "peer-terminology-variants"
+                }
+              ],
+              "weight": null,
+              "interpretation": null,
+              "role": "support-relation"
+            },
+            {
+              "id": "year:hidden:계:정인",
+              "position": "year",
+              "layer": "hidden",
+              "targetStem": "계",
+              "label": "정인",
+              "direction": "target-produces-day",
+              "samePolarity": false,
+              "terminologyPolicy": "korean-ten-gods-research-v1",
+              "certainty": "all-candidates",
+              "jointFeasibility": "universal-over-supplied-candidates",
+              "witnesses": [
+                {
+                  "dayPillar": "갑진",
+                  "targetPillar": "갑진"
+                }
+              ],
+              "sources": [
+                {
+                  "id": "yuanhai-1926-ntl-9900014379",
+                  "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                  "pdfPage": 51,
+                  "sectionId": "element-cycles"
+                },
+                {
+                  "id": "yuanhai-1926-ntl-9900014379",
+                  "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                  "pdfPage": 57,
+                  "sectionId": "resource-output"
+                },
+                {
+                  "id": "yuanhai-1926-ntl-9900014379",
+                  "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                  "pdfPage": 54,
+                  "sectionId": "hidden-stems"
+                }
+              ],
+              "weight": null,
+              "interpretation": null,
+              "role": "support-relation"
+            },
+            {
+              "id": "year:hidden:무:편재",
+              "position": "year",
+              "layer": "hidden",
+              "targetStem": "무",
+              "label": "편재",
+              "direction": "day-controls-target",
+              "samePolarity": true,
+              "terminologyPolicy": "korean-ten-gods-research-v1",
+              "certainty": "all-candidates",
+              "jointFeasibility": "universal-over-supplied-candidates",
+              "witnesses": [
+                {
+                  "dayPillar": "갑진",
+                  "targetPillar": "갑진"
+                }
+              ],
+              "sources": [
+                {
+                  "id": "yuanhai-1926-ntl-9900014379",
+                  "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                  "pdfPage": 51,
+                  "sectionId": "element-cycles"
+                },
+                {
+                  "id": "yuanhai-1926-ntl-9900014379",
+                  "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                  "pdfPage": 56,
+                  "sectionId": "day-reference-officer-wealth"
+                },
+                {
+                  "id": "yuanhai-1926-ntl-9900014379",
+                  "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                  "pdfPage": 107,
+                  "sectionId": "indirect-wealth-examples"
+                },
+                {
+                  "id": "yuanhai-1926-ntl-9900014379",
+                  "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                  "pdfPage": 54,
+                  "sectionId": "hidden-stems"
+                }
+              ],
+              "weight": null,
+              "interpretation": null,
+              "role": "output-wealth-or-control-relation"
+            },
+            {
+              "id": "year:hidden:을:겁재",
+              "position": "year",
+              "layer": "hidden",
+              "targetStem": "을",
+              "label": "겁재",
+              "direction": "same-element",
+              "samePolarity": false,
+              "terminologyPolicy": "korean-ten-gods-research-v1",
+              "certainty": "all-candidates",
+              "jointFeasibility": "universal-over-supplied-candidates",
+              "witnesses": [
+                {
+                  "dayPillar": "갑진",
+                  "targetPillar": "갑진"
+                }
+              ],
+              "sources": [
+                {
+                  "id": "yuanhai-1926-ntl-9900014379",
+                  "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                  "pdfPage": 52,
+                  "sectionId": "relation-directions"
+                },
+                {
+                  "id": "yuanhai-1926-ntl-9900014379",
+                  "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                  "pdfPage": 112,
+                  "sectionId": "peer-terminology-variants"
+                },
+                {
+                  "id": "yuanhai-1926-ntl-9900014379",
+                  "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                  "pdfPage": 54,
+                  "sectionId": "hidden-stems"
+                }
+              ],
+              "weight": null,
+              "interpretation": null,
+              "role": "support-relation"
+            },
+            {
+              "id": "month:visible:병:식신",
+              "position": "month",
+              "layer": "visible",
+              "targetStem": "병",
+              "label": "식신",
+              "direction": "day-produces-target",
+              "samePolarity": true,
+              "terminologyPolicy": "korean-ten-gods-research-v1",
+              "certainty": "all-candidates",
+              "jointFeasibility": "universal-over-supplied-candidates",
+              "witnesses": [
+                {
+                  "dayPillar": "갑진",
+                  "targetPillar": "병인"
+                }
+              ],
+              "sources": [
+                {
+                  "id": "yuanhai-1926-ntl-9900014379",
+                  "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                  "pdfPage": 51,
+                  "sectionId": "element-cycles"
+                },
+                {
+                  "id": "yuanhai-1926-ntl-9900014379",
+                  "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                  "pdfPage": 57,
+                  "sectionId": "resource-output"
+                },
+                {
+                  "id": "yuanhai-1926-ntl-9900014379",
+                  "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                  "pdfPage": 108,
+                  "sectionId": "food-god-examples"
+                }
+              ],
+              "weight": null,
+              "interpretation": null,
+              "role": "output-wealth-or-control-relation"
+            },
+            {
+              "id": "month:hidden:갑:비견",
+              "position": "month",
+              "layer": "hidden",
+              "targetStem": "갑",
+              "label": "비견",
+              "direction": "same-element",
+              "samePolarity": true,
+              "terminologyPolicy": "korean-ten-gods-research-v1",
+              "certainty": "all-candidates",
+              "jointFeasibility": "universal-over-supplied-candidates",
+              "witnesses": [
+                {
+                  "dayPillar": "갑진",
+                  "targetPillar": "병인"
+                }
+              ],
+              "sources": [
+                {
+                  "id": "yuanhai-1926-ntl-9900014379",
+                  "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                  "pdfPage": 52,
+                  "sectionId": "relation-directions"
+                },
+                {
+                  "id": "yuanhai-1926-ntl-9900014379",
+                  "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                  "pdfPage": 112,
+                  "sectionId": "peer-terminology-variants"
+                },
+                {
+                  "id": "yuanhai-1926-ntl-9900014379",
+                  "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                  "pdfPage": 54,
+                  "sectionId": "hidden-stems"
+                }
+              ],
+              "weight": null,
+              "interpretation": null,
+              "role": "support-relation"
+            },
+            {
+              "id": "month:hidden:무:편재",
+              "position": "month",
+              "layer": "hidden",
+              "targetStem": "무",
+              "label": "편재",
+              "direction": "day-controls-target",
+              "samePolarity": true,
+              "terminologyPolicy": "korean-ten-gods-research-v1",
+              "certainty": "all-candidates",
+              "jointFeasibility": "universal-over-supplied-candidates",
+              "witnesses": [
+                {
+                  "dayPillar": "갑진",
+                  "targetPillar": "병인"
+                }
+              ],
+              "sources": [
+                {
+                  "id": "yuanhai-1926-ntl-9900014379",
+                  "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                  "pdfPage": 51,
+                  "sectionId": "element-cycles"
+                },
+                {
+                  "id": "yuanhai-1926-ntl-9900014379",
+                  "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                  "pdfPage": 56,
+                  "sectionId": "day-reference-officer-wealth"
+                },
+                {
+                  "id": "yuanhai-1926-ntl-9900014379",
+                  "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                  "pdfPage": 107,
+                  "sectionId": "indirect-wealth-examples"
+                },
+                {
+                  "id": "yuanhai-1926-ntl-9900014379",
+                  "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                  "pdfPage": 54,
+                  "sectionId": "hidden-stems"
+                }
+              ],
+              "weight": null,
+              "interpretation": null,
+              "role": "output-wealth-or-control-relation"
+            },
+            {
+              "id": "month:hidden:병:식신",
+              "position": "month",
+              "layer": "hidden",
+              "targetStem": "병",
+              "label": "식신",
+              "direction": "day-produces-target",
+              "samePolarity": true,
+              "terminologyPolicy": "korean-ten-gods-research-v1",
+              "certainty": "all-candidates",
+              "jointFeasibility": "universal-over-supplied-candidates",
+              "witnesses": [
+                {
+                  "dayPillar": "갑진",
+                  "targetPillar": "병인"
+                }
+              ],
+              "sources": [
+                {
+                  "id": "yuanhai-1926-ntl-9900014379",
+                  "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                  "pdfPage": 51,
+                  "sectionId": "element-cycles"
+                },
+                {
+                  "id": "yuanhai-1926-ntl-9900014379",
+                  "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                  "pdfPage": 57,
+                  "sectionId": "resource-output"
+                },
+                {
+                  "id": "yuanhai-1926-ntl-9900014379",
+                  "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                  "pdfPage": 108,
+                  "sectionId": "food-god-examples"
+                },
+                {
+                  "id": "yuanhai-1926-ntl-9900014379",
+                  "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                  "pdfPage": 54,
+                  "sectionId": "hidden-stems"
+                }
+              ],
+              "weight": null,
+              "interpretation": null,
+              "role": "output-wealth-or-control-relation"
+            },
+            {
+              "id": "day:hidden:계:정인",
+              "position": "day",
+              "layer": "hidden",
+              "targetStem": "계",
+              "label": "정인",
+              "direction": "target-produces-day",
+              "samePolarity": false,
+              "terminologyPolicy": "korean-ten-gods-research-v1",
+              "certainty": "all-candidates",
+              "jointFeasibility": "universal-over-supplied-candidates",
+              "witnesses": [
+                {
+                  "dayPillar": "갑진",
+                  "targetPillar": "갑진"
+                }
+              ],
+              "sources": [
+                {
+                  "id": "yuanhai-1926-ntl-9900014379",
+                  "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                  "pdfPage": 51,
+                  "sectionId": "element-cycles"
+                },
+                {
+                  "id": "yuanhai-1926-ntl-9900014379",
+                  "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                  "pdfPage": 57,
+                  "sectionId": "resource-output"
+                },
+                {
+                  "id": "yuanhai-1926-ntl-9900014379",
+                  "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                  "pdfPage": 54,
+                  "sectionId": "hidden-stems"
+                }
+              ],
+              "weight": null,
+              "interpretation": null,
+              "role": "support-relation"
+            },
+            {
+              "id": "day:hidden:무:편재",
+              "position": "day",
+              "layer": "hidden",
+              "targetStem": "무",
+              "label": "편재",
+              "direction": "day-controls-target",
+              "samePolarity": true,
+              "terminologyPolicy": "korean-ten-gods-research-v1",
+              "certainty": "all-candidates",
+              "jointFeasibility": "universal-over-supplied-candidates",
+              "witnesses": [
+                {
+                  "dayPillar": "갑진",
+                  "targetPillar": "갑진"
+                }
+              ],
+              "sources": [
+                {
+                  "id": "yuanhai-1926-ntl-9900014379",
+                  "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                  "pdfPage": 51,
+                  "sectionId": "element-cycles"
+                },
+                {
+                  "id": "yuanhai-1926-ntl-9900014379",
+                  "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                  "pdfPage": 56,
+                  "sectionId": "day-reference-officer-wealth"
+                },
+                {
+                  "id": "yuanhai-1926-ntl-9900014379",
+                  "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                  "pdfPage": 107,
+                  "sectionId": "indirect-wealth-examples"
+                },
+                {
+                  "id": "yuanhai-1926-ntl-9900014379",
+                  "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                  "pdfPage": 54,
+                  "sectionId": "hidden-stems"
+                }
+              ],
+              "weight": null,
+              "interpretation": null,
+              "role": "output-wealth-or-control-relation"
+            },
+            {
+              "id": "day:hidden:을:겁재",
+              "position": "day",
+              "layer": "hidden",
+              "targetStem": "을",
+              "label": "겁재",
+              "direction": "same-element",
+              "samePolarity": false,
+              "terminologyPolicy": "korean-ten-gods-research-v1",
+              "certainty": "all-candidates",
+              "jointFeasibility": "universal-over-supplied-candidates",
+              "witnesses": [
+                {
+                  "dayPillar": "갑진",
+                  "targetPillar": "갑진"
+                }
+              ],
+              "sources": [
+                {
+                  "id": "yuanhai-1926-ntl-9900014379",
+                  "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                  "pdfPage": 52,
+                  "sectionId": "relation-directions"
+                },
+                {
+                  "id": "yuanhai-1926-ntl-9900014379",
+                  "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                  "pdfPage": 112,
+                  "sectionId": "peer-terminology-variants"
+                },
+                {
+                  "id": "yuanhai-1926-ntl-9900014379",
+                  "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                  "pdfPage": 54,
+                  "sectionId": "hidden-stems"
+                }
+              ],
+              "weight": null,
+              "interpretation": null,
+              "role": "support-relation"
+            }
+          ],
+          "aggregationPolicy": "No tally, majority vote, numeric weights or source-order rank. Day reference is not an extra peer.",
+          "sourcePolicy": "Keep static hidden stems, temporal command, and edition-specific roots distinct.",
+          "sourceExamples": {
+            "ruleVersion": "cross-source-strength-transformation-review-v1",
+            "productionApproved": false,
+            "coverage": [
+              {
+                "side": "self",
+                "includedPositions": [
+                  "year",
+                  "month",
+                  "day"
+                ],
+                "omittedPositions": [
+                  "hour"
+                ],
+                "clockReviewRequired": false,
+                "boundaryReviewRequired": false
+              }
+            ],
+            "status": "outside-reviewed-examples",
+            "matches": [],
+            "classification": null,
+            "score": null,
+            "moderation": null,
+            "policy": "Exact reference-case recognition only. No nearest-neighbour inference, default balance, majority, numeric threshold or life outcome.",
+            "criteria": [
+              {
+                "id": "season-not-sufficient",
+                "source": {
+                  "sourceId": "ditian-1947",
+                  "sectionId": "strength-extremes",
+                  "pdfPages": [
+                    175,
+                    176,
+                    177,
+                    188
+                  ],
+                  "url": "https://upload.wikimedia.org/wikipedia/commons/d/db/SSID-11335994_%E6%BB%B4%E5%A4%A9%E9%AB%93%E9%97%A1%E5%BE%AE.pdf",
+                  "pdfSha256": "d6a7d1daf6513ce9fb9940ff8331b96804c10cdafbeac00d4d3d0a37229e1803"
+                }
+              },
+              {
+                "id": "roots-not-visible-count",
+                "source": {
+                  "sourceId": "ditian-1947",
+                  "sectionId": "strength-extremes",
+                  "pdfPages": [
+                    175,
+                    176,
+                    177,
+                    188
+                  ],
+                  "url": "https://upload.wikimedia.org/wikipedia/commons/d/db/SSID-11335994_%E6%BB%B4%E5%A4%A9%E9%AB%93%E9%97%A1%E5%BE%AE.pdf",
+                  "pdfSha256": "d6a7d1daf6513ce9fb9940ff8331b96804c10cdafbeac00d4d3d0a37229e1803"
+                }
+              },
+              {
+                "id": "too-and-extreme-are-distinct",
+                "source": {
+                  "sourceId": "ditian-1947",
+                  "sectionId": "strength-extremes",
+                  "pdfPages": [
+                    175,
+                    176,
+                    177,
+                    188
+                  ],
+                  "url": "https://upload.wikimedia.org/wikipedia/commons/d/db/SSID-11335994_%E6%BB%B4%E5%A4%A9%E9%AB%93%E9%97%A1%E5%BE%AE.pdf",
+                  "pdfSha256": "d6a7d1daf6513ce9fb9940ff8331b96804c10cdafbeac00d4d3d0a37229e1803"
+                }
+              },
+              {
+                "id": "moderation-is-relational-not-a-zero-score",
+                "source": {
+                  "sourceId": "ditian-1947",
+                  "sectionId": "moderation",
+                  "pdfPages": [
+                    188,
+                    189
+                  ],
+                  "url": "https://upload.wikimedia.org/wikipedia/commons/d/db/SSID-11335994_%E6%BB%B4%E5%A4%A9%E9%AB%93%E9%97%A1%E5%BE%AE.pdf",
+                  "pdfSha256": "d6a7d1daf6513ce9fb9940ff8331b96804c10cdafbeac00d4d3d0a37229e1803"
+                }
+              }
+            ]
+          }
+        },
+        "transformation": {
+          "ruleVersion": "cross-source-strength-transformation-review-v1",
+          "productionApproved": false,
+          "coverage": [
+            {
+              "side": "self",
+              "includedPositions": [
+                "year",
+                "month",
+                "day"
+              ],
+              "omittedPositions": [
+                "hour"
+              ],
+              "clockReviewRequired": false,
+              "boundaryReviewRequired": false
+            }
+          ],
+          "status": "source-cardinality-conflict",
+          "alternatives": [
+            {
+              "pair": "갑기",
+              "targetElement": "토",
+              "monthRoute": "unlisted-month",
+              "presence": "unknown",
+              "partnerPositions": [],
+              "cardinality": "source-rule-failed",
+              "status": "source-cardinality-conflict",
+              "hourSupportRoute": "not-adjudicated",
+              "moderation": "not-adjudicated",
+              "transformationEstablished": null,
+              "transformedElement": null
+            }
+          ],
+          "common": {
+            "pair": "갑기",
+            "monthRoute": "unlisted-month",
+            "presence": "unknown",
+            "cardinality": "source-rule-failed"
+          },
+          "transformationEstablished": null,
+          "transformedElement": null,
+          "candidatePolicy": "Universal over supplied marginal combinations; partial combinations are not proved jointly feasible. No probabilities.",
+          "sourcePolicy": "Mingli Jicheng quotation of Sanming Tonghui: one-of-each screen is an explicit research generalization of the paragraph, not a universal rule across editions.",
+          "unresolved": [
+            "Hour-only support route has no reviewed complete algorithm",
+            "Seasonal qualification and pair cardinality are not sufficient",
+            "Day strength and transformation moderation are distinct; no threshold is transferred between them",
+            "Competing source conventions and intervening obstruction require separate review"
+          ],
+          "sources": [
+            {
+              "sourceId": "mingli-1932",
+              "sectionId": "five-pair-months",
+              "pdfPages": [
+                28
+              ],
+              "url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/NLC416-13jh001663-59235_%E5%91%BD%E7%90%86%E9%9B%86%E6%88%90.pdf",
+              "pdfSha256": "dbb50d8f5daf8a30269273a3e5dc787133deabd944e76e28d592e58a97348501"
+            },
+            {
+              "sourceId": "mingli-1932",
+              "sectionId": "pair-cardinality-and-hour-route",
+              "pdfPages": [
+                28
+              ],
+              "url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/NLC416-13jh001663-59235_%E5%91%BD%E7%90%86%E9%9B%86%E6%88%90.pdf",
+              "pdfSha256": "dbb50d8f5daf8a30269273a3e5dc787133deabd944e76e28d592e58a97348501"
+            },
+            {
+              "sourceId": "mingli-1932",
+              "sectionId": "true-false-not-binary-season",
+              "pdfPages": [
+                30
+              ],
+              "url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/NLC416-13jh001663-59235_%E5%91%BD%E7%90%86%E9%9B%86%E6%88%90.pdf",
+              "pdfSha256": "dbb50d8f5daf8a30269273a3e5dc787133deabd944e76e28d592e58a97348501"
+            }
+          ]
+        },
+        "priorJiaJiConvention": {
+          "ruleVersion": "seasonal-strength-transformation-review-v1",
+          "productionApproved": false,
+          "scope": "Jia-Ji day-stem combination only; other pairs have no condition model here.",
+          "dependencies": {
+            "contextRuleVersion": "month-combination-context-research-v1",
+            "natalRuleVersion": "natal-definitions-research-v1",
+            "symbolRuleVersion": "symbol-relations-research-v1",
+            "engineVersion": "research-civil-midnight-v5"
+          },
+          "coverage": [
+            {
+              "side": "self",
+              "includedPositions": [
+                "year",
+                "month",
+                "day"
+              ],
+              "omittedPositions": [
+                "hour"
+              ],
+              "clockReviewRequired": false,
+              "boundaryReviewRequired": false
+            }
+          ],
+          "status": "necessary-condition-failed",
+          "alternatives": [
+            {
+              "status": "necessary-condition-failed",
+              "reasons": [
+                "month-earth-branch",
+                "no-extra-jia"
+              ],
+              "checks": [
+                {
+                  "id": "month-earth-branch",
+                  "state": "failed"
+                },
+                {
+                  "id": "one-visible-partner",
+                  "state": "unknown"
+                },
+                {
+                  "id": "no-extra-jia",
+                  "state": "failed"
+                },
+                {
+                  "id": "no-visible-eul",
+                  "state": "unknown"
+                },
+                {
+                  "id": "no-explicit-intervening-obstruction",
+                  "state": "unknown"
+                }
+              ]
+            }
+          ],
+          "commonFailedChecks": [
+            "month-earth-branch",
+            "no-extra-jia"
+          ],
+          "candidatePolicy": "Universal over supplied marginal combinations; partial assignments not proved jointly feasible; no probabilities.",
+          "targetElement": "토",
+          "transformedElement": null,
+          "transformationEstablished": false,
+          "sources": [
+            {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "transcriptionSha256": "3c2bef1a4c92ff21373516338bf739b78a73aff0ed285e20a299f5ba64b75fb3",
+              "sectionId": "transformation-general",
+              "pdfPages": [
+                167
+              ]
+            },
+            {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "transcriptionSha256": "3c2bef1a4c92ff21373516338bf739b78a73aff0ed285e20a299f5ba64b75fb3",
+              "sectionId": "jia-ji-month-and-rivals",
+              "pdfPages": [
+                171
+              ]
+            }
+          ],
+          "unresolvedConditions": [
+            "Source moderation (太過/不及) has no reviewed numeric or exhaustive qualitative criterion",
+            "Other 合化 pairs and conflicts between source conventions remain unreviewed",
+            "Printed 甲乙 wording on page 171 is preserved, not silently emended",
+            "Passing necessary checks is not a sufficient proof of transformation"
+          ]
+        },
+        "comparisonPolicy": "Keep the earlier restrictive Jia-Ji convention visible; do not replace it or turn conflicting screens into a final verdict."
+      }
+    },
+    {
+      "id": "午-duration-conflict",
+      "review": {
+        "ruleVersion": "cross-source-strength-transformation-review-v1",
+        "productionApproved": false,
+        "dependencies": {
+          "engineVersion": "research-civil-midnight-v5",
+          "natalRuleVersion": "natal-definitions-research-v1",
+          "contextRuleVersion": "month-combination-context-research-v1",
+          "judgmentRuleVersion": "ziping-explicit-judgments-research-v1",
+          "commandRuleVersion": "yuanhai-command-nominal-days-v1"
+        },
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day"
+            ],
+            "omittedPositions": [
+              "hour"
+            ],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "seasonalCommand": {
+          "ruleVersion": "yuanhai-command-nominal-days-v1",
+          "engineVersion": "research-civil-midnight-v5",
+          "productionApproved": false,
+          "elapsedPolicy": "elapsed-86400-seconds; half-open intervals; no stretching or terminal clamping",
+          "source": {
+            "id": "yuanhai-1926-ntl-9900014379",
+            "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+            "transcriptionSha256": "3c2bef1a4c92ff21373516338bf739b78a73aff0ed285e20a299f5ba64b75fb3",
+            "sectionId": "command-allocation",
+            "pdfPages": [
+              53,
+              54
+            ]
+          },
+          "reviewMarginSeconds": 120,
+          "verifiedErrorBound": false,
+          "timeKnown": false,
+          "monthBranches": [
+            "오"
+          ],
+          "confirmedStem": null,
+          "status": "source-scheme-unresolved",
+          "alternatives": [
+            {
+              "branch": "오",
+              "status": "source-duration-conflict",
+              "candidateStems": [],
+              "confirmedStem": null,
+              "unallocated": true,
+              "source": {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "transcriptionSha256": "3c2bef1a4c92ff21373516338bf739b78a73aff0ed285e20a299f5ba64b75fb3",
+                "sectionId": "command-allocation",
+                "pdfPages": [
+                  53,
+                  54
+                ]
+              },
+              "nominalDays": 29
+            }
+          ]
+        },
+        "午Collation": {
+          "status": "29-days-corroborated-correction-unresolved",
+          "source": {
+            "sourceId": "yuanhai-1940",
+            "sectionId": "午-collation",
+            "pdfPages": [
+              18,
+              32,
+              33
+            ],
+            "url": "https://upload.wikimedia.org/wikipedia/commons/1/12/NLC416-12jh002712-40330_%E5%A2%9E%E8%A3%9C%E6%B7%B5%E6%B5%B7%E5%AD%90%E5%B9%B3%E9%9F%B3%E7%BE%A9%E8%A9%95%E8%A8%BB.pdf",
+            "pdfSha256": "bec8b389191895f7d95e194b8f4f6d1e2ade15f8a97b0d9751bf65ddf593995e"
+          }
+        },
+        "strength": {
+          "status": "not-adjudicated",
+          "classification": null,
+          "score": null,
+          "reviewReasons": [
+            "SOURCE_DOES_NOT_DEFINE_TOTAL_STRENGTH_THRESHOLDS",
+            "ROOT_CONVENTION_ONLY_PARTIALLY_REVIEWED",
+            "SEASONAL_COMMAND_UNRESOLVED",
+            "HOUR_UNOBSERVED",
+            "SUPPORT_AND_OUTPUT_WEALTH_CONTROL_COEXIST"
+          ],
+          "commandRelations": [],
+          "monthExposures": [],
+          "hiddenStemRootObservations": [
+            {
+              "position": "day",
+              "hiddenStem": "신",
+              "match": "same-element-other-polarity",
+              "witnesses": [
+                {
+                  "day": "경술"
+                }
+              ],
+              "certainty": "all-candidates",
+              "jointFeasibility": "universal-over-supplied-candidates",
+              "id": "root:day:신:same-element-other-polarity",
+              "sources": [
+                {
+                  "id": "ziping-1926-nlc-46443-vol2",
+                  "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                  "pdfPages": [
+                    21,
+                    22
+                  ],
+                  "sectionId": "root-context"
+                },
+                {
+                  "id": "yuanhai-1926-ntl-9900014379",
+                  "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                  "pdfPage": 54,
+                  "sectionId": "hidden-stems"
+                }
+              ],
+              "rootGrade": null
+            }
+          ],
+          "sourceRootAssessments": [
+            {
+              "position": "year",
+              "alternatives": [
+                {
+                  "status": "not-covered-by-selected-examples",
+                  "stem": "경",
+                  "branch": "진",
+                  "kind": null,
+                  "grade": null,
+                  "weight": null,
+                  "sources": [],
+                  "witnesses": [
+                    {
+                      "day": "경술",
+                      "year": "갑진"
+                    }
+                  ],
+                  "certainty": "all-candidates",
+                  "jointFeasibility": "universal-over-supplied-candidates"
+                }
+              ],
+              "coverage": "not-covered-by-selected-examples"
+            },
+            {
+              "position": "month",
+              "alternatives": [
+                {
+                  "status": "not-covered-by-selected-examples",
+                  "stem": "경",
+                  "branch": "오",
+                  "kind": null,
+                  "grade": null,
+                  "weight": null,
+                  "sources": [],
+                  "witnesses": [
+                    {
+                      "day": "경술",
+                      "month": "경오"
+                    }
+                  ],
+                  "certainty": "all-candidates",
+                  "jointFeasibility": "universal-over-supplied-candidates"
+                }
+              ],
+              "coverage": "not-covered-by-selected-examples"
+            },
+            {
+              "position": "day",
+              "alternatives": [
+                {
+                  "status": "not-covered-by-selected-examples",
+                  "stem": "경",
+                  "branch": "술",
+                  "kind": null,
+                  "grade": null,
+                  "weight": null,
+                  "sources": [],
+                  "witnesses": [
+                    {
+                      "day": "경술"
+                    }
+                  ],
+                  "certainty": "all-candidates",
+                  "jointFeasibility": "universal-over-supplied-candidates"
+                }
+              ],
+              "coverage": "not-covered-by-selected-examples"
+            }
+          ],
+          "factors": [
+            {
+              "id": "year:visible:갑:편재",
+              "position": "year",
+              "layer": "visible",
+              "targetStem": "갑",
+              "label": "편재",
+              "direction": "day-controls-target",
+              "samePolarity": true,
+              "terminologyPolicy": "korean-ten-gods-research-v1",
+              "certainty": "all-candidates",
+              "jointFeasibility": "universal-over-supplied-candidates",
+              "witnesses": [
+                {
+                  "dayPillar": "경술",
+                  "targetPillar": "갑진"
+                }
+              ],
+              "sources": [
+                {
+                  "id": "yuanhai-1926-ntl-9900014379",
+                  "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                  "pdfPage": 51,
+                  "sectionId": "element-cycles"
+                },
+                {
+                  "id": "yuanhai-1926-ntl-9900014379",
+                  "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                  "pdfPage": 56,
+                  "sectionId": "day-reference-officer-wealth"
+                },
+                {
+                  "id": "yuanhai-1926-ntl-9900014379",
+                  "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                  "pdfPage": 107,
+                  "sectionId": "indirect-wealth-examples"
+                }
+              ],
+              "weight": null,
+              "interpretation": null,
+              "role": "output-wealth-or-control-relation"
+            },
+            {
+              "id": "year:hidden:계:상관",
+              "position": "year",
+              "layer": "hidden",
+              "targetStem": "계",
+              "label": "상관",
+              "direction": "day-produces-target",
+              "samePolarity": false,
+              "terminologyPolicy": "korean-ten-gods-research-v1",
+              "certainty": "all-candidates",
+              "jointFeasibility": "universal-over-supplied-candidates",
+              "witnesses": [
+                {
+                  "dayPillar": "경술",
+                  "targetPillar": "갑진"
+                }
+              ],
+              "sources": [
+                {
+                  "id": "yuanhai-1926-ntl-9900014379",
+                  "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                  "pdfPage": 51,
+                  "sectionId": "element-cycles"
+                },
+                {
+                  "id": "yuanhai-1926-ntl-9900014379",
+                  "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                  "pdfPage": 57,
+                  "sectionId": "resource-output"
+                },
+                {
+                  "id": "yuanhai-1926-ntl-9900014379",
+                  "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                  "pdfPage": 108,
+                  "sectionId": "food-god-examples"
+                },
+                {
+                  "id": "yuanhai-1926-ntl-9900014379",
+                  "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                  "pdfPage": 54,
+                  "sectionId": "hidden-stems"
+                }
+              ],
+              "weight": null,
+              "interpretation": null,
+              "role": "output-wealth-or-control-relation"
+            },
+            {
+              "id": "year:hidden:무:편인",
+              "position": "year",
+              "layer": "hidden",
+              "targetStem": "무",
+              "label": "편인",
+              "direction": "target-produces-day",
+              "samePolarity": true,
+              "terminologyPolicy": "korean-ten-gods-research-v1",
+              "certainty": "all-candidates",
+              "jointFeasibility": "universal-over-supplied-candidates",
+              "witnesses": [
+                {
+                  "dayPillar": "경술",
+                  "targetPillar": "갑진"
+                }
+              ],
+              "sources": [
+                {
+                  "id": "yuanhai-1926-ntl-9900014379",
+                  "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                  "pdfPage": 51,
+                  "sectionId": "element-cycles"
+                },
+                {
+                  "id": "yuanhai-1926-ntl-9900014379",
+                  "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                  "pdfPage": 57,
+                  "sectionId": "resource-output"
+                },
+                {
+                  "id": "yuanhai-1926-ntl-9900014379",
+                  "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                  "pdfPage": 54,
+                  "sectionId": "hidden-stems"
+                }
+              ],
+              "weight": null,
+              "interpretation": null,
+              "role": "support-relation"
+            },
+            {
+              "id": "year:hidden:을:정재",
+              "position": "year",
+              "layer": "hidden",
+              "targetStem": "을",
+              "label": "정재",
+              "direction": "day-controls-target",
+              "samePolarity": false,
+              "terminologyPolicy": "korean-ten-gods-research-v1",
+              "certainty": "all-candidates",
+              "jointFeasibility": "universal-over-supplied-candidates",
+              "witnesses": [
+                {
+                  "dayPillar": "경술",
+                  "targetPillar": "갑진"
+                }
+              ],
+              "sources": [
+                {
+                  "id": "yuanhai-1926-ntl-9900014379",
+                  "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                  "pdfPage": 51,
+                  "sectionId": "element-cycles"
+                },
+                {
+                  "id": "yuanhai-1926-ntl-9900014379",
+                  "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                  "pdfPage": 56,
+                  "sectionId": "day-reference-officer-wealth"
+                },
+                {
+                  "id": "yuanhai-1926-ntl-9900014379",
+                  "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                  "pdfPage": 107,
+                  "sectionId": "indirect-wealth-examples"
+                },
+                {
+                  "id": "yuanhai-1926-ntl-9900014379",
+                  "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                  "pdfPage": 54,
+                  "sectionId": "hidden-stems"
+                }
+              ],
+              "weight": null,
+              "interpretation": null,
+              "role": "output-wealth-or-control-relation"
+            },
+            {
+              "id": "month:visible:경:비견",
+              "position": "month",
+              "layer": "visible",
+              "targetStem": "경",
+              "label": "비견",
+              "direction": "same-element",
+              "samePolarity": true,
+              "terminologyPolicy": "korean-ten-gods-research-v1",
+              "certainty": "all-candidates",
+              "jointFeasibility": "universal-over-supplied-candidates",
+              "witnesses": [
+                {
+                  "dayPillar": "경술",
+                  "targetPillar": "경오"
+                }
+              ],
+              "sources": [
+                {
+                  "id": "yuanhai-1926-ntl-9900014379",
+                  "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                  "pdfPage": 52,
+                  "sectionId": "relation-directions"
+                },
+                {
+                  "id": "yuanhai-1926-ntl-9900014379",
+                  "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                  "pdfPage": 112,
+                  "sectionId": "peer-terminology-variants"
+                }
+              ],
+              "weight": null,
+              "interpretation": null,
+              "role": "support-relation"
+            },
+            {
+              "id": "month:hidden:기:정인",
+              "position": "month",
+              "layer": "hidden",
+              "targetStem": "기",
+              "label": "정인",
+              "direction": "target-produces-day",
+              "samePolarity": false,
+              "terminologyPolicy": "korean-ten-gods-research-v1",
+              "certainty": "all-candidates",
+              "jointFeasibility": "universal-over-supplied-candidates",
+              "witnesses": [
+                {
+                  "dayPillar": "경술",
+                  "targetPillar": "경오"
+                }
+              ],
+              "sources": [
+                {
+                  "id": "yuanhai-1926-ntl-9900014379",
+                  "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                  "pdfPage": 51,
+                  "sectionId": "element-cycles"
+                },
+                {
+                  "id": "yuanhai-1926-ntl-9900014379",
+                  "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                  "pdfPage": 57,
+                  "sectionId": "resource-output"
+                },
+                {
+                  "id": "yuanhai-1926-ntl-9900014379",
+                  "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                  "pdfPage": 54,
+                  "sectionId": "hidden-stems"
+                }
+              ],
+              "weight": null,
+              "interpretation": null,
+              "role": "support-relation"
+            },
+            {
+              "id": "month:hidden:정:정관",
+              "position": "month",
+              "layer": "hidden",
+              "targetStem": "정",
+              "label": "정관",
+              "direction": "target-controls-day",
+              "samePolarity": false,
+              "terminologyPolicy": "korean-ten-gods-research-v1",
+              "certainty": "all-candidates",
+              "jointFeasibility": "universal-over-supplied-candidates",
+              "witnesses": [
+                {
+                  "dayPillar": "경술",
+                  "targetPillar": "경오"
+                }
+              ],
+              "sources": [
+                {
+                  "id": "yuanhai-1926-ntl-9900014379",
+                  "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                  "pdfPage": 51,
+                  "sectionId": "element-cycles"
+                },
+                {
+                  "id": "yuanhai-1926-ntl-9900014379",
+                  "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                  "pdfPage": 56,
+                  "sectionId": "day-reference-officer-wealth"
+                },
+                {
+                  "id": "yuanhai-1926-ntl-9900014379",
+                  "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                  "pdfPage": 54,
+                  "sectionId": "hidden-stems"
+                }
+              ],
+              "weight": null,
+              "interpretation": null,
+              "role": "output-wealth-or-control-relation"
+            },
+            {
+              "id": "day:hidden:무:편인",
+              "position": "day",
+              "layer": "hidden",
+              "targetStem": "무",
+              "label": "편인",
+              "direction": "target-produces-day",
+              "samePolarity": true,
+              "terminologyPolicy": "korean-ten-gods-research-v1",
+              "certainty": "all-candidates",
+              "jointFeasibility": "universal-over-supplied-candidates",
+              "witnesses": [
+                {
+                  "dayPillar": "경술",
+                  "targetPillar": "경술"
+                }
+              ],
+              "sources": [
+                {
+                  "id": "yuanhai-1926-ntl-9900014379",
+                  "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                  "pdfPage": 51,
+                  "sectionId": "element-cycles"
+                },
+                {
+                  "id": "yuanhai-1926-ntl-9900014379",
+                  "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                  "pdfPage": 57,
+                  "sectionId": "resource-output"
+                },
+                {
+                  "id": "yuanhai-1926-ntl-9900014379",
+                  "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                  "pdfPage": 54,
+                  "sectionId": "hidden-stems"
+                }
+              ],
+              "weight": null,
+              "interpretation": null,
+              "role": "support-relation"
+            },
+            {
+              "id": "day:hidden:신:겁재",
+              "position": "day",
+              "layer": "hidden",
+              "targetStem": "신",
+              "label": "겁재",
+              "direction": "same-element",
+              "samePolarity": false,
+              "terminologyPolicy": "korean-ten-gods-research-v1",
+              "certainty": "all-candidates",
+              "jointFeasibility": "universal-over-supplied-candidates",
+              "witnesses": [
+                {
+                  "dayPillar": "경술",
+                  "targetPillar": "경술"
+                }
+              ],
+              "sources": [
+                {
+                  "id": "yuanhai-1926-ntl-9900014379",
+                  "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                  "pdfPage": 52,
+                  "sectionId": "relation-directions"
+                },
+                {
+                  "id": "yuanhai-1926-ntl-9900014379",
+                  "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                  "pdfPage": 112,
+                  "sectionId": "peer-terminology-variants"
+                },
+                {
+                  "id": "yuanhai-1926-ntl-9900014379",
+                  "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                  "pdfPage": 54,
+                  "sectionId": "hidden-stems"
+                }
+              ],
+              "weight": null,
+              "interpretation": null,
+              "role": "support-relation"
+            },
+            {
+              "id": "day:hidden:정:정관",
+              "position": "day",
+              "layer": "hidden",
+              "targetStem": "정",
+              "label": "정관",
+              "direction": "target-controls-day",
+              "samePolarity": false,
+              "terminologyPolicy": "korean-ten-gods-research-v1",
+              "certainty": "all-candidates",
+              "jointFeasibility": "universal-over-supplied-candidates",
+              "witnesses": [
+                {
+                  "dayPillar": "경술",
+                  "targetPillar": "경술"
+                }
+              ],
+              "sources": [
+                {
+                  "id": "yuanhai-1926-ntl-9900014379",
+                  "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                  "pdfPage": 51,
+                  "sectionId": "element-cycles"
+                },
+                {
+                  "id": "yuanhai-1926-ntl-9900014379",
+                  "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                  "pdfPage": 56,
+                  "sectionId": "day-reference-officer-wealth"
+                },
+                {
+                  "id": "yuanhai-1926-ntl-9900014379",
+                  "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                  "pdfPage": 54,
+                  "sectionId": "hidden-stems"
+                }
+              ],
+              "weight": null,
+              "interpretation": null,
+              "role": "output-wealth-or-control-relation"
+            }
+          ],
+          "aggregationPolicy": "No tally, majority vote, numeric weights or source-order rank. Day reference is not an extra peer.",
+          "sourcePolicy": "Keep static hidden stems, temporal command, and edition-specific roots distinct.",
+          "sourceExamples": {
+            "ruleVersion": "cross-source-strength-transformation-review-v1",
+            "productionApproved": false,
+            "coverage": [
+              {
+                "side": "self",
+                "includedPositions": [
+                  "year",
+                  "month",
+                  "day"
+                ],
+                "omittedPositions": [
+                  "hour"
+                ],
+                "clockReviewRequired": false,
+                "boundaryReviewRequired": false
+              }
+            ],
+            "status": "outside-reviewed-examples",
+            "matches": [],
+            "classification": null,
+            "score": null,
+            "moderation": null,
+            "policy": "Exact reference-case recognition only. No nearest-neighbour inference, default balance, majority, numeric threshold or life outcome.",
+            "criteria": [
+              {
+                "id": "season-not-sufficient",
+                "source": {
+                  "sourceId": "ditian-1947",
+                  "sectionId": "strength-extremes",
+                  "pdfPages": [
+                    175,
+                    176,
+                    177,
+                    188
+                  ],
+                  "url": "https://upload.wikimedia.org/wikipedia/commons/d/db/SSID-11335994_%E6%BB%B4%E5%A4%A9%E9%AB%93%E9%97%A1%E5%BE%AE.pdf",
+                  "pdfSha256": "d6a7d1daf6513ce9fb9940ff8331b96804c10cdafbeac00d4d3d0a37229e1803"
+                }
+              },
+              {
+                "id": "roots-not-visible-count",
+                "source": {
+                  "sourceId": "ditian-1947",
+                  "sectionId": "strength-extremes",
+                  "pdfPages": [
+                    175,
+                    176,
+                    177,
+                    188
+                  ],
+                  "url": "https://upload.wikimedia.org/wikipedia/commons/d/db/SSID-11335994_%E6%BB%B4%E5%A4%A9%E9%AB%93%E9%97%A1%E5%BE%AE.pdf",
+                  "pdfSha256": "d6a7d1daf6513ce9fb9940ff8331b96804c10cdafbeac00d4d3d0a37229e1803"
+                }
+              },
+              {
+                "id": "too-and-extreme-are-distinct",
+                "source": {
+                  "sourceId": "ditian-1947",
+                  "sectionId": "strength-extremes",
+                  "pdfPages": [
+                    175,
+                    176,
+                    177,
+                    188
+                  ],
+                  "url": "https://upload.wikimedia.org/wikipedia/commons/d/db/SSID-11335994_%E6%BB%B4%E5%A4%A9%E9%AB%93%E9%97%A1%E5%BE%AE.pdf",
+                  "pdfSha256": "d6a7d1daf6513ce9fb9940ff8331b96804c10cdafbeac00d4d3d0a37229e1803"
+                }
+              },
+              {
+                "id": "moderation-is-relational-not-a-zero-score",
+                "source": {
+                  "sourceId": "ditian-1947",
+                  "sectionId": "moderation",
+                  "pdfPages": [
+                    188,
+                    189
+                  ],
+                  "url": "https://upload.wikimedia.org/wikipedia/commons/d/db/SSID-11335994_%E6%BB%B4%E5%A4%A9%E9%AB%93%E9%97%A1%E5%BE%AE.pdf",
+                  "pdfSha256": "d6a7d1daf6513ce9fb9940ff8331b96804c10cdafbeac00d4d3d0a37229e1803"
+                }
+              }
+            ]
+          }
+        },
+        "transformation": {
+          "ruleVersion": "cross-source-strength-transformation-review-v1",
+          "productionApproved": false,
+          "coverage": [
+            {
+              "side": "self",
+              "includedPositions": [
+                "year",
+                "month",
+                "day"
+              ],
+              "omittedPositions": [
+                "hour"
+              ],
+              "clockReviewRequired": false,
+              "boundaryReviewRequired": false
+            }
+          ],
+          "status": "source-cardinality-conflict",
+          "alternatives": [
+            {
+              "pair": "을경",
+              "targetElement": "금",
+              "monthRoute": "unlisted-month",
+              "presence": "unknown",
+              "partnerPositions": [],
+              "cardinality": "source-rule-failed",
+              "status": "source-cardinality-conflict",
+              "hourSupportRoute": "not-adjudicated",
+              "moderation": "not-adjudicated",
+              "transformationEstablished": null,
+              "transformedElement": null
+            }
+          ],
+          "common": {
+            "pair": "을경",
+            "monthRoute": "unlisted-month",
+            "presence": "unknown",
+            "cardinality": "source-rule-failed"
+          },
+          "transformationEstablished": null,
+          "transformedElement": null,
+          "candidatePolicy": "Universal over supplied marginal combinations; partial combinations are not proved jointly feasible. No probabilities.",
+          "sourcePolicy": "Mingli Jicheng quotation of Sanming Tonghui: one-of-each screen is an explicit research generalization of the paragraph, not a universal rule across editions.",
+          "unresolved": [
+            "Hour-only support route has no reviewed complete algorithm",
+            "Seasonal qualification and pair cardinality are not sufficient",
+            "Day strength and transformation moderation are distinct; no threshold is transferred between them",
+            "Competing source conventions and intervening obstruction require separate review"
+          ],
+          "sources": [
+            {
+              "sourceId": "mingli-1932",
+              "sectionId": "five-pair-months",
+              "pdfPages": [
+                28
+              ],
+              "url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/NLC416-13jh001663-59235_%E5%91%BD%E7%90%86%E9%9B%86%E6%88%90.pdf",
+              "pdfSha256": "dbb50d8f5daf8a30269273a3e5dc787133deabd944e76e28d592e58a97348501"
+            },
+            {
+              "sourceId": "mingli-1932",
+              "sectionId": "pair-cardinality-and-hour-route",
+              "pdfPages": [
+                28
+              ],
+              "url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/NLC416-13jh001663-59235_%E5%91%BD%E7%90%86%E9%9B%86%E6%88%90.pdf",
+              "pdfSha256": "dbb50d8f5daf8a30269273a3e5dc787133deabd944e76e28d592e58a97348501"
+            },
+            {
+              "sourceId": "mingli-1932",
+              "sectionId": "true-false-not-binary-season",
+              "pdfPages": [
+                30
+              ],
+              "url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/NLC416-13jh001663-59235_%E5%91%BD%E7%90%86%E9%9B%86%E6%88%90.pdf",
+              "pdfSha256": "dbb50d8f5daf8a30269273a3e5dc787133deabd944e76e28d592e58a97348501"
+            }
+          ]
+        },
+        "priorJiaJiConvention": {
+          "ruleVersion": "seasonal-strength-transformation-review-v1",
+          "productionApproved": false,
+          "scope": "Jia-Ji day-stem combination only; other pairs have no condition model here.",
+          "dependencies": {
+            "contextRuleVersion": "month-combination-context-research-v1",
+            "natalRuleVersion": "natal-definitions-research-v1",
+            "symbolRuleVersion": "symbol-relations-research-v1",
+            "engineVersion": "research-civil-midnight-v5"
+          },
+          "coverage": [
+            {
+              "side": "self",
+              "includedPositions": [
+                "year",
+                "month",
+                "day"
+              ],
+              "omittedPositions": [
+                "hour"
+              ],
+              "clockReviewRequired": false,
+              "boundaryReviewRequired": false
+            }
+          ],
+          "status": "outside-reviewed-pair",
+          "alternatives": [
+            {
+              "status": "outside-reviewed-pair",
+              "reasons": [
+                "day-stem-not-jia-or-ji"
+              ],
+              "checks": []
+            }
+          ],
+          "commonFailedChecks": [],
+          "candidatePolicy": "Universal over supplied marginal combinations; partial assignments not proved jointly feasible; no probabilities.",
+          "targetElement": "토",
+          "transformedElement": null,
+          "transformationEstablished": false,
+          "sources": [
+            {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "transcriptionSha256": "3c2bef1a4c92ff21373516338bf739b78a73aff0ed285e20a299f5ba64b75fb3",
+              "sectionId": "transformation-general",
+              "pdfPages": [
+                167
+              ]
+            },
+            {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "transcriptionSha256": "3c2bef1a4c92ff21373516338bf739b78a73aff0ed285e20a299f5ba64b75fb3",
+              "sectionId": "jia-ji-month-and-rivals",
+              "pdfPages": [
+                171
+              ]
+            }
+          ],
+          "unresolvedConditions": [
+            "Source moderation (太過/不及) has no reviewed numeric or exhaustive qualitative criterion",
+            "Other 合化 pairs and conflicts between source conventions remain unreviewed",
+            "Printed 甲乙 wording on page 171 is preserved, not silently emended",
+            "Passing necessary checks is not a sufficient proof of transformation"
+          ]
+        },
+        "comparisonPolicy": "Keep the earlier restrictive Jia-Ji convention visible; do not replace it or turn conflicting screens into a final verdict."
+      }
+    }
+  ]
+}
