@@ -1,0 +1,130 @@
+[
+  {
+    "year": 1988,
+    "index": 18,
+    "deltaTInput": "55",
+    "url": "https://eco.mtk.nao.ac.jp/cgi-bin/koyomi/cande/phenomena_sy.cgi?year=1988&lst=0&phenom=50&jg=1&dtm=99&dt=55",
+    "file": "1988-dt-55.html",
+    "retrieved": "2026-10-19",
+    "sha256": "e4edf57999d99b4832c7f816185ef48d006f3ad0af6128c57e02b6fc56048901",
+    "deltaTDisplayed": "55.0s (入力値)",
+    "term": {
+      "index": 18,
+      "name": "寒露",
+      "longitude": 195,
+      "ut": "1988-10-08T01:45:00Z"
+    }
+  },
+  {
+    "year": 1988,
+    "index": 18,
+    "deltaTInput": "56",
+    "url": "https://eco.mtk.nao.ac.jp/cgi-bin/koyomi/cande/phenomena_sy.cgi?year=1988&lst=0&phenom=50&jg=1&dtm=99&dt=56",
+    "file": "1988-dt-56.html",
+    "retrieved": "2026-10-19",
+    "sha256": "0ec7406b0323c19582f4dcbeec6fc396cb2cca60ebc71520b071d41d59338c4a",
+    "deltaTDisplayed": "56.0s (入力値)",
+    "term": {
+      "index": 18,
+      "name": "寒露",
+      "longitude": 195,
+      "ut": "1988-10-08T01:44:00Z"
+    }
+  },
+  {
+    "year": 1988,
+    "index": 18,
+    "deltaTInput": "57",
+    "url": "https://eco.mtk.nao.ac.jp/cgi-bin/koyomi/cande/phenomena_sy.cgi?year=1988&lst=0&phenom=50&jg=1&dtm=99&dt=57",
+    "file": "1988-dt-57.html",
+    "retrieved": "2026-10-19",
+    "sha256": "23dac57bf8787cc5ac0e3086ebc98e39424fe1423418cdbd3b14639435b205ea",
+    "deltaTDisplayed": "57.0s (入力値)",
+    "term": {
+      "index": 18,
+      "name": "寒露",
+      "longitude": 195,
+      "ut": "1988-10-08T01:44:00Z"
+    }
+  },
+  {
+    "year": 2024,
+    "index": 21,
+    "deltaTInput": "67",
+    "url": "https://eco.mtk.nao.ac.jp/cgi-bin/koyomi/cande/phenomena_sy.cgi?year=2024&lst=0&phenom=50&jg=1&dtm=99&dt=67",
+    "file": "2024-dt-67.html",
+    "retrieved": "2026-10-19",
+    "sha256": "acd1e5bfe74e6e9e5e483c5770b6566097ccdd4ecd80021588ad0dd6591ec5f8",
+    "deltaTDisplayed": "67.0s (入力値)",
+    "term": {
+      "index": 21,
+      "name": "小雪",
+      "longitude": 240,
+      "ut": "2024-11-21T19:57:00Z"
+    }
+  },
+  {
+    "year": 2024,
+    "index": 21,
+    "deltaTInput": "68",
+    "url": "https://eco.mtk.nao.ac.jp/cgi-bin/koyomi/cande/phenomena_sy.cgi?year=2024&lst=0&phenom=50&jg=1&dtm=99&dt=68",
+    "file": "2024-dt-68.html",
+    "retrieved": "2026-10-19",
+    "sha256": "c488ac546767019274c9f5115958e303b5328f7a81cf095ed1e8b52b42aadc0d",
+    "deltaTDisplayed": "68.0s (入力値)",
+    "term": {
+      "index": 21,
+      "name": "小雪",
+      "longitude": 240,
+      "ut": "2024-11-21T19:57:00Z"
+    }
+  },
+  {
+    "year": 2024,
+    "index": 21,
+    "deltaTInput": "69",
+    "url": "https://eco.mtk.nao.ac.jp/cgi-bin/koyomi/cande/phenomena_sy.cgi?year=2024&lst=0&phenom=50&jg=1&dtm=99&dt=69",
+    "file": "2024-dt-69.html",
+    "retrieved": "2026-10-19",
+    "sha256": "72793d68658c005db18f098bab3c1b22e0ddcf631e7d232dc5acbd170835d233",
+    "deltaTDisplayed": "69.0s (入力値)",
+    "term": {
+      "index": 21,
+      "name": "小雪",
+      "longitude": 240,
+      "ut": "2024-11-21T19:56:00Z"
+    }
+  },
+  {
+    "year": 1988,
+    "index": 18,
+    "deltaTInput": "55.1",
+    "url": "https://eco.mtk.nao.ac.jp/cgi-bin/koyomi/cande/phenomena_sy.cgi?year=1988&lst=0&phenom=50&jg=1&dtm=99&dt=55.1",
+    "file": "1988-dt-55.1.html",
+    "retrieved": "2026-10-19",
+    "sha256": "2648f3c6b07f79ae0271f0e02ce42ae56418703cc035feaa29d916ca7ddabe5d",
+    "deltaTDisplayed": "55.1s (入力値)",
+    "term": {
+      "index": 18,
+      "name": "寒露",
+      "longitude": 195,
+      "ut": "1988-10-08T01:44:00Z"
+    }
+  },
+  {
+    "year": 2024,
+    "index": 21,
+    "deltaTInput": "68.9",
+    "url": "https://eco.mtk.nao.ac.jp/cgi-bin/koyomi/cande/phenomena_sy.cgi?year=2024&lst=0&phenom=50&jg=1&dtm=99&dt=68.9",
+    "file": "2024-dt-68.9.html",
+    "retrieved": "2026-10-19",
+    "sha256": "e11297217099db3c87011d23b0f0511f1af036e2cb0f6b969e2fad5f82ca15ca",
+    "deltaTDisplayed": "68.9s (入力値)",
+    "term": {
+      "index": 21,
+      "name": "小雪",
+      "longitude": 240,
+      "ut": "2024-11-21T19:57:00Z"
+    }
+  }
+]

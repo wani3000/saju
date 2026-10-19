@@ -1,0 +1,384 @@
+{
+  "reference": "JPL DE440s / Skyfield 1.54 / IAU2000A, geocentric apparent solar longitude, TT",
+  "comparedTerms": 2856,
+  "years": [
+    1908,
+    2026
+  ],
+  "candidateMinusReferenceTT": {
+    "maxAbsoluteSeconds": 2.772,
+    "worst": {
+      "year": 1914,
+      "index": 19,
+      "seconds": 2.772
+    },
+    "meanAbsoluteSeconds": 0.543
+  },
+  "naojDisplayedMinuteCheck": {
+    "compared": 192,
+    "mismatches": [],
+    "convention": "Reference TT minus NAOJ printed annual delta-T, nearest-minute display; agreement is not a UTC-second accuracy claim."
+  },
+  "cases": [
+    {
+      "year": 1988,
+      "index": 18,
+      "upstreamMinusReferenceSeconds": 1.387,
+      "upstreamUTSameDeltaT": "1988-10-08T01:44:30.060",
+      "referenceUTSameDeltaT": "1988-10-08T01:44:28.673",
+      "deltaTSeconds": 56.42524077125779,
+      "referenceTT": "1988-10-08T01:45:25.098",
+      "naojTransition": {
+        "lowerDeltaT": "55",
+        "upperDeltaT": "55.1",
+        "laterDisplayedUT": "1988-10-08T01:45:00Z",
+        "earlierDisplayedUT": "1988-10-08T01:44:00Z",
+        "assumption": "If the display rounds to the nearest minute, TT lies in [lower, upper). The CGI does not publish exact seconds.",
+        "inferredTTLower": "1988-10-08T01:45:25.000",
+        "inferredTTUpper": "1988-10-08T01:45:25.100",
+        "referenceInsideConditionalInterval": true
+      },
+      "nutationSensitivity": {
+        "nutationTerms": 10,
+        "longitudeDifferenceArcseconds": -0.025,
+        "replacementShiftSeconds": -0.619,
+        "residualAfterReplacementSeconds": 0.769
+      },
+      "interpretation": "Small astronomical-model differences cross the 30-second rounding threshold. Nutation explains part, not all, of the offset; no evidence of a one-minute clock conversion error."
+    },
+    {
+      "year": 2024,
+      "index": 21,
+      "upstreamMinusReferenceSeconds": 1.304,
+      "upstreamUTSameDeltaT": "2024-11-21T19:56:31.156",
+      "referenceUTSameDeltaT": "2024-11-21T19:56:29.852",
+      "deltaTSeconds": 69.08570211221166,
+      "referenceTT": "2024-11-21T19:57:38.938",
+      "naojTransition": {
+        "lowerDeltaT": "68.9",
+        "upperDeltaT": "69",
+        "laterDisplayedUT": "2024-11-21T19:57:00Z",
+        "earlierDisplayedUT": "2024-11-21T19:56:00Z",
+        "assumption": "If the display rounds to the nearest minute, TT lies in [lower, upper). The CGI does not publish exact seconds.",
+        "inferredTTLower": "2024-11-21T19:57:38.900",
+        "inferredTTUpper": "2024-11-21T19:57:39.000",
+        "referenceInsideConditionalInterval": true
+      },
+      "nutationSensitivity": {
+        "nutationTerms": 10,
+        "longitudeDifferenceArcseconds": -0.033,
+        "replacementShiftSeconds": -0.797,
+        "residualAfterReplacementSeconds": 0.508
+      },
+      "interpretation": "Small astronomical-model differences cross the 30-second rounding threshold. Nutation explains part, not all, of the offset; no evidence of a one-minute clock conversion error."
+    }
+  ],
+  "doubleRounding": {
+    "count": 37,
+    "cases": [
+      {
+        "year": 1911,
+        "index": 11,
+        "unroundedUT": "1911-06-22T13:35:29.822",
+        "publicSecondUT": "1911-06-22T13:35:30.000",
+        "legacyMinuteUT": "1911-06-22T13:36:00.000",
+        "singleRoundedMinuteUT": "1911-06-22T13:35:00.000"
+      },
+      {
+        "year": 1921,
+        "index": 20,
+        "unroundedUT": "1921-11-07T22:45:29.755",
+        "publicSecondUT": "1921-11-07T22:45:30.000",
+        "legacyMinuteUT": "1921-11-07T22:46:00.000",
+        "singleRoundedMinuteUT": "1921-11-07T22:45:00.000"
+      },
+      {
+        "year": 1923,
+        "index": 17,
+        "unroundedUT": "1923-09-24T02:03:29.988",
+        "publicSecondUT": "1923-09-24T02:03:30.000",
+        "legacyMinuteUT": "1923-09-24T02:04:00.000",
+        "singleRoundedMinuteUT": "1923-09-24T02:03:00.000"
+      },
+      {
+        "year": 1924,
+        "index": 16,
+        "unroundedUT": "1924-09-07T22:45:29.955",
+        "publicSecondUT": "1924-09-07T22:45:30.000",
+        "legacyMinuteUT": "1924-09-07T22:46:00.000",
+        "singleRoundedMinuteUT": "1924-09-07T22:45:00.000"
+      },
+      {
+        "year": 1928,
+        "index": 14,
+        "unroundedUT": "1928-08-07T19:27:29.646",
+        "publicSecondUT": "1928-08-07T19:27:30.000",
+        "legacyMinuteUT": "1928-08-07T19:28:00.000",
+        "singleRoundedMinuteUT": "1928-08-07T19:27:00.000"
+      },
+      {
+        "year": 1928,
+        "index": 20,
+        "unroundedUT": "1928-11-07T15:49:29.506",
+        "publicSecondUT": "1928-11-07T15:49:30.000",
+        "legacyMinuteUT": "1928-11-07T15:50:00.000",
+        "singleRoundedMinuteUT": "1928-11-07T15:49:00.000"
+      },
+      {
+        "year": 1936,
+        "index": 8,
+        "unroundedUT": "1936-05-05T16:56:29.693",
+        "publicSecondUT": "1936-05-05T16:56:30.000",
+        "legacyMinuteUT": "1936-05-05T16:57:00.000",
+        "singleRoundedMinuteUT": "1936-05-05T16:56:00.000"
+      },
+      {
+        "year": 1944,
+        "index": 21,
+        "unroundedUT": "1944-11-22T10:07:29.785",
+        "publicSecondUT": "1944-11-22T10:07:30.000",
+        "legacyMinuteUT": "1944-11-22T10:08:00.000",
+        "singleRoundedMinuteUT": "1944-11-22T10:07:00.000"
+      },
+      {
+        "year": 1946,
+        "index": 3,
+        "unroundedUT": "1946-02-19T06:08:29.650",
+        "publicSecondUT": "1946-02-19T06:08:30.000",
+        "legacyMinuteUT": "1946-02-19T06:09:00.000",
+        "singleRoundedMinuteUT": "1946-02-19T06:08:00.000"
+      },
+      {
+        "year": 1948,
+        "index": 15,
+        "unroundedUT": "1948-08-23T06:02:29.509",
+        "publicSecondUT": "1948-08-23T06:02:30.000",
+        "legacyMinuteUT": "1948-08-23T06:03:00.000",
+        "singleRoundedMinuteUT": "1948-08-23T06:02:00.000"
+      },
+      {
+        "year": 1952,
+        "index": 11,
+        "unroundedUT": "1952-06-21T11:12:29.605",
+        "publicSecondUT": "1952-06-21T11:12:30.000",
+        "legacyMinuteUT": "1952-06-21T11:13:00.000",
+        "singleRoundedMinuteUT": "1952-06-21T11:12:00.000"
+      },
+      {
+        "year": 1953,
+        "index": 5,
+        "unroundedUT": "1953-03-20T22:00:29.549",
+        "publicSecondUT": "1953-03-20T22:00:30.000",
+        "legacyMinuteUT": "1953-03-20T22:01:00.000",
+        "singleRoundedMinuteUT": "1953-03-20T22:00:00.000"
+      },
+      {
+        "year": 1961,
+        "index": 15,
+        "unroundedUT": "1961-08-23T09:18:29.899",
+        "publicSecondUT": "1961-08-23T09:18:30.000",
+        "legacyMinuteUT": "1961-08-23T09:19:00.000",
+        "singleRoundedMinuteUT": "1961-08-23T09:18:00.000"
+      },
+      {
+        "year": 1962,
+        "index": 9,
+        "unroundedUT": "1962-05-21T13:16:29.769",
+        "publicSecondUT": "1962-05-21T13:16:30.000",
+        "legacyMinuteUT": "1962-05-21T13:17:00.000",
+        "singleRoundedMinuteUT": "1962-05-21T13:16:00.000"
+      },
+      {
+        "year": 1964,
+        "index": 18,
+        "unroundedUT": "1964-10-08T06:21:29.726",
+        "publicSecondUT": "1964-10-08T06:21:30.000",
+        "legacyMinuteUT": "1964-10-08T06:22:00.000",
+        "singleRoundedMinuteUT": "1964-10-08T06:21:00.000"
+      },
+      {
+        "year": 1966,
+        "index": 7,
+        "unroundedUT": "1966-04-20T13:11:29.991",
+        "publicSecondUT": "1966-04-20T13:11:30.000",
+        "legacyMinuteUT": "1966-04-20T13:12:00.000",
+        "singleRoundedMinuteUT": "1966-04-20T13:11:00.000"
+      },
+      {
+        "year": 1967,
+        "index": 1,
+        "unroundedUT": "1967-01-20T18:07:29.886",
+        "publicSecondUT": "1967-01-20T18:07:30.000",
+        "legacyMinuteUT": "1967-01-20T18:08:00.000",
+        "singleRoundedMinuteUT": "1967-01-20T18:07:00.000"
+      },
+      {
+        "year": 1975,
+        "index": 6,
+        "unroundedUT": "1975-04-05T10:01:29.775",
+        "publicSecondUT": "1975-04-05T10:01:30.000",
+        "legacyMinuteUT": "1975-04-05T10:02:00.000",
+        "singleRoundedMinuteUT": "1975-04-05T10:01:00.000"
+      },
+      {
+        "year": 1990,
+        "index": 13,
+        "unroundedUT": "1990-07-23T02:21:29.790",
+        "publicSecondUT": "1990-07-23T02:21:30.000",
+        "legacyMinuteUT": "1990-07-23T02:22:00.000",
+        "singleRoundedMinuteUT": "1990-07-23T02:21:00.000"
+      },
+      {
+        "year": 1990,
+        "index": 20,
+        "unroundedUT": "1990-11-07T16:23:29.946",
+        "publicSecondUT": "1990-11-07T16:23:30.000",
+        "legacyMinuteUT": "1990-11-07T16:24:00.000",
+        "singleRoundedMinuteUT": "1990-11-07T16:23:00.000"
+      },
+      {
+        "year": 1992,
+        "index": 3,
+        "unroundedUT": "1992-02-19T09:43:29.737",
+        "publicSecondUT": "1992-02-19T09:43:30.000",
+        "legacyMinuteUT": "1992-02-19T09:44:00.000",
+        "singleRoundedMinuteUT": "1992-02-19T09:43:00.000"
+      },
+      {
+        "year": 1993,
+        "index": 17,
+        "unroundedUT": "1993-09-23T00:22:29.744",
+        "publicSecondUT": "1993-09-23T00:22:30.000",
+        "legacyMinuteUT": "1993-09-23T00:23:00.000",
+        "singleRoundedMinuteUT": "1993-09-23T00:22:00.000"
+      },
+      {
+        "year": 1996,
+        "index": 1,
+        "unroundedUT": "1996-01-20T18:52:29.561",
+        "publicSecondUT": "1996-01-20T18:52:30.000",
+        "legacyMinuteUT": "1996-01-20T18:53:00.000",
+        "singleRoundedMinuteUT": "1996-01-20T18:52:00.000"
+      },
+      {
+        "year": 2000,
+        "index": 7,
+        "unroundedUT": "2000-04-19T18:39:29.726",
+        "publicSecondUT": "2000-04-19T18:39:30.000",
+        "legacyMinuteUT": "2000-04-19T18:40:00.000",
+        "singleRoundedMinuteUT": "2000-04-19T18:39:00.000"
+      },
+      {
+        "year": 2001,
+        "index": 23,
+        "unroundedUT": "2001-12-21T19:21:29.529",
+        "publicSecondUT": "2001-12-21T19:21:30.000",
+        "legacyMinuteUT": "2001-12-21T19:22:00.000",
+        "singleRoundedMinuteUT": "2001-12-21T19:21:00.000"
+      },
+      {
+        "year": 2008,
+        "index": 17,
+        "unroundedUT": "2008-09-22T15:44:29.514",
+        "publicSecondUT": "2008-09-22T15:44:30.000",
+        "legacyMinuteUT": "2008-09-22T15:45:00.000",
+        "singleRoundedMinuteUT": "2008-09-22T15:44:00.000"
+      },
+      {
+        "year": 2009,
+        "index": 11,
+        "unroundedUT": "2009-06-21T05:45:29.957",
+        "publicSecondUT": "2009-06-21T05:45:30.000",
+        "legacyMinuteUT": "2009-06-21T05:46:00.000",
+        "singleRoundedMinuteUT": "2009-06-21T05:45:00.000"
+      },
+      {
+        "year": 2010,
+        "index": 6,
+        "unroundedUT": "2010-04-04T21:30:29.794",
+        "publicSecondUT": "2010-04-04T21:30:30.000",
+        "legacyMinuteUT": "2010-04-04T21:31:00.000",
+        "singleRoundedMinuteUT": "2010-04-04T21:30:00.000"
+      },
+      {
+        "year": 2010,
+        "index": 20,
+        "unroundedUT": "2010-11-07T12:42:29.850",
+        "publicSecondUT": "2010-11-07T12:42:30.000",
+        "legacyMinuteUT": "2010-11-07T12:43:00.000",
+        "singleRoundedMinuteUT": "2010-11-07T12:42:00.000"
+      },
+      {
+        "year": 2011,
+        "index": 11,
+        "unroundedUT": "2011-06-21T17:16:29.995",
+        "publicSecondUT": "2011-06-21T17:16:30.000",
+        "legacyMinuteUT": "2011-06-21T17:17:00.000",
+        "singleRoundedMinuteUT": "2011-06-21T17:16:00.000"
+      },
+      {
+        "year": 2013,
+        "index": 18,
+        "unroundedUT": "2013-10-08T02:58:29.851",
+        "publicSecondUT": "2013-10-08T02:58:30.000",
+        "legacyMinuteUT": "2013-10-08T02:59:00.000",
+        "singleRoundedMinuteUT": "2013-10-08T02:58:00.000"
+      },
+      {
+        "year": 2014,
+        "index": 3,
+        "unroundedUT": "2014-02-18T17:59:29.773",
+        "publicSecondUT": "2014-02-18T17:59:30.000",
+        "legacyMinuteUT": "2014-02-18T18:00:00.000",
+        "singleRoundedMinuteUT": "2014-02-18T17:59:00.000"
+      },
+      {
+        "year": 2014,
+        "index": 18,
+        "unroundedUT": "2014-10-08T08:47:29.511",
+        "publicSecondUT": "2014-10-08T08:47:30.000",
+        "legacyMinuteUT": "2014-10-08T08:48:00.000",
+        "singleRoundedMinuteUT": "2014-10-08T08:47:00.000"
+      },
+      {
+        "year": 2018,
+        "index": 2,
+        "unroundedUT": "2018-02-03T21:28:29.622",
+        "publicSecondUT": "2018-02-03T21:28:30.000",
+        "legacyMinuteUT": "2018-02-03T21:29:00.000",
+        "singleRoundedMinuteUT": "2018-02-03T21:28:00.000"
+      },
+      {
+        "year": 2019,
+        "index": 22,
+        "unroundedUT": "2019-12-07T10:18:29.991",
+        "publicSecondUT": "2019-12-07T10:18:30.000",
+        "legacyMinuteUT": "2019-12-07T10:19:00.000",
+        "singleRoundedMinuteUT": "2019-12-07T10:18:00.000"
+      },
+      {
+        "year": 2022,
+        "index": 20,
+        "unroundedUT": "2022-11-07T10:45:29.640",
+        "publicSecondUT": "2022-11-07T10:45:30.000",
+        "legacyMinuteUT": "2022-11-07T10:46:00.000",
+        "singleRoundedMinuteUT": "2022-11-07T10:45:00.000"
+      },
+      {
+        "year": 2022,
+        "index": 21,
+        "unroundedUT": "2022-11-22T08:20:29.867",
+        "publicSecondUT": "2022-11-22T08:20:30.000",
+        "legacyMinuteUT": "2022-11-22T08:21:00.000",
+        "singleRoundedMinuteUT": "2022-11-22T08:20:00.000"
+      }
+    ],
+    "correction": "Use the continuous root and round once for display. Both cases above retain a model difference after this correction; do not claim double rounding caused them."
+  },
+  "productionApproved": false,
+  "limitations": [
+    "JPL-derived roots are a computed independent reference, not measured birth-time truth.",
+    "The local nutation substitution is a sensitivity experiment; residual ephemeris, precession, aberration and other model contributions are not individually isolated.",
+    "The application retains its existing v4 boundary review window and immutable saved snapshots; these diagnostics do not silently replace its engine."
+  ]
+}

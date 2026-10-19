@@ -55,3 +55,25 @@ node research/validation/compare-naoj.mjs --check --release-check
 `audit-term-rounding.mjs --check`는 동일 원본 의존성 lunar-javascript 1.7.7로 1908~2026년 2,856개 분 반올림을 재현한다. 이는 **출처 추적**이며 독립 정확도 오라클이 아니다. 패키지는 검증 전용으로 고정했고 MIT 고지를 licenses에 추가했다. `python3 collect-naoj-sensitivity.py`는 저장된 ΔT 통제 응답 6개의 해시·추출값을 오프라인 검사한다. 명시적 재수집만 `--download --retrieved YYYY-MM-DD`를 사용한다.
 
 현재 앱 어댑터는 research-civil-midnight-v4다. 절 전후 120초의 임시 검토 구간과 입력 분/날짜 구간이 겹치면 연·월주 후보를 보존한다. 120초를 검증된 오차 한도로 해석하지 않는다. 시간 모름은 시주 null을 유지한다. `baseline-v3.mjs`는 이전 정책의 동결된 비교 기준으로, 기존 KASI/NAOJ 보고서의 알려진 실패를 계속 재현한다. 42개 연구 테스트는 두 경로를 구분한다. [원인·실험·제약](../../docs/historical-clock-validation.md)을 따른다.
+
+## 2026-10-19 JPL 독립 모델과 이중 반올림 검사
+
+`audit-solar-models.mjs --check`는 고정된 JPL DE440s/IAU2000A의 TT 근 2,856건과 원본 계산을 비교한다. 1988·2024년의 표시 분 차이는 같은 ΔT에서 각각 약 1.39·1.30초의 모델 차이가 반올림 경계를 넘으며 발생함을 재현했다. `term-precision.mjs`는 초 API를 거치지 않고 연속 근을 보존하며 표시 때 한 번만 반올림한다. 이 수정 경로에서 기존 표의 별도 이중 반올림 37건도 드러난다. 앱 v4·고정 원본 표는 유지하며 새 도구를 런타임에 번들하지 않는다.
+
+```sh
+python3 research/validation/collect-naoj-sensitivity.py --thresholds
+node research/validation/audit-solar-models.mjs --check
+pnpm --dir research/validation test
+# 승인 검사는 종료 코드 2 유지:
+node research/validation/audit-solar-models.mjs --check --release-check
+```
+
+전체 독립 근을 다시 계산하려면 Python 3.9~3.12의 격리 환경을 사용한다. 32MB 커널은 최초 `--download`에서만 복원하고 고정 해시를 확인한다. 재수집 없이 `--check`를 쓸 때 캐시가 없으면 실패한다. 기본 CI의 fixture 검사와 전체 천문 재계산을 구분한다.
+
+```sh
+python3 -m venv /tmp/saju-ephemeris
+/tmp/saju-ephemeris/bin/pip install -r research/validation/requirements-ephemeris.txt
+/tmp/saju-ephemeris/bin/python research/validation/collect-ephemeris.py --download --check
+```
+
+생성 갱신은 명시적으로 `--check`를 빼고 수행한 뒤 파생 자료·해시·보고서 diff를 검토한다. 실제 정확도와 수치 수렴·재현 허용 오차를 구분한다. 전체 원인과 제약은 [검증 기록](../../docs/historical-clock-validation.md)을 따른다. Skyfield MIT 고지는 licenses에 보존한다. 현재 연구 테스트는 49개다.

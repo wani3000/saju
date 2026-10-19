@@ -47,6 +47,7 @@ export function compareNaoj() {
   });
   return {
     source: 'NAOJ long-term phenomena, UT+0, default delta-T, minute precision',
+    differenceBasis: 'Displayed minute labels only; differenceSeconds is not an exact astronomical timing error. See solar-model-audit.json for TT model offsets.',
     years: fixture.sources.map(s => s.year), timestamps: differences.length,
     sameDisplayedMinute: differences.filter(d => d.differenceSeconds === 0).length,
     maxAbsoluteDifferenceSeconds: Math.max(...differences.map(d => Math.abs(d.differenceSeconds))),

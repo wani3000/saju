@@ -1,0 +1,29 @@
+{
+  "kernel": {
+    "file": "de440s.bsp",
+    "url": "https://ssd.jpl.nasa.gov/ftp/eph/planets/bsp/de440s.bsp",
+    "sha256": "c1c7feeab882263fc493a9d5a5b2ddd71b54826cdf65d8d17a76126b260a49f2",
+    "bytes": 32726016,
+    "retrieved": "2026-10-19"
+  },
+  "dependencies": {
+    "certifi": "2026.10.18",
+    "jplephem": "2.24",
+    "numpy": "2.0.2",
+    "sgp4": "2.25",
+    "skyfield": "1.54"
+  },
+  "years": [
+    1908,
+    2026
+  ],
+  "searchToleranceSeconds": 0.001,
+  "frame": "Earth-center apparent Sun, true ecliptic/equinox of date, IAU2000A nutation",
+  "timeScale": "TT; no civil timezone or delta-T is applied to the reference roots",
+  "sources": [
+    "https://ssd.jpl.nasa.gov/planets/eph_export.html",
+    "https://rhodesmill.org/skyfield/almanac.html#solar-terms",
+    "https://rhodesmill.org/skyfield/accuracy-efficiency.html"
+  ],
+  "productionApproved": false
+}

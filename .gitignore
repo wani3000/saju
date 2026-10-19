@@ -18,3 +18,6 @@ research/validation/build/
 web/.data/
 web/src/generated/*.mjs
 web/*.tsbuildinfo
+
+# Large, verified external ephemeris (restore by manifest; never application data)
+research/validation/.ephemeris-cache/

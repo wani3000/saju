@@ -5,6 +5,11 @@ on:
     branches: [main]
   pull_request:
   workflow_dispatch:
+    inputs:
+      recompute_ephemeris:
+        description: Recompute all JPL roots with the pinned kernel and Python dependencies
+        type: boolean
+        default: false
 
 permissions:
   contents: read
@@ -34,5 +39,17 @@ jobs:
         run: |
           python3 research/validation/collect-naoj.py --check
           python3 research/validation/collect-naoj-sensitivity.py
+          python3 research/validation/collect-naoj-sensitivity.py --thresholds
       - name: Validate research adapter
         run: pnpm --dir research/validation test
+      - name: Set up Python for independent recomputation
+        if: github.event_name == 'workflow_dispatch' && inputs.recompute_ephemeris
+        uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: '3.12'
+      - name: Recompute independent JPL roots on request
+        if: github.event_name == 'workflow_dispatch' && inputs.recompute_ephemeris
+        run: |
+          python3 -m venv /tmp/saju-ephemeris
+          /tmp/saju-ephemeris/bin/pip install -r research/validation/requirements-ephemeris.txt
+          /tmp/saju-ephemeris/bin/python research/validation/collect-ephemeris.py --download --check

@@ -1,5 +1,6 @@
 {
   "source": "NAOJ long-term phenomena, UT+0, default delta-T, minute precision",
+  "differenceBasis": "Displayed minute labels only; differenceSeconds is not an exact astronomical timing error. See solar-model-audit.json for TT model offsets.",
   "years": [
     1908,
     1912,

@@ -1,0 +1,6 @@
+# Isolated verification only; not an application dependency.
+certifi==2026.10.18
+jplephem==2.24
+numpy==2.0.2
+sgp4==2.25
+skyfield==1.54
