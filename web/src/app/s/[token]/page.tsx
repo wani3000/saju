@@ -17,7 +17,7 @@ export default async function Shared({
       </Link>
       {card ? (
         <>
-          <p className="badge">공유된 예시 카드</p>
+          <p className="badge">{card.kind === "conversation-only" ? "함께 나누는 대화" : "공유된 예시 카드"}</p>
           <img
             className="hero"
             src="/assets/tigers/pair-v1.png"
@@ -33,8 +33,7 @@ export default async function Shared({
             <p>{card.reading.advice}</p>
           </section>
           <p className="notice">
-            이 카드는 고정 예시 문구이며 실제 궁합 분석 결과가 아닙니다.
-            생년월일과 다른 사람의 정보는 공개하지 않습니다.
+            {card.kind === "conversation-only" ? "이 카드는 관계에 맞춘 대화 주제예요. 생년월일·사주 기호·비교 근거와 다른 사람의 정보는 공개하지 않아요." : "이 카드는 고정 예시 문구이며 실제 궁합 분석 결과가 아닙니다. 생년월일과 다른 사람의 정보는 공개하지 않습니다."}
           </p>
         </>
       ) : (

@@ -30,3 +30,34 @@ test("reading lookup returns independent copies and public cards whitelist snaps
   assert.equal("charts" in card.reading, false);
   assert.notEqual(card.reading, saved);
 });
+
+test("selected input-based release requires stored v5 charts and has no legacy fallback", async () => {
+  const {currentReadingVersion} = await import("../src/server/readings");
+  const {validatePair} = await import("../src/server/engine");
+  const {samplePerson} = await import("../src/domain/model");
+  const {charts} = validatePair({me:samplePerson(),other:samplePerson(true)});
+  assert.equal(currentReadingVersion,"source-observations-copy-v1");
+  assert.throws(()=>readingForVersion(currentReadingVersion),{code:"READING_CONTEXT_REQUIRED"});
+  assert.throws(()=>readingForVersion(currentReadingVersion,{charts:{},relation:"친구"}),{code:"READING_CONTEXT_INVALID"});
+  const r=readingForVersion(currentReadingVersion,{charts,relation:"친구"});
+  assert.equal(r.basis?.kind,"source-symbol-comparison");assert.equal(r.basis?.productionApproved,false);
+  assert.equal(r.score,null);assert.notEqual(r.strength,readingForVersion("example-copy-v2").strength);
+  const copy=structuredClone(charts);copy.me.policy.version="research-civil-midnight-v4";
+  assert.throws(()=>readingForVersion(currentReadingVersion,{charts:copy,relation:"친구"}),{code:"READING_CONTEXT_INVALID"});
+});
+
+test("public card projects a conversation-only snapshot and removes private interpretation and evidence", async () => {
+  const {currentReadingVersion} = await import("../src/server/readings");
+  const {validatePair} = await import("../src/server/engine");
+  const {samplePerson} = await import("../src/domain/model");
+  const {charts} = validatePair({me:samplePerson(),other:samplePerson(true)});
+  const r=readingForVersion(currentReadingVersion,{charts,relation:"동료"});
+  const before=structuredClone(r),card=publicCard(["가","나"],r);
+  assert.equal(card.kind,"conversation-only");assert.equal(card.reading.ruleVersion,currentReadingVersion);
+  assert.equal(card.reading.basis,undefined);assert.equal(card.reading.score,null);
+  assert.equal(card.reading.title,r.basis!.sharedCopy.title);assert.equal(card.reading.advice,r.advice);
+  assert.notEqual(card.reading.strength,r.strength);
+  for(const key of ["pdfSha256","ruleId","coverage","pillars","dayElements","source-symbol-comparison"])
+    assert.ok(!JSON.stringify(card).includes(key),key);
+  assert.deepEqual(r,before);
+});

@@ -15,7 +15,7 @@ import * as s from "../src/server/service";
 import * as p from "../src/server/payments";
 import { selfGroup, samplePerson } from "../src/domain/model";
 import { validatePair } from "../src/server/engine";
-import { readingForVersion } from "../src/server/readings";
+import { readingForVersion, currentReadingVersion } from "../src/server/readings";
 let db: Database;
 before(async () => {
   db = await openDatabase("memory://");
@@ -48,7 +48,11 @@ test("new content is versioned and unavailable content fails without substitutin
   const id = await owner();
   const first = await s.createComparison(db,id,pair(),randomUUID(),true);
   await s.runJobs(db,id);
-  assert.deepEqual((await s.result(db,id,first.id)).reading,readingForVersion("example-copy-v2"));
+  const saved = await s.result(db,id,first.id);
+  assert.deepEqual(saved.reading,readingForVersion(currentReadingVersion, {
+    charts: saved.charts, relation: saved.other.relation,
+  }));
+  assert.equal(saved.reading.basis?.kind,"source-symbol-comparison");
   const other = await owner();
   const missing = await s.createComparison(db,other,pair(),randomUUID(),true);
   await db.query("UPDATE comparisons SET rule_version='missing-release' WHERE id=$1",[missing.id]);
@@ -241,7 +245,7 @@ test("result snapshots survive later draft edits", async () => {
   await s.saveDraft(db, id, edited, 0);
   assert.deepEqual(await s.result(db, id, resultId), before);
 });
-test("share snapshot only contains public aliases and example copy; revoke and expiry work", async () => {
+test("share snapshot only contains public aliases and conversation copy; revoke and expiry work", async () => {
   const id = await owner(),
     r = await free(id);
   const link = await s.share(db, id, r, ["우리", "친구"]);
@@ -251,6 +255,7 @@ test("share snapshot only contains public aliases and example copy; revoke and e
     "aliases",
     "avatars",
     "catalogVersion",
+    "kind",
     "reading",
   ]);
   assert.ok(!JSON.stringify(card).includes("1990"));
@@ -599,11 +604,49 @@ test("a queued v3 snapshot is not recalculated or charged again by v5", async ()
   delete previous.me.boundaryReview;
   previous.me.policy.version = "research-civil-midnight-v3";
   previous.other.policy.version = "research-civil-midnight-v3";
-  await db.query("UPDATE comparisons SET charts=$2,engine_version=$3 WHERE id=$1",
-    [comparison.id,JSON.stringify(previous),"manseryeok-research-civil-midnight-v3"]);
+  await db.query("UPDATE comparisons SET charts=$2,engine_version=$3,rule_version=$4 WHERE id=$1",
+    [comparison.id,JSON.stringify(previous),"manseryeok-research-civil-midnight-v3","example-copy-v2"]);
   await s.runJobs(db,id);
   assert.deepEqual((await s.result(db,id,comparison.id)).charts,previous);
   assert.deepEqual(await s.createComparison(db,id,input,randomUUID(),true),comparison);
   assert.deepEqual((await s.result(db,id,comparison.id)).charts,previous);
   assert.equal((await s.state(db,id)).orders.length,0);
+});
+
+test("queued example v2 remains byte-for-byte readable and shareable after the selected release", async () => {
+  const id=await owner(),input=pair(),c=await s.createComparison(db,id,input,randomUUID(),true);
+  await db.query("UPDATE comparisons SET rule_version='example-copy-v2' WHERE id=$1",[c.id]);
+  await s.runJobs(db,id);const saved=await s.result(db,id,c.id);
+  assert.deepEqual(saved.reading,readingForVersion("example-copy-v2"));
+  const link=await s.share(db,id,c.id,["가","나"]);
+  const card=await s.publicShare(db,link.path.split("/").at(-1)!);
+  assert.deepEqual(card.reading,saved.reading);assert.equal(card.kind,undefined);
+  assert.equal((await s.createComparison(db,id,input,randomUUID(),true)).id,c.id);
+  assert.equal((await s.state(db,id)).orders.length,0);
+});
+
+test("selected reading uses saved charts, snapshots its basis, and shares only conversation text", async () => {
+  const id=await owner(),input=pair(),c=await s.createComparison(db,id,input,randomUUID(),true);
+  const {charts}=validatePair(input);
+  const expected=readingForVersion(currentReadingVersion,{charts,relation:input.other.relation});
+  // A later draft is unrelated to the queued immutable comparison.
+  const edited=pair();edited.me.year="1980";edited.other.relation="동료";
+  await s.saveDraft(db,id,edited,0);await s.runJobs(db,id);
+  const saved=await s.result(db,id,c.id);assert.deepEqual(saved.reading,expected);
+  const link=await s.share(db,id,c.id,["가","나"]);
+  const card=await s.publicShare(db,link.path.split("/").at(-1)!);
+  assert.equal(card.kind,"conversation-only");assert.equal(card.reading.advice,expected.advice);
+  assert.equal(card.reading.basis,undefined);assert.ok(!JSON.stringify(card).includes(expected.strength));
+  assert.deepEqual((await s.result(db,id,c.id)).reading,expected);
+  assert.equal((await s.createComparison(db,id,input,randomUUID(),true)).id,c.id);
+  assert.equal((await s.state(db,id)).orders.length,0);
+});
+
+test("malformed stored charts cannot silently produce latest or generic copy and return the free reservation", async () => {
+  const id=await owner(),c=await s.createComparison(db,id,pair(),randomUUID(),true);
+  await db.query("UPDATE comparisons SET charts=$2 WHERE id=$1",[c.id,JSON.stringify({me:{},other:{}})]);
+  await s.runJobs(db,id);
+  assert.equal(await one(db,"SELECT comparison_id FROM results WHERE comparison_id=$1",[c.id]),undefined);
+  assert.equal((await s.state(db,id)).free,"available");
+  assert.equal((await one(db,"SELECT state FROM generation_jobs WHERE comparison_id=$1",[c.id]))!.state,"failed");
 });

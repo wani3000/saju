@@ -1,0 +1,1677 @@
+{
+  "version": "source-observations-copy-v1",
+  "productionApproved": false,
+  "policy": {
+    "version": "source-observations-copy-v1",
+    "status": "selected-for-app-review",
+    "productionApproved": false,
+    "engineVersion": "research-civil-midnight-v5",
+    "definitionVersion": "symbol-relations-research-v1",
+    "comparisonPositions": [
+      "year",
+      "month",
+      "day"
+    ],
+    "includedRuleIds": [
+      "stem-combination:갑기",
+      "stem-combination:을경",
+      "stem-combination:병신",
+      "stem-combination:정임",
+      "stem-combination:무계",
+      "branch-combination:자축",
+      "branch-combination:인해",
+      "branch-combination:묘술",
+      "branch-combination:진유",
+      "branch-combination:사신",
+      "branch-combination:오미",
+      "branch-clash:자오",
+      "branch-clash:축미",
+      "branch-clash:인신",
+      "branch-clash:묘유",
+      "branch-clash:진술",
+      "branch-clash:사해"
+    ],
+    "maxDisplayedObservations": 6,
+    "excluded": [
+      "hour-based-comparison",
+      "candidate-dependent-claims",
+      "strength-classification",
+      "seasonal-command",
+      "transformation-verdict",
+      "personality-prediction",
+      "relationship-outcome",
+      "compatibility-score",
+      "map-distance-ranking"
+    ],
+    "review": {
+      "reviewer": "Codex",
+      "reviewedOn": "2026-10-19",
+      "scope": "원전 기호 정의 대조·문구 편집·후보 처리·앱 연결 검토",
+      "domainInterpretationApproval": "pending",
+      "calendarProductionApproval": "pending"
+    },
+    "copy": {
+      "label": "사주 기호 비교 · 검토판",
+      "title": "두 사람의 사주 기호를 살펴봤어요",
+      "notice": "입력한 생일의 연구 계산에서 공통으로 확인한 기호를 설명해요. 성격이나 관계의 성공을 판단하는 기준은 아니에요. 비교는 연·월·일 기준이며 궁합 점수는 제공하지 않아요.",
+      "noMatch": "선택한 비교 범위에서 모든 입력 후보에 공통인 합·충 짝은 확인되지 않았어요. 이것이 두 사람의 관계가 좋거나 나쁘다는 뜻은 아니에요.",
+      "uncertainDay": "일주 후보에 따라 기준 오행이 달라져 두 사람의 오행을 하나로 정하지 않았어요.",
+      "pairMeaning": "합·충은 규칙표에서 짝을 부르는 이름이에요. 실제 관계의 좋고 나쁨을 뜻하지 않아요.",
+      "adviceNotice": "이 제안은 생일에서 추론한 성격 풀이가 아니라, 관계에 맞춰 준비한 대화 주제예요.",
+      "sharedTitle": "서로의 이야기를 나눠 보세요",
+      "sharedStrength": "서로 편안한 시간에 함께 이야기할 주제를 골라 보세요."
+    },
+    "advice": {
+      "친구": "서로 편한 연락 빈도와 다음에 함께 하고 싶은 일을 이야기해 보세요.",
+      "가족": "도움이 필요한 일과 각자 결정하고 싶은 일을 하나씩 나눠 이야기해 보세요.",
+      "연인": "함께 보내는 시간과 혼자 쉬는 시간에 대해 원하는 바를 이야기해 보세요.",
+      "동료": "함께 일할 때 편한 연락 방법과 역할을 나누는 방식을 이야기해 보세요."
+    }
+  },
+  "fixtures": "Structural fixtures are synthetic, not calendar-valid birth charts. Integrated cases use synthetic dates.",
+  "cases": [
+    {
+      "id": "친구",
+      "reading": {
+        "label": "사주 기호 비교 · 검토판",
+        "title": "두 사람의 사주 기호를 살펴봤어요",
+        "strength": "내 일간의 오행은 목, 상대 일간의 오행은 토로 분류돼요. 일간은 태어난 날의 천간 한 글자이며, 사주 전체의 오행 비율을 뜻하지 않아요.",
+        "difference": "두 사람의 기호 사이에서 지지 육합·천간 합에 해당하는 짝이 확인돼요. 합·충은 규칙표에서 짝을 부르는 이름이에요. 실제 관계의 좋고 나쁨을 뜻하지 않아요.",
+        "advice": "서로 편한 연락 빈도와 다음에 함께 하고 싶은 일을 이야기해 보세요.",
+        "ruleVersion": "source-observations-copy-v1",
+        "score": null,
+        "basis": {
+          "kind": "source-symbol-comparison",
+          "productionApproved": false,
+          "definitionVersion": "symbol-relations-research-v1",
+          "notice": "입력한 생일의 연구 계산에서 공통으로 확인한 기호를 설명해요. 성격이나 관계의 성공을 판단하는 기준은 아니에요. 비교는 연·월·일 기준이며 궁합 점수는 제공하지 않아요.",
+          "adviceNotice": "이 제안은 생일에서 추론한 성격 풀이가 아니라, 관계에 맞춰 준비한 대화 주제예요.",
+          "comparisonPositions": [
+            "year",
+            "month",
+            "day"
+          ],
+          "dayElements": [
+            {
+              "side": "a",
+              "element": "목",
+              "source": {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 23,
+                "sectionId": "stem-elements"
+              }
+            },
+            {
+              "side": "b",
+              "element": "토",
+              "source": {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 23,
+                "sectionId": "stem-elements"
+              }
+            }
+          ],
+          "observations": [
+            {
+              "id": "branch-combination:자축:day:day",
+              "ruleId": "branch-combination:자축",
+              "family": "branch-combination",
+              "positions": [
+                {
+                  "side": "a",
+                  "position": "day"
+                },
+                {
+                  "side": "b",
+                  "position": "day"
+                }
+              ],
+              "text": "내 일주와 상대 일주에서 자·축의 지지 육합 짝이 확인돼요.",
+              "source": {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 25,
+                "sectionId": "branch-combinations"
+              }
+            },
+            {
+              "id": "branch-combination:자축:day:month",
+              "ruleId": "branch-combination:자축",
+              "family": "branch-combination",
+              "positions": [
+                {
+                  "side": "a",
+                  "position": "day"
+                },
+                {
+                  "side": "b",
+                  "position": "month"
+                }
+              ],
+              "text": "내 일주와 상대 월주에서 자·축의 지지 육합 짝이 확인돼요.",
+              "source": {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 25,
+                "sectionId": "branch-combinations"
+              }
+            },
+            {
+              "id": "branch-combination:자축:day:year",
+              "ruleId": "branch-combination:자축",
+              "family": "branch-combination",
+              "positions": [
+                {
+                  "side": "a",
+                  "position": "day"
+                },
+                {
+                  "side": "b",
+                  "position": "year"
+                }
+              ],
+              "text": "내 일주와 상대 연주에서 자·축의 지지 육합 짝이 확인돼요.",
+              "source": {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 25,
+                "sectionId": "branch-combinations"
+              }
+            },
+            {
+              "id": "branch-combination:자축:month:day",
+              "ruleId": "branch-combination:자축",
+              "family": "branch-combination",
+              "positions": [
+                {
+                  "side": "a",
+                  "position": "month"
+                },
+                {
+                  "side": "b",
+                  "position": "day"
+                }
+              ],
+              "text": "내 월주와 상대 일주에서 자·축의 지지 육합 짝이 확인돼요.",
+              "source": {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 25,
+                "sectionId": "branch-combinations"
+              }
+            },
+            {
+              "id": "branch-combination:자축:month:month",
+              "ruleId": "branch-combination:자축",
+              "family": "branch-combination",
+              "positions": [
+                {
+                  "side": "a",
+                  "position": "month"
+                },
+                {
+                  "side": "b",
+                  "position": "month"
+                }
+              ],
+              "text": "내 월주와 상대 월주에서 자·축의 지지 육합 짝이 확인돼요.",
+              "source": {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 25,
+                "sectionId": "branch-combinations"
+              }
+            },
+            {
+              "id": "branch-combination:자축:month:year",
+              "ruleId": "branch-combination:자축",
+              "family": "branch-combination",
+              "positions": [
+                {
+                  "side": "a",
+                  "position": "month"
+                },
+                {
+                  "side": "b",
+                  "position": "year"
+                }
+              ],
+              "text": "내 월주와 상대 연주에서 자·축의 지지 육합 짝이 확인돼요.",
+              "source": {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 25,
+                "sectionId": "branch-combinations"
+              }
+            }
+          ],
+          "commonFamilies": [
+            "지지 육합",
+            "천간 합"
+          ],
+          "totalCommonObservations": 18,
+          "omittedDisplayObservations": 12,
+          "omittedCandidateDependentFacts": 0,
+          "coverage": [
+            {
+              "side": "a",
+              "hourKnown": true,
+              "boundaryReviewRequired": false,
+              "clockReviewRequired": false
+            },
+            {
+              "side": "b",
+              "hourKnown": true,
+              "boundaryReviewRequired": false,
+              "clockReviewRequired": false
+            }
+          ],
+          "cautions": [
+            "출생 시각은 계산표에 보관했어요. 이번 기호 비교는 연·월·일만 사용해요."
+          ],
+          "scoreStatus": "not-adopted",
+          "mapStatus": "collection-only-not-ranked",
+          "sharedCopy": {
+            "title": "서로의 이야기를 나눠 보세요",
+            "strength": "서로 편안한 시간에 함께 이야기할 주제를 골라 보세요."
+          }
+        }
+      }
+    },
+    {
+      "id": "가족",
+      "reading": {
+        "label": "사주 기호 비교 · 검토판",
+        "title": "두 사람의 사주 기호를 살펴봤어요",
+        "strength": "내 일간의 오행은 목, 상대 일간의 오행은 토로 분류돼요. 일간은 태어난 날의 천간 한 글자이며, 사주 전체의 오행 비율을 뜻하지 않아요.",
+        "difference": "두 사람의 기호 사이에서 지지 육합·천간 합에 해당하는 짝이 확인돼요. 합·충은 규칙표에서 짝을 부르는 이름이에요. 실제 관계의 좋고 나쁨을 뜻하지 않아요.",
+        "advice": "도움이 필요한 일과 각자 결정하고 싶은 일을 하나씩 나눠 이야기해 보세요.",
+        "ruleVersion": "source-observations-copy-v1",
+        "score": null,
+        "basis": {
+          "kind": "source-symbol-comparison",
+          "productionApproved": false,
+          "definitionVersion": "symbol-relations-research-v1",
+          "notice": "입력한 생일의 연구 계산에서 공통으로 확인한 기호를 설명해요. 성격이나 관계의 성공을 판단하는 기준은 아니에요. 비교는 연·월·일 기준이며 궁합 점수는 제공하지 않아요.",
+          "adviceNotice": "이 제안은 생일에서 추론한 성격 풀이가 아니라, 관계에 맞춰 준비한 대화 주제예요.",
+          "comparisonPositions": [
+            "year",
+            "month",
+            "day"
+          ],
+          "dayElements": [
+            {
+              "side": "a",
+              "element": "목",
+              "source": {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 23,
+                "sectionId": "stem-elements"
+              }
+            },
+            {
+              "side": "b",
+              "element": "토",
+              "source": {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 23,
+                "sectionId": "stem-elements"
+              }
+            }
+          ],
+          "observations": [
+            {
+              "id": "branch-combination:자축:day:day",
+              "ruleId": "branch-combination:자축",
+              "family": "branch-combination",
+              "positions": [
+                {
+                  "side": "a",
+                  "position": "day"
+                },
+                {
+                  "side": "b",
+                  "position": "day"
+                }
+              ],
+              "text": "내 일주와 상대 일주에서 자·축의 지지 육합 짝이 확인돼요.",
+              "source": {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 25,
+                "sectionId": "branch-combinations"
+              }
+            },
+            {
+              "id": "branch-combination:자축:day:month",
+              "ruleId": "branch-combination:자축",
+              "family": "branch-combination",
+              "positions": [
+                {
+                  "side": "a",
+                  "position": "day"
+                },
+                {
+                  "side": "b",
+                  "position": "month"
+                }
+              ],
+              "text": "내 일주와 상대 월주에서 자·축의 지지 육합 짝이 확인돼요.",
+              "source": {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 25,
+                "sectionId": "branch-combinations"
+              }
+            },
+            {
+              "id": "branch-combination:자축:day:year",
+              "ruleId": "branch-combination:자축",
+              "family": "branch-combination",
+              "positions": [
+                {
+                  "side": "a",
+                  "position": "day"
+                },
+                {
+                  "side": "b",
+                  "position": "year"
+                }
+              ],
+              "text": "내 일주와 상대 연주에서 자·축의 지지 육합 짝이 확인돼요.",
+              "source": {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 25,
+                "sectionId": "branch-combinations"
+              }
+            },
+            {
+              "id": "branch-combination:자축:month:day",
+              "ruleId": "branch-combination:자축",
+              "family": "branch-combination",
+              "positions": [
+                {
+                  "side": "a",
+                  "position": "month"
+                },
+                {
+                  "side": "b",
+                  "position": "day"
+                }
+              ],
+              "text": "내 월주와 상대 일주에서 자·축의 지지 육합 짝이 확인돼요.",
+              "source": {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 25,
+                "sectionId": "branch-combinations"
+              }
+            },
+            {
+              "id": "branch-combination:자축:month:month",
+              "ruleId": "branch-combination:자축",
+              "family": "branch-combination",
+              "positions": [
+                {
+                  "side": "a",
+                  "position": "month"
+                },
+                {
+                  "side": "b",
+                  "position": "month"
+                }
+              ],
+              "text": "내 월주와 상대 월주에서 자·축의 지지 육합 짝이 확인돼요.",
+              "source": {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 25,
+                "sectionId": "branch-combinations"
+              }
+            },
+            {
+              "id": "branch-combination:자축:month:year",
+              "ruleId": "branch-combination:자축",
+              "family": "branch-combination",
+              "positions": [
+                {
+                  "side": "a",
+                  "position": "month"
+                },
+                {
+                  "side": "b",
+                  "position": "year"
+                }
+              ],
+              "text": "내 월주와 상대 연주에서 자·축의 지지 육합 짝이 확인돼요.",
+              "source": {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 25,
+                "sectionId": "branch-combinations"
+              }
+            }
+          ],
+          "commonFamilies": [
+            "지지 육합",
+            "천간 합"
+          ],
+          "totalCommonObservations": 18,
+          "omittedDisplayObservations": 12,
+          "omittedCandidateDependentFacts": 0,
+          "coverage": [
+            {
+              "side": "a",
+              "hourKnown": true,
+              "boundaryReviewRequired": false,
+              "clockReviewRequired": false
+            },
+            {
+              "side": "b",
+              "hourKnown": true,
+              "boundaryReviewRequired": false,
+              "clockReviewRequired": false
+            }
+          ],
+          "cautions": [
+            "출생 시각은 계산표에 보관했어요. 이번 기호 비교는 연·월·일만 사용해요."
+          ],
+          "scoreStatus": "not-adopted",
+          "mapStatus": "collection-only-not-ranked",
+          "sharedCopy": {
+            "title": "서로의 이야기를 나눠 보세요",
+            "strength": "서로 편안한 시간에 함께 이야기할 주제를 골라 보세요."
+          }
+        }
+      }
+    },
+    {
+      "id": "연인",
+      "reading": {
+        "label": "사주 기호 비교 · 검토판",
+        "title": "두 사람의 사주 기호를 살펴봤어요",
+        "strength": "내 일간의 오행은 목, 상대 일간의 오행은 토로 분류돼요. 일간은 태어난 날의 천간 한 글자이며, 사주 전체의 오행 비율을 뜻하지 않아요.",
+        "difference": "두 사람의 기호 사이에서 지지 육합·천간 합에 해당하는 짝이 확인돼요. 합·충은 규칙표에서 짝을 부르는 이름이에요. 실제 관계의 좋고 나쁨을 뜻하지 않아요.",
+        "advice": "함께 보내는 시간과 혼자 쉬는 시간에 대해 원하는 바를 이야기해 보세요.",
+        "ruleVersion": "source-observations-copy-v1",
+        "score": null,
+        "basis": {
+          "kind": "source-symbol-comparison",
+          "productionApproved": false,
+          "definitionVersion": "symbol-relations-research-v1",
+          "notice": "입력한 생일의 연구 계산에서 공통으로 확인한 기호를 설명해요. 성격이나 관계의 성공을 판단하는 기준은 아니에요. 비교는 연·월·일 기준이며 궁합 점수는 제공하지 않아요.",
+          "adviceNotice": "이 제안은 생일에서 추론한 성격 풀이가 아니라, 관계에 맞춰 준비한 대화 주제예요.",
+          "comparisonPositions": [
+            "year",
+            "month",
+            "day"
+          ],
+          "dayElements": [
+            {
+              "side": "a",
+              "element": "목",
+              "source": {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 23,
+                "sectionId": "stem-elements"
+              }
+            },
+            {
+              "side": "b",
+              "element": "토",
+              "source": {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 23,
+                "sectionId": "stem-elements"
+              }
+            }
+          ],
+          "observations": [
+            {
+              "id": "branch-combination:자축:day:day",
+              "ruleId": "branch-combination:자축",
+              "family": "branch-combination",
+              "positions": [
+                {
+                  "side": "a",
+                  "position": "day"
+                },
+                {
+                  "side": "b",
+                  "position": "day"
+                }
+              ],
+              "text": "내 일주와 상대 일주에서 자·축의 지지 육합 짝이 확인돼요.",
+              "source": {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 25,
+                "sectionId": "branch-combinations"
+              }
+            },
+            {
+              "id": "branch-combination:자축:day:month",
+              "ruleId": "branch-combination:자축",
+              "family": "branch-combination",
+              "positions": [
+                {
+                  "side": "a",
+                  "position": "day"
+                },
+                {
+                  "side": "b",
+                  "position": "month"
+                }
+              ],
+              "text": "내 일주와 상대 월주에서 자·축의 지지 육합 짝이 확인돼요.",
+              "source": {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 25,
+                "sectionId": "branch-combinations"
+              }
+            },
+            {
+              "id": "branch-combination:자축:day:year",
+              "ruleId": "branch-combination:자축",
+              "family": "branch-combination",
+              "positions": [
+                {
+                  "side": "a",
+                  "position": "day"
+                },
+                {
+                  "side": "b",
+                  "position": "year"
+                }
+              ],
+              "text": "내 일주와 상대 연주에서 자·축의 지지 육합 짝이 확인돼요.",
+              "source": {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 25,
+                "sectionId": "branch-combinations"
+              }
+            },
+            {
+              "id": "branch-combination:자축:month:day",
+              "ruleId": "branch-combination:자축",
+              "family": "branch-combination",
+              "positions": [
+                {
+                  "side": "a",
+                  "position": "month"
+                },
+                {
+                  "side": "b",
+                  "position": "day"
+                }
+              ],
+              "text": "내 월주와 상대 일주에서 자·축의 지지 육합 짝이 확인돼요.",
+              "source": {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 25,
+                "sectionId": "branch-combinations"
+              }
+            },
+            {
+              "id": "branch-combination:자축:month:month",
+              "ruleId": "branch-combination:자축",
+              "family": "branch-combination",
+              "positions": [
+                {
+                  "side": "a",
+                  "position": "month"
+                },
+                {
+                  "side": "b",
+                  "position": "month"
+                }
+              ],
+              "text": "내 월주와 상대 월주에서 자·축의 지지 육합 짝이 확인돼요.",
+              "source": {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 25,
+                "sectionId": "branch-combinations"
+              }
+            },
+            {
+              "id": "branch-combination:자축:month:year",
+              "ruleId": "branch-combination:자축",
+              "family": "branch-combination",
+              "positions": [
+                {
+                  "side": "a",
+                  "position": "month"
+                },
+                {
+                  "side": "b",
+                  "position": "year"
+                }
+              ],
+              "text": "내 월주와 상대 연주에서 자·축의 지지 육합 짝이 확인돼요.",
+              "source": {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 25,
+                "sectionId": "branch-combinations"
+              }
+            }
+          ],
+          "commonFamilies": [
+            "지지 육합",
+            "천간 합"
+          ],
+          "totalCommonObservations": 18,
+          "omittedDisplayObservations": 12,
+          "omittedCandidateDependentFacts": 0,
+          "coverage": [
+            {
+              "side": "a",
+              "hourKnown": true,
+              "boundaryReviewRequired": false,
+              "clockReviewRequired": false
+            },
+            {
+              "side": "b",
+              "hourKnown": true,
+              "boundaryReviewRequired": false,
+              "clockReviewRequired": false
+            }
+          ],
+          "cautions": [
+            "출생 시각은 계산표에 보관했어요. 이번 기호 비교는 연·월·일만 사용해요."
+          ],
+          "scoreStatus": "not-adopted",
+          "mapStatus": "collection-only-not-ranked",
+          "sharedCopy": {
+            "title": "서로의 이야기를 나눠 보세요",
+            "strength": "서로 편안한 시간에 함께 이야기할 주제를 골라 보세요."
+          }
+        }
+      }
+    },
+    {
+      "id": "동료",
+      "reading": {
+        "label": "사주 기호 비교 · 검토판",
+        "title": "두 사람의 사주 기호를 살펴봤어요",
+        "strength": "내 일간의 오행은 목, 상대 일간의 오행은 토로 분류돼요. 일간은 태어난 날의 천간 한 글자이며, 사주 전체의 오행 비율을 뜻하지 않아요.",
+        "difference": "두 사람의 기호 사이에서 지지 육합·천간 합에 해당하는 짝이 확인돼요. 합·충은 규칙표에서 짝을 부르는 이름이에요. 실제 관계의 좋고 나쁨을 뜻하지 않아요.",
+        "advice": "함께 일할 때 편한 연락 방법과 역할을 나누는 방식을 이야기해 보세요.",
+        "ruleVersion": "source-observations-copy-v1",
+        "score": null,
+        "basis": {
+          "kind": "source-symbol-comparison",
+          "productionApproved": false,
+          "definitionVersion": "symbol-relations-research-v1",
+          "notice": "입력한 생일의 연구 계산에서 공통으로 확인한 기호를 설명해요. 성격이나 관계의 성공을 판단하는 기준은 아니에요. 비교는 연·월·일 기준이며 궁합 점수는 제공하지 않아요.",
+          "adviceNotice": "이 제안은 생일에서 추론한 성격 풀이가 아니라, 관계에 맞춰 준비한 대화 주제예요.",
+          "comparisonPositions": [
+            "year",
+            "month",
+            "day"
+          ],
+          "dayElements": [
+            {
+              "side": "a",
+              "element": "목",
+              "source": {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 23,
+                "sectionId": "stem-elements"
+              }
+            },
+            {
+              "side": "b",
+              "element": "토",
+              "source": {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 23,
+                "sectionId": "stem-elements"
+              }
+            }
+          ],
+          "observations": [
+            {
+              "id": "branch-combination:자축:day:day",
+              "ruleId": "branch-combination:자축",
+              "family": "branch-combination",
+              "positions": [
+                {
+                  "side": "a",
+                  "position": "day"
+                },
+                {
+                  "side": "b",
+                  "position": "day"
+                }
+              ],
+              "text": "내 일주와 상대 일주에서 자·축의 지지 육합 짝이 확인돼요.",
+              "source": {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 25,
+                "sectionId": "branch-combinations"
+              }
+            },
+            {
+              "id": "branch-combination:자축:day:month",
+              "ruleId": "branch-combination:자축",
+              "family": "branch-combination",
+              "positions": [
+                {
+                  "side": "a",
+                  "position": "day"
+                },
+                {
+                  "side": "b",
+                  "position": "month"
+                }
+              ],
+              "text": "내 일주와 상대 월주에서 자·축의 지지 육합 짝이 확인돼요.",
+              "source": {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 25,
+                "sectionId": "branch-combinations"
+              }
+            },
+            {
+              "id": "branch-combination:자축:day:year",
+              "ruleId": "branch-combination:자축",
+              "family": "branch-combination",
+              "positions": [
+                {
+                  "side": "a",
+                  "position": "day"
+                },
+                {
+                  "side": "b",
+                  "position": "year"
+                }
+              ],
+              "text": "내 일주와 상대 연주에서 자·축의 지지 육합 짝이 확인돼요.",
+              "source": {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 25,
+                "sectionId": "branch-combinations"
+              }
+            },
+            {
+              "id": "branch-combination:자축:month:day",
+              "ruleId": "branch-combination:자축",
+              "family": "branch-combination",
+              "positions": [
+                {
+                  "side": "a",
+                  "position": "month"
+                },
+                {
+                  "side": "b",
+                  "position": "day"
+                }
+              ],
+              "text": "내 월주와 상대 일주에서 자·축의 지지 육합 짝이 확인돼요.",
+              "source": {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 25,
+                "sectionId": "branch-combinations"
+              }
+            },
+            {
+              "id": "branch-combination:자축:month:month",
+              "ruleId": "branch-combination:자축",
+              "family": "branch-combination",
+              "positions": [
+                {
+                  "side": "a",
+                  "position": "month"
+                },
+                {
+                  "side": "b",
+                  "position": "month"
+                }
+              ],
+              "text": "내 월주와 상대 월주에서 자·축의 지지 육합 짝이 확인돼요.",
+              "source": {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 25,
+                "sectionId": "branch-combinations"
+              }
+            },
+            {
+              "id": "branch-combination:자축:month:year",
+              "ruleId": "branch-combination:자축",
+              "family": "branch-combination",
+              "positions": [
+                {
+                  "side": "a",
+                  "position": "month"
+                },
+                {
+                  "side": "b",
+                  "position": "year"
+                }
+              ],
+              "text": "내 월주와 상대 연주에서 자·축의 지지 육합 짝이 확인돼요.",
+              "source": {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 25,
+                "sectionId": "branch-combinations"
+              }
+            }
+          ],
+          "commonFamilies": [
+            "지지 육합",
+            "천간 합"
+          ],
+          "totalCommonObservations": 18,
+          "omittedDisplayObservations": 12,
+          "omittedCandidateDependentFacts": 0,
+          "coverage": [
+            {
+              "side": "a",
+              "hourKnown": true,
+              "boundaryReviewRequired": false,
+              "clockReviewRequired": false
+            },
+            {
+              "side": "b",
+              "hourKnown": true,
+              "boundaryReviewRequired": false,
+              "clockReviewRequired": false
+            }
+          ],
+          "cautions": [
+            "출생 시각은 계산표에 보관했어요. 이번 기호 비교는 연·월·일만 사용해요."
+          ],
+          "scoreStatus": "not-adopted",
+          "mapStatus": "collection-only-not-ranked",
+          "sharedCopy": {
+            "title": "서로의 이야기를 나눠 보세요",
+            "strength": "서로 편안한 시간에 함께 이야기할 주제를 골라 보세요."
+          }
+        }
+      }
+    },
+    {
+      "id": "no-common-pair",
+      "reading": {
+        "label": "사주 기호 비교 · 검토판",
+        "title": "두 사람의 사주 기호를 살펴봤어요",
+        "strength": "내 일간의 오행은 목, 상대 일간의 오행은 목으로 분류돼요. 일간은 태어난 날의 천간 한 글자이며, 사주 전체의 오행 비율을 뜻하지 않아요.",
+        "difference": "선택한 비교 범위에서 모든 입력 후보에 공통인 합·충 짝은 확인되지 않았어요. 이것이 두 사람의 관계가 좋거나 나쁘다는 뜻은 아니에요.",
+        "advice": "서로 편한 연락 빈도와 다음에 함께 하고 싶은 일을 이야기해 보세요.",
+        "ruleVersion": "source-observations-copy-v1",
+        "score": null,
+        "basis": {
+          "kind": "source-symbol-comparison",
+          "productionApproved": false,
+          "definitionVersion": "symbol-relations-research-v1",
+          "notice": "입력한 생일의 연구 계산에서 공통으로 확인한 기호를 설명해요. 성격이나 관계의 성공을 판단하는 기준은 아니에요. 비교는 연·월·일 기준이며 궁합 점수는 제공하지 않아요.",
+          "adviceNotice": "이 제안은 생일에서 추론한 성격 풀이가 아니라, 관계에 맞춰 준비한 대화 주제예요.",
+          "comparisonPositions": [
+            "year",
+            "month",
+            "day"
+          ],
+          "dayElements": [
+            {
+              "side": "a",
+              "element": "목",
+              "source": {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 23,
+                "sectionId": "stem-elements"
+              }
+            },
+            {
+              "side": "b",
+              "element": "목",
+              "source": {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 23,
+                "sectionId": "stem-elements"
+              }
+            }
+          ],
+          "observations": [],
+          "commonFamilies": [],
+          "totalCommonObservations": 0,
+          "omittedDisplayObservations": 0,
+          "omittedCandidateDependentFacts": 0,
+          "coverage": [
+            {
+              "side": "a",
+              "hourKnown": true,
+              "boundaryReviewRequired": false,
+              "clockReviewRequired": false
+            },
+            {
+              "side": "b",
+              "hourKnown": true,
+              "boundaryReviewRequired": false,
+              "clockReviewRequired": false
+            }
+          ],
+          "cautions": [
+            "출생 시각은 계산표에 보관했어요. 이번 기호 비교는 연·월·일만 사용해요."
+          ],
+          "scoreStatus": "not-adopted",
+          "mapStatus": "collection-only-not-ranked",
+          "sharedCopy": {
+            "title": "서로의 이야기를 나눠 보세요",
+            "strength": "서로 편안한 시간에 함께 이야기할 주제를 골라 보세요."
+          }
+        }
+      }
+    },
+    {
+      "id": "candidate-dependent",
+      "reading": {
+        "label": "사주 기호 비교 · 검토판",
+        "title": "두 사람의 사주 기호를 살펴봤어요",
+        "strength": "일주 후보에 따라 기준 오행이 달라져 두 사람의 오행을 하나로 정하지 않았어요.",
+        "difference": "두 사람의 기호 사이에서 지지 육합·천간 합에 해당하는 짝이 확인돼요. 합·충은 규칙표에서 짝을 부르는 이름이에요. 실제 관계의 좋고 나쁨을 뜻하지 않아요.",
+        "advice": "서로 편한 연락 빈도와 다음에 함께 하고 싶은 일을 이야기해 보세요.",
+        "ruleVersion": "source-observations-copy-v1",
+        "score": null,
+        "basis": {
+          "kind": "source-symbol-comparison",
+          "productionApproved": false,
+          "definitionVersion": "symbol-relations-research-v1",
+          "notice": "입력한 생일의 연구 계산에서 공통으로 확인한 기호를 설명해요. 성격이나 관계의 성공을 판단하는 기준은 아니에요. 비교는 연·월·일 기준이며 궁합 점수는 제공하지 않아요.",
+          "adviceNotice": "이 제안은 생일에서 추론한 성격 풀이가 아니라, 관계에 맞춰 준비한 대화 주제예요.",
+          "comparisonPositions": [
+            "year",
+            "month",
+            "day"
+          ],
+          "dayElements": [
+            {
+              "side": "a",
+              "element": null,
+              "source": {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 23,
+                "sectionId": "stem-elements"
+              }
+            },
+            {
+              "side": "b",
+              "element": "토",
+              "source": {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 23,
+                "sectionId": "stem-elements"
+              }
+            }
+          ],
+          "observations": [
+            {
+              "id": "branch-combination:자축:day:day",
+              "ruleId": "branch-combination:자축",
+              "family": "branch-combination",
+              "positions": [
+                {
+                  "side": "a",
+                  "position": "day"
+                },
+                {
+                  "side": "b",
+                  "position": "day"
+                }
+              ],
+              "text": "내 일주와 상대 일주에서 자·축의 지지 육합 짝이 확인돼요.",
+              "source": {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 25,
+                "sectionId": "branch-combinations"
+              }
+            },
+            {
+              "id": "branch-combination:자축:day:month",
+              "ruleId": "branch-combination:자축",
+              "family": "branch-combination",
+              "positions": [
+                {
+                  "side": "a",
+                  "position": "day"
+                },
+                {
+                  "side": "b",
+                  "position": "month"
+                }
+              ],
+              "text": "내 일주와 상대 월주에서 자·축의 지지 육합 짝이 확인돼요.",
+              "source": {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 25,
+                "sectionId": "branch-combinations"
+              }
+            },
+            {
+              "id": "branch-combination:자축:day:year",
+              "ruleId": "branch-combination:자축",
+              "family": "branch-combination",
+              "positions": [
+                {
+                  "side": "a",
+                  "position": "day"
+                },
+                {
+                  "side": "b",
+                  "position": "year"
+                }
+              ],
+              "text": "내 일주와 상대 연주에서 자·축의 지지 육합 짝이 확인돼요.",
+              "source": {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 25,
+                "sectionId": "branch-combinations"
+              }
+            },
+            {
+              "id": "branch-combination:자축:month:day",
+              "ruleId": "branch-combination:자축",
+              "family": "branch-combination",
+              "positions": [
+                {
+                  "side": "a",
+                  "position": "month"
+                },
+                {
+                  "side": "b",
+                  "position": "day"
+                }
+              ],
+              "text": "내 월주와 상대 일주에서 자·축의 지지 육합 짝이 확인돼요.",
+              "source": {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 25,
+                "sectionId": "branch-combinations"
+              }
+            },
+            {
+              "id": "branch-combination:자축:month:month",
+              "ruleId": "branch-combination:자축",
+              "family": "branch-combination",
+              "positions": [
+                {
+                  "side": "a",
+                  "position": "month"
+                },
+                {
+                  "side": "b",
+                  "position": "month"
+                }
+              ],
+              "text": "내 월주와 상대 월주에서 자·축의 지지 육합 짝이 확인돼요.",
+              "source": {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 25,
+                "sectionId": "branch-combinations"
+              }
+            },
+            {
+              "id": "branch-combination:자축:month:year",
+              "ruleId": "branch-combination:자축",
+              "family": "branch-combination",
+              "positions": [
+                {
+                  "side": "a",
+                  "position": "month"
+                },
+                {
+                  "side": "b",
+                  "position": "year"
+                }
+              ],
+              "text": "내 월주와 상대 연주에서 자·축의 지지 육합 짝이 확인돼요.",
+              "source": {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 25,
+                "sectionId": "branch-combinations"
+              }
+            }
+          ],
+          "commonFamilies": [
+            "지지 육합",
+            "천간 합"
+          ],
+          "totalCommonObservations": 15,
+          "omittedDisplayObservations": 9,
+          "omittedCandidateDependentFacts": 3,
+          "coverage": [
+            {
+              "side": "a",
+              "hourKnown": true,
+              "boundaryReviewRequired": false,
+              "clockReviewRequired": false
+            },
+            {
+              "side": "b",
+              "hourKnown": true,
+              "boundaryReviewRequired": false,
+              "clockReviewRequired": false
+            }
+          ],
+          "cautions": [
+            "출생 시각은 계산표에 보관했어요. 이번 기호 비교는 연·월·일만 사용해요.",
+            "입력 후보에 따라 달라지는 합·충은 확정 문장에서 제외했어요."
+          ],
+          "scoreStatus": "not-adopted",
+          "mapStatus": "collection-only-not-ranked",
+          "sharedCopy": {
+            "title": "서로의 이야기를 나눠 보세요",
+            "strength": "서로 편안한 시간에 함께 이야기할 주제를 골라 보세요."
+          }
+        }
+      }
+    },
+    {
+      "id": "coexisting-families",
+      "reading": {
+        "label": "사주 기호 비교 · 검토판",
+        "title": "두 사람의 사주 기호를 살펴봤어요",
+        "strength": "내 일간의 오행은 목, 상대 일간의 오행은 화로 분류돼요. 일간은 태어난 날의 천간 한 글자이며, 사주 전체의 오행 비율을 뜻하지 않아요.",
+        "difference": "두 사람의 기호 사이에서 지지 육충·지지 육합·천간 합에 해당하는 짝이 확인돼요. 합·충은 규칙표에서 짝을 부르는 이름이에요. 실제 관계의 좋고 나쁨을 뜻하지 않아요.",
+        "advice": "서로 편한 연락 빈도와 다음에 함께 하고 싶은 일을 이야기해 보세요.",
+        "ruleVersion": "source-observations-copy-v1",
+        "score": null,
+        "basis": {
+          "kind": "source-symbol-comparison",
+          "productionApproved": false,
+          "definitionVersion": "symbol-relations-research-v1",
+          "notice": "입력한 생일의 연구 계산에서 공통으로 확인한 기호를 설명해요. 성격이나 관계의 성공을 판단하는 기준은 아니에요. 비교는 연·월·일 기준이며 궁합 점수는 제공하지 않아요.",
+          "adviceNotice": "이 제안은 생일에서 추론한 성격 풀이가 아니라, 관계에 맞춰 준비한 대화 주제예요.",
+          "comparisonPositions": [
+            "year",
+            "month",
+            "day"
+          ],
+          "dayElements": [
+            {
+              "side": "a",
+              "element": "목",
+              "source": {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 23,
+                "sectionId": "stem-elements"
+              }
+            },
+            {
+              "side": "b",
+              "element": "화",
+              "source": {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 23,
+                "sectionId": "stem-elements"
+              }
+            }
+          ],
+          "observations": [
+            {
+              "id": "branch-clash:자오:day:day",
+              "ruleId": "branch-clash:자오",
+              "family": "branch-clash",
+              "positions": [
+                {
+                  "side": "a",
+                  "position": "day"
+                },
+                {
+                  "side": "b",
+                  "position": "day"
+                }
+              ],
+              "text": "내 일주와 상대 일주에서 자·오의 지지 육충 짝이 확인돼요.",
+              "source": {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 26,
+                "sectionId": "branch-clashes"
+              }
+            },
+            {
+              "id": "branch-clash:자오:month:day",
+              "ruleId": "branch-clash:자오",
+              "family": "branch-clash",
+              "positions": [
+                {
+                  "side": "a",
+                  "position": "month"
+                },
+                {
+                  "side": "b",
+                  "position": "day"
+                }
+              ],
+              "text": "내 월주와 상대 일주에서 자·오의 지지 육충 짝이 확인돼요.",
+              "source": {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 26,
+                "sectionId": "branch-clashes"
+              }
+            },
+            {
+              "id": "branch-clash:자오:year:day",
+              "ruleId": "branch-clash:자오",
+              "family": "branch-clash",
+              "positions": [
+                {
+                  "side": "a",
+                  "position": "year"
+                },
+                {
+                  "side": "b",
+                  "position": "day"
+                }
+              ],
+              "text": "내 연주와 상대 일주에서 자·오의 지지 육충 짝이 확인돼요.",
+              "source": {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 26,
+                "sectionId": "branch-clashes"
+              }
+            },
+            {
+              "id": "branch-combination:자축:day:month",
+              "ruleId": "branch-combination:자축",
+              "family": "branch-combination",
+              "positions": [
+                {
+                  "side": "a",
+                  "position": "day"
+                },
+                {
+                  "side": "b",
+                  "position": "month"
+                }
+              ],
+              "text": "내 일주와 상대 월주에서 자·축의 지지 육합 짝이 확인돼요.",
+              "source": {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 25,
+                "sectionId": "branch-combinations"
+              }
+            },
+            {
+              "id": "branch-combination:자축:day:year",
+              "ruleId": "branch-combination:자축",
+              "family": "branch-combination",
+              "positions": [
+                {
+                  "side": "a",
+                  "position": "day"
+                },
+                {
+                  "side": "b",
+                  "position": "year"
+                }
+              ],
+              "text": "내 일주와 상대 연주에서 자·축의 지지 육합 짝이 확인돼요.",
+              "source": {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 25,
+                "sectionId": "branch-combinations"
+              }
+            },
+            {
+              "id": "branch-combination:자축:month:month",
+              "ruleId": "branch-combination:자축",
+              "family": "branch-combination",
+              "positions": [
+                {
+                  "side": "a",
+                  "position": "month"
+                },
+                {
+                  "side": "b",
+                  "position": "month"
+                }
+              ],
+              "text": "내 월주와 상대 월주에서 자·축의 지지 육합 짝이 확인돼요.",
+              "source": {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 25,
+                "sectionId": "branch-combinations"
+              }
+            }
+          ],
+          "commonFamilies": [
+            "지지 육충",
+            "지지 육합",
+            "천간 합"
+          ],
+          "totalCommonObservations": 15,
+          "omittedDisplayObservations": 9,
+          "omittedCandidateDependentFacts": 0,
+          "coverage": [
+            {
+              "side": "a",
+              "hourKnown": true,
+              "boundaryReviewRequired": false,
+              "clockReviewRequired": false
+            },
+            {
+              "side": "b",
+              "hourKnown": true,
+              "boundaryReviewRequired": false,
+              "clockReviewRequired": false
+            }
+          ],
+          "cautions": [
+            "출생 시각은 계산표에 보관했어요. 이번 기호 비교는 연·월·일만 사용해요."
+          ],
+          "scoreStatus": "not-adopted",
+          "mapStatus": "collection-only-not-ranked",
+          "sharedCopy": {
+            "title": "서로의 이야기를 나눠 보세요",
+            "strength": "서로 편안한 시간에 함께 이야기할 주제를 골라 보세요."
+          }
+        }
+      }
+    },
+    {
+      "id": "unknown-hour-calendar",
+      "reading": {
+        "label": "사주 기호 비교 · 검토판",
+        "title": "두 사람의 사주 기호를 살펴봤어요",
+        "strength": "내 일간의 오행은 화, 상대 일간의 오행은 화로 분류돼요. 일간은 태어난 날의 천간 한 글자이며, 사주 전체의 오행 비율을 뜻하지 않아요.",
+        "difference": "두 사람의 기호 사이에서 지지 육충에 해당하는 짝이 확인돼요. 합·충은 규칙표에서 짝을 부르는 이름이에요. 실제 관계의 좋고 나쁨을 뜻하지 않아요.",
+        "advice": "서로 편한 연락 빈도와 다음에 함께 하고 싶은 일을 이야기해 보세요.",
+        "ruleVersion": "source-observations-copy-v1",
+        "score": null,
+        "basis": {
+          "kind": "source-symbol-comparison",
+          "productionApproved": false,
+          "definitionVersion": "symbol-relations-research-v1",
+          "notice": "입력한 생일의 연구 계산에서 공통으로 확인한 기호를 설명해요. 성격이나 관계의 성공을 판단하는 기준은 아니에요. 비교는 연·월·일 기준이며 궁합 점수는 제공하지 않아요.",
+          "adviceNotice": "이 제안은 생일에서 추론한 성격 풀이가 아니라, 관계에 맞춰 준비한 대화 주제예요.",
+          "comparisonPositions": [
+            "year",
+            "month",
+            "day"
+          ],
+          "dayElements": [
+            {
+              "side": "a",
+              "element": "화",
+              "source": {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 23,
+                "sectionId": "stem-elements"
+              }
+            },
+            {
+              "side": "b",
+              "element": "화",
+              "source": {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 23,
+                "sectionId": "stem-elements"
+              }
+            }
+          ],
+          "observations": [
+            {
+              "id": "branch-clash:자오:day:year",
+              "ruleId": "branch-clash:자오",
+              "family": "branch-clash",
+              "positions": [
+                {
+                  "side": "a",
+                  "position": "day"
+                },
+                {
+                  "side": "b",
+                  "position": "year"
+                }
+              ],
+              "text": "내 일주와 상대 연주에서 자·오의 지지 육충 짝이 확인돼요.",
+              "source": {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 26,
+                "sectionId": "branch-clashes"
+              }
+            },
+            {
+              "id": "branch-clash:자오:year:day",
+              "ruleId": "branch-clash:자오",
+              "family": "branch-clash",
+              "positions": [
+                {
+                  "side": "a",
+                  "position": "year"
+                },
+                {
+                  "side": "b",
+                  "position": "day"
+                }
+              ],
+              "text": "내 연주와 상대 일주에서 자·오의 지지 육충 짝이 확인돼요.",
+              "source": {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 26,
+                "sectionId": "branch-clashes"
+              }
+            }
+          ],
+          "commonFamilies": [
+            "지지 육충"
+          ],
+          "totalCommonObservations": 2,
+          "omittedDisplayObservations": 0,
+          "omittedCandidateDependentFacts": 0,
+          "coverage": [
+            {
+              "side": "a",
+              "hourKnown": false,
+              "boundaryReviewRequired": false,
+              "clockReviewRequired": false
+            },
+            {
+              "side": "b",
+              "hourKnown": false,
+              "boundaryReviewRequired": false,
+              "clockReviewRequired": false
+            }
+          ],
+          "cautions": [
+            "출생 시간을 모르는 정보가 있어요. 시주는 보충하지 않았으며, 이번 비교는 연·월·일만 사용해요."
+          ],
+          "scoreStatus": "not-adopted",
+          "mapStatus": "collection-only-not-ranked",
+          "sharedCopy": {
+            "title": "서로의 이야기를 나눠 보세요",
+            "strength": "서로 편안한 시간에 함께 이야기할 주제를 골라 보세요."
+          }
+        }
+      }
+    },
+    {
+      "id": "boundary-calendar",
+      "reading": {
+        "label": "사주 기호 비교 · 검토판",
+        "title": "두 사람의 사주 기호를 살펴봤어요",
+        "strength": "내 일간의 오행은 화, 상대 일간의 오행은 화로 분류돼요. 일간은 태어난 날의 천간 한 글자이며, 사주 전체의 오행 비율을 뜻하지 않아요.",
+        "difference": "두 사람의 기호 사이에서 지지 육충·천간 합에 해당하는 짝이 확인돼요. 합·충은 규칙표에서 짝을 부르는 이름이에요. 실제 관계의 좋고 나쁨을 뜻하지 않아요.",
+        "advice": "서로 편한 연락 빈도와 다음에 함께 하고 싶은 일을 이야기해 보세요.",
+        "ruleVersion": "source-observations-copy-v1",
+        "score": null,
+        "basis": {
+          "kind": "source-symbol-comparison",
+          "productionApproved": false,
+          "definitionVersion": "symbol-relations-research-v1",
+          "notice": "입력한 생일의 연구 계산에서 공통으로 확인한 기호를 설명해요. 성격이나 관계의 성공을 판단하는 기준은 아니에요. 비교는 연·월·일 기준이며 궁합 점수는 제공하지 않아요.",
+          "adviceNotice": "이 제안은 생일에서 추론한 성격 풀이가 아니라, 관계에 맞춰 준비한 대화 주제예요.",
+          "comparisonPositions": [
+            "year",
+            "month",
+            "day"
+          ],
+          "dayElements": [
+            {
+              "side": "a",
+              "element": "화",
+              "source": {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 23,
+                "sectionId": "stem-elements"
+              }
+            },
+            {
+              "side": "b",
+              "element": "화",
+              "source": {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 23,
+                "sectionId": "stem-elements"
+              }
+            }
+          ],
+          "observations": [
+            {
+              "id": "branch-clash:묘유:day:month",
+              "ruleId": "branch-clash:묘유",
+              "family": "branch-clash",
+              "positions": [
+                {
+                  "side": "a",
+                  "position": "day"
+                },
+                {
+                  "side": "b",
+                  "position": "month"
+                }
+              ],
+              "text": "내 일주와 상대 월주에서 묘·유의 지지 육충 짝이 확인돼요.",
+              "source": {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 26,
+                "sectionId": "branch-clashes"
+              }
+            },
+            {
+              "id": "branch-clash:자오:year:day",
+              "ruleId": "branch-clash:자오",
+              "family": "branch-clash",
+              "positions": [
+                {
+                  "side": "a",
+                  "position": "year"
+                },
+                {
+                  "side": "b",
+                  "position": "day"
+                }
+              ],
+              "text": "내 연주와 상대 일주에서 자·오의 지지 육충 짝이 확인돼요.",
+              "source": {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 26,
+                "sectionId": "branch-clashes"
+              }
+            },
+            {
+              "id": "stem-combination:갑기:year:month",
+              "ruleId": "stem-combination:갑기",
+              "family": "stem-combination",
+              "positions": [
+                {
+                  "side": "a",
+                  "position": "year"
+                },
+                {
+                  "side": "b",
+                  "position": "month"
+                }
+              ],
+              "text": "내 연주와 상대 월주에서 갑·기의 천간 합 짝이 확인돼요.",
+              "source": {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 23,
+                "sectionId": "stem-combinations"
+              }
+            }
+          ],
+          "commonFamilies": [
+            "지지 육충",
+            "천간 합"
+          ],
+          "totalCommonObservations": 3,
+          "omittedDisplayObservations": 0,
+          "omittedCandidateDependentFacts": 2,
+          "coverage": [
+            {
+              "side": "a",
+              "hourKnown": true,
+              "boundaryReviewRequired": true,
+              "clockReviewRequired": false
+            },
+            {
+              "side": "b",
+              "hourKnown": false,
+              "boundaryReviewRequired": false,
+              "clockReviewRequired": false
+            }
+          ],
+          "cautions": [
+            "출생 시간을 모르는 정보가 있어요. 시주는 보충하지 않았으며, 이번 비교는 연·월·일만 사용해요.",
+            "절기 경계의 후보 중 공통으로 확인되는 기호만 설명했어요.",
+            "입력 후보에 따라 달라지는 합·충은 확정 문장에서 제외했어요."
+          ],
+          "scoreStatus": "not-adopted",
+          "mapStatus": "collection-only-not-ranked",
+          "sharedCopy": {
+            "title": "서로의 이야기를 나눠 보세요",
+            "strength": "서로 편안한 시간에 함께 이야기할 주제를 골라 보세요."
+          }
+        }
+      }
+    }
+  ]
+}

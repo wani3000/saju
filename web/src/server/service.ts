@@ -482,7 +482,7 @@ export async function finishJob(
       id: c.id,
       ...c.inputs,
       charts: c.charts,
-      reading: readingForVersion(c.rule_version),
+      reading: readingForVersion(c.rule_version, { charts: c.charts, relation: c.inputs.other.relation }),
       createdAt: new Date().toISOString(),
     };
     await tx.query(

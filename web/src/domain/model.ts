@@ -56,7 +56,28 @@ export type Reading = {
   advice: string;
   ruleVersion: string;
   score: null;
+  basis?: {
+    kind: "source-symbol-comparison";
+    productionApproved: false;
+    definitionVersion: string;
+    notice: string;
+    adviceNotice: string;
+    comparisonPositions: string[];
+    dayElements: { side: string; element: string | null; source: ReadingSource }[];
+    observations: { id: string; ruleId: string; family: string; text: string;
+      positions: { side: string; position: string }[]; source: ReadingSource }[];
+    commonFamilies: string[];
+    totalCommonObservations: number;
+    omittedDisplayObservations: number;
+    omittedCandidateDependentFacts: number;
+    coverage: { side: string; hourKnown: boolean; boundaryReviewRequired: boolean; clockReviewRequired: boolean }[];
+    cautions: string[];
+    scoreStatus: "not-adopted";
+    mapStatus: "collection-only-not-ranked";
+    sharedCopy: { title: string; strength: string };
+  };
 };
+export type ReadingSource = { id: string; pdfSha256: string; pdfPage: number; sectionId: string };
 export type SavedResult = {
   id: string;
   me: Person;
@@ -66,6 +87,7 @@ export type SavedResult = {
   createdAt: string;
 };
 export type ShareCard = {
+  kind?: "conversation-only";
   aliases: [string, string];
   reading: Reading;
   avatars: ["orange-v1", "cream-v1"];
@@ -81,6 +103,16 @@ export class AppError extends Error {
   }
 }
 export function publicCard(aliases: [string, string], reading: Reading): ShareCard {
+  if (reading.basis?.kind === "source-symbol-comparison") {
+    return {
+      kind: "conversation-only", aliases,
+      reading: { label: "함께 나누는 대화",
+        title: reading.basis.sharedCopy.title, strength: reading.basis.sharedCopy.strength,
+        difference: "생년월일과 사주 기호는 이 카드에 공개하지 않아요.",
+        advice: reading.advice, ruleVersion: reading.ruleVersion, score: null },
+      avatars: ["orange-v1", "cream-v1"], catalogVersion: "tigers-v1",
+    };
+  }
   return {
     aliases,
     reading: { label: reading.label, title: reading.title, strength: reading.strength,

@@ -1,0 +1,35 @@
+{
+  "version": "source-observations-copy-v1",
+  "status": "selected-for-app-review",
+  "productionApproved": false,
+  "engineVersion": "research-civil-midnight-v5",
+  "definitionVersion": "symbol-relations-research-v1",
+  "comparisonPositions": ["year", "month", "day"],
+  "includedRuleIds": ["stem-combination:갑기", "stem-combination:을경", "stem-combination:병신", "stem-combination:정임", "stem-combination:무계", "branch-combination:자축", "branch-combination:인해", "branch-combination:묘술", "branch-combination:진유", "branch-combination:사신", "branch-combination:오미", "branch-clash:자오", "branch-clash:축미", "branch-clash:인신", "branch-clash:묘유", "branch-clash:진술", "branch-clash:사해"],
+  "maxDisplayedObservations": 6,
+  "excluded": ["hour-based-comparison", "candidate-dependent-claims", "strength-classification", "seasonal-command", "transformation-verdict", "personality-prediction", "relationship-outcome", "compatibility-score", "map-distance-ranking"],
+  "review": {
+    "reviewer": "Codex",
+    "reviewedOn": "2026-10-19",
+    "scope": "원전 기호 정의 대조·문구 편집·후보 처리·앱 연결 검토",
+    "domainInterpretationApproval": "pending",
+    "calendarProductionApproval": "pending"
+  },
+  "copy": {
+    "label": "사주 기호 비교 · 검토판",
+    "title": "두 사람의 사주 기호를 살펴봤어요",
+    "notice": "입력한 생일의 연구 계산에서 공통으로 확인한 기호를 설명해요. 성격이나 관계의 성공을 판단하는 기준은 아니에요. 비교는 연·월·일 기준이며 궁합 점수는 제공하지 않아요.",
+    "noMatch": "선택한 비교 범위에서 모든 입력 후보에 공통인 합·충 짝은 확인되지 않았어요. 이것이 두 사람의 관계가 좋거나 나쁘다는 뜻은 아니에요.",
+    "uncertainDay": "일주 후보에 따라 기준 오행이 달라져 두 사람의 오행을 하나로 정하지 않았어요.",
+    "pairMeaning": "합·충은 규칙표에서 짝을 부르는 이름이에요. 실제 관계의 좋고 나쁨을 뜻하지 않아요.",
+    "adviceNotice": "이 제안은 생일에서 추론한 성격 풀이가 아니라, 관계에 맞춰 준비한 대화 주제예요.",
+    "sharedTitle": "서로의 이야기를 나눠 보세요",
+    "sharedStrength": "서로 편안한 시간에 함께 이야기할 주제를 골라 보세요."
+  },
+  "advice": {
+    "친구": "서로 편한 연락 빈도와 다음에 함께 하고 싶은 일을 이야기해 보세요.",
+    "가족": "도움이 필요한 일과 각자 결정하고 싶은 일을 하나씩 나눠 이야기해 보세요.",
+    "연인": "함께 보내는 시간과 혼자 쉬는 시간에 대해 원하는 바를 이야기해 보세요.",
+    "동료": "함께 일할 때 편한 연락 방법과 역할을 나누는 방식을 이야기해 보세요."
+  }
+}

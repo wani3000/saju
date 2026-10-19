@@ -41,3 +41,27 @@ await build({
     },
   ],
 });
+
+await build({
+  entryPoints: [root + "web/scripts/reading-entry.mjs"],
+  bundle: true,
+  platform: "node",
+  format: "esm",
+  outfile: root + "web/src/generated/selected-reading.mjs",
+  plugins: [{
+    name: "embed-reviewed-reading-sources",
+    setup(b) {
+      b.onLoad({filter: /(?:reading-rules|selected-reading)\.mjs$/}, async args => {
+        let source = await readFile(args.path, "utf8");
+        const pattern = /JSON\.parse\(readFileSync\(new URL\('([^']+\.json)', import\.meta\.url\)\)\)/g;
+        const matches = [...source.matchAll(pattern)];
+        if (matches.length !== 1) throw new Error("Reading source changed; review bundling");
+        for (const match of matches) {
+          const json = JSON.parse(await readFile(path.resolve(path.dirname(args.path), match[1]), "utf8"));
+          source = source.replace(match[0], JSON.stringify(json));
+        }
+        return {contents: source, loader: "js"};
+      });
+    },
+  }],
+});

@@ -4,7 +4,7 @@
 
 ## 현재 상태
 
-- 기준일: 2026-10-14.
+- 기준일: 2026-10-19.
 - 10월 12일 ZIP의 체크섬을 대조하고 Git 이력을 복원했다. 10월 14일 별도 분기에서는 [캐릭터 설계](docs/13-character-plan.md)를 선별 통합했다.
 - 현재 작업 위치: `/Users/chulwan/Documents/Codex/2026-10-12/oxaz1234-gmail-com-google-drive-3/saju`.
 - 원격 저장소: https://github.com/wani3000/saju (main).
@@ -72,3 +72,5 @@
 오월 29일의 추가 판본 대조와 중화·다섯 합의 출처별 조건은 [후속 감수](docs/extended-source-review.md)에 정리했다. [21사례 보고서](research/validation/reports/extended-source-drafts.md)는 원문 사례 및 조건 검토이며 운영 강약·합화 엔진의 승인이 아니다.
 
 시상 왕기의 선호 시주, 토 합화의 조건부 파상·자조, 일반 중화 관계 관찰은 [후속 감수](docs/hour-balance-review.md)와 [19사례 보고서](research/validation/reports/hour-balance-drafts.md)에 추가했다. 원문 예시 일치와 최종 강약·합화 판정은 구분한다.
+
+신규 결과에는 [출시 후보 v1 기호 풀이](docs/selected-reading-release.md)를 연결했다. 일간 오행·연월일의 공통 합충 기호에 따라 설명이 달라지며, 대화 제안과 공개 공유 범위를 구분한다. 기존 예시 결과는 보존한다. 궁합 점수·강약·합화 판정과 운영 출시는 계속 미승인이다.

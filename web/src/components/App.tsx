@@ -2,6 +2,7 @@
 import { useEffect, useRef, useState } from "react";
 import {
   selfGroup,
+  publicCard,
   blankPerson,
   type Pair,
   type SavedResult,
@@ -81,6 +82,7 @@ export default function App() {
     requestKey = useRef(""),
     heading = useRef<HTMLHeadingElement>(null);
   const current = data?.results.find((r) => r.id === selected);
+  const sharePreview = current ? publicCard(aliases, current.reading) : null;
   const groups = [...new Set((data?.results ?? []).map(selfGroup))];
   const activeGroup = groups.includes(mapGroup) ? mapGroup : groups.at(-1);
   const mapResults = (data?.results ?? []).filter(
@@ -385,9 +387,9 @@ export default function App() {
                 </button>
               </div>
               <p className="hint center">
-                현재 풀이와 지도 배치는 예시예요.
+                입력한 생일로 두 사람의 사주 기호를 비교해요.
                 <br />
-                생년월일 계산은 연구 결과로 따로 표시해요.
+                검토판이며 궁합 점수는 제공하지 않아요.
               </p>
             </>
           )}
@@ -456,8 +458,8 @@ export default function App() {
                   로 진행하며 실제 돈은 청구되지 않아요.
                 </p>
                 <p>
-                  입력과 연구 계산은 이 개발 서버에 저장돼요. 풀이 문구는 고정
-                  예시이며 궁합 점수는 제공하지 않아요.
+                  입력과 연구 계산은 이 개발 서버에 저장돼요. 확인된 사주 기호를
+                  설명하며, 대화 제안은 관계에 맞춰 따로 제공해요. 궁합 점수는 제공하지 않아요.
                 </p>
                 <label className="choice">
                   <input
@@ -484,7 +486,7 @@ export default function App() {
                 {busy
                   ? "확인 중…"
                   : data.free === "available"
-                    ? "무료 예시 결과 보기"
+                    ? "무료 기호 비교 보기"
                     : "추가 이용 확인하기"}
               </button>
             </>
@@ -501,19 +503,35 @@ export default function App() {
                   />
                   <h2 className="result-title">{current.reading.title}</h2>
                   <p className="notice">
-                    생일로 판단한 궁합 풀이가 아닌 고정 예시입니다. 실제 규칙
-                    감수 후 제공할 예정이에요.
+                    {current.reading.basis?.notice ?? "생일로 판단한 궁합 풀이가 아닌 고정 예시입니다. 실제 규칙 감수 후 제공할 예정이에요."}
                   </p>
                   {[
-                    ["잘 맞춰 가는 점", current.reading.strength],
-                    ["서로 알아갈 점", current.reading.difference],
+                    [current.reading.basis ? "두 사람의 기준 오행" : "잘 맞춰 가는 점", current.reading.strength],
+                    [current.reading.basis ? "함께 살펴볼 기호" : "서로 알아갈 점", current.reading.difference],
                     ["오늘의 작은 제안", current.reading.advice],
                   ].map(([title, text]) => (
                     <section className="card" key={title}>
                       <h2>{title}</h2>
                       <p>{text}</p>
+                      {title === "오늘의 작은 제안" && current.reading.basis && (
+                        <p className="hint">{current.reading.basis.adviceNotice}</p>
+                      )}
                     </section>
                   ))}
+                  {current.reading.basis && (
+                    <details className="card">
+                      <summary>비교 근거와 확인 범위</summary>
+                      {current.reading.basis.cautions.map(text => <p className="hint" key={text}>{text}</p>)}
+                      {current.reading.basis.observations.map(f => (
+                        <section key={f.id}>
+                          <p>{f.text}</p>
+                          <p className="hint">기호 정의: 『연해자평』 1926년 판본 PDF {f.source.pdfPage}쪽</p>
+                        </section>
+                      ))}
+                      {current.reading.basis.observations.length === 0 && <p>이번 범위에서 공통으로 확인한 합·충 짝이 없어요. 관계의 좋고 나쁨을 뜻하지 않아요.</p>}
+                      {current.reading.basis.omittedDisplayObservations > 0 && <p className="hint">확인된 항목 {current.reading.basis.totalCommonObservations}개 중 {current.reading.basis.observations.length}개를 기호 이름 순으로 표시했어요. 중요도나 점수 순서가 아니에요.</p>}
+                    </details>
+                  )}
                   <details className="card">
                     <summary>생년월일 연구 계산 확인</summary>
                     <p className="hint">
@@ -656,7 +674,7 @@ export default function App() {
               <p>
                 이야기를 나눈 사람들을 모았어요.
                 <br />
-                배치는 예시이며 친밀도 순서가 아니에요.
+                위치는 보관함의 배치이며 궁합이나 친밀도 순서가 아니에요.
               </p>
               {data.results.length ? (
                 <>
@@ -813,7 +831,7 @@ export default function App() {
                 생일과 다른 사람의 목록은 공개하지 않아요.
               </p>
               <section className="card">
-                <span className="badge">공개 미리보기 · 예시</span>
+                <span className="badge">공개 미리보기 · {sharePreview?.kind === "conversation-only" ? "대화 주제" : "예시"}</span>
                 <img
                   className="result-hero"
                   src="/assets/tigers/pair-v1.png"
@@ -834,11 +852,11 @@ export default function App() {
                     />
                   </label>
                 ))}
-                <h2>{current.reading.title}</h2>
-                <p>{current.reading.strength}</p>
-                <p>{current.reading.advice}</p>
+                <h2>{sharePreview?.reading.title}</h2>
+                <p>{sharePreview?.reading.strength}</p>
+                <p>{sharePreview?.reading.advice}</p>
                 <p className="hint">
-                  실제 궁합 분석이 아닌 고정 예시 카드예요.
+                  {sharePreview?.kind === "conversation-only" ? "대화 주제만 나누는 카드예요. 생년월일·사주 기호·비교 근거는 공개하지 않아요." : "실제 궁합 분석이 아닌 고정 예시 카드예요."}
                 </p>
               </section>
               <button

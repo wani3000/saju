@@ -108,3 +108,7 @@ API·PG 반환·웹훅은 요청 본문을 읽는 중 16KiB를 넘으면 413, �
 ### 역사 시각·풀이 버전 (2026-10-19)
 
 새 계산은 `manseryeok-research-civil-midnight-v5`다. 국가기록원과 IANA의 1954년 시각 차이에 대해 신규 입력 보호와 시간 미상 표시를 추가했다. 고정 예시 문구는 `content/readings.json`에서 관리하며 신규 작업은 `example-copy-v2`, 대기 작업은 저장된 `rule_version`, 공유는 저장 결과 문구를 따른다. 이전 버전 문구를 삭제하거나 기존 release를 덮어쓰지 않는다. 실제 명리 규칙은 승인 전이다. [감수 기록](../docs/reading-review.md), [역사 검증](../docs/historical-clock-validation.md), [QA](qa.md)를 참고한다.
+
+## 입력별 기호 풀이 후보 v1
+
+신규 결과는 `source-observations-copy-v1`을 사용한다. 서버에서 저장된 계산표를 읽어 일간 오행과 연·월·일의 공통 합충 기호를 설명한다. 대화 제안은 관계 유형별 편집 문구이며 점수는 null이다. 기존 예시 v1/v2와 저장된 결과는 보존한다. 공유에는 사주 기호·생일·검토 근거를 제외한 대화 주제만 담는다. [선정 정책·문구·후보 처리](../docs/selected-reading-release.md)를 따른다. 연구 모드 및 운영 차단은 유지한다.
