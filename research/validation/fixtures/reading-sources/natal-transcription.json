@@ -1,0 +1,17 @@
+{
+  "sourceId": "yuanhai-1926-ntl-9900014379",
+  "review": "Codex visual collation, 2026-10-19; not expert approval",
+  "normalization": "Selected definition passages only. Punctuation added; 巳/己 distinguished by branch/stem context. Source order is preserved and does not assign weights. Modern Korean ten-god labels are a separate research terminology choice, not a verbatim ten-label table in this edition.",
+  "sections": [
+    {"id":"element-cycles","pdfPage":51,"heading":"論五行相生相尅","text":"金生水，水生木，木生火，火生土，土生金。金尅木，木尅土，土尅水，水尅火，火尅金。"},
+    {"id":"relation-directions","pdfPage":52,"text":"生我者為父母，我生者為子孫，尅我者為官鬼，我尅者為妻財，比和者為兄弟。","usage":"Direction definitions only; family/gender claims are not output."},
+    {"id":"seasonal-allocation-distinction","pdfPage":53,"heading":"又論節氣歌","text":"子上十日壬，中旬下旬方是癸。","usage":"Seasonal day allocation is distinct from the static hidden-stem list on page 54; not converted to weights."},
+    {"id":"hidden-stems","pdfPage":54,"heading":"又地支藏遁歌","text":"子宮癸水在其中，丑癸辛金己土同。寅宮甲木兼丙戊，卯宮乙木獨相逢。辰藏乙戊三分癸，巳中庚金丙戊叢。午宮丁火並己土，未宮乙己丁共宗。申位庚金壬水戊，酉宮辛金獨豐隆。戌宮辛金及丁戊，亥藏壬甲是真蹤。","pairs":[["子","癸"],["丑","癸辛己"],["寅","甲丙戊"],["卯","乙"],["辰","乙戊癸"],["巳","庚丙戊"],["午","丁己"],["未","乙己丁"],["申","庚壬戊"],["酉","辛"],["戌","辛丁戊"],["亥","壬甲"]]},
+    {"id":"day-reference-officer-wealth","pdfPage":56,"heading":"論日為主","text":"取日干為主。甲見庚為殺，陽見陽也；見辛為官，陽見陰也。乙木見庚為官，陰見陽也；見辛為殺。陽見陰為正財，陽見陽為偏財。"},
+    {"id":"resource-output","pdfPage":57,"text":"甲見癸乙見壬為印綬，甲見壬乙見癸為偏印。甲見丙為食神，乙見丁為食神；甲見丁為傷官，乙見丙為傷官。"},
+    {"id":"month-context","pdfPage":57,"text":"以日為主，年為本，月為提綱，時為輔佐。","usage":"Keep month branch context, without declaring seasonal strength or favorable elements."},
+    {"id":"indirect-wealth-examples","pdfPage":107,"heading":"論偏財","text":"何謂之偏財，蓋陽見陽財陰見陰財也。","pairs":[["甲","戊"],["乙","己"],["丙","庚"],["丁","辛"],["戊","壬"],["己","癸"],["庚","甲"],["辛","乙"],["壬","丙"],["癸","丁"]]},
+    {"id":"food-god-examples","pdfPage":108,"heading":"論食神","pairs":[["甲","丙"],["乙","丁"],["丙","戊"],["丁","己"],["戊","庚"],["己","辛"],["庚","壬"],["辛","癸"],["壬","甲"],["癸","乙"]]},
+    {"id":"peer-terminology-variants","pdfPage":112,"heading":"論劫財","text":"甲見乙為敗財，乙見甲為劫財。","usage":"This edition distinguishes 敗財 and 劫財 by direction. The research label 겁재 unifies opposite-polarity same-element cases as an explicit unapproved terminology policy. Same-polarity 비견 is also policy-normalized, not attributed to this excerpt. 羊刃 is not treated as a synonym."}
+  ]
+}

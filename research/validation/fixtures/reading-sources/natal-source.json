@@ -1,0 +1,80 @@
+{
+  "sourceId": "yuanhai-1926-ntl-9900014379",
+  "edition": "文明, 1926; 秦慎安 校勘 (catalog metadata)",
+  "holdingInstitution": "國立臺灣圖書館",
+  "catalogId": "NTL-9900014379",
+  "catalogUrl": "https://taiwanebook.ncl.edu.tw/zh-tw/book/NTL-9900014379",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/f/fa/NTL-9900014379_%E6%B7%B5%E6%B5%B7%E5%AD%90%E5%B9%B3%E5%AD%90%E5%B9%B3%E7%9C%9F%E8%A9%AE_v.1.pdf",
+  "retrievedOn": "2026-10-19",
+  "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+  "pdfBytes": 90837030,
+  "rights": "Public domain scan per Wikimedia Commons; 1926 edition. No modern translation copied.",
+  "extraction": "Original full-page embedded images extracted with pypdf; no crop or retouch. PDF page numbers are 1-based. Full 86.63 MiB PDF not committed.",
+  "title": "評註淵海子平 卷一・卷二 (淵海子平子平真詮 v.1)",
+  "pages": [
+    {
+      "file": "yuanhai-1926-page-51.jpg",
+      "pdfPage": 51,
+      "printedVolume": 1,
+      "printedPage": 33,
+      "sha256": "bc48d807885cdee8b3cf82011f43edf6765055762659ee6bc3e501940d1b15f1"
+    },
+    {
+      "file": "yuanhai-1926-page-52.jpg",
+      "pdfPage": 52,
+      "printedVolume": 1,
+      "printedPage": 34,
+      "sha256": "e2e8774147a635f51349f59eb9421a915a9c3eb18d4023700eeac8c53f6fffe6"
+    },
+    {
+      "file": "yuanhai-1926-page-53.jpg",
+      "pdfPage": 53,
+      "printedVolume": 1,
+      "printedPage": 35,
+      "sha256": "0b4d0b17e0729276af5768a9005250d41059f3fe96cdaf529a5537f1843ab50f"
+    },
+    {
+      "file": "yuanhai-1926-page-54.jpg",
+      "pdfPage": 54,
+      "printedVolume": 1,
+      "printedPage": 36,
+      "sha256": "d14e17cf472af436903be8873b1150242a3d07c103223ab8780056ee4f82a53b"
+    },
+    {
+      "file": "yuanhai-1926-page-56.jpg",
+      "pdfPage": 56,
+      "printedVolume": 1,
+      "printedPage": 38,
+      "sha256": "d8d71760bb2f9f0ed7df8ac47493f656504fc47ed62bb2e37ea032c0ba87338e"
+    },
+    {
+      "file": "yuanhai-1926-page-57.jpg",
+      "pdfPage": 57,
+      "printedVolume": 1,
+      "printedPage": 39,
+      "sha256": "2a1bc43241461e35947a604ebae421579f6fbc57c22db82a8c68ed7df5a22aba"
+    },
+    {
+      "file": "yuanhai-1926-page-107.jpg",
+      "pdfPage": 107,
+      "printedVolume": 2,
+      "printedPage": 26,
+      "sha256": "119f2cda320c22423671977b8acfdc487784fb7239d275d9606f16203d461074"
+    },
+    {
+      "file": "yuanhai-1926-page-108.jpg",
+      "pdfPage": 108,
+      "printedVolume": 2,
+      "printedPage": 27,
+      "sha256": "a5484c0e74a5bb53acb86489fb68b7f6ff10950f2e766640addcf0a9dd249d73"
+    },
+    {
+      "file": "yuanhai-1926-page-112.jpg",
+      "pdfPage": 112,
+      "printedVolume": 2,
+      "printedPage": 31,
+      "sha256": "bbf39a8473ed71acce22ebe8d1085fe95def76df27fd309c4d77162efb714387"
+    }
+  ],
+  "transcriptionSha256": "f96c3d86a64275ac1f60c3af7e8cadbbd2ae1490ac8ccf8aba491bccbc3c0868"
+}

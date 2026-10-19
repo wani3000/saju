@@ -98,3 +98,16 @@ node research/validation/audit-reading-rules.mjs --release-check
 ```
 
 전체 연구 68개 테스트에는 2,880분 역사 모델 비교, 244개 기호 짝, 3,600쌍 A/B 대칭, 시간 모름·경계 후보·음양력 대응과 합성 감수 보고서 6개 재현을 포함한다. CI는 저장된 전체 페이지 이미지와 전사의 해시를 오프라인 검사한다. 원문 수기 판독과 명리적 해석 자체를 자동 증명하는 검사가 아니다.
+
+## 지장간·십성 후속 (2026-10-19)
+
+`natal-rules.mjs` / `natal-analysis.mjs`는 원전 지장간 목록과 일간 기준 분류를 별도 연구 버전으로 제공한다. 한국어 십성 명칭은 명시적인 미승인 용어 정책이며 월령 강약·합화·궁합 점수는 산출하지 않는다. 일간과 자신의 지장간은 같은 일주 후보 안에서만 묶는다. 후보 공통 분류만 감수 문장으로 만들며 웹과 연결하지 않는다. [상세 감수](../../docs/natal-rules-review.md).
+
+```sh
+node research/validation/audit-natal-rules.mjs --check
+pnpm --dir research/validation test
+# 운영 승인 미완료: 종료 코드 2
+node research/validation/audit-natal-rules.mjs --release-check
+```
+
+전체 연구 77개 검사 통과. 새 9개는 100방향 조합·60일주 후보·원문 예시·출처 해시·시간 모름·초안 재현을 포함한다. 읽기용 `reports/natal-reading-drafts.md`와 전체 `reports/natal-rule-audit.json`을 함께 재생성한다. 이전 합충 v1 보고서는 변경하지 않는다.
