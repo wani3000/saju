@@ -1,0 +1,20 @@
+[
+  {
+    "file": "iana-2025b-asia",
+    "url": "https://data.iana.org/time-zones/tzdb-2025b/asia",
+    "retrievedOn": "2026-10-19",
+    "sha256": "9a8b7e640cb0692b9e50b9126f599bf89360a2f9ed9e54b722f3e5b6f631b419"
+  },
+  {
+    "file": "Leap_Second.dat",
+    "url": "https://hpiers.obspm.fr/iers/bul/bulc/Leap_Second.dat",
+    "retrievedOn": "2026-10-19",
+    "sha256": "6cb6f5d4b819f2e568e25db4b0b26d89dedf031fdffb18bc94d40f4e94e268d7"
+  },
+  {
+    "file": "archives-1954.html",
+    "url": "https://theme.archives.go.kr/next/monthly/viewMain.do?month=03&year=2011",
+    "retrievedOn": "2026-10-19",
+    "sha256": "fde4ed4de50610a0da4302d4e1b8278ca835c6504ce77d68674e6a7b0759bf47"
+  }
+]

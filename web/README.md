@@ -104,3 +104,7 @@ API·PG 반환·웹훅은 요청 본문을 읽는 중 16KiB를 넘으면 413, �
 ## 2026-10-19 연구 계산 경계 보완
 
 새 계산 버전은 `manseryeok-research-civil-midnight-v4`다. 절입 전후 2분의 임시 검토 구간에 출생 입력 분/날짜가 걸치면 연·월주를 미확정으로 두고 후보를 저장한다. 일시주와 기존 저장 결과는 유지한다. 검토 구간은 정확도 보증이 아니며 [원인 조사와 남은 조건](../docs/historical-clock-validation.md), [실행 검증](qa.md)을 따른다.
+
+### 역사 시각·풀이 버전 (2026-10-19)
+
+새 계산은 `manseryeok-research-civil-midnight-v5`다. 국가기록원과 IANA의 1954년 시각 차이에 대해 신규 입력 보호와 시간 미상 표시를 추가했다. 고정 예시 문구는 `content/readings.json`에서 관리하며 신규 작업은 `example-copy-v2`, 대기 작업은 저장된 `rule_version`, 공유는 저장 결과 문구를 따른다. 이전 버전 문구를 삭제하거나 기존 release를 덮어쓰지 않는다. 실제 명리 규칙은 승인 전이다. [감수 기록](../docs/reading-review.md), [역사 검증](../docs/historical-clock-validation.md), [QA](qa.md)를 참고한다.

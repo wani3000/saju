@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { spawnSync } from 'node:child_process';
-import { calculateProfile } from './adapter.mjs';
+import { calculateProfile } from './baseline-v4.mjs';
 import { compareNaoj } from './compare-naoj.mjs';
 
 const fixture = JSON.parse(readFileSync(new URL('./fixtures/naoj-terms.json', import.meta.url)));

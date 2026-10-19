@@ -1,0 +1,458 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ko">
+	<head>
+		<title>이달의 기록</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<link rel="stylesheet" type="text/css" href="/next/css/monthly.css">
+		<script type="text/javascript" src="/next/js/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" src="/next/js/monthly.js"></script>
+		<!--[if lt IE 9]>
+		  <link rel="stylesheet" type="text/css" href="/next/css/monthly_ie78.css">
+		<![endif]-->
+		<!--[if lt IE 9]>
+		<script src="/next/js/IE9.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<div id="skip-navigation">
+			<p><a href="#searcharea">메뉴 바로가기</a></p>
+			<p><a href="#mainlayout">콘텐츠 바로가기</a></p>
+			<p><a href="#footer">하단정보 바로가기</a></p>
+		</div>
+		<div id="wrap_record">
+			<div id="wrap">
+				<!--top링크 시작-->
+				<div id="toplink">
+					<div class="toplinklayout">
+						<a href="http://www.archives.go.kr/" target="_blank" title="클릭하시면 국가기록원 포털사이트가 새창으로 열립니다."><span>국가기록원</span>&nbsp;바로가기</a>
+					</div>
+				</div>
+				<!--top링크 끝//-->
+				<!--상단 시작-->
+				<div id="toparea">
+					<div class="toparealayout">
+						<h1><a href="/next/monthly/monthlyViewAll.do"><img src="/next/images/monthly/logo.png" alt="국가기록원 이달의 기록"></a></h1>
+						<!--검색 시작-->
+						<div id="searcharea">﻿﻿
+﻿
+<script type="text/javascript">
+	var selectGroup = "year";
+	
+	$(document).ready(function(){
+
+	    var paramSelectGroup = '';
+	    if(paramSelectGroup != '') {
+	        selectGroup = paramSelectGroup;
+	        $("input[name='searchTpye'][value='" + selectGroup +  "']").prop("checked","checked");
+	    }
+	    $("div#" + selectGroup).css("display","block");
+	    
+	    $("input[name=searchTpye]").change(function(){
+	        selectGroup = $(this).val();
+	        $("div.searchType").css("display","none");
+	        $("div#" + selectGroup).css("display","block");
+	        
+	    });
+	});
+	
+</script>
+<noscript class="year_no">
+<fieldset>
+	<legend>월별보기</legend>
+		<form name="form_type01" action="/next/monthly/viewMain.do" method="get" onsubmit="return mainReload();">
+			<label for="s_year_year_no" class="noview">연도별보기_년도선택</label>
+			<select name="year" onchange="selectYear(this.value);" id="s_year_year_no" class="first">
+			    
+			        <option value="2017" >2017년</option>
+			    
+			        <option value="2016" >2016년</option>
+			    
+			        <option value="2015" >2015년</option>
+			    
+			        <option value="2014" >2014년</option>
+			    
+			        <option value="2013" >2013년</option>
+			    
+			        <option value="2012" >2012년</option>
+			    
+			        <option value="2011" selected="selected">2011년</option>
+			    
+			        <option value="2010" >2010년</option>
+			    
+			        <option value="2009" >2009년</option>
+			    
+			        <option value="2008" >2008년</option>
+			    
+			        <option value="2007" >2007년</option>
+			    
+			</select>
+			<label for="s_year_month_no" class="noview">연도별보기_월선택</label>
+			<select name="month" id="s_year_month_no">
+			    
+			        <option value="01" >01월 제1차 경제개발 5개년 계획 발표</option>
+			    
+			        <option value="02" >02월 경로우대제 실시</option>
+			    
+			        <option value="03" selected="selected">03월 한국 표준시간 변경</option>
+			    
+			        <option value="04" >04월 기록으로 만나는 1950년대 문맹퇴치운동</option>
+			    
+			        <option value="05" >05월 기록으로 다시보는 '가정의례준칙'</option>
+			    
+			        <option value="06" >06월 기록을 통해본 현충일 행사</option>
+			    
+			        <option value="07" >07월 헌법 제·개정개관</option>
+			    
+			        <option value="08" >08월 기록을 통해 본 광복절과 정부수립</option>
+			    
+			        <option value="09" >09월 민족대명절, 추석</option>
+			    
+			        <option value="10" >10월 겨레의 글 한글</option>
+			    
+			        <option value="11" >11월 기록을 통해 본 대학입시제도 변천</option>
+			    
+			        <option value="12" >12월 기록을 통해 본 겨울나기</option>
+			    
+			</select>
+			<input type="submit" value="Go"><a href="/next/monthly/monthlyViewAll.do" onclick="viewMonthlyAll(); return false;" class="allmenu">전체보기</a>
+		</form>		
+	</fieldset>	
+</noscript>
+<fieldset>
+	<legend>년도 및 월별 검색</legend>
+	<div class="radioarea">
+		<input type="radio" name="searchTpye" id="ra_year" value="year" checked="checked"><label for="ra_year">연도별보기</label>
+		<input type="radio" name="searchTpye" id="ra_month" value="month"><label for="ra_month">월별보기</label>
+	</div>
+	<div id="year" class="searchType form_type01">
+		<form name="form_type01" action="/next/monthly/viewMain.do" method="get" onsubmit="return mainReload();">
+			<label for="s_year_year" class="noview">연도별보기_년도선택</label>
+			<select name="year" onchange="selectYear(this.value);" id="s_year_year" class="first">
+			    
+			        <option value="2017" >2017년</option>
+			    
+			        <option value="2016" >2016년</option>
+			    
+			        <option value="2015" >2015년</option>
+			    
+			        <option value="2014" >2014년</option>
+			    
+			        <option value="2013" >2013년</option>
+			    
+			        <option value="2012" >2012년</option>
+			    
+			        <option value="2011" selected="selected">2011년</option>
+			    
+			        <option value="2010" >2010년</option>
+			    
+			        <option value="2009" >2009년</option>
+			    
+			        <option value="2008" >2008년</option>
+			    
+			        <option value="2007" >2007년</option>
+			    
+			</select>
+			<label for="s_year_month" class="noview">연도별보기_월선택</label>
+			<select name="month" id="s_year_month">
+			    
+			        <option value="01" >01월 제1차 경제개발 5개년 계획 발표</option>
+			    
+			        <option value="02" >02월 경로우대제 실시</option>
+			    
+			        <option value="03" selected="selected">03월 한국 표준시간 변경</option>
+			    
+			        <option value="04" >04월 기록으로 만나는 1950년대 문맹퇴치운동</option>
+			    
+			        <option value="05" >05월 기록으로 다시보는 '가정의례준칙'</option>
+			    
+			        <option value="06" >06월 기록을 통해본 현충일 행사</option>
+			    
+			        <option value="07" >07월 헌법 제·개정개관</option>
+			    
+			        <option value="08" >08월 기록을 통해 본 광복절과 정부수립</option>
+			    
+			        <option value="09" >09월 민족대명절, 추석</option>
+			    
+			        <option value="10" >10월 겨레의 글 한글</option>
+			    
+			        <option value="11" >11월 기록을 통해 본 대학입시제도 변천</option>
+			    
+			        <option value="12" >12월 기록을 통해 본 겨울나기</option>
+			    
+			</select>
+			<input type="submit" value="Go">
+		</form>
+	</div>
+	<div id="month" class="searchType form_type02">
+		<ol>
+		
+			<li ><a href="/next/monthly/monthlyList.do?month=1">1월</a></li>
+		
+			<li ><a href="/next/monthly/monthlyList.do?month=2">2월</a></li>
+		
+			<li ><a href="/next/monthly/monthlyList.do?month=3">3월</a></li>
+		
+			<li ><a href="/next/monthly/monthlyList.do?month=4">4월</a></li>
+		
+			<li ><a href="/next/monthly/monthlyList.do?month=5">5월</a></li>
+		
+			<li ><a href="/next/monthly/monthlyList.do?month=6">6월</a></li>
+		
+			<li ><a href="/next/monthly/monthlyList.do?month=7">7월</a></li>
+		
+			<li ><a href="/next/monthly/monthlyList.do?month=8">8월</a></li>
+		
+			<li ><a href="/next/monthly/monthlyList.do?month=9">9월</a></li>
+		
+			<li ><a href="/next/monthly/monthlyList.do?month=10">10월</a></li>
+		
+			<li ><a href="/next/monthly/monthlyList.do?month=11">11월</a></li>
+		
+			<li ><a href="/next/monthly/monthlyList.do?month=12">12월</a></li>
+		
+		</ol>
+	</div>
+	<a href="/next/monthly/monthlyViewAll.do" onclick="viewMonthlyAll(); return false;" class="allmenu">전체보기</a>
+</fieldset></div>
+						<!--검색 끝//-->
+					</div>
+				</div>
+				<!--상단 끝//-->
+				<!--하단시작-->
+				<div id="mainlayout">
+
+<!--좌측시작-->
+<div id="mainleft">
+	<h2>2011</h2>
+	<p class="info">대국민 기록정보 서비스 및 기록문화 확산을 위해 매월 시의성 있는 주제를 선정하여  관련된 기록을 소개합니다.</p>
+	<ol class="monthlist">
+		
+			<li ><a href="/next/monthly/viewMain.do?year=2011&amp;month=01" onclick="selectMonthView(this, '2011', '01'); return false;">01월</a><div class="monthtext">제1차 경제개발 5개년 계획 발표</div>
+			</li>
+		
+			<li ><a href="/next/monthly/viewMain.do?year=2011&amp;month=02" onclick="selectMonthView(this, '2011', '02'); return false;">02월</a><div class="monthtext">경로우대제 실시</div>
+			</li>
+		
+			<li class="select"><a href="/next/monthly/viewMain.do?year=2011&amp;month=03" onclick="selectMonthView(this, '2011', '03'); return false;">03월</a><div class="monthtext">한국 표준시간 변경</div>
+			</li>
+		
+			<li ><a href="/next/monthly/viewMain.do?year=2011&amp;month=04" onclick="selectMonthView(this, '2011', '04'); return false;">04월</a><div class="monthtext">기록으로 만나는 1950년대 문맹퇴치운동</div>
+			</li>
+		
+			<li ><a href="/next/monthly/viewMain.do?year=2011&amp;month=05" onclick="selectMonthView(this, '2011', '05'); return false;">05월</a><div class="monthtext">기록으로 다시보는 '가정의례준칙'</div>
+			</li>
+		
+			<li ><a href="/next/monthly/viewMain.do?year=2011&amp;month=06" onclick="selectMonthView(this, '2011', '06'); return false;">06월</a><div class="monthtext">기록을 통해본 현충일 행사</div>
+			</li>
+		
+			<li ><a href="/next/monthly/viewMain.do?year=2011&amp;month=07" onclick="selectMonthView(this, '2011', '07'); return false;">07월</a><div class="monthtext">헌법 제·개정개관</div>
+			</li>
+		
+			<li ><a href="/next/monthly/viewMain.do?year=2011&amp;month=08" onclick="selectMonthView(this, '2011', '08'); return false;">08월</a><div class="monthtext">기록을 통해 본 광복절과 정부수립</div>
+			</li>
+		
+			<li ><a href="/next/monthly/viewMain.do?year=2011&amp;month=09" onclick="selectMonthView(this, '2011', '09'); return false;">09월</a><div class="monthtext">민족대명절, 추석</div>
+			</li>
+		
+			<li ><a href="/next/monthly/viewMain.do?year=2011&amp;month=10" onclick="selectMonthView(this, '2011', '10'); return false;">10월</a><div class="monthtext">겨레의 글 한글</div>
+			</li>
+		
+			<li ><a href="/next/monthly/viewMain.do?year=2011&amp;month=11" onclick="selectMonthView(this, '2011', '11'); return false;">11월</a><div class="monthtext">기록을 통해 본 대학입시제도 변천</div>
+			</li>
+		
+			<li ><a href="/next/monthly/viewMain.do?year=2011&amp;month=12" onclick="selectMonthView(this, '2011', '12'); return false;">12월</a><div class="monthtext">기록을 통해 본 겨울나기</div>
+			</li>
+		
+	</ol>
+</div>
+<!--좌측 끝//-->
+<!--우측 시작-->
+<div id="mainright">
+
+
+<font style="color:#CC0000;font-size:15px;font-weight:bold;" >본 콘텐츠는 2007. 6월 ~ 2017. 12월 개발된 콘텐츠입니다.</font>
+<input type="hidden" id="title" value="2011년 03월 한국 표준시간 변경">
+<!--월정보 및 sns 시작-->
+<div class="titlearea">
+	<div class="monthname">2011년 03월</div>
+	<div class="sns">
+		<a href="#none" onclick="buildSns('facebook');" class="facebook" title="새창열림" target="_blank">페이스북</a>
+		<a href="#none" onclick="buildSns('twitter');" class="twitter" title="새창열림" target="_blank">트위터</a>
+	</div>
+</div>
+<!--월정보 및 sns 끝//-->
+<!--월정보 전체 시작-->
+<div id="contents">
+	<!--타이틀 시작-->
+	<h3 class="subject">한국 표준시간 변경</h3>
+	<!--타이틀 끝//-->
+	
+	<!--대표기록물 시작-->
+	<div class="photo_rep">
+		
+			<div>
+				<!-- 20160712 이미지 직접 경로로 수정 img src="http://www.archives.go.kr/next/common/archivedata/render.do?filePath=2F757046696c652F6d6f6e74686c792F66696c652F696d6167652F313239383532343532353138322F35335f305f313430303731393136363738312e6a7067" alt="표준시간 복구 문제에 관한 이유서"> -->
+				<img src="http://www.archives.go.kr/archivesdata/upFile/monthly/file/image/1298524525182/53_0_1400719166781.jpg" alt="표준시간 복구 문제에 관한 이유서">
+				
+					<a href="https://theme.archives.go.kr/viewer/common/archWebViewer.do?singleData=Y&amp;archiveEventId=0017156680" class="goview" title="새창열림" target="_blank">원문보기</a>
+				
+			</div>
+		
+	</div>
+	<!--대표기록물 끝//-->
+	
+	<!--내용 시작-->
+	<div class="context" id="contextSummury">
+		<!--텍스트db 시작-->
+		<h4>현재 한국 표준시〔韓國標準時, KST(korea standard Time)〕는 영국 그리니치 천문대 시각인 세계표준시 UTC(Universal Time Coordinated)에 9시간을 더한 동경 135도(135°E)이다. </h4>
+<p>이번 달에는 국민들의 일상에 직접적 영향을 미치는 ‘한국 표준시 변경’을 주제로 선정하였다. </p>
+<p>특히 ‘정부수립 이후 최초로 변경한 한국 표준시’에 중점을 두었다. 그 동안 우리나라의 표준시는 대한제국기 이래로 동경 127.5도(서울 기준)와 동경 135도(일본 아카시(明石市) 기준)를 번갈아 가며 4차례 변경되었다. 이러한 표준시 변경과정을 기록물을 통해 살펴보는 것도 의미있을 것이다. </p>
+		<!--텍스트db 끝//-->
+	</div>
+	<div class="context" id="contextDetail">
+		<!--텍스트db 시작-->
+		<h4>현재 한국 표준시〔韓國標準時, KST(korea standard Time)〕는 영국 그리니치 천문대 시각인 세계표준시 UTC(Universal Time Coordinated)에 9시간을 더한 동경 135도(135°E)이다. </h4>
+<p>이번 달에는 국민들의 일상에 직접적 영향을 미치는 ‘한국 표준시 변경’을 주제로 선정하였다. </p>
+<p>특히 ‘정부수립 이후 최초로 변경한 한국 표준시’에 중점을 두었다. 그 동안 우리나라의 표준시는 대한제국기 이래로 동경 127.5도(서울 기준)와 동경 135도(일본 아카시(明石市) 기준)를 번갈아 가며 4차례 변경되었다. 이러한 표준시 변경과정을 기록물을 통해 살펴보는 것도 의미있을 것이다. </p>
+
+<p> 《우리나라의 표준시 변경 내역》▶1908.4.1 동경 127.5도 → ▶1912.1.1, 동경 135도 → ▶1954.3.17 동경 127.5도 → ▶1961.8.7 동경 135도</p>
+
+<p> 국가기록원에 소장하고 있는 한국 표준시 관련 기록물은 대부분 1950년대, 1960년대, 1980년대에 생산된 ‘표준시 법률 제정’관련 기록이다. 정부수립 이후 최초로 표준시간 변경에 관한 논의가 시작된 것은 1954년 3월, 문교부에서 ‘한국표준시간 변경 건’을 제15회 국무회의에 상정하면서부터였다. 문교부에서 제출한 "표준시간 복구 문제에 관한 이유서"에 의하면, ‘일본이 1910년에 대한제국기의 표준시(동경 127.5도)에서 동경 135도로 변경한 표준시는 현재 시간 보다 30분이 늦어져 일광절약시간(Summer Time) 30분간을 잃어버리는 폐단이 있고, 실제 한국지방의 시간과 상당한 차이가 있으므로 동경 127.5도로 변경하는 것이 당연하다’는 이유를 들어 표준시간 복구를 건의하였다. 국무회의 의결을 거친 후, 1954년 3월 17일자 관보에 "표준 자오선 변경에 관한 건(대통령령 제876호)"을 공포하여 ‘1954년 3월 21일 오전 0시 30분부터 동경 127.5도를 표준 자오선으로 정함’을 알렸다. 즉, 정부수립 이후 최초로 서울 기준 표준자오선이 채택되었던 것이다. </p>
+<p>하지만, 1960년 7월에 국방부는 동경 127.5도 표준시에 대한 후진성, 비과학성, 비현실성 등을 지적하면서, 당시 표준시인 동경 127.5도에서 동경 135도로 다시 변경할 것을 건의하는 "한국 표준시간 변경에 관한 건"을 국무회의에 상정하였다. 국무회의 의결을 거쳐 1961년 8월 7일에 "표준자오선 변경에 관한 법률"이 제정되었고, 1961년 8월 10일부터 표준자오선을 동경 135도로 적용하여 지금까지 사용해 오고 있다. </p>
+<p>이처럼 우리나라 표준시는 시대적 상황에 따라 서울 기준 동경 127.5도와 일본과 동일한 기준인 동경 135도를 번갈아 가며 변경되었다. 이승만 대통령 집권기(1954년)의 표준시간 변경이 갖는 의미는 일제강점기 시절, 일본이 식민지 통치를 목적으로 대한제국기 서울 기준 표준시간에서 일본과 동일한 표준시간으로 변경했던 것을 정부수립 이후 최초로 원래의 서울 기준 표준시간으로 환원했었던 것’에 큰 의의가 있다. </p>
+		<!--텍스트db 끝//-->
+	</div>
+	<!--내용 끝//-->
+	<!--내용펼침 버튼시작-->
+	<div class="context_more">
+		<a href="#" onclick="contextDetail(this); return false;" class="on">내용 펼쳐보기</a>
+	</div>
+	<!--내용펼침 버튼끝//-->
+	
+	
+	
+	<!--관련기록물 시작-->
+	<h3 id="record_photo">관련기록물</h3>
+	<ol class="record_photo" >
+		
+			<li>
+				<div class="thumb">
+					<!-- 20160712 이미지 직접 경로로 수정img src="http://www.archives.go.kr/next/common/archivedata/render.do?filePath=2F757046696c652F6d6f6e74686c792F66696c652F72656c742F313334323537323834303933352F35335f313430303636393433353831322e6a7067" alt="표준시간 복구 문제에 관한 이유서" -->
+					<img src="http://www.archives.go.kr/archivesdata/upFile/monthly/file/relt/1342572840935/53_1400669435812.jpg" alt="표준시간 복구 문제에 관한 이유서">
+					
+				</div>
+				<p>표준시간 복구 문제에 관한 이유서</p>
+				<span>BA0085171</span><br><a  href="https://theme.archives.go.kr/viewer/common/archWebViewer.do?singleData=Y&amp;archiveEventId=0017156680" title="새창열림" target="_blank" class="goview">원문보기</a>
+			</li>
+		
+			<li>
+				<div class="thumb">
+					<!-- 20160712 이미지 직접 경로로 수정img src="http://www.archives.go.kr/next/common/archivedata/render.do?filePath=2F757046696c652F6d6f6e74686c792F66696c652F72656c742F313334323537323834303933352F35335f313430303636393433363037382e6a7067" alt="표준자 오선변경에 관한 건(대통령령 제876호)" -->
+					<img src="http://www.archives.go.kr/archivesdata/upFile/monthly/file/relt/1342572840935/53_1400669436078.jpg" alt="표준자 오선변경에 관한 건(대통령령 제876호)">
+					
+				</div>
+				<p>표준자 오선변경에 관한 건(대통령령 제876호)</p>
+				<span>BA0185690</span><br><a  href="https://theme.archives.go.kr/viewer/common/archWebViewer.do?singleData=Y&amp;archiveEventId=0027975450" title="새창열림" target="_blank" class="goview">원문보기</a>
+			</li>
+		
+			<li>
+				<div class="thumb">
+					<!-- 20160712 이미지 직접 경로로 수정img src="http://www.archives.go.kr/next/common/archivedata/render.do?filePath=2F757046696c652F6d6f6e74686c792F66696c652F72656c742F313334323537323834303933352F35335f313430303636393433363635362e6a7067" alt="표준자오선 변경에 관한 법률 공포의 건(제55회)" -->
+					<img src="http://www.archives.go.kr/archivesdata/upFile/monthly/file/relt/1342572840935/53_1400669436656.jpg" alt="표준자오선 변경에 관한 법률 공포의 건(제55회)">
+					
+				</div>
+				<p>표준자오선 변경에 관한 법률 공포의 건(제55회)</p>
+				<span>BA0085215</span><br><a  href="https://theme.archives.go.kr/viewer/common/archWebViewer.do?singleData=Y&amp;archiveEventId=0017149496" title="새창열림" target="_blank" class="goview">원문보기</a>
+			</li>
+		
+			<li>
+				<div class="thumb">
+					<!-- 20160712 이미지 직접 경로로 수정img src="http://www.archives.go.kr/next/common/archivedata/render.do?filePath=2F757046696c652F6d6f6e74686c792F66696c652F72656c742F313334323537323834303933352F35335f313430303636393433363339302e6a7067" alt="한국표준시간 변경에 관한 건 " -->
+					<img src="http://www.archives.go.kr/archivesdata/upFile/monthly/file/relt/1342572840935/53_1400669436390.jpg" alt="한국표준시간 변경에 관한 건 ">
+					
+				</div>
+				<p>한국표준시간 변경에 관한 건 </p>
+				<span>BA0085194</span><br><a  href="https://theme.archives.go.kr/viewer/common/archWebViewer.do?singleData=Y&amp;archiveEventId=0017148090" title="새창열림" target="_blank" class="goview">원문보기</a>
+			</li>
+		
+			<li>
+				<div class="thumb">
+					<!-- 20160712 이미지 직접 경로로 수정img src="http://www.archives.go.kr/next/common/archivedata/render.do?filePath=2F757046696c652F6d6f6e74686c792F66696c652F72656c742F313334323537323834303933352F35335f313430303636393433363932312e6a7067" alt="표준시간 복구에 관한 건 (제15회)" -->
+					<img src="http://www.archives.go.kr/archivesdata/upFile/monthly/file/relt/1342572840935/53_1400669436921.jpg" alt="표준시간 복구에 관한 건 (제15회)">
+					
+				</div>
+				<p>표준시간 복구에 관한 건 (제15회)</p>
+				<span>BG0000051</span><br><a  href="https://theme.archives.go.kr/viewer/common/archWebViewer.do?singleData=Y&amp;archiveEventId=0049280485" title="새창열림" target="_blank" class="goview">원문보기</a>
+			</li>
+		
+	</ol>
+	<!--관련기록물 끝//-->
+
+	<!--관련기록물 목록 시작-->
+	<table class="record_list" summary="2011년 03월 관련기록물 목록을 보여주는 표입니다. 관리번호, 기록물제목, 생산년도, 유형, 참조로 구성되어 있으며 기록물 철명, 건명, 내용을 보실 수 있으며 원문보기 버튼을 클릭하시면 원문을 보실 수 있습니다.">
+		<caption>검색결과 목록</caption>
+		<colgroup><col style="width:13%;"><col style="width:55%;"><col style="width:7%;"><col style="width:12%;"><col style="width:13%;"></colgroup>
+		<thead>
+			<tr>
+				<th scope="col">관리번호</th>
+				<th scope="col">기록물제목</th>
+				<th scope="col">생산년도</th>
+				<th scope="col">유형</th>
+				<th scope="col">참조</th>
+			</tr>
+		</thead>
+		<tbody>
+		
+		</tbody>
+	</table>
+	<!--관련기록물 목록 끝//-->
+	   <!--관련기록물 더보기 버튼 시작-->
+	
+    <!--관련기록물 더보기 버튼 끝//-->
+</div>
+<!--월정보 전체 끝//-->
+
+<script type="text/javascript">
+$(document).ready(function(){
+	$("div#wrap_record").attr("style","background:url(http://www.archives.go.kr/next/common/archivedata/render.do?filePath=2F757046696c652F6d6f6e74686c792F66696c652F696d6167652F313239383532343532353138322F35335f305f313430303731393136363738312e6a7067) repeat center 0; background-size:1100px; ")
+	document.title = '이달의 기록 > ' + $("div#mainright input#title").val();
+	$("div#contextDetail").css("display", "none");
+	
+	var focusItem = '';
+	if(focusItem != '') {
+		self.location.hash = focusItem;
+		$("div.record_more a").removeClass();
+		$("div.record_more a").attr("class", "off");
+		$("div.record_more a").text('관련기록물 닫기');
+		$("table.record_list").css("display", "block");
+	} else {
+		$("table.record_list").css("display", "none");
+	}
+});
+</script></div>
+<!--우측 끝//--></div>
+				<!--하단끝//-->
+			</div>
+			<!--footer 시작-->
+			<div id="footer">
+				<div id="footer_in">
+				<div class="footerlogo"><img src="/next/images/monthly/logo_footer.png" alt="국가기록원"></div>
+				<div class="footerinfo">
+				<address>35208 대전광역시 서구 청사로 189, 2동</address>Copyright(c) National Acrchives of Korea all rights reserved.
+				</div>
+					<div class="visiter">
+						<ul>
+							<li class="vistertit">오늘방문자</li>
+							<li class="visternum"></li>
+							<li class="vistertit">전체방문자</li>
+							<li class="visternum"></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!--footer 끝//-->
+		</div>
+	</body>
+</html>

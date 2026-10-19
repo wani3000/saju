@@ -1,6 +1,6 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
-import {calculateProfile} from './adapter.mjs';
+import {calculateProfile} from './baseline-v4.mjs';
 import {calculateProfile as baseline} from './baseline-v3.mjs';
 import {getSolarTerm} from './build/manseryeok.mjs';
 import {resolveSeoulDate} from './resolve-wall-time.mjs';

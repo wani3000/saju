@@ -1,6 +1,6 @@
 import { calculateProfile } from "../generated/research.mjs";
 import { AppError, pairSchema, type Person } from "../domain/model";
-export const engineVersion = "manseryeok-research-civil-midnight-v4";
+export const engineVersion = "manseryeok-research-civil-midnight-v5";
 export function chart(p: Person) {
   if (p.timeKnown && (!/^\d{1,2}$/.test(p.hour) || !/^\d{1,2}$/.test(p.minute)))
     throw new AppError("INVALID_TIME", 422, "출생 시와 분을 확인해 주세요.");
@@ -15,7 +15,10 @@ export function chart(p: Person) {
       timeKnown: p.timeKnown,
       ...(p.timeKnown ? { hour: +p.hour, minute: +p.minute } : {}),
     });
-  } catch {
+  } catch (error) {
+    if (error instanceof Error && error.message === "HISTORICAL_CLOCK_SOURCE_DISPUTE")
+      throw new AppError("HISTORICAL_CLOCK_SOURCE_DISPUTE", 422,
+        "이 출생 시각은 과거 표준시 변경 자료가 서로 달라 지금은 계산할 수 없어요. 입력한 시각을 그대로 보관해 주세요.");
     throw new AppError(
       "INVALID_BIRTH",
       422,

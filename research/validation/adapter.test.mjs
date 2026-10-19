@@ -1,4 +1,4 @@
-import {test} from 'node:test'; import assert from 'node:assert/strict'; import {calculateProfile} from './adapter.mjs';
+import {test} from 'node:test'; import assert from 'node:assert/strict'; import {calculateProfile} from './baseline-v4.mjs';
 const base={year:2024,month:2,day:10,calendar:'solar',leap:false,timeKnown:false};
 test('unknown time yields no hour pillar or invented hour-dependent analysis',()=>{const r=calculateProfile(base);assert.equal(r.pillars.hour,null);assert.equal(r.pillars.day,'갑진');assert.equal(r.timeKnown,false);assert.equal('fiveElements' in r,false);});
 test('unknown time on 입춘 preserves both year/month candidates',()=>{const r=calculateProfile({...base,day:4});assert.equal(r.pillars.year,null);assert.equal(r.pillars.month,null);assert.deepEqual(r.candidates.year,['계묘','갑진']);assert.equal(r.pillars.hour,null);});

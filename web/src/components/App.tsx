@@ -524,9 +524,16 @@ export default function App() {
                       const c = value as {
                         pillars: Record<string, string | null>;
                         candidates?: Record<string, string[]>;
+                        clockReview?: { reason: string };
                       };
                       return (
                         <div key={key}>
+                          {c.clockReview && (
+                            <p className="notice">
+                              이 날짜는 과거 표준시 변경 자료가 서로 달라 검토 중이에요.
+                              출생 시간은 확정하지 않았어요.
+                            </p>
+                          )}
                           <h3>
                             {key === "me"
                               ? current.me.name

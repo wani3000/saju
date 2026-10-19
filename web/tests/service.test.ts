@@ -15,6 +15,7 @@ import * as s from "../src/server/service";
 import * as p from "../src/server/payments";
 import { selfGroup, samplePerson } from "../src/domain/model";
 import { validatePair } from "../src/server/engine";
+import { readingForVersion } from "../src/server/readings";
 let db: Database;
 before(async () => {
   db = await openDatabase("memory://");
@@ -22,6 +23,60 @@ before(async () => {
 });
 after(async () => db.close());
 const pair = () => ({ me: samplePerson(), other: samplePerson(true) });
+test("source-disputed 1954 minutes cannot reserve a free reading", async () => {
+  const id = await owner(), input = pair();
+  Object.assign(input.me, {year:"1954",month:"3",day:"21",timeKnown:true,hour:"0",minute:"15"});
+  await assert.rejects(s.createComparison(db,id,input,randomUUID(),true),{code:"HISTORICAL_CLOCK_SOURCE_DISPUTE"});
+  assert.equal((await one(db,"SELECT state FROM free_claims WHERE owner_id=$1",[id]))!.state,"available");
+  assert.equal((await s.state(db,id)).results.length,0);
+});
+test("queued legacy reading and newly shared card preserve the stored content version", async () => {
+  const id = await owner(), input = pair();
+  const c = await s.createComparison(db,id,input,randomUUID(),true);
+  await db.query("UPDATE comparisons SET rule_version='example-copy-v1' WHERE id=$1",[c.id]);
+  await s.runJobs(db,id);
+  const saved = await s.result(db,id,c.id);
+  assert.deepEqual(saved.reading,readingForVersion("example-copy-v1"));
+  const link = await s.share(db,id,c.id,["가","나"]);
+  const card = await s.publicShare(db,link.path.split("/").at(-1)!);
+  assert.deepEqual(card.reading,saved.reading);
+  assert.equal(JSON.stringify(card).includes(input.me.year),false);
+  assert.equal((await s.createComparison(db,id,input,randomUUID(),true)).id,c.id);
+  assert.deepEqual((await s.result(db,id,c.id)).reading,saved.reading);
+});
+test("new content is versioned and unavailable content fails without substituting latest copy", async () => {
+  const id = await owner();
+  const first = await s.createComparison(db,id,pair(),randomUUID(),true);
+  await s.runJobs(db,id);
+  assert.deepEqual((await s.result(db,id,first.id)).reading,readingForVersion("example-copy-v2"));
+  const other = await owner();
+  const missing = await s.createComparison(db,other,pair(),randomUUID(),true);
+  await db.query("UPDATE comparisons SET rule_version='missing-release' WHERE id=$1",[missing.id]);
+  await s.runJobs(db,other);
+  assert.equal(await one(db,"SELECT comparison_id FROM results WHERE comparison_id=$1",[missing.id]),undefined);
+  assert.equal((await one(db,"SELECT state FROM free_claims WHERE owner_id=$1",[other]))!.state,"available");
+  assert.equal((await one(db,"SELECT state FROM generation_jobs WHERE comparison_id=$1",[missing.id]))!.state,"failed");
+});
+test("a stored v4 job at the newly disputed time still reopens without recalculation", async () => {
+  const id = await owner(), input = pair();
+  Object.assign(input.me, {year:"1954",month:"3",day:"21",timeKnown:true,hour:"0",minute:"30"});
+  const c = await s.createComparison(db,id,input,randomUUID(),true);
+  // Emulate a pre-upgrade snapshot; v4 accepted 00:15. Existing records are
+  // retained even though creating that input under v5 is now rejected.
+  const old = structuredClone(validatePair(input).charts);
+  input.me.minute = "15";
+  (old.me.civilTime as { candidates: Array<{ utc: string }> }).candidates[0].utc =
+    "1954-03-20T15:45:00.000Z";
+  for (const profile of [old.me,old.other]) profile.policy.version = "research-civil-midnight-v4";
+  await db.query("UPDATE comparisons SET inputs=$2,charts=$3,engine_version=$4,rule_version=$5 WHERE id=$1",
+    [c.id,JSON.stringify(input),JSON.stringify(old),"manseryeok-research-civil-midnight-v4","example-copy-v1"]);
+  await s.runJobs(db,id);
+  const saved = await s.result(db,id,c.id);
+  assert.deepEqual(saved.charts,old);
+  assert.equal(saved.me.minute,"15");
+  assert.deepEqual(saved.reading,readingForVersion("example-copy-v1"));
+  assert.deepEqual(await s.result(db,id,c.id),saved);
+});
 async function owner() {
   return (await s.newSession(db)).owner;
 }
@@ -516,7 +571,7 @@ test("paid job crash limit preserves entitlement and manual retry does not creat
   );
 });
 
-test("v4 boundary ambiguity survives result generation and reopening", async () => {
+test("v5 boundary ambiguity survives result generation and reopening", async () => {
   const id = await owner(), input = pair();
   Object.assign(input.me, {year:"1954",month:"12",day:"7",hour:"23",minute:"58",timeKnown:true});
   const validated = validatePair(input);
@@ -527,13 +582,13 @@ test("v4 boundary ambiguity survives result generation and reopening", async () 
   const saved = await s.result(db, id, comparison.id);
   assert.deepEqual(saved.charts, validated.charts);
   assert.equal((await one(db,"SELECT engine_version FROM comparisons WHERE id=$1",[comparison.id]))!.engine_version,
-    "manseryeok-research-civil-midnight-v4");
+    "manseryeok-research-civil-midnight-v5");
   assert.deepEqual(await s.createComparison(db,id,input,randomUUID(),true),comparison);
   assert.deepEqual(await s.result(db,id,comparison.id),saved);
   assert.equal((await s.state(db,id)).orders.length,0);
 });
 
-test("a queued v3 snapshot is not recalculated or charged again by v4", async () => {
+test("a queued v3 snapshot is not recalculated or charged again by v5", async () => {
   const id = await owner(), input = pair();
   Object.assign(input.me, {year:"1954",month:"12",day:"7",hour:"23",minute:"58",timeKnown:true});
   const comparison = await s.createComparison(db,id,input,randomUUID(),true);

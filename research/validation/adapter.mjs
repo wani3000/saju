@@ -1,53 +1,25 @@
-/** Research-only boundary guard; this margin is NOT a proven astronomical error bound. */
-import {calculateProfile as baseline} from './baseline-v3.mjs';
-import {getSolarTermsOfYear} from './build/manseryeok.mjs';
-import {computeFourPillars} from './build/pillars.mjs';
-import {resolveSeoulDate} from './resolve-wall-time.mjs';
-
-export const boundaryReviewSeconds = 120;
-const margin = boundaryReviewSeconds * 1000;
-const policy = Object.freeze({
-  version: 'research-civil-midnight-v4', dayBoundary: 'midnight',
-  solarCorrection: false, yearMonthClock: 'historical-utc', dayHourClock: 'civil-wall',
-  solarTermReviewSeconds: boundaryReviewSeconds,
-  birthMinuteInterval: 'start-inclusive-end-exclusive', productionApproved: false,
-});
+/** Research v5: source disagreement must not become a definite birth instant. */
+import {calculateProfile as baseline} from './baseline-v4.mjs';
+export {boundaryReviewSeconds} from './baseline-v4.mjs';
 
 export function calculateProfile(input) {
-  // Retain v3 as an explicit baseline for historical comparison reports.
-  const result = baseline(input);
-  const {solar} = result;
-  const intervals = input.timeKnown
-    ? [{startUTCms: Date.parse(result.civilTime.candidates[0].utc),
-        endUTCms: Date.parse(result.civilTime.candidates[0].utc) + 60000}]
-    : resolveSeoulDate(solar).intervals;
-  const near = [solar.year - 1, solar.year, solar.year + 1]
-    .flatMap(y => getSolarTermsOfYear(y)).filter(t => t.index % 2 === 0)
-    .filter(t => intervals.some(i => i.startUTCms <= t.date.getTime() + margin &&
-      i.endUTCms > t.date.getTime() - margin));
-  const pillars = {...result.pillars};
-  const candidates = {...result.candidates};
-  // Only year/month depend on the solar-term instant. Do not shift the known
-  // birth wall clock, day/hour pillars, timezone resolution, or saved snapshots.
-  for (const key of ['year', 'month']) {
-    const options = new Set(candidates[key] ?? (pillars[key] ? [pillars[key]] : []));
-    for (const term of near) {
-      for (const delta of [-margin - 1, margin + 1]) {
-        const p = computeFourPillars({instantUTCms: term.date.getTime() + delta,
-          apparentMs: Date.UTC(solar.year, solar.month - 1, solar.day)}, solar.year, 'midnight')[key];
-        options.add(p.heavenlyStem + p.earthlyBranch);
-      }
-    }
-    if (options.size > 1) {
-      pillars[key] = null;
-      candidates[key] = [...options];
-    }
-  }
-  return {...result, pillars, ...(Object.keys(candidates).length ? {candidates} : {}), policy,
-    ...(near.length ? {boundaryReview: {reason: 'SOLAR_TERM_PRECISION_UNRESOLVED',
-      marginSeconds: boundaryReviewSeconds, verifiedErrorBound: false,
-      terms: near.map(t => ({index: t.index, engineUTC: t.date.toISOString()}))}} : {}),
-    limitations: [...result.limitations, ...(near.length ? [
-      'Within a provisional solar-term review window; year/month candidates are retained. This window does not establish accuracy outside it.',
-    ] : [])]};
+  const result=baseline(input); // validates and normalizes lunar dates first
+  const {year,month,day}=result.solar;
+  const disputedDate=year===1954&&month===3&&(day===20||day===21);
+  // IANA folds Mar 20 23:30..24:00; the National Archives describes the
+  // transition at Mar 21 00:30. Existing IANA fold rejection remains in v4.
+  // Also reject 00:00..00:30 pending gazette/old-vs-new clock review.
+  // Do not silently patch the timezone table.
+  if(disputedDate&&day===21&&input.timeKnown&&input.hour===0&&input.minute<30)
+    throw new Error('HISTORICAL_CLOCK_SOURCE_DISPUTE');
+  const review=disputedDate&&!input.timeKnown;
+  return {...result,
+    policy:Object.freeze({...result.policy,version:'research-civil-midnight-v5',
+      historicalClockReview:'iana-2025b-archives-1954-v1'}),
+    ...(review?{clockReview:{reason:'HISTORICAL_CLOCK_SOURCE_DISPUTE',
+      sourceIds:['iana-2025b-asia','archives-1954'],instantConfirmed:false}}:{}),
+    limitations:[...result.limitations,
+      ...(year<1972?['Pre-1972 ISO Z values are proleptic timezone coordinates, not proof of a modern UTC realization.']:[]),
+      ...(year===1908&&month<4?['Pre-standardization Seoul local mean time does not establish the recorded clock convention at every birthplace.']:[]),
+      ...(review?['The 1954 transition time differs between sources. With unknown time, only date-based research output is retained; no birth instant is confirmed.']:[])]};
 }

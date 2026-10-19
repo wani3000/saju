@@ -1,10 +1,10 @@
+import { currentReadingVersion, readingForVersion } from "./readings";
 import { randomUUID, randomBytes, createHash } from "node:crypto";
 import { z } from "zod";
 import {
   AppError,
   draftSchema,
   publicCard,
-  sampleReading,
   type SavedResult,
 } from "../domain/model";
 import { engineVersion, validatePair } from "./engine";
@@ -135,7 +135,7 @@ export async function createComparison(
     hash(
       JSON.stringify({
         engineVersion,
-        ruleVersion: sampleReading.ruleVersion,
+        ruleVersion: currentReadingVersion,
         people: (["me", "other"] as const).map((k) => ({
           id: input[k].id,
           solar: [
@@ -208,7 +208,7 @@ export async function createComparison(
         JSON.stringify(charts),
         free ? "queued" : "awaiting_payment",
         engineVersion,
-        sampleReading.ruleVersion,
+        currentReadingVersion,
       ],
     );
     await tx.query(
@@ -301,7 +301,7 @@ export async function share(
   const shareId = randomUUID();
   await db.transaction(async (tx) => {
     await lockOwner(tx, owner);
-    await result(tx, owner, id);
+    const saved = await result(tx, owner, id);
     await tx.query(
       "INSERT INTO shares(id,owner_id,comparison_id,token_hash,snapshot) VALUES($1,$2,$3,$4,$5)",
       [
@@ -309,7 +309,7 @@ export async function share(
         owner,
         id,
         hash(secret),
-        JSON.stringify(publicCard(names.data)),
+        JSON.stringify(publicCard(names.data, saved.reading)),
       ],
     );
   });
@@ -482,7 +482,7 @@ export async function finishJob(
       id: c.id,
       ...c.inputs,
       charts: c.charts,
-      reading: sampleReading,
+      reading: readingForVersion(c.rule_version),
       createdAt: new Date().toISOString(),
     };
     await tx.query(

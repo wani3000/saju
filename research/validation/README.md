@@ -77,3 +77,9 @@ python3 -m venv /tmp/saju-ephemeris
 ```
 
 생성 갱신은 명시적으로 `--check`를 빼고 수행한 뒤 파생 자료·해시·보고서 diff를 검토한다. 실제 정확도와 수치 수렴·재현 허용 오차를 구분한다. 전체 원인과 제약은 [검증 기록](../../docs/historical-clock-validation.md)을 따른다. Skyfield MIT 고지는 licenses에 보존한다. 현재 연구 테스트는 49개다.
+
+## 역사 시간척도 후속 (2026-10-19)
+
+`python3 check-time-standards.py`는 저장한 IANA 2025b 원본을 zic로 임시 컴파일하고 기존 28개 전환·1,918개 입력과 비교한다. 호스트 tzdata에 의존하지 않으며 같은 출처의 재현 검증이다. `time-scales.mjs`는 고정 IERS 표의 유효 범위에서만 TT→UTC를 계산한다. 1972년 이전과 윤초 자체는 거절하며 웹 런타임에 포함하지 않는다.
+
+전체 연구 테스트 57개에는 현대 UTC 월 경계 660건/전후 1,320입력, 전환 누락·중복 분 1,533건, 자정 정책의 43,465일 주기 전개 검사가 추가됐다. 국가기록원과 IANA의 1954 전환 시각 차이로 새 어댑터는 v5 보호를 적용한다. 기존 v4는 baseline-v4.mjs에 보존했다. [출처 차이와 한계](../../docs/historical-clock-validation.md)를 읽고 재현 성공을 역사 정확도 승인으로 간주하지 않는다.

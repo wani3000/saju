@@ -5,7 +5,7 @@ import {createHash} from 'node:crypto';
 import {spawnSync} from 'node:child_process';
 import {auditSolarModels,referenceTerms,referenceUtMs} from './audit-solar-models.mjs';
 import {preciseUpstreamTerm} from './term-precision.mjs';
-import {calculateProfile} from './adapter.mjs';
+import {calculateProfile} from './baseline-v4.mjs';
 import {calculateProfile as baseline} from './baseline-v3.mjs';
 import {getSolarTerm} from './build/manseryeok.mjs';
 const zone=JSON.parse(readFileSync(new URL('./fixtures/seoul-transitions.json',import.meta.url)));

@@ -49,13 +49,23 @@ assert.equal(r.status, 200);
 r = await request("state");
 assert.match(r.headers.get("cache-control"), /no-store/);
 assert.deepEqual((await r.json()).draft, pair);
+r = await request("comparisons", {
+  pair: { ...pair, me: { ...pair.me, year: "1954", month: "3", day: "21",
+    timeKnown: true, hour: "0", minute: "15" } },
+  key: randomUUID(), consent: true,
+});
+assert.equal(r.status, 422);
+assert.equal((await r.json()).code, "HISTORICAL_CLOCK_SOURCE_DISPUTE");
+assert.equal((await (await request("state")).json()).free, "available");
 r = await request("comparisons", { pair, key: randomUUID(), consent: true });
 assert.equal(r.status, 200);
 const { id } = await r.json();
 await request("process", {});
 r = await request("results/" + id);
 assert.equal(r.status, 200);
-assert.equal((await r.json()).reading.score, null);
+const savedReading = (await r.json()).reading;
+assert.equal(savedReading.score, null);
+assert.equal(savedReading.ruleVersion, "example-copy-v2");
 r = await request("results/" + id + "/shares", { aliases: ["나", "너"] });
 assert.equal(r.status, 200);
 const link = await r.json();
@@ -66,6 +76,8 @@ let html = await r.text();
 assert.ok(!html.includes("1990"));
 assert.ok(!html.includes("테스트나"));
 assert.ok(html.includes("공유된 예시 카드"));
+assert.ok(html.includes(savedReading.title));
+assert.ok(html.includes(savedReading.strength));
 await request("shares/" + link.id, undefined, { method: "DELETE" });
 r = await fetch(base + link.path);
 assert.ok((await r.text()).includes("지금은 볼 수 없는"));

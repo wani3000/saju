@@ -80,20 +80,12 @@ export class AppError extends Error {
     super(message);
   }
 }
-export const sampleReading: Reading = {
-  label: "감수 전 예시 풀이",
-  title: "서로의 하루에 작은 다정함을 더해요",
-  strength: "함께 좋아하는 일을 찾고, 편안한 시간을 조금씩 쌓아 보세요.",
-  difference:
-    "같은 일에도 느끼는 속도는 다를 수 있어요. 서로의 이야기를 끝까지 들어 주세요.",
-  advice: "오늘 고마웠던 일을 한 가지씩 말해 보는 건 어떨까요?",
-  ruleVersion: "example-copy-v1",
-  score: null,
-};
-export function publicCard(aliases: [string, string]): ShareCard {
+export function publicCard(aliases: [string, string], reading: Reading): ShareCard {
   return {
     aliases,
-    reading: { ...sampleReading },
+    reading: { label: reading.label, title: reading.title, strength: reading.strength,
+      difference: reading.difference, advice: reading.advice,
+      ruleVersion: reading.ruleVersion, score: null },
     avatars: ["orange-v1", "cream-v1"],
     catalogVersion: "tigers-v1",
   };
