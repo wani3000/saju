@@ -1,0 +1,1918 @@
+{
+  "ruleVersion": "source-case-veto-and-score-review-v1",
+  "productionApproved": false,
+  "scope": "Historical text charts and synthetic structural/numeric probes, not real birth outcomes or validated scoring weights.",
+  "strengthCases": [
+    {
+      "id": "wood-too-strong",
+      "review": {
+        "ruleVersion": "source-case-veto-and-score-review-v1",
+        "productionApproved": false,
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "status": "exact-source-case",
+        "sourceClassification": {
+          "category": "too-strong",
+          "label": "木太旺",
+          "element": "목",
+          "scope": "this-edition-exact-case"
+        },
+        "matches": [
+          {
+            "id": "wood-too-strong",
+            "match": "exact-four-pillars",
+            "source": {
+              "sourceId": "ditian-1947",
+              "pdfPage": 178,
+              "pdfSha256": "d6a7d1daf6513ce9fb9940ff8331b96804c10cdafbeac00d4d3d0a37229e1803",
+              "url": "https://upload.wikimedia.org/wikipedia/commons/d/db/SSID-11335994_%E6%BB%B4%E5%A4%A9%E9%AB%93%E9%97%A1%E5%BE%AE.pdf"
+            }
+          }
+        ],
+        "sourceAttributedTransformation": null,
+        "generalClassification": null,
+        "moderation": null,
+        "score": null,
+        "limitations": [
+          "Twenty deliberately selected extreme cases contain no balanced reference class",
+          "No nearest-chart inference, default balance, numerical thresholds or prediction",
+          "An exact source match is not calendar approval; coverage flags still apply",
+          "The source year/month transformation example is not a day-stem or cross-person rule"
+        ]
+      }
+    },
+    {
+      "id": "wood-extremely-strong",
+      "review": {
+        "ruleVersion": "source-case-veto-and-score-review-v1",
+        "productionApproved": false,
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "status": "exact-source-case",
+        "sourceClassification": {
+          "category": "extremely-strong",
+          "label": "木旺極",
+          "element": "목",
+          "scope": "this-edition-exact-case"
+        },
+        "matches": [
+          {
+            "id": "wood-extremely-strong",
+            "match": "exact-four-pillars",
+            "source": {
+              "sourceId": "ditian-1947",
+              "pdfPage": 179,
+              "pdfSha256": "d6a7d1daf6513ce9fb9940ff8331b96804c10cdafbeac00d4d3d0a37229e1803",
+              "url": "https://upload.wikimedia.org/wikipedia/commons/d/db/SSID-11335994_%E6%BB%B4%E5%A4%A9%E9%AB%93%E9%97%A1%E5%BE%AE.pdf"
+            }
+          }
+        ],
+        "sourceAttributedTransformation": null,
+        "generalClassification": null,
+        "moderation": null,
+        "score": null,
+        "limitations": [
+          "Twenty deliberately selected extreme cases contain no balanced reference class",
+          "No nearest-chart inference, default balance, numerical thresholds or prediction",
+          "An exact source match is not calendar approval; coverage flags still apply",
+          "The source year/month transformation example is not a day-stem or cross-person rule"
+        ]
+      }
+    },
+    {
+      "id": "wood-too-weak",
+      "review": {
+        "ruleVersion": "source-case-veto-and-score-review-v1",
+        "productionApproved": false,
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "status": "exact-source-case",
+        "sourceClassification": {
+          "category": "too-weak",
+          "label": "木太衰",
+          "element": "목",
+          "scope": "this-edition-exact-case"
+        },
+        "matches": [
+          {
+            "id": "wood-too-weak",
+            "match": "exact-four-pillars",
+            "source": {
+              "sourceId": "ditian-1947",
+              "pdfPage": 179,
+              "pdfSha256": "d6a7d1daf6513ce9fb9940ff8331b96804c10cdafbeac00d4d3d0a37229e1803",
+              "url": "https://upload.wikimedia.org/wikipedia/commons/d/db/SSID-11335994_%E6%BB%B4%E5%A4%A9%E9%AB%93%E9%97%A1%E5%BE%AE.pdf"
+            }
+          }
+        ],
+        "sourceAttributedTransformation": null,
+        "generalClassification": null,
+        "moderation": null,
+        "score": null,
+        "limitations": [
+          "Twenty deliberately selected extreme cases contain no balanced reference class",
+          "No nearest-chart inference, default balance, numerical thresholds or prediction",
+          "An exact source match is not calendar approval; coverage flags still apply",
+          "The source year/month transformation example is not a day-stem or cross-person rule"
+        ]
+      }
+    },
+    {
+      "id": "wood-extremely-weak",
+      "review": {
+        "ruleVersion": "source-case-veto-and-score-review-v1",
+        "productionApproved": false,
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "status": "exact-source-case",
+        "sourceClassification": {
+          "category": "extremely-weak",
+          "label": "木衰極",
+          "element": "목",
+          "scope": "this-edition-exact-case"
+        },
+        "matches": [
+          {
+            "id": "wood-extremely-weak",
+            "match": "exact-four-pillars",
+            "source": {
+              "sourceId": "ditian-1947",
+              "pdfPage": 180,
+              "pdfSha256": "d6a7d1daf6513ce9fb9940ff8331b96804c10cdafbeac00d4d3d0a37229e1803",
+              "url": "https://upload.wikimedia.org/wikipedia/commons/d/db/SSID-11335994_%E6%BB%B4%E5%A4%A9%E9%AB%93%E9%97%A1%E5%BE%AE.pdf"
+            }
+          }
+        ],
+        "sourceAttributedTransformation": null,
+        "generalClassification": null,
+        "moderation": null,
+        "score": null,
+        "limitations": [
+          "Twenty deliberately selected extreme cases contain no balanced reference class",
+          "No nearest-chart inference, default balance, numerical thresholds or prediction",
+          "An exact source match is not calendar approval; coverage flags still apply",
+          "The source year/month transformation example is not a day-stem or cross-person rule"
+        ]
+      }
+    },
+    {
+      "id": "fire-too-strong",
+      "review": {
+        "ruleVersion": "source-case-veto-and-score-review-v1",
+        "productionApproved": false,
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "status": "exact-source-case",
+        "sourceClassification": {
+          "category": "too-strong",
+          "label": "火太旺",
+          "element": "화",
+          "scope": "this-edition-exact-case"
+        },
+        "matches": [
+          {
+            "id": "fire-too-strong",
+            "match": "exact-four-pillars",
+            "source": {
+              "sourceId": "ditian-1947",
+              "pdfPage": 180,
+              "pdfSha256": "d6a7d1daf6513ce9fb9940ff8331b96804c10cdafbeac00d4d3d0a37229e1803",
+              "url": "https://upload.wikimedia.org/wikipedia/commons/d/db/SSID-11335994_%E6%BB%B4%E5%A4%A9%E9%AB%93%E9%97%A1%E5%BE%AE.pdf"
+            }
+          }
+        ],
+        "sourceAttributedTransformation": null,
+        "generalClassification": null,
+        "moderation": null,
+        "score": null,
+        "limitations": [
+          "Twenty deliberately selected extreme cases contain no balanced reference class",
+          "No nearest-chart inference, default balance, numerical thresholds or prediction",
+          "An exact source match is not calendar approval; coverage flags still apply",
+          "The source year/month transformation example is not a day-stem or cross-person rule"
+        ]
+      }
+    },
+    {
+      "id": "fire-extremely-strong",
+      "review": {
+        "ruleVersion": "source-case-veto-and-score-review-v1",
+        "productionApproved": false,
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "status": "exact-source-case",
+        "sourceClassification": {
+          "category": "extremely-strong",
+          "label": "火旺極",
+          "element": "화",
+          "scope": "this-edition-exact-case"
+        },
+        "matches": [
+          {
+            "id": "fire-extremely-strong",
+            "match": "exact-four-pillars",
+            "source": {
+              "sourceId": "ditian-1947",
+              "pdfPage": 181,
+              "pdfSha256": "d6a7d1daf6513ce9fb9940ff8331b96804c10cdafbeac00d4d3d0a37229e1803",
+              "url": "https://upload.wikimedia.org/wikipedia/commons/d/db/SSID-11335994_%E6%BB%B4%E5%A4%A9%E9%AB%93%E9%97%A1%E5%BE%AE.pdf"
+            }
+          }
+        ],
+        "sourceAttributedTransformation": null,
+        "generalClassification": null,
+        "moderation": null,
+        "score": null,
+        "limitations": [
+          "Twenty deliberately selected extreme cases contain no balanced reference class",
+          "No nearest-chart inference, default balance, numerical thresholds or prediction",
+          "An exact source match is not calendar approval; coverage flags still apply",
+          "The source year/month transformation example is not a day-stem or cross-person rule"
+        ]
+      }
+    },
+    {
+      "id": "fire-too-weak",
+      "review": {
+        "ruleVersion": "source-case-veto-and-score-review-v1",
+        "productionApproved": false,
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "status": "exact-source-case",
+        "sourceClassification": {
+          "category": "too-weak",
+          "label": "火太衰",
+          "element": "화",
+          "scope": "this-edition-exact-case"
+        },
+        "matches": [
+          {
+            "id": "fire-too-weak",
+            "match": "exact-four-pillars",
+            "source": {
+              "sourceId": "ditian-1947",
+              "pdfPage": 181,
+              "pdfSha256": "d6a7d1daf6513ce9fb9940ff8331b96804c10cdafbeac00d4d3d0a37229e1803",
+              "url": "https://upload.wikimedia.org/wikipedia/commons/d/db/SSID-11335994_%E6%BB%B4%E5%A4%A9%E9%AB%93%E9%97%A1%E5%BE%AE.pdf"
+            }
+          }
+        ],
+        "sourceAttributedTransformation": null,
+        "generalClassification": null,
+        "moderation": null,
+        "score": null,
+        "limitations": [
+          "Twenty deliberately selected extreme cases contain no balanced reference class",
+          "No nearest-chart inference, default balance, numerical thresholds or prediction",
+          "An exact source match is not calendar approval; coverage flags still apply",
+          "The source year/month transformation example is not a day-stem or cross-person rule"
+        ]
+      }
+    },
+    {
+      "id": "fire-extremely-weak",
+      "review": {
+        "ruleVersion": "source-case-veto-and-score-review-v1",
+        "productionApproved": false,
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "status": "exact-source-case",
+        "sourceClassification": {
+          "category": "extremely-weak",
+          "label": "火衰極",
+          "element": "화",
+          "scope": "this-edition-exact-case"
+        },
+        "matches": [
+          {
+            "id": "fire-extremely-weak",
+            "match": "exact-four-pillars",
+            "source": {
+              "sourceId": "ditian-1947",
+              "pdfPage": 182,
+              "pdfSha256": "d6a7d1daf6513ce9fb9940ff8331b96804c10cdafbeac00d4d3d0a37229e1803",
+              "url": "https://upload.wikimedia.org/wikipedia/commons/d/db/SSID-11335994_%E6%BB%B4%E5%A4%A9%E9%AB%93%E9%97%A1%E5%BE%AE.pdf"
+            }
+          }
+        ],
+        "sourceAttributedTransformation": null,
+        "generalClassification": null,
+        "moderation": null,
+        "score": null,
+        "limitations": [
+          "Twenty deliberately selected extreme cases contain no balanced reference class",
+          "No nearest-chart inference, default balance, numerical thresholds or prediction",
+          "An exact source match is not calendar approval; coverage flags still apply",
+          "The source year/month transformation example is not a day-stem or cross-person rule"
+        ]
+      }
+    },
+    {
+      "id": "earth-too-strong",
+      "review": {
+        "ruleVersion": "source-case-veto-and-score-review-v1",
+        "productionApproved": false,
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "status": "exact-source-case",
+        "sourceClassification": {
+          "category": "too-strong",
+          "label": "土太旺",
+          "element": "토",
+          "scope": "this-edition-exact-case"
+        },
+        "matches": [
+          {
+            "id": "earth-too-strong",
+            "match": "exact-four-pillars",
+            "source": {
+              "sourceId": "ditian-1947",
+              "pdfPage": 182,
+              "pdfSha256": "d6a7d1daf6513ce9fb9940ff8331b96804c10cdafbeac00d4d3d0a37229e1803",
+              "url": "https://upload.wikimedia.org/wikipedia/commons/d/db/SSID-11335994_%E6%BB%B4%E5%A4%A9%E9%AB%93%E9%97%A1%E5%BE%AE.pdf"
+            }
+          }
+        ],
+        "sourceAttributedTransformation": null,
+        "generalClassification": null,
+        "moderation": null,
+        "score": null,
+        "limitations": [
+          "Twenty deliberately selected extreme cases contain no balanced reference class",
+          "No nearest-chart inference, default balance, numerical thresholds or prediction",
+          "An exact source match is not calendar approval; coverage flags still apply",
+          "The source year/month transformation example is not a day-stem or cross-person rule"
+        ]
+      }
+    },
+    {
+      "id": "earth-extremely-strong",
+      "review": {
+        "ruleVersion": "source-case-veto-and-score-review-v1",
+        "productionApproved": false,
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "status": "exact-source-case",
+        "sourceClassification": {
+          "category": "extremely-strong",
+          "label": "土旺極",
+          "element": "토",
+          "scope": "this-edition-exact-case"
+        },
+        "matches": [
+          {
+            "id": "earth-extremely-strong",
+            "match": "exact-four-pillars",
+            "source": {
+              "sourceId": "ditian-1947",
+              "pdfPage": 183,
+              "pdfSha256": "d6a7d1daf6513ce9fb9940ff8331b96804c10cdafbeac00d4d3d0a37229e1803",
+              "url": "https://upload.wikimedia.org/wikipedia/commons/d/db/SSID-11335994_%E6%BB%B4%E5%A4%A9%E9%AB%93%E9%97%A1%E5%BE%AE.pdf"
+            }
+          }
+        ],
+        "sourceAttributedTransformation": null,
+        "generalClassification": null,
+        "moderation": null,
+        "score": null,
+        "limitations": [
+          "Twenty deliberately selected extreme cases contain no balanced reference class",
+          "No nearest-chart inference, default balance, numerical thresholds or prediction",
+          "An exact source match is not calendar approval; coverage flags still apply",
+          "The source year/month transformation example is not a day-stem or cross-person rule"
+        ]
+      }
+    },
+    {
+      "id": "earth-too-weak",
+      "review": {
+        "ruleVersion": "source-case-veto-and-score-review-v1",
+        "productionApproved": false,
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "status": "exact-source-case",
+        "sourceClassification": {
+          "category": "too-weak",
+          "label": "土太衰",
+          "element": "토",
+          "scope": "this-edition-exact-case"
+        },
+        "matches": [
+          {
+            "id": "earth-too-weak",
+            "match": "exact-four-pillars",
+            "source": {
+              "sourceId": "ditian-1947",
+              "pdfPage": 183,
+              "pdfSha256": "d6a7d1daf6513ce9fb9940ff8331b96804c10cdafbeac00d4d3d0a37229e1803",
+              "url": "https://upload.wikimedia.org/wikipedia/commons/d/db/SSID-11335994_%E6%BB%B4%E5%A4%A9%E9%AB%93%E9%97%A1%E5%BE%AE.pdf"
+            }
+          }
+        ],
+        "sourceAttributedTransformation": null,
+        "generalClassification": null,
+        "moderation": null,
+        "score": null,
+        "limitations": [
+          "Twenty deliberately selected extreme cases contain no balanced reference class",
+          "No nearest-chart inference, default balance, numerical thresholds or prediction",
+          "An exact source match is not calendar approval; coverage flags still apply",
+          "The source year/month transformation example is not a day-stem or cross-person rule"
+        ]
+      }
+    },
+    {
+      "id": "earth-extremely-weak",
+      "review": {
+        "ruleVersion": "source-case-veto-and-score-review-v1",
+        "productionApproved": false,
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "status": "exact-source-case",
+        "sourceClassification": {
+          "category": "extremely-weak",
+          "label": "土衰極",
+          "element": "토",
+          "scope": "this-edition-exact-case"
+        },
+        "matches": [
+          {
+            "id": "earth-extremely-weak",
+            "match": "exact-four-pillars",
+            "source": {
+              "sourceId": "ditian-1947",
+              "pdfPage": 184,
+              "pdfSha256": "d6a7d1daf6513ce9fb9940ff8331b96804c10cdafbeac00d4d3d0a37229e1803",
+              "url": "https://upload.wikimedia.org/wikipedia/commons/d/db/SSID-11335994_%E6%BB%B4%E5%A4%A9%E9%AB%93%E9%97%A1%E5%BE%AE.pdf"
+            }
+          }
+        ],
+        "sourceAttributedTransformation": null,
+        "generalClassification": null,
+        "moderation": null,
+        "score": null,
+        "limitations": [
+          "Twenty deliberately selected extreme cases contain no balanced reference class",
+          "No nearest-chart inference, default balance, numerical thresholds or prediction",
+          "An exact source match is not calendar approval; coverage flags still apply",
+          "The source year/month transformation example is not a day-stem or cross-person rule"
+        ]
+      }
+    },
+    {
+      "id": "metal-too-strong",
+      "review": {
+        "ruleVersion": "source-case-veto-and-score-review-v1",
+        "productionApproved": false,
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "status": "exact-source-case",
+        "sourceClassification": {
+          "category": "too-strong",
+          "label": "金太旺",
+          "element": "금",
+          "scope": "this-edition-exact-case"
+        },
+        "matches": [
+          {
+            "id": "metal-too-strong",
+            "match": "exact-four-pillars",
+            "source": {
+              "sourceId": "ditian-1947",
+              "pdfPage": 184,
+              "pdfSha256": "d6a7d1daf6513ce9fb9940ff8331b96804c10cdafbeac00d4d3d0a37229e1803",
+              "url": "https://upload.wikimedia.org/wikipedia/commons/d/db/SSID-11335994_%E6%BB%B4%E5%A4%A9%E9%AB%93%E9%97%A1%E5%BE%AE.pdf"
+            }
+          }
+        ],
+        "sourceAttributedTransformation": null,
+        "generalClassification": null,
+        "moderation": null,
+        "score": null,
+        "limitations": [
+          "Twenty deliberately selected extreme cases contain no balanced reference class",
+          "No nearest-chart inference, default balance, numerical thresholds or prediction",
+          "An exact source match is not calendar approval; coverage flags still apply",
+          "The source year/month transformation example is not a day-stem or cross-person rule"
+        ]
+      }
+    },
+    {
+      "id": "metal-extremely-strong",
+      "review": {
+        "ruleVersion": "source-case-veto-and-score-review-v1",
+        "productionApproved": false,
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "status": "exact-source-case",
+        "sourceClassification": {
+          "category": "extremely-strong",
+          "label": "金旺極",
+          "element": "금",
+          "scope": "this-edition-exact-case"
+        },
+        "matches": [
+          {
+            "id": "metal-extremely-strong",
+            "match": "exact-four-pillars",
+            "source": {
+              "sourceId": "ditian-1947",
+              "pdfPage": 185,
+              "pdfSha256": "d6a7d1daf6513ce9fb9940ff8331b96804c10cdafbeac00d4d3d0a37229e1803",
+              "url": "https://upload.wikimedia.org/wikipedia/commons/d/db/SSID-11335994_%E6%BB%B4%E5%A4%A9%E9%AB%93%E9%97%A1%E5%BE%AE.pdf"
+            }
+          }
+        ],
+        "sourceAttributedTransformation": null,
+        "generalClassification": null,
+        "moderation": null,
+        "score": null,
+        "limitations": [
+          "Twenty deliberately selected extreme cases contain no balanced reference class",
+          "No nearest-chart inference, default balance, numerical thresholds or prediction",
+          "An exact source match is not calendar approval; coverage flags still apply",
+          "The source year/month transformation example is not a day-stem or cross-person rule"
+        ]
+      }
+    },
+    {
+      "id": "metal-too-weak",
+      "review": {
+        "ruleVersion": "source-case-veto-and-score-review-v1",
+        "productionApproved": false,
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "status": "exact-source-case",
+        "sourceClassification": {
+          "category": "too-weak",
+          "label": "金太衰",
+          "element": "금",
+          "scope": "this-edition-exact-case"
+        },
+        "matches": [
+          {
+            "id": "metal-too-weak",
+            "match": "exact-four-pillars",
+            "source": {
+              "sourceId": "ditian-1947",
+              "pdfPage": 185,
+              "pdfSha256": "d6a7d1daf6513ce9fb9940ff8331b96804c10cdafbeac00d4d3d0a37229e1803",
+              "url": "https://upload.wikimedia.org/wikipedia/commons/d/db/SSID-11335994_%E6%BB%B4%E5%A4%A9%E9%AB%93%E9%97%A1%E5%BE%AE.pdf"
+            }
+          }
+        ],
+        "sourceAttributedTransformation": null,
+        "generalClassification": null,
+        "moderation": null,
+        "score": null,
+        "limitations": [
+          "Twenty deliberately selected extreme cases contain no balanced reference class",
+          "No nearest-chart inference, default balance, numerical thresholds or prediction",
+          "An exact source match is not calendar approval; coverage flags still apply",
+          "The source year/month transformation example is not a day-stem or cross-person rule"
+        ]
+      }
+    },
+    {
+      "id": "metal-extremely-weak",
+      "review": {
+        "ruleVersion": "source-case-veto-and-score-review-v1",
+        "productionApproved": false,
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "status": "exact-source-case",
+        "sourceClassification": {
+          "category": "extremely-weak",
+          "label": "金衰極",
+          "element": "금",
+          "scope": "this-edition-exact-case"
+        },
+        "matches": [
+          {
+            "id": "metal-extremely-weak",
+            "match": "exact-four-pillars",
+            "source": {
+              "sourceId": "ditian-1947",
+              "pdfPage": 186,
+              "pdfSha256": "d6a7d1daf6513ce9fb9940ff8331b96804c10cdafbeac00d4d3d0a37229e1803",
+              "url": "https://upload.wikimedia.org/wikipedia/commons/d/db/SSID-11335994_%E6%BB%B4%E5%A4%A9%E9%AB%93%E9%97%A1%E5%BE%AE.pdf"
+            }
+          }
+        ],
+        "sourceAttributedTransformation": null,
+        "generalClassification": null,
+        "moderation": null,
+        "score": null,
+        "limitations": [
+          "Twenty deliberately selected extreme cases contain no balanced reference class",
+          "No nearest-chart inference, default balance, numerical thresholds or prediction",
+          "An exact source match is not calendar approval; coverage flags still apply",
+          "The source year/month transformation example is not a day-stem or cross-person rule"
+        ]
+      }
+    },
+    {
+      "id": "water-too-strong",
+      "review": {
+        "ruleVersion": "source-case-veto-and-score-review-v1",
+        "productionApproved": false,
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "status": "exact-source-case",
+        "sourceClassification": {
+          "category": "too-strong",
+          "label": "水太旺",
+          "element": "수",
+          "scope": "this-edition-exact-case"
+        },
+        "matches": [
+          {
+            "id": "water-too-strong",
+            "match": "exact-four-pillars",
+            "source": {
+              "sourceId": "ditian-1947",
+              "pdfPage": 186,
+              "pdfSha256": "d6a7d1daf6513ce9fb9940ff8331b96804c10cdafbeac00d4d3d0a37229e1803",
+              "url": "https://upload.wikimedia.org/wikipedia/commons/d/db/SSID-11335994_%E6%BB%B4%E5%A4%A9%E9%AB%93%E9%97%A1%E5%BE%AE.pdf"
+            }
+          }
+        ],
+        "sourceAttributedTransformation": null,
+        "generalClassification": null,
+        "moderation": null,
+        "score": null,
+        "limitations": [
+          "Twenty deliberately selected extreme cases contain no balanced reference class",
+          "No nearest-chart inference, default balance, numerical thresholds or prediction",
+          "An exact source match is not calendar approval; coverage flags still apply",
+          "The source year/month transformation example is not a day-stem or cross-person rule"
+        ]
+      }
+    },
+    {
+      "id": "water-extremely-strong",
+      "review": {
+        "ruleVersion": "source-case-veto-and-score-review-v1",
+        "productionApproved": false,
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "status": "exact-source-case",
+        "sourceClassification": {
+          "category": "extremely-strong",
+          "label": "水旺極",
+          "element": "수",
+          "scope": "this-edition-exact-case"
+        },
+        "matches": [
+          {
+            "id": "water-extremely-strong",
+            "match": "exact-four-pillars",
+            "source": {
+              "sourceId": "ditian-1947",
+              "pdfPage": 187,
+              "pdfSha256": "d6a7d1daf6513ce9fb9940ff8331b96804c10cdafbeac00d4d3d0a37229e1803",
+              "url": "https://upload.wikimedia.org/wikipedia/commons/d/db/SSID-11335994_%E6%BB%B4%E5%A4%A9%E9%AB%93%E9%97%A1%E5%BE%AE.pdf"
+            }
+          }
+        ],
+        "sourceAttributedTransformation": null,
+        "generalClassification": null,
+        "moderation": null,
+        "score": null,
+        "limitations": [
+          "Twenty deliberately selected extreme cases contain no balanced reference class",
+          "No nearest-chart inference, default balance, numerical thresholds or prediction",
+          "An exact source match is not calendar approval; coverage flags still apply",
+          "The source year/month transformation example is not a day-stem or cross-person rule"
+        ]
+      }
+    },
+    {
+      "id": "water-too-weak",
+      "review": {
+        "ruleVersion": "source-case-veto-and-score-review-v1",
+        "productionApproved": false,
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "status": "exact-source-case",
+        "sourceClassification": {
+          "category": "too-weak",
+          "label": "水太衰",
+          "element": "수",
+          "scope": "this-edition-exact-case"
+        },
+        "matches": [
+          {
+            "id": "water-too-weak",
+            "match": "exact-four-pillars",
+            "source": {
+              "sourceId": "ditian-1947",
+              "pdfPage": 187,
+              "pdfSha256": "d6a7d1daf6513ce9fb9940ff8331b96804c10cdafbeac00d4d3d0a37229e1803",
+              "url": "https://upload.wikimedia.org/wikipedia/commons/d/db/SSID-11335994_%E6%BB%B4%E5%A4%A9%E9%AB%93%E9%97%A1%E5%BE%AE.pdf"
+            }
+          }
+        ],
+        "sourceAttributedTransformation": null,
+        "generalClassification": null,
+        "moderation": null,
+        "score": null,
+        "limitations": [
+          "Twenty deliberately selected extreme cases contain no balanced reference class",
+          "No nearest-chart inference, default balance, numerical thresholds or prediction",
+          "An exact source match is not calendar approval; coverage flags still apply",
+          "The source year/month transformation example is not a day-stem or cross-person rule"
+        ]
+      }
+    },
+    {
+      "id": "water-extremely-weak",
+      "review": {
+        "ruleVersion": "source-case-veto-and-score-review-v1",
+        "productionApproved": false,
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "status": "exact-source-case",
+        "sourceClassification": {
+          "category": "extremely-weak",
+          "label": "水衰極",
+          "element": "수",
+          "scope": "this-edition-exact-case"
+        },
+        "matches": [
+          {
+            "id": "water-extremely-weak",
+            "match": "exact-four-pillars",
+            "source": {
+              "sourceId": "ditian-1947",
+              "pdfPage": 188,
+              "pdfSha256": "d6a7d1daf6513ce9fb9940ff8331b96804c10cdafbeac00d4d3d0a37229e1803",
+              "url": "https://upload.wikimedia.org/wikipedia/commons/d/db/SSID-11335994_%E6%BB%B4%E5%A4%A9%E9%AB%93%E9%97%A1%E5%BE%AE.pdf"
+            }
+          }
+        ],
+        "sourceAttributedTransformation": {
+          "pair": "무계",
+          "positions": [
+            "year",
+            "month"
+          ],
+          "element": "화",
+          "sourceSaysTransformation": true,
+          "scope": "this-source-example-only",
+          "source": {
+            "sourceId": "ditian-1947",
+            "pdfPage": 188,
+            "pdfSha256": "d6a7d1daf6513ce9fb9940ff8331b96804c10cdafbeac00d4d3d0a37229e1803",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/d/db/SSID-11335994_%E6%BB%B4%E5%A4%A9%E9%AB%93%E9%97%A1%E5%BE%AE.pdf"
+          }
+        },
+        "generalClassification": null,
+        "moderation": null,
+        "score": null,
+        "limitations": [
+          "Twenty deliberately selected extreme cases contain no balanced reference class",
+          "No nearest-chart inference, default balance, numerical thresholds or prediction",
+          "An exact source match is not calendar approval; coverage flags still apply",
+          "The source year/month transformation example is not a day-stem or cross-person rule"
+        ]
+      }
+    }
+  ],
+  "transformationCases": [
+    {
+      "id": "갑기",
+      "review": {
+        "ruleVersion": "source-case-veto-and-score-review-v1",
+        "productionApproved": false,
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "status": "all-observed-day-pairs-vetoed",
+        "alternatives": [
+          {
+            "pair": "갑기",
+            "scope": "between-pair",
+            "blockerStem": "무",
+            "pairs": [
+              {
+                "partnerPosition": "year",
+                "blockerPositions": [
+                  "month"
+                ],
+                "sourceVetoObserved": true
+              }
+            ],
+            "status": "all-observed-day-pairs-vetoed",
+            "dayPairSourceClausePassed": false,
+            "dayPairTransformationEstablished": null,
+            "source": {
+              "sourceId": "sanming-1926",
+              "pdfPage": 128,
+              "pdfSha256": "c6eac6fca6411e45cb801f9b771aca6dd6a6d2dfb57ecc36ea5f42ecf1ac8bf9",
+              "url": "https://upload.wikimedia.org/wikipedia/commons/2/23/NLC416-13jh000156-94145_%E4%B8%89%E5%91%BD%E9%80%9A%E6%9C%83.pdf"
+            }
+          }
+        ],
+        "dayPairSourceClausePassed": false,
+        "dayPairTransformationEstablished": null,
+        "transformationEstablished": null,
+        "transformedElement": null,
+        "scope": "Selected Sanming paragraph, visible day-stem pair only; not all stem combinations or a cross-edition verdict",
+        "normalization": "間之 is conservatively applied only between pair positions; 柱有 is tested over all visible stems. Absence never passes remaining conditions.",
+        "candidatePolicy": "Universal over supplied marginal combinations; partial assignments are not proved jointly feasible.",
+        "unresolved": [
+          "Hour wangqi, seasonal moderation and rescue precedence remain unadjudicated",
+          "Ziping Jia-Ji 庚/乙 and Sanming 戊 clauses remain separate conventions",
+          "A surviving second partner prevents a chart-wide veto; unknown hour cannot prove completeness"
+        ]
+      }
+    },
+    {
+      "id": "갑기-reverse",
+      "review": {
+        "ruleVersion": "source-case-veto-and-score-review-v1",
+        "productionApproved": false,
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "status": "all-observed-day-pairs-vetoed",
+        "alternatives": [
+          {
+            "pair": "갑기",
+            "scope": "between-pair",
+            "blockerStem": "무",
+            "pairs": [
+              {
+                "partnerPosition": "year",
+                "blockerPositions": [
+                  "month"
+                ],
+                "sourceVetoObserved": true
+              }
+            ],
+            "status": "all-observed-day-pairs-vetoed",
+            "dayPairSourceClausePassed": false,
+            "dayPairTransformationEstablished": null,
+            "source": {
+              "sourceId": "sanming-1926",
+              "pdfPage": 128,
+              "pdfSha256": "c6eac6fca6411e45cb801f9b771aca6dd6a6d2dfb57ecc36ea5f42ecf1ac8bf9",
+              "url": "https://upload.wikimedia.org/wikipedia/commons/2/23/NLC416-13jh000156-94145_%E4%B8%89%E5%91%BD%E9%80%9A%E6%9C%83.pdf"
+            }
+          }
+        ],
+        "dayPairSourceClausePassed": false,
+        "dayPairTransformationEstablished": null,
+        "transformationEstablished": null,
+        "transformedElement": null,
+        "scope": "Selected Sanming paragraph, visible day-stem pair only; not all stem combinations or a cross-edition verdict",
+        "normalization": "間之 is conservatively applied only between pair positions; 柱有 is tested over all visible stems. Absence never passes remaining conditions.",
+        "candidatePolicy": "Universal over supplied marginal combinations; partial assignments are not proved jointly feasible.",
+        "unresolved": [
+          "Hour wangqi, seasonal moderation and rescue precedence remain unadjudicated",
+          "Ziping Jia-Ji 庚/乙 and Sanming 戊 clauses remain separate conventions",
+          "A surviving second partner prevents a chart-wide veto; unknown hour cannot prove completeness"
+        ]
+      }
+    },
+    {
+      "id": "을경",
+      "review": {
+        "ruleVersion": "source-case-veto-and-score-review-v1",
+        "productionApproved": false,
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "status": "all-observed-day-pairs-vetoed",
+        "alternatives": [
+          {
+            "pair": "을경",
+            "scope": "between-pair",
+            "blockerStem": "갑",
+            "pairs": [
+              {
+                "partnerPosition": "year",
+                "blockerPositions": [
+                  "month"
+                ],
+                "sourceVetoObserved": true
+              }
+            ],
+            "status": "all-observed-day-pairs-vetoed",
+            "dayPairSourceClausePassed": false,
+            "dayPairTransformationEstablished": null,
+            "source": {
+              "sourceId": "sanming-1926",
+              "pdfPage": 128,
+              "pdfSha256": "c6eac6fca6411e45cb801f9b771aca6dd6a6d2dfb57ecc36ea5f42ecf1ac8bf9",
+              "url": "https://upload.wikimedia.org/wikipedia/commons/2/23/NLC416-13jh000156-94145_%E4%B8%89%E5%91%BD%E9%80%9A%E6%9C%83.pdf"
+            }
+          }
+        ],
+        "dayPairSourceClausePassed": false,
+        "dayPairTransformationEstablished": null,
+        "transformationEstablished": null,
+        "transformedElement": null,
+        "scope": "Selected Sanming paragraph, visible day-stem pair only; not all stem combinations or a cross-edition verdict",
+        "normalization": "間之 is conservatively applied only between pair positions; 柱有 is tested over all visible stems. Absence never passes remaining conditions.",
+        "candidatePolicy": "Universal over supplied marginal combinations; partial assignments are not proved jointly feasible.",
+        "unresolved": [
+          "Hour wangqi, seasonal moderation and rescue precedence remain unadjudicated",
+          "Ziping Jia-Ji 庚/乙 and Sanming 戊 clauses remain separate conventions",
+          "A surviving second partner prevents a chart-wide veto; unknown hour cannot prove completeness"
+        ]
+      }
+    },
+    {
+      "id": "을경-reverse",
+      "review": {
+        "ruleVersion": "source-case-veto-and-score-review-v1",
+        "productionApproved": false,
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "status": "all-observed-day-pairs-vetoed",
+        "alternatives": [
+          {
+            "pair": "을경",
+            "scope": "between-pair",
+            "blockerStem": "갑",
+            "pairs": [
+              {
+                "partnerPosition": "year",
+                "blockerPositions": [
+                  "month"
+                ],
+                "sourceVetoObserved": true
+              }
+            ],
+            "status": "all-observed-day-pairs-vetoed",
+            "dayPairSourceClausePassed": false,
+            "dayPairTransformationEstablished": null,
+            "source": {
+              "sourceId": "sanming-1926",
+              "pdfPage": 128,
+              "pdfSha256": "c6eac6fca6411e45cb801f9b771aca6dd6a6d2dfb57ecc36ea5f42ecf1ac8bf9",
+              "url": "https://upload.wikimedia.org/wikipedia/commons/2/23/NLC416-13jh000156-94145_%E4%B8%89%E5%91%BD%E9%80%9A%E6%9C%83.pdf"
+            }
+          }
+        ],
+        "dayPairSourceClausePassed": false,
+        "dayPairTransformationEstablished": null,
+        "transformationEstablished": null,
+        "transformedElement": null,
+        "scope": "Selected Sanming paragraph, visible day-stem pair only; not all stem combinations or a cross-edition verdict",
+        "normalization": "間之 is conservatively applied only between pair positions; 柱有 is tested over all visible stems. Absence never passes remaining conditions.",
+        "candidatePolicy": "Universal over supplied marginal combinations; partial assignments are not proved jointly feasible.",
+        "unresolved": [
+          "Hour wangqi, seasonal moderation and rescue precedence remain unadjudicated",
+          "Ziping Jia-Ji 庚/乙 and Sanming 戊 clauses remain separate conventions",
+          "A surviving second partner prevents a chart-wide veto; unknown hour cannot prove completeness"
+        ]
+      }
+    },
+    {
+      "id": "병신",
+      "review": {
+        "ruleVersion": "source-case-veto-and-score-review-v1",
+        "productionApproved": false,
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "status": "all-observed-day-pairs-vetoed",
+        "alternatives": [
+          {
+            "pair": "병신",
+            "scope": "visible-stems",
+            "blockerStem": "정",
+            "pairs": [
+              {
+                "partnerPosition": "year",
+                "blockerPositions": [
+                  "month"
+                ],
+                "sourceVetoObserved": true
+              }
+            ],
+            "status": "all-observed-day-pairs-vetoed",
+            "dayPairSourceClausePassed": false,
+            "dayPairTransformationEstablished": null,
+            "source": {
+              "sourceId": "sanming-1926",
+              "pdfPage": 129,
+              "pdfSha256": "c6eac6fca6411e45cb801f9b771aca6dd6a6d2dfb57ecc36ea5f42ecf1ac8bf9",
+              "url": "https://upload.wikimedia.org/wikipedia/commons/2/23/NLC416-13jh000156-94145_%E4%B8%89%E5%91%BD%E9%80%9A%E6%9C%83.pdf"
+            }
+          }
+        ],
+        "dayPairSourceClausePassed": false,
+        "dayPairTransformationEstablished": null,
+        "transformationEstablished": null,
+        "transformedElement": null,
+        "scope": "Selected Sanming paragraph, visible day-stem pair only; not all stem combinations or a cross-edition verdict",
+        "normalization": "間之 is conservatively applied only between pair positions; 柱有 is tested over all visible stems. Absence never passes remaining conditions.",
+        "candidatePolicy": "Universal over supplied marginal combinations; partial assignments are not proved jointly feasible.",
+        "unresolved": [
+          "Hour wangqi, seasonal moderation and rescue precedence remain unadjudicated",
+          "Ziping Jia-Ji 庚/乙 and Sanming 戊 clauses remain separate conventions",
+          "A surviving second partner prevents a chart-wide veto; unknown hour cannot prove completeness"
+        ]
+      }
+    },
+    {
+      "id": "병신-reverse",
+      "review": {
+        "ruleVersion": "source-case-veto-and-score-review-v1",
+        "productionApproved": false,
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "status": "all-observed-day-pairs-vetoed",
+        "alternatives": [
+          {
+            "pair": "병신",
+            "scope": "visible-stems",
+            "blockerStem": "정",
+            "pairs": [
+              {
+                "partnerPosition": "year",
+                "blockerPositions": [
+                  "month"
+                ],
+                "sourceVetoObserved": true
+              }
+            ],
+            "status": "all-observed-day-pairs-vetoed",
+            "dayPairSourceClausePassed": false,
+            "dayPairTransformationEstablished": null,
+            "source": {
+              "sourceId": "sanming-1926",
+              "pdfPage": 129,
+              "pdfSha256": "c6eac6fca6411e45cb801f9b771aca6dd6a6d2dfb57ecc36ea5f42ecf1ac8bf9",
+              "url": "https://upload.wikimedia.org/wikipedia/commons/2/23/NLC416-13jh000156-94145_%E4%B8%89%E5%91%BD%E9%80%9A%E6%9C%83.pdf"
+            }
+          }
+        ],
+        "dayPairSourceClausePassed": false,
+        "dayPairTransformationEstablished": null,
+        "transformationEstablished": null,
+        "transformedElement": null,
+        "scope": "Selected Sanming paragraph, visible day-stem pair only; not all stem combinations or a cross-edition verdict",
+        "normalization": "間之 is conservatively applied only between pair positions; 柱有 is tested over all visible stems. Absence never passes remaining conditions.",
+        "candidatePolicy": "Universal over supplied marginal combinations; partial assignments are not proved jointly feasible.",
+        "unresolved": [
+          "Hour wangqi, seasonal moderation and rescue precedence remain unadjudicated",
+          "Ziping Jia-Ji 庚/乙 and Sanming 戊 clauses remain separate conventions",
+          "A surviving second partner prevents a chart-wide veto; unknown hour cannot prove completeness"
+        ]
+      }
+    },
+    {
+      "id": "정임",
+      "review": {
+        "ruleVersion": "source-case-veto-and-score-review-v1",
+        "productionApproved": false,
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "status": "all-observed-day-pairs-vetoed",
+        "alternatives": [
+          {
+            "pair": "정임",
+            "scope": "visible-stems",
+            "blockerStem": "병",
+            "pairs": [
+              {
+                "partnerPosition": "year",
+                "blockerPositions": [
+                  "month"
+                ],
+                "sourceVetoObserved": true
+              }
+            ],
+            "status": "all-observed-day-pairs-vetoed",
+            "dayPairSourceClausePassed": false,
+            "dayPairTransformationEstablished": null,
+            "source": {
+              "sourceId": "sanming-1926",
+              "pdfPage": 129,
+              "pdfSha256": "c6eac6fca6411e45cb801f9b771aca6dd6a6d2dfb57ecc36ea5f42ecf1ac8bf9",
+              "url": "https://upload.wikimedia.org/wikipedia/commons/2/23/NLC416-13jh000156-94145_%E4%B8%89%E5%91%BD%E9%80%9A%E6%9C%83.pdf"
+            }
+          }
+        ],
+        "dayPairSourceClausePassed": false,
+        "dayPairTransformationEstablished": null,
+        "transformationEstablished": null,
+        "transformedElement": null,
+        "scope": "Selected Sanming paragraph, visible day-stem pair only; not all stem combinations or a cross-edition verdict",
+        "normalization": "間之 is conservatively applied only between pair positions; 柱有 is tested over all visible stems. Absence never passes remaining conditions.",
+        "candidatePolicy": "Universal over supplied marginal combinations; partial assignments are not proved jointly feasible.",
+        "unresolved": [
+          "Hour wangqi, seasonal moderation and rescue precedence remain unadjudicated",
+          "Ziping Jia-Ji 庚/乙 and Sanming 戊 clauses remain separate conventions",
+          "A surviving second partner prevents a chart-wide veto; unknown hour cannot prove completeness"
+        ]
+      }
+    },
+    {
+      "id": "정임-reverse",
+      "review": {
+        "ruleVersion": "source-case-veto-and-score-review-v1",
+        "productionApproved": false,
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "status": "all-observed-day-pairs-vetoed",
+        "alternatives": [
+          {
+            "pair": "정임",
+            "scope": "visible-stems",
+            "blockerStem": "병",
+            "pairs": [
+              {
+                "partnerPosition": "year",
+                "blockerPositions": [
+                  "month"
+                ],
+                "sourceVetoObserved": true
+              }
+            ],
+            "status": "all-observed-day-pairs-vetoed",
+            "dayPairSourceClausePassed": false,
+            "dayPairTransformationEstablished": null,
+            "source": {
+              "sourceId": "sanming-1926",
+              "pdfPage": 129,
+              "pdfSha256": "c6eac6fca6411e45cb801f9b771aca6dd6a6d2dfb57ecc36ea5f42ecf1ac8bf9",
+              "url": "https://upload.wikimedia.org/wikipedia/commons/2/23/NLC416-13jh000156-94145_%E4%B8%89%E5%91%BD%E9%80%9A%E6%9C%83.pdf"
+            }
+          }
+        ],
+        "dayPairSourceClausePassed": false,
+        "dayPairTransformationEstablished": null,
+        "transformationEstablished": null,
+        "transformedElement": null,
+        "scope": "Selected Sanming paragraph, visible day-stem pair only; not all stem combinations or a cross-edition verdict",
+        "normalization": "間之 is conservatively applied only between pair positions; 柱有 is tested over all visible stems. Absence never passes remaining conditions.",
+        "candidatePolicy": "Universal over supplied marginal combinations; partial assignments are not proved jointly feasible.",
+        "unresolved": [
+          "Hour wangqi, seasonal moderation and rescue precedence remain unadjudicated",
+          "Ziping Jia-Ji 庚/乙 and Sanming 戊 clauses remain separate conventions",
+          "A surviving second partner prevents a chart-wide veto; unknown hour cannot prove completeness"
+        ]
+      }
+    },
+    {
+      "id": "무계",
+      "review": {
+        "ruleVersion": "source-case-veto-and-score-review-v1",
+        "productionApproved": false,
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "status": "all-observed-day-pairs-vetoed",
+        "alternatives": [
+          {
+            "pair": "무계",
+            "scope": "visible-stems",
+            "blockerStem": "기",
+            "pairs": [
+              {
+                "partnerPosition": "year",
+                "blockerPositions": [
+                  "month"
+                ],
+                "sourceVetoObserved": true
+              }
+            ],
+            "status": "all-observed-day-pairs-vetoed",
+            "dayPairSourceClausePassed": false,
+            "dayPairTransformationEstablished": null,
+            "source": {
+              "sourceId": "sanming-1926",
+              "pdfPage": 129,
+              "pdfSha256": "c6eac6fca6411e45cb801f9b771aca6dd6a6d2dfb57ecc36ea5f42ecf1ac8bf9",
+              "url": "https://upload.wikimedia.org/wikipedia/commons/2/23/NLC416-13jh000156-94145_%E4%B8%89%E5%91%BD%E9%80%9A%E6%9C%83.pdf"
+            }
+          }
+        ],
+        "dayPairSourceClausePassed": false,
+        "dayPairTransformationEstablished": null,
+        "transformationEstablished": null,
+        "transformedElement": null,
+        "scope": "Selected Sanming paragraph, visible day-stem pair only; not all stem combinations or a cross-edition verdict",
+        "normalization": "間之 is conservatively applied only between pair positions; 柱有 is tested over all visible stems. Absence never passes remaining conditions.",
+        "candidatePolicy": "Universal over supplied marginal combinations; partial assignments are not proved jointly feasible.",
+        "unresolved": [
+          "Hour wangqi, seasonal moderation and rescue precedence remain unadjudicated",
+          "Ziping Jia-Ji 庚/乙 and Sanming 戊 clauses remain separate conventions",
+          "A surviving second partner prevents a chart-wide veto; unknown hour cannot prove completeness"
+        ]
+      }
+    },
+    {
+      "id": "무계-reverse",
+      "review": {
+        "ruleVersion": "source-case-veto-and-score-review-v1",
+        "productionApproved": false,
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "status": "all-observed-day-pairs-vetoed",
+        "alternatives": [
+          {
+            "pair": "무계",
+            "scope": "visible-stems",
+            "blockerStem": "기",
+            "pairs": [
+              {
+                "partnerPosition": "year",
+                "blockerPositions": [
+                  "month"
+                ],
+                "sourceVetoObserved": true
+              }
+            ],
+            "status": "all-observed-day-pairs-vetoed",
+            "dayPairSourceClausePassed": false,
+            "dayPairTransformationEstablished": null,
+            "source": {
+              "sourceId": "sanming-1926",
+              "pdfPage": 129,
+              "pdfSha256": "c6eac6fca6411e45cb801f9b771aca6dd6a6d2dfb57ecc36ea5f42ecf1ac8bf9",
+              "url": "https://upload.wikimedia.org/wikipedia/commons/2/23/NLC416-13jh000156-94145_%E4%B8%89%E5%91%BD%E9%80%9A%E6%9C%83.pdf"
+            }
+          }
+        ],
+        "dayPairSourceClausePassed": false,
+        "dayPairTransformationEstablished": null,
+        "transformationEstablished": null,
+        "transformedElement": null,
+        "scope": "Selected Sanming paragraph, visible day-stem pair only; not all stem combinations or a cross-edition verdict",
+        "normalization": "間之 is conservatively applied only between pair positions; 柱有 is tested over all visible stems. Absence never passes remaining conditions.",
+        "candidatePolicy": "Universal over supplied marginal combinations; partial assignments are not proved jointly feasible.",
+        "unresolved": [
+          "Hour wangqi, seasonal moderation and rescue precedence remain unadjudicated",
+          "Ziping Jia-Ji 庚/乙 and Sanming 戊 clauses remain separate conventions",
+          "A surviving second partner prevents a chart-wide veto; unknown hour cannot prove completeness"
+        ]
+      }
+    }
+  ],
+  "rejectedStrengthShortcut": {
+    "status": "rejected-counterexample-hypothesis",
+    "productionApproved": false,
+    "rule": "diagnostic >=2-of-3 visible support shortcut",
+    "cases": [
+      {
+        "id": "wood-too-strong",
+        "otherVisibleSupportCount": 1,
+        "hypothesis": "weak",
+        "sourceDirection": "strong",
+        "agrees": false
+      },
+      {
+        "id": "wood-extremely-strong",
+        "otherVisibleSupportCount": 3,
+        "hypothesis": "strong",
+        "sourceDirection": "strong",
+        "agrees": true
+      },
+      {
+        "id": "wood-too-weak",
+        "otherVisibleSupportCount": 2,
+        "hypothesis": "strong",
+        "sourceDirection": "weak",
+        "agrees": false
+      },
+      {
+        "id": "wood-extremely-weak",
+        "otherVisibleSupportCount": 0,
+        "hypothesis": "weak",
+        "sourceDirection": "weak",
+        "agrees": true
+      },
+      {
+        "id": "fire-too-strong",
+        "otherVisibleSupportCount": 2,
+        "hypothesis": "strong",
+        "sourceDirection": "strong",
+        "agrees": true
+      },
+      {
+        "id": "fire-extremely-strong",
+        "otherVisibleSupportCount": 2,
+        "hypothesis": "strong",
+        "sourceDirection": "strong",
+        "agrees": true
+      },
+      {
+        "id": "fire-too-weak",
+        "otherVisibleSupportCount": 1,
+        "hypothesis": "weak",
+        "sourceDirection": "weak",
+        "agrees": true
+      },
+      {
+        "id": "fire-extremely-weak",
+        "otherVisibleSupportCount": 0,
+        "hypothesis": "weak",
+        "sourceDirection": "weak",
+        "agrees": true
+      },
+      {
+        "id": "earth-too-strong",
+        "otherVisibleSupportCount": 3,
+        "hypothesis": "strong",
+        "sourceDirection": "strong",
+        "agrees": true
+      },
+      {
+        "id": "earth-extremely-strong",
+        "otherVisibleSupportCount": 3,
+        "hypothesis": "strong",
+        "sourceDirection": "strong",
+        "agrees": true
+      },
+      {
+        "id": "earth-too-weak",
+        "otherVisibleSupportCount": 0,
+        "hypothesis": "weak",
+        "sourceDirection": "weak",
+        "agrees": true
+      },
+      {
+        "id": "earth-extremely-weak",
+        "otherVisibleSupportCount": 0,
+        "hypothesis": "weak",
+        "sourceDirection": "weak",
+        "agrees": true
+      },
+      {
+        "id": "metal-too-strong",
+        "otherVisibleSupportCount": 2,
+        "hypothesis": "strong",
+        "sourceDirection": "strong",
+        "agrees": true
+      },
+      {
+        "id": "metal-extremely-strong",
+        "otherVisibleSupportCount": 2,
+        "hypothesis": "strong",
+        "sourceDirection": "strong",
+        "agrees": true
+      },
+      {
+        "id": "metal-too-weak",
+        "otherVisibleSupportCount": 2,
+        "hypothesis": "strong",
+        "sourceDirection": "weak",
+        "agrees": false
+      },
+      {
+        "id": "metal-extremely-weak",
+        "otherVisibleSupportCount": 1,
+        "hypothesis": "weak",
+        "sourceDirection": "weak",
+        "agrees": true
+      },
+      {
+        "id": "water-too-strong",
+        "otherVisibleSupportCount": 3,
+        "hypothesis": "strong",
+        "sourceDirection": "strong",
+        "agrees": true
+      },
+      {
+        "id": "water-extremely-strong",
+        "otherVisibleSupportCount": 3,
+        "hypothesis": "strong",
+        "sourceDirection": "strong",
+        "agrees": true
+      },
+      {
+        "id": "water-too-weak",
+        "otherVisibleSupportCount": 1,
+        "hypothesis": "weak",
+        "sourceDirection": "weak",
+        "agrees": true
+      },
+      {
+        "id": "water-extremely-weak",
+        "otherVisibleSupportCount": 1,
+        "hypothesis": "weak",
+        "sourceDirection": "weak",
+        "agrees": true
+      }
+    ],
+    "counterexamples": [
+      "wood-too-strong",
+      "wood-too-weak",
+      "metal-too-weak"
+    ],
+    "limitation": "Extreme reference corpus only; agreement here would not validate a general strength classifier."
+  },
+  "scoringProposals": [
+    {
+      "id": "symbol-count",
+      "review": {
+        "ruleVersion": "source-case-veto-and-score-review-v1",
+        "status": "not-adoptable-from-reviewed-evidence",
+        "productionApproved": false,
+        "components": [
+          {
+            "ruleId": "stem-combination:갑기",
+            "proposedWeight": 10,
+            "adoptedWeight": null,
+            "sourceScope": "symbol-definition",
+            "sources": [
+              {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 23,
+                "sectionId": "stem-combinations"
+              }
+            ],
+            "blockers": [
+              "NO_REVIEWED_RELATIONSHIP_EFFECT",
+              "NO_REVIEWED_NUMERIC_WEIGHT"
+            ]
+          },
+          {
+            "ruleId": "branch-clash:자오",
+            "proposedWeight": -10,
+            "adoptedWeight": null,
+            "sourceScope": "symbol-definition",
+            "sources": [
+              {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 26,
+                "sectionId": "branch-clashes"
+              }
+            ],
+            "blockers": [
+              "NO_REVIEWED_RELATIONSHIP_EFFECT",
+              "NO_REVIEWED_NUMERIC_WEIGHT"
+            ]
+          }
+        ],
+        "blockers": [
+          "DUPLICATE_CONTRIBUTION_NEEDS_REVIEW",
+          "NO_REVIEWED_NUMERIC_WEIGHT",
+          "NO_REVIEWED_RELATIONSHIP_EFFECT"
+        ],
+        "score": null,
+        "normalizedCompatibility": null,
+        "mapRadius": null,
+        "policy": "Request fields cannot approve sources or weights; this pinned registry contains no adopted compatibility weights."
+      }
+    },
+    {
+      "id": "individual-strength-as-compatibility",
+      "review": {
+        "ruleVersion": "source-case-veto-and-score-review-v1",
+        "status": "not-adoptable-from-reviewed-evidence",
+        "productionApproved": false,
+        "components": [
+          {
+            "ruleId": "strength:wood-too-strong",
+            "proposedWeight": 5,
+            "adoptedWeight": null,
+            "sourceScope": "individual-reference-case",
+            "sources": [
+              {
+                "sourceId": "ditian-1947",
+                "pdfPage": 178,
+                "pdfSha256": "d6a7d1daf6513ce9fb9940ff8331b96804c10cdafbeac00d4d3d0a37229e1803",
+                "url": "https://upload.wikimedia.org/wikipedia/commons/d/db/SSID-11335994_%E6%BB%B4%E5%A4%A9%E9%AB%93%E9%97%A1%E5%BE%AE.pdf"
+              }
+            ],
+            "blockers": [
+              "INDIVIDUAL_JUDGMENT_NOT_PAIRWISE_SCORE",
+              "NO_REVIEWED_NUMERIC_WEIGHT"
+            ]
+          }
+        ],
+        "blockers": [
+          "INDIVIDUAL_JUDGMENT_NOT_PAIRWISE_SCORE",
+          "NO_REVIEWED_NUMERIC_WEIGHT"
+        ],
+        "score": null,
+        "normalizedCompatibility": null,
+        "mapRadius": null,
+        "policy": "Request fields cannot approve sources or weights; this pinned registry contains no adopted compatibility weights."
+      }
+    },
+    {
+      "id": "source-veto-as-compatibility",
+      "review": {
+        "ruleVersion": "source-case-veto-and-score-review-v1",
+        "status": "not-adoptable-from-reviewed-evidence",
+        "productionApproved": false,
+        "components": [
+          {
+            "ruleId": "veto:갑기",
+            "proposedWeight": -5,
+            "adoptedWeight": null,
+            "sourceScope": "individual-transformation-veto",
+            "sources": [
+              {
+                "sourceId": "sanming-1926",
+                "pdfPage": 128,
+                "pdfSha256": "c6eac6fca6411e45cb801f9b771aca6dd6a6d2dfb57ecc36ea5f42ecf1ac8bf9",
+                "url": "https://upload.wikimedia.org/wikipedia/commons/2/23/NLC416-13jh000156-94145_%E4%B8%89%E5%91%BD%E9%80%9A%E6%9C%83.pdf"
+              }
+            ],
+            "blockers": [
+              "INDIVIDUAL_JUDGMENT_NOT_PAIRWISE_SCORE",
+              "NO_REVIEWED_NUMERIC_WEIGHT"
+            ]
+          }
+        ],
+        "blockers": [
+          "COHORT_NORMALIZATION_MOVES_EXISTING_PEOPLE",
+          "INDIVIDUAL_JUDGMENT_NOT_PAIRWISE_SCORE",
+          "NO_REVIEWED_NUMERIC_WEIGHT"
+        ],
+        "score": null,
+        "normalizedCompatibility": null,
+        "mapRadius": null,
+        "policy": "Request fields cannot approve sources or weights; this pinned registry contains no adopted compatibility weights."
+      }
+    }
+  ],
+  "scaleProbes": {
+    "productionApproved": false,
+    "scope": "Synthetic scale probes, not scores for real people",
+    "cohortNormalization": {
+      "probe": 60,
+      "before": 0.5,
+      "afterAddingAnother": 0.75,
+      "status": "violates-fixed-existing-distance"
+    },
+    "duplicateContribution": {
+      "single": 10,
+      "duplicated": 20,
+      "status": "same-feature-double-counted"
+    },
+    "directionalLabels": {
+      "forward": "식신",
+      "reverse": "편인",
+      "status": "not-an-inherently-symmetric-effect"
+    },
+    "conclusion": "Engineering invariants and numeric provenance must both pass; neither replaces the other."
+  }
+}

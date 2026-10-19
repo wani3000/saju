@@ -1,0 +1,305 @@
+{
+  "review": "Codex visual collation 2026-10-19, public-domain selected passages. Punctuation/ellipsis added, no expert approval.",
+  "strengthCases": [
+    {
+      "id": "wood-too-strong",
+      "pillars": [
+        "갑진",
+        "정묘",
+        "갑자",
+        "무진"
+      ],
+      "element": "목",
+      "classification": "too-strong",
+      "sourceLabel": "木太旺",
+      "pdfPage": 178
+    },
+    {
+      "id": "wood-extremely-strong",
+      "pillars": [
+        "계묘",
+        "을묘",
+        "갑인",
+        "을해"
+      ],
+      "element": "목",
+      "classification": "extremely-strong",
+      "sourceLabel": "木旺極",
+      "pdfPage": 179
+    },
+    {
+      "id": "wood-too-weak",
+      "pillars": [
+        "을축",
+        "갑신",
+        "갑신",
+        "신미"
+      ],
+      "element": "목",
+      "classification": "too-weak",
+      "sourceLabel": "木太衰",
+      "pdfPage": 179
+    },
+    {
+      "id": "wood-extremely-weak",
+      "pillars": [
+        "기사",
+        "기사",
+        "을유",
+        "병술"
+      ],
+      "element": "목",
+      "classification": "extremely-weak",
+      "sourceLabel": "木衰極",
+      "pdfPage": 180
+    },
+    {
+      "id": "fire-too-strong",
+      "pillars": [
+        "을축",
+        "임오",
+        "병술",
+        "갑오"
+      ],
+      "element": "화",
+      "classification": "too-strong",
+      "sourceLabel": "火太旺",
+      "pdfPage": 180
+    },
+    {
+      "id": "fire-extremely-strong",
+      "pillars": [
+        "무인",
+        "정사",
+        "병인",
+        "갑오"
+      ],
+      "element": "화",
+      "classification": "extremely-strong",
+      "sourceLabel": "火旺極",
+      "pdfPage": 181
+    },
+    {
+      "id": "fire-too-weak",
+      "pillars": [
+        "신사",
+        "정유",
+        "정유",
+        "신축"
+      ],
+      "element": "화",
+      "classification": "too-weak",
+      "sourceLabel": "火太衰",
+      "pdfPage": 181
+    },
+    {
+      "id": "fire-extremely-weak",
+      "pillars": [
+        "신해",
+        "임진",
+        "병신",
+        "기해"
+      ],
+      "element": "화",
+      "classification": "extremely-weak",
+      "sourceLabel": "火衰極",
+      "pdfPage": 182
+    },
+    {
+      "id": "earth-too-strong",
+      "pillars": [
+        "무진",
+        "무오",
+        "무신",
+        "기미"
+      ],
+      "element": "토",
+      "classification": "too-strong",
+      "sourceLabel": "土太旺",
+      "pdfPage": 182
+    },
+    {
+      "id": "earth-extremely-strong",
+      "pillars": [
+        "무술",
+        "병진",
+        "기사",
+        "기사"
+      ],
+      "element": "토",
+      "classification": "extremely-strong",
+      "sourceLabel": "土旺極",
+      "pdfPage": 183
+    },
+    {
+      "id": "earth-too-weak",
+      "pillars": [
+        "임진",
+        "신해",
+        "무자",
+        "계축"
+      ],
+      "element": "토",
+      "classification": "too-weak",
+      "sourceLabel": "土太衰",
+      "pdfPage": 183
+    },
+    {
+      "id": "earth-extremely-weak",
+      "pillars": [
+        "계유",
+        "갑자",
+        "무자",
+        "임자"
+      ],
+      "element": "토",
+      "classification": "extremely-weak",
+      "sourceLabel": "土衰極",
+      "pdfPage": 184
+    },
+    {
+      "id": "metal-too-strong",
+      "pillars": [
+        "임신",
+        "기유",
+        "경자",
+        "경진"
+      ],
+      "element": "금",
+      "classification": "too-strong",
+      "sourceLabel": "金太旺",
+      "pdfPage": 184
+    },
+    {
+      "id": "metal-extremely-strong",
+      "pillars": [
+        "경신",
+        "을유",
+        "경술",
+        "경진"
+      ],
+      "element": "금",
+      "classification": "extremely-strong",
+      "sourceLabel": "金旺極",
+      "pdfPage": 185
+    },
+    {
+      "id": "metal-too-weak",
+      "pillars": [
+        "기묘",
+        "경오",
+        "신묘",
+        "갑오"
+      ],
+      "element": "금",
+      "classification": "too-weak",
+      "sourceLabel": "金太衰",
+      "pdfPage": 185
+    },
+    {
+      "id": "metal-extremely-weak",
+      "pillars": [
+        "기해",
+        "정묘",
+        "경인",
+        "병자"
+      ],
+      "element": "금",
+      "classification": "extremely-weak",
+      "sourceLabel": "金衰極",
+      "pdfPage": 186
+    },
+    {
+      "id": "water-too-strong",
+      "pillars": [
+        "임인",
+        "신해",
+        "임자",
+        "신축"
+      ],
+      "element": "수",
+      "classification": "too-strong",
+      "sourceLabel": "水太旺",
+      "pdfPage": 186
+    },
+    {
+      "id": "water-extremely-strong",
+      "pillars": [
+        "계해",
+        "계해",
+        "임자",
+        "경자"
+      ],
+      "element": "수",
+      "classification": "extremely-strong",
+      "sourceLabel": "水旺極",
+      "pdfPage": 187
+    },
+    {
+      "id": "water-too-weak",
+      "pillars": [
+        "병진",
+        "을미",
+        "임오",
+        "계묘"
+      ],
+      "element": "수",
+      "classification": "too-weak",
+      "sourceLabel": "水太衰",
+      "pdfPage": 187
+    },
+    {
+      "id": "water-extremely-weak",
+      "pillars": [
+        "계묘",
+        "무오",
+        "임인",
+        "병오"
+      ],
+      "element": "수",
+      "classification": "extremely-weak",
+      "sourceLabel": "水衰極",
+      "pdfPage": 188
+    }
+  ],
+  "sections": [
+    {
+      "id": "five-intervening-vetoes",
+      "sourceId": "sanming-1926",
+      "pdfPages": [
+        128,
+        129
+      ],
+      "text": "甲己化土……有戊字間之則不化，名曰妒合。乙庚化金……有甲字間之則不化，其次七月亦化。丙辛化水……有丁字不化，名曰妒合。丁壬化木……柱有丙字不化，名曰妒合。戊癸化火……柱有己字不化，名曰妒合。",
+      "notes": "甲己·乙庚 PDF128, 丙辛·丁壬·戊癸 PDF129. 원문 間之·柱有·有의 위치 범위를 통일하지 않는다. 갑기·을경은 두 합 위치 사이에서만 연구 적용, 병신·정임·무계는 천간 전체의 존재 관찰. 부재는 충분조건이 아니다."
+    },
+    {
+      "id": "twenty-strength-cases",
+      "sourceId": "ditian-1947",
+      "pdfPages": [
+        178,
+        179,
+        180,
+        181,
+        182,
+        183,
+        184,
+        185,
+        186,
+        187,
+        188
+      ],
+      "text": "以上二十造五行極旺極衰，不得中和之氣。……此兩句即余之太旺太衰也。……此兩句即余之極旺極衰也。",
+      "notes": "PDF188 저자의 총괄과 20개 명조 판어. 원문 길흉·의학·수명·재산·관직 서사는 수록하지 않는다. 중화 사례가 없는 기준 세트이며 일반 전체 분류기의 검증 자료로 충분하지 않다."
+    },
+    {
+      "id": "non-day-transformation-example",
+      "sourceId": "ditian-1947",
+      "pdfPages": [
+        188
+      ],
+      "text": "此造丙火當權，戊癸從化，燥乾壬水，水衰極者似火也。",
+      "notes": "명조 癸卯 戊午 壬寅 丙午. 戊癸는 연·월 천간이고 일간은 壬이다. 원문 사례의 합화 언급으로만 기록하며 일간 합화 알고리즘이나 두 사람 궁합으로 전용하지 않는다."
+    }
+  ]
+}
