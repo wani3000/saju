@@ -134,3 +134,13 @@ node research/validation/audit-source-judgments.mjs --check
 # 운영 미승인으로 종료 코드 2
 node research/validation/audit-source-judgments.mjs --release-check
 ```
+
+## 사령·강약 요소·합화 필요조건 통합 감수
+
+`seasonal-command.mjs`는 원문 12월 배분과 실제 절입 경과 구간을 연결한다. 오월 29일 합계·명목 30일 초과·시각 경계는 미확정 처리한다. `strength-transformation-review.mjs`는 사령·투출·통근·생극을 함께 반환하고 갑기 합의 확인된 필요조건을 검사한다. 종합 신강·신약과 합화 충분조건은 미승인이다. [적용 기준](../../docs/seasonal-strength-review.md), [12사례 초안](reports/seasonal-review-drafts.md).
+
+```sh
+node research/validation/audit-seasonal-review.mjs --check
+# 운영 미승인: 종료 코드 2
+node research/validation/audit-seasonal-review.mjs --release-check
+```

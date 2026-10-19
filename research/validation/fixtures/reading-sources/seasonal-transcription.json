@@ -1,0 +1,39 @@
+{
+  "sourceId": "yuanhai-1926-ntl-9900014379",
+  "review": "Codex visual collation, 2026-10-19. Original 1926 scan; selected public-domain passages, punctuation added. No expert approval.",
+  "sections": [
+    {
+      "id": "command-allocation",
+      "pdfPages": [
+        53,
+        54
+      ],
+      "heading": "又論節氣歌",
+      "text": "假如子上十日壬，中旬下旬方是癸。丑宮九日癸之餘，除卻三辛皆屬己。寅宮戊丙各七朝，十六甲木方堪器。卯宮陽木朝初旬，中下兩旬陰木是。三月九朝仍是乙，三日癸庫餘戊奇。初夏九日生庚金，十六丙火五戊時。午宮陽火屬上旬，丁火十日九日己。未宮九日丁火明，三朝是乙餘是己。孟秋己七戊三朝，三壬十七庚金備。酉宮還有十日庚，二十辛金屬旺地。戌宮九日辛金勝，三丁十八戊土具。亥宮七戊五日甲，餘皆壬旺君須記。",
+      "usage": "Preserve printed ordering and literal day counts. 旬=10 days and remainder to 30 are explicit research normalizations. 午 totals 29; do not silently change 九 to 十 or relocate a missing day. Not the static hidden-stem list."
+    },
+    {
+      "id": "transformation-general",
+      "pdfPages": [
+        167
+      ],
+      "text": "甲己化土，中正之合。……乙庚化金，仁義之合。……戊癸化火，無情之合。……丙辛化水。……丁壬化木。……月令生旺養庫臨官之地方化。陰陽得合，夫婦匹配，中和之氣而化；太過不及，皆不能化。……甲日見己字化土，己見甲亦然。",
+      "usage": "Pair/result naming and necessary review factors. The text does not supply numeric moderation thresholds; do not claim sufficiency from month alone."
+    },
+    {
+      "id": "jia-ji-month-and-rivals",
+      "pdfPages": [
+        171
+      ],
+      "text": "化象者，乃甲乙日生人，在辰戌丑未月，天干有一己字合甲字，謂之甲己化土。……己字中露出一甲字謂之爭合，有一個乙字露出謂之妒合，為破格不成。",
+      "usage": "Retain 甲乙 in transcription: do not silently correct this printed wording to 甲己. Restrict the tested pair to 甲己, supported by explicit pair names and 167's 甲日/己日 symmetry. Extra 甲 and visible 乙 are limited to this condition system, not a universal multiple-partner rule."
+    }
+  ],
+  "normalizations": [
+    "子/卯 initial 旬 means ten nominal days; remaining two 旬 mean twenty.",
+    "未 remainder 18 and 亥 remainder 18 use a nominal 30-day scheme, not real solar-term month duration.",
+    "午 10+10+9 is a source-duration conflict for the whole month. No inferred location for a missing day.",
+    "巳 keeps 庚9 丙16 戊5 as printed; 申 keeps 己7 戊3 壬3 庚17. Do not substitute a popular alternative table.",
+    "Runtime elapsed days are 86400-second durations since a research solar term; this is an explicit unapproved convention, not an assertion that the source specifies clock precision."
+  ]
+}
