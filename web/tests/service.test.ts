@@ -650,3 +650,14 @@ test("malformed stored charts cannot silently produce latest or generic copy and
   assert.equal((await s.state(db,id)).free,"available");
   assert.equal((await one(db,"SELECT state FROM generation_jobs WHERE comparison_id=$1",[c.id]))!.state,"failed");
 });
+
+test("pending source v1 results keep their copy, existing results do not get rebought under beta v2", async () => {
+  const id=await owner(),input=pair(),c=await s.createComparison(db,id,input,randomUUID(),true);
+  await db.query("UPDATE comparisons SET rule_version='source-observations-copy-v1' WHERE id=$1",[c.id]);
+  const {charts}=validatePair(input),expected=readingForVersion("source-observations-copy-v1",{charts,relation:input.other.relation});
+  await s.runJobs(db,id);const saved=await s.result(db,id,c.id);assert.deepEqual(saved.reading,expected);
+  assert.equal((await s.createComparison(db,id,input,randomUUID(),true)).id,c.id);
+  assert.equal((await s.state(db,id)).orders.length,0);
+  const link=await s.share(db,id,c.id,["가","나"]),card=await s.publicShare(db,link.path.split("/").at(-1)!);
+  assert.equal(card.reading.ruleVersion,"source-observations-copy-v1");assert.equal(card.reading.title,expected.basis!.sharedCopy.title);
+});

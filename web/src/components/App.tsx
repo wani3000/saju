@@ -389,7 +389,7 @@ export default function App() {
               <p className="hint center">
                 입력한 생일로 두 사람의 사주 기호를 비교해요.
                 <br />
-                검토판이며 궁합 점수는 제공하지 않아요.
+                비공개 베타이며 궁합 점수는 제공하지 않아요.
               </p>
             </>
           )}

@@ -1,0 +1,33 @@
+{
+  "review": "Codex visual collation 2026-10-19, selected public-domain passages; punctuation/ellipsis added; no expert interpretation approval.",
+  "cases": [
+    {
+      "id": "source-balanced-with-clash",
+      "pillars": [
+        "신사",
+        "갑오",
+        "계묘",
+        "계해"
+      ],
+      "sourceLabel": "中和純粹",
+      "pdfPage": 190,
+      "classification": "source-balanced-example",
+      "text": "癸卯日元，生於亥時，日主之氣已貫。……巳亥逢沖，去火存金。……體用不傷，中和純粹。",
+      "limits": "원문의 無土 표현을 다른 지장간 목록의 토 부재로 전용하지 않는다. 중화 사례에도 巳亥 충이 있으며 충=불량 관계나 단순 개수 균등을 도출하지 않는다. 길흉·성격·관직 서사는 제외."
+    },
+    {
+      "id": "seasonal-strength-counterexample",
+      "pillars": [
+        "기유",
+        "병자",
+        "계미",
+        "무오"
+      ],
+      "sourceLabel": "財殺太重",
+      "pdfPage": 191,
+      "classification": "not-a-generic-balanced-label",
+      "text": "此王觀察造，癸日子月，似乎旺相，不知財殺太重。",
+      "limits": "득령을 중화 또는 최종 신강으로 동일시하는 가설의 대조 사례다. 후속 도덕·인격 비난과 길흉 서사는 제외. 일반 신약 분류 문턱을 새로 정하지 않는다."
+    }
+  ]
+}

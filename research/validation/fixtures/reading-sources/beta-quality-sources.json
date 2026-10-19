@@ -1,0 +1,36 @@
+{
+  "sources": [
+    {
+      "sourceId": "ditian-1947",
+      "title": "滴天髓闡微",
+      "publicationDate": "1947",
+      "publisher": "上海大東書局",
+      "metadataUrl": "https://commons.wikimedia.org/wiki/File:SSID-11335994_滴天髓闡微.pdf",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/d/db/SSID-11335994_%E6%BB%B4%E5%A4%A9%E9%AB%93%E9%97%A1%E5%BE%AE.pdf",
+      "pdfSha256": "d6a7d1daf6513ce9fb9940ff8331b96804c10cdafbeac00d4d3d0a37229e1803",
+      "pdfBytes": 14751242,
+      "pages": [
+        {
+          "pdfPage": 189,
+          "printedPage": 47,
+          "file": "ditian-1947-page-189.png",
+          "sha256": "321601392229642c906427712996c1c5dd1e927961ff890b16a6387b3dd4e479"
+        },
+        {
+          "pdfPage": 190,
+          "printedPage": 48,
+          "file": "ditian-1947-page-190.png",
+          "sha256": "e619128585422b41d708b0ff705eba5c5a0103bd874747da50ae754e63f4cf47"
+        },
+        {
+          "pdfPage": 191,
+          "printedPage": 49,
+          "file": "ditian-1947-page-191.png",
+          "sha256": "77cb4bce99d4ec24380e972e8925b4af08ddc12a873ae1d128efffb0008e1bb2"
+        }
+      ]
+    }
+  ],
+  "transcriptionFile": "beta-moderation-cases.json",
+  "transcriptionSha256": "c63c75c87c3b5cce731d1a44802e2020ac4b7da5555678599c5d39abd3611124"
+}

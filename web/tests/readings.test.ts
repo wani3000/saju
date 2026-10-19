@@ -36,7 +36,7 @@ test("selected input-based release requires stored v5 charts and has no legacy f
   const {validatePair} = await import("../src/server/engine");
   const {samplePerson} = await import("../src/domain/model");
   const {charts} = validatePair({me:samplePerson(),other:samplePerson(true)});
-  assert.equal(currentReadingVersion,"source-observations-copy-v1");
+  assert.equal(currentReadingVersion,"source-observations-copy-v2");
   assert.throws(()=>readingForVersion(currentReadingVersion),{code:"READING_CONTEXT_REQUIRED"});
   assert.throws(()=>readingForVersion(currentReadingVersion,{charts:{},relation:"친구"}),{code:"READING_CONTEXT_INVALID"});
   const r=readingForVersion(currentReadingVersion,{charts,relation:"친구"});
@@ -60,4 +60,15 @@ test("public card projects a conversation-only snapshot and removes private inte
   for(const key of ["pdfSha256","ruleId","coverage","pillars","dayElements","source-symbol-comparison"])
     assert.ok(!JSON.stringify(card).includes(key),key);
   assert.deepEqual(r,before);
+});
+
+test("v1 source reading remains independent of the new private beta copy", async () => {
+  const {validatePair} = await import("../src/server/engine");
+  const {samplePerson} = await import("../src/domain/model");
+  const {charts}=validatePair({me:samplePerson(),other:samplePerson(true)}),context={charts,relation:"친구"};
+  const old=readingForVersion("source-observations-copy-v1",context),next=readingForVersion("source-observations-copy-v2",context);
+  assert.equal(old.ruleVersion,"source-observations-copy-v1");assert.equal(next.ruleVersion,"source-observations-copy-v2");
+  assert.notEqual(old.title,next.title);assert.deepEqual(old.basis!.dayElements,next.basis!.dayElements);
+  assert.deepEqual(old.basis!.commonFamilies,next.basis!.commonFamilies);
+  assert.equal(next.score,null);assert.equal(publicCard(["가","나"],next).reading.basis,undefined);
 });

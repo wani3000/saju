@@ -111,4 +111,6 @@ API·PG 반환·웹훅은 요청 본문을 읽는 중 16KiB를 넘으면 413, �
 
 ## 입력별 기호 풀이 후보 v1
 
-신규 결과는 `source-observations-copy-v1`을 사용한다. 서버에서 저장된 계산표를 읽어 일간 오행과 연·월·일의 공통 합충 기호를 설명한다. 대화 제안은 관계 유형별 편집 문구이며 점수는 null이다. 기존 예시 v1/v2와 저장된 결과는 보존한다. 공유에는 사주 기호·생일·검토 근거를 제외한 대화 주제만 담는다. [선정 정책·문구·후보 처리](../docs/selected-reading-release.md)를 따른다. 연구 모드 및 운영 차단은 유지한다.
+신규 결과는 `source-observations-copy-v2`를 사용하며 이전 기호 v1 결과는 보존한다. 서버에서 저장된 계산표를 읽어 일간 오행과 연·월·일의 공통 합충 기호를 설명한다. 대화 제안은 관계 유형별 편집 문구이며 점수는 null이다. 기존 예시 v1/v2와 저장된 결과는 보존한다. 공유에는 사주 기호·생일·검토 근거를 제외한 대화 주제만 담는다. [선정 정책·문구·후보 처리](../docs/selected-reading-release.md)를 따른다. 연구 모드 및 운영 차단은 유지한다.
+
+첫 베타는 로컬 비공개 기호 설명판이다. [범위·풀이 품질·유료 전환 조건](../docs/beta-scope-and-quality.md)과 [17사례 검토 초안](../research/validation/reports/beta-quality-drafts.md)을 따른다. `node research/validation/audit-beta-quality.mjs --check`는 저장소 루트에서 재현한다. 전문가·계산 승인과 실제 사용자 관찰을 통과한 것으로 표시하지 않는다.

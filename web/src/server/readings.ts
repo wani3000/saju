@@ -1,6 +1,6 @@
 import { z } from "zod";
 import catalog from "../../content/readings.json";
-import { buildSelectedReading, selectedReadingPolicy } from "../generated/selected-reading.mjs";
+import { buildSelectedReading, selectedReadingPolicy, buildBetaReading, privateBetaScope } from "../generated/selected-reading.mjs";
 import { AppError, type Reading } from "../domain/model";
 
 const text = z.string().trim().min(1).max(160);
@@ -31,15 +31,15 @@ export function validateReadingCatalog(input: unknown) {
   return parsed;
 }
 const checked = validateReadingCatalog(catalog);
-export const currentReadingVersion = selectedReadingPolicy.version;
+export const currentReadingVersion = privateBetaScope.readingVersion;
 export function readingForVersion(version: string, context?: {
   charts: Record<string, unknown>; relation: string;
 }): Reading {
-  if (version === selectedReadingPolicy.version) {
+  if (version === selectedReadingPolicy.version || version === privateBetaScope.readingVersion) {
     if (!context) throw new AppError("READING_CONTEXT_REQUIRED", 503,
       "저장된 계산을 확인할 수 없어요. 잠시 후 다시 시도해 주세요.");
     try {
-      return buildSelectedReading(context.charts.me, context.charts.other, context.relation);
+      return (version === privateBetaScope.readingVersion ? buildBetaReading : buildSelectedReading)(context.charts.me, context.charts.other, context.relation);
     } catch {
       throw new AppError("READING_CONTEXT_INVALID", 503,
         "저장된 계산을 확인할 수 없어요. 잠시 후 다시 시도해 주세요.");

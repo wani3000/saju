@@ -1,0 +1,38 @@
+{
+  "scopeVersion": "private-beta-scope-v1",
+  "readingVersion": "source-observations-copy-v2",
+  "phase": "local-private-beta-candidate",
+  "access": "local-review-until-access-control-verified",
+  "productionApproved": false,
+  "calendarApproval": "pending",
+  "domainInterpretationApproval": "pending",
+  "audience": "invited-adult-testers-after-access-control",
+  "externalPilotStarted": false,
+  "monetization": "free-beta-test-payments-only",
+  "realCharges": false,
+  "paidProduct": { "status": "deferred-not-cancelled", "firstPartnerFree": true, "additionalPartnerPriceKRW": 2900 },
+  "supportedResearchInput": { "region": "KR", "minimumYear": 1908, "maximumYear": 2026, "productionAccuracyApproved": false },
+  "comparisonPositions": ["year", "month", "day"],
+  "included": ["day-stem-element", "common-symbol-pairs", "source-and-coverage", "relationship-conversation-prompts", "private-result-storage", "conversation-only-sharing", "unranked-collection"],
+  "excluded": ["personality-prediction", "relationship-outcome", "strength-verdict", "transformation-verdict", "compatibility-score", "map-ranking", "live-payments", "public-release"],
+  "copy": {
+    "label": "사주 기호 이야기 · 비공개 베타",
+    "title": "두 사람의 사주 기호",
+    "notice": "태어난 해·달·날의 글자를 비교하는 베타예요. 기호의 뜻을 설명하며, 궁합 점수는 제공하지 않아요.",
+    "elementDefinition": "기준 오행은 태어난 날의 글자 한 개를 분류한 것이에요. 사주 전체의 오행 비율과는 달라요.",
+    "uncertainElement": "후보가 여러 개라 한 가지로 정하지 않았어요.",
+    "pairMeaning": "합·충은 전통 분류에서 두 글자의 짝을 부르는 이름이에요. 이 이름으로 성격이나 관계의 좋고 나쁨을 정하지 않아요.",
+    "noMatch": "지금 비교한 범위에서는 모든 후보에 공통인 합·충 짝이 없어요. 짝이 없다는 이유로 잘 맞거나 맞지 않는다고 정하지 않아요.",
+    "adviceNotice": "생일로 판단한 성격 설명이 아니라, 함께 이야기해 볼 대화 주제예요.",
+    "positionGuide": "연주는 입춘으로 나눈 해, 월주는 절기로 나눈 달, 일주는 태어난 날의 글자예요.",
+    "sharedTitle": "함께 이야기해 봐요",
+    "sharedStrength": "편안한 시간에 서로의 생각을 한 가지씩 나눠 보세요."
+  },
+  "review": {
+    "reviewer": "Codex",
+    "reviewedOn": "2026-10-19",
+    "scope": "출처 정의·예외·문장 명료성·기술 검증",
+    "expertInterpretationSignoff": "not-completed",
+    "userComprehensionStudy": "not-started"
+  }
+}
