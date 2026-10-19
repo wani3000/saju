@@ -1,0 +1,2428 @@
+{
+  "ruleVersion": "symbol-relations-research-v1",
+  "productionApproved": false,
+  "score": null,
+  "reviewScope": "Source definitions and software behavior only; no expert or relationship validity approval",
+  "exampleData": "Synthetic charts and dates, not user records. Some charts deliberately combine positions for isolated rule tests.",
+  "releaseBlockers": [
+    "Interpretation and policy review pending",
+    "Calendar engine approval pending",
+    "Cross-profile application and priorities not approved"
+  ],
+  "rules": [
+    {
+      "id": "stem-combination:갑기",
+      "family": "stem-combination",
+      "label": "천간 합",
+      "component": "stem",
+      "symbols": [
+        "갑",
+        "기"
+      ],
+      "hanja": "甲己",
+      "source": {
+        "id": "yuanhai-1926-ntl-9900014379",
+        "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+        "pdfPage": 23,
+        "sectionId": "stem-combinations"
+      },
+      "effect": "classify-symbol-pair-only",
+      "interpretation": null,
+      "weight": null
+    },
+    {
+      "id": "stem-combination:을경",
+      "family": "stem-combination",
+      "label": "천간 합",
+      "component": "stem",
+      "symbols": [
+        "을",
+        "경"
+      ],
+      "hanja": "乙庚",
+      "source": {
+        "id": "yuanhai-1926-ntl-9900014379",
+        "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+        "pdfPage": 23,
+        "sectionId": "stem-combinations"
+      },
+      "effect": "classify-symbol-pair-only",
+      "interpretation": null,
+      "weight": null
+    },
+    {
+      "id": "stem-combination:병신",
+      "family": "stem-combination",
+      "label": "천간 합",
+      "component": "stem",
+      "symbols": [
+        "병",
+        "신"
+      ],
+      "hanja": "丙辛",
+      "source": {
+        "id": "yuanhai-1926-ntl-9900014379",
+        "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+        "pdfPage": 23,
+        "sectionId": "stem-combinations"
+      },
+      "effect": "classify-symbol-pair-only",
+      "interpretation": null,
+      "weight": null
+    },
+    {
+      "id": "stem-combination:정임",
+      "family": "stem-combination",
+      "label": "천간 합",
+      "component": "stem",
+      "symbols": [
+        "정",
+        "임"
+      ],
+      "hanja": "丁壬",
+      "source": {
+        "id": "yuanhai-1926-ntl-9900014379",
+        "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+        "pdfPage": 23,
+        "sectionId": "stem-combinations"
+      },
+      "effect": "classify-symbol-pair-only",
+      "interpretation": null,
+      "weight": null
+    },
+    {
+      "id": "stem-combination:무계",
+      "family": "stem-combination",
+      "label": "천간 합",
+      "component": "stem",
+      "symbols": [
+        "무",
+        "계"
+      ],
+      "hanja": "戊癸",
+      "source": {
+        "id": "yuanhai-1926-ntl-9900014379",
+        "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+        "pdfPage": 23,
+        "sectionId": "stem-combinations"
+      },
+      "effect": "classify-symbol-pair-only",
+      "interpretation": null,
+      "weight": null
+    },
+    {
+      "id": "branch-combination:자축",
+      "family": "branch-combination",
+      "label": "지지 육합",
+      "component": "branch",
+      "symbols": [
+        "자",
+        "축"
+      ],
+      "hanja": "子丑",
+      "source": {
+        "id": "yuanhai-1926-ntl-9900014379",
+        "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+        "pdfPage": 25,
+        "sectionId": "branch-combinations"
+      },
+      "effect": "classify-symbol-pair-only",
+      "interpretation": null,
+      "weight": null
+    },
+    {
+      "id": "branch-combination:인해",
+      "family": "branch-combination",
+      "label": "지지 육합",
+      "component": "branch",
+      "symbols": [
+        "인",
+        "해"
+      ],
+      "hanja": "寅亥",
+      "source": {
+        "id": "yuanhai-1926-ntl-9900014379",
+        "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+        "pdfPage": 25,
+        "sectionId": "branch-combinations"
+      },
+      "effect": "classify-symbol-pair-only",
+      "interpretation": null,
+      "weight": null
+    },
+    {
+      "id": "branch-combination:묘술",
+      "family": "branch-combination",
+      "label": "지지 육합",
+      "component": "branch",
+      "symbols": [
+        "묘",
+        "술"
+      ],
+      "hanja": "卯戌",
+      "source": {
+        "id": "yuanhai-1926-ntl-9900014379",
+        "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+        "pdfPage": 25,
+        "sectionId": "branch-combinations"
+      },
+      "effect": "classify-symbol-pair-only",
+      "interpretation": null,
+      "weight": null
+    },
+    {
+      "id": "branch-combination:진유",
+      "family": "branch-combination",
+      "label": "지지 육합",
+      "component": "branch",
+      "symbols": [
+        "진",
+        "유"
+      ],
+      "hanja": "辰酉",
+      "source": {
+        "id": "yuanhai-1926-ntl-9900014379",
+        "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+        "pdfPage": 25,
+        "sectionId": "branch-combinations"
+      },
+      "effect": "classify-symbol-pair-only",
+      "interpretation": null,
+      "weight": null
+    },
+    {
+      "id": "branch-combination:사신",
+      "family": "branch-combination",
+      "label": "지지 육합",
+      "component": "branch",
+      "symbols": [
+        "사",
+        "신"
+      ],
+      "hanja": "巳申",
+      "source": {
+        "id": "yuanhai-1926-ntl-9900014379",
+        "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+        "pdfPage": 25,
+        "sectionId": "branch-combinations"
+      },
+      "effect": "classify-symbol-pair-only",
+      "interpretation": null,
+      "weight": null
+    },
+    {
+      "id": "branch-combination:오미",
+      "family": "branch-combination",
+      "label": "지지 육합",
+      "component": "branch",
+      "symbols": [
+        "오",
+        "미"
+      ],
+      "hanja": "午未",
+      "source": {
+        "id": "yuanhai-1926-ntl-9900014379",
+        "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+        "pdfPage": 25,
+        "sectionId": "branch-combinations"
+      },
+      "effect": "classify-symbol-pair-only",
+      "interpretation": null,
+      "weight": null
+    },
+    {
+      "id": "branch-clash:자오",
+      "family": "branch-clash",
+      "label": "지지 육충",
+      "component": "branch",
+      "symbols": [
+        "자",
+        "오"
+      ],
+      "hanja": "子午",
+      "source": {
+        "id": "yuanhai-1926-ntl-9900014379",
+        "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+        "pdfPage": 26,
+        "sectionId": "branch-clashes"
+      },
+      "effect": "classify-symbol-pair-only",
+      "interpretation": null,
+      "weight": null
+    },
+    {
+      "id": "branch-clash:축미",
+      "family": "branch-clash",
+      "label": "지지 육충",
+      "component": "branch",
+      "symbols": [
+        "축",
+        "미"
+      ],
+      "hanja": "丑未",
+      "source": {
+        "id": "yuanhai-1926-ntl-9900014379",
+        "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+        "pdfPage": 26,
+        "sectionId": "branch-clashes"
+      },
+      "effect": "classify-symbol-pair-only",
+      "interpretation": null,
+      "weight": null
+    },
+    {
+      "id": "branch-clash:인신",
+      "family": "branch-clash",
+      "label": "지지 육충",
+      "component": "branch",
+      "symbols": [
+        "인",
+        "신"
+      ],
+      "hanja": "寅申",
+      "source": {
+        "id": "yuanhai-1926-ntl-9900014379",
+        "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+        "pdfPage": 26,
+        "sectionId": "branch-clashes"
+      },
+      "effect": "classify-symbol-pair-only",
+      "interpretation": null,
+      "weight": null
+    },
+    {
+      "id": "branch-clash:묘유",
+      "family": "branch-clash",
+      "label": "지지 육충",
+      "component": "branch",
+      "symbols": [
+        "묘",
+        "유"
+      ],
+      "hanja": "卯酉",
+      "source": {
+        "id": "yuanhai-1926-ntl-9900014379",
+        "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+        "pdfPage": 26,
+        "sectionId": "branch-clashes"
+      },
+      "effect": "classify-symbol-pair-only",
+      "interpretation": null,
+      "weight": null
+    },
+    {
+      "id": "branch-clash:진술",
+      "family": "branch-clash",
+      "label": "지지 육충",
+      "component": "branch",
+      "symbols": [
+        "진",
+        "술"
+      ],
+      "hanja": "辰戌",
+      "source": {
+        "id": "yuanhai-1926-ntl-9900014379",
+        "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+        "pdfPage": 26,
+        "sectionId": "branch-clashes"
+      },
+      "effect": "classify-symbol-pair-only",
+      "interpretation": null,
+      "weight": null
+    },
+    {
+      "id": "branch-clash:사해",
+      "family": "branch-clash",
+      "label": "지지 육충",
+      "component": "branch",
+      "symbols": [
+        "사",
+        "해"
+      ],
+      "hanja": "巳亥",
+      "source": {
+        "id": "yuanhai-1926-ntl-9900014379",
+        "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+        "pdfPage": 26,
+        "sectionId": "branch-clashes"
+      },
+      "effect": "classify-symbol-pair-only",
+      "interpretation": null,
+      "weight": null
+    }
+  ],
+  "cases": [
+    {
+      "id": "cross-profile-pairs",
+      "analysis": {
+        "ruleVersion": "symbol-relations-research-v1",
+        "engineVersion": "research-civil-midnight-v5",
+        "scope": "between-profiles",
+        "productionApproved": false,
+        "definitionReview": {
+          "status": "source-collated",
+          "reviewer": "Codex",
+          "date": "2026-10-19"
+        },
+        "interpretationReview": {
+          "status": "pending"
+        },
+        "score": null,
+        "interpretation": null,
+        "coverage": [
+          {
+            "side": "a",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          },
+          {
+            "side": "b",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "stemElements": [
+          {
+            "side": "a",
+            "position": "year",
+            "alternatives": [
+              {
+                "symbol": "갑",
+                "element": "목"
+              }
+            ],
+            "confirmedElement": "목",
+            "source": {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 23,
+              "sectionId": "stem-elements"
+            }
+          },
+          {
+            "side": "a",
+            "position": "month",
+            "alternatives": [
+              {
+                "symbol": "병",
+                "element": "화"
+              }
+            ],
+            "confirmedElement": "화",
+            "source": {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 23,
+              "sectionId": "stem-elements"
+            }
+          },
+          {
+            "side": "a",
+            "position": "day",
+            "alternatives": [
+              {
+                "symbol": "무",
+                "element": "토"
+              }
+            ],
+            "confirmedElement": "토",
+            "source": {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 23,
+              "sectionId": "stem-elements"
+            }
+          },
+          {
+            "side": "a",
+            "position": "hour",
+            "alternatives": [
+              {
+                "symbol": "경",
+                "element": "금"
+              }
+            ],
+            "confirmedElement": "금",
+            "source": {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 23,
+              "sectionId": "stem-elements"
+            }
+          },
+          {
+            "side": "b",
+            "position": "year",
+            "alternatives": [
+              {
+                "symbol": "기",
+                "element": "토"
+              }
+            ],
+            "confirmedElement": "토",
+            "source": {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 23,
+              "sectionId": "stem-elements"
+            }
+          },
+          {
+            "side": "b",
+            "position": "month",
+            "alternatives": [
+              {
+                "symbol": "신",
+                "element": "금"
+              }
+            ],
+            "confirmedElement": "금",
+            "source": {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 23,
+              "sectionId": "stem-elements"
+            }
+          },
+          {
+            "side": "b",
+            "position": "day",
+            "alternatives": [
+              {
+                "symbol": "계",
+                "element": "수"
+              }
+            ],
+            "confirmedElement": "수",
+            "source": {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 23,
+              "sectionId": "stem-elements"
+            }
+          },
+          {
+            "side": "b",
+            "position": "hour",
+            "alternatives": [
+              {
+                "symbol": "을",
+                "element": "목"
+              }
+            ],
+            "confirmedElement": "목",
+            "source": {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 23,
+              "sectionId": "stem-elements"
+            }
+          }
+        ],
+        "findings": [
+          {
+            "ruleId": "stem-combination:갑기",
+            "family": "stem-combination",
+            "label": "천간 합",
+            "endpoints": [
+              {
+                "side": "a",
+                "position": "year"
+              },
+              {
+                "side": "b",
+                "position": "year"
+              }
+            ],
+            "certainty": "all-candidates",
+            "jointFeasibility": "universal-over-supplied-candidates",
+            "witnesses": [
+              [
+                "갑",
+                "기"
+              ]
+            ],
+            "source": {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 23,
+              "sectionId": "stem-combinations"
+            },
+            "interpretation": null,
+            "weight": null
+          },
+          {
+            "ruleId": "branch-combination:자축",
+            "family": "branch-combination",
+            "label": "지지 육합",
+            "endpoints": [
+              {
+                "side": "a",
+                "position": "year"
+              },
+              {
+                "side": "b",
+                "position": "year"
+              }
+            ],
+            "certainty": "all-candidates",
+            "jointFeasibility": "universal-over-supplied-candidates",
+            "witnesses": [
+              [
+                "자",
+                "축"
+              ]
+            ],
+            "source": {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 25,
+              "sectionId": "branch-combinations"
+            },
+            "interpretation": null,
+            "weight": null
+          },
+          {
+            "ruleId": "stem-combination:병신",
+            "family": "stem-combination",
+            "label": "천간 합",
+            "endpoints": [
+              {
+                "side": "a",
+                "position": "month"
+              },
+              {
+                "side": "b",
+                "position": "month"
+              }
+            ],
+            "certainty": "all-candidates",
+            "jointFeasibility": "universal-over-supplied-candidates",
+            "witnesses": [
+              [
+                "병",
+                "신"
+              ]
+            ],
+            "source": {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 23,
+              "sectionId": "stem-combinations"
+            },
+            "interpretation": null,
+            "weight": null
+          },
+          {
+            "ruleId": "branch-combination:인해",
+            "family": "branch-combination",
+            "label": "지지 육합",
+            "endpoints": [
+              {
+                "side": "a",
+                "position": "month"
+              },
+              {
+                "side": "b",
+                "position": "month"
+              }
+            ],
+            "certainty": "all-candidates",
+            "jointFeasibility": "universal-over-supplied-candidates",
+            "witnesses": [
+              [
+                "인",
+                "해"
+              ]
+            ],
+            "source": {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 25,
+              "sectionId": "branch-combinations"
+            },
+            "interpretation": null,
+            "weight": null
+          },
+          {
+            "ruleId": "stem-combination:무계",
+            "family": "stem-combination",
+            "label": "천간 합",
+            "endpoints": [
+              {
+                "side": "a",
+                "position": "day"
+              },
+              {
+                "side": "b",
+                "position": "day"
+              }
+            ],
+            "certainty": "all-candidates",
+            "jointFeasibility": "universal-over-supplied-candidates",
+            "witnesses": [
+              [
+                "무",
+                "계"
+              ]
+            ],
+            "source": {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 23,
+              "sectionId": "stem-combinations"
+            },
+            "interpretation": null,
+            "weight": null
+          },
+          {
+            "ruleId": "branch-combination:진유",
+            "family": "branch-combination",
+            "label": "지지 육합",
+            "endpoints": [
+              {
+                "side": "a",
+                "position": "day"
+              },
+              {
+                "side": "b",
+                "position": "day"
+              }
+            ],
+            "certainty": "all-candidates",
+            "jointFeasibility": "universal-over-supplied-candidates",
+            "witnesses": [
+              [
+                "진",
+                "유"
+              ]
+            ],
+            "source": {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 25,
+              "sectionId": "branch-combinations"
+            },
+            "interpretation": null,
+            "weight": null
+          },
+          {
+            "ruleId": "stem-combination:을경",
+            "family": "stem-combination",
+            "label": "천간 합",
+            "endpoints": [
+              {
+                "side": "a",
+                "position": "hour"
+              },
+              {
+                "side": "b",
+                "position": "hour"
+              }
+            ],
+            "certainty": "all-candidates",
+            "jointFeasibility": "universal-over-supplied-candidates",
+            "witnesses": [
+              [
+                "경",
+                "을"
+              ]
+            ],
+            "source": {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 23,
+              "sectionId": "stem-combinations"
+            },
+            "interpretation": null,
+            "weight": null
+          },
+          {
+            "ruleId": "branch-combination:오미",
+            "family": "branch-combination",
+            "label": "지지 육합",
+            "endpoints": [
+              {
+                "side": "a",
+                "position": "hour"
+              },
+              {
+                "side": "b",
+                "position": "hour"
+              }
+            ],
+            "certainty": "all-candidates",
+            "jointFeasibility": "universal-over-supplied-candidates",
+            "witnesses": [
+              [
+                "오",
+                "미"
+              ]
+            ],
+            "source": {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 25,
+              "sectionId": "branch-combinations"
+            },
+            "interpretation": null,
+            "weight": null
+          }
+        ],
+        "limitations": [
+          "Symbol definitions only; no 合化, strength, favorable element, personality or relationship outcome inferred.",
+          "Candidate-dependent findings are review material, not confirmed reading statements or probabilities.",
+          "All-candidates means agreement within supplied research candidates, not validated astronomical accuracy.",
+          "Visible stem elements are not whole-chart proportions; hidden stems, season and weights are not analyzed.",
+          "All position pairs are inventoried without a priority rule. Coexisting 合/沖 are not cancelled or scored.",
+          "Cross-profile application is a research comparison choice, not a compatibility rule approved by the cited text."
+        ]
+      },
+      "reviewStatements": [
+        {
+          "ruleId": "stem-combination:갑기",
+          "source": {
+            "id": "yuanhai-1926-ntl-9900014379",
+            "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+            "pdfPage": 23,
+            "sectionId": "stem-combinations"
+          },
+          "draft": "a의 연주와 b의 연주에서 갑·기(甲己)가 확인되어, 선택한 규칙표의 천간 합에 해당합니다.",
+          "status": "editorial-draft-not-approved",
+          "limitation": "이 분류만으로 합화 성립이나 실제 관계의 좋고 나쁨을 판단하지 않습니다."
+        },
+        {
+          "ruleId": "branch-combination:자축",
+          "source": {
+            "id": "yuanhai-1926-ntl-9900014379",
+            "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+            "pdfPage": 25,
+            "sectionId": "branch-combinations"
+          },
+          "draft": "a의 연주와 b의 연주에서 자·축(子丑)가 확인되어, 선택한 규칙표의 지지 육합에 해당합니다.",
+          "status": "editorial-draft-not-approved",
+          "limitation": "이 분류만으로 합화 성립이나 실제 관계의 좋고 나쁨을 판단하지 않습니다."
+        },
+        {
+          "ruleId": "stem-combination:병신",
+          "source": {
+            "id": "yuanhai-1926-ntl-9900014379",
+            "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+            "pdfPage": 23,
+            "sectionId": "stem-combinations"
+          },
+          "draft": "a의 월주와 b의 월주에서 병·신(丙辛)가 확인되어, 선택한 규칙표의 천간 합에 해당합니다.",
+          "status": "editorial-draft-not-approved",
+          "limitation": "이 분류만으로 합화 성립이나 실제 관계의 좋고 나쁨을 판단하지 않습니다."
+        },
+        {
+          "ruleId": "branch-combination:인해",
+          "source": {
+            "id": "yuanhai-1926-ntl-9900014379",
+            "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+            "pdfPage": 25,
+            "sectionId": "branch-combinations"
+          },
+          "draft": "a의 월주와 b의 월주에서 인·해(寅亥)가 확인되어, 선택한 규칙표의 지지 육합에 해당합니다.",
+          "status": "editorial-draft-not-approved",
+          "limitation": "이 분류만으로 합화 성립이나 실제 관계의 좋고 나쁨을 판단하지 않습니다."
+        },
+        {
+          "ruleId": "stem-combination:무계",
+          "source": {
+            "id": "yuanhai-1926-ntl-9900014379",
+            "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+            "pdfPage": 23,
+            "sectionId": "stem-combinations"
+          },
+          "draft": "a의 일주와 b의 일주에서 무·계(戊癸)가 확인되어, 선택한 규칙표의 천간 합에 해당합니다.",
+          "status": "editorial-draft-not-approved",
+          "limitation": "이 분류만으로 합화 성립이나 실제 관계의 좋고 나쁨을 판단하지 않습니다."
+        },
+        {
+          "ruleId": "branch-combination:진유",
+          "source": {
+            "id": "yuanhai-1926-ntl-9900014379",
+            "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+            "pdfPage": 25,
+            "sectionId": "branch-combinations"
+          },
+          "draft": "a의 일주와 b의 일주에서 진·유(辰酉)가 확인되어, 선택한 규칙표의 지지 육합에 해당합니다.",
+          "status": "editorial-draft-not-approved",
+          "limitation": "이 분류만으로 합화 성립이나 실제 관계의 좋고 나쁨을 판단하지 않습니다."
+        },
+        {
+          "ruleId": "stem-combination:을경",
+          "source": {
+            "id": "yuanhai-1926-ntl-9900014379",
+            "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+            "pdfPage": 23,
+            "sectionId": "stem-combinations"
+          },
+          "draft": "a의 시주와 b의 시주에서 을·경(乙庚)가 확인되어, 선택한 규칙표의 천간 합에 해당합니다.",
+          "status": "editorial-draft-not-approved",
+          "limitation": "이 분류만으로 합화 성립이나 실제 관계의 좋고 나쁨을 판단하지 않습니다."
+        },
+        {
+          "ruleId": "branch-combination:오미",
+          "source": {
+            "id": "yuanhai-1926-ntl-9900014379",
+            "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+            "pdfPage": 25,
+            "sectionId": "branch-combinations"
+          },
+          "draft": "a의 시주와 b의 시주에서 오·미(午未)가 확인되어, 선택한 규칙표의 지지 육합에 해당합니다.",
+          "status": "editorial-draft-not-approved",
+          "limitation": "이 분류만으로 합화 성립이나 실제 관계의 좋고 나쁨을 판단하지 않습니다."
+        }
+      ]
+    },
+    {
+      "id": "coexisting-combinations-and-clashes",
+      "analysis": {
+        "ruleVersion": "symbol-relations-research-v1",
+        "engineVersion": "research-civil-midnight-v5",
+        "scope": "within-profile",
+        "productionApproved": false,
+        "definitionReview": {
+          "status": "source-collated",
+          "reviewer": "Codex",
+          "date": "2026-10-19"
+        },
+        "interpretationReview": {
+          "status": "pending"
+        },
+        "score": null,
+        "interpretation": null,
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "stemElements": [
+          {
+            "side": "self",
+            "position": "year",
+            "alternatives": [
+              {
+                "symbol": "갑",
+                "element": "목"
+              }
+            ],
+            "confirmedElement": "목",
+            "source": {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 23,
+              "sectionId": "stem-elements"
+            }
+          },
+          {
+            "side": "self",
+            "position": "month",
+            "alternatives": [
+              {
+                "symbol": "병",
+                "element": "화"
+              }
+            ],
+            "confirmedElement": "화",
+            "source": {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 23,
+              "sectionId": "stem-elements"
+            }
+          },
+          {
+            "side": "self",
+            "position": "day",
+            "alternatives": [
+              {
+                "symbol": "기",
+                "element": "토"
+              }
+            ],
+            "confirmedElement": "토",
+            "source": {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 23,
+              "sectionId": "stem-elements"
+            }
+          },
+          {
+            "side": "self",
+            "position": "hour",
+            "alternatives": [
+              {
+                "symbol": "을",
+                "element": "목"
+              }
+            ],
+            "confirmedElement": "목",
+            "source": {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 23,
+              "sectionId": "stem-elements"
+            }
+          }
+        ],
+        "findings": [
+          {
+            "ruleId": "branch-clash:자오",
+            "family": "branch-clash",
+            "label": "지지 육충",
+            "endpoints": [
+              {
+                "side": "self",
+                "position": "year"
+              },
+              {
+                "side": "self",
+                "position": "month"
+              }
+            ],
+            "certainty": "all-candidates",
+            "jointFeasibility": "universal-over-supplied-candidates",
+            "witnesses": [
+              [
+                "자",
+                "오"
+              ]
+            ],
+            "source": {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 26,
+              "sectionId": "branch-clashes"
+            },
+            "interpretation": null,
+            "weight": null
+          },
+          {
+            "ruleId": "stem-combination:갑기",
+            "family": "stem-combination",
+            "label": "천간 합",
+            "endpoints": [
+              {
+                "side": "self",
+                "position": "year"
+              },
+              {
+                "side": "self",
+                "position": "day"
+              }
+            ],
+            "certainty": "all-candidates",
+            "jointFeasibility": "universal-over-supplied-candidates",
+            "witnesses": [
+              [
+                "갑",
+                "기"
+              ]
+            ],
+            "source": {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 23,
+              "sectionId": "stem-combinations"
+            },
+            "interpretation": null,
+            "weight": null
+          },
+          {
+            "ruleId": "branch-combination:자축",
+            "family": "branch-combination",
+            "label": "지지 육합",
+            "endpoints": [
+              {
+                "side": "self",
+                "position": "year"
+              },
+              {
+                "side": "self",
+                "position": "day"
+              }
+            ],
+            "certainty": "all-candidates",
+            "jointFeasibility": "universal-over-supplied-candidates",
+            "witnesses": [
+              [
+                "자",
+                "축"
+              ]
+            ],
+            "source": {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 25,
+              "sectionId": "branch-combinations"
+            },
+            "interpretation": null,
+            "weight": null
+          },
+          {
+            "ruleId": "branch-combination:오미",
+            "family": "branch-combination",
+            "label": "지지 육합",
+            "endpoints": [
+              {
+                "side": "self",
+                "position": "month"
+              },
+              {
+                "side": "self",
+                "position": "hour"
+              }
+            ],
+            "certainty": "all-candidates",
+            "jointFeasibility": "universal-over-supplied-candidates",
+            "witnesses": [
+              [
+                "오",
+                "미"
+              ]
+            ],
+            "source": {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 25,
+              "sectionId": "branch-combinations"
+            },
+            "interpretation": null,
+            "weight": null
+          },
+          {
+            "ruleId": "branch-clash:축미",
+            "family": "branch-clash",
+            "label": "지지 육충",
+            "endpoints": [
+              {
+                "side": "self",
+                "position": "day"
+              },
+              {
+                "side": "self",
+                "position": "hour"
+              }
+            ],
+            "certainty": "all-candidates",
+            "jointFeasibility": "universal-over-supplied-candidates",
+            "witnesses": [
+              [
+                "축",
+                "미"
+              ]
+            ],
+            "source": {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 26,
+              "sectionId": "branch-clashes"
+            },
+            "interpretation": null,
+            "weight": null
+          }
+        ],
+        "limitations": [
+          "Symbol definitions only; no 合化, strength, favorable element, personality or relationship outcome inferred.",
+          "Candidate-dependent findings are review material, not confirmed reading statements or probabilities.",
+          "All-candidates means agreement within supplied research candidates, not validated astronomical accuracy.",
+          "Visible stem elements are not whole-chart proportions; hidden stems, season and weights are not analyzed.",
+          "All position pairs are inventoried without a priority rule. Coexisting 合/沖 are not cancelled or scored."
+        ]
+      },
+      "reviewStatements": [
+        {
+          "ruleId": "branch-clash:자오",
+          "source": {
+            "id": "yuanhai-1926-ntl-9900014379",
+            "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+            "pdfPage": 26,
+            "sectionId": "branch-clashes"
+          },
+          "draft": "self의 연주와 self의 월주에서 자·오(子午)가 확인되어, 선택한 규칙표의 지지 육충에 해당합니다.",
+          "status": "editorial-draft-not-approved",
+          "limitation": "이 분류만으로 합화 성립이나 실제 관계의 좋고 나쁨을 판단하지 않습니다."
+        },
+        {
+          "ruleId": "stem-combination:갑기",
+          "source": {
+            "id": "yuanhai-1926-ntl-9900014379",
+            "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+            "pdfPage": 23,
+            "sectionId": "stem-combinations"
+          },
+          "draft": "self의 연주와 self의 일주에서 갑·기(甲己)가 확인되어, 선택한 규칙표의 천간 합에 해당합니다.",
+          "status": "editorial-draft-not-approved",
+          "limitation": "이 분류만으로 합화 성립이나 실제 관계의 좋고 나쁨을 판단하지 않습니다."
+        },
+        {
+          "ruleId": "branch-combination:자축",
+          "source": {
+            "id": "yuanhai-1926-ntl-9900014379",
+            "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+            "pdfPage": 25,
+            "sectionId": "branch-combinations"
+          },
+          "draft": "self의 연주와 self의 일주에서 자·축(子丑)가 확인되어, 선택한 규칙표의 지지 육합에 해당합니다.",
+          "status": "editorial-draft-not-approved",
+          "limitation": "이 분류만으로 합화 성립이나 실제 관계의 좋고 나쁨을 판단하지 않습니다."
+        },
+        {
+          "ruleId": "branch-combination:오미",
+          "source": {
+            "id": "yuanhai-1926-ntl-9900014379",
+            "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+            "pdfPage": 25,
+            "sectionId": "branch-combinations"
+          },
+          "draft": "self의 월주와 self의 시주에서 오·미(午未)가 확인되어, 선택한 규칙표의 지지 육합에 해당합니다.",
+          "status": "editorial-draft-not-approved",
+          "limitation": "이 분류만으로 합화 성립이나 실제 관계의 좋고 나쁨을 판단하지 않습니다."
+        },
+        {
+          "ruleId": "branch-clash:축미",
+          "source": {
+            "id": "yuanhai-1926-ntl-9900014379",
+            "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+            "pdfPage": 26,
+            "sectionId": "branch-clashes"
+          },
+          "draft": "self의 일주와 self의 시주에서 축·미(丑未)가 확인되어, 선택한 규칙표의 지지 육충에 해당합니다.",
+          "status": "editorial-draft-not-approved",
+          "limitation": "이 분류만으로 합화 성립이나 실제 관계의 좋고 나쁨을 판단하지 않습니다."
+        }
+      ]
+    },
+    {
+      "id": "candidate-dependent-pair",
+      "analysis": {
+        "ruleVersion": "symbol-relations-research-v1",
+        "engineVersion": "research-civil-midnight-v5",
+        "scope": "between-profiles",
+        "productionApproved": false,
+        "definitionReview": {
+          "status": "source-collated",
+          "reviewer": "Codex",
+          "date": "2026-10-19"
+        },
+        "interpretationReview": {
+          "status": "pending"
+        },
+        "score": null,
+        "interpretation": null,
+        "coverage": [
+          {
+            "side": "a",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          },
+          {
+            "side": "b",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "stemElements": [
+          {
+            "side": "a",
+            "position": "year",
+            "alternatives": [
+              {
+                "symbol": "갑",
+                "element": "목"
+              },
+              {
+                "symbol": "을",
+                "element": "목"
+              }
+            ],
+            "confirmedElement": "목",
+            "source": {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 23,
+              "sectionId": "stem-elements"
+            }
+          },
+          {
+            "side": "a",
+            "position": "month",
+            "alternatives": [
+              {
+                "symbol": "병",
+                "element": "화"
+              }
+            ],
+            "confirmedElement": "화",
+            "source": {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 23,
+              "sectionId": "stem-elements"
+            }
+          },
+          {
+            "side": "a",
+            "position": "day",
+            "alternatives": [
+              {
+                "symbol": "무",
+                "element": "토"
+              }
+            ],
+            "confirmedElement": "토",
+            "source": {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 23,
+              "sectionId": "stem-elements"
+            }
+          },
+          {
+            "side": "a",
+            "position": "hour",
+            "alternatives": [
+              {
+                "symbol": "경",
+                "element": "금"
+              }
+            ],
+            "confirmedElement": "금",
+            "source": {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 23,
+              "sectionId": "stem-elements"
+            }
+          },
+          {
+            "side": "b",
+            "position": "year",
+            "alternatives": [
+              {
+                "symbol": "기",
+                "element": "토"
+              }
+            ],
+            "confirmedElement": "토",
+            "source": {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 23,
+              "sectionId": "stem-elements"
+            }
+          },
+          {
+            "side": "b",
+            "position": "month",
+            "alternatives": [
+              {
+                "symbol": "신",
+                "element": "금"
+              }
+            ],
+            "confirmedElement": "금",
+            "source": {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 23,
+              "sectionId": "stem-elements"
+            }
+          },
+          {
+            "side": "b",
+            "position": "day",
+            "alternatives": [
+              {
+                "symbol": "계",
+                "element": "수"
+              }
+            ],
+            "confirmedElement": "수",
+            "source": {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 23,
+              "sectionId": "stem-elements"
+            }
+          },
+          {
+            "side": "b",
+            "position": "hour",
+            "alternatives": [
+              {
+                "symbol": "을",
+                "element": "목"
+              }
+            ],
+            "confirmedElement": "목",
+            "source": {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 23,
+              "sectionId": "stem-elements"
+            }
+          }
+        ],
+        "findings": [
+          {
+            "ruleId": "stem-combination:갑기",
+            "family": "stem-combination",
+            "label": "천간 합",
+            "endpoints": [
+              {
+                "side": "a",
+                "position": "year"
+              },
+              {
+                "side": "b",
+                "position": "year"
+              }
+            ],
+            "certainty": "candidate-dependent",
+            "jointFeasibility": "cross-profile-candidates",
+            "witnesses": [
+              [
+                "갑",
+                "기"
+              ]
+            ],
+            "source": {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 23,
+              "sectionId": "stem-combinations"
+            },
+            "interpretation": null,
+            "weight": null
+          },
+          {
+            "ruleId": "branch-combination:자축",
+            "family": "branch-combination",
+            "label": "지지 육합",
+            "endpoints": [
+              {
+                "side": "a",
+                "position": "year"
+              },
+              {
+                "side": "b",
+                "position": "year"
+              }
+            ],
+            "certainty": "candidate-dependent",
+            "jointFeasibility": "cross-profile-candidates",
+            "witnesses": [
+              [
+                "자",
+                "축"
+              ]
+            ],
+            "source": {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 25,
+              "sectionId": "branch-combinations"
+            },
+            "interpretation": null,
+            "weight": null
+          },
+          {
+            "ruleId": "branch-clash:축미",
+            "family": "branch-clash",
+            "label": "지지 육충",
+            "endpoints": [
+              {
+                "side": "a",
+                "position": "year"
+              },
+              {
+                "side": "b",
+                "position": "hour"
+              }
+            ],
+            "certainty": "candidate-dependent",
+            "jointFeasibility": "cross-profile-candidates",
+            "witnesses": [
+              [
+                "축",
+                "미"
+              ]
+            ],
+            "source": {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 26,
+              "sectionId": "branch-clashes"
+            },
+            "interpretation": null,
+            "weight": null
+          },
+          {
+            "ruleId": "stem-combination:병신",
+            "family": "stem-combination",
+            "label": "천간 합",
+            "endpoints": [
+              {
+                "side": "a",
+                "position": "month"
+              },
+              {
+                "side": "b",
+                "position": "month"
+              }
+            ],
+            "certainty": "all-candidates",
+            "jointFeasibility": "universal-over-supplied-candidates",
+            "witnesses": [
+              [
+                "병",
+                "신"
+              ]
+            ],
+            "source": {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 23,
+              "sectionId": "stem-combinations"
+            },
+            "interpretation": null,
+            "weight": null
+          },
+          {
+            "ruleId": "branch-combination:인해",
+            "family": "branch-combination",
+            "label": "지지 육합",
+            "endpoints": [
+              {
+                "side": "a",
+                "position": "month"
+              },
+              {
+                "side": "b",
+                "position": "month"
+              }
+            ],
+            "certainty": "all-candidates",
+            "jointFeasibility": "universal-over-supplied-candidates",
+            "witnesses": [
+              [
+                "인",
+                "해"
+              ]
+            ],
+            "source": {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 25,
+              "sectionId": "branch-combinations"
+            },
+            "interpretation": null,
+            "weight": null
+          },
+          {
+            "ruleId": "stem-combination:무계",
+            "family": "stem-combination",
+            "label": "천간 합",
+            "endpoints": [
+              {
+                "side": "a",
+                "position": "day"
+              },
+              {
+                "side": "b",
+                "position": "day"
+              }
+            ],
+            "certainty": "all-candidates",
+            "jointFeasibility": "universal-over-supplied-candidates",
+            "witnesses": [
+              [
+                "무",
+                "계"
+              ]
+            ],
+            "source": {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 23,
+              "sectionId": "stem-combinations"
+            },
+            "interpretation": null,
+            "weight": null
+          },
+          {
+            "ruleId": "branch-combination:진유",
+            "family": "branch-combination",
+            "label": "지지 육합",
+            "endpoints": [
+              {
+                "side": "a",
+                "position": "day"
+              },
+              {
+                "side": "b",
+                "position": "day"
+              }
+            ],
+            "certainty": "all-candidates",
+            "jointFeasibility": "universal-over-supplied-candidates",
+            "witnesses": [
+              [
+                "진",
+                "유"
+              ]
+            ],
+            "source": {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 25,
+              "sectionId": "branch-combinations"
+            },
+            "interpretation": null,
+            "weight": null
+          },
+          {
+            "ruleId": "stem-combination:을경",
+            "family": "stem-combination",
+            "label": "천간 합",
+            "endpoints": [
+              {
+                "side": "a",
+                "position": "hour"
+              },
+              {
+                "side": "b",
+                "position": "hour"
+              }
+            ],
+            "certainty": "all-candidates",
+            "jointFeasibility": "universal-over-supplied-candidates",
+            "witnesses": [
+              [
+                "경",
+                "을"
+              ]
+            ],
+            "source": {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 23,
+              "sectionId": "stem-combinations"
+            },
+            "interpretation": null,
+            "weight": null
+          },
+          {
+            "ruleId": "branch-combination:오미",
+            "family": "branch-combination",
+            "label": "지지 육합",
+            "endpoints": [
+              {
+                "side": "a",
+                "position": "hour"
+              },
+              {
+                "side": "b",
+                "position": "hour"
+              }
+            ],
+            "certainty": "all-candidates",
+            "jointFeasibility": "universal-over-supplied-candidates",
+            "witnesses": [
+              [
+                "오",
+                "미"
+              ]
+            ],
+            "source": {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 25,
+              "sectionId": "branch-combinations"
+            },
+            "interpretation": null,
+            "weight": null
+          }
+        ],
+        "limitations": [
+          "Symbol definitions only; no 合化, strength, favorable element, personality or relationship outcome inferred.",
+          "Candidate-dependent findings are review material, not confirmed reading statements or probabilities.",
+          "All-candidates means agreement within supplied research candidates, not validated astronomical accuracy.",
+          "Visible stem elements are not whole-chart proportions; hidden stems, season and weights are not analyzed.",
+          "All position pairs are inventoried without a priority rule. Coexisting 合/沖 are not cancelled or scored.",
+          "Cross-profile application is a research comparison choice, not a compatibility rule approved by the cited text."
+        ]
+      },
+      "reviewStatements": [
+        {
+          "ruleId": "stem-combination:병신",
+          "source": {
+            "id": "yuanhai-1926-ntl-9900014379",
+            "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+            "pdfPage": 23,
+            "sectionId": "stem-combinations"
+          },
+          "draft": "a의 월주와 b의 월주에서 병·신(丙辛)가 확인되어, 선택한 규칙표의 천간 합에 해당합니다.",
+          "status": "editorial-draft-not-approved",
+          "limitation": "이 분류만으로 합화 성립이나 실제 관계의 좋고 나쁨을 판단하지 않습니다."
+        },
+        {
+          "ruleId": "branch-combination:인해",
+          "source": {
+            "id": "yuanhai-1926-ntl-9900014379",
+            "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+            "pdfPage": 25,
+            "sectionId": "branch-combinations"
+          },
+          "draft": "a의 월주와 b의 월주에서 인·해(寅亥)가 확인되어, 선택한 규칙표의 지지 육합에 해당합니다.",
+          "status": "editorial-draft-not-approved",
+          "limitation": "이 분류만으로 합화 성립이나 실제 관계의 좋고 나쁨을 판단하지 않습니다."
+        },
+        {
+          "ruleId": "stem-combination:무계",
+          "source": {
+            "id": "yuanhai-1926-ntl-9900014379",
+            "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+            "pdfPage": 23,
+            "sectionId": "stem-combinations"
+          },
+          "draft": "a의 일주와 b의 일주에서 무·계(戊癸)가 확인되어, 선택한 규칙표의 천간 합에 해당합니다.",
+          "status": "editorial-draft-not-approved",
+          "limitation": "이 분류만으로 합화 성립이나 실제 관계의 좋고 나쁨을 판단하지 않습니다."
+        },
+        {
+          "ruleId": "branch-combination:진유",
+          "source": {
+            "id": "yuanhai-1926-ntl-9900014379",
+            "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+            "pdfPage": 25,
+            "sectionId": "branch-combinations"
+          },
+          "draft": "a의 일주와 b의 일주에서 진·유(辰酉)가 확인되어, 선택한 규칙표의 지지 육합에 해당합니다.",
+          "status": "editorial-draft-not-approved",
+          "limitation": "이 분류만으로 합화 성립이나 실제 관계의 좋고 나쁨을 판단하지 않습니다."
+        },
+        {
+          "ruleId": "stem-combination:을경",
+          "source": {
+            "id": "yuanhai-1926-ntl-9900014379",
+            "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+            "pdfPage": 23,
+            "sectionId": "stem-combinations"
+          },
+          "draft": "a의 시주와 b의 시주에서 을·경(乙庚)가 확인되어, 선택한 규칙표의 천간 합에 해당합니다.",
+          "status": "editorial-draft-not-approved",
+          "limitation": "이 분류만으로 합화 성립이나 실제 관계의 좋고 나쁨을 판단하지 않습니다."
+        },
+        {
+          "ruleId": "branch-combination:오미",
+          "source": {
+            "id": "yuanhai-1926-ntl-9900014379",
+            "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+            "pdfPage": 25,
+            "sectionId": "branch-combinations"
+          },
+          "draft": "a의 시주와 b의 시주에서 오·미(午未)가 확인되어, 선택한 규칙표의 지지 육합에 해당합니다.",
+          "status": "editorial-draft-not-approved",
+          "limitation": "이 분류만으로 합화 성립이나 실제 관계의 좋고 나쁨을 판단하지 않습니다."
+        }
+      ]
+    },
+    {
+      "id": "unknown-hour-at-ipchun",
+      "analysis": {
+        "ruleVersion": "symbol-relations-research-v1",
+        "engineVersion": "research-civil-midnight-v5",
+        "scope": "within-profile",
+        "productionApproved": false,
+        "definitionReview": {
+          "status": "source-collated",
+          "reviewer": "Codex",
+          "date": "2026-10-19"
+        },
+        "interpretationReview": {
+          "status": "pending"
+        },
+        "score": null,
+        "interpretation": null,
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day"
+            ],
+            "omittedPositions": [
+              "hour"
+            ],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": true
+          }
+        ],
+        "stemElements": [
+          {
+            "side": "self",
+            "position": "year",
+            "alternatives": [
+              {
+                "symbol": "갑",
+                "element": "목"
+              },
+              {
+                "symbol": "계",
+                "element": "수"
+              }
+            ],
+            "confirmedElement": null,
+            "source": {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 23,
+              "sectionId": "stem-elements"
+            }
+          },
+          {
+            "side": "self",
+            "position": "month",
+            "alternatives": [
+              {
+                "symbol": "병",
+                "element": "화"
+              },
+              {
+                "symbol": "을",
+                "element": "목"
+              }
+            ],
+            "confirmedElement": null,
+            "source": {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 23,
+              "sectionId": "stem-elements"
+            }
+          },
+          {
+            "side": "self",
+            "position": "day",
+            "alternatives": [
+              {
+                "symbol": "무",
+                "element": "토"
+              }
+            ],
+            "confirmedElement": "토",
+            "source": {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 23,
+              "sectionId": "stem-elements"
+            }
+          }
+        ],
+        "findings": [
+          {
+            "ruleId": "stem-combination:무계",
+            "family": "stem-combination",
+            "label": "천간 합",
+            "endpoints": [
+              {
+                "side": "self",
+                "position": "year"
+              },
+              {
+                "side": "self",
+                "position": "day"
+              }
+            ],
+            "certainty": "candidate-dependent",
+            "jointFeasibility": "not-established-from-marginal-candidates",
+            "witnesses": [
+              [
+                "계",
+                "무"
+              ]
+            ],
+            "source": {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 23,
+              "sectionId": "stem-combinations"
+            },
+            "interpretation": null,
+            "weight": null
+          },
+          {
+            "ruleId": "branch-combination:묘술",
+            "family": "branch-combination",
+            "label": "지지 육합",
+            "endpoints": [
+              {
+                "side": "self",
+                "position": "year"
+              },
+              {
+                "side": "self",
+                "position": "day"
+              }
+            ],
+            "certainty": "candidate-dependent",
+            "jointFeasibility": "not-established-from-marginal-candidates",
+            "witnesses": [
+              [
+                "묘",
+                "술"
+              ]
+            ],
+            "source": {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 25,
+              "sectionId": "branch-combinations"
+            },
+            "interpretation": null,
+            "weight": null
+          },
+          {
+            "ruleId": "branch-clash:진술",
+            "family": "branch-clash",
+            "label": "지지 육충",
+            "endpoints": [
+              {
+                "side": "self",
+                "position": "year"
+              },
+              {
+                "side": "self",
+                "position": "day"
+              }
+            ],
+            "certainty": "candidate-dependent",
+            "jointFeasibility": "not-established-from-marginal-candidates",
+            "witnesses": [
+              [
+                "진",
+                "술"
+              ]
+            ],
+            "source": {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 26,
+              "sectionId": "branch-clashes"
+            },
+            "interpretation": null,
+            "weight": null
+          }
+        ],
+        "limitations": [
+          "Symbol definitions only; no 合化, strength, favorable element, personality or relationship outcome inferred.",
+          "Candidate-dependent findings are review material, not confirmed reading statements or probabilities.",
+          "All-candidates means agreement within supplied research candidates, not validated astronomical accuracy.",
+          "Visible stem elements are not whole-chart proportions; hidden stems, season and weights are not analyzed.",
+          "All position pairs are inventoried without a priority rule. Coexisting 合/沖 are not cancelled or scored."
+        ]
+      },
+      "reviewStatements": []
+    },
+    {
+      "id": "historical-clock-review",
+      "analysis": {
+        "ruleVersion": "symbol-relations-research-v1",
+        "engineVersion": "research-civil-midnight-v5",
+        "scope": "within-profile",
+        "productionApproved": false,
+        "definitionReview": {
+          "status": "source-collated",
+          "reviewer": "Codex",
+          "date": "2026-10-19"
+        },
+        "interpretationReview": {
+          "status": "pending"
+        },
+        "score": null,
+        "interpretation": null,
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day"
+            ],
+            "omittedPositions": [
+              "hour"
+            ],
+            "clockReviewRequired": true,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "stemElements": [
+          {
+            "side": "self",
+            "position": "year",
+            "alternatives": [
+              {
+                "symbol": "갑",
+                "element": "목"
+              }
+            ],
+            "confirmedElement": "목",
+            "source": {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 23,
+              "sectionId": "stem-elements"
+            }
+          },
+          {
+            "side": "self",
+            "position": "month",
+            "alternatives": [
+              {
+                "symbol": "정",
+                "element": "화"
+              }
+            ],
+            "confirmedElement": "화",
+            "source": {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 23,
+              "sectionId": "stem-elements"
+            }
+          },
+          {
+            "side": "self",
+            "position": "day",
+            "alternatives": [
+              {
+                "symbol": "병",
+                "element": "화"
+              }
+            ],
+            "confirmedElement": "화",
+            "source": {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 23,
+              "sectionId": "stem-elements"
+            }
+          }
+        ],
+        "findings": [
+          {
+            "ruleId": "branch-clash:자오",
+            "family": "branch-clash",
+            "label": "지지 육충",
+            "endpoints": [
+              {
+                "side": "self",
+                "position": "year"
+              },
+              {
+                "side": "self",
+                "position": "day"
+              }
+            ],
+            "certainty": "all-candidates",
+            "jointFeasibility": "universal-over-supplied-candidates",
+            "witnesses": [
+              [
+                "오",
+                "자"
+              ]
+            ],
+            "source": {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 26,
+              "sectionId": "branch-clashes"
+            },
+            "interpretation": null,
+            "weight": null
+          }
+        ],
+        "limitations": [
+          "Symbol definitions only; no 合化, strength, favorable element, personality or relationship outcome inferred.",
+          "Candidate-dependent findings are review material, not confirmed reading statements or probabilities.",
+          "All-candidates means agreement within supplied research candidates, not validated astronomical accuracy.",
+          "Visible stem elements are not whole-chart proportions; hidden stems, season and weights are not analyzed.",
+          "All position pairs are inventoried without a priority rule. Coexisting 合/沖 are not cancelled or scored."
+        ]
+      },
+      "reviewStatements": [
+        {
+          "ruleId": "branch-clash:자오",
+          "source": {
+            "id": "yuanhai-1926-ntl-9900014379",
+            "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+            "pdfPage": 26,
+            "sectionId": "branch-clashes"
+          },
+          "draft": "self의 연주와 self의 일주에서 자·오(子午)가 확인되어, 선택한 규칙표의 지지 육충에 해당합니다.",
+          "status": "editorial-draft-not-approved",
+          "limitation": "이 분류만으로 합화 성립이나 실제 관계의 좋고 나쁨을 판단하지 않습니다."
+        }
+      ]
+    },
+    {
+      "id": "self-comparison-no-score",
+      "analysis": {
+        "ruleVersion": "symbol-relations-research-v1",
+        "engineVersion": "research-civil-midnight-v5",
+        "scope": "between-profiles",
+        "productionApproved": false,
+        "definitionReview": {
+          "status": "source-collated",
+          "reviewer": "Codex",
+          "date": "2026-10-19"
+        },
+        "interpretationReview": {
+          "status": "pending"
+        },
+        "score": null,
+        "interpretation": null,
+        "coverage": [
+          {
+            "side": "a",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          },
+          {
+            "side": "b",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "stemElements": [
+          {
+            "side": "a",
+            "position": "year",
+            "alternatives": [
+              {
+                "symbol": "갑",
+                "element": "목"
+              }
+            ],
+            "confirmedElement": "목",
+            "source": {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 23,
+              "sectionId": "stem-elements"
+            }
+          },
+          {
+            "side": "a",
+            "position": "month",
+            "alternatives": [
+              {
+                "symbol": "병",
+                "element": "화"
+              }
+            ],
+            "confirmedElement": "화",
+            "source": {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 23,
+              "sectionId": "stem-elements"
+            }
+          },
+          {
+            "side": "a",
+            "position": "day",
+            "alternatives": [
+              {
+                "symbol": "무",
+                "element": "토"
+              }
+            ],
+            "confirmedElement": "토",
+            "source": {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 23,
+              "sectionId": "stem-elements"
+            }
+          },
+          {
+            "side": "a",
+            "position": "hour",
+            "alternatives": [
+              {
+                "symbol": "경",
+                "element": "금"
+              }
+            ],
+            "confirmedElement": "금",
+            "source": {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 23,
+              "sectionId": "stem-elements"
+            }
+          },
+          {
+            "side": "b",
+            "position": "year",
+            "alternatives": [
+              {
+                "symbol": "갑",
+                "element": "목"
+              }
+            ],
+            "confirmedElement": "목",
+            "source": {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 23,
+              "sectionId": "stem-elements"
+            }
+          },
+          {
+            "side": "b",
+            "position": "month",
+            "alternatives": [
+              {
+                "symbol": "병",
+                "element": "화"
+              }
+            ],
+            "confirmedElement": "화",
+            "source": {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 23,
+              "sectionId": "stem-elements"
+            }
+          },
+          {
+            "side": "b",
+            "position": "day",
+            "alternatives": [
+              {
+                "symbol": "무",
+                "element": "토"
+              }
+            ],
+            "confirmedElement": "토",
+            "source": {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 23,
+              "sectionId": "stem-elements"
+            }
+          },
+          {
+            "side": "b",
+            "position": "hour",
+            "alternatives": [
+              {
+                "symbol": "경",
+                "element": "금"
+              }
+            ],
+            "confirmedElement": "금",
+            "source": {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 23,
+              "sectionId": "stem-elements"
+            }
+          }
+        ],
+        "findings": [
+          {
+            "ruleId": "branch-clash:자오",
+            "family": "branch-clash",
+            "label": "지지 육충",
+            "endpoints": [
+              {
+                "side": "a",
+                "position": "year"
+              },
+              {
+                "side": "b",
+                "position": "hour"
+              }
+            ],
+            "certainty": "all-candidates",
+            "jointFeasibility": "universal-over-supplied-candidates",
+            "witnesses": [
+              [
+                "자",
+                "오"
+              ]
+            ],
+            "source": {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 26,
+              "sectionId": "branch-clashes"
+            },
+            "interpretation": null,
+            "weight": null
+          },
+          {
+            "ruleId": "branch-clash:자오",
+            "family": "branch-clash",
+            "label": "지지 육충",
+            "endpoints": [
+              {
+                "side": "a",
+                "position": "hour"
+              },
+              {
+                "side": "b",
+                "position": "year"
+              }
+            ],
+            "certainty": "all-candidates",
+            "jointFeasibility": "universal-over-supplied-candidates",
+            "witnesses": [
+              [
+                "오",
+                "자"
+              ]
+            ],
+            "source": {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 26,
+              "sectionId": "branch-clashes"
+            },
+            "interpretation": null,
+            "weight": null
+          }
+        ],
+        "limitations": [
+          "Symbol definitions only; no 合化, strength, favorable element, personality or relationship outcome inferred.",
+          "Candidate-dependent findings are review material, not confirmed reading statements or probabilities.",
+          "All-candidates means agreement within supplied research candidates, not validated astronomical accuracy.",
+          "Visible stem elements are not whole-chart proportions; hidden stems, season and weights are not analyzed.",
+          "All position pairs are inventoried without a priority rule. Coexisting 合/沖 are not cancelled or scored.",
+          "Cross-profile application is a research comparison choice, not a compatibility rule approved by the cited text."
+        ]
+      },
+      "reviewStatements": [
+        {
+          "ruleId": "branch-clash:자오",
+          "source": {
+            "id": "yuanhai-1926-ntl-9900014379",
+            "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+            "pdfPage": 26,
+            "sectionId": "branch-clashes"
+          },
+          "draft": "a의 연주와 b의 시주에서 자·오(子午)가 확인되어, 선택한 규칙표의 지지 육충에 해당합니다.",
+          "status": "editorial-draft-not-approved",
+          "limitation": "이 분류만으로 합화 성립이나 실제 관계의 좋고 나쁨을 판단하지 않습니다."
+        },
+        {
+          "ruleId": "branch-clash:자오",
+          "source": {
+            "id": "yuanhai-1926-ntl-9900014379",
+            "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+            "pdfPage": 26,
+            "sectionId": "branch-clashes"
+          },
+          "draft": "a의 시주와 b의 연주에서 자·오(子午)가 확인되어, 선택한 규칙표의 지지 육충에 해당합니다.",
+          "status": "editorial-draft-not-approved",
+          "limitation": "이 분류만으로 합화 성립이나 실제 관계의 좋고 나쁨을 판단하지 않습니다."
+        }
+      ]
+    }
+  ],
+  "historicalClockProbe": {
+    "productionApproved": false,
+    "models": [
+      {
+        "model": "iana-2025b",
+        "assumption": "IANA 1954 Mar 21 default wall 00:00 uses the outgoing +09 offset.",
+        "transitionProlepticUtc": "1954-03-20T15:00:00.000Z",
+        "status": "unique",
+        "candidates": [
+          {
+            "prolepticUtc": "1954-03-20T15:45:00.000Z",
+            "offsetSeconds": 30600
+          }
+        ]
+      },
+      {
+        "model": "gazette-outgoing-clock-hypothesis",
+        "assumption": "Read the gazette 00:30 as outgoing +09 clock, then move back to 00:00. Not yet established as actual practice.",
+        "transitionProlepticUtc": "1954-03-20T15:30:00.000Z",
+        "status": "ambiguous",
+        "candidates": [
+          {
+            "prolepticUtc": "1954-03-20T15:15:00.000Z",
+            "offsetSeconds": 32400
+          },
+          {
+            "prolepticUtc": "1954-03-20T15:45:00.000Z",
+            "offsetSeconds": 30600
+          }
+        ]
+      }
+    ],
+    "agreed": false
+  }
+}

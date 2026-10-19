@@ -1,0 +1,2 @@
+# Preserve archived response bytes (including source CRLF/whitespace) for SHA-256.
+research/validation/fixtures/time-standards/gazette-1954-viewer.html -text -whitespace

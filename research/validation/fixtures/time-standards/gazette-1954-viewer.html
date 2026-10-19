@@ -1,0 +1,1506 @@
+
+
+
+
+
+
+
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+	<title>국가기록원 기록물뷰어</title>
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, target-densitydpi=medium-dpi" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Language" content="kr" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	
+	
+	
+	<link rel="stylesheet" href="/viewer/css/pdfjs/viewer.css" />
+	
+	<link rel="stylesheet" media="screen"  type="text/css" href="/viewer/css/archwebviewer.css" />
+	<link rel="stylesheet" media="screen"  type="text/css" href="/viewer/css/jquery-ui.min.css" />
+	
+	<!-- POPUP DIALOG CSS -->
+	<link href="/viewer/css/popup-dialog.css" rel="stylesheet">
+	
+	<script type="text/javascript" src="/viewer/js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="/viewer/js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="/viewer/js/archwebviewer.js"></script>
+
+	<script type="text/javascript" src="/viewer/js/jquery-jQueryRotate.js"></script>
+	<script type="text/javascript" src="/viewer/js/jquery-drag-on.js"></script>
+	
+	<!-- <script type="text/javascript" src="/viewer/js/pdf.js"></script>
+	<script type="text/javascript" src="/viewer/js/pdfobject.min.js"></script>  -->
+
+	
+<!--[if lt IE 9]>
+	<script src="/viewer/js/hd_viewer/html5shiv.min.js"></script>
+<![endif]-->
+
+	<script type="text/javascript">
+	
+		var pathname = document.location.pathname;
+		
+		var prefix = pathname.substr(pathname.indexOf('/'), pathname.indexOf('/',1));
+		
+		var proxyPreFix = "";
+		
+		if(prefix == "/theme"){
+			proxyPreFix = prefix;
+		}
+		
+		var size = [20,40,50,60,80,100,200,300];
+		var sizeIndex = -1;
+		var isLoupe = false;
+		var selectPage = 1;
+		var ebookThumbnails = new Array();
+		
+// 			ebookThumbnails.push({src:"archWebViewerStream.do?filePath=R:/EBOOK//R/gazette-ebook-20061019/1954/eBook_Contents/ba0185690/ba0185690_1.jpg&amp;pageInfo=1", alt:"ba0185690_1.jpg", onError:"javascript:this.src='../images/archWebViewerNoImage.jpg'"});
+			ebookThumbnails.push({src:"archWebViewerStream.do?filePath=R:/EBOOK//R/gazette-ebook-20061019/1954/eBook_Contents/ba0185690/ba0185690_1.jpg&amp;pageInfo=1", alt:"ba0185690_1.jpg"});
+		
+// 			ebookThumbnails.push({src:"archWebViewerStream.do?filePath=R:/EBOOK//R/gazette-ebook-20061019/1954/eBook_Contents/ba0185690/ba0185690_2.jpg&amp;pageInfo=1", alt:"ba0185690_2.jpg", onError:"javascript:this.src='../images/archWebViewerNoImage.jpg'"});
+			ebookThumbnails.push({src:"archWebViewerStream.do?filePath=R:/EBOOK//R/gazette-ebook-20061019/1954/eBook_Contents/ba0185690/ba0185690_2.jpg&amp;pageInfo=1", alt:"ba0185690_2.jpg"});
+		
+// 			ebookThumbnails.push({src:"archWebViewerStream.do?filePath=R:/EBOOK//R/gazette-ebook-20061019/1954/eBook_Contents/ba0185690/ba0185690_3.jpg&amp;pageInfo=1", alt:"ba0185690_3.jpg", onError:"javascript:this.src='../images/archWebViewerNoImage.jpg'"});
+			ebookThumbnails.push({src:"archWebViewerStream.do?filePath=R:/EBOOK//R/gazette-ebook-20061019/1954/eBook_Contents/ba0185690/ba0185690_3.jpg&amp;pageInfo=1", alt:"ba0185690_3.jpg"});
+		
+// 			ebookThumbnails.push({src:"archWebViewerStream.do?filePath=R:/EBOOK//R/gazette-ebook-20061019/1954/eBook_Contents/ba0185690/ba0185690_4.jpg&amp;pageInfo=1", alt:"ba0185690_4.jpg", onError:"javascript:this.src='../images/archWebViewerNoImage.jpg'"});
+			ebookThumbnails.push({src:"archWebViewerStream.do?filePath=R:/EBOOK//R/gazette-ebook-20061019/1954/eBook_Contents/ba0185690/ba0185690_4.jpg&amp;pageInfo=1", alt:"ba0185690_4.jpg"});
+		
+// 			ebookThumbnails.push({src:"archWebViewerStream.do?filePath=R:/EBOOK//R/gazette-ebook-20061019/1954/eBook_Contents/ba0185690/ba0185690_5.jpg&amp;pageInfo=1", alt:"ba0185690_5.jpg", onError:"javascript:this.src='../images/archWebViewerNoImage.jpg'"});
+			ebookThumbnails.push({src:"archWebViewerStream.do?filePath=R:/EBOOK//R/gazette-ebook-20061019/1954/eBook_Contents/ba0185690/ba0185690_5.jpg&amp;pageInfo=1", alt:"ba0185690_5.jpg"});
+		
+// 			ebookThumbnails.push({src:"archWebViewerStream.do?filePath=R:/EBOOK//R/gazette-ebook-20061019/1954/eBook_Contents/ba0185690/ba0185690_6.jpg&amp;pageInfo=1", alt:"ba0185690_6.jpg", onError:"javascript:this.src='../images/archWebViewerNoImage.jpg'"});
+			ebookThumbnails.push({src:"archWebViewerStream.do?filePath=R:/EBOOK//R/gazette-ebook-20061019/1954/eBook_Contents/ba0185690/ba0185690_6.jpg&amp;pageInfo=1", alt:"ba0185690_6.jpg"});
+		
+// 			ebookThumbnails.push({src:"archWebViewerStream.do?filePath=R:/EBOOK//R/gazette-ebook-20061019/1954/eBook_Contents/ba0185690/ba0185690_7.jpg&amp;pageInfo=1", alt:"ba0185690_7.jpg", onError:"javascript:this.src='../images/archWebViewerNoImage.jpg'"});
+			ebookThumbnails.push({src:"archWebViewerStream.do?filePath=R:/EBOOK//R/gazette-ebook-20061019/1954/eBook_Contents/ba0185690/ba0185690_7.jpg&amp;pageInfo=1", alt:"ba0185690_7.jpg"});
+		
+// 			ebookThumbnails.push({src:"archWebViewerStream.do?filePath=R:/EBOOK//R/gazette-ebook-20061019/1954/eBook_Contents/ba0185690/ba0185690_8.jpg&amp;pageInfo=1", alt:"ba0185690_8.jpg", onError:"javascript:this.src='../images/archWebViewerNoImage.jpg'"});
+			ebookThumbnails.push({src:"archWebViewerStream.do?filePath=R:/EBOOK//R/gazette-ebook-20061019/1954/eBook_Contents/ba0185690/ba0185690_8.jpg&amp;pageInfo=1", alt:"ba0185690_8.jpg"});
+		
+/*
+		function getNatural(obj){
+			
+			transCanvasToImg(obj); 
+			return {width: obj.get(0).naturalWidth, height: obj.get(0).naturalHeight};
+		}
+*/		
+
+ var omitformtags = [ "input", "textarea", "select" ]
+omitformtags = omitformtags.join("|")
+function disableselect(e) {
+	if (omitformtags.indexOf(e.target.tagName.toLowerCase()) == -1)
+		return falsec
+}
+function reEnable() {
+	return true
+}
+if (typeof document.onselectstart != "undefined")
+	document.onselectstart = new Function("return false")
+else {
+	document.onmousedown = disableselect
+	document.onmouseup = reEnable
+}
+
+		function setCookie(cookie_name, value,days){
+			var exdate = new Date();
+			exdate.setDate(exdate.getDate()+ days);
+			
+			var cookie_value = escape(value) + ((days == null)?'':'; expires='+ exdate.toUTCString());
+			document.cookie = cookie_name + '=' + cookie_value;
+		}
+		
+		function getCookie(cookie_name){
+			var x,y;
+			var val = document.cookie.split(';');
+			for(var i=0; i < val.length; i++){
+				x = val[i].substr(0,val[i].indexOf('='));
+				y = val[i].substr(val[i].indexOf('=') + 1);
+				x = x.replace(/^\s+|\s+$/g, '');
+				if(x == cookie_name){
+					return unescape(y);
+				}
+			}
+		}
+		
+		function delCookie(cookie_name){
+			var exdate = new Date();
+			exdate.setDate(exdate.getDate()+ -1);
+			document.cookie = cookie_name + '='+'; expires=' + exdate.toUTCString()+'; path=/'		}
+		
+		
+		function pageMove(selPage,curPage){
+			$("#current-page").val(selPage);
+			$("#printSPage").val(selPage);
+			$("#printEPage").val(selPage);
+			setThumbnails(selPage, curPage);
+		}
+/*		
+		function transCanvasToImg(obj) {
+			if ( obj.get(0).tagName == "CANVAS" ) {
+				$("canvas").replaceWith($("<img src='"+ ebookThumbnails[$("#current-page").val() - 1].src +"' alt='"+ebookThumbnails[$("#current-page").val() - 1].alt+"' id='ebook-current' />"));
+				setWidth();
+			} else {
+				$("#ebook-current").attr("src", (ebookThumbnails[$("#current-page").val() - 1].src)).replace("&","&amp;"); 
+				$("#ebook-current").attr("alt", ebookThumbnails[$("#current-page").val() - 1].alt);
+			}
+		}	
+*/
+		
+		function getSizeIndex(){
+		
+			var img = getNatural($("#ebook-current"));
+			for(var i = 0; i <= 9; i++){
+// 			for(var i = 0; i <= 4; i++){
+				if(Math.floor(img.width * size[i] / 100) > $("#ebook-current").width()){
+					sizeIndex = i;
+		
+					break;
+				}
+			}
+		}
+		
+		function printThis(evntId){
+			var page = $(".cnt span:first-child").text();
+			
+			var win = window.open(proxyPreFix + "/viewer/common/printImage.do?archiveEventId=" + evntId + "&start=" + page + "&end=" + page+ "&setNum=" + page, "국가기록원원문출력", "menubar=no status=no scrollbars=yes width=750");
+		}
+
+		function printPart(evntId, archId, setNum, eId){
+			var pspage = $("#printSPage").val();
+			var pepage = $("#printEPage").val();
+			var totalImgCnt = 8;
+			if ( pspage == ""  ) {
+				alert("인쇄 시작페이지가 없습니다.  입력해주세요.");
+				$("#printSPage").focus();
+			} else {
+				if ( pepage == "") {
+					pepage = pspage;
+				}
+				if ( pepage > totalImgCnt || pspage > totalImgCnt ) {
+					alert("페이지 범위를 넘을수 없습니다.  다시 입력해주세요.");
+					$("#printEPage").focus();
+				} else {
+					var waterMarkFlag = "";
+					if($(".waterMarkFlag").val()!="01"){
+						waterMarkFlag = "Y";
+					}else{
+						waterMarkFlag = "N";
+					}
+					var win = window.open(proxyPreFix + "/viewer/common/printImage.do?waterMarkFlag="+waterMarkFlag+"&archiveEventId=" + evntId + "&archiveId=" + archId + "&setNum=" + setNum + "&eId=" + eId + "&start=" + pspage + "&end=" + pepage, "국가기록원원문출력", "menubar=no status=no scrollbars=yes width=750");
+				}
+			}
+		}
+
+		function printAll(evntId, archId, setNum, eId, singleData){
+			var waterMarkFlag = "";
+			var totalImgCnt = 8;
+			if($(".waterMarkFlag").val()!="01"){
+				waterMarkFlag = "Y";
+			}else{
+				waterMarkFlag = "N";
+			}
+			var win = window.open(proxyPreFix + "/viewer/common/printImage.do?waterMarkFlag="+waterMarkFlag+"&archiveEventId=" + evntId + "&archiveId=" + archId + "&setNum=" + setNum + "&eId=" + eId + "&singleData=" + singleData + "&start=1&end="+totalImgCnt, "국가기록원원문출력", "menubar=no status=no scrollbars=yes width=750");
+		}
+		
+		function bmSelect(i, curImgCnt) {
+			$("div#viewlist ul li").removeAttr("class");
+			$("div#viewlist ul li").eq(i).attr("class", "select");
+			
+			setThumbnails(curImgCnt, selectPage);
+		}
+		
+		window.onload = function() {
+			
+			if ("1" != null && "1" != "") {
+				setThumbnails("1", selectPage);
+			} else {
+				setThumbnails(1, selectPage);
+			}
+			var ext = getCookie('ext');
+			var last_seq = getCookie('last_seq');
+			
+			var docType = '';
+			var current_seq = '0027975450' + '0001647544"';
+			
+			if((last_seq == current_seq)
+				&& (docType == '4' || docType == 'B' || docType == 'C') == false
+				&& ext == 'PDF')
+			{
+				delCookie('ext');
+				pdfVieW();
+			}
+			else
+			{
+				setCookie('ext','JPG','30');
+				setCookie('last_seq', current_seq, '30');
+				jpgView();
+			}
+			/*
+ 			if(ext){
+				if('' != ext && 'PDF' == ext){
+					delCookie('ext');
+					pdfVieW();
+				}
+			}else{
+				setCookie('ext','JPG','365');
+			}
+			*/
+		}
+		
+		function setThumbnails(curImgCnt, posi){
+			var totalCnt = 8;
+			//alert("");
+			 
+			var archiveId = "";
+			var filePath= "R:/EBOOK//R/gazette-ebook-20061019/1954/eBook_Contents/ba0185690";
+			//alert("posi : "+posi);
+			//alert(curImgCnt+":"+totalCnt);
+			//페이지수가 10 보다 클경우~~			
+			var curPage = Math.floor((curImgCnt - 1) / 10) + 1;
+			//alert(ebookThumbnails.length);
+			if (posi!=null && posi!=0 && curPage!=posi){
+				//alert(posi+":"+curPage);
+				$.ajax({
+					type		: "POST",
+					cache		: false,				
+			        url         : proxyPreFix + "/viewer/common/pageInfoList.do",
+			        dataType    : "text",
+			        data        : "curImgCnt="+curImgCnt+"&filePath="+filePath+"&archiveId="+archiveId,
+			        success     : function(data){
+			        	// alert("데이타값"+data);
+			        	 var dataArr = data.split("^");
+			        	 //ebookThumbnails.splice(0,ebookThumbnails.length);
+			        	 //alert("데이타값"+dataArr.length);
+			        	 ebookThumbnails = new Array();
+			        	 for (var i=0;i<dataArr.length-1;i++){
+			        		 var pathArr = dataArr[i].split(",");			        		 
+			        		 var path = pathArr[0].replace(/\n/g,"");
+			        		 path = path.replace(/\r/g,"");
+			        		 ebookThumbnails.push({src:""+path+"", alt:""+pathArr[1]+""});
+			        	 }			        	 
+			        	//alert(ebookThumbnails.length);
+			        	var i;
+			 			var startImgCnt = Math.floor((curImgCnt - 1) / 10) * 10 + 1;
+			 			var curPage = Math.floor((curImgCnt - 1) / 10) + 1;
+			 			selectPage = curPage;
+			 			var sPage = (Math.floor(((curImgCnt - 1) / 10)/10)*10)+1;
+			 			var ePage = (Math.floor(((curImgCnt - 1) / 10)/10)+1)*10;
+//			  			var startImgCnt = Math.floor((curImgCnt - 1) / 5) * 5 + 1;
+//			  			var curPage = Math.floor((curImgCnt - 1) / 5) + 1;
+//			  			var sPage = (Math.floor(((curImgCnt - 1) / 5)/10)*10)+1;
+//			  			var ePage = (Math.floor(((curImgCnt - 1) / 5)/10)+1)*10;
+			 			$("div#thumbnailarea ol li").remove();
+			 			var totPage = Math.floor((totalCnt - 1) / 10) + 1;
+//			  			var totPage = Math.floor((ebookThumbnails.length - 1) / 5) + 1;
+			 			if ( ePage > totPage) {
+			 				ePage= totPage;
+			 			}
+			 			
+			 			$("div.boardpage span").remove();
+			 			if ( curPage == 1 ) {
+			 				$("div.boardpage ").append("<span class='bpageimgnolink'>처음</span>");
+			 			} else {
+			 				$("div.boardpage ").append("<span class='bpageimg' onclick='pageMove(1,"+selectPage+")'>처음</span>");
+			 			}
+			 			
+			 			
+			 			if ( curPage > 1) {
+			 				$("div.boardpage ").append("<span class='bpageimg'  onclick='pageMove("+ (Math.floor(curPage-2)*10+1) +","+curPage+")'><a title='이전'>이전</a></span>");
+//			  				$("div.boardpage ").append("<span class='bpageimg'  onclick='pageMove("+ (Math.floor(curPage-2)*5+1) +")'><a title='이전'>이전</a></span>");
+			 			} else {
+			 				$("div.boardpage ").append("<span class='bpageimgnolink'><a title='이전'>이전</a></span>");
+			 			}
+			 			
+			 			$("div.boardpage ").append("<span class='bpagenum'>");
+			 			for(var p = sPage; p <= ePage; p++){
+			 				if ( curPage == p ) {
+			 					$("span.bpagenum ").append("<a class='pageselect'>"+p+"</a>");
+			 				} else {
+			 					$("span.bpagenum ").append("<a onclick='pageMove("+((p-1)*10+1)+","+curPage+")'>"+p+"</a>");
+//			  					$("span.bpagenum ").append("<a onclick='pageMove("+((p-1)*5+1)+")'>"+p+"</a>");
+			 				}
+			 			}
+			 			$("div.boardpage ").append("</span>");
+			 			if ( curPage < totPage ) {
+			 				$("div.boardpage ").append("<span class='bpageimg' onclick='pageMove("+ ((curPage*10)+1) +","+curPage+")'><a title='뒤로'>뒤로</a></span>");
+//			  				$("div.boardpage ").append("<span class='bpageimg' onclick='pageMove("+ ((curPage*5)+1) +")'><a title='뒤로'>뒤로</a></span>");
+			 			} else {
+			 				$("div.boardpage ").append("<span class='bpageimgnolink'><a title='뒤로'>뒤로</a></span>");
+			 			}
+			 			
+			 			
+			 			if ( curPage == totPage ) {
+			 				$("div.boardpage ").append("<span class='bpageimgnolink'><a title='맨끝으로' class='bpageimg'>맨끝으로</a></span>");
+			 			} else {
+			 				$("div.boardpage ").append("<span class='bpageimg' onclick='pageMove("+ (((Math.ceil((totalCnt)/10))-1)*10+1) +","+curPage+")'><a title='맨끝으로' class='bpageimg'>맨끝으로</a></span>");
+//			  				$("div.boardpage ").append("<span class='bpageimg' onclick='pageMove("+ (((Math.ceil((ebookThumbnails.length)/5))-1)*5+1) +")'><a title='맨끝으로' class='bpageimg'>맨끝으로</a></span>");			
+			 			}
+			 			
+			 			//for(i = 0; i <= 9 && startImgCnt * 1 + i <= ebookThumbnails.length ; i++){
+			 			for(i = 0; i < ebookThumbnails.length ; i++){
+//			  			for(i = 0; i <= 4 && startImgCnt * 1 + i <= ebookThumbnails.length ; i++){
+			 				var curThumbNo = startImgCnt * 1 + i;
+			 				
+			 				if(curThumbNo == curImgCnt){
+			 					$("div#thumbnailarea ol ").append("<li class='selected'><a href='#"+curThumbNo+"' title='"+curThumbNo+
+			 							"페이지이동'><div><img src='"+ebookThumbnails[i].src+"' alt='"+ebookThumbnails[i].alt+"' id='ebook-thumbnail"+curThumbNo+"'></div></a></li>");
+			 					$("div#thumbnailarea ol img ").attr("onError", "javascript:this.src='../images/archWebViewerNoImage.jpg'");
+			 					
+			 					$("img#ebook-current").attr("src", (ebookThumbnails[i].src).replace("&amp;","&"));
+			 					$("img#ebook-current").attr("alt", ebookThumbnails[i].alt);
+			 				} else {
+			 					$("div#thumbnailarea ol ").append("<li><a href='#"+curThumbNo+"' title='"+curThumbNo+
+			 							"페이지이동' onclick='setThumbnails("+curThumbNo+","+curPage+");return false;'><div><img src='"+ebookThumbnails[i].src+"' alt='"+ebookThumbnails[i].alt+"' id='ebook-thumbnail"+curThumbNo+"'></div></a></li>");
+			 					$("div#thumbnailarea ol img ").attr("onError", "javascript:this.src='../images/archWebViewerNoImage.jpg'");
+			 				};
+			 			}
+//			 			}
+			 			
+			 			$("#current-page").val(curImgCnt);
+			 			$("#printSPage").val(curImgCnt);
+			 			$("#printEPage").val(curImgCnt);
+			 			
+			 			
+			 			$("div.listpinfo span#curPages").text(Math.floor((curImgCnt - 1) / 10)+1);
+//			  			$("div.listpinfo span#curPages").text(Math.floor((curImgCnt - 1) / 5)+1);
+			 			$("div.listpinfo span#totPages").text(Math.ceil(totalCnt/10));
+//			  			$("div.listpinfo span#totPages").text(Math.ceil(ebookThumbnails.length/5));
+
+			 			$(".cnt span:first-child").text(curImgCnt);
+			 			$("div#viewlist ul li").attr("class", "");
+			 			if ( $("div#viewlist ul li[name='bm"+curImgCnt+"']").length > 0 ) {
+			 				$("div#viewlist ul li[name='bm"+curImgCnt+"']").attr("class", "select");
+			 			} else {
+			 				for ( var r=curImgCnt; r >= 1; r--) {
+			 					if ( $("div#viewlist ul l[name='bm"+r+"']").length > 0 ) {
+			 						$("div#viewlist ul li[name='bm"+r+"']").attr("class", "select");
+			 						break;
+			 					};
+			 				};
+			 			}
+			 			
+			 			if(isLoupe){
+			 				$("div.loupe").find("img").attr("src", $("#ebook-current").attr("src"));
+			 			} else {
+			 				$("div.loupe").find("img").hide();
+			 			}
+			 			
+			 			
+			 			var ext = getCookie('ext');
+						var last_seq = getCookie('last_seq');
+						
+						var docType = '';
+						var current_seq = '0027975450' + '0001647544"';
+						
+						console.log('docType :' + docType);
+						if((last_seq == current_seq)
+							&& (docType == '4' || docType == 'B' || docType == 'C') == false
+							&& ext == 'PDF')
+						{
+							delCookie('ext');
+							pdfVieW();
+						}
+						else
+						{
+							setCookie('ext','JPG','30');
+							setCookie('last_seq', current_seq, '30');
+							jpgView();
+						}
+						/*
+			 			var ext = getCookie('ext');
+						console.log(ext);
+			 			if(ext){
+							if('' != ext && 'PDF' == ext){
+								delCookie('ext');
+								pdfVieW();
+							}
+						}else{
+							setCookie('ext','JPG','365');
+						}
+			 			*/
+			        },
+			        error : function(){
+			            alert('통신실패!!');
+			            
+			        }
+				});
+			}else{
+			//alert(ebookThumbnails.length)
+			var i;
+			var startImgCnt = Math.floor((curImgCnt - 1) / 10) * 10 + 1;
+			var curPage = Math.floor((curImgCnt - 1) / 10) + 1;
+			var sPage = (Math.floor(((curImgCnt - 1) / 10)/10)*10)+1;
+			var ePage = (Math.floor(((curImgCnt - 1) / 10)/10)+1)*10;
+// 			var startImgCnt = Math.floor((curImgCnt - 1) / 5) * 5 + 1;
+// 			var curPage = Math.floor((curImgCnt - 1) / 5) + 1;
+// 			var sPage = (Math.floor(((curImgCnt - 1) / 5)/10)*10)+1;
+// 			var ePage = (Math.floor(((curImgCnt - 1) / 5)/10)+1)*10;
+			$("div#thumbnailarea ol li").remove();
+			var totPage = Math.floor((totalCnt - 1) / 10) + 1;
+// 			var totPage = Math.floor((ebookThumbnails.length - 1) / 5) + 1;
+			if ( ePage > totPage) {
+				ePage= totPage;
+			}
+			
+			$("div.boardpage span").remove();
+			if ( curPage == 1 ) {
+				$("div.boardpage ").append("<span class='bpageimgnolink'>처음</span>");
+			} else {
+				$("div.boardpage ").append("<span class='bpageimg' onclick='pageMove(1,"+selectPage+")'>처음</span>");
+			}
+			
+			
+			if ( curPage > 1) {
+				$("div.boardpage ").append("<span class='bpageimg'  onclick='pageMove("+ (Math.floor(curPage-2)*10+1) +","+curPage+")'><a title='이전'>이전</a></span>");
+// 				$("div.boardpage ").append("<span class='bpageimg'  onclick='pageMove("+ (Math.floor(curPage-2)*5+1) +")'><a title='이전'>이전</a></span>");
+			} else {
+				$("div.boardpage ").append("<span class='bpageimgnolink'><a title='이전'>이전</a></span>");
+			}
+			
+			$("div.boardpage ").append("<span class='bpagenum'>");
+			for(var p = sPage; p <= ePage; p++){
+				if ( curPage == p ) {
+					$("span.bpagenum ").append("<a class='pageselect'>"+p+"</a>");
+				} else {
+					$("span.bpagenum ").append("<a onclick='pageMove("+((p-1)*10+1)+","+curPage+")'>"+p+"</a>");
+// 					$("span.bpagenum ").append("<a onclick='pageMove("+((p-1)*5+1)+")'>"+p+"</a>");
+				}
+			}
+			$("div.boardpage ").append("</span>");
+			if ( curPage < totPage ) {
+				$("div.boardpage ").append("<span class='bpageimg' onclick='pageMove("+ ((curPage*10)+1) +","+curPage+")'><a title='뒤로'>뒤로</a></span>");
+// 				$("div.boardpage ").append("<span class='bpageimg' onclick='pageMove("+ ((curPage*5)+1) +")'><a title='뒤로'>뒤로</a></span>");
+			} else {
+				$("div.boardpage ").append("<span class='bpageimgnolink'><a title='뒤로'>뒤로</a></span>");
+			}
+			
+			
+			if ( curPage == totPage ) {
+				$("div.boardpage ").append("<span class='bpageimgnolink'><a title='맨끝으로' class='bpageimg'>맨끝으로</a></span>");
+			} else {
+				$("div.boardpage ").append("<span class='bpageimg' onclick='pageMove("+ (((Math.ceil((totalCnt)/10))-1)*10+1) +","+curPage+")'><a title='맨끝으로' class='bpageimg'>맨끝으로</a></span>");
+// 				$("div.boardpage ").append("<span class='bpageimg' onclick='pageMove("+ (((Math.ceil((ebookThumbnails.length)/5))-1)*5+1) +")'><a title='맨끝으로' class='bpageimg'>맨끝으로</a></span>");			
+			}
+			
+			for(i = 0; i < ebookThumbnails.length ; i++){
+// 			for(i = 0; i <= 4 && startImgCnt * 1 + i <= ebookThumbnails.length ; i++){
+			//alert(i+":"+ebookThumbnails[i].src);
+				var curThumbNo = startImgCnt * 1 + i;
+				if(curThumbNo == curImgCnt){
+					$("div#thumbnailarea ol ").append("<li class='selected'><a href='#"+curThumbNo+"' title='"+curThumbNo+
+							"페이지이동'><div><img src='"+ebookThumbnails[i].src+"' alt='"+ebookThumbnails[i].alt+"' id='ebook-thumbnail"+curThumbNo+"'></div></a></li>");
+					$("div#thumbnailarea ol img ").attr("onError", "javascript:this.src='../images/archWebViewerNoImage.jpg'");
+					
+					$("img#ebook-current").attr("src", (ebookThumbnails[i].src).replace("&amp;","&"));
+					$("img#ebook-current").attr("alt", ebookThumbnails[i].alt);
+				} else {
+					$("div#thumbnailarea ol ").append("<li><a href='#"+curThumbNo+"' title='"+curThumbNo+
+							"페이지이동' onclick='setThumbnails("+curThumbNo+","+curPage+");return false;'><div><img src='"+ebookThumbnails[i].src+"' alt='"+ebookThumbnails[i].alt+"' id='ebook-thumbnail"+curThumbNo+"'></div></a></li>");
+					$("div#thumbnailarea ol img ").attr("onError", "javascript:this.src='../images/archWebViewerNoImage.jpg'");
+				};
+			}
+//			}
+			
+			$("#current-page").val(curImgCnt);
+			$("#printSPage").val(curImgCnt);
+ 			$("#printEPage").val(curImgCnt);
+			
+			$("div.listpinfo span#curPages").text(Math.floor((curImgCnt - 1) / 10)+1);
+// 			$("div.listpinfo span#curPages").text(Math.floor((curImgCnt - 1) / 5)+1);
+			$("div.listpinfo span#totPages").text(Math.ceil(totalCnt/10));
+// 			$("div.listpinfo span#totPages").text(Math.ceil(ebookThumbnails.length/5));
+
+			$(".cnt span:first-child").text(curImgCnt);
+			$("div#viewlist ul li").attr("class", "");
+			if ( $("div#viewlist ul li[name='bm"+curImgCnt+"']").length > 0 ) {
+				$("div#viewlist ul li[name='bm"+curImgCnt+"']").attr("class", "select");
+			} else {
+				for ( var r=curImgCnt; r >= 1; r--) {
+					if ( $("div#viewlist ul l[name='bm"+r+"']").length > 0 ) {
+						$("div#viewlist ul li[name='bm"+r+"']").attr("class", "select");
+						break;
+					};
+				};
+			}
+			
+			if(isLoupe){
+				$("div.loupe").find("img").attr("src", $("#ebook-current").attr("src"));
+			} else {
+				$("div.loupe").find("img").hide();
+			}
+			}
+		
+		};
+		
+		jQuery(function($){
+			
+			if ( ieVersionChk() == 7 || ieVersionChk() == 8 ) {
+				$("#toparea .function .zoomplus").attr("class", "zoomplus fun_none");
+				$("#toparea .function .zoomminus").attr("class", "zoomminus fun_none");
+				
+				$("#toparea .function .rotateright").attr("class", "rotateright fun_none");
+				$("#toparea .function .rotateleft").attr("class", "rotateleft fun_none");
+
+			} 
+			var totalCnt = 8;
+			$("#totCnt").text(totalCnt);
+
+			
+
+			$("#current-page").keydown(function(e){
+				var totalImgCnt =  8;
+			
+				if(e.keyCode == 13){
+					if(isNaN($("#current-page").val())){
+						alert("숫자만 입력해주세요.")
+					}
+					else if(!isNaN($("#current-page").val())){
+						//init();
+						if($("#current-page").val() >= 1 && $("#current-page").val() <= totalImgCnt) {
+							setThumbnails($("#current-page").val(), selectPage);
+						} else {
+							alert("입력 가능 페이지는 1~" + totalImgCnt + "입니다.");
+							if($("#current-page").val() < 1){
+								$("#current-page").val(1);
+								$("#printSPage").val(1);
+		 						$("#printEPage").val(1);
+								setThumbnails(1, selectPage);
+							}
+							else if($("#current-page").val() > totalImgCnt){
+								$("#current-page").val(totalImgCnt);
+								$("#printSPage").val(totalImgCnt);
+		 						$("#printEPage").val(totalImgCnt);
+								setThumbnails(totalImgCnt, selectPage);
+							}
+						}
+					}
+				}
+			});
+
+			$("#ebook-page a").click(function(){
+				var proc = $(this).attr("href").substr(1);
+				var curImgCnt = $(".cnt span:first-child").text();
+				//init();
+				var totalImgCnt = 8;
+				if(proc == "F")
+					setThumbnails(1, selectPage);
+				else if(proc == "L")
+					setThumbnails(totalImgCnt, selectPage);
+				else if(curImgCnt > 1 && proc == "P")
+					setThumbnails(curImgCnt - 1, selectPage);
+				else if(curImgCnt < ebookThumbnails.length && proc == "N")
+					setThumbnails(curImgCnt * 1 + 1, selectPage);
+			});
+
+			$("#archive-contents ul li a").click(function(){
+				var curImgCnt = $(this).attr("href").substr(1);
+				//init();
+				setThumbnails(curImgCnt, selectPage);
+			});
+			
+			$("div#viewlist ul li a").click(function(){
+				var curImgCnt = $(this).attr("href").substr(1);
+				//init();
+				setThumbnails(curImgCnt, selectPage);
+			});
+			
+			var btnFirst = $("a.first");
+			var btnLast = $("a.last");
+			var btnPreP = $("a.prevpage");
+			var btnNexP = $("a.nextpage");
+			var btnPrev = $("a.prev");
+			var btnPre = $("a.pre");
+			var btnNext = $("a.next");
+			btnFirst.click(function(){
+				var curImgCnt = $("div#thumbnailarea ol li.selected a").attr("href").substr(1);
+				if(curImgCnt > 1){
+					//init();
+					setThumbnails(1, selectPage);
+				}
+				return false;
+			});
+			btnLast.click(function(){
+				var curImgCnt = $("div#thumbnailarea ol li.selected a").attr("href").substr(1);
+				var totalImgCnt =  8;
+				if(curImgCnt <= totalImgCnt){
+					//init();
+					setThumbnails(totalImgCnt, selectPage);
+				}
+				return false;
+			});
+			btnPreP.click(function(){
+				var curImgCnt = Math.floor($("div#thumbnailarea ol li.selected a").attr("href").substr(1)/10)*10;
+// 				var curImgCnt = Math.floor($("div#thumbnailarea ol li.selected a").attr("href").substr(1)/5)*5;
+				if(curImgCnt > 1){
+					//init();
+					setThumbnails(curImgCnt-9, selectPage);
+// 					setThumbnails(curImgCnt-4, 0);
+				}
+				return false;
+			});
+			btnNexP.click(function(){
+				var curImgCnt = Math.ceil($("div#thumbnailarea ol li.selected a").attr("href").substr(1)/10)*10+1;
+// 				var curImgCnt = Math.ceil($("div#thumbnailarea ol li.selected a").attr("href").substr(1)/5)*5+1;
+				var totalImgCnt =  8;
+				if(curImgCnt < totalImgCnt){
+					//init();
+					setThumbnails(curImgCnt, selectPage);
+				}
+				return false;
+			});
+			btnPrev.click(function(){
+				var curImgCnt = $("div#thumbnailarea ol li.selected a").attr("href").substr($("div#thumbnailarea ol li.selected a").attr("href").lastIndexOf("#")+1);
+				if(curImgCnt > 1){
+					//init();
+					setThumbnails(curImgCnt- 1, selectPage);
+				}
+				return false;
+			});
+			btnPre.click(function(){
+				var curImgCnt = $("div#thumbnailarea ol li.selected a").attr("href").substr($("div#thumbnailarea ol li.selected a").attr("href").lastIndexOf("#")+1);
+				if(curImgCnt > 1){
+					//init();
+					setThumbnails(curImgCnt- 1, selectPage);
+				}
+				return false;
+			});
+			btnNext.click(function(){
+				var curImgCnt = $("div#thumbnailarea ol li.selected a").attr("href").substr($("div#thumbnailarea ol li.selected a").attr("href").lastIndexOf("#")+1);
+				var totalImgCnt =  8;
+				var curPage = Math.floor((curImgCnt - 1) / 10) + 1;
+				if(curImgCnt < totalImgCnt){
+					//init();
+					setThumbnails(curImgCnt*1 + 1, curPage);
+				}else{
+					alert("해당 주제의 사진 슬라이드가 종료되었습니다");
+				}
+
+				return false;
+			});
+			/*
+			$(".watermark").click(function(){
+				if($(".waterMarkFlag").is(":checked") == true){
+					$(".waterMarkFlag").prop('checked', false) ;
+				}else{
+					$(".waterMarkFlag").prop('checked', true) ;
+				};
+			});
+			*/
+			
+			$("img").load(function(){
+				if($("img").src == null || $("img").src == ""){
+					$("#ebook-current").attr("onError", "javascript:this.src='../images/archWebViewerNoImageCurrent.jpg'");
+					//$("#ebook-current").attr("src", "../images/archWebViewerNoImageCurrent.jpg");
+				}
+			});
+			
+		});
+		
+		// 2018-09-28 (팝업용 다운로드)
+		function save_image(docTypeValue) {
+			
+			// 문서 종류
+			var docType = docTypeValue;
+			
+			/* 문서의 종류에 따라서 팝업창으로 JPG/PDF 다운로드를 제공하거나 아니면 팝업을 사용하지 않고 다이렉트로 JPG 저장 */
+			// 문서의 종류가 [B: 도면 / C : 사진/필름류 / 4 : 행정박물(기타)의 경우만 JPG 다이렉트 다운, 그 외에는 팝업창으로  JPG/PDF 다운로드 제공]
+			if(docType == 'B' || docType == 'C' || docType == '4') {
+								
+				var saveImageUrl = $("#viewimg").find("img").attr("src");
+				var saveImageStart = $("#viewimg").find("img").attr("src").indexOf("?") + 1;
+				var saveImageEnd = $("#viewimg").find("img").attr("src").indexOf("&");
+				//var waterMarkFlag = $(".waterMarkFlag").is(":checked");
+				var waterMarkFlag = $(".waterMarkFlag").val();
+				var waterMarkValue = "";
+				
+				if(waterMarkFlag != "01"){
+					waterMarkValue = "Y";
+				}else{
+					waterMarkValue = "N";
+				}
+				
+				var filePath = $("#viewimg").find("img").attr("src").substring(saveImageStart, saveImageEnd);
+				var originalFileType = filePath.substring(filePath.indexOf(".")+1);
+								
+				href = proxyPreFix + "/viewer/common/getArchWebViewerDown.do?" + filePath + "&fileExt=" + "jpg" + "&waterMarkFlag=" + waterMarkValue;		
+				
+				//다이렉트로 다운로드
+				//window.location.assign(href);
+				
+				//윈도우창으로 다운로드
+				//window.open(href,'_blank','width=500,height=150, scrollbars=no');
+				winDownModal = window.open('','_blank','width=500,height=150, scrollbars=no');
+				winDownModal.document.write("<center><p>파일을 다운로드 중 입니다.<br/>잠시만 기다려 주시기 바랍니다</p></center>");
+				winDownModal.location.href = href;
+			}else{
+				// PROTOTYPE FOR JQUERY UI POPUP
+				$.ui.dialog.prototype.options.autoReposition = true;
+				
+				$("#fileDownDialog").children().remove();			
+				
+				html = '<div class="tab_total">';
+				html += '<table style="width:100%;">';
+				html += '<tbody>';
+				html += '<tr>';
+				html += '<td class="category">파일 종류</td>';
+				html += '<td class="type"><input type="radio" id="jpg" name="saveoption" value="jpg" checked="checked"><label for="jpg"><i></i><span>JPG</span></label></td>';
+				//html += '<td class="type"><input type="radio" id="pdf" name="saveoption" value="pdf"><label for="pdf"> <i></i><span>PDF</span></label></td>';
+				html += '</tr>';
+				html += '</tbody>';
+				html += '</table>';
+				html += '</div>';
+				
+				$("#fileDownDialog").append(html);
+				
+				$("#fileDownDialog").find("input").checkboxradio();
+				$("#fileDownDialog").find("fieldset").controlgroup();
+				
+				$("#fileDownDialog").dialog({
+					modal: true,
+		            autoOpen: true,
+		            height: 250,
+		            width: 300,		            
+	                position: {
+		            	my:"top",
+	                    at:"top+35",
+	                    of:".jpg" 
+	                },
+	                autoReposition: true,
+		            resizable:false,
+		            draggable: false,
+		            drag: function( event, ui ) {},
+		            close: function (event, ui) {
+		            	 $("body").attr("oncontextmenu","return false").attr("onselectstart","return false").attr("ondragstart","return false");
+		            },
+		            open: function (event, ui) {
+		                var randval = "jpg";
+		                
+		                $("body").removeAttr("oncontextmenu").removeAttr("onselectstart").removeAttr("ondragstart");	                
+		                
+		                $("td[class='type']").find("input[type='radio']").removeAttr("class");
+		                $("td[class='type']").find("label").removeAttr("class");
+		                $("td[class='type']").find("label").find("span").removeAttr("class");
+		                $("#fileDownDialog").css("height","auto");
+		                
+		                //$('input[type=radio][name=saveoption]').prop("checked", false);
+		                //$('input[type=radio][name=saveoption][value="'+randval+'"]').prop('checked', true);
+		            },
+		            buttons: {
+	            	 	"취소": function() {
+		                	$( this ).dialog( "close" );	                    
+		                },
+		            	"저장": function() {
+		                	var checkedValue = $("input[type=radio][name=saveoption]:checked").val();
+		                	
+		                	if(checkedValue == undefined){
+		                		alert("저장방식을 선택하여 주세요");
+		                	}else{
+		                		var saveImageUrl = $("#viewimg").find("img").attr("src");
+		    					var saveImageStart = $("#viewimg").find("img").attr("src").indexOf("?") + 1;
+		    					var saveImageEnd = $("#viewimg").find("img").attr("src").indexOf("&");
+		    					//var waterMarkFlag = $(".waterMarkFlag").is(":checked");
+		    					var waterMarkFlag = $(".waterMarkFlag").val();
+		    					var waterMarkValue = "";
+		    					
+		    					if(waterMarkFlag != "01"){
+		    						waterMarkValue = "Y";
+		    					}else{
+		    						waterMarkValue = "N";
+		    					}
+		    					
+		    					var filePath = $("#viewimg").find("img").attr("src").substring(saveImageStart, saveImageEnd);
+		    					var originalFileType = filePath.substring(filePath.indexOf(".")+1);
+		    					
+		    					var winDownModal = null;
+		    					
+		    					if(checkedValue == "jpg") {
+		    						href = proxyPreFix + "/viewer/common/getArchWebViewerDown.do?" + filePath + "&fileExt=" + "jpg" + "&waterMarkFlag=" + waterMarkValue;
+		    						
+		    						//다이렉트로 다운
+		    						//window.location.assign(href);
+		    						
+		    						//윈도우창으로 다운
+		    						winDownModal = window.open('','_blank','width=500,height=150, scrollbars=no');
+		    						winDownModal.document.write("<center><p>파일을 다운로드 중 입니다.<br/>잠시만 기다려 주시기 바랍니다</p></center>");
+		    						winDownModal.location.href = href;
+		    					}else{
+		    						// CALLING PDF DOWNLOAD FUNCTION
+		    						// 기존 프로세스 사용 시...
+		    						//downPdf();
+		    						
+		    						// 새로운 프로세스 사용 시...
+		    						// 기존에 사용되던 프로세스에서 JPG 또는 PDF를 만드는 모듈만 교체 처리!
+		    						// 해당 프로세스 사용 시 저장 폴더는 R:\eBookTransferPdf2016 또는  R:\orignTransferPdf2016
+		    						downNewPdf();
+		    						
+		    						// 해당창에서 다운로드로 사용 시... 
+		    						// 해당 프로세스 사용 시 저장 폴더는 T:\VNX04\WebViewertifTemp
+		    						//href = "/viewer/common/getArchWebViewerDown.do?" + filePath + "&fileExt=" + "pdf" + "&waterMarkFlag=" + waterMarkValue;
+		    						
+		    						//다이렉트로 다운
+		    						//window.location.assign(href);		    						
+		    						//윈도우창으로 다운
+		    						//window.open(href,'_blank','width=500,height=150, scrollbars=no');
+		    					}	    					
+		    					
+		    					$( this ).dialog( "close" );
+		    					winDownModal.document.close();
+		                	}	                	
+		                }
+		            }
+				});	
+			}
+		}
+		
+		// 2018년 PDF 다운로드 함수
+		function downNewPdf(){
+			var href = "";
+			var archiveId = "";
+			var archiveEventId = "";
+			var singleData = "";
+			var waterMarkFlag = "";
+			var eId = "";
+			var setNum = "";
+			
+			if('0001647544' != null && '0001647544' != "" && ('0027975450' == "" || '0027975450' == null )){
+				archiveId = "archiveId=0001647544";
+			}
+			if('0027975450' != null && '0027975450' != ""){
+				archiveEventId = "archiveEventId=0027975450";
+			}
+			if('Y' != null && 'Y' != ""){
+				singleData = "&singleData=Y";
+			}
+			if($(".waterMarkFlag").val()!="01"){
+				waterMarkFlag = "&waterMark=Y";
+			}else{
+				waterMarkFlag = "&waterMark=N";
+			}
+			if('' != null && '' != ""){
+				eId = "&eId=";
+			}
+			if('' != null && '' != ""){
+				setNum = "&setNum=";
+			}
+			href = proxyPreFix + "/viewer/common/getArchWebViewerPdfDown.do?"+archiveId+archiveEventId+singleData+waterMarkFlag+eId+setNum;
+			//window.open(href,'_blank','width=500,height=150, scrollbars=no');
+			
+			winDownModal = window.open('','_blank','width=500,height=150, scrollbars=no');
+			winDownModal.document.write("<center><p>파일을 다운로드 중 입니다.<br/>잠시만 기다려 주시기 바랍니다</p></center>");
+			winDownModal.location.href = href;
+		};
+		
+		function downPdf(){
+			var href = "";
+			var archiveId = "";
+			var archiveEventId = "";
+			var singleData = "";
+			var waterMarkFlag = "";
+			var eId = "";
+			var setNum = "";
+			
+			if('0001647544' != null && '0001647544' != "" && ('0027975450' == "" || '0027975450' == null )){
+				archiveId = "archiveId=0001647544";
+			}
+			if('0027975450' != null && '0027975450' != ""){
+				archiveEventId = "archiveEventId=0027975450";
+			}
+			if('Y' != null && 'Y' != ""){
+				singleData = "&singleData=Y";
+			}
+			if($(".waterMarkFlag").val()!="01"){
+				waterMarkFlag = "&waterMark=Y";
+			}else{
+				waterMarkFlag = "&waterMark=N";
+			}
+			if('' != null && '' != ""){
+				eId = "&eId=";
+			}
+			if('' != null && '' != ""){
+				setNum = "&setNum=";
+			}
+			
+			href = proxyPreFix + "/viewer/common/pdfDown.do?"+archiveId+archiveEventId+singleData+waterMarkFlag+eId+setNum;
+			window.open(href,'_blank','width=500,height=150, scrollbars=no');
+		};
+		
+		
+
+		
+		function mkPdf(){
+			 var maskHeight = $(document).height();  
+		     var maskWidth = $(window).width();  
+		     //$('#mask').css({'width':maskWidth,'height':maskHeight});  
+		     //$('#mask').fadeTo("slow",0.5);
+		     $("#pop_layer_loading").css("visibility","visible");
+		};
+		
+		
+		function mkPdfClose(){
+			 $("#pop_layer_loading").css("visibility","hidden");
+			 //$('#mask').fadeOut("slow",10);
+		};
+		
+		// RESIZE
+		$(window).resize(function (){
+			console.log("RESIZE...");
+			$(".ui-dialog-content:visible").each(function () {
+	            if ($(this).dialog('option', 'autoReposition')) {
+	                $(this).dialog('option', 'position', $(this).dialog('option', 'position'));
+	            }
+	        });
+			var ext = getCookie('ext');
+			if(ext == 'PDF')
+			{
+				var pdfAreaBox = $("#pdfviewarea").find(".pdfobject").length;
+				if(pdfAreaBox > 0){
+					//var height = $(".pdfobject").height();  
+					//$('#downarea').css("height",height+"px");
+					//$('#footer').css("position","absolute");
+				}
+				else
+				{
+					//$('#downarea').css("height","94%");
+				}
+			}
+		});	
+		
+		var doubleSubmitFlag = false;
+		function doubleSubmitCheck()
+		{
+			if(doubleSubmitFlag)
+			{
+				return doubleSubmitFlag;	
+			}
+			else
+			{
+				doubleSubmitFlag = true;
+				return false;
+			}
+		}
+		
+		function pdfVieW(){
+			
+			if(doubleSubmitCheck())
+				return;
+		
+			var href = "";
+			var archiveId = "";
+			var archiveEventId = "";
+			var singleData = "";
+			var waterMarkFlag = "";
+			var eId = "";
+			var setNum = "";
+			
+			if('0001647544' != null && '0001647544' != "" && ('0027975450' == "" || '0027975450' == null )){
+				archiveId = "archiveId=0001647544";
+			}
+			if('0027975450' != null && '0027975450' != ""){
+				archiveEventId = "archiveEventId=0027975450";
+			}
+			if('Y' != null && 'Y' != ""){
+				singleData = "&singleData=Y";
+			}
+			if($(".waterMarkFlag").val()!="01"){
+				waterMarkFlag = "&waterMark=Y";
+			}else{
+				waterMarkFlag = "&waterMark=N";
+			}
+			if('' != null && '' != ""){
+				eId = "&eId=";
+			}
+			if('' != null && '' != ""){
+				setNum = "&setNum=";
+			}
+			
+			var ext = getCookie('ext');
+			console.log(ext);
+			if(ext){
+				if('' != ext){
+					delCookie('ext');
+					setCookie('ext','PDF','365');
+				}
+			console.log(ext);
+			}
+			var pdfAreaBox = $("#pdfviewarea").find(".pdfobject").length;
+			var option = {
+					pdfOpenParams:{
+						navpanes:0,
+						toolbar:1,
+						statusbar:1,
+						view:'FitV'
+					}
+			};	
+			var agent = navigator.userAgent.toLowerCase();
+			console.log(agent);
+			console.log(archiveId);
+			console.log(archiveEventId);
+			console.log(singleData);
+			console.log(waterMarkFlag);
+			console.log(eId);
+			console.log(setNum);
+			//$('#pdfviewarea:not(:has(.embed_pdf_area))').append('<embed style="width:100%; height:100%;" class="embed_pdf_area" src="/viewer/common/mkPdfTemp.do?' + archiveId+archiveEventId+singleData+waterMarkFlag+eId+setNum + '" type="application/pdf"/>');
+			pdfviewer();
+			
+			if(self.name != 'reload')
+			{									
+				if(pdfAreaBox == 0){
+					
+					if(agent.indexOf("chrome") != -1)
+					{
+						// AJAX 요청해서 파일 생성 후 완료되면 pdfviewarea에 append 처리
+						$.ajax({
+						    url: proxyPreFix + '/viewer/common/mkPdfInfoSend.do?' + archiveId+archiveEventId+singleData+waterMarkFlag+eId+setNum,
+						    crossDomain: true,
+						    method: 'GET',
+						    beforeSend: function() {
+						    	$("#pop_layer_loading").css("visibility","visible");
+						    	console.log("LOADING...");
+						    },
+						    success: function(result) {
+						    	if(result.status == "success"){
+						    		$("#pop_layer_loading").css("visibility","hidden");
+							    	$('#pdfviewarea').empty();					    
+							    	$('#pdfviewarea').append('<embed style="width:100%; height:100%;" class="embed_pdf_area" src="' + proxyPreFix + '/viewer/common/mkPdfTemp.do?' + archiveId+archiveEventId+singleData+waterMarkFlag+eId+setNum + '" type="application/pdf"/>');
+							    	//PDFObject.embed("/viewer/common/mkPdfTemp.do?" + archiveId+archiveEventId+singleData+waterMarkFlag+eId+setNum, "#pdfviewarea", option);
+						    	}else{
+						    		$("#pop_layer_loading").css("visibility","hidden");
+						    		alert("현재 PDF 변환서비스를 지원하지 않습니다. JPG로 열람 바랍니다.");
+						    		//alert("변환 도중 오류가 발생하였습니다. 잠시 후 다시 시도하여 주시기 바랍니다");
+						    	}
+						    },
+						    error : function(e) {
+						    	console.log(e);
+
+						    	$("#pop_layer_loading").css("visibility","hidden");
+						    	alert("현재 PDF 변환서비스를 지원하지 않습니다. JPG로 열람 바랍니다.");
+						    	//alert("변환 도중 오류가 발생하였습니다. 잠시 후 다시 시도하여 주시기 바랍니다");
+						    }
+						});
+					}
+					else if(agent.indexOf("firefox") != -1){
+						//FIREFOX 브라우저 일때 처리
+						$("#pop_layer_loading").css("visibility","visible");
+						mkPdf();
+						$('#pdfviewarea').empty();
+						//PDFObject.embed("/viewer/common/mkPdfTest.do", "#pdfviewarea", option);
+						//PDFObject.embed("/viewer/common/mkPdfTemp.do?" + archiveId+archiveEventId+singleData+waterMarkFlag+eId+setNum, "#pdfviewarea", option);
+											    
+						$('#pdfviewarea').append('<embed style="width:100%; height:100%;" class="embed_pdf_area" src="' + proxyPreFix + '/viewer/common/mkPdfTemp.do?' + archiveId+archiveEventId+singleData+waterMarkFlag+eId+setNum + '" type="application/pdf"/>');
+						//$('#footer').css("position","absolute");
+						pdfviewer();
+						//mkPdfClose();
+						$.ajax({
+							xhr:function()
+							{
+								var xhr = new window.XMLHttpRequest();
+								xhr.addEventListener("progress", function(evt){
+									if(evt.lengthComputable)
+									{
+										var percentComplete = evt.loaded /evt.total;
+										
+										console.log(percentComplete);
+									}
+								}, false);
+							},
+							complete:function()
+							{
+								$("#pop_layer_loading").css("visibility","hidden");
+							
+								console.log("IS_DONE");
+							
+								mkPdfClose();
+							}
+						});
+					}
+					else
+					{
+						// IE 브라우저의 ACTIVEX ACROBAT READER 플러그인 체크!
+						var getActiveXObject = function(name) {
+							try{
+								return new ActiveXObject(name);
+							}catch(e){
+								console.log(e);
+							}
+						}
+						
+						var getPDFPlugin = function() {
+							return this.plugin = this.plugin || function() {
+								return getActiveXObject('AcroPDF.PDF') || getActiveXObject('PDF.PdfCtrl');
+							}();
+						}
+						
+						var isAcrobatInstalled = function() {
+							return !!getPDFPlugin();
+						}
+						
+						if(isAcrobatInstalled()){
+							$("#pop_layer_loading").css("visibility","visible");
+							mkPdf();
+							$('#pdfviewarea').empty();
+							//PDFObject.embed("/viewer/common/mkPdfTest.do", "#pdfviewarea", option);
+							//PDFObject.embed("/viewer/common/mkPdfTemp.do?" + archiveId+archiveEventId+singleData+waterMarkFlag+eId+setNum, "#pdfviewarea", option);
+												    
+							$('#pdfviewarea').append('<embed style="width:100%; height:100%;" class="embed_pdf_area" src="' + proxyPreFix + '/viewer/common/mkPdfTemp.do?' + archiveId+archiveEventId+singleData+waterMarkFlag+eId+setNum + '" type="application/pdf"/>');
+							//$('#footer').css("position","absolute");
+							pdfviewer();
+							//mkPdfClose();
+							$.ajax({
+								xhr:function()
+								{
+									var xhr = new window.XMLHttpRequest();
+									xhr.addEventListener("progress", function(evt){
+										if(evt.lengthComputable)
+										{
+											var percentComplete = evt.loaded /evt.total;
+											
+											console.log(percentComplete);
+										}
+									}, false);
+								},
+								complete:function()
+								{
+									$("#pop_layer_loading").css("visibility","hidden");
+								
+									console.log("IS_DONE");
+								
+									mkPdfClose();
+								}
+							});
+						}
+						else
+						{
+							alert("Acrobat Reader를 설치한 후 다시 시도하여 주십시오.");
+							jpgView();
+						}
+					}
+				}					
+			}
+			else
+			{
+				self.name ="";
+			}
+		};
+		
+		// PDF VIEWER 이용
+		function pdfviewer(){
+			delCookie('ext');
+			setCookie('ext','PDF','30');
+		
+			$('.bookmark').hide();
+			$('#viewlist').hide();
+			$('#viewarea').hide();
+			$('.pagenum').hide();
+			$('.zoomplus').hide();
+			$('.select').hide();
+			$('.zoomminus').hide();
+			$('.rotateleft').hide();
+			$('.rotateright').hide();
+			$('.imgwidth').hide();
+			$('.imgheight').hide();
+			$('.url').hide();
+			$('.download').hide();
+			$('.print').hide();
+			$('.printselect').hide();
+			$('.watermark').hide();		
+			$('#ie78msg').css("min-width","1px");
+			$('#ie78msg').css("min-height","1px");
+			$('#wrap').css("min-width","1px");
+			$('#wrap').css("min-height","1px");
+			$('#pdfviewarea').show();
+		};
+		
+		// JPG VIEWER 이용
+		function jpgView(){
+			// 2019.01.18 FIX
+			// JPG VIEW 버튼 클릭 시 PDF 더블 클릭 방지 값 초기화
+			doubleSubmitFlag = false;
+			
+			delCookie('ext');
+			setCookie('ext','JPG','30');
+			var imgRelaW = $("#viewimg .viewreal > img#ebook-current").naturalWidth(); //현재이미지 실제 물리적 크기
+			var imgRelaH = $("#viewimg .viewreal > img#ebook-current").naturalHeight();
+			var viewImgW = $("#viewimg .viewreal > img#ebook-current").width(); //현재이미지 크기 style로 선언된 크기
+			var viewImgH = $("#viewimg .viewreal > img#ebook-current").height();
+			var viewrealW = $("#viewimg .viewreal").outerWidth(); //이미지 표현영역 크기
+			var viewrealH = $("#viewimg .viewreal").outerHeight();	
+			$("#pop_layer_loading").css("visibility","hidden");
+			$("#viewimg .viewreal > img#ebook-current").css("height", viewrealH * 0.99);
+			$("#viewimg .viewreal > img#ebook-current").css("width", "auto");
+			$("#toparea .function span.zoomnum").text(Math.ceil(viewrealH/imgRelaH * 100)+"%");
+			$("#toparea .function .selectopen").css("display","none");
+			$('.bookmark').show();
+			$('#viewlist').show();
+			$('#viewarea').show();
+			$('#viewarea').css("width","81%");
+			$('.pagenum').show();
+			$('.zoomplus').show();
+			$('.select').show();
+			$('.zoomminus').show();
+			$('.rotateleft').show();
+			$('.rotateright').show();
+			$('.imgwidth').show();
+			$('.imgheight').show();
+			$('.url').show();
+			$('.download').show();
+			$('.print').show();
+			$('.printselect').show();
+			$('.watermark').show();
+			$('#ie78msg').css("min-width","1280px");
+			$('#ie78msg').css("min-width","800px")
+			$('#wrap').css("min-width","1280px");
+			$('#wrap').css("min-height","800px");
+			$('#pdfviewarea').hide();
+			//$('#pdfviewarea').empty();
+			//$('#ebook-current').load();			
+			$("#selectopen .zoom40").trigger("click");
+		};
+		
+		var omitformtags = [ "input", "textarea", "select" ]
+		omitformtags = omitformtags.join("|")
+		function disableselect(e) {
+			if (omitformtags.indexOf(e.target.tagName.toLowerCase()) == -1)
+				return falsec
+		}
+		function reEnable() {
+			return true
+		}
+		if (typeof document.onselectstart != "undefined")
+			document.onselectstart = new Function("return false")
+		else {
+			document.onmousedown = disableselect
+			document.onmouseup = reEnable
+		}
+	</script>
+	
+	
+	<script type="text/javascript">
+
+	/*김경민*/
+	function closeLayer( obj ){
+		$(obj).parent().parent().hide(); 
+	}
+	
+	
+	$(function(){
+		$('.download').click(function(e){
+				var sWidth = window.innerWidth;
+				var sHeight = window.innerHeight;
+		
+				var oWidth = $('.popupLayer').width();
+				var oHeight = $('.popupLayer').height();
+		
+				// 레이어가 나타날 위치를 셋팅한다.
+				var divLeft = 330;
+				var divTop = 34;
+		
+				// 레이어가 화면 크기를 벗어나면 위치를 바꾸어 배치한다.
+				if( divLeft + oWidth > sWidth ) divLeft -= oWidth;
+				if( divTop + oHeight > sHeight ) divTop -= oHeight;
+		
+				// 레이어 위치를 바꾸었더니 상단기준점(0,0) 밖으로 벗어난다면 상단기준점(0,0)에 배치하자.
+				if( divLeft < 0 ) divLeft = 0;
+				if( divTop < 0 ) divTop = 0;
+		
+				$('.popupLayer').css({
+					"top": divTop,
+					"left": divLeft,
+					"position": "absolute"
+				}).show(); 
+			});
+	});
+	/* 김경민 */
+	
+	function down(){
+		var format = $('input[name="downcheck"]:checked').val();
+		var docType = $('#docType').val();
+		if("JPG" == format){
+			save_image(docType);
+		}else{
+			downNewPdf();
+		}
+	}
+
+	
+	
+	
+	function thumbToggle(){
+		if($("div#thumbnailarea ol ").css("display") == "block" ){
+			$("div#thumbnailarea ol ").css("display","none");
+			$("div#thumbnailarea .boardpage").css("display","none");
+			$("div#thumbnailarea").css("min-height","0px");
+			$("div#thumbnailarea").css("height","1%");
+			$("div#thumbnailarea .thumbnail_btn a").css("width","32px");
+			$("div#thumbnailarea .thumbnail_btn a").css("height","32px");
+			$("div#thumbnailarea .thumbnail_btn a").css("top","-401%");
+			$("div#thumbnailarea .thumbnail_btn a").css("background","url(../images/up_arrow_gray.png) no-repeat center 0 #fff");
+			$("#downarea #viewarea > div:first-child").css("height","92%");
+		}else{
+			$("div#thumbnailarea ol ").css("display","block");
+			$("div#thumbnailarea .boardpage").css("display","block");
+			$("div#thumbnailarea").css("min-height","170px");
+			$("div#thumbnailarea").css("height","19%");
+			$("div#thumbnailarea .thumbnail_btn a").css("width","32px");
+			$("div#thumbnailarea .thumbnail_btn a").css("height","32px");
+			$("div#thumbnailarea .thumbnail_btn a").css("top","-20%");
+			$("div#thumbnailarea .thumbnail_btn a").css("background","url(../images/down_arrow_gray.png) no-repeat center 0 #fff");
+			$("#downarea #viewarea > div:first-child").css("height","73%");
+		}
+		
+		var imgRelaW = $("#viewimg .viewreal > img#ebook-current").naturalWidth(); //현재이미지 실제 물리적 크기
+		var imgRelaH = $("#viewimg .viewreal > img#ebook-current").naturalHeight();
+		var viewImgW = $("#viewimg .viewreal > img#ebook-current").width(); //현재이미지 크기 style로 선언된 크기
+		var viewImgH = $("#viewimg .viewreal > img#ebook-current").height();
+		var viewrealW = $("#viewimg .viewreal").outerWidth(); //이미지 표현영역 크기
+		var viewrealH = $("#viewimg .viewreal").outerHeight();	
+		
+		$("#viewimg .viewreal > img#ebook-current").css("height", viewrealH * 0.99);
+		$("#viewimg .viewreal > img#ebook-current").css("width", "auto");
+		$("#toparea .function span.zoomnum").text(Math.ceil(viewrealH/imgRelaH * 100)+"%");
+		$("#toparea .function .selectopen").css("display","none");
+	}
+	</script>
+	
+</head>
+<body id="body" oncontextmenu='return false' onselectstart='return false' ondragstart='return false'>
+<script  type="text/javascript">
+var v = ieVersionChk();
+
+if ( v == 7 || v == 8) {
+	$("#body").append( '<div id="ie78msg">' +
+			'<div class="msg">'+
+			'	현재 사용하시는 인터넷브라우저에서는 기능이 정상적으로 표시되지 않을 수 있습니다. <br>최신 웹브라우저(Internet Explorer 11, 크롬 브라우저 등)로 업그레이드 해주세요.<br><a href="http://windows.microsoft.com/ko-KR/internet-explorer/download-ie" title="Microsoft 사이트로 이동">Internet Explorer 11 업그레이드 바로가기</a>&nbsp;&nbsp;<a href="http://www.google.com/chrome" title="크롬 브라우저 다운로드 사이트로 이동">크롬 브라우저 다운로드 바로가기</a>'+
+			'</div>'+
+			'<div class="close"><a href="#ie78msg">메세지 닫기</a></div>'+
+			'</div>');
+};
+
+</script>
+
+<div id="wrap">
+	<!--상단 시작-->
+	<div id="toparea">
+		<h1><img src="/viewer/images/webviewer_top_logo.jpg" alt="국가기록원 Viewer"></h1>
+		<div class="bookmark">
+			<a href="#viewlist" title="북마크닫기" class="on">북마크</a>
+		</div>
+		<div class="pagenum">
+			<a class="first" title="처음으로">처음</a><a class="pre"  title="이전으로">이전</a><span class="paging"><label for="current-page">이동페이지</label><input type="text" id="current-page" value="1"> / <span id="totCnt"></span></span><a class="next" title="다음으로">다음</a><a class="last" title="끝으로">끝</a>
+		</div>
+<!-- 		<div id="progressCounter">로딩바테스트</div> -->
+		<div class="function">
+			<a class="zoomminus" title="축소">축소</a>
+			<div class="select">
+				<span class="selecttext"><span class="zoomnum">%</span></span><a href="#selectopen" title="항목열기">항목열기</a>
+			</div>
+			<div class="selectopen" id="selectopen">
+				<ul>
+					<li><a class="zoom500" title="500% 확대보기">500%</a></li>
+					<li><a class="zoom400" title="400% 확대보기">400%</a></li>
+					<li><a class="zoom300" title="300% 확대보기">300%</a></li>
+					<li><a class="zoom200" title="200% 확대보기">200%</a></li>
+					<li><a class="zoom100" title="100% 보기">100%</a></li>
+					<li><a class="zoom80" title="80% 축소보기">80%</a></li>
+					<li><a class="zoom60" title="60% 축소보기">60%</a></li>
+					<li><a class="zoom40" title="40% 축소보기">40%</a></li>
+					<li><a class="zoom20" title="20% 축소보기">20%</a></li>
+				</ul>
+			</div>
+			<a class="zoomplus" title="확대">확대</a>
+			<a class="rotateright" title="오른쪽 회전">오른쪽 회전</a><a class="rotateleft" title="왼쪽 회전">왼쪽 회전</a>
+			<a class="imgwidth" title="페이지너비에 맞추기">페이지너비에 맞추기</a><a class="imgheight" title="페이지높이에 맞추기">페이지높이에 맞추기</a>
+			<a class="url" title="URL 복사" onclick="copy_traceback();">URL 복사</a>
+			
+			<!-- 공공누리마크가 있을 시에만 다운로드
+				JPG, PDF * 일반문서류, 카드류, 국무회의록, 정부간행물, 일반도서, 간행물, 총독부간행물
+    			JPG ONLY > ** 도면류, 사진/필름류, 행정박물(기타)
+			 -->
+			<!--문서의 종류가 [B: 도면 / C : 사진/필름류 / 4 : 행정박물(기타)의 경우만 JPG 다이렉트 다운, 그 외에는 팝업창으로  JPG/PDF 다운로드 제공]  -->			 
+			
+						
+			<a class="print" onclick="printAll('0027975450','0001647544','','','Y');" title="전체인쇄">전체인쇄</a>
+			<a class="printselect" href="#input-page" title="부분인쇄">부분인쇄</a>
+			<input type="hidden" class="waterMarkFlag" id="waterMark" value="" title="워터마크 출력" alt="워터마크 출력"/>
+			<!--<a class="watermark" title="워터마크 출력" alt="워터마크 출력"><input class="waterMarkFlag" id="waterMark" type="checkbox" title="워터마크 출력" alt="워터마크 출력"/><label for="waterMark">워터마크 출력</label></a>  -->
+			<!--문서의 종류가 [B: 도면 / C : 사진/필름류 / 4 : 행정박물(기타)의 경우만 JPG 다이렉트 다운, 그 외에는 팝업창으로  JPG/PDF 다운로드 제공]  -->
+			
+				
+					<a class="tab_jpg" title="JPG" alt="JPG" onclick="jpgView();">JPG</a>
+				
+				
+			
+		</div>
+		
+		<div id="input-page">
+			<span>페이지 범위 입력</span><br>
+			<label for="printSPage">페이지 범위</label><input type="text" id="printSPage" />&nbsp;~&nbsp;<input type="text" id="printEPage" /><input type="button" id="print-page" value="출력" onclick="printPart('0027975450', '0001647544', '', '');">
+			<a class="close">닫기</a>
+			
+		</div>
+	</div>
+	<!--상단 끝//-->
+	<!--하단시작-->
+	<div id="downarea">
+		<!--목록 시작-->
+		<div id="viewlist">
+			<h2><span>북마크 목록</span></h2>
+			<ul>
+								
+					
+					
+					<li name="bm1"><a href="#1" onclick="bmSelect('0', '1')">표준자오선변경에관한건(대통령령제876호)</a></li>
+										
+				
+			</ul>
+		</div>
+		<!--목록 끝//-->
+		<!--기록물 영역 시작-->
+		
+		<div id="viewarea" class="tab-1"">
+			<div id="viewimg">
+				<a class="prev" href="#none">이전페이지이동</a>
+				<div class="viewreal dragon">
+					<!-- <img id="ebook-current"> -->
+					<img src="" alt="" id="ebook-current">
+				</div>
+				<a class="next" href="#none">다음페이지이동</a>
+			</div>
+			
+			<div id="thumbnailarea">
+				<div class="thumbnail_btn">
+					<a href="javascript:thumbToggle();" ></a>
+				</div>
+				<ol>
+				</ol>
+				<div class="boardpage" style="display:block; ">
+				</div>
+			</div>
+			
+			<div style="top:40%; width: 100%; text-align: center; vertical-align: bottom; position: absolute;">
+				<img src="../images/mark_blue_small.png">
+			</div>
+			
+		</div>
+		
+		<!-- <div class="text-center" id="mask" style="background-color: #404040;;width:100%;height:100%;visibility: visible;display: none;position:absolute;text-align: center;z-index: 1000;">
+		 <img id="maskimg" src="/viewer/images/loading_img.gif" data-holder-rendered="true" style="width: 135px; height: 115px;margin-top:10%; text-align: center;z-index: 1000;" />
+		</div> -->
+		<div id="pdfviewarea" class="tab-3" style="width:100%; height:98.5%; display:none; ">
+			파일을 생성중입니다. 창을 닫지 마세요.
+		</div>
+		<!--기록물 영역 끝//-->
+	</div>
+	<!--하단 끝//-->
+</div><!-- end wrap -->
+<div id="mask"></div>
+<div id="pop_layer_loading">파일을 생성중입니다. 창을 닫지 마세요.</div>
+<div id="fileDownDialog" title="파일종류를선택하세요" style="display:none;"></div>
+<!--푸터영역 시작-->
+<footer id="footer">Copyright (c) National Archives of Korea 2006 all rights reserved.</footer>
+<!--푸터영역 끝//-->
+</body>
+</html>

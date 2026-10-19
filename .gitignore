@@ -21,3 +21,6 @@ web/*.tsbuildinfo
 
 # Large, verified external ephemeris (restore by manifest; never application data)
 research/validation/.ephemeris-cache/
+
+# Full primary-source PDFs; page images and hashes are committed instead.
+research/validation/.reference-cache/

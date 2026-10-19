@@ -1,0 +1,36 @@
+{
+  "sourceId": "yuanhai-1926-ntl-9900014379",
+  "title": "評註淵海子平 卷一 (淵海子平子平真詮 v.1)",
+  "edition": "文明, 1926; 秦慎安 校勘 (catalog metadata)",
+  "holdingInstitution": "國立臺灣圖書館",
+  "catalogId": "NTL-9900014379",
+  "catalogUrl": "https://taiwanebook.ncl.edu.tw/zh-tw/book/NTL-9900014379",
+  "descriptionUrl": "https://commons.wikimedia.org/wiki/File:NTL-9900014379_淵海子平子平真詮_v.1.pdf",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/f/fa/NTL-9900014379_%E6%B7%B5%E6%B5%B7%E5%AD%90%E5%B9%B3%E5%AD%90%E5%B9%B3%E7%9C%9F%E8%A9%AE_v.1.pdf",
+  "retrievedOn": "2026-10-19",
+  "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+  "pdfBytes": 90837030,
+  "rights": "Public domain scan per Wikimedia Commons; 1926 edition. No modern translation copied.",
+  "extraction": "Original full-page embedded images extracted with pypdf; no crop or retouch. PDF page numbers are 1-based. Full 86.63 MiB PDF not committed.",
+  "pages": [
+    {
+      "file": "yuanhai-1926-page-23.jpg",
+      "pdfPage": 23,
+      "printedPage": 3,
+      "sha256": "f70b233eae1d1dd7c0585c75f319721ebf50a06abc83e70954a70ff98cd69ab6"
+    },
+    {
+      "file": "yuanhai-1926-page-25.jpg",
+      "pdfPage": 25,
+      "printedPage": 5,
+      "sha256": "1d15a3bf92f716344a4e334e7989b72eca85bb3771c552fe11ed6cd875632184"
+    },
+    {
+      "file": "yuanhai-1926-page-26.jpg",
+      "pdfPage": 26,
+      "printedPage": 6,
+      "sha256": "4511cb273527e970d0292938f95465d3fdc6dcb85f55c5b25ec8027b9d4894d4"
+    }
+  ],
+  "transcriptionSha256": "8e8cb3351ec4ec4f9133360674d1ba7457d255930a8b3c56bf646c1637759397"
+}

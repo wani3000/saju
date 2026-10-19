@@ -16,5 +16,23 @@
     "url": "https://theme.archives.go.kr/next/monthly/viewMain.do?month=03&year=2011",
     "retrievedOn": "2026-10-19",
     "sha256": "fde4ed4de50610a0da4302d4e1b8278ca835c6504ce77d68674e6a7b0759bf47"
+  },
+  {
+    "file": "gazette-1954-1074-page-1.jpg",
+    "url": "https://theme.archives.go.kr/viewer/common/archWebViewerStream.do?filePath=R:/EBOOK//R/gazette-ebook-20061019/1954/eBook_Contents/ba0185690/ba0185690_1.jpg&pageInfo=1",
+    "retrievedOn": "2026-10-19",
+    "sha256": "50d04bc96919e092eb07d56424e8a6fdee6b61aa4a7487b1b40a9be02f576798"
+  },
+  {
+    "file": "gazette-1954-viewer.html",
+    "url": "https://theme.archives.go.kr/viewer/common/archWebViewer.do?singleData=Y&archiveEventId=0027975450",
+    "retrievedOn": "2026-10-19",
+    "sha256": "2386813290538a232a042521b898c0946b9a83c2f309bf754ed7d3e2816642c9"
+  },
+  {
+    "file": "archives-1954-meridians.jpg",
+    "url": "https://theme.archives.go.kr/viewer/common/archWebViewerStream.do?filePath=N:/ARCHIVE_FILE/01/G/BG0000054/200400003731/000000000069/000821/BG0000054.TIFF&pageInfo=1",
+    "retrievedOn": "2026-10-19",
+    "sha256": "5887d9c9a91528d2d8abb230bb9bbcd46c3aeabbdc9f7b3ff43df85ef45d67b9"
   }
 ]

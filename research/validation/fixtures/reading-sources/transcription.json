@@ -1,0 +1,13 @@
+{
+  "sourceId": "yuanhai-1926-ntl-9900014379",
+  "reviewedBy": "Codex",
+  "reviewedOn": "2026-10-19",
+  "scope": "Manual visual collation of selected definitions only; not expert interpretation approval",
+  "normalization": "Selected base-text phrases; punctuation and spacing added. 巳/已-looking print normalized to the branch 巳 by context; side commentary omitted. No modern translation copied.",
+  "sections": [
+    {"id": "stem-combinations", "pdfPage": 23, "printedPage": 3, "heading": "天干相合", "text": "甲與己合；乙與庚合；丙與辛合；丁與壬合；戊與癸合。"},
+    {"id": "stem-elements", "pdfPage": 23, "printedPage": 3, "heading": "十干所屬方位十二支所屬論", "text": "甲乙屬木；丙丁屬火；戊己屬土；庚辛屬金；壬癸屬水。"},
+    {"id": "branch-combinations", "pdfPage": 25, "printedPage": 5, "heading": "論十二支六合", "text": "子與丑合土；寅與亥合木；卯與戌合火；辰與酉合金；巳與申合水；午與未合。", "note": "午未 entry continues with a small-print explanation about 太陽/太陰. We extract pair membership only; no resulting element is assigned to any combination."},
+    {"id": "branch-clashes", "pdfPage": 26, "printedPage": 6, "heading": "論十二支相冲", "text": "子午相冲；寅申相冲；卯酉相冲；辰戌相冲；巳亥相冲；丑未相冲。", "note": "Nearby commentary and other sections are not treated as approved outcome predictions or a conflict-resolution algorithm."}
+  ]
+}

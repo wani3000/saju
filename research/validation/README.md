@@ -83,3 +83,18 @@ python3 -m venv /tmp/saju-ephemeris
 `python3 check-time-standards.py`는 저장한 IANA 2025b 원본을 zic로 임시 컴파일하고 기존 28개 전환·1,918개 입력과 비교한다. 호스트 tzdata에 의존하지 않으며 같은 출처의 재현 검증이다. `time-scales.mjs`는 고정 IERS 표의 유효 범위에서만 TT→UTC를 계산한다. 1972년 이전과 윤초 자체는 거절하며 웹 런타임에 포함하지 않는다.
 
 전체 연구 테스트 57개에는 현대 UTC 월 경계 660건/전후 1,320입력, 전환 누락·중복 분 1,533건, 자정 정책의 43,465일 주기 전개 검사가 추가됐다. 국가기록원과 IANA의 1954 전환 시각 차이로 새 어댑터는 v5 보호를 적용한다. 기존 v4는 baseline-v4.mjs에 보존했다. [출처 차이와 한계](../../docs/historical-clock-validation.md)를 읽고 재현 성공을 역사 정확도 승인으로 간주하지 않는다.
+
+## 관보 원본과 명리 규칙 정의 (2026-10-19 후속)
+
+1954년 관보 원본의 00:30 문구를 확인했다. `compare-1954-clocks.mjs`는 IANA와 종전 시계 00:30 가설을 명시적으로 비교하며 앱 시간표를 교체하지 않는다. [관보 판정](../../docs/gazette-1954-review.md)을 따른다.
+
+`reading-rules.mjs`와 `reading-analysis.mjs`는 1926년 판본 스캔에서 대조한 천간 오행 배속 및 합·충 17쌍을 연구 프로필에 적용한다. 일치 위치·후보 공통성·출처를 남기되 합화·강약·성격·궁합 점수를 추론하지 않는다. 앱과 연결하지 않는다. [명리 규칙 감수](../../docs/reading-rules-review.md)에 적용 범위와 후속 조건을 기록했다.
+
+```sh
+node research/validation/audit-reading-rules.mjs --check
+pnpm --dir research/validation test
+# 승인 미완료: 종료 코드 2
+node research/validation/audit-reading-rules.mjs --release-check
+```
+
+전체 연구 68개 테스트에는 2,880분 역사 모델 비교, 244개 기호 짝, 3,600쌍 A/B 대칭, 시간 모름·경계 후보·음양력 대응과 합성 감수 보고서 6개 재현을 포함한다. CI는 저장된 전체 페이지 이미지와 전사의 해시를 오프라인 검사한다. 원문 수기 판독과 명리적 해석 자체를 자동 증명하는 검사가 아니다.
