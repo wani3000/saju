@@ -70,3 +70,5 @@
 프로젝트 루트에서 `python3 tools/check_docs.py`로 문서 연결을 확인한다. 이 검사는 문서만 확인하며 앱·DB·결제 테스트가 아니다.
 
 오월 29일의 추가 판본 대조와 중화·다섯 합의 출처별 조건은 [후속 감수](docs/extended-source-review.md)에 정리했다. [21사례 보고서](research/validation/reports/extended-source-drafts.md)는 원문 사례 및 조건 검토이며 운영 강약·합화 엔진의 승인이 아니다.
+
+시상 왕기의 선호 시주, 토 합화의 조건부 파상·자조, 일반 중화 관계 관찰은 [후속 감수](docs/hour-balance-review.md)와 [19사례 보고서](research/validation/reports/hour-balance-drafts.md)에 추가했다. 원문 예시 일치와 최종 강약·합화 판정은 구분한다.

@@ -1,0 +1,72 @@
+{
+  "sources": [
+    {
+      "sourceId": "sanming-1926",
+      "title": "三命通會",
+      "publicationDate": "1926",
+      "publisher": "文明書局",
+      "metadataUrl": "https://commons.wikimedia.org/wiki/File:NLC416-13jh000156-94145_三命通會.pdf",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/2/23/NLC416-13jh000156-94145_%E4%B8%89%E5%91%BD%E9%80%9A%E6%9C%83.pdf",
+      "pdfSha256": "c6eac6fca6411e45cb801f9b771aca6dd6a6d2dfb57ecc36ea5f42ecf1ac8bf9",
+      "pdfBytes": 18622972,
+      "pages": [
+        {
+          "pdfPage": 128,
+          "printedPage": 50,
+          "file": "sanming-1926-page-128.png",
+          "sha256": "085acffe1c8278ecd9b9f3deef2e348ebd9c45fc5e4dddb09bfae3d296997338"
+        },
+        {
+          "pdfPage": 129,
+          "printedPage": 51,
+          "file": "sanming-1926-page-129.png",
+          "sha256": "b68042785e0a2fa391a2f08e741cf90cacd78160fa437a3afa7467a6215410d4"
+        }
+      ]
+    },
+    {
+      "sourceId": "mingli-1932",
+      "title": "命理集成",
+      "publicationDate": "[1932]",
+      "publisher": "[文明書局]",
+      "metadataUrl": "https://commons.wikimedia.org/wiki/File:NLC416-13jh001663-59235_命理集成.pdf",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/NLC416-13jh001663-59235_%E5%91%BD%E7%90%86%E9%9B%86%E6%88%90.pdf",
+      "pdfSha256": "dbb50d8f5daf8a30269273a3e5dc787133deabd944e76e28d592e58a97348501",
+      "pdfBytes": 9895142,
+      "pages": [
+        {
+          "pdfPage": 30,
+          "printedPage": 9,
+          "file": "mingli-1932-page-30.png",
+          "sha256": "867520865f171e97eef8a36572d64cf153cb0fa8f160f0b8b602b3b34f42371c"
+        }
+      ]
+    },
+    {
+      "sourceId": "ditian-1947",
+      "title": "滴天髓闡微",
+      "publicationDate": "1947",
+      "publisher": "上海大東書局",
+      "metadataUrl": "https://commons.wikimedia.org/wiki/File:SSID-11335994_滴天髓闡微.pdf",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/d/db/SSID-11335994_%E6%BB%B4%E5%A4%A9%E9%AB%93%E9%97%A1%E5%BE%AE.pdf",
+      "pdfSha256": "d6a7d1daf6513ce9fb9940ff8331b96804c10cdafbeac00d4d3d0a37229e1803",
+      "pdfBytes": 14751242,
+      "pages": [
+        {
+          "pdfPage": 176,
+          "printedPage": 34,
+          "file": "ditian-1947-page-176.png",
+          "sha256": "5999c3ea10e63179ca64d1c84c89ce03464d34add8b9fa15e42fcf7ed3c9772f"
+        },
+        {
+          "pdfPage": 189,
+          "printedPage": 47,
+          "file": "ditian-1947-page-189.png",
+          "sha256": "321601392229642c906427712996c1c5dd1e927961ff890b16a6387b3dd4e479"
+        }
+      ]
+    }
+  ],
+  "transcriptionFile": "hour-balance-transcription.json",
+  "transcriptionSha256": "6e3681408f08f250557d6dd23e21138bd6dc0a4937cbb0beef3631b819825e13"
+}
