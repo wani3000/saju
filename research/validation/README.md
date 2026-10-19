@@ -111,3 +111,16 @@ node research/validation/audit-natal-rules.mjs --release-check
 ```
 
 전체 연구 77개 검사 통과. 새 9개는 100방향 조합·60일주 후보·원문 예시·출처 해시·시간 모름·초안 재현을 포함한다. 읽기용 `reports/natal-reading-drafts.md`와 전체 `reports/natal-rule-audit.json`을 함께 재생성한다. 이전 합충 v1 보고서는 변경하지 않는다.
+
+## 월령·합화 조건과 관계별 초안 (2026-10-19)
+
+`context-analysis.mjs`는 월지 지장간의 투출·뿌리 연결·합의 위치/중간 극/추가 상대를 관찰한다. 합 짝과 맥락의 후보 공통성을 따로 검사하며 합화·강약·상쇄의 결론은 만들지 않는다. `context-drafts.mjs`는 공통 사실만 한국어로 설명하고, 관계별 일반 대화 제안을 생일 근거와 분리한다. 점수·정규화값·지도 반경은 null이다. [감수 범위](../../docs/month-combination-review.md).
+
+```sh
+node research/validation/audit-context-rules.mjs --check
+pnpm --dir research/validation test
+# 운영 미승인: 종료 코드 2
+node research/validation/audit-context-rules.mjs --release-check
+```
+
+전체 연구 92개 검사 통과. 신규 15개는 원문 PDF와 쪽 해시·후보 상관관계·16개 주변 조합 전수 비교·원전 예시·관계 유형 불변성·과거 보고서 재현을 포함한다. 조건 사례 8개와 관계 초안 4개는 `reports/context-rule-audit.json`, `reports/context-reading-drafts.md`로 함께 생성한다. 원전 구절과 코드가 대응한다는 검토는 예측 타당성이나 운영 승인이 아니다.

@@ -1,0 +1,17 @@
+{
+  "sourceId":"ziping-1926-nlc-46443-vol2",
+  "review":"Codex visual collation, 2026-10-19. Selected public-domain passages, punctuation added; ellipsis marks omitted text. Not expert approval.",
+  "sections":[
+    {"id":"combination-elements","pdfPages":[19],"text":"甲己相合之始則化為土，土生金故乙庚化金次之，金生水故丙辛化水又次之，水生木故丁壬化木又次之。","usage":"Traditional pair/result nomenclature only; no automatic conversion of chart elements."},
+    {"id":"intervening-stem","pdfPages":[20],"text":"如甲與己合，而甲己中間以庚隔之，則甲豈能越尅我之庚而合己。","usage":"Observe intervening controlling stems. Do not generalize this example into a complete binary 合化 algorithm."},
+    {"id":"distant-pair","pdfPages":[20],"text":"又如隔位太遠，如甲在年干，己在時上。","usage":"Record actual position gap. Do not turn the source's qualitative fraction into a numeric score."},
+    {"id":"day-involvement","pdfPages":[20],"text":"又有合而不以合論者，本身之合也。","usage":"Record whether day stem participates; do not infer 合去 or relationship outcomes."},
+    {"id":"multiple-partners","pdfPages":[20],"text":"又有爭合妒合之說，如兩辛合丙、兩丁合壬之類。若以兩合一而隔位，全無爭妒，如庚午、乙酉、甲子、乙亥，兩乙合庚，甲日隔之。","usage":"Keep partner positions and adjacency. Multiple pair matches alone do not establish 爭合."},
+    {"id":"month-not-whole-strength","pdfPages":[21],"heading":"論十干有得時不旺失時不弱","text":"故八字雖以月令為重……不可執一論也。","usage":"Do not classify whole-chart strength from month alone."},
+    {"id":"root-context","pdfPages":[21,22],"text":"是故日干不論月令休囚，只要四柱有根。干多不如根重，理固然也。","usage":"Record same-stem/same-element hidden-stem evidence only. Root grades, weights, strength and all traditional root conventions remain outside this detector."},
+    {"id":"coexisting-branch-relations","pdfPages":[22,23],"text":"又有刑沖而會合不能解者。","usage":"Keep coexisting pairs. No universal rule that combinations cancel clashes."},
+    {"id":"month-as-context","pdfPages":[23],"heading":"論用神","text":"八字用神，專求月令，以日干配月令地支，而生尅不同，格局分焉。","usage":"Keep month context; do not silently equate this book's 用神 with a modern favorable-element selector."},
+    {"id":"month-exposure","pdfPages":[26,27],"heading":"論用神變化","text":"用神既主月令矣，然月令所藏不一，而用神遂有變化。假使寅月為提，不透甲而透丙。","usage":"Observe exact monthly hidden stems visible in year/month/hour stems. The day stem is the reference, not counted as an additional exposed use-god."},
+    {"id":"edition-difference","pdfPages":[26],"text":"如十二支中，除子午卯酉外，餘皆有藏。","usage":"This discussion groups 子午卯酉 together; do not use it to overwrite the other source's explicit 午宮丁火並己土 hidden-stem list. Do not claim the two texts provide identical complete lists."}
+  ]
+}

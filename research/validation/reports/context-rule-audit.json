@@ -1,0 +1,5251 @@
+{
+  "ruleVersion": "month-combination-context-research-v1",
+  "productionApproved": false,
+  "exampleData": "Synthetic chart fixtures; the source-example chart is transcribed for structural testing, not treated as a verified person or prediction.",
+  "cases": [
+    {
+      "id": "month-exposure-and-root-evidence",
+      "analysis": {
+        "ruleVersion": "month-combination-context-research-v1",
+        "productionApproved": false,
+        "dependencies": {
+          "natalRuleVersion": "natal-definitions-research-v1",
+          "symbolRuleVersion": "symbol-relations-research-v1",
+          "engineVersion": "research-civil-midnight-v5"
+        },
+        "definitionReview": {
+          "status": "source-collated",
+          "reviewer": "Codex",
+          "date": "2026-10-19"
+        },
+        "interpretationReview": {
+          "status": "pending"
+        },
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "monthContext": {
+          "branches": [
+            "인"
+          ],
+          "source": {
+            "id": "ziping-1926-nlc-46443-vol2",
+            "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+            "pdfPages": [
+              23
+            ],
+            "sectionId": "month-as-context"
+          },
+          "seasonalStrength": null,
+          "note": "월지 후보만 보존. 절기 내 경과 일수·사령·통근·투간을 종합한 강약은 미판정.",
+          "strengthPolicy": "month-alone-is-insufficient"
+        },
+        "rootObservations": [
+          {
+            "position": "month",
+            "hiddenStem": "무",
+            "match": "exact-stem",
+            "witnesses": [
+              {
+                "day": "무진",
+                "month": "병인"
+              }
+            ],
+            "certainty": "all-candidates",
+            "jointFeasibility": "universal-over-supplied-candidates",
+            "id": "root:month:무:exact-stem",
+            "sources": [
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  21,
+                  22
+                ],
+                "sectionId": "root-context"
+              },
+              {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 54,
+                "sectionId": "hidden-stems"
+              }
+            ],
+            "rootGrade": null
+          },
+          {
+            "position": "day",
+            "hiddenStem": "무",
+            "match": "exact-stem",
+            "witnesses": [
+              {
+                "day": "무진"
+              }
+            ],
+            "certainty": "all-candidates",
+            "jointFeasibility": "universal-over-supplied-candidates",
+            "id": "root:day:무:exact-stem",
+            "sources": [
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  21,
+                  22
+                ],
+                "sectionId": "root-context"
+              },
+              {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 54,
+                "sectionId": "hidden-stems"
+              }
+            ],
+            "rootGrade": null
+          },
+          {
+            "position": "hour",
+            "hiddenStem": "기",
+            "match": "same-element-other-polarity",
+            "witnesses": [
+              {
+                "day": "무진",
+                "hour": "경오"
+              }
+            ],
+            "certainty": "all-candidates",
+            "jointFeasibility": "universal-over-supplied-candidates",
+            "id": "root:hour:기:same-element-other-polarity",
+            "sources": [
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  21,
+                  22
+                ],
+                "sectionId": "root-context"
+              },
+              {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 54,
+                "sectionId": "hidden-stems"
+              }
+            ],
+            "rootGrade": null
+          }
+        ],
+        "monthExposures": [
+          {
+            "position": "year",
+            "stem": "갑",
+            "witnesses": [
+              {
+                "month": "병인",
+                "year": "갑자"
+              }
+            ],
+            "certainty": "all-candidates",
+            "jointFeasibility": "universal-over-supplied-candidates",
+            "id": "month-exposure:year:갑",
+            "sources": [
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  26,
+                  27
+                ],
+                "sectionId": "month-exposure"
+              },
+              {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 54,
+                "sectionId": "hidden-stems"
+              }
+            ]
+          },
+          {
+            "position": "month",
+            "stem": "병",
+            "witnesses": [
+              {
+                "month": "병인"
+              }
+            ],
+            "certainty": "all-candidates",
+            "jointFeasibility": "universal-over-supplied-candidates",
+            "id": "month-exposure:month:병",
+            "sources": [
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  26,
+                  27
+                ],
+                "sectionId": "month-exposure"
+              },
+              {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 54,
+                "sectionId": "hidden-stems"
+              }
+            ]
+          }
+        ],
+        "combinationContexts": [],
+        "coexistingBranchRelations": [
+          {
+            "ruleId": "branch-clash:자오",
+            "family": "branch-clash",
+            "label": "지지 육충",
+            "endpoints": [
+              {
+                "side": "self",
+                "position": "year"
+              },
+              {
+                "side": "self",
+                "position": "hour"
+              }
+            ],
+            "certainty": "all-candidates",
+            "jointFeasibility": "universal-over-supplied-candidates",
+            "witnesses": [
+              [
+                "자",
+                "오"
+              ]
+            ],
+            "source": {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 26,
+              "sectionId": "branch-clashes"
+            },
+            "interpretation": null,
+            "weight": null
+          }
+        ],
+        "branchConflictPolicy": {
+          "status": "not-adjudicated",
+          "source": {
+            "id": "ziping-1926-nlc-46443-vol2",
+            "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+            "pdfPages": [
+              22,
+              23
+            ],
+            "sectionId": "coexisting-branch-relations"
+          }
+        },
+        "strength": null,
+        "favorableElement": null,
+        "score": null,
+        "limitations": [
+          "Same-stem/element hidden-stem matches are review evidence, not a complete 通根 definition or root grade.",
+          "Exposures exclude the day reference; exact matching does not select a 格局 or 用神.",
+          "Adjacency, intervening control and additional partners are observations, not sufficient 合化 conditions.",
+          "Unknown hour is unobserved; absence from known positions is not absence from the complete chart.",
+          "Stem context alternatives use marginal Cartesian combinations; partial combinations are not proved feasible.",
+          "No 合/沖 cancellation, numeric root weight or whole-chart strength is inferred."
+        ]
+      },
+      "draft": {
+        "ruleVersion": "month-combination-context-research-v1",
+        "contentVersion": "context-review-copy-v1",
+        "productionApproved": false,
+        "dependencies": {
+          "natalRuleVersion": "natal-definitions-research-v1",
+          "symbolRuleVersion": "symbol-relations-research-v1",
+          "engineVersion": "research-civil-midnight-v5"
+        },
+        "status": "editorial-draft-not-approved",
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "notice": "입력 후보 전체에 공통인 관찰 사실만 설명합니다. 월령·뿌리·합의 조건을 길흉이나 관계 예측으로 바꾸지 않습니다.",
+        "statements": [
+          {
+            "id": "month-exposure:year:갑",
+            "text": "월지 지장간과 연주 천간에서 갑의 일치가 확인됩니다. 이 일치만으로 용신이나 격국을 정하지 않습니다.",
+            "sources": [
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  26,
+                  27
+                ],
+                "sectionId": "month-exposure"
+              },
+              {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 54,
+                "sectionId": "hidden-stems"
+              }
+            ]
+          },
+          {
+            "id": "month-exposure:month:병",
+            "text": "월지 지장간과 월주 천간에서 병의 일치가 확인됩니다. 이 일치만으로 용신이나 격국을 정하지 않습니다.",
+            "sources": [
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  26,
+                  27
+                ],
+                "sectionId": "month-exposure"
+              },
+              {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 54,
+                "sectionId": "hidden-stems"
+              }
+            ]
+          },
+          {
+            "id": "root:month:무:exact-stem",
+            "text": "월주 지장간 무에서 일간과 같은 천간이 확인됩니다. 뿌리의 강도는 아직 평가하지 않았습니다.",
+            "sources": [
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  21,
+                  22
+                ],
+                "sectionId": "root-context"
+              },
+              {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 54,
+                "sectionId": "hidden-stems"
+              }
+            ]
+          },
+          {
+            "id": "root:day:무:exact-stem",
+            "text": "일주 지장간 무에서 일간과 같은 천간이 확인됩니다. 뿌리의 강도는 아직 평가하지 않았습니다.",
+            "sources": [
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  21,
+                  22
+                ],
+                "sectionId": "root-context"
+              },
+              {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 54,
+                "sectionId": "hidden-stems"
+              }
+            ]
+          },
+          {
+            "id": "root:hour:기:same-element-other-polarity",
+            "text": "시주 지장간 기에서 일간과 같은 오행의 다른 음양이 확인됩니다. 뿌리의 강도는 아직 평가하지 않았습니다.",
+            "sources": [
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  21,
+                  22
+                ],
+                "sectionId": "root-context"
+              },
+              {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 54,
+                "sectionId": "hidden-stems"
+              }
+            ]
+          },
+          {
+            "id": "branch:branch-clash:자오:year:hour",
+            "text": "연주·시주에서 자·오의 지지 육충 짝이 확인됩니다. 다른 합·충과의 상쇄는 판정하지 않았습니다.",
+            "sources": [
+              {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 26,
+                "sectionId": "branch-clashes"
+              },
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  22,
+                  23
+                ],
+                "sectionId": "coexisting-branch-relations"
+              }
+            ]
+          }
+        ],
+        "score": null
+      }
+    },
+    {
+      "id": "intervening-controller",
+      "analysis": {
+        "ruleVersion": "month-combination-context-research-v1",
+        "productionApproved": false,
+        "dependencies": {
+          "natalRuleVersion": "natal-definitions-research-v1",
+          "symbolRuleVersion": "symbol-relations-research-v1",
+          "engineVersion": "research-civil-midnight-v5"
+        },
+        "definitionReview": {
+          "status": "source-collated",
+          "reviewer": "Codex",
+          "date": "2026-10-19"
+        },
+        "interpretationReview": {
+          "status": "pending"
+        },
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "monthContext": {
+          "branches": [
+            "오"
+          ],
+          "source": {
+            "id": "ziping-1926-nlc-46443-vol2",
+            "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+            "pdfPages": [
+              23
+            ],
+            "sectionId": "month-as-context"
+          },
+          "seasonalStrength": null,
+          "note": "월지 후보만 보존. 절기 내 경과 일수·사령·통근·투간을 종합한 강약은 미판정.",
+          "strengthPolicy": "month-alone-is-insufficient"
+        },
+        "rootObservations": [
+          {
+            "position": "month",
+            "hiddenStem": "기",
+            "match": "exact-stem",
+            "witnesses": [
+              {
+                "day": "기축",
+                "month": "경오"
+              }
+            ],
+            "certainty": "all-candidates",
+            "jointFeasibility": "universal-over-supplied-candidates",
+            "id": "root:month:기:exact-stem",
+            "sources": [
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  21,
+                  22
+                ],
+                "sectionId": "root-context"
+              },
+              {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 54,
+                "sectionId": "hidden-stems"
+              }
+            ],
+            "rootGrade": null
+          },
+          {
+            "position": "day",
+            "hiddenStem": "기",
+            "match": "exact-stem",
+            "witnesses": [
+              {
+                "day": "기축"
+              }
+            ],
+            "certainty": "all-candidates",
+            "jointFeasibility": "universal-over-supplied-candidates",
+            "id": "root:day:기:exact-stem",
+            "sources": [
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  21,
+                  22
+                ],
+                "sectionId": "root-context"
+              },
+              {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 54,
+                "sectionId": "hidden-stems"
+              }
+            ],
+            "rootGrade": null
+          }
+        ],
+        "monthExposures": [
+          {
+            "position": "hour",
+            "stem": "정",
+            "witnesses": [
+              {
+                "month": "경오",
+                "hour": "정묘"
+              }
+            ],
+            "certainty": "all-candidates",
+            "jointFeasibility": "universal-over-supplied-candidates",
+            "id": "month-exposure:hour:정",
+            "sources": [
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  26,
+                  27
+                ],
+                "sectionId": "month-exposure"
+              },
+              {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 54,
+                "sectionId": "hidden-stems"
+              }
+            ]
+          }
+        ],
+        "combinationContexts": [
+          {
+            "id": "year:day:stem-combination:갑기",
+            "ruleId": "stem-combination:갑기",
+            "positions": [
+              "year",
+              "day"
+            ],
+            "adjacent": false,
+            "interveningPositions": [
+              "month"
+            ],
+            "involvesDayStem": true,
+            "certainty": "all-candidates",
+            "jointFeasibility": "universal-over-supplied-candidates",
+            "contextAlternatives": [
+              {
+                "interveningControllers": [
+                  {
+                    "position": "month",
+                    "stem": "경",
+                    "target": "year"
+                  }
+                ],
+                "additionalPartners": []
+              }
+            ],
+            "contextScope": "conditional-on-pair-within-observed-positions",
+            "unobservedPositions": [],
+            "transformation": {
+              "status": "not-adjudicated",
+              "element": null
+            },
+            "sources": [
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  20
+                ],
+                "sectionId": "intervening-stem"
+              },
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  20
+                ],
+                "sectionId": "distant-pair"
+              },
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  20
+                ],
+                "sectionId": "day-involvement"
+              },
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  20
+                ],
+                "sectionId": "multiple-partners"
+              }
+            ]
+          }
+        ],
+        "coexistingBranchRelations": [
+          {
+            "ruleId": "branch-clash:자오",
+            "family": "branch-clash",
+            "label": "지지 육충",
+            "endpoints": [
+              {
+                "side": "self",
+                "position": "year"
+              },
+              {
+                "side": "self",
+                "position": "month"
+              }
+            ],
+            "certainty": "all-candidates",
+            "jointFeasibility": "universal-over-supplied-candidates",
+            "witnesses": [
+              [
+                "자",
+                "오"
+              ]
+            ],
+            "source": {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 26,
+              "sectionId": "branch-clashes"
+            },
+            "interpretation": null,
+            "weight": null
+          },
+          {
+            "ruleId": "branch-combination:자축",
+            "family": "branch-combination",
+            "label": "지지 육합",
+            "endpoints": [
+              {
+                "side": "self",
+                "position": "year"
+              },
+              {
+                "side": "self",
+                "position": "day"
+              }
+            ],
+            "certainty": "all-candidates",
+            "jointFeasibility": "universal-over-supplied-candidates",
+            "witnesses": [
+              [
+                "자",
+                "축"
+              ]
+            ],
+            "source": {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 25,
+              "sectionId": "branch-combinations"
+            },
+            "interpretation": null,
+            "weight": null
+          }
+        ],
+        "branchConflictPolicy": {
+          "status": "not-adjudicated",
+          "source": {
+            "id": "ziping-1926-nlc-46443-vol2",
+            "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+            "pdfPages": [
+              22,
+              23
+            ],
+            "sectionId": "coexisting-branch-relations"
+          }
+        },
+        "strength": null,
+        "favorableElement": null,
+        "score": null,
+        "limitations": [
+          "Same-stem/element hidden-stem matches are review evidence, not a complete 通根 definition or root grade.",
+          "Exposures exclude the day reference; exact matching does not select a 格局 or 用神.",
+          "Adjacency, intervening control and additional partners are observations, not sufficient 合化 conditions.",
+          "Unknown hour is unobserved; absence from known positions is not absence from the complete chart.",
+          "Stem context alternatives use marginal Cartesian combinations; partial combinations are not proved feasible.",
+          "No 合/沖 cancellation, numeric root weight or whole-chart strength is inferred."
+        ]
+      },
+      "draft": {
+        "ruleVersion": "month-combination-context-research-v1",
+        "contentVersion": "context-review-copy-v1",
+        "productionApproved": false,
+        "dependencies": {
+          "natalRuleVersion": "natal-definitions-research-v1",
+          "symbolRuleVersion": "symbol-relations-research-v1",
+          "engineVersion": "research-civil-midnight-v5"
+        },
+        "status": "editorial-draft-not-approved",
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "notice": "입력 후보 전체에 공통인 관찰 사실만 설명합니다. 월령·뿌리·합의 조건을 길흉이나 관계 예측으로 바꾸지 않습니다.",
+        "statements": [
+          {
+            "id": "month-exposure:hour:정",
+            "text": "월지 지장간과 시주 천간에서 정의 일치가 확인됩니다. 이 일치만으로 용신이나 격국을 정하지 않습니다.",
+            "sources": [
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  26,
+                  27
+                ],
+                "sectionId": "month-exposure"
+              },
+              {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 54,
+                "sectionId": "hidden-stems"
+              }
+            ]
+          },
+          {
+            "id": "root:month:기:exact-stem",
+            "text": "월주 지장간 기에서 일간과 같은 천간이 확인됩니다. 뿌리의 강도는 아직 평가하지 않았습니다.",
+            "sources": [
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  21,
+                  22
+                ],
+                "sectionId": "root-context"
+              },
+              {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 54,
+                "sectionId": "hidden-stems"
+              }
+            ]
+          },
+          {
+            "id": "root:day:기:exact-stem",
+            "text": "일주 지장간 기에서 일간과 같은 천간이 확인됩니다. 뿌리의 강도는 아직 평가하지 않았습니다.",
+            "sources": [
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  21,
+                  22
+                ],
+                "sectionId": "root-context"
+              },
+              {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 54,
+                "sectionId": "hidden-stems"
+              }
+            ]
+          },
+          {
+            "id": "combination:year:day:stem-combination:갑기",
+            "text": "연주·일주에서 갑·기의 천간 합 짝이 확인되며 사이에 다른 기둥이 있습니다. 두 위치 사이에서 합 상대를 극하는 천간도 확인됩니다. 일간 자신이 참여하는 합입니다. 합화 성립은 판정하지 않았습니다.",
+            "sources": [
+              {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 23,
+                "sectionId": "stem-combinations"
+              },
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  20
+                ],
+                "sectionId": "intervening-stem"
+              },
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  20
+                ],
+                "sectionId": "distant-pair"
+              },
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  20
+                ],
+                "sectionId": "day-involvement"
+              },
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  20
+                ],
+                "sectionId": "multiple-partners"
+              }
+            ]
+          },
+          {
+            "id": "branch:branch-clash:자오:year:month",
+            "text": "연주·월주에서 자·오의 지지 육충 짝이 확인됩니다. 다른 합·충과의 상쇄는 판정하지 않았습니다.",
+            "sources": [
+              {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 26,
+                "sectionId": "branch-clashes"
+              },
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  22,
+                  23
+                ],
+                "sectionId": "coexisting-branch-relations"
+              }
+            ]
+          },
+          {
+            "id": "branch:branch-combination:자축:year:day",
+            "text": "연주·일주에서 자·축의 지지 육합 짝이 확인됩니다. 다른 합·충과의 상쇄는 판정하지 않았습니다.",
+            "sources": [
+              {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 25,
+                "sectionId": "branch-combinations"
+              },
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  22,
+                  23
+                ],
+                "sectionId": "coexisting-branch-relations"
+              }
+            ]
+          }
+        ],
+        "score": null
+      }
+    },
+    {
+      "id": "distant-year-hour-pair",
+      "analysis": {
+        "ruleVersion": "month-combination-context-research-v1",
+        "productionApproved": false,
+        "dependencies": {
+          "natalRuleVersion": "natal-definitions-research-v1",
+          "symbolRuleVersion": "symbol-relations-research-v1",
+          "engineVersion": "research-civil-midnight-v5"
+        },
+        "definitionReview": {
+          "status": "source-collated",
+          "reviewer": "Codex",
+          "date": "2026-10-19"
+        },
+        "interpretationReview": {
+          "status": "pending"
+        },
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "monthContext": {
+          "branches": [
+            "인"
+          ],
+          "source": {
+            "id": "ziping-1926-nlc-46443-vol2",
+            "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+            "pdfPages": [
+              23
+            ],
+            "sectionId": "month-as-context"
+          },
+          "seasonalStrength": null,
+          "note": "월지 후보만 보존. 절기 내 경과 일수·사령·통근·투간을 종합한 강약은 미판정.",
+          "strengthPolicy": "month-alone-is-insufficient"
+        },
+        "rootObservations": [
+          {
+            "position": "month",
+            "hiddenStem": "무",
+            "match": "exact-stem",
+            "witnesses": [
+              {
+                "day": "무진",
+                "month": "병인"
+              }
+            ],
+            "certainty": "all-candidates",
+            "jointFeasibility": "universal-over-supplied-candidates",
+            "id": "root:month:무:exact-stem",
+            "sources": [
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  21,
+                  22
+                ],
+                "sectionId": "root-context"
+              },
+              {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 54,
+                "sectionId": "hidden-stems"
+              }
+            ],
+            "rootGrade": null
+          },
+          {
+            "position": "day",
+            "hiddenStem": "무",
+            "match": "exact-stem",
+            "witnesses": [
+              {
+                "day": "무진"
+              }
+            ],
+            "certainty": "all-candidates",
+            "jointFeasibility": "universal-over-supplied-candidates",
+            "id": "root:day:무:exact-stem",
+            "sources": [
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  21,
+                  22
+                ],
+                "sectionId": "root-context"
+              },
+              {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 54,
+                "sectionId": "hidden-stems"
+              }
+            ],
+            "rootGrade": null
+          },
+          {
+            "position": "hour",
+            "hiddenStem": "기",
+            "match": "same-element-other-polarity",
+            "witnesses": [
+              {
+                "day": "무진",
+                "hour": "기축"
+              }
+            ],
+            "certainty": "all-candidates",
+            "jointFeasibility": "universal-over-supplied-candidates",
+            "id": "root:hour:기:same-element-other-polarity",
+            "sources": [
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  21,
+                  22
+                ],
+                "sectionId": "root-context"
+              },
+              {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 54,
+                "sectionId": "hidden-stems"
+              }
+            ],
+            "rootGrade": null
+          }
+        ],
+        "monthExposures": [
+          {
+            "position": "year",
+            "stem": "갑",
+            "witnesses": [
+              {
+                "month": "병인",
+                "year": "갑자"
+              }
+            ],
+            "certainty": "all-candidates",
+            "jointFeasibility": "universal-over-supplied-candidates",
+            "id": "month-exposure:year:갑",
+            "sources": [
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  26,
+                  27
+                ],
+                "sectionId": "month-exposure"
+              },
+              {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 54,
+                "sectionId": "hidden-stems"
+              }
+            ]
+          },
+          {
+            "position": "month",
+            "stem": "병",
+            "witnesses": [
+              {
+                "month": "병인"
+              }
+            ],
+            "certainty": "all-candidates",
+            "jointFeasibility": "universal-over-supplied-candidates",
+            "id": "month-exposure:month:병",
+            "sources": [
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  26,
+                  27
+                ],
+                "sectionId": "month-exposure"
+              },
+              {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 54,
+                "sectionId": "hidden-stems"
+              }
+            ]
+          }
+        ],
+        "combinationContexts": [
+          {
+            "id": "year:hour:stem-combination:갑기",
+            "ruleId": "stem-combination:갑기",
+            "positions": [
+              "year",
+              "hour"
+            ],
+            "adjacent": false,
+            "interveningPositions": [
+              "month",
+              "day"
+            ],
+            "involvesDayStem": false,
+            "certainty": "all-candidates",
+            "jointFeasibility": "universal-over-supplied-candidates",
+            "contextAlternatives": [
+              {
+                "interveningControllers": [],
+                "additionalPartners": []
+              }
+            ],
+            "contextScope": "conditional-on-pair-within-observed-positions",
+            "unobservedPositions": [],
+            "transformation": {
+              "status": "not-adjudicated",
+              "element": null
+            },
+            "sources": [
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  20
+                ],
+                "sectionId": "intervening-stem"
+              },
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  20
+                ],
+                "sectionId": "distant-pair"
+              },
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  20
+                ],
+                "sectionId": "day-involvement"
+              },
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  20
+                ],
+                "sectionId": "multiple-partners"
+              }
+            ]
+          }
+        ],
+        "coexistingBranchRelations": [
+          {
+            "ruleId": "branch-combination:자축",
+            "family": "branch-combination",
+            "label": "지지 육합",
+            "endpoints": [
+              {
+                "side": "self",
+                "position": "year"
+              },
+              {
+                "side": "self",
+                "position": "hour"
+              }
+            ],
+            "certainty": "all-candidates",
+            "jointFeasibility": "universal-over-supplied-candidates",
+            "witnesses": [
+              [
+                "자",
+                "축"
+              ]
+            ],
+            "source": {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 25,
+              "sectionId": "branch-combinations"
+            },
+            "interpretation": null,
+            "weight": null
+          }
+        ],
+        "branchConflictPolicy": {
+          "status": "not-adjudicated",
+          "source": {
+            "id": "ziping-1926-nlc-46443-vol2",
+            "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+            "pdfPages": [
+              22,
+              23
+            ],
+            "sectionId": "coexisting-branch-relations"
+          }
+        },
+        "strength": null,
+        "favorableElement": null,
+        "score": null,
+        "limitations": [
+          "Same-stem/element hidden-stem matches are review evidence, not a complete 通根 definition or root grade.",
+          "Exposures exclude the day reference; exact matching does not select a 格局 or 用神.",
+          "Adjacency, intervening control and additional partners are observations, not sufficient 合化 conditions.",
+          "Unknown hour is unobserved; absence from known positions is not absence from the complete chart.",
+          "Stem context alternatives use marginal Cartesian combinations; partial combinations are not proved feasible.",
+          "No 合/沖 cancellation, numeric root weight or whole-chart strength is inferred."
+        ]
+      },
+      "draft": {
+        "ruleVersion": "month-combination-context-research-v1",
+        "contentVersion": "context-review-copy-v1",
+        "productionApproved": false,
+        "dependencies": {
+          "natalRuleVersion": "natal-definitions-research-v1",
+          "symbolRuleVersion": "symbol-relations-research-v1",
+          "engineVersion": "research-civil-midnight-v5"
+        },
+        "status": "editorial-draft-not-approved",
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "notice": "입력 후보 전체에 공통인 관찰 사실만 설명합니다. 월령·뿌리·합의 조건을 길흉이나 관계 예측으로 바꾸지 않습니다.",
+        "statements": [
+          {
+            "id": "month-exposure:year:갑",
+            "text": "월지 지장간과 연주 천간에서 갑의 일치가 확인됩니다. 이 일치만으로 용신이나 격국을 정하지 않습니다.",
+            "sources": [
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  26,
+                  27
+                ],
+                "sectionId": "month-exposure"
+              },
+              {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 54,
+                "sectionId": "hidden-stems"
+              }
+            ]
+          },
+          {
+            "id": "month-exposure:month:병",
+            "text": "월지 지장간과 월주 천간에서 병의 일치가 확인됩니다. 이 일치만으로 용신이나 격국을 정하지 않습니다.",
+            "sources": [
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  26,
+                  27
+                ],
+                "sectionId": "month-exposure"
+              },
+              {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 54,
+                "sectionId": "hidden-stems"
+              }
+            ]
+          },
+          {
+            "id": "root:month:무:exact-stem",
+            "text": "월주 지장간 무에서 일간과 같은 천간이 확인됩니다. 뿌리의 강도는 아직 평가하지 않았습니다.",
+            "sources": [
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  21,
+                  22
+                ],
+                "sectionId": "root-context"
+              },
+              {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 54,
+                "sectionId": "hidden-stems"
+              }
+            ]
+          },
+          {
+            "id": "root:day:무:exact-stem",
+            "text": "일주 지장간 무에서 일간과 같은 천간이 확인됩니다. 뿌리의 강도는 아직 평가하지 않았습니다.",
+            "sources": [
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  21,
+                  22
+                ],
+                "sectionId": "root-context"
+              },
+              {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 54,
+                "sectionId": "hidden-stems"
+              }
+            ]
+          },
+          {
+            "id": "root:hour:기:same-element-other-polarity",
+            "text": "시주 지장간 기에서 일간과 같은 오행의 다른 음양이 확인됩니다. 뿌리의 강도는 아직 평가하지 않았습니다.",
+            "sources": [
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  21,
+                  22
+                ],
+                "sectionId": "root-context"
+              },
+              {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 54,
+                "sectionId": "hidden-stems"
+              }
+            ]
+          },
+          {
+            "id": "combination:year:hour:stem-combination:갑기",
+            "text": "연주·시주에서 갑·기의 천간 합 짝이 확인되며 사이에 다른 기둥이 있습니다. 합화 성립은 판정하지 않았습니다.",
+            "sources": [
+              {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 23,
+                "sectionId": "stem-combinations"
+              },
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  20
+                ],
+                "sectionId": "intervening-stem"
+              },
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  20
+                ],
+                "sectionId": "distant-pair"
+              },
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  20
+                ],
+                "sectionId": "day-involvement"
+              },
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  20
+                ],
+                "sectionId": "multiple-partners"
+              }
+            ]
+          },
+          {
+            "id": "branch:branch-combination:자축:year:hour",
+            "text": "연주·시주에서 자·축의 지지 육합 짝이 확인됩니다. 다른 합·충과의 상쇄는 판정하지 않았습니다.",
+            "sources": [
+              {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 25,
+                "sectionId": "branch-combinations"
+              },
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  22,
+                  23
+                ],
+                "sectionId": "coexisting-branch-relations"
+              }
+            ]
+          }
+        ],
+        "score": null
+      }
+    },
+    {
+      "id": "source-example-separated-partners",
+      "analysis": {
+        "ruleVersion": "month-combination-context-research-v1",
+        "productionApproved": false,
+        "dependencies": {
+          "natalRuleVersion": "natal-definitions-research-v1",
+          "symbolRuleVersion": "symbol-relations-research-v1",
+          "engineVersion": "research-civil-midnight-v5"
+        },
+        "definitionReview": {
+          "status": "source-collated",
+          "reviewer": "Codex",
+          "date": "2026-10-19"
+        },
+        "interpretationReview": {
+          "status": "pending"
+        },
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "monthContext": {
+          "branches": [
+            "유"
+          ],
+          "source": {
+            "id": "ziping-1926-nlc-46443-vol2",
+            "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+            "pdfPages": [
+              23
+            ],
+            "sectionId": "month-as-context"
+          },
+          "seasonalStrength": null,
+          "note": "월지 후보만 보존. 절기 내 경과 일수·사령·통근·투간을 종합한 강약은 미판정.",
+          "strengthPolicy": "month-alone-is-insufficient"
+        },
+        "rootObservations": [
+          {
+            "position": "hour",
+            "hiddenStem": "갑",
+            "match": "exact-stem",
+            "witnesses": [
+              {
+                "day": "갑자",
+                "hour": "을해"
+              }
+            ],
+            "certainty": "all-candidates",
+            "jointFeasibility": "universal-over-supplied-candidates",
+            "id": "root:hour:갑:exact-stem",
+            "sources": [
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  21,
+                  22
+                ],
+                "sectionId": "root-context"
+              },
+              {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 54,
+                "sectionId": "hidden-stems"
+              }
+            ],
+            "rootGrade": null
+          }
+        ],
+        "monthExposures": [],
+        "combinationContexts": [
+          {
+            "id": "year:hour:stem-combination:을경",
+            "ruleId": "stem-combination:을경",
+            "positions": [
+              "year",
+              "hour"
+            ],
+            "adjacent": false,
+            "interveningPositions": [
+              "month",
+              "day"
+            ],
+            "involvesDayStem": false,
+            "certainty": "all-candidates",
+            "jointFeasibility": "universal-over-supplied-candidates",
+            "contextAlternatives": [
+              {
+                "interveningControllers": [],
+                "additionalPartners": [
+                  {
+                    "endpoint": "year",
+                    "position": "month",
+                    "stem": "을",
+                    "adjacent": true
+                  }
+                ]
+              }
+            ],
+            "contextScope": "conditional-on-pair-within-observed-positions",
+            "unobservedPositions": [],
+            "transformation": {
+              "status": "not-adjudicated",
+              "element": null
+            },
+            "sources": [
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  20
+                ],
+                "sectionId": "intervening-stem"
+              },
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  20
+                ],
+                "sectionId": "distant-pair"
+              },
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  20
+                ],
+                "sectionId": "day-involvement"
+              },
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  20
+                ],
+                "sectionId": "multiple-partners"
+              }
+            ]
+          },
+          {
+            "id": "year:month:stem-combination:을경",
+            "ruleId": "stem-combination:을경",
+            "positions": [
+              "year",
+              "month"
+            ],
+            "adjacent": true,
+            "interveningPositions": [],
+            "involvesDayStem": false,
+            "certainty": "all-candidates",
+            "jointFeasibility": "universal-over-supplied-candidates",
+            "contextAlternatives": [
+              {
+                "interveningControllers": [],
+                "additionalPartners": [
+                  {
+                    "endpoint": "year",
+                    "position": "hour",
+                    "stem": "을",
+                    "adjacent": false
+                  }
+                ]
+              }
+            ],
+            "contextScope": "conditional-on-pair-within-observed-positions",
+            "unobservedPositions": [],
+            "transformation": {
+              "status": "not-adjudicated",
+              "element": null
+            },
+            "sources": [
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  20
+                ],
+                "sectionId": "intervening-stem"
+              },
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  20
+                ],
+                "sectionId": "distant-pair"
+              },
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  20
+                ],
+                "sectionId": "day-involvement"
+              },
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  20
+                ],
+                "sectionId": "multiple-partners"
+              }
+            ]
+          }
+        ],
+        "coexistingBranchRelations": [
+          {
+            "ruleId": "branch-clash:자오",
+            "family": "branch-clash",
+            "label": "지지 육충",
+            "endpoints": [
+              {
+                "side": "self",
+                "position": "year"
+              },
+              {
+                "side": "self",
+                "position": "day"
+              }
+            ],
+            "certainty": "all-candidates",
+            "jointFeasibility": "universal-over-supplied-candidates",
+            "witnesses": [
+              [
+                "오",
+                "자"
+              ]
+            ],
+            "source": {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 26,
+              "sectionId": "branch-clashes"
+            },
+            "interpretation": null,
+            "weight": null
+          }
+        ],
+        "branchConflictPolicy": {
+          "status": "not-adjudicated",
+          "source": {
+            "id": "ziping-1926-nlc-46443-vol2",
+            "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+            "pdfPages": [
+              22,
+              23
+            ],
+            "sectionId": "coexisting-branch-relations"
+          }
+        },
+        "strength": null,
+        "favorableElement": null,
+        "score": null,
+        "limitations": [
+          "Same-stem/element hidden-stem matches are review evidence, not a complete 通根 definition or root grade.",
+          "Exposures exclude the day reference; exact matching does not select a 格局 or 用神.",
+          "Adjacency, intervening control and additional partners are observations, not sufficient 合化 conditions.",
+          "Unknown hour is unobserved; absence from known positions is not absence from the complete chart.",
+          "Stem context alternatives use marginal Cartesian combinations; partial combinations are not proved feasible.",
+          "No 合/沖 cancellation, numeric root weight or whole-chart strength is inferred."
+        ]
+      },
+      "draft": {
+        "ruleVersion": "month-combination-context-research-v1",
+        "contentVersion": "context-review-copy-v1",
+        "productionApproved": false,
+        "dependencies": {
+          "natalRuleVersion": "natal-definitions-research-v1",
+          "symbolRuleVersion": "symbol-relations-research-v1",
+          "engineVersion": "research-civil-midnight-v5"
+        },
+        "status": "editorial-draft-not-approved",
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "notice": "입력 후보 전체에 공통인 관찰 사실만 설명합니다. 월령·뿌리·합의 조건을 길흉이나 관계 예측으로 바꾸지 않습니다.",
+        "statements": [
+          {
+            "id": "root:hour:갑:exact-stem",
+            "text": "시주 지장간 갑에서 일간과 같은 천간이 확인됩니다. 뿌리의 강도는 아직 평가하지 않았습니다.",
+            "sources": [
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  21,
+                  22
+                ],
+                "sectionId": "root-context"
+              },
+              {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 54,
+                "sectionId": "hidden-stems"
+              }
+            ]
+          },
+          {
+            "id": "combination:year:hour:stem-combination:을경",
+            "text": "연주·시주에서 을·경의 천간 합 짝이 확인되며 사이에 다른 기둥이 있습니다. 같은 합 상대가 다른 위치에도 나타나므로 위치별 검토가 필요합니다. 합화 성립은 판정하지 않았습니다.",
+            "sources": [
+              {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 23,
+                "sectionId": "stem-combinations"
+              },
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  20
+                ],
+                "sectionId": "intervening-stem"
+              },
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  20
+                ],
+                "sectionId": "distant-pair"
+              },
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  20
+                ],
+                "sectionId": "day-involvement"
+              },
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  20
+                ],
+                "sectionId": "multiple-partners"
+              }
+            ]
+          },
+          {
+            "id": "combination:year:month:stem-combination:을경",
+            "text": "연주·월주에서 을·경의 천간 합 짝이 확인되며 두 위치는 인접해 있습니다. 같은 합 상대가 다른 위치에도 나타나므로 위치별 검토가 필요합니다. 합화 성립은 판정하지 않았습니다.",
+            "sources": [
+              {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 23,
+                "sectionId": "stem-combinations"
+              },
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  20
+                ],
+                "sectionId": "intervening-stem"
+              },
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  20
+                ],
+                "sectionId": "distant-pair"
+              },
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  20
+                ],
+                "sectionId": "day-involvement"
+              },
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  20
+                ],
+                "sectionId": "multiple-partners"
+              }
+            ]
+          },
+          {
+            "id": "branch:branch-clash:자오:year:day",
+            "text": "연주·일주에서 자·오의 지지 육충 짝이 확인됩니다. 다른 합·충과의 상쇄는 판정하지 않았습니다.",
+            "sources": [
+              {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 26,
+                "sectionId": "branch-clashes"
+              },
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  22,
+                  23
+                ],
+                "sectionId": "coexisting-branch-relations"
+              }
+            ]
+          }
+        ],
+        "score": null
+      }
+    },
+    {
+      "id": "coexisting-combination-and-clash",
+      "analysis": {
+        "ruleVersion": "month-combination-context-research-v1",
+        "productionApproved": false,
+        "dependencies": {
+          "natalRuleVersion": "natal-definitions-research-v1",
+          "symbolRuleVersion": "symbol-relations-research-v1",
+          "engineVersion": "research-civil-midnight-v5"
+        },
+        "definitionReview": {
+          "status": "source-collated",
+          "reviewer": "Codex",
+          "date": "2026-10-19"
+        },
+        "interpretationReview": {
+          "status": "pending"
+        },
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "monthContext": {
+          "branches": [
+            "오"
+          ],
+          "source": {
+            "id": "ziping-1926-nlc-46443-vol2",
+            "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+            "pdfPages": [
+              23
+            ],
+            "sectionId": "month-as-context"
+          },
+          "seasonalStrength": null,
+          "note": "월지 후보만 보존. 절기 내 경과 일수·사령·통근·투간을 종합한 강약은 미판정.",
+          "strengthPolicy": "month-alone-is-insufficient"
+        },
+        "rootObservations": [
+          {
+            "position": "month",
+            "hiddenStem": "기",
+            "match": "exact-stem",
+            "witnesses": [
+              {
+                "day": "기축",
+                "month": "병오"
+              }
+            ],
+            "certainty": "all-candidates",
+            "jointFeasibility": "universal-over-supplied-candidates",
+            "id": "root:month:기:exact-stem",
+            "sources": [
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  21,
+                  22
+                ],
+                "sectionId": "root-context"
+              },
+              {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 54,
+                "sectionId": "hidden-stems"
+              }
+            ],
+            "rootGrade": null
+          },
+          {
+            "position": "day",
+            "hiddenStem": "기",
+            "match": "exact-stem",
+            "witnesses": [
+              {
+                "day": "기축"
+              }
+            ],
+            "certainty": "all-candidates",
+            "jointFeasibility": "universal-over-supplied-candidates",
+            "id": "root:day:기:exact-stem",
+            "sources": [
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  21,
+                  22
+                ],
+                "sectionId": "root-context"
+              },
+              {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 54,
+                "sectionId": "hidden-stems"
+              }
+            ],
+            "rootGrade": null
+          },
+          {
+            "position": "hour",
+            "hiddenStem": "기",
+            "match": "exact-stem",
+            "witnesses": [
+              {
+                "day": "기축",
+                "hour": "을미"
+              }
+            ],
+            "certainty": "all-candidates",
+            "jointFeasibility": "universal-over-supplied-candidates",
+            "id": "root:hour:기:exact-stem",
+            "sources": [
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  21,
+                  22
+                ],
+                "sectionId": "root-context"
+              },
+              {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 54,
+                "sectionId": "hidden-stems"
+              }
+            ],
+            "rootGrade": null
+          }
+        ],
+        "monthExposures": [],
+        "combinationContexts": [
+          {
+            "id": "year:day:stem-combination:갑기",
+            "ruleId": "stem-combination:갑기",
+            "positions": [
+              "year",
+              "day"
+            ],
+            "adjacent": false,
+            "interveningPositions": [
+              "month"
+            ],
+            "involvesDayStem": true,
+            "certainty": "all-candidates",
+            "jointFeasibility": "universal-over-supplied-candidates",
+            "contextAlternatives": [
+              {
+                "interveningControllers": [],
+                "additionalPartners": []
+              }
+            ],
+            "contextScope": "conditional-on-pair-within-observed-positions",
+            "unobservedPositions": [],
+            "transformation": {
+              "status": "not-adjudicated",
+              "element": null
+            },
+            "sources": [
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  20
+                ],
+                "sectionId": "intervening-stem"
+              },
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  20
+                ],
+                "sectionId": "distant-pair"
+              },
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  20
+                ],
+                "sectionId": "day-involvement"
+              },
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  20
+                ],
+                "sectionId": "multiple-partners"
+              }
+            ]
+          }
+        ],
+        "coexistingBranchRelations": [
+          {
+            "ruleId": "branch-clash:자오",
+            "family": "branch-clash",
+            "label": "지지 육충",
+            "endpoints": [
+              {
+                "side": "self",
+                "position": "year"
+              },
+              {
+                "side": "self",
+                "position": "month"
+              }
+            ],
+            "certainty": "all-candidates",
+            "jointFeasibility": "universal-over-supplied-candidates",
+            "witnesses": [
+              [
+                "자",
+                "오"
+              ]
+            ],
+            "source": {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 26,
+              "sectionId": "branch-clashes"
+            },
+            "interpretation": null,
+            "weight": null
+          },
+          {
+            "ruleId": "branch-combination:자축",
+            "family": "branch-combination",
+            "label": "지지 육합",
+            "endpoints": [
+              {
+                "side": "self",
+                "position": "year"
+              },
+              {
+                "side": "self",
+                "position": "day"
+              }
+            ],
+            "certainty": "all-candidates",
+            "jointFeasibility": "universal-over-supplied-candidates",
+            "witnesses": [
+              [
+                "자",
+                "축"
+              ]
+            ],
+            "source": {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 25,
+              "sectionId": "branch-combinations"
+            },
+            "interpretation": null,
+            "weight": null
+          },
+          {
+            "ruleId": "branch-combination:오미",
+            "family": "branch-combination",
+            "label": "지지 육합",
+            "endpoints": [
+              {
+                "side": "self",
+                "position": "month"
+              },
+              {
+                "side": "self",
+                "position": "hour"
+              }
+            ],
+            "certainty": "all-candidates",
+            "jointFeasibility": "universal-over-supplied-candidates",
+            "witnesses": [
+              [
+                "오",
+                "미"
+              ]
+            ],
+            "source": {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 25,
+              "sectionId": "branch-combinations"
+            },
+            "interpretation": null,
+            "weight": null
+          },
+          {
+            "ruleId": "branch-clash:축미",
+            "family": "branch-clash",
+            "label": "지지 육충",
+            "endpoints": [
+              {
+                "side": "self",
+                "position": "day"
+              },
+              {
+                "side": "self",
+                "position": "hour"
+              }
+            ],
+            "certainty": "all-candidates",
+            "jointFeasibility": "universal-over-supplied-candidates",
+            "witnesses": [
+              [
+                "축",
+                "미"
+              ]
+            ],
+            "source": {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 26,
+              "sectionId": "branch-clashes"
+            },
+            "interpretation": null,
+            "weight": null
+          }
+        ],
+        "branchConflictPolicy": {
+          "status": "not-adjudicated",
+          "source": {
+            "id": "ziping-1926-nlc-46443-vol2",
+            "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+            "pdfPages": [
+              22,
+              23
+            ],
+            "sectionId": "coexisting-branch-relations"
+          }
+        },
+        "strength": null,
+        "favorableElement": null,
+        "score": null,
+        "limitations": [
+          "Same-stem/element hidden-stem matches are review evidence, not a complete 通根 definition or root grade.",
+          "Exposures exclude the day reference; exact matching does not select a 格局 or 用神.",
+          "Adjacency, intervening control and additional partners are observations, not sufficient 合化 conditions.",
+          "Unknown hour is unobserved; absence from known positions is not absence from the complete chart.",
+          "Stem context alternatives use marginal Cartesian combinations; partial combinations are not proved feasible.",
+          "No 合/沖 cancellation, numeric root weight or whole-chart strength is inferred."
+        ]
+      },
+      "draft": {
+        "ruleVersion": "month-combination-context-research-v1",
+        "contentVersion": "context-review-copy-v1",
+        "productionApproved": false,
+        "dependencies": {
+          "natalRuleVersion": "natal-definitions-research-v1",
+          "symbolRuleVersion": "symbol-relations-research-v1",
+          "engineVersion": "research-civil-midnight-v5"
+        },
+        "status": "editorial-draft-not-approved",
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "notice": "입력 후보 전체에 공통인 관찰 사실만 설명합니다. 월령·뿌리·합의 조건을 길흉이나 관계 예측으로 바꾸지 않습니다.",
+        "statements": [
+          {
+            "id": "root:month:기:exact-stem",
+            "text": "월주 지장간 기에서 일간과 같은 천간이 확인됩니다. 뿌리의 강도는 아직 평가하지 않았습니다.",
+            "sources": [
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  21,
+                  22
+                ],
+                "sectionId": "root-context"
+              },
+              {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 54,
+                "sectionId": "hidden-stems"
+              }
+            ]
+          },
+          {
+            "id": "root:day:기:exact-stem",
+            "text": "일주 지장간 기에서 일간과 같은 천간이 확인됩니다. 뿌리의 강도는 아직 평가하지 않았습니다.",
+            "sources": [
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  21,
+                  22
+                ],
+                "sectionId": "root-context"
+              },
+              {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 54,
+                "sectionId": "hidden-stems"
+              }
+            ]
+          },
+          {
+            "id": "root:hour:기:exact-stem",
+            "text": "시주 지장간 기에서 일간과 같은 천간이 확인됩니다. 뿌리의 강도는 아직 평가하지 않았습니다.",
+            "sources": [
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  21,
+                  22
+                ],
+                "sectionId": "root-context"
+              },
+              {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 54,
+                "sectionId": "hidden-stems"
+              }
+            ]
+          },
+          {
+            "id": "combination:year:day:stem-combination:갑기",
+            "text": "연주·일주에서 갑·기의 천간 합 짝이 확인되며 사이에 다른 기둥이 있습니다. 일간 자신이 참여하는 합입니다. 합화 성립은 판정하지 않았습니다.",
+            "sources": [
+              {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 23,
+                "sectionId": "stem-combinations"
+              },
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  20
+                ],
+                "sectionId": "intervening-stem"
+              },
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  20
+                ],
+                "sectionId": "distant-pair"
+              },
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  20
+                ],
+                "sectionId": "day-involvement"
+              },
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  20
+                ],
+                "sectionId": "multiple-partners"
+              }
+            ]
+          },
+          {
+            "id": "branch:branch-clash:자오:year:month",
+            "text": "연주·월주에서 자·오의 지지 육충 짝이 확인됩니다. 다른 합·충과의 상쇄는 판정하지 않았습니다.",
+            "sources": [
+              {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 26,
+                "sectionId": "branch-clashes"
+              },
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  22,
+                  23
+                ],
+                "sectionId": "coexisting-branch-relations"
+              }
+            ]
+          },
+          {
+            "id": "branch:branch-combination:자축:year:day",
+            "text": "연주·일주에서 자·축의 지지 육합 짝이 확인됩니다. 다른 합·충과의 상쇄는 판정하지 않았습니다.",
+            "sources": [
+              {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 25,
+                "sectionId": "branch-combinations"
+              },
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  22,
+                  23
+                ],
+                "sectionId": "coexisting-branch-relations"
+              }
+            ]
+          },
+          {
+            "id": "branch:branch-combination:오미:month:hour",
+            "text": "월주·시주에서 오·미의 지지 육합 짝이 확인됩니다. 다른 합·충과의 상쇄는 판정하지 않았습니다.",
+            "sources": [
+              {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 25,
+                "sectionId": "branch-combinations"
+              },
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  22,
+                  23
+                ],
+                "sectionId": "coexisting-branch-relations"
+              }
+            ]
+          },
+          {
+            "id": "branch:branch-clash:축미:day:hour",
+            "text": "일주·시주에서 축·미의 지지 육충 짝이 확인됩니다. 다른 합·충과의 상쇄는 판정하지 않았습니다.",
+            "sources": [
+              {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 26,
+                "sectionId": "branch-clashes"
+              },
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  22,
+                  23
+                ],
+                "sectionId": "coexisting-branch-relations"
+              }
+            ]
+          }
+        ],
+        "score": null
+      }
+    },
+    {
+      "id": "ipchun-unknown-hour",
+      "analysis": {
+        "ruleVersion": "month-combination-context-research-v1",
+        "productionApproved": false,
+        "dependencies": {
+          "natalRuleVersion": "natal-definitions-research-v1",
+          "symbolRuleVersion": "symbol-relations-research-v1",
+          "engineVersion": "research-civil-midnight-v5"
+        },
+        "definitionReview": {
+          "status": "source-collated",
+          "reviewer": "Codex",
+          "date": "2026-10-19"
+        },
+        "interpretationReview": {
+          "status": "pending"
+        },
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day"
+            ],
+            "omittedPositions": [
+              "hour"
+            ],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": true
+          }
+        ],
+        "monthContext": {
+          "branches": [
+            "인",
+            "축"
+          ],
+          "source": {
+            "id": "ziping-1926-nlc-46443-vol2",
+            "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+            "pdfPages": [
+              23
+            ],
+            "sectionId": "month-as-context"
+          },
+          "seasonalStrength": null,
+          "note": "월지 후보만 보존. 절기 내 경과 일수·사령·통근·투간을 종합한 강약은 미판정.",
+          "strengthPolicy": "month-alone-is-insufficient"
+        },
+        "rootObservations": [
+          {
+            "position": "year",
+            "hiddenStem": "무",
+            "match": "exact-stem",
+            "witnesses": [
+              {
+                "day": "무술",
+                "year": "갑진"
+              }
+            ],
+            "certainty": "candidate-dependent",
+            "jointFeasibility": "not-established-from-marginal-candidates",
+            "id": "root:year:무:exact-stem",
+            "sources": [
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  21,
+                  22
+                ],
+                "sectionId": "root-context"
+              },
+              {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 54,
+                "sectionId": "hidden-stems"
+              }
+            ],
+            "rootGrade": null
+          },
+          {
+            "position": "month",
+            "hiddenStem": "기",
+            "match": "same-element-other-polarity",
+            "witnesses": [
+              {
+                "day": "무술",
+                "month": "을축"
+              }
+            ],
+            "certainty": "candidate-dependent",
+            "jointFeasibility": "not-established-from-marginal-candidates",
+            "id": "root:month:기:same-element-other-polarity",
+            "sources": [
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  21,
+                  22
+                ],
+                "sectionId": "root-context"
+              },
+              {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 54,
+                "sectionId": "hidden-stems"
+              }
+            ],
+            "rootGrade": null
+          },
+          {
+            "position": "month",
+            "hiddenStem": "무",
+            "match": "exact-stem",
+            "witnesses": [
+              {
+                "day": "무술",
+                "month": "병인"
+              }
+            ],
+            "certainty": "candidate-dependent",
+            "jointFeasibility": "not-established-from-marginal-candidates",
+            "id": "root:month:무:exact-stem",
+            "sources": [
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  21,
+                  22
+                ],
+                "sectionId": "root-context"
+              },
+              {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 54,
+                "sectionId": "hidden-stems"
+              }
+            ],
+            "rootGrade": null
+          },
+          {
+            "position": "day",
+            "hiddenStem": "무",
+            "match": "exact-stem",
+            "witnesses": [
+              {
+                "day": "무술"
+              }
+            ],
+            "certainty": "all-candidates",
+            "jointFeasibility": "universal-over-supplied-candidates",
+            "id": "root:day:무:exact-stem",
+            "sources": [
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  21,
+                  22
+                ],
+                "sectionId": "root-context"
+              },
+              {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 54,
+                "sectionId": "hidden-stems"
+              }
+            ],
+            "rootGrade": null
+          }
+        ],
+        "monthExposures": [
+          {
+            "position": "year",
+            "stem": "갑",
+            "witnesses": [
+              {
+                "month": "병인",
+                "year": "갑진"
+              }
+            ],
+            "certainty": "candidate-dependent",
+            "jointFeasibility": "not-established-from-marginal-candidates",
+            "id": "month-exposure:year:갑",
+            "sources": [
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  26,
+                  27
+                ],
+                "sectionId": "month-exposure"
+              },
+              {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 54,
+                "sectionId": "hidden-stems"
+              }
+            ]
+          },
+          {
+            "position": "year",
+            "stem": "계",
+            "witnesses": [
+              {
+                "month": "을축",
+                "year": "계묘"
+              }
+            ],
+            "certainty": "candidate-dependent",
+            "jointFeasibility": "not-established-from-marginal-candidates",
+            "id": "month-exposure:year:계",
+            "sources": [
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  26,
+                  27
+                ],
+                "sectionId": "month-exposure"
+              },
+              {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 54,
+                "sectionId": "hidden-stems"
+              }
+            ]
+          },
+          {
+            "position": "month",
+            "stem": "병",
+            "witnesses": [
+              {
+                "month": "병인"
+              }
+            ],
+            "certainty": "candidate-dependent",
+            "jointFeasibility": "within-supplied-pillar-candidates",
+            "id": "month-exposure:month:병",
+            "sources": [
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  26,
+                  27
+                ],
+                "sectionId": "month-exposure"
+              },
+              {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 54,
+                "sectionId": "hidden-stems"
+              }
+            ]
+          }
+        ],
+        "combinationContexts": [
+          {
+            "id": "year:day:stem-combination:무계",
+            "ruleId": "stem-combination:무계",
+            "positions": [
+              "year",
+              "day"
+            ],
+            "adjacent": false,
+            "interveningPositions": [
+              "month"
+            ],
+            "involvesDayStem": true,
+            "certainty": "candidate-dependent",
+            "jointFeasibility": "not-established-from-marginal-candidates",
+            "contextAlternatives": [
+              {
+                "interveningControllers": [],
+                "additionalPartners": []
+              },
+              {
+                "interveningControllers": [
+                  {
+                    "position": "month",
+                    "stem": "을",
+                    "target": "day"
+                  }
+                ],
+                "additionalPartners": []
+              }
+            ],
+            "contextScope": "conditional-on-pair-within-observed-positions",
+            "unobservedPositions": [
+              "hour"
+            ],
+            "transformation": {
+              "status": "not-adjudicated",
+              "element": null
+            },
+            "sources": [
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  20
+                ],
+                "sectionId": "intervening-stem"
+              },
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  20
+                ],
+                "sectionId": "distant-pair"
+              },
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  20
+                ],
+                "sectionId": "day-involvement"
+              },
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  20
+                ],
+                "sectionId": "multiple-partners"
+              }
+            ]
+          }
+        ],
+        "coexistingBranchRelations": [
+          {
+            "ruleId": "branch-combination:묘술",
+            "family": "branch-combination",
+            "label": "지지 육합",
+            "endpoints": [
+              {
+                "side": "self",
+                "position": "year"
+              },
+              {
+                "side": "self",
+                "position": "day"
+              }
+            ],
+            "certainty": "candidate-dependent",
+            "jointFeasibility": "not-established-from-marginal-candidates",
+            "witnesses": [
+              [
+                "묘",
+                "술"
+              ]
+            ],
+            "source": {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 25,
+              "sectionId": "branch-combinations"
+            },
+            "interpretation": null,
+            "weight": null
+          },
+          {
+            "ruleId": "branch-clash:진술",
+            "family": "branch-clash",
+            "label": "지지 육충",
+            "endpoints": [
+              {
+                "side": "self",
+                "position": "year"
+              },
+              {
+                "side": "self",
+                "position": "day"
+              }
+            ],
+            "certainty": "candidate-dependent",
+            "jointFeasibility": "not-established-from-marginal-candidates",
+            "witnesses": [
+              [
+                "진",
+                "술"
+              ]
+            ],
+            "source": {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 26,
+              "sectionId": "branch-clashes"
+            },
+            "interpretation": null,
+            "weight": null
+          }
+        ],
+        "branchConflictPolicy": {
+          "status": "not-adjudicated",
+          "source": {
+            "id": "ziping-1926-nlc-46443-vol2",
+            "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+            "pdfPages": [
+              22,
+              23
+            ],
+            "sectionId": "coexisting-branch-relations"
+          }
+        },
+        "strength": null,
+        "favorableElement": null,
+        "score": null,
+        "limitations": [
+          "Same-stem/element hidden-stem matches are review evidence, not a complete 通根 definition or root grade.",
+          "Exposures exclude the day reference; exact matching does not select a 格局 or 用神.",
+          "Adjacency, intervening control and additional partners are observations, not sufficient 合化 conditions.",
+          "Unknown hour is unobserved; absence from known positions is not absence from the complete chart.",
+          "Stem context alternatives use marginal Cartesian combinations; partial combinations are not proved feasible.",
+          "No 合/沖 cancellation, numeric root weight or whole-chart strength is inferred."
+        ]
+      },
+      "draft": {
+        "ruleVersion": "month-combination-context-research-v1",
+        "contentVersion": "context-review-copy-v1",
+        "productionApproved": false,
+        "dependencies": {
+          "natalRuleVersion": "natal-definitions-research-v1",
+          "symbolRuleVersion": "symbol-relations-research-v1",
+          "engineVersion": "research-civil-midnight-v5"
+        },
+        "status": "editorial-draft-not-approved",
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day"
+            ],
+            "omittedPositions": [
+              "hour"
+            ],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": true
+          }
+        ],
+        "notice": "입력 후보 전체에 공통인 관찰 사실만 설명합니다. 월령·뿌리·합의 조건을 길흉이나 관계 예측으로 바꾸지 않습니다.",
+        "statements": [
+          {
+            "id": "root:day:무:exact-stem",
+            "text": "일주 지장간 무에서 일간과 같은 천간이 확인됩니다. 뿌리의 강도는 아직 평가하지 않았습니다.",
+            "sources": [
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  21,
+                  22
+                ],
+                "sectionId": "root-context"
+              },
+              {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 54,
+                "sectionId": "hidden-stems"
+              }
+            ]
+          }
+        ],
+        "score": null
+      }
+    },
+    {
+      "id": "correlated-month",
+      "analysis": {
+        "ruleVersion": "month-combination-context-research-v1",
+        "productionApproved": false,
+        "dependencies": {
+          "natalRuleVersion": "natal-definitions-research-v1",
+          "symbolRuleVersion": "symbol-relations-research-v1",
+          "engineVersion": "research-civil-midnight-v5"
+        },
+        "definitionReview": {
+          "status": "source-collated",
+          "reviewer": "Codex",
+          "date": "2026-10-19"
+        },
+        "interpretationReview": {
+          "status": "pending"
+        },
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "monthContext": {
+          "branches": [
+            "묘",
+            "인"
+          ],
+          "source": {
+            "id": "ziping-1926-nlc-46443-vol2",
+            "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+            "pdfPages": [
+              23
+            ],
+            "sectionId": "month-as-context"
+          },
+          "seasonalStrength": null,
+          "note": "월지 후보만 보존. 절기 내 경과 일수·사령·통근·투간을 종합한 강약은 미판정.",
+          "strengthPolicy": "month-alone-is-insufficient"
+        },
+        "rootObservations": [
+          {
+            "position": "month",
+            "hiddenStem": "무",
+            "match": "exact-stem",
+            "witnesses": [
+              {
+                "day": "무진",
+                "month": "병인"
+              }
+            ],
+            "certainty": "candidate-dependent",
+            "jointFeasibility": "not-established-from-marginal-candidates",
+            "id": "root:month:무:exact-stem",
+            "sources": [
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  21,
+                  22
+                ],
+                "sectionId": "root-context"
+              },
+              {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 54,
+                "sectionId": "hidden-stems"
+              }
+            ],
+            "rootGrade": null
+          },
+          {
+            "position": "day",
+            "hiddenStem": "무",
+            "match": "exact-stem",
+            "witnesses": [
+              {
+                "day": "무진"
+              }
+            ],
+            "certainty": "all-candidates",
+            "jointFeasibility": "universal-over-supplied-candidates",
+            "id": "root:day:무:exact-stem",
+            "sources": [
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  21,
+                  22
+                ],
+                "sectionId": "root-context"
+              },
+              {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 54,
+                "sectionId": "hidden-stems"
+              }
+            ],
+            "rootGrade": null
+          },
+          {
+            "position": "hour",
+            "hiddenStem": "기",
+            "match": "same-element-other-polarity",
+            "witnesses": [
+              {
+                "day": "무진",
+                "hour": "경오"
+              }
+            ],
+            "certainty": "all-candidates",
+            "jointFeasibility": "universal-over-supplied-candidates",
+            "id": "root:hour:기:same-element-other-polarity",
+            "sources": [
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  21,
+                  22
+                ],
+                "sectionId": "root-context"
+              },
+              {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 54,
+                "sectionId": "hidden-stems"
+              }
+            ],
+            "rootGrade": null
+          }
+        ],
+        "monthExposures": [
+          {
+            "position": "year",
+            "stem": "갑",
+            "witnesses": [
+              {
+                "month": "병인",
+                "year": "갑자"
+              }
+            ],
+            "certainty": "candidate-dependent",
+            "jointFeasibility": "not-established-from-marginal-candidates",
+            "id": "month-exposure:year:갑",
+            "sources": [
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  26,
+                  27
+                ],
+                "sectionId": "month-exposure"
+              },
+              {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 54,
+                "sectionId": "hidden-stems"
+              }
+            ]
+          },
+          {
+            "position": "month",
+            "stem": "병",
+            "witnesses": [
+              {
+                "month": "병인"
+              }
+            ],
+            "certainty": "candidate-dependent",
+            "jointFeasibility": "within-supplied-pillar-candidates",
+            "id": "month-exposure:month:병",
+            "sources": [
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  26,
+                  27
+                ],
+                "sectionId": "month-exposure"
+              },
+              {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 54,
+                "sectionId": "hidden-stems"
+              }
+            ]
+          }
+        ],
+        "combinationContexts": [],
+        "coexistingBranchRelations": [
+          {
+            "ruleId": "branch-clash:자오",
+            "family": "branch-clash",
+            "label": "지지 육충",
+            "endpoints": [
+              {
+                "side": "self",
+                "position": "year"
+              },
+              {
+                "side": "self",
+                "position": "hour"
+              }
+            ],
+            "certainty": "all-candidates",
+            "jointFeasibility": "universal-over-supplied-candidates",
+            "witnesses": [
+              [
+                "자",
+                "오"
+              ]
+            ],
+            "source": {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 26,
+              "sectionId": "branch-clashes"
+            },
+            "interpretation": null,
+            "weight": null
+          }
+        ],
+        "branchConflictPolicy": {
+          "status": "not-adjudicated",
+          "source": {
+            "id": "ziping-1926-nlc-46443-vol2",
+            "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+            "pdfPages": [
+              22,
+              23
+            ],
+            "sectionId": "coexisting-branch-relations"
+          }
+        },
+        "strength": null,
+        "favorableElement": null,
+        "score": null,
+        "limitations": [
+          "Same-stem/element hidden-stem matches are review evidence, not a complete 通根 definition or root grade.",
+          "Exposures exclude the day reference; exact matching does not select a 格局 or 用神.",
+          "Adjacency, intervening control and additional partners are observations, not sufficient 合化 conditions.",
+          "Unknown hour is unobserved; absence from known positions is not absence from the complete chart.",
+          "Stem context alternatives use marginal Cartesian combinations; partial combinations are not proved feasible.",
+          "No 合/沖 cancellation, numeric root weight or whole-chart strength is inferred."
+        ]
+      },
+      "draft": {
+        "ruleVersion": "month-combination-context-research-v1",
+        "contentVersion": "context-review-copy-v1",
+        "productionApproved": false,
+        "dependencies": {
+          "natalRuleVersion": "natal-definitions-research-v1",
+          "symbolRuleVersion": "symbol-relations-research-v1",
+          "engineVersion": "research-civil-midnight-v5"
+        },
+        "status": "editorial-draft-not-approved",
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "notice": "입력 후보 전체에 공통인 관찰 사실만 설명합니다. 월령·뿌리·합의 조건을 길흉이나 관계 예측으로 바꾸지 않습니다.",
+        "statements": [
+          {
+            "id": "root:day:무:exact-stem",
+            "text": "일주 지장간 무에서 일간과 같은 천간이 확인됩니다. 뿌리의 강도는 아직 평가하지 않았습니다.",
+            "sources": [
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  21,
+                  22
+                ],
+                "sectionId": "root-context"
+              },
+              {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 54,
+                "sectionId": "hidden-stems"
+              }
+            ]
+          },
+          {
+            "id": "root:hour:기:same-element-other-polarity",
+            "text": "시주 지장간 기에서 일간과 같은 오행의 다른 음양이 확인됩니다. 뿌리의 강도는 아직 평가하지 않았습니다.",
+            "sources": [
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  21,
+                  22
+                ],
+                "sectionId": "root-context"
+              },
+              {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 54,
+                "sectionId": "hidden-stems"
+              }
+            ]
+          },
+          {
+            "id": "branch:branch-clash:자오:year:hour",
+            "text": "연주·시주에서 자·오의 지지 육충 짝이 확인됩니다. 다른 합·충과의 상쇄는 판정하지 않았습니다.",
+            "sources": [
+              {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 26,
+                "sectionId": "branch-clashes"
+              },
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  22,
+                  23
+                ],
+                "sectionId": "coexisting-branch-relations"
+              }
+            ]
+          }
+        ],
+        "score": null
+      }
+    },
+    {
+      "id": "correlated-day",
+      "analysis": {
+        "ruleVersion": "month-combination-context-research-v1",
+        "productionApproved": false,
+        "dependencies": {
+          "natalRuleVersion": "natal-definitions-research-v1",
+          "symbolRuleVersion": "symbol-relations-research-v1",
+          "engineVersion": "research-civil-midnight-v5"
+        },
+        "definitionReview": {
+          "status": "source-collated",
+          "reviewer": "Codex",
+          "date": "2026-10-19"
+        },
+        "interpretationReview": {
+          "status": "pending"
+        },
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "monthContext": {
+          "branches": [
+            "인"
+          ],
+          "source": {
+            "id": "ziping-1926-nlc-46443-vol2",
+            "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+            "pdfPages": [
+              23
+            ],
+            "sectionId": "month-as-context"
+          },
+          "seasonalStrength": null,
+          "note": "월지 후보만 보존. 절기 내 경과 일수·사령·통근·투간을 종합한 강약은 미판정.",
+          "strengthPolicy": "month-alone-is-insufficient"
+        },
+        "rootObservations": [
+          {
+            "position": "month",
+            "hiddenStem": "갑",
+            "match": "exact-stem",
+            "witnesses": [
+              {
+                "day": "갑자",
+                "month": "병인"
+              }
+            ],
+            "certainty": "candidate-dependent",
+            "jointFeasibility": "not-established-from-marginal-candidates",
+            "id": "root:month:갑:exact-stem",
+            "sources": [
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  21,
+                  22
+                ],
+                "sectionId": "root-context"
+              },
+              {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 54,
+                "sectionId": "hidden-stems"
+              }
+            ],
+            "rootGrade": null
+          },
+          {
+            "position": "month",
+            "hiddenStem": "갑",
+            "match": "same-element-other-polarity",
+            "witnesses": [
+              {
+                "day": "을축",
+                "month": "병인"
+              }
+            ],
+            "certainty": "candidate-dependent",
+            "jointFeasibility": "not-established-from-marginal-candidates",
+            "id": "root:month:갑:same-element-other-polarity",
+            "sources": [
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  21,
+                  22
+                ],
+                "sectionId": "root-context"
+              },
+              {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 54,
+                "sectionId": "hidden-stems"
+              }
+            ],
+            "rootGrade": null
+          }
+        ],
+        "monthExposures": [
+          {
+            "position": "year",
+            "stem": "갑",
+            "witnesses": [
+              {
+                "month": "병인",
+                "year": "갑자"
+              }
+            ],
+            "certainty": "all-candidates",
+            "jointFeasibility": "universal-over-supplied-candidates",
+            "id": "month-exposure:year:갑",
+            "sources": [
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  26,
+                  27
+                ],
+                "sectionId": "month-exposure"
+              },
+              {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 54,
+                "sectionId": "hidden-stems"
+              }
+            ]
+          },
+          {
+            "position": "month",
+            "stem": "병",
+            "witnesses": [
+              {
+                "month": "병인"
+              }
+            ],
+            "certainty": "all-candidates",
+            "jointFeasibility": "universal-over-supplied-candidates",
+            "id": "month-exposure:month:병",
+            "sources": [
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  26,
+                  27
+                ],
+                "sectionId": "month-exposure"
+              },
+              {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 54,
+                "sectionId": "hidden-stems"
+              }
+            ]
+          }
+        ],
+        "combinationContexts": [
+          {
+            "id": "day:hour:stem-combination:을경",
+            "ruleId": "stem-combination:을경",
+            "positions": [
+              "day",
+              "hour"
+            ],
+            "adjacent": true,
+            "interveningPositions": [],
+            "involvesDayStem": true,
+            "certainty": "candidate-dependent",
+            "jointFeasibility": "not-established-from-marginal-candidates",
+            "contextAlternatives": [
+              {
+                "interveningControllers": [],
+                "additionalPartners": []
+              }
+            ],
+            "contextScope": "conditional-on-pair-within-observed-positions",
+            "unobservedPositions": [],
+            "transformation": {
+              "status": "not-adjudicated",
+              "element": null
+            },
+            "sources": [
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  20
+                ],
+                "sectionId": "intervening-stem"
+              },
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  20
+                ],
+                "sectionId": "distant-pair"
+              },
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  20
+                ],
+                "sectionId": "day-involvement"
+              },
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  20
+                ],
+                "sectionId": "multiple-partners"
+              }
+            ]
+          }
+        ],
+        "coexistingBranchRelations": [
+          {
+            "ruleId": "branch-combination:자축",
+            "family": "branch-combination",
+            "label": "지지 육합",
+            "endpoints": [
+              {
+                "side": "self",
+                "position": "year"
+              },
+              {
+                "side": "self",
+                "position": "day"
+              }
+            ],
+            "certainty": "candidate-dependent",
+            "jointFeasibility": "not-established-from-marginal-candidates",
+            "witnesses": [
+              [
+                "자",
+                "축"
+              ]
+            ],
+            "source": {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 25,
+              "sectionId": "branch-combinations"
+            },
+            "interpretation": null,
+            "weight": null
+          },
+          {
+            "ruleId": "branch-clash:자오",
+            "family": "branch-clash",
+            "label": "지지 육충",
+            "endpoints": [
+              {
+                "side": "self",
+                "position": "year"
+              },
+              {
+                "side": "self",
+                "position": "hour"
+              }
+            ],
+            "certainty": "all-candidates",
+            "jointFeasibility": "universal-over-supplied-candidates",
+            "witnesses": [
+              [
+                "자",
+                "오"
+              ]
+            ],
+            "source": {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 26,
+              "sectionId": "branch-clashes"
+            },
+            "interpretation": null,
+            "weight": null
+          },
+          {
+            "ruleId": "branch-clash:자오",
+            "family": "branch-clash",
+            "label": "지지 육충",
+            "endpoints": [
+              {
+                "side": "self",
+                "position": "day"
+              },
+              {
+                "side": "self",
+                "position": "hour"
+              }
+            ],
+            "certainty": "candidate-dependent",
+            "jointFeasibility": "not-established-from-marginal-candidates",
+            "witnesses": [
+              [
+                "자",
+                "오"
+              ]
+            ],
+            "source": {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 26,
+              "sectionId": "branch-clashes"
+            },
+            "interpretation": null,
+            "weight": null
+          }
+        ],
+        "branchConflictPolicy": {
+          "status": "not-adjudicated",
+          "source": {
+            "id": "ziping-1926-nlc-46443-vol2",
+            "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+            "pdfPages": [
+              22,
+              23
+            ],
+            "sectionId": "coexisting-branch-relations"
+          }
+        },
+        "strength": null,
+        "favorableElement": null,
+        "score": null,
+        "limitations": [
+          "Same-stem/element hidden-stem matches are review evidence, not a complete 通根 definition or root grade.",
+          "Exposures exclude the day reference; exact matching does not select a 格局 or 用神.",
+          "Adjacency, intervening control and additional partners are observations, not sufficient 合化 conditions.",
+          "Unknown hour is unobserved; absence from known positions is not absence from the complete chart.",
+          "Stem context alternatives use marginal Cartesian combinations; partial combinations are not proved feasible.",
+          "No 合/沖 cancellation, numeric root weight or whole-chart strength is inferred."
+        ]
+      },
+      "draft": {
+        "ruleVersion": "month-combination-context-research-v1",
+        "contentVersion": "context-review-copy-v1",
+        "productionApproved": false,
+        "dependencies": {
+          "natalRuleVersion": "natal-definitions-research-v1",
+          "symbolRuleVersion": "symbol-relations-research-v1",
+          "engineVersion": "research-civil-midnight-v5"
+        },
+        "status": "editorial-draft-not-approved",
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "notice": "입력 후보 전체에 공통인 관찰 사실만 설명합니다. 월령·뿌리·합의 조건을 길흉이나 관계 예측으로 바꾸지 않습니다.",
+        "statements": [
+          {
+            "id": "month-exposure:year:갑",
+            "text": "월지 지장간과 연주 천간에서 갑의 일치가 확인됩니다. 이 일치만으로 용신이나 격국을 정하지 않습니다.",
+            "sources": [
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  26,
+                  27
+                ],
+                "sectionId": "month-exposure"
+              },
+              {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 54,
+                "sectionId": "hidden-stems"
+              }
+            ]
+          },
+          {
+            "id": "month-exposure:month:병",
+            "text": "월지 지장간과 월주 천간에서 병의 일치가 확인됩니다. 이 일치만으로 용신이나 격국을 정하지 않습니다.",
+            "sources": [
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  26,
+                  27
+                ],
+                "sectionId": "month-exposure"
+              },
+              {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 54,
+                "sectionId": "hidden-stems"
+              }
+            ]
+          },
+          {
+            "id": "branch:branch-clash:자오:year:hour",
+            "text": "연주·시주에서 자·오의 지지 육충 짝이 확인됩니다. 다른 합·충과의 상쇄는 판정하지 않았습니다.",
+            "sources": [
+              {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 26,
+                "sectionId": "branch-clashes"
+              },
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  22,
+                  23
+                ],
+                "sectionId": "coexisting-branch-relations"
+              }
+            ]
+          }
+        ],
+        "score": null
+      }
+    }
+  ],
+  "relationshipCases": [
+    {
+      "id": "friend",
+      "draft": {
+        "contentVersion": "relationship-evidence-review-v1",
+        "productionApproved": false,
+        "dependencies": {
+          "symbolRuleVersion": "symbol-relations-research-v1",
+          "contextRuleVersion": "month-combination-context-research-v1",
+          "natalRuleVersion": "natal-definitions-research-v1",
+          "engineVersion": "research-civil-midnight-v5"
+        },
+        "status": "editorial-draft-not-approved",
+        "relationship": "friend",
+        "summary": "두 사람의 기호를 비교한 감수 자료입니다. 개인 사주 안의 합화 조건을 두 사람 사이에 그대로 적용하지 않습니다.",
+        "strengths": [],
+        "differences": [],
+        "details": [
+          {
+            "id": "stem-combination:갑기:a-year:b-year",
+            "text": "A의 연주와 B의 연주에서 선택한 규칙표에 따른 갑·기의 천간 합 짝이 확인됩니다.",
+            "basis": "cross-profile-symbol-observation",
+            "sources": [
+              {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 23,
+                "sectionId": "stem-combinations"
+              }
+            ]
+          },
+          {
+            "id": "branch-combination:자축:a-year:b-year",
+            "text": "A의 연주와 B의 연주에서 선택한 규칙표에 따른 자·축의 지지 육합 짝이 확인됩니다.",
+            "basis": "cross-profile-symbol-observation",
+            "sources": [
+              {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 25,
+                "sectionId": "branch-combinations"
+              }
+            ]
+          },
+          {
+            "id": "stem-combination:병신:a-month:b-month",
+            "text": "A의 월주와 B의 월주에서 선택한 규칙표에 따른 병·신의 천간 합 짝이 확인됩니다.",
+            "basis": "cross-profile-symbol-observation",
+            "sources": [
+              {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 23,
+                "sectionId": "stem-combinations"
+              }
+            ]
+          },
+          {
+            "id": "branch-combination:인해:a-month:b-month",
+            "text": "A의 월주와 B의 월주에서 선택한 규칙표에 따른 인·해의 지지 육합 짝이 확인됩니다.",
+            "basis": "cross-profile-symbol-observation",
+            "sources": [
+              {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 25,
+                "sectionId": "branch-combinations"
+              }
+            ]
+          },
+          {
+            "id": "stem-combination:무계:a-day:b-day",
+            "text": "A의 일주와 B의 일주에서 선택한 규칙표에 따른 무·계의 천간 합 짝이 확인됩니다.",
+            "basis": "cross-profile-symbol-observation",
+            "sources": [
+              {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 23,
+                "sectionId": "stem-combinations"
+              }
+            ]
+          },
+          {
+            "id": "branch-combination:진유:a-day:b-day",
+            "text": "A의 일주와 B의 일주에서 선택한 규칙표에 따른 진·유의 지지 육합 짝이 확인됩니다.",
+            "basis": "cross-profile-symbol-observation",
+            "sources": [
+              {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 25,
+                "sectionId": "branch-combinations"
+              }
+            ]
+          },
+          {
+            "id": "stem-combination:을경:a-hour:b-hour",
+            "text": "A의 시주와 B의 시주에서 선택한 규칙표에 따른 을·경의 천간 합 짝이 확인됩니다.",
+            "basis": "cross-profile-symbol-observation",
+            "sources": [
+              {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 23,
+                "sectionId": "stem-combinations"
+              }
+            ]
+          },
+          {
+            "id": "branch-combination:오미:a-hour:b-hour",
+            "text": "A의 시주와 B의 시주에서 선택한 규칙표에 따른 오·미의 지지 육합 짝이 확인됩니다.",
+            "basis": "cross-profile-symbol-observation",
+            "sources": [
+              {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 25,
+                "sectionId": "branch-combinations"
+              }
+            ]
+          }
+        ],
+        "advice": [
+          {
+            "id": "conversation:friend",
+            "text": "서로 편한 연락 빈도와 함께 하고 싶은 일을 이야기해 보세요.",
+            "basis": "editorial-conversation-prompt-not-chart-derived"
+          }
+        ],
+        "individualContexts": [
+          {
+            "side": "a",
+            "draft": {
+              "ruleVersion": "month-combination-context-research-v1",
+              "contentVersion": "context-review-copy-v1",
+              "productionApproved": false,
+              "dependencies": {
+                "natalRuleVersion": "natal-definitions-research-v1",
+                "symbolRuleVersion": "symbol-relations-research-v1",
+                "engineVersion": "research-civil-midnight-v5"
+              },
+              "status": "editorial-draft-not-approved",
+              "coverage": [
+                {
+                  "side": "self",
+                  "includedPositions": [
+                    "year",
+                    "month",
+                    "day",
+                    "hour"
+                  ],
+                  "omittedPositions": [],
+                  "clockReviewRequired": false,
+                  "boundaryReviewRequired": false
+                }
+              ],
+              "notice": "입력 후보 전체에 공통인 관찰 사실만 설명합니다. 월령·뿌리·합의 조건을 길흉이나 관계 예측으로 바꾸지 않습니다.",
+              "statements": [
+                {
+                  "id": "month-exposure:year:갑",
+                  "text": "월지 지장간과 연주 천간에서 갑의 일치가 확인됩니다. 이 일치만으로 용신이나 격국을 정하지 않습니다.",
+                  "sources": [
+                    {
+                      "id": "ziping-1926-nlc-46443-vol2",
+                      "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                      "pdfPages": [
+                        26,
+                        27
+                      ],
+                      "sectionId": "month-exposure"
+                    },
+                    {
+                      "id": "yuanhai-1926-ntl-9900014379",
+                      "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                      "pdfPage": 54,
+                      "sectionId": "hidden-stems"
+                    }
+                  ]
+                },
+                {
+                  "id": "month-exposure:month:병",
+                  "text": "월지 지장간과 월주 천간에서 병의 일치가 확인됩니다. 이 일치만으로 용신이나 격국을 정하지 않습니다.",
+                  "sources": [
+                    {
+                      "id": "ziping-1926-nlc-46443-vol2",
+                      "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                      "pdfPages": [
+                        26,
+                        27
+                      ],
+                      "sectionId": "month-exposure"
+                    },
+                    {
+                      "id": "yuanhai-1926-ntl-9900014379",
+                      "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                      "pdfPage": 54,
+                      "sectionId": "hidden-stems"
+                    }
+                  ]
+                },
+                {
+                  "id": "root:month:무:exact-stem",
+                  "text": "월주 지장간 무에서 일간과 같은 천간이 확인됩니다. 뿌리의 강도는 아직 평가하지 않았습니다.",
+                  "sources": [
+                    {
+                      "id": "ziping-1926-nlc-46443-vol2",
+                      "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                      "pdfPages": [
+                        21,
+                        22
+                      ],
+                      "sectionId": "root-context"
+                    },
+                    {
+                      "id": "yuanhai-1926-ntl-9900014379",
+                      "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                      "pdfPage": 54,
+                      "sectionId": "hidden-stems"
+                    }
+                  ]
+                },
+                {
+                  "id": "root:day:무:exact-stem",
+                  "text": "일주 지장간 무에서 일간과 같은 천간이 확인됩니다. 뿌리의 강도는 아직 평가하지 않았습니다.",
+                  "sources": [
+                    {
+                      "id": "ziping-1926-nlc-46443-vol2",
+                      "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                      "pdfPages": [
+                        21,
+                        22
+                      ],
+                      "sectionId": "root-context"
+                    },
+                    {
+                      "id": "yuanhai-1926-ntl-9900014379",
+                      "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                      "pdfPage": 54,
+                      "sectionId": "hidden-stems"
+                    }
+                  ]
+                },
+                {
+                  "id": "root:hour:기:same-element-other-polarity",
+                  "text": "시주 지장간 기에서 일간과 같은 오행의 다른 음양이 확인됩니다. 뿌리의 강도는 아직 평가하지 않았습니다.",
+                  "sources": [
+                    {
+                      "id": "ziping-1926-nlc-46443-vol2",
+                      "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                      "pdfPages": [
+                        21,
+                        22
+                      ],
+                      "sectionId": "root-context"
+                    },
+                    {
+                      "id": "yuanhai-1926-ntl-9900014379",
+                      "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                      "pdfPage": 54,
+                      "sectionId": "hidden-stems"
+                    }
+                  ]
+                },
+                {
+                  "id": "branch:branch-clash:자오:year:hour",
+                  "text": "연주·시주에서 자·오의 지지 육충 짝이 확인됩니다. 다른 합·충과의 상쇄는 판정하지 않았습니다.",
+                  "sources": [
+                    {
+                      "id": "yuanhai-1926-ntl-9900014379",
+                      "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                      "pdfPage": 26,
+                      "sectionId": "branch-clashes"
+                    },
+                    {
+                      "id": "ziping-1926-nlc-46443-vol2",
+                      "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                      "pdfPages": [
+                        22,
+                        23
+                      ],
+                      "sectionId": "coexisting-branch-relations"
+                    }
+                  ]
+                }
+              ],
+              "score": null
+            }
+          },
+          {
+            "side": "b",
+            "draft": {
+              "ruleVersion": "month-combination-context-research-v1",
+              "contentVersion": "context-review-copy-v1",
+              "productionApproved": false,
+              "dependencies": {
+                "natalRuleVersion": "natal-definitions-research-v1",
+                "symbolRuleVersion": "symbol-relations-research-v1",
+                "engineVersion": "research-civil-midnight-v5"
+              },
+              "status": "editorial-draft-not-approved",
+              "coverage": [
+                {
+                  "side": "self",
+                  "includedPositions": [
+                    "year",
+                    "month",
+                    "day",
+                    "hour"
+                  ],
+                  "omittedPositions": [],
+                  "clockReviewRequired": false,
+                  "boundaryReviewRequired": false
+                }
+              ],
+              "notice": "입력 후보 전체에 공통인 관찰 사실만 설명합니다. 월령·뿌리·합의 조건을 길흉이나 관계 예측으로 바꾸지 않습니다.",
+              "statements": [
+                {
+                  "id": "root:year:계:exact-stem",
+                  "text": "연주 지장간 계에서 일간과 같은 천간이 확인됩니다. 뿌리의 강도는 아직 평가하지 않았습니다.",
+                  "sources": [
+                    {
+                      "id": "ziping-1926-nlc-46443-vol2",
+                      "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                      "pdfPages": [
+                        21,
+                        22
+                      ],
+                      "sectionId": "root-context"
+                    },
+                    {
+                      "id": "yuanhai-1926-ntl-9900014379",
+                      "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                      "pdfPage": 54,
+                      "sectionId": "hidden-stems"
+                    }
+                  ]
+                },
+                {
+                  "id": "root:month:임:same-element-other-polarity",
+                  "text": "월주 지장간 임에서 일간과 같은 오행의 다른 음양이 확인됩니다. 뿌리의 강도는 아직 평가하지 않았습니다.",
+                  "sources": [
+                    {
+                      "id": "ziping-1926-nlc-46443-vol2",
+                      "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                      "pdfPages": [
+                        21,
+                        22
+                      ],
+                      "sectionId": "root-context"
+                    },
+                    {
+                      "id": "yuanhai-1926-ntl-9900014379",
+                      "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                      "pdfPage": 54,
+                      "sectionId": "hidden-stems"
+                    }
+                  ]
+                },
+                {
+                  "id": "branch:branch-clash:축미:year:hour",
+                  "text": "연주·시주에서 축·미의 지지 육충 짝이 확인됩니다. 다른 합·충과의 상쇄는 판정하지 않았습니다.",
+                  "sources": [
+                    {
+                      "id": "yuanhai-1926-ntl-9900014379",
+                      "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                      "pdfPage": 26,
+                      "sectionId": "branch-clashes"
+                    },
+                    {
+                      "id": "ziping-1926-nlc-46443-vol2",
+                      "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                      "pdfPages": [
+                        22,
+                        23
+                      ],
+                      "sectionId": "coexisting-branch-relations"
+                    }
+                  ]
+                }
+              ],
+              "score": null
+            }
+          }
+        ],
+        "coverage": [
+          {
+            "side": "a",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          },
+          {
+            "side": "b",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "omittedCandidateDependentFacts": 0,
+        "metrics": {
+          "score": null,
+          "normalizedCompatibility": null,
+          "mapRadius": null,
+          "status": "unavailable-pending-rule-and-scale-review"
+        },
+        "releaseBlockers": [
+          "Calendar approval pending",
+          "Context observations are not sufficient interpretation rules",
+          "Relationship interpretation and compatibility weights pending",
+          "Comparable versioned map scale pending"
+        ]
+      }
+    },
+    {
+      "id": "family",
+      "draft": {
+        "contentVersion": "relationship-evidence-review-v1",
+        "productionApproved": false,
+        "dependencies": {
+          "symbolRuleVersion": "symbol-relations-research-v1",
+          "contextRuleVersion": "month-combination-context-research-v1",
+          "natalRuleVersion": "natal-definitions-research-v1",
+          "engineVersion": "research-civil-midnight-v5"
+        },
+        "status": "editorial-draft-not-approved",
+        "relationship": "family",
+        "summary": "두 사람의 기호를 비교한 감수 자료입니다. 개인 사주 안의 합화 조건을 두 사람 사이에 그대로 적용하지 않습니다.",
+        "strengths": [],
+        "differences": [],
+        "details": [
+          {
+            "id": "stem-combination:갑기:a-year:b-year",
+            "text": "A의 연주와 B의 연주에서 선택한 규칙표에 따른 갑·기의 천간 합 짝이 확인됩니다.",
+            "basis": "cross-profile-symbol-observation",
+            "sources": [
+              {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 23,
+                "sectionId": "stem-combinations"
+              }
+            ]
+          },
+          {
+            "id": "branch-combination:자축:a-year:b-year",
+            "text": "A의 연주와 B의 연주에서 선택한 규칙표에 따른 자·축의 지지 육합 짝이 확인됩니다.",
+            "basis": "cross-profile-symbol-observation",
+            "sources": [
+              {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 25,
+                "sectionId": "branch-combinations"
+              }
+            ]
+          },
+          {
+            "id": "stem-combination:병신:a-month:b-month",
+            "text": "A의 월주와 B의 월주에서 선택한 규칙표에 따른 병·신의 천간 합 짝이 확인됩니다.",
+            "basis": "cross-profile-symbol-observation",
+            "sources": [
+              {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 23,
+                "sectionId": "stem-combinations"
+              }
+            ]
+          },
+          {
+            "id": "branch-combination:인해:a-month:b-month",
+            "text": "A의 월주와 B의 월주에서 선택한 규칙표에 따른 인·해의 지지 육합 짝이 확인됩니다.",
+            "basis": "cross-profile-symbol-observation",
+            "sources": [
+              {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 25,
+                "sectionId": "branch-combinations"
+              }
+            ]
+          },
+          {
+            "id": "stem-combination:무계:a-day:b-day",
+            "text": "A의 일주와 B의 일주에서 선택한 규칙표에 따른 무·계의 천간 합 짝이 확인됩니다.",
+            "basis": "cross-profile-symbol-observation",
+            "sources": [
+              {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 23,
+                "sectionId": "stem-combinations"
+              }
+            ]
+          },
+          {
+            "id": "branch-combination:진유:a-day:b-day",
+            "text": "A의 일주와 B의 일주에서 선택한 규칙표에 따른 진·유의 지지 육합 짝이 확인됩니다.",
+            "basis": "cross-profile-symbol-observation",
+            "sources": [
+              {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 25,
+                "sectionId": "branch-combinations"
+              }
+            ]
+          },
+          {
+            "id": "stem-combination:을경:a-hour:b-hour",
+            "text": "A의 시주와 B의 시주에서 선택한 규칙표에 따른 을·경의 천간 합 짝이 확인됩니다.",
+            "basis": "cross-profile-symbol-observation",
+            "sources": [
+              {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 23,
+                "sectionId": "stem-combinations"
+              }
+            ]
+          },
+          {
+            "id": "branch-combination:오미:a-hour:b-hour",
+            "text": "A의 시주와 B의 시주에서 선택한 규칙표에 따른 오·미의 지지 육합 짝이 확인됩니다.",
+            "basis": "cross-profile-symbol-observation",
+            "sources": [
+              {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 25,
+                "sectionId": "branch-combinations"
+              }
+            ]
+          }
+        ],
+        "advice": [
+          {
+            "id": "conversation:family",
+            "text": "도움이 필요한 일과 각자 결정하고 싶은 일을 나눠 이야기해 보세요.",
+            "basis": "editorial-conversation-prompt-not-chart-derived"
+          }
+        ],
+        "individualContexts": [
+          {
+            "side": "a",
+            "draft": {
+              "ruleVersion": "month-combination-context-research-v1",
+              "contentVersion": "context-review-copy-v1",
+              "productionApproved": false,
+              "dependencies": {
+                "natalRuleVersion": "natal-definitions-research-v1",
+                "symbolRuleVersion": "symbol-relations-research-v1",
+                "engineVersion": "research-civil-midnight-v5"
+              },
+              "status": "editorial-draft-not-approved",
+              "coverage": [
+                {
+                  "side": "self",
+                  "includedPositions": [
+                    "year",
+                    "month",
+                    "day",
+                    "hour"
+                  ],
+                  "omittedPositions": [],
+                  "clockReviewRequired": false,
+                  "boundaryReviewRequired": false
+                }
+              ],
+              "notice": "입력 후보 전체에 공통인 관찰 사실만 설명합니다. 월령·뿌리·합의 조건을 길흉이나 관계 예측으로 바꾸지 않습니다.",
+              "statements": [
+                {
+                  "id": "month-exposure:year:갑",
+                  "text": "월지 지장간과 연주 천간에서 갑의 일치가 확인됩니다. 이 일치만으로 용신이나 격국을 정하지 않습니다.",
+                  "sources": [
+                    {
+                      "id": "ziping-1926-nlc-46443-vol2",
+                      "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                      "pdfPages": [
+                        26,
+                        27
+                      ],
+                      "sectionId": "month-exposure"
+                    },
+                    {
+                      "id": "yuanhai-1926-ntl-9900014379",
+                      "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                      "pdfPage": 54,
+                      "sectionId": "hidden-stems"
+                    }
+                  ]
+                },
+                {
+                  "id": "month-exposure:month:병",
+                  "text": "월지 지장간과 월주 천간에서 병의 일치가 확인됩니다. 이 일치만으로 용신이나 격국을 정하지 않습니다.",
+                  "sources": [
+                    {
+                      "id": "ziping-1926-nlc-46443-vol2",
+                      "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                      "pdfPages": [
+                        26,
+                        27
+                      ],
+                      "sectionId": "month-exposure"
+                    },
+                    {
+                      "id": "yuanhai-1926-ntl-9900014379",
+                      "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                      "pdfPage": 54,
+                      "sectionId": "hidden-stems"
+                    }
+                  ]
+                },
+                {
+                  "id": "root:month:무:exact-stem",
+                  "text": "월주 지장간 무에서 일간과 같은 천간이 확인됩니다. 뿌리의 강도는 아직 평가하지 않았습니다.",
+                  "sources": [
+                    {
+                      "id": "ziping-1926-nlc-46443-vol2",
+                      "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                      "pdfPages": [
+                        21,
+                        22
+                      ],
+                      "sectionId": "root-context"
+                    },
+                    {
+                      "id": "yuanhai-1926-ntl-9900014379",
+                      "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                      "pdfPage": 54,
+                      "sectionId": "hidden-stems"
+                    }
+                  ]
+                },
+                {
+                  "id": "root:day:무:exact-stem",
+                  "text": "일주 지장간 무에서 일간과 같은 천간이 확인됩니다. 뿌리의 강도는 아직 평가하지 않았습니다.",
+                  "sources": [
+                    {
+                      "id": "ziping-1926-nlc-46443-vol2",
+                      "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                      "pdfPages": [
+                        21,
+                        22
+                      ],
+                      "sectionId": "root-context"
+                    },
+                    {
+                      "id": "yuanhai-1926-ntl-9900014379",
+                      "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                      "pdfPage": 54,
+                      "sectionId": "hidden-stems"
+                    }
+                  ]
+                },
+                {
+                  "id": "root:hour:기:same-element-other-polarity",
+                  "text": "시주 지장간 기에서 일간과 같은 오행의 다른 음양이 확인됩니다. 뿌리의 강도는 아직 평가하지 않았습니다.",
+                  "sources": [
+                    {
+                      "id": "ziping-1926-nlc-46443-vol2",
+                      "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                      "pdfPages": [
+                        21,
+                        22
+                      ],
+                      "sectionId": "root-context"
+                    },
+                    {
+                      "id": "yuanhai-1926-ntl-9900014379",
+                      "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                      "pdfPage": 54,
+                      "sectionId": "hidden-stems"
+                    }
+                  ]
+                },
+                {
+                  "id": "branch:branch-clash:자오:year:hour",
+                  "text": "연주·시주에서 자·오의 지지 육충 짝이 확인됩니다. 다른 합·충과의 상쇄는 판정하지 않았습니다.",
+                  "sources": [
+                    {
+                      "id": "yuanhai-1926-ntl-9900014379",
+                      "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                      "pdfPage": 26,
+                      "sectionId": "branch-clashes"
+                    },
+                    {
+                      "id": "ziping-1926-nlc-46443-vol2",
+                      "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                      "pdfPages": [
+                        22,
+                        23
+                      ],
+                      "sectionId": "coexisting-branch-relations"
+                    }
+                  ]
+                }
+              ],
+              "score": null
+            }
+          },
+          {
+            "side": "b",
+            "draft": {
+              "ruleVersion": "month-combination-context-research-v1",
+              "contentVersion": "context-review-copy-v1",
+              "productionApproved": false,
+              "dependencies": {
+                "natalRuleVersion": "natal-definitions-research-v1",
+                "symbolRuleVersion": "symbol-relations-research-v1",
+                "engineVersion": "research-civil-midnight-v5"
+              },
+              "status": "editorial-draft-not-approved",
+              "coverage": [
+                {
+                  "side": "self",
+                  "includedPositions": [
+                    "year",
+                    "month",
+                    "day",
+                    "hour"
+                  ],
+                  "omittedPositions": [],
+                  "clockReviewRequired": false,
+                  "boundaryReviewRequired": false
+                }
+              ],
+              "notice": "입력 후보 전체에 공통인 관찰 사실만 설명합니다. 월령·뿌리·합의 조건을 길흉이나 관계 예측으로 바꾸지 않습니다.",
+              "statements": [
+                {
+                  "id": "root:year:계:exact-stem",
+                  "text": "연주 지장간 계에서 일간과 같은 천간이 확인됩니다. 뿌리의 강도는 아직 평가하지 않았습니다.",
+                  "sources": [
+                    {
+                      "id": "ziping-1926-nlc-46443-vol2",
+                      "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                      "pdfPages": [
+                        21,
+                        22
+                      ],
+                      "sectionId": "root-context"
+                    },
+                    {
+                      "id": "yuanhai-1926-ntl-9900014379",
+                      "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                      "pdfPage": 54,
+                      "sectionId": "hidden-stems"
+                    }
+                  ]
+                },
+                {
+                  "id": "root:month:임:same-element-other-polarity",
+                  "text": "월주 지장간 임에서 일간과 같은 오행의 다른 음양이 확인됩니다. 뿌리의 강도는 아직 평가하지 않았습니다.",
+                  "sources": [
+                    {
+                      "id": "ziping-1926-nlc-46443-vol2",
+                      "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                      "pdfPages": [
+                        21,
+                        22
+                      ],
+                      "sectionId": "root-context"
+                    },
+                    {
+                      "id": "yuanhai-1926-ntl-9900014379",
+                      "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                      "pdfPage": 54,
+                      "sectionId": "hidden-stems"
+                    }
+                  ]
+                },
+                {
+                  "id": "branch:branch-clash:축미:year:hour",
+                  "text": "연주·시주에서 축·미의 지지 육충 짝이 확인됩니다. 다른 합·충과의 상쇄는 판정하지 않았습니다.",
+                  "sources": [
+                    {
+                      "id": "yuanhai-1926-ntl-9900014379",
+                      "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                      "pdfPage": 26,
+                      "sectionId": "branch-clashes"
+                    },
+                    {
+                      "id": "ziping-1926-nlc-46443-vol2",
+                      "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                      "pdfPages": [
+                        22,
+                        23
+                      ],
+                      "sectionId": "coexisting-branch-relations"
+                    }
+                  ]
+                }
+              ],
+              "score": null
+            }
+          }
+        ],
+        "coverage": [
+          {
+            "side": "a",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          },
+          {
+            "side": "b",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "omittedCandidateDependentFacts": 0,
+        "metrics": {
+          "score": null,
+          "normalizedCompatibility": null,
+          "mapRadius": null,
+          "status": "unavailable-pending-rule-and-scale-review"
+        },
+        "releaseBlockers": [
+          "Calendar approval pending",
+          "Context observations are not sufficient interpretation rules",
+          "Relationship interpretation and compatibility weights pending",
+          "Comparable versioned map scale pending"
+        ]
+      }
+    },
+    {
+      "id": "partner",
+      "draft": {
+        "contentVersion": "relationship-evidence-review-v1",
+        "productionApproved": false,
+        "dependencies": {
+          "symbolRuleVersion": "symbol-relations-research-v1",
+          "contextRuleVersion": "month-combination-context-research-v1",
+          "natalRuleVersion": "natal-definitions-research-v1",
+          "engineVersion": "research-civil-midnight-v5"
+        },
+        "status": "editorial-draft-not-approved",
+        "relationship": "partner",
+        "summary": "두 사람의 기호를 비교한 감수 자료입니다. 개인 사주 안의 합화 조건을 두 사람 사이에 그대로 적용하지 않습니다.",
+        "strengths": [],
+        "differences": [],
+        "details": [
+          {
+            "id": "stem-combination:갑기:a-year:b-year",
+            "text": "A의 연주와 B의 연주에서 선택한 규칙표에 따른 갑·기의 천간 합 짝이 확인됩니다.",
+            "basis": "cross-profile-symbol-observation",
+            "sources": [
+              {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 23,
+                "sectionId": "stem-combinations"
+              }
+            ]
+          },
+          {
+            "id": "branch-combination:자축:a-year:b-year",
+            "text": "A의 연주와 B의 연주에서 선택한 규칙표에 따른 자·축의 지지 육합 짝이 확인됩니다.",
+            "basis": "cross-profile-symbol-observation",
+            "sources": [
+              {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 25,
+                "sectionId": "branch-combinations"
+              }
+            ]
+          },
+          {
+            "id": "stem-combination:병신:a-month:b-month",
+            "text": "A의 월주와 B의 월주에서 선택한 규칙표에 따른 병·신의 천간 합 짝이 확인됩니다.",
+            "basis": "cross-profile-symbol-observation",
+            "sources": [
+              {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 23,
+                "sectionId": "stem-combinations"
+              }
+            ]
+          },
+          {
+            "id": "branch-combination:인해:a-month:b-month",
+            "text": "A의 월주와 B의 월주에서 선택한 규칙표에 따른 인·해의 지지 육합 짝이 확인됩니다.",
+            "basis": "cross-profile-symbol-observation",
+            "sources": [
+              {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 25,
+                "sectionId": "branch-combinations"
+              }
+            ]
+          },
+          {
+            "id": "stem-combination:무계:a-day:b-day",
+            "text": "A의 일주와 B의 일주에서 선택한 규칙표에 따른 무·계의 천간 합 짝이 확인됩니다.",
+            "basis": "cross-profile-symbol-observation",
+            "sources": [
+              {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 23,
+                "sectionId": "stem-combinations"
+              }
+            ]
+          },
+          {
+            "id": "branch-combination:진유:a-day:b-day",
+            "text": "A의 일주와 B의 일주에서 선택한 규칙표에 따른 진·유의 지지 육합 짝이 확인됩니다.",
+            "basis": "cross-profile-symbol-observation",
+            "sources": [
+              {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 25,
+                "sectionId": "branch-combinations"
+              }
+            ]
+          },
+          {
+            "id": "stem-combination:을경:a-hour:b-hour",
+            "text": "A의 시주와 B의 시주에서 선택한 규칙표에 따른 을·경의 천간 합 짝이 확인됩니다.",
+            "basis": "cross-profile-symbol-observation",
+            "sources": [
+              {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 23,
+                "sectionId": "stem-combinations"
+              }
+            ]
+          },
+          {
+            "id": "branch-combination:오미:a-hour:b-hour",
+            "text": "A의 시주와 B의 시주에서 선택한 규칙표에 따른 오·미의 지지 육합 짝이 확인됩니다.",
+            "basis": "cross-profile-symbol-observation",
+            "sources": [
+              {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 25,
+                "sectionId": "branch-combinations"
+              }
+            ]
+          }
+        ],
+        "advice": [
+          {
+            "id": "conversation:partner",
+            "text": "함께 보내는 시간과 혼자 쉬는 시간에 대해 원하는 바를 이야기해 보세요.",
+            "basis": "editorial-conversation-prompt-not-chart-derived"
+          }
+        ],
+        "individualContexts": [
+          {
+            "side": "a",
+            "draft": {
+              "ruleVersion": "month-combination-context-research-v1",
+              "contentVersion": "context-review-copy-v1",
+              "productionApproved": false,
+              "dependencies": {
+                "natalRuleVersion": "natal-definitions-research-v1",
+                "symbolRuleVersion": "symbol-relations-research-v1",
+                "engineVersion": "research-civil-midnight-v5"
+              },
+              "status": "editorial-draft-not-approved",
+              "coverage": [
+                {
+                  "side": "self",
+                  "includedPositions": [
+                    "year",
+                    "month",
+                    "day",
+                    "hour"
+                  ],
+                  "omittedPositions": [],
+                  "clockReviewRequired": false,
+                  "boundaryReviewRequired": false
+                }
+              ],
+              "notice": "입력 후보 전체에 공통인 관찰 사실만 설명합니다. 월령·뿌리·합의 조건을 길흉이나 관계 예측으로 바꾸지 않습니다.",
+              "statements": [
+                {
+                  "id": "month-exposure:year:갑",
+                  "text": "월지 지장간과 연주 천간에서 갑의 일치가 확인됩니다. 이 일치만으로 용신이나 격국을 정하지 않습니다.",
+                  "sources": [
+                    {
+                      "id": "ziping-1926-nlc-46443-vol2",
+                      "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                      "pdfPages": [
+                        26,
+                        27
+                      ],
+                      "sectionId": "month-exposure"
+                    },
+                    {
+                      "id": "yuanhai-1926-ntl-9900014379",
+                      "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                      "pdfPage": 54,
+                      "sectionId": "hidden-stems"
+                    }
+                  ]
+                },
+                {
+                  "id": "month-exposure:month:병",
+                  "text": "월지 지장간과 월주 천간에서 병의 일치가 확인됩니다. 이 일치만으로 용신이나 격국을 정하지 않습니다.",
+                  "sources": [
+                    {
+                      "id": "ziping-1926-nlc-46443-vol2",
+                      "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                      "pdfPages": [
+                        26,
+                        27
+                      ],
+                      "sectionId": "month-exposure"
+                    },
+                    {
+                      "id": "yuanhai-1926-ntl-9900014379",
+                      "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                      "pdfPage": 54,
+                      "sectionId": "hidden-stems"
+                    }
+                  ]
+                },
+                {
+                  "id": "root:month:무:exact-stem",
+                  "text": "월주 지장간 무에서 일간과 같은 천간이 확인됩니다. 뿌리의 강도는 아직 평가하지 않았습니다.",
+                  "sources": [
+                    {
+                      "id": "ziping-1926-nlc-46443-vol2",
+                      "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                      "pdfPages": [
+                        21,
+                        22
+                      ],
+                      "sectionId": "root-context"
+                    },
+                    {
+                      "id": "yuanhai-1926-ntl-9900014379",
+                      "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                      "pdfPage": 54,
+                      "sectionId": "hidden-stems"
+                    }
+                  ]
+                },
+                {
+                  "id": "root:day:무:exact-stem",
+                  "text": "일주 지장간 무에서 일간과 같은 천간이 확인됩니다. 뿌리의 강도는 아직 평가하지 않았습니다.",
+                  "sources": [
+                    {
+                      "id": "ziping-1926-nlc-46443-vol2",
+                      "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                      "pdfPages": [
+                        21,
+                        22
+                      ],
+                      "sectionId": "root-context"
+                    },
+                    {
+                      "id": "yuanhai-1926-ntl-9900014379",
+                      "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                      "pdfPage": 54,
+                      "sectionId": "hidden-stems"
+                    }
+                  ]
+                },
+                {
+                  "id": "root:hour:기:same-element-other-polarity",
+                  "text": "시주 지장간 기에서 일간과 같은 오행의 다른 음양이 확인됩니다. 뿌리의 강도는 아직 평가하지 않았습니다.",
+                  "sources": [
+                    {
+                      "id": "ziping-1926-nlc-46443-vol2",
+                      "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                      "pdfPages": [
+                        21,
+                        22
+                      ],
+                      "sectionId": "root-context"
+                    },
+                    {
+                      "id": "yuanhai-1926-ntl-9900014379",
+                      "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                      "pdfPage": 54,
+                      "sectionId": "hidden-stems"
+                    }
+                  ]
+                },
+                {
+                  "id": "branch:branch-clash:자오:year:hour",
+                  "text": "연주·시주에서 자·오의 지지 육충 짝이 확인됩니다. 다른 합·충과의 상쇄는 판정하지 않았습니다.",
+                  "sources": [
+                    {
+                      "id": "yuanhai-1926-ntl-9900014379",
+                      "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                      "pdfPage": 26,
+                      "sectionId": "branch-clashes"
+                    },
+                    {
+                      "id": "ziping-1926-nlc-46443-vol2",
+                      "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                      "pdfPages": [
+                        22,
+                        23
+                      ],
+                      "sectionId": "coexisting-branch-relations"
+                    }
+                  ]
+                }
+              ],
+              "score": null
+            }
+          },
+          {
+            "side": "b",
+            "draft": {
+              "ruleVersion": "month-combination-context-research-v1",
+              "contentVersion": "context-review-copy-v1",
+              "productionApproved": false,
+              "dependencies": {
+                "natalRuleVersion": "natal-definitions-research-v1",
+                "symbolRuleVersion": "symbol-relations-research-v1",
+                "engineVersion": "research-civil-midnight-v5"
+              },
+              "status": "editorial-draft-not-approved",
+              "coverage": [
+                {
+                  "side": "self",
+                  "includedPositions": [
+                    "year",
+                    "month",
+                    "day",
+                    "hour"
+                  ],
+                  "omittedPositions": [],
+                  "clockReviewRequired": false,
+                  "boundaryReviewRequired": false
+                }
+              ],
+              "notice": "입력 후보 전체에 공통인 관찰 사실만 설명합니다. 월령·뿌리·합의 조건을 길흉이나 관계 예측으로 바꾸지 않습니다.",
+              "statements": [
+                {
+                  "id": "root:year:계:exact-stem",
+                  "text": "연주 지장간 계에서 일간과 같은 천간이 확인됩니다. 뿌리의 강도는 아직 평가하지 않았습니다.",
+                  "sources": [
+                    {
+                      "id": "ziping-1926-nlc-46443-vol2",
+                      "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                      "pdfPages": [
+                        21,
+                        22
+                      ],
+                      "sectionId": "root-context"
+                    },
+                    {
+                      "id": "yuanhai-1926-ntl-9900014379",
+                      "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                      "pdfPage": 54,
+                      "sectionId": "hidden-stems"
+                    }
+                  ]
+                },
+                {
+                  "id": "root:month:임:same-element-other-polarity",
+                  "text": "월주 지장간 임에서 일간과 같은 오행의 다른 음양이 확인됩니다. 뿌리의 강도는 아직 평가하지 않았습니다.",
+                  "sources": [
+                    {
+                      "id": "ziping-1926-nlc-46443-vol2",
+                      "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                      "pdfPages": [
+                        21,
+                        22
+                      ],
+                      "sectionId": "root-context"
+                    },
+                    {
+                      "id": "yuanhai-1926-ntl-9900014379",
+                      "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                      "pdfPage": 54,
+                      "sectionId": "hidden-stems"
+                    }
+                  ]
+                },
+                {
+                  "id": "branch:branch-clash:축미:year:hour",
+                  "text": "연주·시주에서 축·미의 지지 육충 짝이 확인됩니다. 다른 합·충과의 상쇄는 판정하지 않았습니다.",
+                  "sources": [
+                    {
+                      "id": "yuanhai-1926-ntl-9900014379",
+                      "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                      "pdfPage": 26,
+                      "sectionId": "branch-clashes"
+                    },
+                    {
+                      "id": "ziping-1926-nlc-46443-vol2",
+                      "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                      "pdfPages": [
+                        22,
+                        23
+                      ],
+                      "sectionId": "coexisting-branch-relations"
+                    }
+                  ]
+                }
+              ],
+              "score": null
+            }
+          }
+        ],
+        "coverage": [
+          {
+            "side": "a",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          },
+          {
+            "side": "b",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "omittedCandidateDependentFacts": 0,
+        "metrics": {
+          "score": null,
+          "normalizedCompatibility": null,
+          "mapRadius": null,
+          "status": "unavailable-pending-rule-and-scale-review"
+        },
+        "releaseBlockers": [
+          "Calendar approval pending",
+          "Context observations are not sufficient interpretation rules",
+          "Relationship interpretation and compatibility weights pending",
+          "Comparable versioned map scale pending"
+        ]
+      }
+    },
+    {
+      "id": "uncertain-friend",
+      "draft": {
+        "contentVersion": "relationship-evidence-review-v1",
+        "productionApproved": false,
+        "dependencies": {
+          "symbolRuleVersion": "symbol-relations-research-v1",
+          "contextRuleVersion": "month-combination-context-research-v1",
+          "natalRuleVersion": "natal-definitions-research-v1",
+          "engineVersion": "research-civil-midnight-v5"
+        },
+        "status": "editorial-draft-not-approved",
+        "relationship": "friend",
+        "summary": "두 사람의 기호를 비교한 감수 자료입니다. 개인 사주 안의 합화 조건을 두 사람 사이에 그대로 적용하지 않습니다.",
+        "strengths": [],
+        "differences": [],
+        "details": [
+          {
+            "id": "stem-combination:무계:a-day:b-day",
+            "text": "A의 일주와 B의 일주에서 선택한 규칙표에 따른 무·계의 천간 합 짝이 확인됩니다.",
+            "basis": "cross-profile-symbol-observation",
+            "sources": [
+              {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "pdfPage": 23,
+                "sectionId": "stem-combinations"
+              }
+            ]
+          }
+        ],
+        "advice": [
+          {
+            "id": "conversation:friend",
+            "text": "서로 편한 연락 빈도와 함께 하고 싶은 일을 이야기해 보세요.",
+            "basis": "editorial-conversation-prompt-not-chart-derived"
+          }
+        ],
+        "individualContexts": [
+          {
+            "side": "a",
+            "draft": {
+              "ruleVersion": "month-combination-context-research-v1",
+              "contentVersion": "context-review-copy-v1",
+              "productionApproved": false,
+              "dependencies": {
+                "natalRuleVersion": "natal-definitions-research-v1",
+                "symbolRuleVersion": "symbol-relations-research-v1",
+                "engineVersion": "research-civil-midnight-v5"
+              },
+              "status": "editorial-draft-not-approved",
+              "coverage": [
+                {
+                  "side": "self",
+                  "includedPositions": [
+                    "year",
+                    "month",
+                    "day"
+                  ],
+                  "omittedPositions": [
+                    "hour"
+                  ],
+                  "clockReviewRequired": false,
+                  "boundaryReviewRequired": true
+                }
+              ],
+              "notice": "입력 후보 전체에 공통인 관찰 사실만 설명합니다. 월령·뿌리·합의 조건을 길흉이나 관계 예측으로 바꾸지 않습니다.",
+              "statements": [
+                {
+                  "id": "root:day:무:exact-stem",
+                  "text": "일주 지장간 무에서 일간과 같은 천간이 확인됩니다. 뿌리의 강도는 아직 평가하지 않았습니다.",
+                  "sources": [
+                    {
+                      "id": "ziping-1926-nlc-46443-vol2",
+                      "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                      "pdfPages": [
+                        21,
+                        22
+                      ],
+                      "sectionId": "root-context"
+                    },
+                    {
+                      "id": "yuanhai-1926-ntl-9900014379",
+                      "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                      "pdfPage": 54,
+                      "sectionId": "hidden-stems"
+                    }
+                  ]
+                }
+              ],
+              "score": null
+            }
+          },
+          {
+            "side": "b",
+            "draft": {
+              "ruleVersion": "month-combination-context-research-v1",
+              "contentVersion": "context-review-copy-v1",
+              "productionApproved": false,
+              "dependencies": {
+                "natalRuleVersion": "natal-definitions-research-v1",
+                "symbolRuleVersion": "symbol-relations-research-v1",
+                "engineVersion": "research-civil-midnight-v5"
+              },
+              "status": "editorial-draft-not-approved",
+              "coverage": [
+                {
+                  "side": "self",
+                  "includedPositions": [
+                    "year",
+                    "month",
+                    "day",
+                    "hour"
+                  ],
+                  "omittedPositions": [],
+                  "clockReviewRequired": false,
+                  "boundaryReviewRequired": false
+                }
+              ],
+              "notice": "입력 후보 전체에 공통인 관찰 사실만 설명합니다. 월령·뿌리·합의 조건을 길흉이나 관계 예측으로 바꾸지 않습니다.",
+              "statements": [
+                {
+                  "id": "root:year:계:exact-stem",
+                  "text": "연주 지장간 계에서 일간과 같은 천간이 확인됩니다. 뿌리의 강도는 아직 평가하지 않았습니다.",
+                  "sources": [
+                    {
+                      "id": "ziping-1926-nlc-46443-vol2",
+                      "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                      "pdfPages": [
+                        21,
+                        22
+                      ],
+                      "sectionId": "root-context"
+                    },
+                    {
+                      "id": "yuanhai-1926-ntl-9900014379",
+                      "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                      "pdfPage": 54,
+                      "sectionId": "hidden-stems"
+                    }
+                  ]
+                },
+                {
+                  "id": "root:month:임:same-element-other-polarity",
+                  "text": "월주 지장간 임에서 일간과 같은 오행의 다른 음양이 확인됩니다. 뿌리의 강도는 아직 평가하지 않았습니다.",
+                  "sources": [
+                    {
+                      "id": "ziping-1926-nlc-46443-vol2",
+                      "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                      "pdfPages": [
+                        21,
+                        22
+                      ],
+                      "sectionId": "root-context"
+                    },
+                    {
+                      "id": "yuanhai-1926-ntl-9900014379",
+                      "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                      "pdfPage": 54,
+                      "sectionId": "hidden-stems"
+                    }
+                  ]
+                },
+                {
+                  "id": "branch:branch-clash:축미:year:hour",
+                  "text": "연주·시주에서 축·미의 지지 육충 짝이 확인됩니다. 다른 합·충과의 상쇄는 판정하지 않았습니다.",
+                  "sources": [
+                    {
+                      "id": "yuanhai-1926-ntl-9900014379",
+                      "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                      "pdfPage": 26,
+                      "sectionId": "branch-clashes"
+                    },
+                    {
+                      "id": "ziping-1926-nlc-46443-vol2",
+                      "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                      "pdfPages": [
+                        22,
+                        23
+                      ],
+                      "sectionId": "coexisting-branch-relations"
+                    }
+                  ]
+                }
+              ],
+              "score": null
+            }
+          }
+        ],
+        "coverage": [
+          {
+            "side": "a",
+            "includedPositions": [
+              "year",
+              "month",
+              "day"
+            ],
+            "omittedPositions": [
+              "hour"
+            ],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": true
+          },
+          {
+            "side": "b",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "omittedCandidateDependentFacts": 6,
+        "metrics": {
+          "score": null,
+          "normalizedCompatibility": null,
+          "mapRadius": null,
+          "status": "unavailable-pending-rule-and-scale-review"
+        },
+        "releaseBlockers": [
+          "Calendar approval pending",
+          "Context observations are not sufficient interpretation rules",
+          "Relationship interpretation and compatibility weights pending",
+          "Comparable versioned map scale pending"
+        ]
+      }
+    }
+  ]
+}

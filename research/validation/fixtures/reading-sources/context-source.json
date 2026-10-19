@@ -1,0 +1,61 @@
+{
+  "sourceId": "ziping-1926-nlc-46443-vol2",
+  "title": "子平真詮 (淵海子平 子平真詮 第2卷)",
+  "edition": "文明書局, 民國十五年 [1926], 秦慎安校勘 (Commons metadata)",
+  "catalogId": "NLC416-13jh002326-46443",
+  "holding": "National Library of China per Commons record",
+  "descriptionUrl": "https://commons.wikimedia.org/wiki/File:NLC416-13jh002326-46443_淵海子平_子平真詮_第2卷.pdf",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/d/d5/NLC416-13jh002326-46443_%E6%B7%B5%E6%B5%B7%E5%AD%90%E5%B9%B3_%E5%AD%90%E5%B9%B3%E7%9C%9F%E8%A9%AE_%E7%AC%AC2%E5%8D%B7.pdf",
+  "retrievedOn": "2026-10-19",
+  "pdfFile": "ziping-1926-vol2.pdf",
+  "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+  "pdfBytes": 2088007,
+  "pdfPages": 75,
+  "rights": "Public domain original; Commons labels PD-scan/PD-China. No modern commentary copied.",
+  "extraction": "Full original PDF retained. Selected complete pages rendered with Poppler at maximum dimension 1800px; no crop or retouch.",
+  "pages": [
+    {
+      "file": "ziping-1926-page-19.png",
+      "pdfPage": 19,
+      "printedPage": 6,
+      "sha256": "b8d66e89d037994b5b7c68ca3bf6ed99a8f807f92ab6b0feda064037cdeedcc8"
+    },
+    {
+      "file": "ziping-1926-page-20.png",
+      "pdfPage": 20,
+      "printedPage": 7,
+      "sha256": "4672fcb19a74c8c8af352cd177e5be981998254bea2bad33e1735fc7457b6fd6"
+    },
+    {
+      "file": "ziping-1926-page-21.png",
+      "pdfPage": 21,
+      "printedPage": 8,
+      "sha256": "0a10e2766c6ce29f9307883b78d09125d0c34a385b8b8e0a01fabd74aeefdc64"
+    },
+    {
+      "file": "ziping-1926-page-22.png",
+      "pdfPage": 22,
+      "printedPage": 9,
+      "sha256": "5f0370102770ae334ce7a0177d5855be6fc38eba926f86d3c8a6be5257e384db"
+    },
+    {
+      "file": "ziping-1926-page-23.png",
+      "pdfPage": 23,
+      "printedPage": 10,
+      "sha256": "94b91d5cd91e1767fc529de0bea5fe93a53859accb94e48548123c40c9598794"
+    },
+    {
+      "file": "ziping-1926-page-26.png",
+      "pdfPage": 26,
+      "printedPage": 13,
+      "sha256": "ac483b52ef6cf30bef8042aab3696ac0a06006ef7574b35f9b7b14f3fa2ad819"
+    },
+    {
+      "file": "ziping-1926-page-27.png",
+      "pdfPage": 27,
+      "printedPage": 14,
+      "sha256": "0ffb4a392fd5ea4e3c676b8e591ac993c860717981dd3d9c645a4f15d1ed2629"
+    }
+  ],
+  "transcriptionSha256": "a09ac84a511d719c080a08156e5121d11820dfe22185e9b1dad5649c30ddc754"
+}
