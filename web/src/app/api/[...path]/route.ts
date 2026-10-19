@@ -182,23 +182,27 @@ async function handle(req: NextRequest) {
       return send(await service.result(db, owner, id));
     if (
       parts[0] === "results" &&
+      parts.length === 3 &&
       parts[2] === "shares" &&
       req.method === "POST"
     )
       return send(await service.share(db, owner, id, body.aliases));
-    if (parts[0] === "shares" && req.method === "DELETE") {
+    if (parts[0] === "shares" && parts.length === 2 && req.method === "DELETE") {
       await service.revokeShare(db, owner, id);
       return send({ ok: true });
     }
     if (
       parts[0] === "comparisons" &&
+      parts.length === 3 &&
       parts[2] === "retry" &&
       req.method === "POST"
     ) {
       await service.retryJob(db, owner, id);
       return send({ ok: true });
     }
-    if (parts[0] === "orders" && req.method === "POST") {
+    if (parts[0] === "orders" && parts.length === 3 && req.method === "POST") {
+      // Authorize every order action before reading provider settings or preparing checkout.
+      const order = await payment.ownedOrder(db, owner, id);
       if (parts[2] === "prepare")
         return send(
           await prepareNicepay(
@@ -210,7 +214,7 @@ async function handle(req: NextRequest) {
         );
       if (
         parts[2] === "confirm" &&
-        (await payment.ownedOrder(db, owner, id)).provider === "nicepay-test"
+        order.provider === "nicepay-test"
       )
         throw new AppError("SIGNED_RETURN_REQUIRED", 403);
       if (parts[2] === "confirm")

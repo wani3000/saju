@@ -16,7 +16,8 @@
     "db:migrate": "tsx scripts/migrate.ts",
     "maintenance": "tsx scripts/maintenance.ts",
     "health": "tsx scripts/maintenance.ts --health",
-    "test:postgres": "node scripts/postgres-check.mjs"
+    "test:postgres": "node scripts/postgres-check.mjs",
+    "test:journey": "node scripts/check-journey.mjs"
   },
   "dependencies": {
     "@electric-sql/pglite": "0.5.9",
@@ -32,6 +33,7 @@
     "zod": "4.1.12"
   },
   "devDependencies": {
+    "@playwright/test": "1.64.1",
     "@types/node": "22.19.15",
     "@types/pg": "8.15.6",
     "@types/react": "19.2.14",

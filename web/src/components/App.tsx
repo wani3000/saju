@@ -8,6 +8,10 @@ import {
   type SavedResult,
 } from "@/domain/model";
 import PersonForm from "./PersonForm";
+import { checkpoint, navigationKey, restoreNavigation } from "@/domain/navigation";
+function clearNavigation() {
+  try { sessionStorage.removeItem(navigationKey); } catch { /* Storage can be unavailable. */ }
+}
 type Order = {
   id: string;
   comparison_id: string;
@@ -73,6 +77,8 @@ export default function App() {
     [shareLink, setShareLink] = useState(""),
     [mapPage, setMapPage] = useState(0);
   const [authReview, setAuthReview] = useState(false);
+  const [editing, setEditing] = useState(false);
+  const [navigationReady, setNavigationReady] = useState(false);
   const [eraseConfirmed, setEraseConfirmed] = useState(false);
   const [mapGroup, setMapGroup] = useState("");
   const ownerGeneration = useRef(0);
@@ -101,8 +107,10 @@ export default function App() {
       revision.current = next.revision;
       lastSaved.current = JSON.stringify(value);
     }
+    return next;
   }
-  function navigate(next: string) {
+  function navigate(next: string, edit = false) {
+    setEditing(edit);
     setError("");
     setNotice("");
     setView(next);
@@ -128,8 +136,17 @@ export default function App() {
     boot
       .then(async () => {
         if (!alive) return;
-        await refresh(true);
+        const initial = await refresh(true);
         const params = new URLSearchParams(window.location.search);
+        // The checkpoint is a hint; only the current server-owned state may restore it.
+        if (!["auth", "orderId", "paymentReturn", "code"].some(k => params.has(k))) {
+          let raw = null;
+          try { raw = sessionStorage.getItem(navigationKey); } catch { /* Optional storage. */ }
+          const resume = restoreNavigation(raw, initial);
+          setSelected(resume.selected);
+          navigate(resume.view, resume.editing);
+        }
+        setNavigationReady(true);
         if (params.has("auth")) {
           const outcome = params.get("auth");
           window.history.replaceState({}, "", window.location.pathname);
@@ -179,6 +196,11 @@ export default function App() {
       alive = false;
     };
   }, []);
+  useEffect(() => {
+    if (!navigationReady || !data) return;
+    try { sessionStorage.setItem(navigationKey, JSON.stringify(checkpoint(view, selected, data, editing))); }
+    catch { /* Server storage and the main flow still work without tab storage. */ }
+  }, [navigationReady, view, selected, data, editing]);
   async function persist(value: Pair, generation = ownerGeneration.current) {
     if (generation !== ownerGeneration.current) return;
     const json = JSON.stringify(value);
@@ -198,6 +220,8 @@ export default function App() {
         });
         revision.current = res.revision;
         lastSaved.current = json;
+        if (generation === ownerGeneration.current)
+          setData(current => current ? { ...current, draft: value, revision: res.revision } : current);
         setSaved("입력을 저장했어요");
       });
     saveChain.current = task;
@@ -323,7 +347,7 @@ export default function App() {
         <button
           className="text-button back"
           onClick={() =>
-            navigate(
+            navigate(editing ? "review" :
               (
                 { other: "me", review: "other", share: "result" } as Record<
                   string,
@@ -404,11 +428,12 @@ export default function App() {
                 onContinue={() =>
                   act(async () => {
                     await persist(pair);
-                    navigate(view === "me" ? "other" : "review");
+                    navigate(editing ? "review" : view === "me" ? "other" : "review");
                   })
                 }
                 onChange={(p) => {
                   setPair({ ...pair, [view === "me" ? "me" : "other"]: p });
+                  setConsent(false);
                   requestKey.current = "";
                 }}
               />
@@ -435,7 +460,7 @@ export default function App() {
                     </p>
                     <button
                       className="text-button"
-                      onClick={() => navigate(i ? "other" : "me")}
+                      onClick={() => navigate(i ? "other" : "me", true)}
                     >
                       수정
                     </button>
@@ -972,6 +997,7 @@ export default function App() {
                             ownerGeneration.current++;
                             await saveChain.current.catch(() => {});
                             await api("auth/finish", { choice });
+                            clearNavigation();
                             window.location.assign("/");
                           })
                         }
@@ -1008,10 +1034,8 @@ export default function App() {
                 </button>
                 {code && (
                   <>
-                    <label>
-                      지금 한 번만 표시되는 복구 코드
-                      <textarea readOnly value={code} />
-                    </label>
+                    <label htmlFor="recovery-code">지금 한 번만 표시되는 복구 코드</label>
+                    <textarea id="recovery-code" readOnly value={code} />
                     <button
                       className="text-button"
                       onClick={() => act(() => copy(code))}
@@ -1053,6 +1077,11 @@ export default function App() {
                       ownerGeneration.current++;
                       await saveChain.current.catch(() => {});
                       await api("recover", { code: restore });
+                      clearNavigation();
+                      setSelected(null);
+                      setConsent(false);
+                      setShareLink("");
+                      setAliases(["나", "상대방"]);
                       setRestore("");
                       setCode("");
                       requestKey.current = "";
@@ -1075,6 +1104,7 @@ export default function App() {
                       ownerGeneration.current++;
                       await saveChain.current.catch(() => {});
                       await api("logout", {});
+                      clearNavigation();
                       window.location.assign("/");
                     })
                   }
@@ -1105,6 +1135,7 @@ export default function App() {
                       ownerGeneration.current++;
                       await saveChain.current.catch(() => {});
                       await api("account", undefined, "DELETE");
+                      clearNavigation();
                       window.location.assign("/");
                     })
                   }

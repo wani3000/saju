@@ -26,16 +26,10 @@ jobs:
       - name: PostgreSQL concurrency and restore
         run: PG_BIN="$(pg_config --bindir)" npm run test:postgres --prefix web
       - run: npm run build --prefix web
-      - name: HTTP integration journey
+      - run: npm run typecheck --prefix web
+      - name: Install test browser
         working-directory: web
-        shell: bash
-        run: |
-          npm start > /tmp/saju-web.log 2>&1 &
-          server_pid=$!
-          trap 'kill "$server_pid"' EXIT
-          for attempt in {1..30}; do
-            if curl -fsS http://127.0.0.1:4180/ > /dev/null; then break; fi
-            sleep 1
-          done
-          npm run test:http
+        run: npx playwright install --with-deps chromium
+      - name: Isolated HTTP and mobile journeys
+        run: npm run test:journey --prefix web
       - run: python3 tools/check_docs.py

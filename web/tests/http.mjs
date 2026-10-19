@@ -1,6 +1,8 @@
 import assert from "node:assert/strict";
 import { randomUUID } from "node:crypto";
 const base = process.env.TEST_ORIGIN ?? "http://127.0.0.1:4180";
+if (!["localhost","127.0.0.1","[::1]"].includes(new URL(base).hostname))
+  throw new Error("HTTP checks only accept a local test server.");
 let cookie = "";
 async function request(path, body, options = {}) {
   const method = options.method ?? (body === undefined ? "GET" : "POST");
@@ -69,6 +71,16 @@ assert.equal(savedReading.ruleVersion, "source-observations-copy-v2");
 assert.equal(savedReading.basis.kind, "source-symbol-comparison");
 assert.ok(savedReading.strength.includes("태어난 날"));
 assert.deepEqual(savedReading.basis.comparisonPositions,["year","month","day"]);
+const beforeMalformed = await (await request("state")).json();
+for (const [path, method, body] of [
+  [`results/${id}/shares/extra`, "POST", {aliases:["나","너"]}],
+  [`comparisons/${id}/retry/extra`, "POST", {}],
+]) {
+  r = await request(path, body, {method});
+  assert.equal(r.status,404,path);
+  assert.equal((await r.json()).code,"NOT_FOUND");
+}
+assert.deepEqual((await (await request("state")).json()).shares,beforeMalformed.shares);
 r = await request("results/" + id + "/shares", { aliases: ["나", "너"] });
 assert.equal(r.status, 200);
 const link = await r.json();
@@ -85,14 +97,29 @@ assert.ok(!html.includes(savedReading.strength));
 assert.ok(!html.includes("pdfSha256"));
 assert.ok(!html.includes("source-symbol-comparison"));
 assert.ok(!html.includes("pillars"));
+r = await request(`shares/${link.id}/extra`, undefined, { method: "DELETE" });
+assert.equal(r.status,404);
+assert.ok((await (await fetch(base+link.path)).text()).includes("함께 나누는 대화"));
 await request("shares/" + link.id, undefined, { method: "DELETE" });
 r = await fetch(base + link.path);
 assert.ok((await r.text()).includes("지금은 볼 수 없는"));
+const liveLink = await (await request(`results/${id}/shares`, {aliases:["나","너"]})).json();
 const firstCookie = cookie;
 cookie = "";
 await request("session", {});
 r = await request("results/" + id);
 assert.equal(r.status, 404);
+for (const [path,method,body] of [
+  [`results/${id}/shares`, "POST", {aliases:["가","나"]}],
+  [`shares/${liveLink.id}`, "DELETE", undefined],
+  [`comparisons/${id}/retry`, "POST", {}],
+]) {
+  r = await request(path,body,{method});
+  assert.equal(r.status,404,path);
+  assert.equal((await r.json()).code,"NOT_FOUND");
+}
+assert.equal((await (await request("state")).json()).results.length,0);
+assert.ok((await (await fetch(base+liveLink.path)).text()).includes("함께 나누는 대화"));
 cookie = firstCookie;
 r = await request("comparisons", {
   pair: { ...pair, other: person(true) },
@@ -111,6 +138,21 @@ r = await request("comparisons", {
 const second = (await r.json()).id;
 const account = await (await request("state")).json();
 const order = account.orders.find((x) => x.comparison_id === second);
+for (const action of ["confirm","prepare","cancel","reconcile","refund"]) {
+  r = await request(`orders/${order.id}/${action}/extra`, {paymentKey:`mock_${order.id}`,amount:2900});
+  assert.equal(r.status,404,action);
+}
+assert.equal((await (await request("state")).json()).orders.find(o=>o.id===order.id).state,"created");
+const originalCookie = cookie;
+cookie = "";
+await request("session", {});
+for (const action of ["confirm","prepare","cancel","reconcile","refund"]) {
+  r = await request(`orders/${order.id}/${action}`, {paymentKey:`mock_${order.id}`,amount:2900});
+  assert.equal(r.status,404,action);
+  assert.equal((await r.json()).code,"NOT_FOUND");
+}
+cookie = originalCookie;
+assert.equal((await (await request("state")).json()).orders.find(o=>o.id===order.id).state,"created");
 r = await request(`orders/${order.id}/confirm`, {
   paymentKey: `mock_${order.id}`,
   amount: 1,
@@ -144,6 +186,7 @@ r = await request("account", undefined, { method: "DELETE" });
 assert.equal(r.status, 200);
 r = await request("state");
 assert.equal(r.status, 401);
+assert.ok((await (await fetch(base+liveLink.path)).text()).includes("지금은 볼 수 없는"));
 r = await request("recover", { code });
 assert.equal(r.status, 401);
 const oversized = new ReadableStream({
@@ -168,5 +211,5 @@ r = await fetch(base + "/api/session", {
 assert.equal(r.status, 400);
 assert.equal((await r.json()).code, "INVALID_ENCODING");
 console.log(
-  "HTTP journey passed: CSRF, cookie, persistence, free result, public redaction/revocation, ownership, recovery, mock payment/refund, webhook gate, unconfigured OAuth, invalid merge ticket, erasure, revoked recovery, streamed byte limits and encoding.",
+  "HTTP journey passed: CSRF, cookie, persistence, free result, public redaction/revocation, cross-owner mutations, exact route boundaries, deletion of active shares, recovery, mock payment/refund, webhook gate, unconfigured OAuth, invalid merge ticket, erasure, revoked recovery, streamed byte limits and encoding.",
 );
