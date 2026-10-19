@@ -31,6 +31,8 @@ jobs:
       - name: Build verified engine sources
         run: node research/validation/build.mjs
       - name: Verify independent NAOJ fixtures offline
-        run: python3 research/validation/collect-naoj.py --check
+        run: |
+          python3 research/validation/collect-naoj.py --check
+          python3 research/validation/collect-naoj-sensitivity.py
       - name: Validate research adapter
         run: pnpm --dir research/validation test

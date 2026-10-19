@@ -49,3 +49,9 @@ node research/validation/compare-naoj.mjs --check --release-check
 ```
 
 새 출처를 의도적으로 수집할 때만 `python3 research/validation/collect-naoj.py --download --retrieved YYYY-MM-DD`를 쓴다. 기본 실행은 저장된 원문만 파싱하고 fixture를 재작성하며 `--check`는 읽기 전용이다. 갱신 후 출처·ΔT·해시·보고서 차이를 검토한다. (C) NAOJ, [이용 안내](https://eco.mtk.nao.ac.jp/koyomi/site/). 분 단위 정밀도, UT/UTC, 역사 역산과 실제 당시 발행물의 차이는 [검증 기록](../../docs/historical-clock-validation.md)을 따른다. 원문은 EUC-JP이며 앱 런타임이나 사용자 계산에 다운로드 자료를 직접 주입하지 않는다.
+
+## 원인 추적과 현재 v4 정책
+
+`audit-term-rounding.mjs --check`는 동일 원본 의존성 lunar-javascript 1.7.7로 1908~2026년 2,856개 분 반올림을 재현한다. 이는 **출처 추적**이며 독립 정확도 오라클이 아니다. 패키지는 검증 전용으로 고정했고 MIT 고지를 licenses에 추가했다. `python3 collect-naoj-sensitivity.py`는 저장된 ΔT 통제 응답 6개의 해시·추출값을 오프라인 검사한다. 명시적 재수집만 `--download --retrieved YYYY-MM-DD`를 사용한다.
+
+현재 앱 어댑터는 research-civil-midnight-v4다. 절 전후 120초의 임시 검토 구간과 입력 분/날짜 구간이 겹치면 연·월주 후보를 보존한다. 120초를 검증된 오차 한도로 해석하지 않는다. 시간 모름은 시주 null을 유지한다. `baseline-v3.mjs`는 이전 정책의 동결된 비교 기준으로, 기존 KASI/NAOJ 보고서의 알려진 실패를 계속 재현한다. 42개 연구 테스트는 두 경로를 구분한다. [원인·실험·제약](../../docs/historical-clock-validation.md)을 따른다.

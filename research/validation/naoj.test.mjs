@@ -71,3 +71,17 @@ test('reproduced report cannot pass the explicit release gate', () => {
   assert.equal(result.status, 2);
   assert.equal(JSON.parse(result.stdout).productionApproved, false);
 });
+
+test('v4 retains the independent expected month among candidates for every one-minute probe', () => {
+  for (const term of fixture.terms.filter(t=>t.index%2===0)) for (const direction of [-1,1]) {
+    const ut=Date.parse(term.ut)+direction*60000;
+    let offset=zone.initialOffsetSeconds;
+    for (const t of zone.transitions) {if(ut<t.utcSeconds*1000) break;offset=t.offsetSeconds;}
+    const wall=new Date((direction<0?Math.floor:Math.ceil)((ut+offset*1000)/60000)*60000);
+    const result=calculateProfile({...base,timeKnown:true,year:wall.getUTCFullYear(),
+      month:wall.getUTCMonth()+1,day:wall.getUTCDate(),hour:wall.getUTCHours(),minute:wall.getUTCMinutes()});
+    const options=result.candidates?.month??[result.pillars.month];
+    const expected=branches[(term.index/2+(direction<0?11:0))%12];
+    assert.ok(options.some(p=>p[1]===expected));
+  }
+});

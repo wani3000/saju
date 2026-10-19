@@ -1,7 +1,7 @@
 import { readFileSync, writeFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
-import { calculateProfile } from './adapter.mjs';
+import { calculateProfile } from './baseline-v3.mjs';
 import { getSolarTerm } from './build/manseryeok.mjs';
 
 const fixture = JSON.parse(readFileSync(new URL('./fixtures/naoj-terms.json', import.meta.url)));

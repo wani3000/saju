@@ -515,3 +515,40 @@ test("paid job crash limit preserves entitlement and manual retry does not creat
     1,
   );
 });
+
+test("v4 boundary ambiguity survives result generation and reopening", async () => {
+  const id = await owner(), input = pair();
+  Object.assign(input.me, {year:"1954",month:"12",day:"7",hour:"23",minute:"58",timeKnown:true});
+  const validated = validatePair(input);
+  assert.equal(validated.charts.me.pillars.month, null);
+  assert.equal(validated.charts.me.candidates!.month.length, 2);
+  const comparison = await s.createComparison(db, id, input, randomUUID(), true);
+  await s.runJobs(db, id);
+  const saved = await s.result(db, id, comparison.id);
+  assert.deepEqual(saved.charts, validated.charts);
+  assert.equal((await one(db,"SELECT engine_version FROM comparisons WHERE id=$1",[comparison.id]))!.engine_version,
+    "manseryeok-research-civil-midnight-v4");
+  assert.deepEqual(await s.createComparison(db,id,input,randomUUID(),true),comparison);
+  assert.deepEqual(await s.result(db,id,comparison.id),saved);
+  assert.equal((await s.state(db,id)).orders.length,0);
+});
+
+test("a queued v3 snapshot is not recalculated or charged again by v4", async () => {
+  const id = await owner(), input = pair();
+  Object.assign(input.me, {year:"1954",month:"12",day:"7",hour:"23",minute:"58",timeKnown:true});
+  const comparison = await s.createComparison(db,id,input,randomUUID(),true);
+  // Simulate an already persisted pre-upgrade calculation, with its original policy.
+  const previous = structuredClone(validatePair(input).charts);
+  previous.me.pillars.month = previous.me.candidates!.month.find(p=>p.endsWith("자"))!;
+  delete previous.me.candidates;
+  delete previous.me.boundaryReview;
+  previous.me.policy.version = "research-civil-midnight-v3";
+  previous.other.policy.version = "research-civil-midnight-v3";
+  await db.query("UPDATE comparisons SET charts=$2,engine_version=$3 WHERE id=$1",
+    [comparison.id,JSON.stringify(previous),"manseryeok-research-civil-midnight-v3"]);
+  await s.runJobs(db,id);
+  assert.deepEqual((await s.result(db,id,comparison.id)).charts,previous);
+  assert.deepEqual(await s.createComparison(db,id,input,randomUUID(),true),comparison);
+  assert.deepEqual((await s.result(db,id,comparison.id)).charts,previous);
+  assert.equal((await s.state(db,id)).orders.length,0);
+});

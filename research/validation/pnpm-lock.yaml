@@ -11,6 +11,9 @@ importers:
       esbuild:
         specifier: 0.28.2
         version: 0.28.2
+      lunar-javascript:
+        specifier: 1.7.7
+        version: 1.7.7
 
 packages:
 
@@ -175,6 +178,9 @@ packages:
     engines: {node: '>=18'}
     hasBin: true
 
+  lunar-javascript@1.7.7:
+    resolution: {integrity: sha512-u/KYiwPIBo/0bT+WWfU7qO1d+aqeB90Tuy4ErXenr2Gam0QcWeezUvtiOIyXR7HbVnW2I1DKfU0NBvzMZhbVQw==}
+
 snapshots:
 
   '@esbuild/aix-ppc64@0.28.2':
@@ -283,3 +289,5 @@ snapshots:
       '@esbuild/win32-arm64': 0.28.2
       '@esbuild/win32-ia32': 0.28.2
       '@esbuild/win32-x64': 0.28.2
+
+  lunar-javascript@1.7.7: {}

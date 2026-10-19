@@ -1,6 +1,6 @@
 import { calculateProfile } from "../generated/research.mjs";
 import { AppError, pairSchema, type Person } from "../domain/model";
-export const engineVersion = "manseryeok-research-civil-midnight-v3";
+export const engineVersion = "manseryeok-research-civil-midnight-v4";
 export function chart(p: Person) {
   if (p.timeKnown && (!/^\d{1,2}$/.test(p.hour) || !/^\d{1,2}$/.test(p.minute)))
     throw new AppError("INVALID_TIME", 422, "출생 시와 분을 확인해 주세요.");

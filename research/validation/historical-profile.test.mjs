@@ -1,7 +1,8 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
-import {calculateProfile} from './adapter.mjs';
+// Preserve original v3 transmission/accuracy probes; v4 guard has separate tests.
+import {calculateProfile} from './baseline-v3.mjs';
 import {resolveSeoulDate} from './resolve-wall-time.mjs';
 import {calculateFourPillars, getSolarTerm} from './build/manseryeok.mjs';
 const kasi = JSON.parse(readFileSync(new URL('./fixtures/kasi-derived.json', import.meta.url)));

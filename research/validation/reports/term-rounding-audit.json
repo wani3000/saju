@@ -1,0 +1,82 @@
+{
+  "upstream": "lunar-javascript@1.7.7 (same dependency as pinned engine generator)",
+  "range": [
+    1908,
+    2026
+  ],
+  "checked": 2856,
+  "roundingReproductionMismatches": [],
+  "differences": [
+    {
+      "year": 1954,
+      "index": 22,
+      "sourceUT": "1954-12-07T15:29:00Z",
+      "engineUTC": "1954-12-07T15:28:00.000Z",
+      "upstreamSecondUTC": "1954-12-07T15:28:29.000Z",
+      "roundingShiftSeconds": -29,
+      "upstreamDeltaTSeconds": 31.031079,
+      "upstreamSubsecondUT": "1954-12-07T15:28:29.380Z",
+      "naojDefaultDeltaTHeader": "30.2s (S2020)",
+      "naojControlled": [
+        {
+          "deltaTInput": "0",
+          "deltaTDisplayed": "0.0s (入力値)",
+          "ut": "1954-12-07T15:29:00Z"
+        },
+        {
+          "deltaTInput": "31.031079",
+          "deltaTDisplayed": "31.0s (入力値)",
+          "ut": "1954-12-07T15:28:00Z"
+        }
+      ]
+    },
+    {
+      "year": 1988,
+      "index": 18,
+      "sourceUT": "1988-10-08T01:44:00Z",
+      "engineUTC": "1988-10-08T01:45:00.000Z",
+      "upstreamSecondUTC": "1988-10-08T01:44:30.000Z",
+      "roundingShiftSeconds": 30,
+      "upstreamDeltaTSeconds": 56.425241,
+      "upstreamSubsecondUT": "1988-10-08T01:44:30.060Z",
+      "naojDefaultDeltaTHeader": "56.0s (予測値)",
+      "naojControlled": [
+        {
+          "deltaTInput": "0",
+          "deltaTDisplayed": "0.0s (入力値)",
+          "ut": "1988-10-08T01:45:00Z"
+        },
+        {
+          "deltaTInput": "56.425241",
+          "deltaTDisplayed": "56.4s (入力値)",
+          "ut": "1988-10-08T01:44:00Z"
+        }
+      ]
+    },
+    {
+      "year": 2024,
+      "index": 21,
+      "sourceUT": "2024-11-21T19:56:00Z",
+      "engineUTC": "2024-11-21T19:57:00.000Z",
+      "upstreamSecondUTC": "2024-11-21T19:56:31.000Z",
+      "roundingShiftSeconds": 29,
+      "upstreamDeltaTSeconds": 69.085702,
+      "upstreamSubsecondUT": "2024-11-21T19:56:31.156Z",
+      "naojDefaultDeltaTHeader": "69.0s (予測値)",
+      "naojControlled": [
+        {
+          "deltaTInput": "0",
+          "deltaTDisplayed": "0.0s (入力値)",
+          "ut": "2024-11-21T19:58:00Z"
+        },
+        {
+          "deltaTInput": "69.085702",
+          "deltaTDisplayed": "69.1s (入力値)",
+          "ut": "2024-11-21T19:56:00Z"
+        }
+      ]
+    }
+  ],
+  "productionApproved": false,
+  "conclusion": "The minute table reproduces upstream rounding; seconds near the 30-second threshold amplify small differences. Matching delta-T changes the 1954 displayed minute, but does not reconcile 1988 or 2024. NAOJ minute-only output cannot establish exact second errors or isolate the remaining model/time-scale differences."
+}

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="EUC-JP"?>
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
+<head>
+<meta content="text/html; charset=EUC-JP" http-equiv="Content-Type" />
+<meta content="text/javascript" http-equiv="Content-Script-Type" />
+<meta content="text/css" http-equiv="Content-Style-Type" />
+<meta content="width=device-width, initial-scale=1" name="viewport" />
+<link href="https://eco.mtk.nao.ac.jp/cgi-bin/koyomi/cande/phenomena_sy.cgi" rel="canonical" />
+<link rel="stylesheet" type="text/css" href="/koyomi/style/koyomi.css" media="all" />
+<link rel="stylesheet" type="text/css" href="/koyomi/style/koyomi_pr.css" media="print" />
+<script charset="EUC-JP" src="/koyomi/cande/script/phenom.js" type="text/javascript"></script>
+<script src="/koyomi/site/ga.js" type="text/javascript" defer="defer"></script>
+<title>二十四節気・雑節 長期版 - 国立天文台暦計算室</title>
+</head>
+<body>
+<div class="skipnav"><a href="#menu">設定へ移動</a> <a href="#skipr">結果へ移動</a></div><div id="header"><span class="bread"><a href="https://www.nao.ac.jp/">国立天文台</a>&nbsp;&gt;&nbsp;<a href="/koyomi/">暦計算室</a>&nbsp;&gt;&nbsp;<a href="/koyomi/cande/">暦象年表</a>&nbsp;&gt;&nbsp;</span> <span class="fright"><a href="/koyomi/site/koyomi.rdf" id="rss" name="rss">RSS</a> | <a href="/koyomi/topics/">トピックス</a> | <a href="/koyomi/wiki/">暦Wiki</a> | <a href="/koyomi/faq/">用語解説</a> | <a href="phenomena_sy_en.cgi" id="lang" name="lang">English</a></span> <br class="clear" /></div><h1>二十四節気・雑節 長期版</h1>
+<div id="menu"><h2>設定</h2> <form method="post" action="phenomena_sy.cgi" enctype="application/x-www-form-urlencoded" id="koyomi" name="koyomi" onsubmit="replace_z2h()"> <fieldset class="fleft"><div class="skipnav"><a href="#phtype0">太陽の現象へ移動</a> <a href="#options">オプションへ移動</a></div> <ol><li><div>年を選んでください (-2999〜2999年)。  <input type="text" name="year" value="1988" size="5" maxlength="5" id="year" title="年" /> 年 <input type="submit" name="表示" value="表示" /> <input type="submit" name="yes" value="-1年" /> <input type="submit" name="tod" value="今年" /> <input type="submit" name="tom" value="+1年" /></div></li> <li><div><a href="/koyomi/faq/time.html">標準時</a>を指定してください。 <select name="lst"  id="lst" title="標準時">
+<option value="-11">-11時間</option>
+<option value="-10">-10時間</option>
+<option value="-9.5">-09時間30分</option>
+<option value="-9">-09時間</option>
+<option value="-8">-08時間</option>
+<option value="-7">-07時間</option>
+<option value="-6">-06時間</option>
+<option value="-5">-05時間</option>
+<option value="-4.5">-04時間30分</option>
+<option value="-4">-04時間</option>
+<option value="-3.5">-03時間30分</option>
+<option value="-3">-03時間</option>
+<option value="-2.5">-02時間30分</option>
+<option value="-2">-02時間</option>
+<option value="-1">-01時間</option>
+<option selected="selected" value="0">+00時間(世界時)</option>
+<option value="1">+01時間</option>
+<option value="2">+02時間</option>
+<option value="3">+03時間</option>
+<option value="3.5">+03時間30分</option>
+<option value="4">+04時間</option>
+<option value="4.5">+04時間30分</option>
+<option value="5">+05時間</option>
+<option value="5.5">+05時間30分</option>
+<option value="5.75">+05時間45分</option>
+<option value="6">+06時間</option>
+<option value="6.5">+06時間30分</option>
+<option value="7">+07時間</option>
+<option value="8">+08時間</option>
+<option value="9">+09時間(日本)</option>
+<option value="9.5">+09時間30分</option>
+<option value="10">+10時間</option>
+<option value="10.5">+10時間30分</option>
+<option value="11">+11時間</option>
+<option value="11.5">+11時間30分</option>
+<option value="12">+12時間</option>
+<option value="12.75">+12時間45分</option>
+<option value="13">+13時間</option>
+<option value="13.75">+13時間45分</option>
+<option value="14">+14時間</option>
+<option value="99">入力値</option>
+</select><input type="text" name="lsti" value="9" size="5" maxlength="10" id="lsti" title="入力値" /><input type="submit" name="表示" value="表示" /><br /><input type="button"  name="lst0" value="世界時" onclick="set_tz(0)" onkeypress="set_tz(0)" /> <input type="button"  name="lst9" value="中央標準時" onclick="set_tz(9)" onkeypress="set_tz(9)" /> <input type="button"  name="lstv" value="入力値" onclick="set_tz(99)" onkeypress="set_tz(99)" /></div></li> <li><div>表示する現象を選んでください。 <input type="submit" name="表示" value="表示" /> <br /> <input type="button"  name="b2" value="すべて選択" onclick="check(phenom, true);" onkeypress="check(phenom, true);" /> <input type="button"  name="b3" value="すべて外す" onclick="check(phenom, false);" onkeypress="check(phenom, false);" /></div><fieldset><legend>現象</legend> <div id="phtype0"><strong>太陽</strong></div> <div><label><input type="checkbox" name="phenom" value="50" checked="checked" />二十四節気</label> <label><input type="checkbox" name="phenom" value="51" />雑節</label></div></fieldset></li> <li><div id="options">(オプション) カレンダー表示に <select name="cal"  id="cal" title="フォーマット">
+<option selected="selected" value="0">しない</option>
+<option value="1">する</option>
+</select> <input type="submit" name="表示" value="表示" /></div></li> <li><div>(オプション) <label><input type="checkbox" name="jcal" value="on" id="jcal" />和暦</label></div></li> <li><div>(オプション) 西暦の種類： <select name="jg"  id="jg" title="暦">
+<option value="0">すべてユリウス暦</option>
+<option selected="selected" value="1">すべてグレゴリオ暦</option>
+<option value="2">デフォルト</option>
+</select> <input type="submit" name="表示" value="表示" /></div></li> <li><div>(オプション) <a href="https://eco.mtk.nao.ac.jp/koyomi/wiki/A6A4A3D42FBFE4C4EA.html">ΔＴ</a>を指定してください(半角数字)。<select name="dtm"  id="dtm" title="ΔＴ">
+<option value="0">予測値</option>
+<option value="1">観測値</option>
+<option value="2">S2004</option>
+<option value="3">S2016</option>
+<option value="4">S2020</option>
+<option selected="selected" value="99">入力値</option>
+</select><input type="text" name="dt" value="0" size="5" maxlength="10" id="dt" title="ΔＴ入力" />s <input type="submit" name="表示" value="表示" /></div></li> <li><input type="submit" name="表示" value="表示" /></li></ol> <input type="hidden" name="body" value="0"  /> <input type="hidden" name="body" value="1"  /> <input type="hidden" name="coord" value="1"  /> <input type="hidden" name="figure" value="0"  /></fieldset> <div><img alt="二十四節気" class="fit" height="360" src="/koyomi/faq/image/sekki.gif" width="400" /></div> </form></div><div class="clear" id="skipr"><h2>結果</h2> <div class="fleft"><h3>1988年の天象</h3> <div>標準時:UT+0<sup>h</sup> <span class="fright">ΔＴ＝0.0<sup>s</sup> (入力値)</span></div><div>日付はすべてグレゴリオ暦によります。</div> <table border="1" id="phenom" summary="データ"><tr><th scope="col">年月日</th> <th scope="col">時刻</th> <th scope="col">天体</th> <th scope="col">現象</th> <th scope="col">基準</th> <th scope="col">備考</th></tr> <tr><td>1988/01/06</td> <td>03:04</td> <td>太陽</td> <td>二十四節気</td> <td></td> <td>小寒(黄経285°)</td></tr> <tr><td>1988/01/20</td> <td>20:25</td> <td>太陽</td> <td>二十四節気</td> <td></td> <td>大寒(黄経300°)</td></tr> <tr><td>1988/02/04</td> <td>14:44</td> <td>太陽</td> <td>二十四節気</td> <td></td> <td>立春(黄経315°)</td></tr> <tr><td>1988/02/19</td> <td>10:36</td> <td>太陽</td> <td>二十四節気</td> <td></td> <td>雨水(黄経330°)</td></tr> <tr><td>1988/03/05</td> <td>08:47</td> <td>太陽</td> <td>二十四節気</td> <td></td> <td>啓蟄(黄経345°)</td></tr> <tr><td>1988/03/20</td> <td>09:40</td> <td>太陽</td> <td>二十四節気</td> <td></td> <td>春分(黄経0°)</td></tr> <tr><td>1988/04/04</td> <td>13:40</td> <td>太陽</td> <td>二十四節気</td> <td></td> <td>清明(黄経15°)</td></tr> <tr><td>1988/04/19</td> <td>20:46</td> <td>太陽</td> <td>二十四節気</td> <td></td> <td>穀雨(黄経30°)</td></tr> <tr><td>1988/05/05</td> <td>07:03</td> <td>太陽</td> <td>二十四節気</td> <td></td> <td>立夏(黄経45°)</td></tr> <tr><td>1988/05/20</td> <td>19:58</td> <td>太陽</td> <td>二十四節気</td> <td></td> <td>小満(黄経60°)</td></tr> <tr><td>1988/06/05</td> <td>11:16</td> <td>太陽</td> <td>二十四節気</td> <td></td> <td>芒種(黄経75°)</td></tr> <tr><td>1988/06/21</td> <td>03:57</td> <td>太陽</td> <td>二十四節気</td> <td></td> <td>夏至(黄経90°)</td></tr> <tr><td>1988/07/06</td> <td>21:34</td> <td>太陽</td> <td>二十四節気</td> <td></td> <td>小暑(黄経105°)</td></tr> <tr><td>1988/07/22</td> <td>14:52</td> <td>太陽</td> <td>二十四節気</td> <td></td> <td>大暑(黄経120°)</td></tr> <tr><td>1988/08/07</td> <td>07:21</td> <td>太陽</td> <td>二十四節気</td> <td></td> <td>立秋(黄経135°)</td></tr> <tr><td>1988/08/22</td> <td>21:55</td> <td>太陽</td> <td>二十四節気</td> <td></td> <td>処暑(黄経150°)</td></tr> <tr><td>1988/09/07</td> <td>10:12</td> <td>太陽</td> <td>二十四節気</td> <td></td> <td>白露(黄経165°)</td></tr> <tr><td>1988/09/22</td> <td>19:30</td> <td>太陽</td> <td>二十四節気</td> <td></td> <td>秋分(黄経180°)</td></tr> <tr><td>1988/10/08</td> <td>01:45</td> <td>太陽</td> <td>二十四節気</td> <td></td> <td>寒露(黄経195°)</td></tr> <tr><td>1988/10/23</td> <td>04:45</td> <td>太陽</td> <td>二十四節気</td> <td></td> <td>霜降(黄経210°)</td></tr> <tr><td>1988/11/07</td> <td>04:50</td> <td>太陽</td> <td>二十四節気</td> <td></td> <td>立冬(黄経225°)</td></tr> <tr><td>1988/11/22</td> <td>02:13</td> <td>太陽</td> <td>二十四節気</td> <td></td> <td>小雪(黄経240°)</td></tr> <tr><td>1988/12/06</td> <td>21:35</td> <td>太陽</td> <td>二十四節気</td> <td></td> <td>大雪(黄経255°)</td></tr> <tr><td>1988/12/21</td> <td>15:29</td> <td>太陽</td> <td>二十四節気</td> <td></td> <td>冬至(黄経270°)</td></tr></table></div></div>
+<hr class="clear" /><h3>ご利用にあたって</h3><ul><li>本ツールのデータは現在の理論やパラメータにもとづいて算出しています。したがって、過去に発表したものや将来発表するものとは値が異なる可能性があります。</li> <li>図中の時刻は常に<a href="/koyomi/faq/time.html">中央標準時</a>です。</li> <li>関連コンテンツ<ul><li><a href="/koyomi/faq/24sekki.html">こよみ用語解説</a></li> <li><a href="phenomena_s.cgi">暦象年表版</a></li> <li><a href="/koyomi/wiki/B5A8C0E12FC6F3BDBDBBCDC0E1B5A4A4C8A4CFA1A9.html">二十四節気とは？</a></li></ul></li> <li>デフォルトでは1582年10月15日以後の日付は<a href="/koyomi/wiki/A5B0A5ECA5B4A5EAA5AACEF1.html">グレゴリオ暦</a>、それより前は<a href="/koyomi/wiki/A5E6A5EAA5A6A5B9CEF1.html">ユリウス暦</a>によります。</li> <li><a href="/koyomi/wiki/CDD7C1C72F1C7AFA4C8A4CFA1A92FB5AAB8B5.html#r45acfb0">紀元元年の前年を0年</a>としているため、これを紀元前1年とする方法とは1年ずつ差異があります。</li> <li><a href="/koyomi/faq/time.html">夏時刻</a>については考慮しておりません。</li> <li>予告なく変更することがあります (ver.2.1i)。</li></ul><div id="footer"><span class="fleft">Copyright(C) 1994- National Astronomical Observatory of Japan. All rights reserved.</span> <span class="fright">| <a href="/koyomi/about.html">暦計算室について</a> | <a href="/koyomi/site/">利用規定</a> | </span></div>
+</body>
+</html>
