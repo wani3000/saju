@@ -12,7 +12,7 @@ async function review(page: Page, changeMe?: (page: Page) => Promise<void>) {
   await expect(page.getByRole("heading",{name:"상대방의 정보",exact:true})).toBeVisible();
   await page.getByRole("button",{name:"가상 정보 채우기"}).click();
   await page.getByRole("button",{name:"저장하고 다음"}).click();
-  await expect(page.getByRole("heading",{name:"두 사람을 확인해요"})).toBeVisible();
+  await expect(page.getByRole("heading",{name:"두 사람의 기록 확인"})).toBeVisible();
 }
 async function result(page: Page, changeMe?: (page: Page) => Promise<void>) {
   await review(page, changeMe);
@@ -89,12 +89,12 @@ test("input errors, direct edit return and reload preserve the server draft with
   await page.getByRole("button",{name:"수정",exact:true}).first().click();
   await page.getByLabel("부를 이름",{exact:true}).fill("가상나");
   await page.getByRole("button",{name:"저장하고 다음"}).click();
-  await expect(page.getByRole("heading",{name:"두 사람을 확인해요"})).toBeVisible();
+  await expect(page.getByRole("heading",{name:"두 사람의 기록 확인"})).toBeVisible();
   await expect(page.getByRole("heading",{name:"가상나",exact:true})).toBeVisible();
   await expect(page.getByRole("checkbox",{name:consent})).not.toBeChecked();
   await page.getByRole("checkbox",{name:consent}).check();
   await page.reload();
-  await expect(page.getByRole("heading",{name:"두 사람을 확인해요"})).toBeVisible();
+  await expect(page.getByRole("heading",{name:"두 사람의 기록 확인"})).toBeVisible();
   await expect(page.getByRole("checkbox",{name:consent})).not.toBeChecked();
   const state=await (await page.request.get("/api/state")).json();
   expect(state.results).toHaveLength(0);expect(state.free).toBe("available");
@@ -131,7 +131,7 @@ test("free snapshot reload, private evidence, share preview and revocation stay 
   expect(await other.locator("main").innerText()).not.toContain("나래");
   await stranger.close();
   await page.reload();
-  await expect(page.getByRole("heading",{name:"우리 이야기 나누기",exact:true})).toBeVisible();
+  await expect(page.getByRole("heading",{name:"함께 나눌 이야기",exact:true})).toBeVisible();
   await page.getByRole("button",{name:"이 링크 철회하기"}).click();
   await publicPage.reload();await expect(publicPage.getByRole("heading",{name:/지금은 볼 수 없는/})).toBeVisible();
   await page.getByRole("button",{name:"← 뒤로",exact:true}).click();
@@ -168,7 +168,7 @@ test("logout clears screen hints, recovery keeps the result and erasure disables
   await page.getByRole("button",{name:"보관함",exact:true}).click();
   await page.getByLabel("복구 코드",{exact:true}).fill(code);
   await page.getByRole("button",{name:"코드로 보관함 전환",exact:true}).click();
-  await expect(page.getByRole("heading",{name:"가까운 사람들",exact:true})).toBeVisible();
+  await expect(page.getByRole("heading",{name:"함께한 이야기",exact:true})).toBeVisible();
   const state=await (await page.request.get("/api/state")).json();
   expect(state.results).toHaveLength(1);expect(state.orders).toHaveLength(0);
   await page.getByRole("button",{name:"보관함",exact:true}).click();

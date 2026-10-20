@@ -485,3 +485,102 @@ footer {
     animation: none !important;
   }
 }
+
+/* The selected hanji design continues through the full, scrollable journey. */
+.journey-shell h1 { margin: 18px 0; }
+.journey-shell h2, .shared h2 { font-family: "Noto Serif KR", serif; font-weight: 500; }
+.brand strong { white-space: normal; }
+.journey-progress {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 24px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.5;
+}
+.journey-progress li { min-width: 0; padding: 0 0 10px; border-bottom: 1px solid var(--line); }
+.journey-progress [aria-current="step"] { color: var(--ink); border-bottom: 2px solid var(--orange); font-weight: 700; }
+.journey-order { display: block; font-family: "Noto Serif KR", serif; font-size: 12px; margin-bottom: 4px; }
+.journey-progress .completed { color: var(--ink); }
+.guide-note { margin: 0 0 18px; }
+.guide-byline { font-size: 13px; color: #8b4437; margin: 0 0 9px; }
+.guide-quote { font-family: "Noto Serif KR", serif; font-size: 18px; line-height: 1.75; margin: 0; }
+.input-policy { background: #efe4d266; padding: 16px; border-radius: 4px; margin: 18px 0; font-size: 16px; }
+.input-policy p { margin: 0 0 12px; }
+.input-policy summary { font-size: 15px; font-weight: 500; text-decoration: underline; text-underline-offset: 4px; }
+.input-policy details[open] { margin-top: 12px; }
+.input-policy details p { margin-top: 12px; }
+.journey-shell .card, .shared .card { border-radius: 6px; background: #fffcf5cc; }
+.journey-shell .notice, .shared .notice { border-radius: 4px; }
+.journey-shell .primary, .journey-shell .secondary, .shared .button {
+  font-family: "Noto Serif KR", serif;
+  font-size: 19px;
+  font-weight: 500;
+  border-radius: 6px;
+}
+.journey-shell input:not([type="checkbox"]):not([type="radio"]),
+.journey-shell select, .journey-shell textarea { border-radius: 6px; background: #fffdf7; }
+.choice input { accent-color: var(--orange); }
+.record-form { padding: 22px 20px; border: 1px solid var(--line); background: #fffcf5b3; border-radius: 4px; margin-top: 20px; }
+.record-heading { align-items: baseline; gap: 8px; padding-bottom: 10px; border-bottom: 1px solid var(--line); }
+.record-heading .text-button { padding: 6px 0; font-size: 14px; }
+.record-field { margin-top: 28px; padding-top: 18px; border-top: 1px solid var(--line); }
+.record-field legend { font-family: "Noto Serif KR", serif; font-weight: 500; padding-right: 14px; }
+.record-form .primary { margin-bottom: 0; }
+.record-form .save-status { min-height: 24px; text-align: left; }
+.consent-record h2 { font-size: 22px; }
+.reading-paper { padding: 22px 20px 20px; background: #fffcf5b3; border: 1px solid var(--line); border-radius: 4px; margin: 24px 0; }
+.reading-cover { display: grid; grid-template-columns: 92px minmax(0, 1fr); gap: 16px; align-items: center; }
+.reading-cover img { display: block; width: 92px; height: auto; }
+.reading-cover .result-title { font-size: 24px; text-align: left; margin: 6px 0; line-height: 1.55; }
+.reading-kicker { font-family: "Noto Serif KR", serif; color: var(--muted); font-size: 13px; margin: 0 0 8px; }
+.reading-paper .badge { background: transparent; border-bottom: 1px solid var(--line); border-radius: 0; padding: 8px 0; font-size: 13px; margin: 14px 0 8px; }
+.reading-entry { padding: 24px 0; border-bottom: 1px solid var(--line); }
+.reading-entry h2 { font-size: 23px; line-height: 1.55; }
+.reading-entry p:last-child { margin-bottom: 0; }
+.reading-signature { text-align: center; padding-top: 18px; }
+.reading-signature .seal-window { margin: 8px auto 12px; }
+.reading-signature > p:not(.hint) { font-family: "Noto Serif KR", serif; font-size: 16px; margin: 0; }
+.reading-signature .hint { font-size: 13px; }
+.evidence-record { padding: 18px; }
+.evidence-record summary { font-size: 17px; font-weight: 500; }
+.evidence-record > div + div { border-top: 1px solid var(--line); margin-top: 24px; padding-top: 8px; }
+.relationship-map { border-radius: 6px; }
+.map-person, .result-row { border-radius: 4px; }
+.map-self { font-family: "Noto Serif KR", serif; }
+.map-person { font-family: "Noto Serif KR", serif; justify-content: center; border: 1px solid var(--line); }
+.share-preview label { display: block; margin: 18px 0; }
+.share-preview .result-hero { height: 140px; margin: 14px auto 24px; }
+.shared .brand { justify-content: center; text-align: left; }
+.shared h1 { font-size: 30px; }
+.shared .hero { height: 220px; }
+@media (max-width: 360px) {
+  .brand { gap: 8px; }
+  .brand strong { font-size: 19px; }
+  .brand small { font-size: 10px; }
+  .journey-shell h1 { font-size: 29px; }
+  .record-form, .reading-paper { padding: 18px 16px; }
+  .journey-progress { gap: 6px; font-size: 13px; }
+  .reading-cover { grid-template-columns: 68px minmax(0, 1fr); gap: 12px; }
+  .reading-cover img { width: 68px; }
+  .reading-cover .result-title { font-size: 22px; }
+}
+
+/* Keep the first field within reach without hiding the storage notice. */
+.journey-shell .mode { margin-bottom: 14px; }
+.journey-navigation { display: flex; align-items: center; gap: 14px; margin: 8px 0 18px; }
+.journey-navigation .back { flex-shrink: 0; padding: 8px 0; margin: 0; font-size: 14px; }
+.journey-navigation .journey-progress { flex: 1; margin: 0; gap: 8px; font-size: 13px; }
+.record-form > label:first-of-type { margin-top: 16px; }
+@media (max-width: 360px) {
+  .journey-navigation { gap: 10px; }
+  .journey-navigation .journey-progress { gap: 5px; font-size: 12px; }
+}
+
+.guide-quote, .journey-shell h1, .journey-shell h2, .journey-shell .primary, .journey-shell .secondary {
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}

@@ -9,7 +9,9 @@ import {
 } from "@/domain/model";
 import PersonForm from "./PersonForm";
 import ResearchNotice from "./ResearchNotice";
-import { character, shareArtwork } from "@/domain/presentation";
+import GuideNote from "./GuideNote";
+import JourneyProgress from "./JourneyProgress";
+import { character, journeyCopy, shareArtwork } from "@/domain/presentation";
 import { reviewStoredChart } from "@/domain/chart-review";
 import { checkpoint, navigationKey, restoreNavigation } from "@/domain/navigation";
 function clearNavigation() {
@@ -92,6 +94,7 @@ export default function App() {
     heading = useRef<HTMLHeadingElement>(null);
   const current = data?.results.find((r) => r.id === selected);
   const sharePreview = current ? publicCard(aliases, current.reading) : null;
+  const previewArtwork = sharePreview ? shareArtwork(sharePreview) : null;
   const groups = [...new Set((data?.results ?? []).map(selfGroup))];
   const activeGroup = groups.includes(mapGroup) ? mapGroup : groups.at(-1);
   const mapResults = (data?.results ?? []).filter(
@@ -324,19 +327,23 @@ export default function App() {
       ? character.homeTitle
       : (
           {
-            me: "나를 먼저 알려 주세요",
-            other: "소중한 사람을 알려 주세요",
-            review: "두 사람을 확인해요",
+            me: journeyCopy.me.title,
+            other: journeyCopy.other.title,
+            review: journeyCopy.review.title,
             result: current
-              ? `${current.me.name}와 ${current.other.name}`
-              : "이야기를 준비해요",
-            map: "가까운 사람들",
-            share: "우리 이야기 나누기",
-            account: "보관과 이용 내역",
+              ? `${current.me.name} · ${current.other.name}`
+              : "이야기 준비 상태",
+            map: journeyCopy.map.title,
+            share: journeyCopy.share.title,
+            account: journeyCopy.account.title,
           } as Record<string, string>
         )[view];
+  const guide = view === "result" ? (current ? journeyCopy.result.guide : journeyCopy.pending.guide)
+    : view === "map" ? (data?.results.length ? journeyCopy.map.guide : journeyCopy.map.empty)
+    : ({ me: journeyCopy.me.guide, other: journeyCopy.other.guide, review: journeyCopy.review.guide,
+        share: journeyCopy.share.guide, account: journeyCopy.account.guide } as Record<string, string>)[view];
   return (
-    <main className={`shell${view === "home" ? " home-shell" : ""}`}>
+    <main className={`shell${view === "home" ? " home-shell" : " journey-shell"}${view === "result" ? " result-shell" : ""}`}>
       <header>
         <button className="brand" onClick={() => navigate("home")} aria-label={`${character.displayName} 시작 화면`}>
           <img className="guide-avatar" src={character.avatar} width={44} height={44} alt="" />
@@ -348,6 +355,7 @@ export default function App() {
       </header>
       {view !== "home" && <div className="mode">연구 체험 · 실제 결제 없음</div>}
       {view !== "home" && (
+        <div className="journey-navigation">
         <button
           className="text-button back"
           onClick={() =>
@@ -363,10 +371,13 @@ export default function App() {
         >
           ← 뒤로
         </button>
+        {data && pair && <JourneyProgress stage={view} />}
+        </div>
       )}
       {view !== "home" && <h1 ref={heading} tabIndex={-1}>
         {header}
       </h1>}
+      {data && pair && guide && <GuideNote>{guide}</GuideNote>}
       {error && (
         <div className="error" role="alert">
           {error}
@@ -466,14 +477,14 @@ export default function App() {
                   </section>
                 ))}
               </div>
-              <section className="card">
+              <section className="card consent-record">
                 <h2>
                   {data.free === "available"
                     ? "첫 번째 이야기는 무료예요"
                     : "추가 이야기는 2,900원 예정이에요"}
                 </h2>
                 <p>
-                  지금은 무료 연구 체험입니다. 추가 이용은{" "}
+                  지금은 연구 체험 중이에요. 추가 이용은{" "}
                   {data.provider === "mock"
                     ? "모의 결제"
                     : data.provider === "nicepay-test"
@@ -519,31 +530,39 @@ export default function App() {
             <>
               {current ? (
                 <>
-                  <p className="badge">{current.reading.label}</p>
-                  <img
-                    className="result-hero"
-                    src={character.photo}
-                    alt={character.photoAlt}
-                  />
-                  <h2 className="result-title">{current.reading.title}</h2>
-                  <p className="notice">
-                    {current.reading.basis?.notice ?? "생일로 판단한 궁합 풀이가 아닌 고정 예시입니다. 실제 규칙 감수 후 제공할 예정이에요."}
-                  </p>
-                  {[
-                    [current.reading.basis ? "두 사람의 기준 오행" : "잘 맞춰 가는 점", current.reading.strength],
-                    [current.reading.basis ? "함께 살펴볼 기호" : "서로 알아갈 점", current.reading.difference],
-                    ["오늘의 작은 제안", current.reading.advice],
-                  ].map(([title, text]) => (
-                    <section className="card" key={title}>
-                      <h2>{title}</h2>
-                      <p>{text}</p>
-                      {title === "오늘의 작은 제안" && current.reading.basis && (
-                        <p className="hint">{current.reading.basis.adviceNotice}</p>
-                      )}
-                    </section>
-                  ))}
+                  <article className="reading-paper" aria-label="두 사람의 기호 설명 기록">
+                    <div className="reading-cover">
+                      <img src={character.photo} alt={character.photoAlt} width={1495} height={1052} />
+                      <div><p className="reading-kicker">서당에서 건네는 기록</p>
+                        <h2 className="result-title">{current.reading.title}</h2>
+                      </div>
+                    </div>
+                    <p className="badge">{current.reading.label}</p>
+                    <p className="notice">
+                      {current.reading.basis?.notice ?? "생일로 판단한 궁합 풀이가 아닌 고정 예시예요. 실제 규칙 감수 후 제공할 예정이에요."}
+                    </p>
+                    {[
+                      [current.reading.basis ? "두 사람의 기준 오행" : "잘 맞춰 가는 점", current.reading.strength],
+                      [current.reading.basis ? "함께 살펴볼 기호" : "서로 알아갈 점", current.reading.difference],
+                      ["오늘의 작은 제안", current.reading.advice],
+                    ].map(([title, text], index) => (
+                      <section className="reading-entry" key={title}>
+                        <p className="reading-kicker">{["첫째", "둘째", "셋째"][index]}</p>
+                        <h2>{title}</h2>
+                        <p>{text}</p>
+                        {title === "오늘의 작은 제안" && current.reading.basis && (
+                          <p className="hint">{current.reading.basis.adviceNotice}</p>
+                        )}
+                      </section>
+                    ))}
+                    <div className="reading-signature">
+                      <span className="seal-window" aria-hidden="true"><img src={character.seal} alt="" /></span>
+                      <p>{character.displayName}의 서당에서</p>
+                      <p className="hint">조선풍 가상 인물 · 점수 없는 기호 설명</p>
+                    </div>
+                  </article>
                   {current.reading.basis && (
-                    <details className="card">
+                    <details className="card evidence-record">
                       <summary>비교 근거와 확인 범위</summary>
                       {current.reading.basis.cautions.map(text => <p className="hint" key={text}>{text}</p>)}
                       {current.reading.basis.observations.map(f => (
@@ -556,11 +575,11 @@ export default function App() {
                       {current.reading.basis.omittedDisplayObservations > 0 && <p className="hint">확인된 항목 {current.reading.basis.totalCommonObservations}개 중 {current.reading.basis.observations.length}개를 기호 이름 순으로 표시했어요. 중요도나 점수 순서가 아니에요.</p>}
                     </details>
                   )}
-                  <details className="card">
+                  <details className="card evidence-record">
                     <summary>생년월일 연구 계산 확인</summary>
                     <p className="hint">
-                      운영 검증 전 계산입니다. 절입·과거 표준시 정책은 추가 검토
-                      중이며 시간 모름은 후보를 보존합니다.
+                      운영 검증 전 연구 계산이에요. 절입·과거 표준시 정책은 추가 검토
+                      중이며, 시간을 모르면 후보를 함께 남겨요.
                     </p>
                     {Object.entries(current.charts).map(([key, value]) => {
                       const review = reviewStoredChart(value);
@@ -606,7 +625,9 @@ export default function App() {
                   <p>
                     {pendingOrder.provider === "mock"
                       ? "모의 결제로 흐름을 확인해요."
-                      : "Toss 테스트 결제창을 열어요."}
+                      : pendingOrder.provider === "nicepay-test"
+                        ? "NICEPAY 테스트 결제창을 열어요."
+                        : "Toss 테스트 결제창을 열어요."}
                     <br />
                     실제 청구는 없어요.
                   </p>
@@ -617,7 +638,9 @@ export default function App() {
                   >
                     {pendingOrder.provider === "mock"
                       ? "모의 결제하고 결과 보기"
-                      : "Toss 테스트 결제하기"}
+                      : pendingOrder.provider === "nicepay-test"
+                        ? "NICEPAY 테스트 결제하기"
+                        : "Toss 테스트 결제하기"}
                   </button>
                   <button
                     className="text-button full"
@@ -635,11 +658,14 @@ export default function App() {
                   </button>
                 </section>
               ) : (
-                <section className="card">
-                  <p>
+                <section className="card pending-record">
+                  <h2>{pending?.state === "failed" ? "다시 준비할 수 있어요" : "현재 준비 상태"}</h2>
+                  <p role="status">
                     {pending?.state === "failed"
                       ? "결과 준비에 실패했어요. 같은 이용권으로 다시 시도할 수 있어요."
-                      : "진행 중인 요청을 확인해 주세요."}
+                      : pending?.state === "queued" || pending?.state === "processing"
+                        ? "기호 설명을 준비하고 있어요. 잠시 후 상태를 확인해 주세요."
+                        : "진행 중인 요청을 확인해 주세요."}
                   </p>
                   <button
                     className="primary"
@@ -817,13 +843,13 @@ export default function App() {
                 <br />
                 생일과 다른 사람의 목록은 공개하지 않아요.
               </p>
-              <section className="card">
+              <section className="card share-preview">
                 <span className="badge">공개 미리보기 · {sharePreview?.kind === "conversation-only" ? "대화 주제" : "예시"}</span>
-                <img
+                {previewArtwork && <img
                   className="result-hero"
-                  src={shareArtwork(sharePreview ?? {})?.src}
-                  alt={shareArtwork(sharePreview ?? {})?.alt ?? ""}
-                />
+                  src={previewArtwork.src}
+                  alt={previewArtwork.alt}
+                />}
                 {aliases.map((name, i) => (
                   <label key={i}>
                     공개용 {i ? "상대" : "내"} 별명
@@ -976,7 +1002,7 @@ export default function App() {
                   보관하면 다른 브라우저에서도 이 보관함을 열 수 있어요.
                 </p>
                 <p className="hint">
-                  개발용 복구 방식입니다. 코드를 아는 사람은 보관함 전체에
+                  개발용 복구 방식이에요. 코드를 아는 사람은 보관함 전체에
                   접근할 수 있으니 다른 사람에게 보내지 마세요.
                 </p>
                 <button
@@ -1173,10 +1199,10 @@ export default function App() {
                 </section>
               ))}
               <section className="card">
-                <h2>이 개발 체험에 대해</h2>
+                <h2>이 연구 체험에 대해</h2>
                 <p>
                   운영용 로그인·궁합 규칙 감수·실결제는 아직 준비 중이에요.
-                  중요한 판단에 이 연구 결과를 사용하지 마세요.
+                  중요한 판단에는 이 연구 결과를 사용하지 않도록 해 주세요.
                 </p>
               </section>
             </>

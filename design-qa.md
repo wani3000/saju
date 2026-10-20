@@ -39,3 +39,30 @@ final result: passed
 - 앱 출처 console error/warn 없음. 브라우저 확장 진단은 앱 출처와 구분했다. 수동 공유는 미리보기까지 확인했고 실제 링크/철회 여정은 자동 검사로 확인했다.
 - 신규 chunbae-v1 공유/기존 tigers-v1 공개 그림을 따로 고정. 서비스 검사에서 기존 공유/저장 풀이 불변, 자산 해석 검사에서 미지원/불일치 카탈로그의 임의 대체 거절 확인.
 - 엔진 v5·문구 v2·가격·구매 결과·이전 prototype 보존. 실제 사용자 0명·8개 출시 조건 미완료 유지. 외부 인증·PG·공개 배포는 이번 QA 범위가 아니다.
+
+## 후속 검수 · 입력부터 결과까지 (chunbae-journey-v1)
+
+final result: passed
+
+사용자가 기존 2안의 분위기를 입력→결과 전체로 확장하고 말투를 통일하도록 요청했다. [말투/화면 기준](docs/chunbae-journey-voice.md)을 따른다. 새 입력/결과의 픽셀 완전 일치 원본 모형은 없으므로 선택한 시작 화면의 시각 언어를 확장한 구현으로 평가한다. 다른 상태끼리 위치를 수치 비교해 동일하다고 주장하지 않는다.
+
+### 비교 증거
+
+- [선택 시안·최종 입력·최종 결과를 같은 보기에 배치](web/qa-evidence/chunbae-flow-theme-comparison.jpg). 각각 390×844 프레임, 원본853×1844는 contain으로 비율 보존. 실제 캡처390×844px/390×844 CSS px/배율1, 전체 비교1270×940px. 서로 다른 상태임을 라벨로 구분해 서체·먹갈색·종이·사진의 일관성을 평가했다.
+- [동일한 빈 입력 상태의 간격 수정 전/후](web/qa-evidence/chunbae-flow-spacing-comparison.jpg). 양쪽390×844px/배율1, 전체900×940px. 저장 안내를 숨기지 않고 첫 이름 입력칸이 보이는지 직접 비교했다.
+- 입력 [390px](web/qa-evidence/chunbae-flow-input-390.jpg)/[320px](web/qa-evidence/chunbae-flow-input-320.jpg), [오류·초점 이동320px](web/qa-evidence/chunbae-flow-error-320.jpg), [상대 입력](web/qa-evidence/chunbae-flow-other-390.jpg), [정보 확인](web/qa-evidence/chunbae-flow-review-390.jpg), 결과 [390px](web/qa-evidence/chunbae-flow-result-390.jpg)/[320px](web/qa-evidence/chunbae-flow-result-320.jpg)/[전체390×2205](web/qa-evidence/chunbae-flow-result-full-390.jpg), [공유 미리보기](web/qa-evidence/chunbae-flow-share-390.jpg), [지도](web/qa-evidence/chunbae-flow-map-390.jpg), [보관함](web/qa-evidence/chunbae-flow-account-390.jpg). 모두 JPEG. 전체 결과도 별도 열어 인장/버튼까지 읽었다. 단일 화면과 비교 화면에서 글씨를 읽을 수 있어 별도 확대 크롭은 필요하지 않았다.
+
+### 표면별 결과와 수정
+
+| 표면/심각도 | 결과 |
+|---|---|
+| 서체/문구 P2→해결 | 초기 대사/결과 제목에서 한국어 단어가 음절로 갈라져 읽기 어색함. 대사·제목·주 버튼에 keep-all과 긴 문자열용 anywhere를 함께 적용. 최종 상대 입력/결과에서 ‘보세’, ‘기호’가 분리되지 않음을 확인 |
+| 간격 P2→해결 | 초기 단계·훈장 안내·저장 안내가 쌓여 첫 이름 입력칸이 첫 화면 아래로 밀림. 뒤로가기와 단계 표시를 한 줄로 묶고 중복 소제목/여백 축소, 별명 도움말은 입력칸 아래로 이동. 최종320/390px에서 저장 고지와 이름칸 노출 확인 |
+| 색/표면 | 기존 cream/ink/brown을 유지. 입력·결과는 작은 모서리와 얇은 경계의 기록지. 경고의 의미색은 유지. 대비 전체 인증은 하지 않음 |
+| 사진 | 기존 원본 창작 사진·아바타·한지·인장 재사용. 결과 표지는 작게, 끝에 춘배 인장 배치. 카메라 응시/새 인물/가짜 그래픽 없음 |
+| 문구/기능 | 훈장 직접 대사는 이름을 밝힌 하게체, 서비스·연구 설명은 해요체. 수정/동의/보관·공유·삭제 의미 유지. 읽기/공유 스냅샷을 캐릭터 말투로 재작성하지 않음 |
+| 반응형/접근성 | 현재 단계 aria-current=step, 입력 라벨/fieldset/오류 초점/키보드 펼침 유지. 320/390px 가로 넘침 없음. 2배 글자 기존 여정 통과. 실제 모바일 기기·보조기기 인증은 아님 |
+
+미해결 P0/P1/P2 없음. P3: 원본 모형과 동일 서체를 확정할 수 없어 자체 호스팅 Noto 서체를 유지하며, 결과의 사진은 읽을 내용이 먼저 나오도록 의도적으로 소형화했다. 새 풀이·차트 버전을 만들거나 이전 결과를 교체하지 않았다.
+
+최종 build/typecheck, 웹88개, HTTP·모바일18사례 통과. CUA에서 오류 focus→가상 두 사람 입력→동의→결과→공유 미리보기→지도→보관함과 앱 출처 console error/warn 0건 확인. 실제 링크 열기·철회·복원은 자동 여정으로 확인했다. 새로운 외부 서비스/실결제/배포/인간 감수는 없으며 8개 출시 조건 미완료 유지.

@@ -1,5 +1,6 @@
 import character from "../../content/character.json";
-export { character };
+import journeyCopy from "../../content/journey-copy.json";
+export { character, journeyCopy };
 
 /** Resolve only pinned catalog assets. Never reinterpret an old share as the latest character. */
 export function shareArtwork(card: { catalogVersion?: unknown; guide?: unknown }) {

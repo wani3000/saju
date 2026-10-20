@@ -35,7 +35,7 @@ export default function PersonForm({
     onChange({ ...person, [key]: value });
   return (
     <form
-      className="person-form"
+      className="person-form record-form"
       ref={form}
       noValidate
       aria-busy={busy}
@@ -54,7 +54,7 @@ export default function PersonForm({
         onContinue();
       }}
     >
-      <div className="row between">
+      <div className="row between record-heading">
         <h2>{other ? "상대방" : "나"}의 정보</h2>
         <button
           type="button"
@@ -80,6 +80,7 @@ export default function PersonForm({
         autoComplete="off"
       />
       {fieldError("name")}
+      <p className="hint">본명 대신 별명을 적어도 괜찮아요.</p>
       {other && (
         <>
           <label htmlFor={`${id}-relation`}>어떤 사이인가요?</label>
@@ -94,7 +95,7 @@ export default function PersonForm({
           </select>
         </>
       )}
-      <fieldset>
+      <fieldset className="record-field">
         <legend>생년월일</legend>
         <div className="date-grid">
           {(["year", "month", "day"] as const).map((key, i) => (
@@ -143,7 +144,7 @@ export default function PersonForm({
           )}
         </div>
       </fieldset>
-      <fieldset>
+      <fieldset className="record-field">
         <legend>태어난 시간</legend>
         <label className="choice">
           <input

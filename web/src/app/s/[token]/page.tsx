@@ -15,7 +15,8 @@ export default async function Shared({
   return (
     <main className="shell shared">
       <Link href="/" className="brand">
-        {character.displayName}
+        <img className="guide-avatar" src={character.avatar} width={44} height={44} alt="" />
+        <span><strong>{character.displayName}</strong><small>{character.setting}</small></span>
       </Link>
       {card ? (
         <>
@@ -26,8 +27,8 @@ export default async function Shared({
             alt={art.alt}
           />}
           <h1>
-            {card.aliases[0]}와<br />
-            {card.aliases[1]}의 이야기
+            {card.aliases[0]} · {card.aliases[1]}<br />
+            함께 나누는 이야기
           </h1>
           <h2>{card.reading.title}</h2>
           <section className="card">
@@ -35,7 +36,7 @@ export default async function Shared({
             <p>{card.reading.advice}</p>
           </section>
           <p className="notice">
-            {card.kind === "conversation-only" ? "이 카드는 관계에 맞춘 대화 주제예요. 생년월일·사주 기호·비교 근거와 다른 사람의 정보는 공개하지 않아요." : "이 카드는 고정 예시 문구이며 실제 궁합 분석 결과가 아닙니다. 생년월일과 다른 사람의 정보는 공개하지 않습니다."}
+            {card.kind === "conversation-only" ? "이 카드는 관계에 맞춘 대화 주제예요. 생년월일·사주 기호·비교 근거와 다른 사람의 정보는 공개하지 않아요." : "이 카드는 고정 예시 문구이며 실제 궁합 분석 결과가 아니에요. 생년월일과 다른 사람의 정보는 공개하지 않아요."}
           </p>
         </>
       ) : (
@@ -48,6 +49,7 @@ export default async function Shared({
           <p>공유가 철회되었거나, 링크가 만료되었어요.</p>
         </>
       )}
+      <p className="hint">{character.displayName} · 조선풍 가상 인물</p>
       <Link className="button" href="/">
         나도 시작하기
       </Link>
