@@ -2,6 +2,7 @@ import Link from "next/link";
 import { database } from "@/server/db";
 import { publicShare } from "@/server/service";
 import type { ShareCard } from "@/domain/model";
+import { character, shareArtwork } from "@/domain/presentation";
 export const dynamic = "force-dynamic";
 export default async function Shared({
   params,
@@ -10,19 +11,20 @@ export default async function Shared({
 }) {
   const { token } = await params;
   const card = (await publicShare(await database(), token)) as ShareCard | null;
+  const art = card ? shareArtwork(card) : null;
   return (
     <main className="shell shared">
       <Link href="/" className="brand">
-        가까운 사이
+        {character.displayName}
       </Link>
       {card ? (
         <>
           <p className="badge">{card.kind === "conversation-only" ? "함께 나누는 대화" : "공유된 예시 카드"}</p>
-          <img
+          {art && <img
             className="hero"
-            src="/assets/tigers/pair-v1.png"
-            alt="다정하게 기대고 있는 두 아기 호랑이"
-          />
+            src={art.src}
+            alt={art.alt}
+          />}
           <h1>
             {card.aliases[0]}와<br />
             {card.aliases[1]}의 이야기

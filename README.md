@@ -5,8 +5,8 @@
 ## 현재 상태
 
 - 기준일: 2026-10-20.
-- 최신 디자인 방향: 사용자가 **카메라를 보지 않는 조선 남자 할아버지·옛 기록 사진**으로 변경했다. [예시 앱의 공개 화면](docs/guija-design-reference-review.md)을 확인해 [새 시안 3개](design/characters/joseon/documentary-ui-v2/README.md)를 생성·보존했고 세부 선택은 대기다. 설치 앱의 내부 동작은 미검증이며 현재 앱의 호랑이 화면은 아직 교체하지 않았다.
-- 최신 준비: [계산 정책 권장안](docs/calculation-policy-candidate.md), [감수·사용자 검토 실행 묶음](docs/launch-review-kit.md), [출시·운영 절차](docs/launch-operations-runbook.md)를 마련했다. 입력 전 자동 저장/계산 기준 안내와 과거 시계 오류 구분, 대기 요청 지연 감지를 보완했다. 연구 246개·웹 86개·모바일 18사례 및 로컬 PostgreSQL 복원 통과. 실제 감수·사용자 관찰·외부/운영 승인 8건은 미완료다.
+- 최신 디자인: 사용자가 [조선 기록 사진풍 2안](design/characters/joseon/documentary-ui-v2/02-paper-greeting.png)을 선택했다. **충청북도 괴산의 서당 훈장, 김춘배 할아버지**를 가상 인물로 설정하고 한지·먹갈색 화면을 실제 web 앱에 적용했다. 카메라를 보지 않는 창작 사진이며 [인물·자산](design/characters/joseon/chunbae-v1/README.md)과 [실제 화면 비교 검수](design-qa.md)를 보존한다. 참고 서비스는 [공개 화면](docs/guija-design-reference-review.md)만 확인했고 설치 앱 내부 동작은 미검증이다.
+- 최신 준비: [계산 정책 권장안](docs/calculation-policy-candidate.md), [감수·사용자 검토 실행 묶음](docs/launch-review-kit.md), [출시·운영 절차](docs/launch-operations-runbook.md)를 마련했다. 입력 전 자동 저장/계산 기준 안내와 과거 시계 오류 구분, 대기 요청 지연 감지를 보완했다. 연구 246개·웹 88개·모바일 18사례 및 로컬 PostgreSQL 복원 통과. 실제 감수·사용자 관찰·외부/운영 승인 8건은 미완료다.
 - 10월 12일 ZIP의 체크섬을 대조하고 Git 이력을 복원했다. 10월 14일 별도 분기에서는 [캐릭터 설계](docs/13-character-plan.md)를 선별 통합했다.
 - 현재 작업 위치: `/Users/chulwan/Documents/Codex/2026-10-12/oxaz1234-gmail-com-google-drive-3/saju`.
 - 원격 저장소: https://github.com/wani3000/saju (main).
@@ -23,7 +23,7 @@
 - 2026-10-19 조건 후속: [월령·합화 맥락 감수](docs/month-combination-review.md)를 바탕으로 월지 투출·뿌리 연결·합의 위치/중간 천간/추가 상대를 연구 코드로 반영했다. 조건 사례 8개·관계별 초안 4개와 [점수·지도 판정](docs/relationship-scoring-review.md)을 추가했으며 전체 연구 92개 검사 통과. 조건 관찰은 구현했고 강약·합화 최종 판단·궁합 수치화와 웹 연결은 아직이다.
 - 2026-10-19 부분 판단 후속: [통근 등급·합 방해 감수](docs/source-judgments-review.md)로 원문 11개 뿌리 사례와 갑기 사이 경/을 방해 조건을 구현했다. 연구 104개 검사 통과. 미수록 사례는 무근으로, 방해 부재는 합화 성공으로 처리하지 않는다. 종합 강약·합화와 웹 연결은 남아 있다.
 - 2026-10-19 사령 통합 후속: [사령·종합 강약 요소·합화 필요조건](docs/seasonal-strength-review.md)을 구현했다. 실제 절입 경과 구간·12월 배분과 갑기 합 조건을 검토하며, 오월 29일 문제와 실제 30일 초과는 미확정 처리한다. 종합 신강·신약과 합화 충분조건·운영 연결은 남아 있다.
-- 사주햄찌 홈·궁합 상세·로그인 공개 3단계 분석 완료. 로그인 이후는 미검증이다. 캐릭터는 호랑이로 확정했다. [호랑이 시안 2번](design/characters/tigers/02-tiger.png)이 선택됐으며 입력·예시 결과·지도·공유 문구 복사가 동작하는 로컬 시안을 구현했다.
+- 사주햄찌 홈·궁합 상세·로그인 공개 3단계 분석 완료. 로그인 이후는 미검증이다. 이전 [호랑이 시안 2번](design/characters/tigers/02-tiger.png)의 입력·예시 결과·지도·공유 문구 복사 로컬 시안은 이력으로 보존한다. 현재 web 앱의 안내 인물은 김춘배 훈장이다.
 - doryeong.app은 공개 화면을 참고한 서비스다. 이 폴더는 해당 사이트의 소스 복사본이나 인수한 저장소가 아니다. 캐릭터·상표·문구를 그대로 복제하지 않는다.
 
 ## 제품 기준

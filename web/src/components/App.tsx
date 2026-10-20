@@ -9,6 +9,7 @@ import {
 } from "@/domain/model";
 import PersonForm from "./PersonForm";
 import ResearchNotice from "./ResearchNotice";
+import { character, shareArtwork } from "@/domain/presentation";
 import { reviewStoredChart } from "@/domain/chart-review";
 import { checkpoint, navigationKey, restoreNavigation } from "@/domain/navigation";
 function clearNavigation() {
@@ -303,7 +304,7 @@ export default function App() {
       method: "CARD",
       amount: { currency: "KRW", value: order.amount },
       orderId: order.id,
-      orderName: "가까운 사이 연구용 테스트",
+      orderName: `${character.displayName} 연구용 테스트`,
       successUrl: window.location.origin + "/",
       failUrl: window.location.origin + "/",
     });
@@ -320,7 +321,7 @@ export default function App() {
   const pendingOrder = data?.orders.find((o) => o.comparison_id === selected);
   const header =
     view === "home"
-      ? "우리 사이,\n얼마나 가까울까?"
+      ? character.homeTitle
       : (
           {
             me: "나를 먼저 알려 주세요",
@@ -335,16 +336,17 @@ export default function App() {
           } as Record<string, string>
         )[view];
   return (
-    <main className="shell">
+    <main className={`shell${view === "home" ? " home-shell" : ""}`}>
       <header>
-        <button className="brand" onClick={() => navigate("home")}>
-          가까운 사이
+        <button className="brand" onClick={() => navigate("home")} aria-label={`${character.displayName} 시작 화면`}>
+          <img className="guide-avatar" src={character.avatar} width={44} height={44} alt="" />
+          <span><strong>{character.displayName}</strong><small>{character.setting}</small></span>
         </button>
         <button className="text-button" onClick={() => navigate("account")}>
           보관함
         </button>
       </header>
-      <div className="mode">개발 체험 · 실제 결제 없음</div>
+      {view !== "home" && <div className="mode">연구 체험 · 실제 결제 없음</div>}
       {view !== "home" && (
         <button
           className="text-button back"
@@ -362,9 +364,9 @@ export default function App() {
           ← 뒤로
         </button>
       )}
-      <h1 ref={heading} tabIndex={-1}>
+      {view !== "home" && <h1 ref={heading} tabIndex={-1}>
         {header}
-      </h1>
+      </h1>}
       {error && (
         <div className="error" role="alert">
           {error}
@@ -387,36 +389,34 @@ export default function App() {
         <>
           {view === "home" && (
             <>
-              <p className="intro">
-                생일로 시작하는
-                <br />
-                소중한 사람과의 다정한 이야기
-              </p>
               <img
-                className="hero"
-                src="/assets/tigers/pair-v1.png"
-                alt="서로 볼을 맞댄 주황빛과 크림빛 아기 호랑이"
+                className="home-photo"
+                src={character.photo}
+                alt={character.photoAlt}
+                width={1495}
+                height={1052}
+                fetchPriority="high"
               />
+              <h1 className="home-title" ref={heading} tabIndex={-1}>{character.homeTitle}</h1>
+              <p className="home-invitation">{character.invitation}</p>
+              <p className="home-step">내 정보부터 차례로 입력해요.</p>
+              <span className="seal-window" aria-hidden="true"><img src={character.seal} alt="" /></span>
               <div className="home-actions">
-                <span className="pill">
-                  첫 상대 1명 무료 · 추가 2,900원 예정
-                </span>
                 <button
                   className="primary"
                   disabled={busy}
                   onClick={() => navigate("me")}
                 >
-                  {data.draft ? "저장한 입력 이어가기" : "첫 상대 무료로 보기"}
-                </button>
-                <button className="secondary" onClick={() => navigate("map")}>
-                  나의 관계 지도 보기
+                  {data.draft ? "저장한 입력 이어가기" : "두 사람의 생일 적기"}
                 </button>
               </div>
-              <p className="hint center">
-                입력한 생일로 두 사람의 사주 기호를 비교해요.
-                <br />
-                로컬 검토판이며 궁합 점수는 제공하지 않아요.
-              </p>
+              <p className="home-caption">조선풍 가상 인물 · 점수 없는 설명형 베타</p>
+              <details className="home-information">
+                <summary>{character.displayName}과 체험 안내</summary>
+                <p>{character.description}</p><p>{character.notice}</p>
+                <p>지금은 로컬 연구 체험이며 실제 결제는 없어요. 첫 상대 무료·추가 상대 2,900원은 정식 서비스의 예정 가격이에요.</p>
+                <button className="secondary" onClick={() => navigate("map")}>나의 관계 지도 보기</button>
+              </details>
             </>
           )}
           {(view === "me" || view === "other") && (
@@ -447,11 +447,7 @@ export default function App() {
               <div className="pair-review">
                 {[pair.me, pair.other].map((p, i) => (
                   <section className="card" key={p.id}>
-                    <img
-                      className="avatar"
-                      src={`/assets/tigers/${i ? "cream" : "orange"}-v1.png`}
-                      alt=""
-                    />
+                    <p className="person-label">{i ? "상대방" : "나"}</p>
                     <h2>{p.name || "이름을 입력해 주세요"}</h2>
                     <p>
                       {p.calendar === "solar" ? "양력" : "음력"}{" "}
@@ -526,8 +522,8 @@ export default function App() {
                   <p className="badge">{current.reading.label}</p>
                   <img
                     className="result-hero"
-                    src="/assets/tigers/pair-v1.png"
-                    alt="두 아기 호랑이"
+                    src={character.photo}
+                    alt={character.photoAlt}
                   />
                   <h2 className="result-title">{current.reading.title}</h2>
                   <p className="notice">
@@ -712,11 +708,6 @@ export default function App() {
                   )}
                   <div className="relationship-map">
                     <div className="map-self">
-                      <img
-                        className="avatar"
-                        src="/assets/tigers/orange-v1.png"
-                        alt=""
-                      />
                       <span>나</span>
                     </div>
                     <div className="map-people">
@@ -731,11 +722,6 @@ export default function App() {
                               navigate("result");
                             }}
                           >
-                            <img
-                              className="avatar"
-                              src="/assets/tigers/cream-v1.png"
-                              alt=""
-                            />
                             <span>{r.other.name}</span>
                           </button>
                         ))}
@@ -786,8 +772,8 @@ export default function App() {
                 <section className="card">
                   <img
                     className="result-hero"
-                    src="/assets/tigers/cream-v1.png"
-                    alt="아기 호랑이"
+                    src={character.photo}
+                    alt={character.photoAlt}
                   />
                   <p>아직 저장된 이야기가 없어요.</p>
                 </section>
@@ -835,8 +821,8 @@ export default function App() {
                 <span className="badge">공개 미리보기 · {sharePreview?.kind === "conversation-only" ? "대화 주제" : "예시"}</span>
                 <img
                   className="result-hero"
-                  src="/assets/tigers/pair-v1.png"
-                  alt="두 호랑이"
+                  src={shareArtwork(sharePreview ?? {})?.src}
+                  alt={shareArtwork(sharePreview ?? {})?.alt ?? ""}
                 />
                 {aliases.map((name, i) => (
                   <label key={i}>
@@ -1197,7 +1183,7 @@ export default function App() {
           )}
         </>
       )}
-      <footer>가까운 사이 · 다정하게, 천천히</footer>
+      {view !== "home" && <footer>{character.displayName} · 조선풍 가상 인물과 나누는 이야기</footer>}
     </main>
   );
 }

@@ -253,8 +253,8 @@ test("share snapshot only contains public aliases and conversation copy; revoke 
   const card = await s.publicShare(db, secret);
   assert.deepEqual(Object.keys(card).sort(), [
     "aliases",
-    "avatars",
     "catalogVersion",
+    "guide",
     "kind",
     "reading",
   ]);
@@ -660,4 +660,21 @@ test("pending source v1 results keep their copy, existing results do not get reb
   assert.equal((await s.state(db,id)).orders.length,0);
   const link=await s.share(db,id,c.id,["가","나"]),card=await s.publicShare(db,link.path.split("/").at(-1)!);
   assert.equal(card.reading.ruleVersion,"source-observations-copy-v1");assert.equal(card.reading.title,expected.basis!.sharedCopy.title);
+});
+
+test("new character shares preserve legacy published artwork and leave saved reading snapshots unchanged", async () => {
+  const id = await owner(), comparison = await free(id);
+  const before = await s.result(db, id, comparison);
+  const original = await s.share(db, id, comparison, ["가", "나"]);
+  const first = await s.publicShare(db, original.path.split("/").at(-1)!);
+  const legacy = { ...first, avatars: ["orange-v1", "cream-v1"], catalogVersion: "tigers-v1" };
+  delete legacy.guide;
+  await db.query("UPDATE shares SET snapshot=$2 WHERE id=$1", [original.id, JSON.stringify(legacy)]);
+  const next = await s.share(db, id, comparison, ["가", "나"]);
+  const current = await s.publicShare(db, next.path.split("/").at(-1)!);
+  assert.equal(current.catalogVersion, "chunbae-v1");
+  assert.equal(current.guide, "kim-chunbae-v1");
+  assert.deepEqual(current.reading, legacy.reading);
+  assert.deepEqual(await s.publicShare(db, original.path.split("/").at(-1)!), legacy);
+  assert.deepEqual(await s.result(db, id, comparison), before);
 });

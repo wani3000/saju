@@ -90,9 +90,8 @@ export type ShareCard = {
   kind?: "conversation-only";
   aliases: [string, string];
   reading: Reading;
-  avatars: ["orange-v1", "cream-v1"];
-  catalogVersion: "tigers-v1";
-};
+} & ({ avatars: ["orange-v1", "cream-v1"]; catalogVersion: "tigers-v1" }
+  | { guide: "kim-chunbae-v1"; catalogVersion: "chunbae-v1" });
 export class AppError extends Error {
   constructor(
     public code: string,
@@ -110,7 +109,7 @@ export function publicCard(aliases: [string, string], reading: Reading): ShareCa
         title: reading.basis.sharedCopy.title, strength: reading.basis.sharedCopy.strength,
         difference: "생년월일과 사주 기호는 이 카드에 공개하지 않아요.",
         advice: reading.advice, ruleVersion: reading.ruleVersion, score: null },
-      avatars: ["orange-v1", "cream-v1"], catalogVersion: "tigers-v1",
+      guide: "kim-chunbae-v1", catalogVersion: "chunbae-v1",
     };
   }
   return {

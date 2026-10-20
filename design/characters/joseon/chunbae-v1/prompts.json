@@ -1,0 +1,95 @@
+{
+  "createdOn": "2026-10-20",
+  "tool": "built-in image_gen",
+  "selectedSet": "documentary-ui-v2",
+  "selectedDisplayedOption": 2,
+  "characterVersion": "kim-chunbae-v1",
+  "logicalViewport": {
+    "width": 390,
+    "height": 844
+  },
+  "items": [
+    {
+      "file": "selected-reference.png",
+      "path": "design/characters/joseon/chunbae-v1/selected-reference.png",
+      "prompt": "Use case ui-mockup; targeted refinement of the SELECTED light hanji mobile screen, logical390x844 portrait, app content only. User selected the SECOND displayed design and now asks for the identity of a male grandfather from Chungcheongbuk-do, with the feel of a seodang teacher named Kim Chun-bae. Keep selected layout, subdued cream hanji, warm brown typography, generous spacing, documentary print, red seal and fullwidth brown primary action. Do not explore a new design.\nReference1 is exact selected screen. Reference2 is our original fictional elderly man reading at a low desk; preserve his side profile, eyes looking DOWN at the book, candid historical-documentary feel, soft grain, surrounding room. Absolutely no eye contact or modern posed portrait anywhere, including thumbnail.\nRefine identity: header name exactly “김춘배 훈장”. Add one discreet location/context line “충청북도 괴산의 서당에서”. This is an ORIGINAL fictional Joseon-inspired character, no claim of a real historical person, real photograph, supernatural powers, or historically attested biography. Do not add birth/death dates or invented professional qualifications.\nKeep header's small looking-down avatar on left, name, and “보관함” on right. Main archival room print should have softly worn physical paper edges and remain a landscape block with man off-center.\nKeep the selected main heading “누구와의 이야기가” newline “궁금한가?”. Supporting copy “생일로 두 사람의 사주 기호를 살펴보세.” Small line “내 정보부터 차례로 입력해요”. A small red decorative personal seal reading “춘배”, not 福; no other stamp letters.\nPrimary button exactly “두 사람의 생일 적기”. Footer “조선풍 가상 인물 · 점수 없는 설명형 베타”. Body18logicalpx and heading30logicalpx; at most2fonts, legible Korean serif and sans. Strong readable contrast. All content comfortably fits844logicalpx, no clipped text. No chat input, extra navigation, animals, florals or ornate embellishments. Project date2026-10-20, no date on screen. This is the single selected design refinement, not a collage or options board.",
+      "source": "/Users/chulwan/.codex/generated_images/01a12f07-681e-7e60-8302-88347393b8da/exec-f00791e5-6e78-4bf9-b140-914d9d4930e7.png",
+      "sha256": "be31b244a2832a979137bb976ad852425b079854e96cdbed98cb4b448a5d4314",
+      "pixels": [
+        853,
+        1844
+      ],
+      "bytes": 2044274,
+      "pngColorType": 2,
+      "workspaceReferenceImages": [
+        "design/characters/joseon/documentary-ui-v2/02-paper-greeting.png",
+        "design/characters/joseon/documentary/reading-by-window.png"
+      ]
+    },
+    {
+      "file": "reading.png",
+      "path": "web/public/assets/chunbae-v1/reading.png",
+      "prompt": "Create ONE production raster image asset, not UI. From reference1 preserve the same fictional elderly Korean man reading down at a book in the same ordinary Joseon-inspired study, with room and desk occupying most of frame. Reference2 shows the selected app's desired photo material. Landscape ratio 1.42:1, intended rendered344x242px. A single modest old monochrome print with soft analog detail and subdued contrast; grandfather side profile eyes DOWN only, no eye contact, no modern props, no posed portrait. Add only a very narrow naturally worn pale ivory photographic paper perimeter with irregular fiber edge, approximately2percent of frame. The irregular OUTSIDE edge is genuinely transparent alpha, not a black/white/checkerboard background. Inside remains opaque photographic scene. Keep image as large as possible in the frame; minimal outer padding. No text, UI, caption, logo, seal, date or extra art. Original fictional scene in style of a modest historical visitor documentary print, do not add authentication marks.",
+      "source": "/Users/chulwan/.codex/generated_images/01a12f07-681e-7e60-8302-88347393b8da/exec-29a7e856-f3f8-460c-8116-5b3d7baacb0f.png",
+      "sha256": "a0aa7832c22462f429973d46106bf42fd33285460f78cc50e85fb2d0bc2f36f0",
+      "pixels": [
+        1495,
+        1052
+      ],
+      "bytes": 2652819,
+      "pngColorType": 6,
+      "workspaceReferenceImages": [
+        "design/characters/joseon/documentary/reading-by-window.png",
+        "design/characters/joseon/chunbae-v1/selected-reference.png"
+      ]
+    },
+    {
+      "file": "avatar.png",
+      "path": "web/public/assets/chunbae-v1/avatar.png",
+      "prompt": "Create ONE square photographic avatar asset for the fictional character Kim Chun-bae, a Joseon-inspired grandfather teacher. Reference is the original character reading at the window. Preserve exactly this SAME elderly man, head covering, sparse white beard and weathered face. Tight natural head-and-shoulders crop viewed from the side, head bowed, both eyes clearly looking DOWN to an offscreen book; he must never meet the camera or raise his gaze. Same low-sharpness old monochrome documentary print, no glamour/modern lighting, no smile for viewer. Fill square naturally with face and shoulders at center, pale plaster/wood dim background, no circular mask (app crops square to round), no border, text, seal, date, props added or UI. Intended display44x44logicalpx, make side profile recognizable small while preserving the aged-print softness and exact original identity.",
+      "source": "/Users/chulwan/.codex/generated_images/01a12f07-681e-7e60-8302-88347393b8da/exec-47657f2e-7d99-4ea1-886b-574265ad667c.png",
+      "sha256": "98ccff45803ab72f9f42e97b86877b692cce2ba5bf85661e4133c37f71033635",
+      "pixels": [
+        1254,
+        1254
+      ],
+      "bytes": 2133845,
+      "pngColorType": 2,
+      "workspaceReferenceImages": [
+        "design/characters/joseon/documentary/reading-by-window.png"
+      ]
+    },
+    {
+      "file": "hanji.png",
+      "path": "web/public/assets/chunbae-v1/hanji.png",
+      "prompt": "Create ONE square seamless tileable light Korean hanji paper texture for a mobile app background, 1024x1024. Reference is the selected UI only for the pale warm ivory paper surface around content. Output ONLY empty paper with fine faint naturally scattered fibers and extremely subtle mottling, base color close to #f5efe3, uniform soft illumination edge-to-edge so tiles do not show seams. Very low contrast to preserve legibility of dark brown18px text. No objects, photography, faces, UI, typography, text, ink, seals, stains, borders, vignette, shadows, folds, holes, dark specks or illustrations. Fine tactile almost imperceptible warm paper, not yellow/orange parchment. Opaque background.",
+      "source": "/Users/chulwan/.codex/generated_images/01a12f07-681e-7e60-8302-88347393b8da/exec-f462cd5e-4c9c-4af9-8e73-5f50a08ae3b3.png",
+      "sha256": "e7ae46409360b85fa983a903e50ba7e21a452e82e4d574c883ffd2ab822cb7f2",
+      "pixels": [
+        1254,
+        1254
+      ],
+      "bytes": 1924069,
+      "pngColorType": 2,
+      "workspaceReferenceImages": [
+        "design/characters/joseon/chunbae-v1/selected-reference.png"
+      ]
+    },
+    {
+      "file": "seal.png",
+      "path": "web/public/assets/chunbae-v1/seal.png",
+      "prompt": "Create ONE small traditional hand-stamped personal seal raster asset reading exactly the Korean name “춘배”, two syllables Chun-bae. Warm subdued cinnabar red ink, slightly irregular square outline and compact legible Hangul seal lettering, gentle tiny gaps from stamping on hanji, flat matte printed ink. The outline and letters form one balanced roughly square stamp. Intentionally modest decorative character signature for fictional teacher Kim Chun-bae. Genuinely transparent alpha background, no paper patch, shadows, 3D, extra characters, fake Chinese letters, logo, watermark, UI or other objects. Tight square composition with about4percent transparent breathing room, intended render28x28logicalpx, recognizable and restrained. Reference only supplies the specific selected UI stamp style and color; output the independent stamp asset only.",
+      "source": "/Users/chulwan/.codex/generated_images/01a12f07-681e-7e60-8302-88347393b8da/exec-ba913e5d-b14a-490d-b75e-315b1b3db80f.png",
+      "sha256": "98b4034e6c3bbf8564f319e35c94d01a8bcca434fa1e2f047c24ff891e0acf45",
+      "pixels": [
+        1254,
+        1254
+      ],
+      "bytes": 371224,
+      "pngColorType": 6,
+      "workspaceReferenceImages": [
+        "design/characters/joseon/chunbae-v1/selected-reference.png"
+      ]
+    }
+  ]
+}

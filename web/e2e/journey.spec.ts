@@ -2,7 +2,7 @@ import { test, expect, type Page } from "@playwright/test";
 const consent = "연구 체험과 두 사람의 정보 저장에 동의해요.";
 async function start(page: Page) {
   await page.goto("/");
-  await page.getByRole("button",{name:"첫 상대 무료로 보기",exact:true}).click();
+  await page.getByRole("button",{name:"두 사람의 생일 적기",exact:true}).click();
 }
 async function review(page: Page, changeMe?: (page: Page) => Promise<void>) {
   await start(page);
@@ -127,7 +127,7 @@ test("free snapshot reload, private evidence, share preview and revocation stay 
   const stranger=await browser.newContext();const other=await stranger.newPage();
   await other.addInitScript(raw=>sessionStorage.setItem("saju-navigation-v1",raw!),raw);
   await other.goto(new URL("/",url).href);
-  await expect(other.getByRole("button",{name:"첫 상대 무료로 보기",exact:true})).toBeVisible();
+  await expect(other.getByRole("button",{name:"두 사람의 생일 적기",exact:true})).toBeVisible();
   expect(await other.locator("main").innerText()).not.toContain("나래");
   await stranger.close();
   await page.reload();
@@ -164,7 +164,7 @@ test("logout clears screen hints, recovery keeps the result and erasure disables
   const code=await page.getByLabel("지금 한 번만 표시되는 복구 코드",{exact:true}).inputValue();
   expect(await page.evaluate(()=>sessionStorage.getItem("saju-navigation-v1"))).not.toContain(code);
   await page.getByRole("button",{name:"보관함에서 나가기",exact:true}).click();
-  await expect(page.getByRole("button",{name:"첫 상대 무료로 보기",exact:true})).toBeVisible();
+  await expect(page.getByRole("button",{name:"두 사람의 생일 적기",exact:true})).toBeVisible();
   await page.getByRole("button",{name:"보관함",exact:true}).click();
   await page.getByLabel("복구 코드",{exact:true}).fill(code);
   await page.getByRole("button",{name:"코드로 보관함 전환",exact:true}).click();
@@ -174,7 +174,7 @@ test("logout clears screen hints, recovery keeps the result and erasure disables
   await page.getByRole("button",{name:"보관함",exact:true}).click();
   await page.getByRole("checkbox",{name:"내용을 확인했고 내 정보를 지울게요"}).check();
   await page.getByRole("button",{name:"내 정보 삭제",exact:true}).click();
-  await expect(page.getByRole("button",{name:"첫 상대 무료로 보기",exact:true})).toBeVisible();
+  await expect(page.getByRole("button",{name:"두 사람의 생일 적기",exact:true})).toBeVisible();
   const publicPage=await context.newPage();await publicPage.goto(url);
   await expect(publicPage.getByRole("heading",{name:/지금은 볼 수 없는/})).toBeVisible();
 });

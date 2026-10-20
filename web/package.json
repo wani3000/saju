@@ -23,6 +23,7 @@
     "@electric-sql/pglite": "0.5.9",
     "@fontsource/jua": "5.3.0",
     "@fontsource/noto-sans-kr": "5.3.1",
+    "@fontsource/noto-serif-kr": "5.3.1",
     "@supabase/ssr": "0.12.7",
     "@supabase/supabase-js": "2.117.3",
     "@tosspayments/tosspayments-sdk": "2.9.0",

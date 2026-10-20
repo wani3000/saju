@@ -1,6 +1,6 @@
 # 가까운 사이 · 서버 연결 앱
 
-선택한 [호랑이 2번](../design/characters/tigers/02-tiger.png)을 Next.js로 구현했다. 기존 [클릭 시안](../prototype/README.md)은 그대로 보존한다.
+선택한 [조선 기록 사진풍 2안](../design/characters/joseon/documentary-ui-v2/02-paper-greeting.png)에 **충청북도 괴산의 서당 훈장 김춘배**라는 가상 인물을 적용했다. 기존 [클릭 시안](../prototype/README.md)은 그대로 보존한다.
 
 ## 실행
 
@@ -131,4 +131,12 @@ API·PG 반환·웹훅은 요청 본문을 읽는 중 16KiB를 넘으면 413, �
 
 `health`에 `jobs.delayedQueued`와 `oldestQueuedComparisonSeconds`를 추가했다. queued인 비교의 생성 후 300초 이상이면 `DELAYED_QUEUE`와 종료 코드 2다. 이는 순수 큐 체류 시간이나 운영 SLO가 아니며, 재시도도 원래 비교 생성 시각을 유지한다. worker 중단/주기를 확인하고 처리한 뒤 다시 점검한다.
 
-웹 86개·모바일 18사례·HTTP·빌드/타입·로컬 PostgreSQL 복원 통과. [실제 감수와 사용자 관찰 양식](../docs/launch-review-kit.md), [정책 권장안](../docs/calculation-policy-candidate.md), [운영 절차](../docs/launch-operations-runbook.md)는 준비됐으며 실제 전문가·참가자·외부 연동·운영 승인은 별도다.
+웹 88개·모바일 18사례·HTTP·빌드/타입·로컬 PostgreSQL 복원 통과. [실제 감수와 사용자 관찰 양식](../docs/launch-review-kit.md), [정책 권장안](../docs/calculation-policy-candidate.md), [운영 절차](../docs/launch-operations-runbook.md)는 준비됐으며 실제 전문가·참가자·외부 연동·운영 승인은 별도다.
+
+## 김춘배 훈장 화면과 공유 버전
+
+한지 배경·Noto Serif KR 제목·먹갈색 버튼과 카메라를 보지 않는 창작 사진을 사용한다. [설정·자산 제작 기록](../design/characters/joseon/chunbae-v1/README.md), [시각 비교 QA](../design-qa.md)를 따른다. 새 이미지는 실제 역사 사진이 아니며 훈장은 안내 인물이다. 인물 안내는 시작 화면의 펼침 항목에서 읽는다.
+
+신규 기호 설명 공유에는 chunbae-v1/kim-chunbae-v1만 고정한다. 기존 tigers-v1 공유는 기존 그림으로 표시하고, 미지원 카탈로그는 최신 인물로 대체하지 않는다. 공개 미리보기와 공개 페이지가 같은 자산 해석기를 사용한다. 계산 v5·문구 v2·기존 저장 결과/구매/가격은 그대로다. 신규 서비스 회귀 검사로 이전 공개 스냅샷과 결과의 불변을 확인했다.
+
+웹 88개, HTTP, 320/390px 모바일 18사례, 빌드·타입, 로컬 PostgreSQL 21테이블 복원/권한 검사를 통과했다. 실제 Chrome에서 입력→결과→공유 미리보기 및 인물 안내를 확인했다. 외부 인증·PG 검증이나 공개 출시 완료를 뜻하지 않는다.

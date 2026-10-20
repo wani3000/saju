@@ -1,16 +1,17 @@
 :root {
-  --cream: #fffdf4;
-  --ink: #422719;
-  --orange: #ff893c;
-  --line: #e8d9c7;
-  --muted: #786356;
+  --cream: #f7f0e4;
+  --ink: #3d2b1d;
+  --orange: #604733;
+  --line: #d8c8af;
+  --muted: #756553;
 }
 * {
   box-sizing: border-box;
 }
 body {
   margin: 0;
-  background: #f6efe2;
+  background: var(--cream) url("/assets/chunbae-v1/hanji.png") repeat;
+  background-size: 600px 600px;
   color: var(--ink);
   font-family: "Noto Sans KR", sans-serif;
   font-size: 18px;
@@ -54,7 +55,7 @@ summary:focus-visible {
   min-height: 100dvh;
   margin: auto;
   padding: 24px 24px 18px;
-  background: var(--cream);
+  background: transparent;
   overflow-wrap: anywhere;
 }
 header {
@@ -64,13 +65,21 @@ header {
   margin-bottom: 8px;
 }
 .brand {
-  font-family: Jua, sans-serif;
+  font-family: "Noto Serif KR", serif;
   font-size: 24px;
   border: 0;
   background: none;
   padding: 8px 0;
   text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-align: left;
+  min-width: 0;
 }
+.brand strong { display: block; font-size: 22px; font-weight: 500; white-space: nowrap; }
+.brand small { display: block; font-size: 11px; color: var(--muted); margin-top: 3px; }
+.guide-avatar { width: 44px; height: 44px; flex-shrink: 0; border-radius: 50%; object-fit: cover; }
 .mode {
   color: #786356;
   font-size: 14px;
@@ -80,10 +89,10 @@ header {
   margin: 10px 0 24px;
 }
 h1 {
-  font-family: Jua, sans-serif;
+  font-family: "Noto Serif KR", serif;
   font-weight: 400;
-  line-height: 1.15;
-  font-size: 40px;
+  line-height: 1.45;
+  font-size: 32px;
   letter-spacing: -1px;
   margin: 28px 0 22px;
   white-space: pre-line;
@@ -110,11 +119,21 @@ p {
   color: var(--muted);
   font-size: 20px;
 }
-.shell:has(.home-actions) > h1 {
-  text-align: center;
-  font-size: 48px;
-  margin-top: 34px;
-}
+.home-shell { max-width: 520px; padding: 28px 28px 22px; }
+.home-shell header { margin-bottom: 0; }
+.home-shell .home-photo { display: block; width: 100%; height: auto; margin: 40px auto 36px; }
+.home-shell .home-title { text-align: center; font-size: 32px; line-height: 1.45; font-weight: 400; letter-spacing: -1.1px; margin: 0; }
+.home-invitation { text-align: center; font-family: "Noto Serif KR", serif; font-size: 18px; font-weight: 400; line-height: 1.8; margin: 18px -8px 0; }
+.home-step { font-family: "Noto Serif KR", serif; text-align: center; font-size: 16px; color: var(--muted); margin: 28px 0 0; }
+.home-step::before { content: ""; display: block; width: 30px; border-top: 1px solid #b7a58b; margin: 0 auto 18px; }
+.seal-window { display: block; width: 40px; height: 40px; overflow: hidden; margin: 24px auto 20px; }
+.seal-window img { display: block; width: 120px; height: 120px; max-width: none; margin: -40px; }
+.home-actions { width: 100%; }
+.home-actions .primary { font-family: "Noto Serif KR", serif; font-size: 21px; font-weight: 400; margin: 0; min-height: 60px; }
+.home-caption { text-align: center; font-family: "Noto Serif KR", serif; font-size: 12px; color: var(--muted); margin: 20px -8px 0; }
+.home-information { margin-top: 24px; padding-top: 16px; border-top: 1px solid var(--line); font-size: 16px; }
+.home-information summary { font-size: 14px; text-align: center; font-weight: 400; }
+.person-label { color: var(--muted); font-size: 15px; }
 .hero {
   display: block;
   width: 100%;
@@ -152,7 +171,7 @@ p {
   display: block;
   text-align: center;
   width: 100%;
-  border-radius: 20px;
+  border-radius: 9px;
   border: 1px solid transparent;
   padding: 16px 18px;
   font-weight: 700;
@@ -164,7 +183,7 @@ p {
 .primary,
 .button {
   background: var(--orange);
-  color: #422719;
+  color: #fff9ef;
 }
 .secondary {
   background: #fffaf0;
@@ -335,7 +354,7 @@ input[aria-invalid="true"] {
   font-size: 23px;
 }
 .result-title {
-  font-family: Jua, sans-serif;
+  font-family: "Noto Serif KR", serif;
   text-align: center;
   font-size: 30px;
   font-weight: 400;
@@ -365,7 +384,7 @@ input[aria-invalid="true"] {
 .relationship-map {
   border: 1px solid var(--line);
   border-radius: 40px;
-  background: radial-gradient(ellipse at center, #f9ead0, #fffdf4);
+  background: #f4ead8;
   padding: 24px;
   margin: 24px 0;
 }
@@ -391,6 +410,7 @@ input[aria-invalid="true"] {
   display: flex;
   align-items: center;
   flex-direction: column;
+  min-height: 72px;
 }
 .map-person .avatar {
   max-width: 100%;
@@ -432,9 +452,8 @@ footer {
 @media (min-width: 650px) {
   .shell {
     margin: 28px auto;
-    border-radius: 36px;
+    border-radius: 0;
     min-height: calc(100dvh - 56px);
-    box-shadow: 0 16px 80px #6c452510;
     padding: 30px 36px;
   }
 }
@@ -442,9 +461,13 @@ footer {
   .shell {
     padding: 18px 16px;
   }
-  .shell:has(.home-actions) > h1 {
-    font-size: 40px;
-  }
+  .home-shell { padding: 22px 20px; }
+  .home-shell .brand { gap: 8px; }
+  .home-shell .brand strong { font-size: 19px; }
+  .home-shell .brand small { font-size: 10px; }
+  .home-shell .home-photo { margin-top: 38px; margin-bottom: 32px; }
+  .home-shell .home-title { font-size: 28px; }
+  .home-invitation { font-size: 17px; }
   .pair-review {
     grid-template-columns: 1fr;
   }

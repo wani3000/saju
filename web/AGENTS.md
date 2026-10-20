@@ -1,6 +1,6 @@
 # Next.js 서버 연결 앱
 
-상위 AGENTS.md를 따른다. 선택한 호랑이 2번 자산과 디자인을 유지하며 `prototype/`의 보호된 런타임은 수정하지 않는다.
+상위 AGENTS.md를 따른다. 선택한 조선 기록 사진풍 2안과 김춘배 훈장 디자인을 유지한다. 인물은 가상이며 카메라를 보지 않는다. 기존 공유의 tigers-v1 자산은 보존하며 `prototype/`의 보호된 런타임은 수정하지 않는다.
 
 - 앱은 research mode다. 실제 궁합 규칙·문구·PG·인증 감수 전 production gate를 제거하지 않는다.
 - PGlite는 단일 프로세스 로컬 개발 전용이다. 별도 worker는 웹 서버를 멈춘 후 실행하거나 외부 PostgreSQL을 사용한다.
