@@ -7,6 +7,16 @@ import {analyzeNatal,compareProfiles} from "../src/generated/selected-reading.mj
 
 const context=()=>({charts:validatePair({me:samplePerson(),other:samplePerson(true)}).charts,relation:"친구"});
 const read=(c:ReturnType<typeof context>)=>readingForVersion(currentReadingVersion,c);
+test("coinciding broad families still produce concrete positional differences",()=>{
+  const r=read(context()).wholeChart!,[a,b]=r.people;
+  assert.deepEqual(a.families,b.families);
+  const different=r.pair.sections.find(s=>s.id==="different")!;
+  assert.ok(different.evidence.some(e=>e.includes("월주")));
+  assert.ok(different.text.includes(a.evidence.find(e=>e.position==="month"&&e.layer==="visible")!.role));
+  assert.ok(different.text.includes(b.evidence.find(e=>e.position==="month"&&e.layer==="visible")!.role));
+  // Unknown-hour asymmetry is not a difference in personality.
+  assert.ok(!different.evidence.some(e=>e.includes("시주")));
+});
 test("whole reading projects every confirmed natal fact and all cross-pillar comparisons with provenance",()=>{
   const c=context(),before=structuredClone(c),r=read(c),whole=r.wholeChart!;
   assert.equal(r.ruleVersion,"whole-chart-personality-copy-v4");assert.equal(whole.kind,"whole-chart-story");

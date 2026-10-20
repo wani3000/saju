@@ -118,6 +118,15 @@ function buildPerson(side:"me"|"other",n:NatalAnalysis):WholePerson {
 function buildPair(a:WholePerson,b:WholePerson,comparison:ReturnType<typeof compareProfiles>):WholePair {
   const commonFamilies=familyOrder.filter(f=>a.families.includes(f)&&b.families.includes(f));
   const aOnly=a.families.filter(f=>!b.families.includes(f)),bOnly=b.families.filter(f=>!a.families.includes(f));
+  // Broad five-family sets often coincide. Compare actual roles at the same known
+  // pillar as well, so two distinct charts do not receive an empty "no difference" paragraph.
+  const differingSlots=(["month","hour","year","day"] as Position[]).flatMap(position=>{
+    const left=a.evidence.filter(e=>e.position===position),right=b.evidence.filter(e=>e.position===position);
+    if(!left.length||!right.length)return [];
+    const key=(items:ChartEvidence[])=>items.map(e=>`${e.layer}:${e.stem}:${e.role}`).sort().join("|");
+    if(key(left)===key(right))return [];
+    return [{position,left,right}];
+  });
   const findings=comparison.findings.filter(f=>f.certainty==="all-candidates");
   const observations=findings.map(f=>({id:`${f.ruleId}:${f.endpoints.map(e=>e.position).join(":")}`,ruleId:f.ruleId,text:relationText(f),family:f.family,positions:f.endpoints.map(e=>({...e})),source:{...f.source}}));
   const hasClash=findings.some(f=>f.family==="branch-clash"),hasCombination=findings.some(f=>f.family!=="branch-clash");
@@ -127,9 +136,14 @@ function buildPair(a:WholePerson,b:WholePerson,comparison:ReturnType<typeof comp
     `두 사람의 알려진 기둥에 ${summarizeFamilies(commonFamilies)}의 분류가 함께 보이네. ${commonFamilies.map(f=>familyPractice[f].strength).join(", ")}를 같이 해 볼 일로 삼아 보게. 같은 분류가 있다고 표현 방식까지 같다는 뜻은 아니네.`
     :"알려진 기둥에서 공통으로 확정한 십성 묶음은 없네. 실제 공통점이 없다는 뜻은 아니니, 서로 편하게 해내는 일을 직접 물어보게.",
     evidence:commonFamilies.flatMap(f=>[`나: ${a.evidence.filter(e=>e.family===f).map(e=>e.text).join(" / ")}`,`상대: ${b.evidence.filter(e=>e.family===f).map(e=>e.text).join(" / ")}`])});
-  sections.push({id:"different",title:"서로 다르게 꺼내 쓰는 결",text:[aOnly.length?`내 알려진 기둥에서 별도로 확인한 ${summarizeFamilies(aOnly)}은 ${aOnly.map(f=>familyPractice[f].strength).join(", ")}의 역할로 써 볼 만하네.`:"내 쪽만의 십성 묶음을 따로 고르지는 않았네.",
-    bOnly.length?`상대 쪽의 ${summarizeFamilies(bOnly)}은 ${bOnly.map(f=>familyPractice[f].strength).join(", ")}의 역할로 읽어 보세.`:"상대 쪽만의 십성 묶음도 따로 고르지는 않았네.","확인되지 않은 묶음을 없는 성격이나 부족한 기운으로 해석하지 않겠네."].join(" "),
-    evidence:[...a.evidence.filter(e=>aOnly.includes(e.family)).map(e=>`나: ${e.text}`),...b.evidence.filter(e=>bOnly.includes(e.family)).map(e=>`상대: ${e.text}`)]});
+  const slot=differingSlots[0];
+  const positionalText=slot?`같은 ${positionNames[slot.position]} 자리를 비교해도 나는 ${unique(slot.left.map(e=>e.role)).join("·")}, 상대는 ${unique(slot.right.map(e=>e.role)).join("·")}의 조합이네. 내 ${slot.left[0].role}은 ${roleCopy[slot.left[0].role].habit}, 상대의 ${slot.right[0].role}은 ${roleCopy[slot.right[0].role].habit}으로 풀어 보세. 같은 묶음을 공유해도 그 결을 꺼내는 방식은 서로 물어볼 만하지.`
+    :"확인한 같은 위치의 십성 구성이 비슷하네. 그렇다고 실제 성격과 표현도 같다고 정하지는 않겠네. 같은 상황에서 누가 먼저 말하고 누가 생각할 시간을 원하는지 경험으로 비교해 보게.";
+  sections.push({id:"different",title:"서로 다르게 꺼내 쓰는 결",text:[
+    ...(aOnly.length?[`내 알려진 기둥에서 별도로 확인한 ${summarizeFamilies(aOnly)}은 ${aOnly.map(f=>familyPractice[f].strength).join(", ")}의 역할로 써 볼 만하네.`]:[]),
+    ...(bOnly.length?[`상대 쪽의 ${summarizeFamilies(bOnly)}은 ${bOnly.map(f=>familyPractice[f].strength).join(", ")}의 역할로 읽어 보세.`]:[]),positionalText].join(" "),
+    evidence:[...a.evidence.filter(e=>aOnly.includes(e.family)).map(e=>`나: ${e.text}`),...b.evidence.filter(e=>bOnly.includes(e.family)).map(e=>`상대: ${e.text}`),
+      ...differingSlots.flatMap(s=>[...s.left.map(e=>`나: ${e.text}`),...s.right.map(e=>`상대: ${e.text}`)])]});
   const ac=a.anchor?roleCopy[a.anchor.role]:null,bc=b.anchor?roleCopy[b.anchor.role]:null;
   sections.push({id:"conversation",title:"두 사람의 대화가 엇갈릴 때",text:ac&&bc?
     `내 ${a.anchor!.role}의 결은 ${ac.habit}, 상대의 ${b.anchor!.role}은 ${bc.habit}으로 읽어 보세. ${a.anchor!.role===b.anchor!.role?`둘 다 ‘${ac.request}’라는 바람이 있는지 확인하고, 서로 먼저 배려받기만 기다리지는 않는지 살펴보게.`:`나는 ‘${ac.request}’, 상대는 ‘${bc.request}’라는 바람이 있는지 확인해 보게.`} ${commonFamilies.length?familyPractice[commonFamilies[0]].practice:"한 사람의 기준을 정답으로 삼기보다 번갈아 제안하고 확인해 보게"}.`

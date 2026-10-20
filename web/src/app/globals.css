@@ -564,7 +564,7 @@ footer {
 .saju-story h3, .saju-story h4 { font-family: "Noto Serif KR",serif; word-break: keep-all; overflow-wrap: anywhere; }
 .saju-story h4 { font-size: 18px; margin: 24px 0 8px; }
 .story-more { margin-top: 24px; border-top: 1px dashed var(--line); padding-top: 14px; }
-.story-more summary { font-size: 16px; line-height: 1.9; }
+.story-more summary { font-size: 16px; line-height: 1.9; word-break: keep-all; overflow-wrap: anywhere; }
 .story-pair-symbols { font-size: 16px; color: var(--muted); word-break: keep-all; overflow-wrap: anywhere; }
 .story-question { margin: 24px 0; padding: 18px 16px; border-left: 3px solid #80644a; background: #efe6d680; font-family: "Noto Serif KR",serif; }
 .story-closing { padding: 26px 0 8px; }
