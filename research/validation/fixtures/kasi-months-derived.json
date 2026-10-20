@@ -1,0 +1,11693 @@
+{
+  "source": "KASI public monthly Gregorian-to-lunar table, fetched separately from candidate engines",
+  "retrievedOn": "2026-10-20",
+  "sourcesManifest": "kasi-months/sources.json",
+  "dates": [
+    {
+      "solar": [
+        1908,
+        1,
+        1
+      ],
+      "lunar": [
+        1907,
+        11,
+        28,
+        false
+      ],
+      "dayPillar": "을묘",
+      "sourceGanji": "정미(丁未)년 임자(壬子)월 을묘(乙卯)일",
+      "sourceMonth": "1908-01"
+    },
+    {
+      "solar": [
+        1908,
+        1,
+        2
+      ],
+      "lunar": [
+        1907,
+        11,
+        29,
+        false
+      ],
+      "dayPillar": "병진",
+      "sourceGanji": "정미(丁未)년 임자(壬子)월 병진(丙辰)일",
+      "sourceMonth": "1908-01"
+    },
+    {
+      "solar": [
+        1908,
+        1,
+        3
+      ],
+      "lunar": [
+        1907,
+        11,
+        30,
+        false
+      ],
+      "dayPillar": "정사",
+      "sourceGanji": "정미(丁未)년 임자(壬子)월 정사(丁巳)일",
+      "sourceMonth": "1908-01"
+    },
+    {
+      "solar": [
+        1908,
+        1,
+        4
+      ],
+      "lunar": [
+        1907,
+        12,
+        1,
+        false
+      ],
+      "dayPillar": "무오",
+      "sourceGanji": "정미(丁未)년 계축(癸丑)월 무오(戊午)일",
+      "sourceMonth": "1908-01"
+    },
+    {
+      "solar": [
+        1908,
+        1,
+        5
+      ],
+      "lunar": [
+        1907,
+        12,
+        2,
+        false
+      ],
+      "dayPillar": "기미",
+      "sourceGanji": "정미(丁未)년 계축(癸丑)월 기미(己未)일",
+      "sourceMonth": "1908-01"
+    },
+    {
+      "solar": [
+        1908,
+        1,
+        6
+      ],
+      "lunar": [
+        1907,
+        12,
+        3,
+        false
+      ],
+      "dayPillar": "경신",
+      "sourceGanji": "정미(丁未)년 계축(癸丑)월 경신(庚申)일",
+      "sourceMonth": "1908-01"
+    },
+    {
+      "solar": [
+        1908,
+        1,
+        7
+      ],
+      "lunar": [
+        1907,
+        12,
+        4,
+        false
+      ],
+      "dayPillar": "신유",
+      "sourceGanji": "정미(丁未)년 계축(癸丑)월 신유(辛酉)일",
+      "sourceMonth": "1908-01"
+    },
+    {
+      "solar": [
+        1908,
+        1,
+        8
+      ],
+      "lunar": [
+        1907,
+        12,
+        5,
+        false
+      ],
+      "dayPillar": "임술",
+      "sourceGanji": "정미(丁未)년 계축(癸丑)월 임술(壬戌)일",
+      "sourceMonth": "1908-01"
+    },
+    {
+      "solar": [
+        1908,
+        1,
+        9
+      ],
+      "lunar": [
+        1907,
+        12,
+        6,
+        false
+      ],
+      "dayPillar": "계해",
+      "sourceGanji": "정미(丁未)년 계축(癸丑)월 계해(癸亥)일",
+      "sourceMonth": "1908-01"
+    },
+    {
+      "solar": [
+        1908,
+        1,
+        10
+      ],
+      "lunar": [
+        1907,
+        12,
+        7,
+        false
+      ],
+      "dayPillar": "갑자",
+      "sourceGanji": "정미(丁未)년 계축(癸丑)월 갑자(甲子)일",
+      "sourceMonth": "1908-01"
+    },
+    {
+      "solar": [
+        1908,
+        1,
+        11
+      ],
+      "lunar": [
+        1907,
+        12,
+        8,
+        false
+      ],
+      "dayPillar": "을축",
+      "sourceGanji": "정미(丁未)년 계축(癸丑)월 을축(乙丑)일",
+      "sourceMonth": "1908-01"
+    },
+    {
+      "solar": [
+        1908,
+        1,
+        12
+      ],
+      "lunar": [
+        1907,
+        12,
+        9,
+        false
+      ],
+      "dayPillar": "병인",
+      "sourceGanji": "정미(丁未)년 계축(癸丑)월 병인(丙寅)일",
+      "sourceMonth": "1908-01"
+    },
+    {
+      "solar": [
+        1908,
+        1,
+        13
+      ],
+      "lunar": [
+        1907,
+        12,
+        10,
+        false
+      ],
+      "dayPillar": "정묘",
+      "sourceGanji": "정미(丁未)년 계축(癸丑)월 정묘(丁卯)일",
+      "sourceMonth": "1908-01"
+    },
+    {
+      "solar": [
+        1908,
+        1,
+        14
+      ],
+      "lunar": [
+        1907,
+        12,
+        11,
+        false
+      ],
+      "dayPillar": "무진",
+      "sourceGanji": "정미(丁未)년 계축(癸丑)월 무진(戊辰)일",
+      "sourceMonth": "1908-01"
+    },
+    {
+      "solar": [
+        1908,
+        1,
+        15
+      ],
+      "lunar": [
+        1907,
+        12,
+        12,
+        false
+      ],
+      "dayPillar": "기사",
+      "sourceGanji": "정미(丁未)년 계축(癸丑)월 기사(己巳)일",
+      "sourceMonth": "1908-01"
+    },
+    {
+      "solar": [
+        1908,
+        1,
+        16
+      ],
+      "lunar": [
+        1907,
+        12,
+        13,
+        false
+      ],
+      "dayPillar": "경오",
+      "sourceGanji": "정미(丁未)년 계축(癸丑)월 경오(庚午)일",
+      "sourceMonth": "1908-01"
+    },
+    {
+      "solar": [
+        1908,
+        1,
+        17
+      ],
+      "lunar": [
+        1907,
+        12,
+        14,
+        false
+      ],
+      "dayPillar": "신미",
+      "sourceGanji": "정미(丁未)년 계축(癸丑)월 신미(辛未)일",
+      "sourceMonth": "1908-01"
+    },
+    {
+      "solar": [
+        1908,
+        1,
+        18
+      ],
+      "lunar": [
+        1907,
+        12,
+        15,
+        false
+      ],
+      "dayPillar": "임신",
+      "sourceGanji": "정미(丁未)년 계축(癸丑)월 임신(壬申)일",
+      "sourceMonth": "1908-01"
+    },
+    {
+      "solar": [
+        1908,
+        1,
+        19
+      ],
+      "lunar": [
+        1907,
+        12,
+        16,
+        false
+      ],
+      "dayPillar": "계유",
+      "sourceGanji": "정미(丁未)년 계축(癸丑)월 계유(癸酉)일",
+      "sourceMonth": "1908-01"
+    },
+    {
+      "solar": [
+        1908,
+        1,
+        20
+      ],
+      "lunar": [
+        1907,
+        12,
+        17,
+        false
+      ],
+      "dayPillar": "갑술",
+      "sourceGanji": "정미(丁未)년 계축(癸丑)월 갑술(甲戌)일",
+      "sourceMonth": "1908-01"
+    },
+    {
+      "solar": [
+        1908,
+        1,
+        21
+      ],
+      "lunar": [
+        1907,
+        12,
+        18,
+        false
+      ],
+      "dayPillar": "을해",
+      "sourceGanji": "정미(丁未)년 계축(癸丑)월 을해(乙亥)일",
+      "sourceMonth": "1908-01"
+    },
+    {
+      "solar": [
+        1908,
+        1,
+        22
+      ],
+      "lunar": [
+        1907,
+        12,
+        19,
+        false
+      ],
+      "dayPillar": "병자",
+      "sourceGanji": "정미(丁未)년 계축(癸丑)월 병자(丙子)일",
+      "sourceMonth": "1908-01"
+    },
+    {
+      "solar": [
+        1908,
+        1,
+        23
+      ],
+      "lunar": [
+        1907,
+        12,
+        20,
+        false
+      ],
+      "dayPillar": "정축",
+      "sourceGanji": "정미(丁未)년 계축(癸丑)월 정축(丁丑)일",
+      "sourceMonth": "1908-01"
+    },
+    {
+      "solar": [
+        1908,
+        1,
+        24
+      ],
+      "lunar": [
+        1907,
+        12,
+        21,
+        false
+      ],
+      "dayPillar": "무인",
+      "sourceGanji": "정미(丁未)년 계축(癸丑)월 무인(戊寅)일",
+      "sourceMonth": "1908-01"
+    },
+    {
+      "solar": [
+        1908,
+        1,
+        25
+      ],
+      "lunar": [
+        1907,
+        12,
+        22,
+        false
+      ],
+      "dayPillar": "기묘",
+      "sourceGanji": "정미(丁未)년 계축(癸丑)월 기묘(己卯)일",
+      "sourceMonth": "1908-01"
+    },
+    {
+      "solar": [
+        1908,
+        1,
+        26
+      ],
+      "lunar": [
+        1907,
+        12,
+        23,
+        false
+      ],
+      "dayPillar": "경진",
+      "sourceGanji": "정미(丁未)년 계축(癸丑)월 경진(庚辰)일",
+      "sourceMonth": "1908-01"
+    },
+    {
+      "solar": [
+        1908,
+        1,
+        27
+      ],
+      "lunar": [
+        1907,
+        12,
+        24,
+        false
+      ],
+      "dayPillar": "신사",
+      "sourceGanji": "정미(丁未)년 계축(癸丑)월 신사(辛巳)일",
+      "sourceMonth": "1908-01"
+    },
+    {
+      "solar": [
+        1908,
+        1,
+        28
+      ],
+      "lunar": [
+        1907,
+        12,
+        25,
+        false
+      ],
+      "dayPillar": "임오",
+      "sourceGanji": "정미(丁未)년 계축(癸丑)월 임오(壬午)일",
+      "sourceMonth": "1908-01"
+    },
+    {
+      "solar": [
+        1908,
+        1,
+        29
+      ],
+      "lunar": [
+        1907,
+        12,
+        26,
+        false
+      ],
+      "dayPillar": "계미",
+      "sourceGanji": "정미(丁未)년 계축(癸丑)월 계미(癸未)일",
+      "sourceMonth": "1908-01"
+    },
+    {
+      "solar": [
+        1908,
+        1,
+        30
+      ],
+      "lunar": [
+        1907,
+        12,
+        27,
+        false
+      ],
+      "dayPillar": "갑신",
+      "sourceGanji": "정미(丁未)년 계축(癸丑)월 갑신(甲申)일",
+      "sourceMonth": "1908-01"
+    },
+    {
+      "solar": [
+        1908,
+        1,
+        31
+      ],
+      "lunar": [
+        1907,
+        12,
+        28,
+        false
+      ],
+      "dayPillar": "을유",
+      "sourceGanji": "정미(丁未)년 계축(癸丑)월 을유(乙酉)일",
+      "sourceMonth": "1908-01"
+    },
+    {
+      "solar": [
+        1908,
+        4,
+        1
+      ],
+      "lunar": [
+        1908,
+        3,
+        1,
+        false
+      ],
+      "dayPillar": "병술",
+      "sourceGanji": "무신(戊申)년 병진(丙辰)월 병술(丙戌)일",
+      "sourceMonth": "1908-04"
+    },
+    {
+      "solar": [
+        1908,
+        4,
+        2
+      ],
+      "lunar": [
+        1908,
+        3,
+        2,
+        false
+      ],
+      "dayPillar": "정해",
+      "sourceGanji": "무신(戊申)년 병진(丙辰)월 정해(丁亥)일",
+      "sourceMonth": "1908-04"
+    },
+    {
+      "solar": [
+        1908,
+        4,
+        3
+      ],
+      "lunar": [
+        1908,
+        3,
+        3,
+        false
+      ],
+      "dayPillar": "무자",
+      "sourceGanji": "무신(戊申)년 병진(丙辰)월 무자(戊子)일",
+      "sourceMonth": "1908-04"
+    },
+    {
+      "solar": [
+        1908,
+        4,
+        4
+      ],
+      "lunar": [
+        1908,
+        3,
+        4,
+        false
+      ],
+      "dayPillar": "기축",
+      "sourceGanji": "무신(戊申)년 병진(丙辰)월 기축(己丑)일",
+      "sourceMonth": "1908-04"
+    },
+    {
+      "solar": [
+        1908,
+        4,
+        5
+      ],
+      "lunar": [
+        1908,
+        3,
+        5,
+        false
+      ],
+      "dayPillar": "경인",
+      "sourceGanji": "무신(戊申)년 병진(丙辰)월 경인(庚寅)일",
+      "sourceMonth": "1908-04"
+    },
+    {
+      "solar": [
+        1908,
+        4,
+        6
+      ],
+      "lunar": [
+        1908,
+        3,
+        6,
+        false
+      ],
+      "dayPillar": "신묘",
+      "sourceGanji": "무신(戊申)년 병진(丙辰)월 신묘(辛卯)일",
+      "sourceMonth": "1908-04"
+    },
+    {
+      "solar": [
+        1908,
+        4,
+        7
+      ],
+      "lunar": [
+        1908,
+        3,
+        7,
+        false
+      ],
+      "dayPillar": "임진",
+      "sourceGanji": "무신(戊申)년 병진(丙辰)월 임진(壬辰)일",
+      "sourceMonth": "1908-04"
+    },
+    {
+      "solar": [
+        1908,
+        4,
+        8
+      ],
+      "lunar": [
+        1908,
+        3,
+        8,
+        false
+      ],
+      "dayPillar": "계사",
+      "sourceGanji": "무신(戊申)년 병진(丙辰)월 계사(癸巳)일",
+      "sourceMonth": "1908-04"
+    },
+    {
+      "solar": [
+        1908,
+        4,
+        9
+      ],
+      "lunar": [
+        1908,
+        3,
+        9,
+        false
+      ],
+      "dayPillar": "갑오",
+      "sourceGanji": "무신(戊申)년 병진(丙辰)월 갑오(甲午)일",
+      "sourceMonth": "1908-04"
+    },
+    {
+      "solar": [
+        1908,
+        4,
+        10
+      ],
+      "lunar": [
+        1908,
+        3,
+        10,
+        false
+      ],
+      "dayPillar": "을미",
+      "sourceGanji": "무신(戊申)년 병진(丙辰)월 을미(乙未)일",
+      "sourceMonth": "1908-04"
+    },
+    {
+      "solar": [
+        1908,
+        4,
+        11
+      ],
+      "lunar": [
+        1908,
+        3,
+        11,
+        false
+      ],
+      "dayPillar": "병신",
+      "sourceGanji": "무신(戊申)년 병진(丙辰)월 병신(丙申)일",
+      "sourceMonth": "1908-04"
+    },
+    {
+      "solar": [
+        1908,
+        4,
+        12
+      ],
+      "lunar": [
+        1908,
+        3,
+        12,
+        false
+      ],
+      "dayPillar": "정유",
+      "sourceGanji": "무신(戊申)년 병진(丙辰)월 정유(丁酉)일",
+      "sourceMonth": "1908-04"
+    },
+    {
+      "solar": [
+        1908,
+        4,
+        13
+      ],
+      "lunar": [
+        1908,
+        3,
+        13,
+        false
+      ],
+      "dayPillar": "무술",
+      "sourceGanji": "무신(戊申)년 병진(丙辰)월 무술(戊戌)일",
+      "sourceMonth": "1908-04"
+    },
+    {
+      "solar": [
+        1908,
+        4,
+        14
+      ],
+      "lunar": [
+        1908,
+        3,
+        14,
+        false
+      ],
+      "dayPillar": "기해",
+      "sourceGanji": "무신(戊申)년 병진(丙辰)월 기해(己亥)일",
+      "sourceMonth": "1908-04"
+    },
+    {
+      "solar": [
+        1908,
+        4,
+        15
+      ],
+      "lunar": [
+        1908,
+        3,
+        15,
+        false
+      ],
+      "dayPillar": "경자",
+      "sourceGanji": "무신(戊申)년 병진(丙辰)월 경자(庚子)일",
+      "sourceMonth": "1908-04"
+    },
+    {
+      "solar": [
+        1908,
+        4,
+        16
+      ],
+      "lunar": [
+        1908,
+        3,
+        16,
+        false
+      ],
+      "dayPillar": "신축",
+      "sourceGanji": "무신(戊申)년 병진(丙辰)월 신축(辛丑)일",
+      "sourceMonth": "1908-04"
+    },
+    {
+      "solar": [
+        1908,
+        4,
+        17
+      ],
+      "lunar": [
+        1908,
+        3,
+        17,
+        false
+      ],
+      "dayPillar": "임인",
+      "sourceGanji": "무신(戊申)년 병진(丙辰)월 임인(壬寅)일",
+      "sourceMonth": "1908-04"
+    },
+    {
+      "solar": [
+        1908,
+        4,
+        18
+      ],
+      "lunar": [
+        1908,
+        3,
+        18,
+        false
+      ],
+      "dayPillar": "계묘",
+      "sourceGanji": "무신(戊申)년 병진(丙辰)월 계묘(癸卯)일",
+      "sourceMonth": "1908-04"
+    },
+    {
+      "solar": [
+        1908,
+        4,
+        19
+      ],
+      "lunar": [
+        1908,
+        3,
+        19,
+        false
+      ],
+      "dayPillar": "갑진",
+      "sourceGanji": "무신(戊申)년 병진(丙辰)월 갑진(甲辰)일",
+      "sourceMonth": "1908-04"
+    },
+    {
+      "solar": [
+        1908,
+        4,
+        20
+      ],
+      "lunar": [
+        1908,
+        3,
+        20,
+        false
+      ],
+      "dayPillar": "을사",
+      "sourceGanji": "무신(戊申)년 병진(丙辰)월 을사(乙巳)일",
+      "sourceMonth": "1908-04"
+    },
+    {
+      "solar": [
+        1908,
+        4,
+        21
+      ],
+      "lunar": [
+        1908,
+        3,
+        21,
+        false
+      ],
+      "dayPillar": "병오",
+      "sourceGanji": "무신(戊申)년 병진(丙辰)월 병오(丙午)일",
+      "sourceMonth": "1908-04"
+    },
+    {
+      "solar": [
+        1908,
+        4,
+        22
+      ],
+      "lunar": [
+        1908,
+        3,
+        22,
+        false
+      ],
+      "dayPillar": "정미",
+      "sourceGanji": "무신(戊申)년 병진(丙辰)월 정미(丁未)일",
+      "sourceMonth": "1908-04"
+    },
+    {
+      "solar": [
+        1908,
+        4,
+        23
+      ],
+      "lunar": [
+        1908,
+        3,
+        23,
+        false
+      ],
+      "dayPillar": "무신",
+      "sourceGanji": "무신(戊申)년 병진(丙辰)월 무신(戊申)일",
+      "sourceMonth": "1908-04"
+    },
+    {
+      "solar": [
+        1908,
+        4,
+        24
+      ],
+      "lunar": [
+        1908,
+        3,
+        24,
+        false
+      ],
+      "dayPillar": "기유",
+      "sourceGanji": "무신(戊申)년 병진(丙辰)월 기유(己酉)일",
+      "sourceMonth": "1908-04"
+    },
+    {
+      "solar": [
+        1908,
+        4,
+        25
+      ],
+      "lunar": [
+        1908,
+        3,
+        25,
+        false
+      ],
+      "dayPillar": "경술",
+      "sourceGanji": "무신(戊申)년 병진(丙辰)월 경술(庚戌)일",
+      "sourceMonth": "1908-04"
+    },
+    {
+      "solar": [
+        1908,
+        4,
+        26
+      ],
+      "lunar": [
+        1908,
+        3,
+        26,
+        false
+      ],
+      "dayPillar": "신해",
+      "sourceGanji": "무신(戊申)년 병진(丙辰)월 신해(辛亥)일",
+      "sourceMonth": "1908-04"
+    },
+    {
+      "solar": [
+        1908,
+        4,
+        27
+      ],
+      "lunar": [
+        1908,
+        3,
+        27,
+        false
+      ],
+      "dayPillar": "임자",
+      "sourceGanji": "무신(戊申)년 병진(丙辰)월 임자(壬子)일",
+      "sourceMonth": "1908-04"
+    },
+    {
+      "solar": [
+        1908,
+        4,
+        28
+      ],
+      "lunar": [
+        1908,
+        3,
+        28,
+        false
+      ],
+      "dayPillar": "계축",
+      "sourceGanji": "무신(戊申)년 병진(丙辰)월 계축(癸丑)일",
+      "sourceMonth": "1908-04"
+    },
+    {
+      "solar": [
+        1908,
+        4,
+        29
+      ],
+      "lunar": [
+        1908,
+        3,
+        29,
+        false
+      ],
+      "dayPillar": "갑인",
+      "sourceGanji": "무신(戊申)년 병진(丙辰)월 갑인(甲寅)일",
+      "sourceMonth": "1908-04"
+    },
+    {
+      "solar": [
+        1908,
+        4,
+        30
+      ],
+      "lunar": [
+        1908,
+        4,
+        1,
+        false
+      ],
+      "dayPillar": "을묘",
+      "sourceGanji": "무신(戊申)년 정사(丁巳)월 을묘(乙卯)일",
+      "sourceMonth": "1908-04"
+    },
+    {
+      "solar": [
+        1912,
+        2,
+        1
+      ],
+      "lunar": [
+        1911,
+        12,
+        14,
+        false
+      ],
+      "dayPillar": "정미",
+      "sourceGanji": "신해(辛亥)년 신축(辛丑)월 정미(丁未)일",
+      "sourceMonth": "1912-02"
+    },
+    {
+      "solar": [
+        1912,
+        2,
+        2
+      ],
+      "lunar": [
+        1911,
+        12,
+        15,
+        false
+      ],
+      "dayPillar": "무신",
+      "sourceGanji": "신해(辛亥)년 신축(辛丑)월 무신(戊申)일",
+      "sourceMonth": "1912-02"
+    },
+    {
+      "solar": [
+        1912,
+        2,
+        3
+      ],
+      "lunar": [
+        1911,
+        12,
+        16,
+        false
+      ],
+      "dayPillar": "기유",
+      "sourceGanji": "신해(辛亥)년 신축(辛丑)월 기유(己酉)일",
+      "sourceMonth": "1912-02"
+    },
+    {
+      "solar": [
+        1912,
+        2,
+        4
+      ],
+      "lunar": [
+        1911,
+        12,
+        17,
+        false
+      ],
+      "dayPillar": "경술",
+      "sourceGanji": "신해(辛亥)년 신축(辛丑)월 경술(庚戌)일",
+      "sourceMonth": "1912-02"
+    },
+    {
+      "solar": [
+        1912,
+        2,
+        5
+      ],
+      "lunar": [
+        1911,
+        12,
+        18,
+        false
+      ],
+      "dayPillar": "신해",
+      "sourceGanji": "신해(辛亥)년 신축(辛丑)월 신해(辛亥)일",
+      "sourceMonth": "1912-02"
+    },
+    {
+      "solar": [
+        1912,
+        2,
+        6
+      ],
+      "lunar": [
+        1911,
+        12,
+        19,
+        false
+      ],
+      "dayPillar": "임자",
+      "sourceGanji": "신해(辛亥)년 신축(辛丑)월 임자(壬子)일",
+      "sourceMonth": "1912-02"
+    },
+    {
+      "solar": [
+        1912,
+        2,
+        7
+      ],
+      "lunar": [
+        1911,
+        12,
+        20,
+        false
+      ],
+      "dayPillar": "계축",
+      "sourceGanji": "신해(辛亥)년 신축(辛丑)월 계축(癸丑)일",
+      "sourceMonth": "1912-02"
+    },
+    {
+      "solar": [
+        1912,
+        2,
+        8
+      ],
+      "lunar": [
+        1911,
+        12,
+        21,
+        false
+      ],
+      "dayPillar": "갑인",
+      "sourceGanji": "신해(辛亥)년 신축(辛丑)월 갑인(甲寅)일",
+      "sourceMonth": "1912-02"
+    },
+    {
+      "solar": [
+        1912,
+        2,
+        9
+      ],
+      "lunar": [
+        1911,
+        12,
+        22,
+        false
+      ],
+      "dayPillar": "을묘",
+      "sourceGanji": "신해(辛亥)년 신축(辛丑)월 을묘(乙卯)일",
+      "sourceMonth": "1912-02"
+    },
+    {
+      "solar": [
+        1912,
+        2,
+        10
+      ],
+      "lunar": [
+        1911,
+        12,
+        23,
+        false
+      ],
+      "dayPillar": "병진",
+      "sourceGanji": "신해(辛亥)년 신축(辛丑)월 병진(丙辰)일",
+      "sourceMonth": "1912-02"
+    },
+    {
+      "solar": [
+        1912,
+        2,
+        11
+      ],
+      "lunar": [
+        1911,
+        12,
+        24,
+        false
+      ],
+      "dayPillar": "정사",
+      "sourceGanji": "신해(辛亥)년 신축(辛丑)월 정사(丁巳)일",
+      "sourceMonth": "1912-02"
+    },
+    {
+      "solar": [
+        1912,
+        2,
+        12
+      ],
+      "lunar": [
+        1911,
+        12,
+        25,
+        false
+      ],
+      "dayPillar": "무오",
+      "sourceGanji": "신해(辛亥)년 신축(辛丑)월 무오(戊午)일",
+      "sourceMonth": "1912-02"
+    },
+    {
+      "solar": [
+        1912,
+        2,
+        13
+      ],
+      "lunar": [
+        1911,
+        12,
+        26,
+        false
+      ],
+      "dayPillar": "기미",
+      "sourceGanji": "신해(辛亥)년 신축(辛丑)월 기미(己未)일",
+      "sourceMonth": "1912-02"
+    },
+    {
+      "solar": [
+        1912,
+        2,
+        14
+      ],
+      "lunar": [
+        1911,
+        12,
+        27,
+        false
+      ],
+      "dayPillar": "경신",
+      "sourceGanji": "신해(辛亥)년 신축(辛丑)월 경신(庚申)일",
+      "sourceMonth": "1912-02"
+    },
+    {
+      "solar": [
+        1912,
+        2,
+        15
+      ],
+      "lunar": [
+        1911,
+        12,
+        28,
+        false
+      ],
+      "dayPillar": "신유",
+      "sourceGanji": "신해(辛亥)년 신축(辛丑)월 신유(辛酉)일",
+      "sourceMonth": "1912-02"
+    },
+    {
+      "solar": [
+        1912,
+        2,
+        16
+      ],
+      "lunar": [
+        1911,
+        12,
+        29,
+        false
+      ],
+      "dayPillar": "임술",
+      "sourceGanji": "신해(辛亥)년 신축(辛丑)월 임술(壬戌)일",
+      "sourceMonth": "1912-02"
+    },
+    {
+      "solar": [
+        1912,
+        2,
+        17
+      ],
+      "lunar": [
+        1911,
+        12,
+        30,
+        false
+      ],
+      "dayPillar": "계해",
+      "sourceGanji": "신해(辛亥)년 신축(辛丑)월 계해(癸亥)일",
+      "sourceMonth": "1912-02"
+    },
+    {
+      "solar": [
+        1912,
+        2,
+        18
+      ],
+      "lunar": [
+        1912,
+        1,
+        1,
+        false
+      ],
+      "dayPillar": "갑자",
+      "sourceGanji": "임자(壬子)년 임인(壬寅)월 갑자(甲子)일",
+      "sourceMonth": "1912-02"
+    },
+    {
+      "solar": [
+        1912,
+        2,
+        19
+      ],
+      "lunar": [
+        1912,
+        1,
+        2,
+        false
+      ],
+      "dayPillar": "을축",
+      "sourceGanji": "임자(壬子)년 임인(壬寅)월 을축(乙丑)일",
+      "sourceMonth": "1912-02"
+    },
+    {
+      "solar": [
+        1912,
+        2,
+        20
+      ],
+      "lunar": [
+        1912,
+        1,
+        3,
+        false
+      ],
+      "dayPillar": "병인",
+      "sourceGanji": "임자(壬子)년 임인(壬寅)월 병인(丙寅)일",
+      "sourceMonth": "1912-02"
+    },
+    {
+      "solar": [
+        1912,
+        2,
+        21
+      ],
+      "lunar": [
+        1912,
+        1,
+        4,
+        false
+      ],
+      "dayPillar": "정묘",
+      "sourceGanji": "임자(壬子)년 임인(壬寅)월 정묘(丁卯)일",
+      "sourceMonth": "1912-02"
+    },
+    {
+      "solar": [
+        1912,
+        2,
+        22
+      ],
+      "lunar": [
+        1912,
+        1,
+        5,
+        false
+      ],
+      "dayPillar": "무진",
+      "sourceGanji": "임자(壬子)년 임인(壬寅)월 무진(戊辰)일",
+      "sourceMonth": "1912-02"
+    },
+    {
+      "solar": [
+        1912,
+        2,
+        23
+      ],
+      "lunar": [
+        1912,
+        1,
+        6,
+        false
+      ],
+      "dayPillar": "기사",
+      "sourceGanji": "임자(壬子)년 임인(壬寅)월 기사(己巳)일",
+      "sourceMonth": "1912-02"
+    },
+    {
+      "solar": [
+        1912,
+        2,
+        24
+      ],
+      "lunar": [
+        1912,
+        1,
+        7,
+        false
+      ],
+      "dayPillar": "경오",
+      "sourceGanji": "임자(壬子)년 임인(壬寅)월 경오(庚午)일",
+      "sourceMonth": "1912-02"
+    },
+    {
+      "solar": [
+        1912,
+        2,
+        25
+      ],
+      "lunar": [
+        1912,
+        1,
+        8,
+        false
+      ],
+      "dayPillar": "신미",
+      "sourceGanji": "임자(壬子)년 임인(壬寅)월 신미(辛未)일",
+      "sourceMonth": "1912-02"
+    },
+    {
+      "solar": [
+        1912,
+        2,
+        26
+      ],
+      "lunar": [
+        1912,
+        1,
+        9,
+        false
+      ],
+      "dayPillar": "임신",
+      "sourceGanji": "임자(壬子)년 임인(壬寅)월 임신(壬申)일",
+      "sourceMonth": "1912-02"
+    },
+    {
+      "solar": [
+        1912,
+        2,
+        27
+      ],
+      "lunar": [
+        1912,
+        1,
+        10,
+        false
+      ],
+      "dayPillar": "계유",
+      "sourceGanji": "임자(壬子)년 임인(壬寅)월 계유(癸酉)일",
+      "sourceMonth": "1912-02"
+    },
+    {
+      "solar": [
+        1912,
+        2,
+        28
+      ],
+      "lunar": [
+        1912,
+        1,
+        11,
+        false
+      ],
+      "dayPillar": "갑술",
+      "sourceGanji": "임자(壬子)년 임인(壬寅)월 갑술(甲戌)일",
+      "sourceMonth": "1912-02"
+    },
+    {
+      "solar": [
+        1912,
+        2,
+        29
+      ],
+      "lunar": [
+        1912,
+        1,
+        12,
+        false
+      ],
+      "dayPillar": "을해",
+      "sourceGanji": "임자(壬子)년 임인(壬寅)월 을해(乙亥)일",
+      "sourceMonth": "1912-02"
+    },
+    {
+      "solar": [
+        1920,
+        2,
+        1
+      ],
+      "lunar": [
+        1919,
+        12,
+        12,
+        false
+      ],
+      "dayPillar": "기축",
+      "sourceGanji": "기미(己未)년 정축(丁丑)월 기축(己丑)일",
+      "sourceMonth": "1920-02"
+    },
+    {
+      "solar": [
+        1920,
+        2,
+        2
+      ],
+      "lunar": [
+        1919,
+        12,
+        13,
+        false
+      ],
+      "dayPillar": "경인",
+      "sourceGanji": "기미(己未)년 정축(丁丑)월 경인(庚寅)일",
+      "sourceMonth": "1920-02"
+    },
+    {
+      "solar": [
+        1920,
+        2,
+        3
+      ],
+      "lunar": [
+        1919,
+        12,
+        14,
+        false
+      ],
+      "dayPillar": "신묘",
+      "sourceGanji": "기미(己未)년 정축(丁丑)월 신묘(辛卯)일",
+      "sourceMonth": "1920-02"
+    },
+    {
+      "solar": [
+        1920,
+        2,
+        4
+      ],
+      "lunar": [
+        1919,
+        12,
+        15,
+        false
+      ],
+      "dayPillar": "임진",
+      "sourceGanji": "기미(己未)년 정축(丁丑)월 임진(壬辰)일",
+      "sourceMonth": "1920-02"
+    },
+    {
+      "solar": [
+        1920,
+        2,
+        5
+      ],
+      "lunar": [
+        1919,
+        12,
+        16,
+        false
+      ],
+      "dayPillar": "계사",
+      "sourceGanji": "기미(己未)년 정축(丁丑)월 계사(癸巳)일",
+      "sourceMonth": "1920-02"
+    },
+    {
+      "solar": [
+        1920,
+        2,
+        6
+      ],
+      "lunar": [
+        1919,
+        12,
+        17,
+        false
+      ],
+      "dayPillar": "갑오",
+      "sourceGanji": "기미(己未)년 정축(丁丑)월 갑오(甲午)일",
+      "sourceMonth": "1920-02"
+    },
+    {
+      "solar": [
+        1920,
+        2,
+        7
+      ],
+      "lunar": [
+        1919,
+        12,
+        18,
+        false
+      ],
+      "dayPillar": "을미",
+      "sourceGanji": "기미(己未)년 정축(丁丑)월 을미(乙未)일",
+      "sourceMonth": "1920-02"
+    },
+    {
+      "solar": [
+        1920,
+        2,
+        8
+      ],
+      "lunar": [
+        1919,
+        12,
+        19,
+        false
+      ],
+      "dayPillar": "병신",
+      "sourceGanji": "기미(己未)년 정축(丁丑)월 병신(丙申)일",
+      "sourceMonth": "1920-02"
+    },
+    {
+      "solar": [
+        1920,
+        2,
+        9
+      ],
+      "lunar": [
+        1919,
+        12,
+        20,
+        false
+      ],
+      "dayPillar": "정유",
+      "sourceGanji": "기미(己未)년 정축(丁丑)월 정유(丁酉)일",
+      "sourceMonth": "1920-02"
+    },
+    {
+      "solar": [
+        1920,
+        2,
+        10
+      ],
+      "lunar": [
+        1919,
+        12,
+        21,
+        false
+      ],
+      "dayPillar": "무술",
+      "sourceGanji": "기미(己未)년 정축(丁丑)월 무술(戊戌)일",
+      "sourceMonth": "1920-02"
+    },
+    {
+      "solar": [
+        1920,
+        2,
+        11
+      ],
+      "lunar": [
+        1919,
+        12,
+        22,
+        false
+      ],
+      "dayPillar": "기해",
+      "sourceGanji": "기미(己未)년 정축(丁丑)월 기해(己亥)일",
+      "sourceMonth": "1920-02"
+    },
+    {
+      "solar": [
+        1920,
+        2,
+        12
+      ],
+      "lunar": [
+        1919,
+        12,
+        23,
+        false
+      ],
+      "dayPillar": "경자",
+      "sourceGanji": "기미(己未)년 정축(丁丑)월 경자(庚子)일",
+      "sourceMonth": "1920-02"
+    },
+    {
+      "solar": [
+        1920,
+        2,
+        13
+      ],
+      "lunar": [
+        1919,
+        12,
+        24,
+        false
+      ],
+      "dayPillar": "신축",
+      "sourceGanji": "기미(己未)년 정축(丁丑)월 신축(辛丑)일",
+      "sourceMonth": "1920-02"
+    },
+    {
+      "solar": [
+        1920,
+        2,
+        14
+      ],
+      "lunar": [
+        1919,
+        12,
+        25,
+        false
+      ],
+      "dayPillar": "임인",
+      "sourceGanji": "기미(己未)년 정축(丁丑)월 임인(壬寅)일",
+      "sourceMonth": "1920-02"
+    },
+    {
+      "solar": [
+        1920,
+        2,
+        15
+      ],
+      "lunar": [
+        1919,
+        12,
+        26,
+        false
+      ],
+      "dayPillar": "계묘",
+      "sourceGanji": "기미(己未)년 정축(丁丑)월 계묘(癸卯)일",
+      "sourceMonth": "1920-02"
+    },
+    {
+      "solar": [
+        1920,
+        2,
+        16
+      ],
+      "lunar": [
+        1919,
+        12,
+        27,
+        false
+      ],
+      "dayPillar": "갑진",
+      "sourceGanji": "기미(己未)년 정축(丁丑)월 갑진(甲辰)일",
+      "sourceMonth": "1920-02"
+    },
+    {
+      "solar": [
+        1920,
+        2,
+        17
+      ],
+      "lunar": [
+        1919,
+        12,
+        28,
+        false
+      ],
+      "dayPillar": "을사",
+      "sourceGanji": "기미(己未)년 정축(丁丑)월 을사(乙巳)일",
+      "sourceMonth": "1920-02"
+    },
+    {
+      "solar": [
+        1920,
+        2,
+        18
+      ],
+      "lunar": [
+        1919,
+        12,
+        29,
+        false
+      ],
+      "dayPillar": "병오",
+      "sourceGanji": "기미(己未)년 정축(丁丑)월 병오(丙午)일",
+      "sourceMonth": "1920-02"
+    },
+    {
+      "solar": [
+        1920,
+        2,
+        19
+      ],
+      "lunar": [
+        1919,
+        12,
+        30,
+        false
+      ],
+      "dayPillar": "정미",
+      "sourceGanji": "기미(己未)년 정축(丁丑)월 정미(丁未)일",
+      "sourceMonth": "1920-02"
+    },
+    {
+      "solar": [
+        1920,
+        2,
+        20
+      ],
+      "lunar": [
+        1920,
+        1,
+        1,
+        false
+      ],
+      "dayPillar": "무신",
+      "sourceGanji": "경신(庚申)년 무인(戊寅)월 무신(戊申)일",
+      "sourceMonth": "1920-02"
+    },
+    {
+      "solar": [
+        1920,
+        2,
+        21
+      ],
+      "lunar": [
+        1920,
+        1,
+        2,
+        false
+      ],
+      "dayPillar": "기유",
+      "sourceGanji": "경신(庚申)년 무인(戊寅)월 기유(己酉)일",
+      "sourceMonth": "1920-02"
+    },
+    {
+      "solar": [
+        1920,
+        2,
+        22
+      ],
+      "lunar": [
+        1920,
+        1,
+        3,
+        false
+      ],
+      "dayPillar": "경술",
+      "sourceGanji": "경신(庚申)년 무인(戊寅)월 경술(庚戌)일",
+      "sourceMonth": "1920-02"
+    },
+    {
+      "solar": [
+        1920,
+        2,
+        23
+      ],
+      "lunar": [
+        1920,
+        1,
+        4,
+        false
+      ],
+      "dayPillar": "신해",
+      "sourceGanji": "경신(庚申)년 무인(戊寅)월 신해(辛亥)일",
+      "sourceMonth": "1920-02"
+    },
+    {
+      "solar": [
+        1920,
+        2,
+        24
+      ],
+      "lunar": [
+        1920,
+        1,
+        5,
+        false
+      ],
+      "dayPillar": "임자",
+      "sourceGanji": "경신(庚申)년 무인(戊寅)월 임자(壬子)일",
+      "sourceMonth": "1920-02"
+    },
+    {
+      "solar": [
+        1920,
+        2,
+        25
+      ],
+      "lunar": [
+        1920,
+        1,
+        6,
+        false
+      ],
+      "dayPillar": "계축",
+      "sourceGanji": "경신(庚申)년 무인(戊寅)월 계축(癸丑)일",
+      "sourceMonth": "1920-02"
+    },
+    {
+      "solar": [
+        1920,
+        2,
+        26
+      ],
+      "lunar": [
+        1920,
+        1,
+        7,
+        false
+      ],
+      "dayPillar": "갑인",
+      "sourceGanji": "경신(庚申)년 무인(戊寅)월 갑인(甲寅)일",
+      "sourceMonth": "1920-02"
+    },
+    {
+      "solar": [
+        1920,
+        2,
+        27
+      ],
+      "lunar": [
+        1920,
+        1,
+        8,
+        false
+      ],
+      "dayPillar": "을묘",
+      "sourceGanji": "경신(庚申)년 무인(戊寅)월 을묘(乙卯)일",
+      "sourceMonth": "1920-02"
+    },
+    {
+      "solar": [
+        1920,
+        2,
+        28
+      ],
+      "lunar": [
+        1920,
+        1,
+        9,
+        false
+      ],
+      "dayPillar": "병진",
+      "sourceGanji": "경신(庚申)년 무인(戊寅)월 병진(丙辰)일",
+      "sourceMonth": "1920-02"
+    },
+    {
+      "solar": [
+        1920,
+        2,
+        29
+      ],
+      "lunar": [
+        1920,
+        1,
+        10,
+        false
+      ],
+      "dayPillar": "정사",
+      "sourceGanji": "경신(庚申)년 무인(戊寅)월 정사(丁巳)일",
+      "sourceMonth": "1920-02"
+    },
+    {
+      "solar": [
+        1930,
+        1,
+        1
+      ],
+      "lunar": [
+        1929,
+        12,
+        2,
+        false
+      ],
+      "dayPillar": "신해",
+      "sourceGanji": "기사(己巳)년 정축(丁丑)월 신해(辛亥)일",
+      "sourceMonth": "1930-01"
+    },
+    {
+      "solar": [
+        1930,
+        1,
+        2
+      ],
+      "lunar": [
+        1929,
+        12,
+        3,
+        false
+      ],
+      "dayPillar": "임자",
+      "sourceGanji": "기사(己巳)년 정축(丁丑)월 임자(壬子)일",
+      "sourceMonth": "1930-01"
+    },
+    {
+      "solar": [
+        1930,
+        1,
+        3
+      ],
+      "lunar": [
+        1929,
+        12,
+        4,
+        false
+      ],
+      "dayPillar": "계축",
+      "sourceGanji": "기사(己巳)년 정축(丁丑)월 계축(癸丑)일",
+      "sourceMonth": "1930-01"
+    },
+    {
+      "solar": [
+        1930,
+        1,
+        4
+      ],
+      "lunar": [
+        1929,
+        12,
+        5,
+        false
+      ],
+      "dayPillar": "갑인",
+      "sourceGanji": "기사(己巳)년 정축(丁丑)월 갑인(甲寅)일",
+      "sourceMonth": "1930-01"
+    },
+    {
+      "solar": [
+        1930,
+        1,
+        5
+      ],
+      "lunar": [
+        1929,
+        12,
+        6,
+        false
+      ],
+      "dayPillar": "을묘",
+      "sourceGanji": "기사(己巳)년 정축(丁丑)월 을묘(乙卯)일",
+      "sourceMonth": "1930-01"
+    },
+    {
+      "solar": [
+        1930,
+        1,
+        6
+      ],
+      "lunar": [
+        1929,
+        12,
+        7,
+        false
+      ],
+      "dayPillar": "병진",
+      "sourceGanji": "기사(己巳)년 정축(丁丑)월 병진(丙辰)일",
+      "sourceMonth": "1930-01"
+    },
+    {
+      "solar": [
+        1930,
+        1,
+        7
+      ],
+      "lunar": [
+        1929,
+        12,
+        8,
+        false
+      ],
+      "dayPillar": "정사",
+      "sourceGanji": "기사(己巳)년 정축(丁丑)월 정사(丁巳)일",
+      "sourceMonth": "1930-01"
+    },
+    {
+      "solar": [
+        1930,
+        1,
+        8
+      ],
+      "lunar": [
+        1929,
+        12,
+        9,
+        false
+      ],
+      "dayPillar": "무오",
+      "sourceGanji": "기사(己巳)년 정축(丁丑)월 무오(戊午)일",
+      "sourceMonth": "1930-01"
+    },
+    {
+      "solar": [
+        1930,
+        1,
+        9
+      ],
+      "lunar": [
+        1929,
+        12,
+        10,
+        false
+      ],
+      "dayPillar": "기미",
+      "sourceGanji": "기사(己巳)년 정축(丁丑)월 기미(己未)일",
+      "sourceMonth": "1930-01"
+    },
+    {
+      "solar": [
+        1930,
+        1,
+        10
+      ],
+      "lunar": [
+        1929,
+        12,
+        11,
+        false
+      ],
+      "dayPillar": "경신",
+      "sourceGanji": "기사(己巳)년 정축(丁丑)월 경신(庚申)일",
+      "sourceMonth": "1930-01"
+    },
+    {
+      "solar": [
+        1930,
+        1,
+        11
+      ],
+      "lunar": [
+        1929,
+        12,
+        12,
+        false
+      ],
+      "dayPillar": "신유",
+      "sourceGanji": "기사(己巳)년 정축(丁丑)월 신유(辛酉)일",
+      "sourceMonth": "1930-01"
+    },
+    {
+      "solar": [
+        1930,
+        1,
+        12
+      ],
+      "lunar": [
+        1929,
+        12,
+        13,
+        false
+      ],
+      "dayPillar": "임술",
+      "sourceGanji": "기사(己巳)년 정축(丁丑)월 임술(壬戌)일",
+      "sourceMonth": "1930-01"
+    },
+    {
+      "solar": [
+        1930,
+        1,
+        13
+      ],
+      "lunar": [
+        1929,
+        12,
+        14,
+        false
+      ],
+      "dayPillar": "계해",
+      "sourceGanji": "기사(己巳)년 정축(丁丑)월 계해(癸亥)일",
+      "sourceMonth": "1930-01"
+    },
+    {
+      "solar": [
+        1930,
+        1,
+        14
+      ],
+      "lunar": [
+        1929,
+        12,
+        15,
+        false
+      ],
+      "dayPillar": "갑자",
+      "sourceGanji": "기사(己巳)년 정축(丁丑)월 갑자(甲子)일",
+      "sourceMonth": "1930-01"
+    },
+    {
+      "solar": [
+        1930,
+        1,
+        15
+      ],
+      "lunar": [
+        1929,
+        12,
+        16,
+        false
+      ],
+      "dayPillar": "을축",
+      "sourceGanji": "기사(己巳)년 정축(丁丑)월 을축(乙丑)일",
+      "sourceMonth": "1930-01"
+    },
+    {
+      "solar": [
+        1930,
+        1,
+        16
+      ],
+      "lunar": [
+        1929,
+        12,
+        17,
+        false
+      ],
+      "dayPillar": "병인",
+      "sourceGanji": "기사(己巳)년 정축(丁丑)월 병인(丙寅)일",
+      "sourceMonth": "1930-01"
+    },
+    {
+      "solar": [
+        1930,
+        1,
+        17
+      ],
+      "lunar": [
+        1929,
+        12,
+        18,
+        false
+      ],
+      "dayPillar": "정묘",
+      "sourceGanji": "기사(己巳)년 정축(丁丑)월 정묘(丁卯)일",
+      "sourceMonth": "1930-01"
+    },
+    {
+      "solar": [
+        1930,
+        1,
+        18
+      ],
+      "lunar": [
+        1929,
+        12,
+        19,
+        false
+      ],
+      "dayPillar": "무진",
+      "sourceGanji": "기사(己巳)년 정축(丁丑)월 무진(戊辰)일",
+      "sourceMonth": "1930-01"
+    },
+    {
+      "solar": [
+        1930,
+        1,
+        19
+      ],
+      "lunar": [
+        1929,
+        12,
+        20,
+        false
+      ],
+      "dayPillar": "기사",
+      "sourceGanji": "기사(己巳)년 정축(丁丑)월 기사(己巳)일",
+      "sourceMonth": "1930-01"
+    },
+    {
+      "solar": [
+        1930,
+        1,
+        20
+      ],
+      "lunar": [
+        1929,
+        12,
+        21,
+        false
+      ],
+      "dayPillar": "경오",
+      "sourceGanji": "기사(己巳)년 정축(丁丑)월 경오(庚午)일",
+      "sourceMonth": "1930-01"
+    },
+    {
+      "solar": [
+        1930,
+        1,
+        21
+      ],
+      "lunar": [
+        1929,
+        12,
+        22,
+        false
+      ],
+      "dayPillar": "신미",
+      "sourceGanji": "기사(己巳)년 정축(丁丑)월 신미(辛未)일",
+      "sourceMonth": "1930-01"
+    },
+    {
+      "solar": [
+        1930,
+        1,
+        22
+      ],
+      "lunar": [
+        1929,
+        12,
+        23,
+        false
+      ],
+      "dayPillar": "임신",
+      "sourceGanji": "기사(己巳)년 정축(丁丑)월 임신(壬申)일",
+      "sourceMonth": "1930-01"
+    },
+    {
+      "solar": [
+        1930,
+        1,
+        23
+      ],
+      "lunar": [
+        1929,
+        12,
+        24,
+        false
+      ],
+      "dayPillar": "계유",
+      "sourceGanji": "기사(己巳)년 정축(丁丑)월 계유(癸酉)일",
+      "sourceMonth": "1930-01"
+    },
+    {
+      "solar": [
+        1930,
+        1,
+        24
+      ],
+      "lunar": [
+        1929,
+        12,
+        25,
+        false
+      ],
+      "dayPillar": "갑술",
+      "sourceGanji": "기사(己巳)년 정축(丁丑)월 갑술(甲戌)일",
+      "sourceMonth": "1930-01"
+    },
+    {
+      "solar": [
+        1930,
+        1,
+        25
+      ],
+      "lunar": [
+        1929,
+        12,
+        26,
+        false
+      ],
+      "dayPillar": "을해",
+      "sourceGanji": "기사(己巳)년 정축(丁丑)월 을해(乙亥)일",
+      "sourceMonth": "1930-01"
+    },
+    {
+      "solar": [
+        1930,
+        1,
+        26
+      ],
+      "lunar": [
+        1929,
+        12,
+        27,
+        false
+      ],
+      "dayPillar": "병자",
+      "sourceGanji": "기사(己巳)년 정축(丁丑)월 병자(丙子)일",
+      "sourceMonth": "1930-01"
+    },
+    {
+      "solar": [
+        1930,
+        1,
+        27
+      ],
+      "lunar": [
+        1929,
+        12,
+        28,
+        false
+      ],
+      "dayPillar": "정축",
+      "sourceGanji": "기사(己巳)년 정축(丁丑)월 정축(丁丑)일",
+      "sourceMonth": "1930-01"
+    },
+    {
+      "solar": [
+        1930,
+        1,
+        28
+      ],
+      "lunar": [
+        1929,
+        12,
+        29,
+        false
+      ],
+      "dayPillar": "무인",
+      "sourceGanji": "기사(己巳)년 정축(丁丑)월 무인(戊寅)일",
+      "sourceMonth": "1930-01"
+    },
+    {
+      "solar": [
+        1930,
+        1,
+        29
+      ],
+      "lunar": [
+        1929,
+        12,
+        30,
+        false
+      ],
+      "dayPillar": "기묘",
+      "sourceGanji": "기사(己巳)년 정축(丁丑)월 기묘(己卯)일",
+      "sourceMonth": "1930-01"
+    },
+    {
+      "solar": [
+        1930,
+        1,
+        30
+      ],
+      "lunar": [
+        1930,
+        1,
+        1,
+        false
+      ],
+      "dayPillar": "경진",
+      "sourceGanji": "경오(庚午)년 무인(戊寅)월 경진(庚辰)일",
+      "sourceMonth": "1930-01"
+    },
+    {
+      "solar": [
+        1930,
+        1,
+        31
+      ],
+      "lunar": [
+        1930,
+        1,
+        2,
+        false
+      ],
+      "dayPillar": "신사",
+      "sourceGanji": "경오(庚午)년 무인(戊寅)월 신사(辛巳)일",
+      "sourceMonth": "1930-01"
+    },
+    {
+      "solar": [
+        1940,
+        2,
+        1
+      ],
+      "lunar": [
+        1939,
+        12,
+        24,
+        false
+      ],
+      "dayPillar": "갑술",
+      "sourceGanji": "기묘(己卯)년 정축(丁丑)월 갑술(甲戌)일",
+      "sourceMonth": "1940-02"
+    },
+    {
+      "solar": [
+        1940,
+        2,
+        2
+      ],
+      "lunar": [
+        1939,
+        12,
+        25,
+        false
+      ],
+      "dayPillar": "을해",
+      "sourceGanji": "기묘(己卯)년 정축(丁丑)월 을해(乙亥)일",
+      "sourceMonth": "1940-02"
+    },
+    {
+      "solar": [
+        1940,
+        2,
+        3
+      ],
+      "lunar": [
+        1939,
+        12,
+        26,
+        false
+      ],
+      "dayPillar": "병자",
+      "sourceGanji": "기묘(己卯)년 정축(丁丑)월 병자(丙子)일",
+      "sourceMonth": "1940-02"
+    },
+    {
+      "solar": [
+        1940,
+        2,
+        4
+      ],
+      "lunar": [
+        1939,
+        12,
+        27,
+        false
+      ],
+      "dayPillar": "정축",
+      "sourceGanji": "기묘(己卯)년 정축(丁丑)월 정축(丁丑)일",
+      "sourceMonth": "1940-02"
+    },
+    {
+      "solar": [
+        1940,
+        2,
+        5
+      ],
+      "lunar": [
+        1939,
+        12,
+        28,
+        false
+      ],
+      "dayPillar": "무인",
+      "sourceGanji": "기묘(己卯)년 정축(丁丑)월 무인(戊寅)일",
+      "sourceMonth": "1940-02"
+    },
+    {
+      "solar": [
+        1940,
+        2,
+        6
+      ],
+      "lunar": [
+        1939,
+        12,
+        29,
+        false
+      ],
+      "dayPillar": "기묘",
+      "sourceGanji": "기묘(己卯)년 정축(丁丑)월 기묘(己卯)일",
+      "sourceMonth": "1940-02"
+    },
+    {
+      "solar": [
+        1940,
+        2,
+        7
+      ],
+      "lunar": [
+        1939,
+        12,
+        30,
+        false
+      ],
+      "dayPillar": "경진",
+      "sourceGanji": "기묘(己卯)년 정축(丁丑)월 경진(庚辰)일",
+      "sourceMonth": "1940-02"
+    },
+    {
+      "solar": [
+        1940,
+        2,
+        8
+      ],
+      "lunar": [
+        1940,
+        1,
+        1,
+        false
+      ],
+      "dayPillar": "신사",
+      "sourceGanji": "경진(庚辰)년 무인(戊寅)월 신사(辛巳)일",
+      "sourceMonth": "1940-02"
+    },
+    {
+      "solar": [
+        1940,
+        2,
+        9
+      ],
+      "lunar": [
+        1940,
+        1,
+        2,
+        false
+      ],
+      "dayPillar": "임오",
+      "sourceGanji": "경진(庚辰)년 무인(戊寅)월 임오(壬午)일",
+      "sourceMonth": "1940-02"
+    },
+    {
+      "solar": [
+        1940,
+        2,
+        10
+      ],
+      "lunar": [
+        1940,
+        1,
+        3,
+        false
+      ],
+      "dayPillar": "계미",
+      "sourceGanji": "경진(庚辰)년 무인(戊寅)월 계미(癸未)일",
+      "sourceMonth": "1940-02"
+    },
+    {
+      "solar": [
+        1940,
+        2,
+        11
+      ],
+      "lunar": [
+        1940,
+        1,
+        4,
+        false
+      ],
+      "dayPillar": "갑신",
+      "sourceGanji": "경진(庚辰)년 무인(戊寅)월 갑신(甲申)일",
+      "sourceMonth": "1940-02"
+    },
+    {
+      "solar": [
+        1940,
+        2,
+        12
+      ],
+      "lunar": [
+        1940,
+        1,
+        5,
+        false
+      ],
+      "dayPillar": "을유",
+      "sourceGanji": "경진(庚辰)년 무인(戊寅)월 을유(乙酉)일",
+      "sourceMonth": "1940-02"
+    },
+    {
+      "solar": [
+        1940,
+        2,
+        13
+      ],
+      "lunar": [
+        1940,
+        1,
+        6,
+        false
+      ],
+      "dayPillar": "병술",
+      "sourceGanji": "경진(庚辰)년 무인(戊寅)월 병술(丙戌)일",
+      "sourceMonth": "1940-02"
+    },
+    {
+      "solar": [
+        1940,
+        2,
+        14
+      ],
+      "lunar": [
+        1940,
+        1,
+        7,
+        false
+      ],
+      "dayPillar": "정해",
+      "sourceGanji": "경진(庚辰)년 무인(戊寅)월 정해(丁亥)일",
+      "sourceMonth": "1940-02"
+    },
+    {
+      "solar": [
+        1940,
+        2,
+        15
+      ],
+      "lunar": [
+        1940,
+        1,
+        8,
+        false
+      ],
+      "dayPillar": "무자",
+      "sourceGanji": "경진(庚辰)년 무인(戊寅)월 무자(戊子)일",
+      "sourceMonth": "1940-02"
+    },
+    {
+      "solar": [
+        1940,
+        2,
+        16
+      ],
+      "lunar": [
+        1940,
+        1,
+        9,
+        false
+      ],
+      "dayPillar": "기축",
+      "sourceGanji": "경진(庚辰)년 무인(戊寅)월 기축(己丑)일",
+      "sourceMonth": "1940-02"
+    },
+    {
+      "solar": [
+        1940,
+        2,
+        17
+      ],
+      "lunar": [
+        1940,
+        1,
+        10,
+        false
+      ],
+      "dayPillar": "경인",
+      "sourceGanji": "경진(庚辰)년 무인(戊寅)월 경인(庚寅)일",
+      "sourceMonth": "1940-02"
+    },
+    {
+      "solar": [
+        1940,
+        2,
+        18
+      ],
+      "lunar": [
+        1940,
+        1,
+        11,
+        false
+      ],
+      "dayPillar": "신묘",
+      "sourceGanji": "경진(庚辰)년 무인(戊寅)월 신묘(辛卯)일",
+      "sourceMonth": "1940-02"
+    },
+    {
+      "solar": [
+        1940,
+        2,
+        19
+      ],
+      "lunar": [
+        1940,
+        1,
+        12,
+        false
+      ],
+      "dayPillar": "임진",
+      "sourceGanji": "경진(庚辰)년 무인(戊寅)월 임진(壬辰)일",
+      "sourceMonth": "1940-02"
+    },
+    {
+      "solar": [
+        1940,
+        2,
+        20
+      ],
+      "lunar": [
+        1940,
+        1,
+        13,
+        false
+      ],
+      "dayPillar": "계사",
+      "sourceGanji": "경진(庚辰)년 무인(戊寅)월 계사(癸巳)일",
+      "sourceMonth": "1940-02"
+    },
+    {
+      "solar": [
+        1940,
+        2,
+        21
+      ],
+      "lunar": [
+        1940,
+        1,
+        14,
+        false
+      ],
+      "dayPillar": "갑오",
+      "sourceGanji": "경진(庚辰)년 무인(戊寅)월 갑오(甲午)일",
+      "sourceMonth": "1940-02"
+    },
+    {
+      "solar": [
+        1940,
+        2,
+        22
+      ],
+      "lunar": [
+        1940,
+        1,
+        15,
+        false
+      ],
+      "dayPillar": "을미",
+      "sourceGanji": "경진(庚辰)년 무인(戊寅)월 을미(乙未)일",
+      "sourceMonth": "1940-02"
+    },
+    {
+      "solar": [
+        1940,
+        2,
+        23
+      ],
+      "lunar": [
+        1940,
+        1,
+        16,
+        false
+      ],
+      "dayPillar": "병신",
+      "sourceGanji": "경진(庚辰)년 무인(戊寅)월 병신(丙申)일",
+      "sourceMonth": "1940-02"
+    },
+    {
+      "solar": [
+        1940,
+        2,
+        24
+      ],
+      "lunar": [
+        1940,
+        1,
+        17,
+        false
+      ],
+      "dayPillar": "정유",
+      "sourceGanji": "경진(庚辰)년 무인(戊寅)월 정유(丁酉)일",
+      "sourceMonth": "1940-02"
+    },
+    {
+      "solar": [
+        1940,
+        2,
+        25
+      ],
+      "lunar": [
+        1940,
+        1,
+        18,
+        false
+      ],
+      "dayPillar": "무술",
+      "sourceGanji": "경진(庚辰)년 무인(戊寅)월 무술(戊戌)일",
+      "sourceMonth": "1940-02"
+    },
+    {
+      "solar": [
+        1940,
+        2,
+        26
+      ],
+      "lunar": [
+        1940,
+        1,
+        19,
+        false
+      ],
+      "dayPillar": "기해",
+      "sourceGanji": "경진(庚辰)년 무인(戊寅)월 기해(己亥)일",
+      "sourceMonth": "1940-02"
+    },
+    {
+      "solar": [
+        1940,
+        2,
+        27
+      ],
+      "lunar": [
+        1940,
+        1,
+        20,
+        false
+      ],
+      "dayPillar": "경자",
+      "sourceGanji": "경진(庚辰)년 무인(戊寅)월 경자(庚子)일",
+      "sourceMonth": "1940-02"
+    },
+    {
+      "solar": [
+        1940,
+        2,
+        28
+      ],
+      "lunar": [
+        1940,
+        1,
+        21,
+        false
+      ],
+      "dayPillar": "신축",
+      "sourceGanji": "경진(庚辰)년 무인(戊寅)월 신축(辛丑)일",
+      "sourceMonth": "1940-02"
+    },
+    {
+      "solar": [
+        1940,
+        2,
+        29
+      ],
+      "lunar": [
+        1940,
+        1,
+        22,
+        false
+      ],
+      "dayPillar": "임인",
+      "sourceGanji": "경진(庚辰)년 무인(戊寅)월 임인(壬寅)일",
+      "sourceMonth": "1940-02"
+    },
+    {
+      "solar": [
+        1948,
+        6,
+        1
+      ],
+      "lunar": [
+        1948,
+        4,
+        24,
+        false
+      ],
+      "dayPillar": "정사",
+      "sourceGanji": "무자(戊子)년 정사(丁巳)월 정사(丁巳)일",
+      "sourceMonth": "1948-06"
+    },
+    {
+      "solar": [
+        1948,
+        6,
+        2
+      ],
+      "lunar": [
+        1948,
+        4,
+        25,
+        false
+      ],
+      "dayPillar": "무오",
+      "sourceGanji": "무자(戊子)년 정사(丁巳)월 무오(戊午)일",
+      "sourceMonth": "1948-06"
+    },
+    {
+      "solar": [
+        1948,
+        6,
+        3
+      ],
+      "lunar": [
+        1948,
+        4,
+        26,
+        false
+      ],
+      "dayPillar": "기미",
+      "sourceGanji": "무자(戊子)년 정사(丁巳)월 기미(己未)일",
+      "sourceMonth": "1948-06"
+    },
+    {
+      "solar": [
+        1948,
+        6,
+        4
+      ],
+      "lunar": [
+        1948,
+        4,
+        27,
+        false
+      ],
+      "dayPillar": "경신",
+      "sourceGanji": "무자(戊子)년 정사(丁巳)월 경신(庚申)일",
+      "sourceMonth": "1948-06"
+    },
+    {
+      "solar": [
+        1948,
+        6,
+        5
+      ],
+      "lunar": [
+        1948,
+        4,
+        28,
+        false
+      ],
+      "dayPillar": "신유",
+      "sourceGanji": "무자(戊子)년 정사(丁巳)월 신유(辛酉)일",
+      "sourceMonth": "1948-06"
+    },
+    {
+      "solar": [
+        1948,
+        6,
+        6
+      ],
+      "lunar": [
+        1948,
+        4,
+        29,
+        false
+      ],
+      "dayPillar": "임술",
+      "sourceGanji": "무자(戊子)년 정사(丁巳)월 임술(壬戌)일",
+      "sourceMonth": "1948-06"
+    },
+    {
+      "solar": [
+        1948,
+        6,
+        7
+      ],
+      "lunar": [
+        1948,
+        5,
+        1,
+        false
+      ],
+      "dayPillar": "계해",
+      "sourceGanji": "무자(戊子)년 무오(戊午)월 계해(癸亥)일",
+      "sourceMonth": "1948-06"
+    },
+    {
+      "solar": [
+        1948,
+        6,
+        8
+      ],
+      "lunar": [
+        1948,
+        5,
+        2,
+        false
+      ],
+      "dayPillar": "갑자",
+      "sourceGanji": "무자(戊子)년 무오(戊午)월 갑자(甲子)일",
+      "sourceMonth": "1948-06"
+    },
+    {
+      "solar": [
+        1948,
+        6,
+        9
+      ],
+      "lunar": [
+        1948,
+        5,
+        3,
+        false
+      ],
+      "dayPillar": "을축",
+      "sourceGanji": "무자(戊子)년 무오(戊午)월 을축(乙丑)일",
+      "sourceMonth": "1948-06"
+    },
+    {
+      "solar": [
+        1948,
+        6,
+        10
+      ],
+      "lunar": [
+        1948,
+        5,
+        4,
+        false
+      ],
+      "dayPillar": "병인",
+      "sourceGanji": "무자(戊子)년 무오(戊午)월 병인(丙寅)일",
+      "sourceMonth": "1948-06"
+    },
+    {
+      "solar": [
+        1948,
+        6,
+        11
+      ],
+      "lunar": [
+        1948,
+        5,
+        5,
+        false
+      ],
+      "dayPillar": "정묘",
+      "sourceGanji": "무자(戊子)년 무오(戊午)월 정묘(丁卯)일",
+      "sourceMonth": "1948-06"
+    },
+    {
+      "solar": [
+        1948,
+        6,
+        12
+      ],
+      "lunar": [
+        1948,
+        5,
+        6,
+        false
+      ],
+      "dayPillar": "무진",
+      "sourceGanji": "무자(戊子)년 무오(戊午)월 무진(戊辰)일",
+      "sourceMonth": "1948-06"
+    },
+    {
+      "solar": [
+        1948,
+        6,
+        13
+      ],
+      "lunar": [
+        1948,
+        5,
+        7,
+        false
+      ],
+      "dayPillar": "기사",
+      "sourceGanji": "무자(戊子)년 무오(戊午)월 기사(己巳)일",
+      "sourceMonth": "1948-06"
+    },
+    {
+      "solar": [
+        1948,
+        6,
+        14
+      ],
+      "lunar": [
+        1948,
+        5,
+        8,
+        false
+      ],
+      "dayPillar": "경오",
+      "sourceGanji": "무자(戊子)년 무오(戊午)월 경오(庚午)일",
+      "sourceMonth": "1948-06"
+    },
+    {
+      "solar": [
+        1948,
+        6,
+        15
+      ],
+      "lunar": [
+        1948,
+        5,
+        9,
+        false
+      ],
+      "dayPillar": "신미",
+      "sourceGanji": "무자(戊子)년 무오(戊午)월 신미(辛未)일",
+      "sourceMonth": "1948-06"
+    },
+    {
+      "solar": [
+        1948,
+        6,
+        16
+      ],
+      "lunar": [
+        1948,
+        5,
+        10,
+        false
+      ],
+      "dayPillar": "임신",
+      "sourceGanji": "무자(戊子)년 무오(戊午)월 임신(壬申)일",
+      "sourceMonth": "1948-06"
+    },
+    {
+      "solar": [
+        1948,
+        6,
+        17
+      ],
+      "lunar": [
+        1948,
+        5,
+        11,
+        false
+      ],
+      "dayPillar": "계유",
+      "sourceGanji": "무자(戊子)년 무오(戊午)월 계유(癸酉)일",
+      "sourceMonth": "1948-06"
+    },
+    {
+      "solar": [
+        1948,
+        6,
+        18
+      ],
+      "lunar": [
+        1948,
+        5,
+        12,
+        false
+      ],
+      "dayPillar": "갑술",
+      "sourceGanji": "무자(戊子)년 무오(戊午)월 갑술(甲戌)일",
+      "sourceMonth": "1948-06"
+    },
+    {
+      "solar": [
+        1948,
+        6,
+        19
+      ],
+      "lunar": [
+        1948,
+        5,
+        13,
+        false
+      ],
+      "dayPillar": "을해",
+      "sourceGanji": "무자(戊子)년 무오(戊午)월 을해(乙亥)일",
+      "sourceMonth": "1948-06"
+    },
+    {
+      "solar": [
+        1948,
+        6,
+        20
+      ],
+      "lunar": [
+        1948,
+        5,
+        14,
+        false
+      ],
+      "dayPillar": "병자",
+      "sourceGanji": "무자(戊子)년 무오(戊午)월 병자(丙子)일",
+      "sourceMonth": "1948-06"
+    },
+    {
+      "solar": [
+        1948,
+        6,
+        21
+      ],
+      "lunar": [
+        1948,
+        5,
+        15,
+        false
+      ],
+      "dayPillar": "정축",
+      "sourceGanji": "무자(戊子)년 무오(戊午)월 정축(丁丑)일",
+      "sourceMonth": "1948-06"
+    },
+    {
+      "solar": [
+        1948,
+        6,
+        22
+      ],
+      "lunar": [
+        1948,
+        5,
+        16,
+        false
+      ],
+      "dayPillar": "무인",
+      "sourceGanji": "무자(戊子)년 무오(戊午)월 무인(戊寅)일",
+      "sourceMonth": "1948-06"
+    },
+    {
+      "solar": [
+        1948,
+        6,
+        23
+      ],
+      "lunar": [
+        1948,
+        5,
+        17,
+        false
+      ],
+      "dayPillar": "기묘",
+      "sourceGanji": "무자(戊子)년 무오(戊午)월 기묘(己卯)일",
+      "sourceMonth": "1948-06"
+    },
+    {
+      "solar": [
+        1948,
+        6,
+        24
+      ],
+      "lunar": [
+        1948,
+        5,
+        18,
+        false
+      ],
+      "dayPillar": "경진",
+      "sourceGanji": "무자(戊子)년 무오(戊午)월 경진(庚辰)일",
+      "sourceMonth": "1948-06"
+    },
+    {
+      "solar": [
+        1948,
+        6,
+        25
+      ],
+      "lunar": [
+        1948,
+        5,
+        19,
+        false
+      ],
+      "dayPillar": "신사",
+      "sourceGanji": "무자(戊子)년 무오(戊午)월 신사(辛巳)일",
+      "sourceMonth": "1948-06"
+    },
+    {
+      "solar": [
+        1948,
+        6,
+        26
+      ],
+      "lunar": [
+        1948,
+        5,
+        20,
+        false
+      ],
+      "dayPillar": "임오",
+      "sourceGanji": "무자(戊子)년 무오(戊午)월 임오(壬午)일",
+      "sourceMonth": "1948-06"
+    },
+    {
+      "solar": [
+        1948,
+        6,
+        27
+      ],
+      "lunar": [
+        1948,
+        5,
+        21,
+        false
+      ],
+      "dayPillar": "계미",
+      "sourceGanji": "무자(戊子)년 무오(戊午)월 계미(癸未)일",
+      "sourceMonth": "1948-06"
+    },
+    {
+      "solar": [
+        1948,
+        6,
+        28
+      ],
+      "lunar": [
+        1948,
+        5,
+        22,
+        false
+      ],
+      "dayPillar": "갑신",
+      "sourceGanji": "무자(戊子)년 무오(戊午)월 갑신(甲申)일",
+      "sourceMonth": "1948-06"
+    },
+    {
+      "solar": [
+        1948,
+        6,
+        29
+      ],
+      "lunar": [
+        1948,
+        5,
+        23,
+        false
+      ],
+      "dayPillar": "을유",
+      "sourceGanji": "무자(戊子)년 무오(戊午)월 을유(乙酉)일",
+      "sourceMonth": "1948-06"
+    },
+    {
+      "solar": [
+        1948,
+        6,
+        30
+      ],
+      "lunar": [
+        1948,
+        5,
+        24,
+        false
+      ],
+      "dayPillar": "병술",
+      "sourceGanji": "무자(戊子)년 무오(戊午)월 병술(丙戌)일",
+      "sourceMonth": "1948-06"
+    },
+    {
+      "solar": [
+        1954,
+        3,
+        1
+      ],
+      "lunar": [
+        1954,
+        1,
+        26,
+        false
+      ],
+      "dayPillar": "병진",
+      "sourceGanji": "갑오(甲午)년 병인(丙寅)월 병진(丙辰)일",
+      "sourceMonth": "1954-03"
+    },
+    {
+      "solar": [
+        1954,
+        3,
+        2
+      ],
+      "lunar": [
+        1954,
+        1,
+        27,
+        false
+      ],
+      "dayPillar": "정사",
+      "sourceGanji": "갑오(甲午)년 병인(丙寅)월 정사(丁巳)일",
+      "sourceMonth": "1954-03"
+    },
+    {
+      "solar": [
+        1954,
+        3,
+        3
+      ],
+      "lunar": [
+        1954,
+        1,
+        28,
+        false
+      ],
+      "dayPillar": "무오",
+      "sourceGanji": "갑오(甲午)년 병인(丙寅)월 무오(戊午)일",
+      "sourceMonth": "1954-03"
+    },
+    {
+      "solar": [
+        1954,
+        3,
+        4
+      ],
+      "lunar": [
+        1954,
+        1,
+        29,
+        false
+      ],
+      "dayPillar": "기미",
+      "sourceGanji": "갑오(甲午)년 병인(丙寅)월 기미(己未)일",
+      "sourceMonth": "1954-03"
+    },
+    {
+      "solar": [
+        1954,
+        3,
+        5
+      ],
+      "lunar": [
+        1954,
+        2,
+        1,
+        false
+      ],
+      "dayPillar": "경신",
+      "sourceGanji": "갑오(甲午)년 정묘(丁卯)월 경신(庚申)일",
+      "sourceMonth": "1954-03"
+    },
+    {
+      "solar": [
+        1954,
+        3,
+        6
+      ],
+      "lunar": [
+        1954,
+        2,
+        2,
+        false
+      ],
+      "dayPillar": "신유",
+      "sourceGanji": "갑오(甲午)년 정묘(丁卯)월 신유(辛酉)일",
+      "sourceMonth": "1954-03"
+    },
+    {
+      "solar": [
+        1954,
+        3,
+        7
+      ],
+      "lunar": [
+        1954,
+        2,
+        3,
+        false
+      ],
+      "dayPillar": "임술",
+      "sourceGanji": "갑오(甲午)년 정묘(丁卯)월 임술(壬戌)일",
+      "sourceMonth": "1954-03"
+    },
+    {
+      "solar": [
+        1954,
+        3,
+        8
+      ],
+      "lunar": [
+        1954,
+        2,
+        4,
+        false
+      ],
+      "dayPillar": "계해",
+      "sourceGanji": "갑오(甲午)년 정묘(丁卯)월 계해(癸亥)일",
+      "sourceMonth": "1954-03"
+    },
+    {
+      "solar": [
+        1954,
+        3,
+        9
+      ],
+      "lunar": [
+        1954,
+        2,
+        5,
+        false
+      ],
+      "dayPillar": "갑자",
+      "sourceGanji": "갑오(甲午)년 정묘(丁卯)월 갑자(甲子)일",
+      "sourceMonth": "1954-03"
+    },
+    {
+      "solar": [
+        1954,
+        3,
+        10
+      ],
+      "lunar": [
+        1954,
+        2,
+        6,
+        false
+      ],
+      "dayPillar": "을축",
+      "sourceGanji": "갑오(甲午)년 정묘(丁卯)월 을축(乙丑)일",
+      "sourceMonth": "1954-03"
+    },
+    {
+      "solar": [
+        1954,
+        3,
+        11
+      ],
+      "lunar": [
+        1954,
+        2,
+        7,
+        false
+      ],
+      "dayPillar": "병인",
+      "sourceGanji": "갑오(甲午)년 정묘(丁卯)월 병인(丙寅)일",
+      "sourceMonth": "1954-03"
+    },
+    {
+      "solar": [
+        1954,
+        3,
+        12
+      ],
+      "lunar": [
+        1954,
+        2,
+        8,
+        false
+      ],
+      "dayPillar": "정묘",
+      "sourceGanji": "갑오(甲午)년 정묘(丁卯)월 정묘(丁卯)일",
+      "sourceMonth": "1954-03"
+    },
+    {
+      "solar": [
+        1954,
+        3,
+        13
+      ],
+      "lunar": [
+        1954,
+        2,
+        9,
+        false
+      ],
+      "dayPillar": "무진",
+      "sourceGanji": "갑오(甲午)년 정묘(丁卯)월 무진(戊辰)일",
+      "sourceMonth": "1954-03"
+    },
+    {
+      "solar": [
+        1954,
+        3,
+        14
+      ],
+      "lunar": [
+        1954,
+        2,
+        10,
+        false
+      ],
+      "dayPillar": "기사",
+      "sourceGanji": "갑오(甲午)년 정묘(丁卯)월 기사(己巳)일",
+      "sourceMonth": "1954-03"
+    },
+    {
+      "solar": [
+        1954,
+        3,
+        15
+      ],
+      "lunar": [
+        1954,
+        2,
+        11,
+        false
+      ],
+      "dayPillar": "경오",
+      "sourceGanji": "갑오(甲午)년 정묘(丁卯)월 경오(庚午)일",
+      "sourceMonth": "1954-03"
+    },
+    {
+      "solar": [
+        1954,
+        3,
+        16
+      ],
+      "lunar": [
+        1954,
+        2,
+        12,
+        false
+      ],
+      "dayPillar": "신미",
+      "sourceGanji": "갑오(甲午)년 정묘(丁卯)월 신미(辛未)일",
+      "sourceMonth": "1954-03"
+    },
+    {
+      "solar": [
+        1954,
+        3,
+        17
+      ],
+      "lunar": [
+        1954,
+        2,
+        13,
+        false
+      ],
+      "dayPillar": "임신",
+      "sourceGanji": "갑오(甲午)년 정묘(丁卯)월 임신(壬申)일",
+      "sourceMonth": "1954-03"
+    },
+    {
+      "solar": [
+        1954,
+        3,
+        18
+      ],
+      "lunar": [
+        1954,
+        2,
+        14,
+        false
+      ],
+      "dayPillar": "계유",
+      "sourceGanji": "갑오(甲午)년 정묘(丁卯)월 계유(癸酉)일",
+      "sourceMonth": "1954-03"
+    },
+    {
+      "solar": [
+        1954,
+        3,
+        19
+      ],
+      "lunar": [
+        1954,
+        2,
+        15,
+        false
+      ],
+      "dayPillar": "갑술",
+      "sourceGanji": "갑오(甲午)년 정묘(丁卯)월 갑술(甲戌)일",
+      "sourceMonth": "1954-03"
+    },
+    {
+      "solar": [
+        1954,
+        3,
+        20
+      ],
+      "lunar": [
+        1954,
+        2,
+        16,
+        false
+      ],
+      "dayPillar": "을해",
+      "sourceGanji": "갑오(甲午)년 정묘(丁卯)월 을해(乙亥)일",
+      "sourceMonth": "1954-03"
+    },
+    {
+      "solar": [
+        1954,
+        3,
+        21
+      ],
+      "lunar": [
+        1954,
+        2,
+        17,
+        false
+      ],
+      "dayPillar": "병자",
+      "sourceGanji": "갑오(甲午)년 정묘(丁卯)월 병자(丙子)일",
+      "sourceMonth": "1954-03"
+    },
+    {
+      "solar": [
+        1954,
+        3,
+        22
+      ],
+      "lunar": [
+        1954,
+        2,
+        18,
+        false
+      ],
+      "dayPillar": "정축",
+      "sourceGanji": "갑오(甲午)년 정묘(丁卯)월 정축(丁丑)일",
+      "sourceMonth": "1954-03"
+    },
+    {
+      "solar": [
+        1954,
+        3,
+        23
+      ],
+      "lunar": [
+        1954,
+        2,
+        19,
+        false
+      ],
+      "dayPillar": "무인",
+      "sourceGanji": "갑오(甲午)년 정묘(丁卯)월 무인(戊寅)일",
+      "sourceMonth": "1954-03"
+    },
+    {
+      "solar": [
+        1954,
+        3,
+        24
+      ],
+      "lunar": [
+        1954,
+        2,
+        20,
+        false
+      ],
+      "dayPillar": "기묘",
+      "sourceGanji": "갑오(甲午)년 정묘(丁卯)월 기묘(己卯)일",
+      "sourceMonth": "1954-03"
+    },
+    {
+      "solar": [
+        1954,
+        3,
+        25
+      ],
+      "lunar": [
+        1954,
+        2,
+        21,
+        false
+      ],
+      "dayPillar": "경진",
+      "sourceGanji": "갑오(甲午)년 정묘(丁卯)월 경진(庚辰)일",
+      "sourceMonth": "1954-03"
+    },
+    {
+      "solar": [
+        1954,
+        3,
+        26
+      ],
+      "lunar": [
+        1954,
+        2,
+        22,
+        false
+      ],
+      "dayPillar": "신사",
+      "sourceGanji": "갑오(甲午)년 정묘(丁卯)월 신사(辛巳)일",
+      "sourceMonth": "1954-03"
+    },
+    {
+      "solar": [
+        1954,
+        3,
+        27
+      ],
+      "lunar": [
+        1954,
+        2,
+        23,
+        false
+      ],
+      "dayPillar": "임오",
+      "sourceGanji": "갑오(甲午)년 정묘(丁卯)월 임오(壬午)일",
+      "sourceMonth": "1954-03"
+    },
+    {
+      "solar": [
+        1954,
+        3,
+        28
+      ],
+      "lunar": [
+        1954,
+        2,
+        24,
+        false
+      ],
+      "dayPillar": "계미",
+      "sourceGanji": "갑오(甲午)년 정묘(丁卯)월 계미(癸未)일",
+      "sourceMonth": "1954-03"
+    },
+    {
+      "solar": [
+        1954,
+        3,
+        29
+      ],
+      "lunar": [
+        1954,
+        2,
+        25,
+        false
+      ],
+      "dayPillar": "갑신",
+      "sourceGanji": "갑오(甲午)년 정묘(丁卯)월 갑신(甲申)일",
+      "sourceMonth": "1954-03"
+    },
+    {
+      "solar": [
+        1954,
+        3,
+        30
+      ],
+      "lunar": [
+        1954,
+        2,
+        26,
+        false
+      ],
+      "dayPillar": "을유",
+      "sourceGanji": "갑오(甲午)년 정묘(丁卯)월 을유(乙酉)일",
+      "sourceMonth": "1954-03"
+    },
+    {
+      "solar": [
+        1954,
+        3,
+        31
+      ],
+      "lunar": [
+        1954,
+        2,
+        27,
+        false
+      ],
+      "dayPillar": "병술",
+      "sourceGanji": "갑오(甲午)년 정묘(丁卯)월 병술(丙戌)일",
+      "sourceMonth": "1954-03"
+    },
+    {
+      "solar": [
+        1954,
+        12,
+        1
+      ],
+      "lunar": [
+        1954,
+        11,
+        7,
+        false
+      ],
+      "dayPillar": "신묘",
+      "sourceGanji": "갑오(甲午)년 병자(丙子)월 신묘(辛卯)일",
+      "sourceMonth": "1954-12"
+    },
+    {
+      "solar": [
+        1954,
+        12,
+        2
+      ],
+      "lunar": [
+        1954,
+        11,
+        8,
+        false
+      ],
+      "dayPillar": "임진",
+      "sourceGanji": "갑오(甲午)년 병자(丙子)월 임진(壬辰)일",
+      "sourceMonth": "1954-12"
+    },
+    {
+      "solar": [
+        1954,
+        12,
+        3
+      ],
+      "lunar": [
+        1954,
+        11,
+        9,
+        false
+      ],
+      "dayPillar": "계사",
+      "sourceGanji": "갑오(甲午)년 병자(丙子)월 계사(癸巳)일",
+      "sourceMonth": "1954-12"
+    },
+    {
+      "solar": [
+        1954,
+        12,
+        4
+      ],
+      "lunar": [
+        1954,
+        11,
+        10,
+        false
+      ],
+      "dayPillar": "갑오",
+      "sourceGanji": "갑오(甲午)년 병자(丙子)월 갑오(甲午)일",
+      "sourceMonth": "1954-12"
+    },
+    {
+      "solar": [
+        1954,
+        12,
+        5
+      ],
+      "lunar": [
+        1954,
+        11,
+        11,
+        false
+      ],
+      "dayPillar": "을미",
+      "sourceGanji": "갑오(甲午)년 병자(丙子)월 을미(乙未)일",
+      "sourceMonth": "1954-12"
+    },
+    {
+      "solar": [
+        1954,
+        12,
+        6
+      ],
+      "lunar": [
+        1954,
+        11,
+        12,
+        false
+      ],
+      "dayPillar": "병신",
+      "sourceGanji": "갑오(甲午)년 병자(丙子)월 병신(丙申)일",
+      "sourceMonth": "1954-12"
+    },
+    {
+      "solar": [
+        1954,
+        12,
+        7
+      ],
+      "lunar": [
+        1954,
+        11,
+        13,
+        false
+      ],
+      "dayPillar": "정유",
+      "sourceGanji": "갑오(甲午)년 병자(丙子)월 정유(丁酉)일",
+      "sourceMonth": "1954-12"
+    },
+    {
+      "solar": [
+        1954,
+        12,
+        8
+      ],
+      "lunar": [
+        1954,
+        11,
+        14,
+        false
+      ],
+      "dayPillar": "무술",
+      "sourceGanji": "갑오(甲午)년 병자(丙子)월 무술(戊戌)일",
+      "sourceMonth": "1954-12"
+    },
+    {
+      "solar": [
+        1954,
+        12,
+        9
+      ],
+      "lunar": [
+        1954,
+        11,
+        15,
+        false
+      ],
+      "dayPillar": "기해",
+      "sourceGanji": "갑오(甲午)년 병자(丙子)월 기해(己亥)일",
+      "sourceMonth": "1954-12"
+    },
+    {
+      "solar": [
+        1954,
+        12,
+        10
+      ],
+      "lunar": [
+        1954,
+        11,
+        16,
+        false
+      ],
+      "dayPillar": "경자",
+      "sourceGanji": "갑오(甲午)년 병자(丙子)월 경자(庚子)일",
+      "sourceMonth": "1954-12"
+    },
+    {
+      "solar": [
+        1954,
+        12,
+        11
+      ],
+      "lunar": [
+        1954,
+        11,
+        17,
+        false
+      ],
+      "dayPillar": "신축",
+      "sourceGanji": "갑오(甲午)년 병자(丙子)월 신축(辛丑)일",
+      "sourceMonth": "1954-12"
+    },
+    {
+      "solar": [
+        1954,
+        12,
+        12
+      ],
+      "lunar": [
+        1954,
+        11,
+        18,
+        false
+      ],
+      "dayPillar": "임인",
+      "sourceGanji": "갑오(甲午)년 병자(丙子)월 임인(壬寅)일",
+      "sourceMonth": "1954-12"
+    },
+    {
+      "solar": [
+        1954,
+        12,
+        13
+      ],
+      "lunar": [
+        1954,
+        11,
+        19,
+        false
+      ],
+      "dayPillar": "계묘",
+      "sourceGanji": "갑오(甲午)년 병자(丙子)월 계묘(癸卯)일",
+      "sourceMonth": "1954-12"
+    },
+    {
+      "solar": [
+        1954,
+        12,
+        14
+      ],
+      "lunar": [
+        1954,
+        11,
+        20,
+        false
+      ],
+      "dayPillar": "갑진",
+      "sourceGanji": "갑오(甲午)년 병자(丙子)월 갑진(甲辰)일",
+      "sourceMonth": "1954-12"
+    },
+    {
+      "solar": [
+        1954,
+        12,
+        15
+      ],
+      "lunar": [
+        1954,
+        11,
+        21,
+        false
+      ],
+      "dayPillar": "을사",
+      "sourceGanji": "갑오(甲午)년 병자(丙子)월 을사(乙巳)일",
+      "sourceMonth": "1954-12"
+    },
+    {
+      "solar": [
+        1954,
+        12,
+        16
+      ],
+      "lunar": [
+        1954,
+        11,
+        22,
+        false
+      ],
+      "dayPillar": "병오",
+      "sourceGanji": "갑오(甲午)년 병자(丙子)월 병오(丙午)일",
+      "sourceMonth": "1954-12"
+    },
+    {
+      "solar": [
+        1954,
+        12,
+        17
+      ],
+      "lunar": [
+        1954,
+        11,
+        23,
+        false
+      ],
+      "dayPillar": "정미",
+      "sourceGanji": "갑오(甲午)년 병자(丙子)월 정미(丁未)일",
+      "sourceMonth": "1954-12"
+    },
+    {
+      "solar": [
+        1954,
+        12,
+        18
+      ],
+      "lunar": [
+        1954,
+        11,
+        24,
+        false
+      ],
+      "dayPillar": "무신",
+      "sourceGanji": "갑오(甲午)년 병자(丙子)월 무신(戊申)일",
+      "sourceMonth": "1954-12"
+    },
+    {
+      "solar": [
+        1954,
+        12,
+        19
+      ],
+      "lunar": [
+        1954,
+        11,
+        25,
+        false
+      ],
+      "dayPillar": "기유",
+      "sourceGanji": "갑오(甲午)년 병자(丙子)월 기유(己酉)일",
+      "sourceMonth": "1954-12"
+    },
+    {
+      "solar": [
+        1954,
+        12,
+        20
+      ],
+      "lunar": [
+        1954,
+        11,
+        26,
+        false
+      ],
+      "dayPillar": "경술",
+      "sourceGanji": "갑오(甲午)년 병자(丙子)월 경술(庚戌)일",
+      "sourceMonth": "1954-12"
+    },
+    {
+      "solar": [
+        1954,
+        12,
+        21
+      ],
+      "lunar": [
+        1954,
+        11,
+        27,
+        false
+      ],
+      "dayPillar": "신해",
+      "sourceGanji": "갑오(甲午)년 병자(丙子)월 신해(辛亥)일",
+      "sourceMonth": "1954-12"
+    },
+    {
+      "solar": [
+        1954,
+        12,
+        22
+      ],
+      "lunar": [
+        1954,
+        11,
+        28,
+        false
+      ],
+      "dayPillar": "임자",
+      "sourceGanji": "갑오(甲午)년 병자(丙子)월 임자(壬子)일",
+      "sourceMonth": "1954-12"
+    },
+    {
+      "solar": [
+        1954,
+        12,
+        23
+      ],
+      "lunar": [
+        1954,
+        11,
+        29,
+        false
+      ],
+      "dayPillar": "계축",
+      "sourceGanji": "갑오(甲午)년 병자(丙子)월 계축(癸丑)일",
+      "sourceMonth": "1954-12"
+    },
+    {
+      "solar": [
+        1954,
+        12,
+        24
+      ],
+      "lunar": [
+        1954,
+        11,
+        30,
+        false
+      ],
+      "dayPillar": "갑인",
+      "sourceGanji": "갑오(甲午)년 병자(丙子)월 갑인(甲寅)일",
+      "sourceMonth": "1954-12"
+    },
+    {
+      "solar": [
+        1954,
+        12,
+        25
+      ],
+      "lunar": [
+        1954,
+        12,
+        1,
+        false
+      ],
+      "dayPillar": "을묘",
+      "sourceGanji": "갑오(甲午)년 정축(丁丑)월 을묘(乙卯)일",
+      "sourceMonth": "1954-12"
+    },
+    {
+      "solar": [
+        1954,
+        12,
+        26
+      ],
+      "lunar": [
+        1954,
+        12,
+        2,
+        false
+      ],
+      "dayPillar": "병진",
+      "sourceGanji": "갑오(甲午)년 정축(丁丑)월 병진(丙辰)일",
+      "sourceMonth": "1954-12"
+    },
+    {
+      "solar": [
+        1954,
+        12,
+        27
+      ],
+      "lunar": [
+        1954,
+        12,
+        3,
+        false
+      ],
+      "dayPillar": "정사",
+      "sourceGanji": "갑오(甲午)년 정축(丁丑)월 정사(丁巳)일",
+      "sourceMonth": "1954-12"
+    },
+    {
+      "solar": [
+        1954,
+        12,
+        28
+      ],
+      "lunar": [
+        1954,
+        12,
+        4,
+        false
+      ],
+      "dayPillar": "무오",
+      "sourceGanji": "갑오(甲午)년 정축(丁丑)월 무오(戊午)일",
+      "sourceMonth": "1954-12"
+    },
+    {
+      "solar": [
+        1954,
+        12,
+        29
+      ],
+      "lunar": [
+        1954,
+        12,
+        5,
+        false
+      ],
+      "dayPillar": "기미",
+      "sourceGanji": "갑오(甲午)년 정축(丁丑)월 기미(己未)일",
+      "sourceMonth": "1954-12"
+    },
+    {
+      "solar": [
+        1954,
+        12,
+        30
+      ],
+      "lunar": [
+        1954,
+        12,
+        6,
+        false
+      ],
+      "dayPillar": "경신",
+      "sourceGanji": "갑오(甲午)년 정축(丁丑)월 경신(庚申)일",
+      "sourceMonth": "1954-12"
+    },
+    {
+      "solar": [
+        1954,
+        12,
+        31
+      ],
+      "lunar": [
+        1954,
+        12,
+        7,
+        false
+      ],
+      "dayPillar": "신유",
+      "sourceGanji": "갑오(甲午)년 정축(丁丑)월 신유(辛酉)일",
+      "sourceMonth": "1954-12"
+    },
+    {
+      "solar": [
+        1961,
+        8,
+        1
+      ],
+      "lunar": [
+        1961,
+        6,
+        20,
+        false
+      ],
+      "dayPillar": "병인",
+      "sourceGanji": "신축(辛丑)년 을미(乙未)월 병인(丙寅)일",
+      "sourceMonth": "1961-08"
+    },
+    {
+      "solar": [
+        1961,
+        8,
+        2
+      ],
+      "lunar": [
+        1961,
+        6,
+        21,
+        false
+      ],
+      "dayPillar": "정묘",
+      "sourceGanji": "신축(辛丑)년 을미(乙未)월 정묘(丁卯)일",
+      "sourceMonth": "1961-08"
+    },
+    {
+      "solar": [
+        1961,
+        8,
+        3
+      ],
+      "lunar": [
+        1961,
+        6,
+        22,
+        false
+      ],
+      "dayPillar": "무진",
+      "sourceGanji": "신축(辛丑)년 을미(乙未)월 무진(戊辰)일",
+      "sourceMonth": "1961-08"
+    },
+    {
+      "solar": [
+        1961,
+        8,
+        4
+      ],
+      "lunar": [
+        1961,
+        6,
+        23,
+        false
+      ],
+      "dayPillar": "기사",
+      "sourceGanji": "신축(辛丑)년 을미(乙未)월 기사(己巳)일",
+      "sourceMonth": "1961-08"
+    },
+    {
+      "solar": [
+        1961,
+        8,
+        5
+      ],
+      "lunar": [
+        1961,
+        6,
+        24,
+        false
+      ],
+      "dayPillar": "경오",
+      "sourceGanji": "신축(辛丑)년 을미(乙未)월 경오(庚午)일",
+      "sourceMonth": "1961-08"
+    },
+    {
+      "solar": [
+        1961,
+        8,
+        6
+      ],
+      "lunar": [
+        1961,
+        6,
+        25,
+        false
+      ],
+      "dayPillar": "신미",
+      "sourceGanji": "신축(辛丑)년 을미(乙未)월 신미(辛未)일",
+      "sourceMonth": "1961-08"
+    },
+    {
+      "solar": [
+        1961,
+        8,
+        7
+      ],
+      "lunar": [
+        1961,
+        6,
+        26,
+        false
+      ],
+      "dayPillar": "임신",
+      "sourceGanji": "신축(辛丑)년 을미(乙未)월 임신(壬申)일",
+      "sourceMonth": "1961-08"
+    },
+    {
+      "solar": [
+        1961,
+        8,
+        8
+      ],
+      "lunar": [
+        1961,
+        6,
+        27,
+        false
+      ],
+      "dayPillar": "계유",
+      "sourceGanji": "신축(辛丑)년 을미(乙未)월 계유(癸酉)일",
+      "sourceMonth": "1961-08"
+    },
+    {
+      "solar": [
+        1961,
+        8,
+        9
+      ],
+      "lunar": [
+        1961,
+        6,
+        28,
+        false
+      ],
+      "dayPillar": "갑술",
+      "sourceGanji": "신축(辛丑)년 을미(乙未)월 갑술(甲戌)일",
+      "sourceMonth": "1961-08"
+    },
+    {
+      "solar": [
+        1961,
+        8,
+        10
+      ],
+      "lunar": [
+        1961,
+        6,
+        29,
+        false
+      ],
+      "dayPillar": "을해",
+      "sourceGanji": "신축(辛丑)년 을미(乙未)월 을해(乙亥)일",
+      "sourceMonth": "1961-08"
+    },
+    {
+      "solar": [
+        1961,
+        8,
+        11
+      ],
+      "lunar": [
+        1961,
+        7,
+        1,
+        false
+      ],
+      "dayPillar": "병자",
+      "sourceGanji": "신축(辛丑)년 병신(丙申)월 병자(丙子)일",
+      "sourceMonth": "1961-08"
+    },
+    {
+      "solar": [
+        1961,
+        8,
+        12
+      ],
+      "lunar": [
+        1961,
+        7,
+        2,
+        false
+      ],
+      "dayPillar": "정축",
+      "sourceGanji": "신축(辛丑)년 병신(丙申)월 정축(丁丑)일",
+      "sourceMonth": "1961-08"
+    },
+    {
+      "solar": [
+        1961,
+        8,
+        13
+      ],
+      "lunar": [
+        1961,
+        7,
+        3,
+        false
+      ],
+      "dayPillar": "무인",
+      "sourceGanji": "신축(辛丑)년 병신(丙申)월 무인(戊寅)일",
+      "sourceMonth": "1961-08"
+    },
+    {
+      "solar": [
+        1961,
+        8,
+        14
+      ],
+      "lunar": [
+        1961,
+        7,
+        4,
+        false
+      ],
+      "dayPillar": "기묘",
+      "sourceGanji": "신축(辛丑)년 병신(丙申)월 기묘(己卯)일",
+      "sourceMonth": "1961-08"
+    },
+    {
+      "solar": [
+        1961,
+        8,
+        15
+      ],
+      "lunar": [
+        1961,
+        7,
+        5,
+        false
+      ],
+      "dayPillar": "경진",
+      "sourceGanji": "신축(辛丑)년 병신(丙申)월 경진(庚辰)일",
+      "sourceMonth": "1961-08"
+    },
+    {
+      "solar": [
+        1961,
+        8,
+        16
+      ],
+      "lunar": [
+        1961,
+        7,
+        6,
+        false
+      ],
+      "dayPillar": "신사",
+      "sourceGanji": "신축(辛丑)년 병신(丙申)월 신사(辛巳)일",
+      "sourceMonth": "1961-08"
+    },
+    {
+      "solar": [
+        1961,
+        8,
+        17
+      ],
+      "lunar": [
+        1961,
+        7,
+        7,
+        false
+      ],
+      "dayPillar": "임오",
+      "sourceGanji": "신축(辛丑)년 병신(丙申)월 임오(壬午)일",
+      "sourceMonth": "1961-08"
+    },
+    {
+      "solar": [
+        1961,
+        8,
+        18
+      ],
+      "lunar": [
+        1961,
+        7,
+        8,
+        false
+      ],
+      "dayPillar": "계미",
+      "sourceGanji": "신축(辛丑)년 병신(丙申)월 계미(癸未)일",
+      "sourceMonth": "1961-08"
+    },
+    {
+      "solar": [
+        1961,
+        8,
+        19
+      ],
+      "lunar": [
+        1961,
+        7,
+        9,
+        false
+      ],
+      "dayPillar": "갑신",
+      "sourceGanji": "신축(辛丑)년 병신(丙申)월 갑신(甲申)일",
+      "sourceMonth": "1961-08"
+    },
+    {
+      "solar": [
+        1961,
+        8,
+        20
+      ],
+      "lunar": [
+        1961,
+        7,
+        10,
+        false
+      ],
+      "dayPillar": "을유",
+      "sourceGanji": "신축(辛丑)년 병신(丙申)월 을유(乙酉)일",
+      "sourceMonth": "1961-08"
+    },
+    {
+      "solar": [
+        1961,
+        8,
+        21
+      ],
+      "lunar": [
+        1961,
+        7,
+        11,
+        false
+      ],
+      "dayPillar": "병술",
+      "sourceGanji": "신축(辛丑)년 병신(丙申)월 병술(丙戌)일",
+      "sourceMonth": "1961-08"
+    },
+    {
+      "solar": [
+        1961,
+        8,
+        22
+      ],
+      "lunar": [
+        1961,
+        7,
+        12,
+        false
+      ],
+      "dayPillar": "정해",
+      "sourceGanji": "신축(辛丑)년 병신(丙申)월 정해(丁亥)일",
+      "sourceMonth": "1961-08"
+    },
+    {
+      "solar": [
+        1961,
+        8,
+        23
+      ],
+      "lunar": [
+        1961,
+        7,
+        13,
+        false
+      ],
+      "dayPillar": "무자",
+      "sourceGanji": "신축(辛丑)년 병신(丙申)월 무자(戊子)일",
+      "sourceMonth": "1961-08"
+    },
+    {
+      "solar": [
+        1961,
+        8,
+        24
+      ],
+      "lunar": [
+        1961,
+        7,
+        14,
+        false
+      ],
+      "dayPillar": "기축",
+      "sourceGanji": "신축(辛丑)년 병신(丙申)월 기축(己丑)일",
+      "sourceMonth": "1961-08"
+    },
+    {
+      "solar": [
+        1961,
+        8,
+        25
+      ],
+      "lunar": [
+        1961,
+        7,
+        15,
+        false
+      ],
+      "dayPillar": "경인",
+      "sourceGanji": "신축(辛丑)년 병신(丙申)월 경인(庚寅)일",
+      "sourceMonth": "1961-08"
+    },
+    {
+      "solar": [
+        1961,
+        8,
+        26
+      ],
+      "lunar": [
+        1961,
+        7,
+        16,
+        false
+      ],
+      "dayPillar": "신묘",
+      "sourceGanji": "신축(辛丑)년 병신(丙申)월 신묘(辛卯)일",
+      "sourceMonth": "1961-08"
+    },
+    {
+      "solar": [
+        1961,
+        8,
+        27
+      ],
+      "lunar": [
+        1961,
+        7,
+        17,
+        false
+      ],
+      "dayPillar": "임진",
+      "sourceGanji": "신축(辛丑)년 병신(丙申)월 임진(壬辰)일",
+      "sourceMonth": "1961-08"
+    },
+    {
+      "solar": [
+        1961,
+        8,
+        28
+      ],
+      "lunar": [
+        1961,
+        7,
+        18,
+        false
+      ],
+      "dayPillar": "계사",
+      "sourceGanji": "신축(辛丑)년 병신(丙申)월 계사(癸巳)일",
+      "sourceMonth": "1961-08"
+    },
+    {
+      "solar": [
+        1961,
+        8,
+        29
+      ],
+      "lunar": [
+        1961,
+        7,
+        19,
+        false
+      ],
+      "dayPillar": "갑오",
+      "sourceGanji": "신축(辛丑)년 병신(丙申)월 갑오(甲午)일",
+      "sourceMonth": "1961-08"
+    },
+    {
+      "solar": [
+        1961,
+        8,
+        30
+      ],
+      "lunar": [
+        1961,
+        7,
+        20,
+        false
+      ],
+      "dayPillar": "을미",
+      "sourceGanji": "신축(辛丑)년 병신(丙申)월 을미(乙未)일",
+      "sourceMonth": "1961-08"
+    },
+    {
+      "solar": [
+        1961,
+        8,
+        31
+      ],
+      "lunar": [
+        1961,
+        7,
+        21,
+        false
+      ],
+      "dayPillar": "병신",
+      "sourceGanji": "신축(辛丑)년 병신(丙申)월 병신(丙申)일",
+      "sourceMonth": "1961-08"
+    },
+    {
+      "solar": [
+        1972,
+        1,
+        1
+      ],
+      "lunar": [
+        1971,
+        11,
+        15,
+        false
+      ],
+      "dayPillar": "신묘",
+      "sourceGanji": "신해(辛亥)년 경자(庚子)월 신묘(辛卯)일",
+      "sourceMonth": "1972-01"
+    },
+    {
+      "solar": [
+        1972,
+        1,
+        2
+      ],
+      "lunar": [
+        1971,
+        11,
+        16,
+        false
+      ],
+      "dayPillar": "임진",
+      "sourceGanji": "신해(辛亥)년 경자(庚子)월 임진(壬辰)일",
+      "sourceMonth": "1972-01"
+    },
+    {
+      "solar": [
+        1972,
+        1,
+        3
+      ],
+      "lunar": [
+        1971,
+        11,
+        17,
+        false
+      ],
+      "dayPillar": "계사",
+      "sourceGanji": "신해(辛亥)년 경자(庚子)월 계사(癸巳)일",
+      "sourceMonth": "1972-01"
+    },
+    {
+      "solar": [
+        1972,
+        1,
+        4
+      ],
+      "lunar": [
+        1971,
+        11,
+        18,
+        false
+      ],
+      "dayPillar": "갑오",
+      "sourceGanji": "신해(辛亥)년 경자(庚子)월 갑오(甲午)일",
+      "sourceMonth": "1972-01"
+    },
+    {
+      "solar": [
+        1972,
+        1,
+        5
+      ],
+      "lunar": [
+        1971,
+        11,
+        19,
+        false
+      ],
+      "dayPillar": "을미",
+      "sourceGanji": "신해(辛亥)년 경자(庚子)월 을미(乙未)일",
+      "sourceMonth": "1972-01"
+    },
+    {
+      "solar": [
+        1972,
+        1,
+        6
+      ],
+      "lunar": [
+        1971,
+        11,
+        20,
+        false
+      ],
+      "dayPillar": "병신",
+      "sourceGanji": "신해(辛亥)년 경자(庚子)월 병신(丙申)일",
+      "sourceMonth": "1972-01"
+    },
+    {
+      "solar": [
+        1972,
+        1,
+        7
+      ],
+      "lunar": [
+        1971,
+        11,
+        21,
+        false
+      ],
+      "dayPillar": "정유",
+      "sourceGanji": "신해(辛亥)년 경자(庚子)월 정유(丁酉)일",
+      "sourceMonth": "1972-01"
+    },
+    {
+      "solar": [
+        1972,
+        1,
+        8
+      ],
+      "lunar": [
+        1971,
+        11,
+        22,
+        false
+      ],
+      "dayPillar": "무술",
+      "sourceGanji": "신해(辛亥)년 경자(庚子)월 무술(戊戌)일",
+      "sourceMonth": "1972-01"
+    },
+    {
+      "solar": [
+        1972,
+        1,
+        9
+      ],
+      "lunar": [
+        1971,
+        11,
+        23,
+        false
+      ],
+      "dayPillar": "기해",
+      "sourceGanji": "신해(辛亥)년 경자(庚子)월 기해(己亥)일",
+      "sourceMonth": "1972-01"
+    },
+    {
+      "solar": [
+        1972,
+        1,
+        10
+      ],
+      "lunar": [
+        1971,
+        11,
+        24,
+        false
+      ],
+      "dayPillar": "경자",
+      "sourceGanji": "신해(辛亥)년 경자(庚子)월 경자(庚子)일",
+      "sourceMonth": "1972-01"
+    },
+    {
+      "solar": [
+        1972,
+        1,
+        11
+      ],
+      "lunar": [
+        1971,
+        11,
+        25,
+        false
+      ],
+      "dayPillar": "신축",
+      "sourceGanji": "신해(辛亥)년 경자(庚子)월 신축(辛丑)일",
+      "sourceMonth": "1972-01"
+    },
+    {
+      "solar": [
+        1972,
+        1,
+        12
+      ],
+      "lunar": [
+        1971,
+        11,
+        26,
+        false
+      ],
+      "dayPillar": "임인",
+      "sourceGanji": "신해(辛亥)년 경자(庚子)월 임인(壬寅)일",
+      "sourceMonth": "1972-01"
+    },
+    {
+      "solar": [
+        1972,
+        1,
+        13
+      ],
+      "lunar": [
+        1971,
+        11,
+        27,
+        false
+      ],
+      "dayPillar": "계묘",
+      "sourceGanji": "신해(辛亥)년 경자(庚子)월 계묘(癸卯)일",
+      "sourceMonth": "1972-01"
+    },
+    {
+      "solar": [
+        1972,
+        1,
+        14
+      ],
+      "lunar": [
+        1971,
+        11,
+        28,
+        false
+      ],
+      "dayPillar": "갑진",
+      "sourceGanji": "신해(辛亥)년 경자(庚子)월 갑진(甲辰)일",
+      "sourceMonth": "1972-01"
+    },
+    {
+      "solar": [
+        1972,
+        1,
+        15
+      ],
+      "lunar": [
+        1971,
+        11,
+        29,
+        false
+      ],
+      "dayPillar": "을사",
+      "sourceGanji": "신해(辛亥)년 경자(庚子)월 을사(乙巳)일",
+      "sourceMonth": "1972-01"
+    },
+    {
+      "solar": [
+        1972,
+        1,
+        16
+      ],
+      "lunar": [
+        1971,
+        12,
+        1,
+        false
+      ],
+      "dayPillar": "병오",
+      "sourceGanji": "신해(辛亥)년 신축(辛丑)월 병오(丙午)일",
+      "sourceMonth": "1972-01"
+    },
+    {
+      "solar": [
+        1972,
+        1,
+        17
+      ],
+      "lunar": [
+        1971,
+        12,
+        2,
+        false
+      ],
+      "dayPillar": "정미",
+      "sourceGanji": "신해(辛亥)년 신축(辛丑)월 정미(丁未)일",
+      "sourceMonth": "1972-01"
+    },
+    {
+      "solar": [
+        1972,
+        1,
+        18
+      ],
+      "lunar": [
+        1971,
+        12,
+        3,
+        false
+      ],
+      "dayPillar": "무신",
+      "sourceGanji": "신해(辛亥)년 신축(辛丑)월 무신(戊申)일",
+      "sourceMonth": "1972-01"
+    },
+    {
+      "solar": [
+        1972,
+        1,
+        19
+      ],
+      "lunar": [
+        1971,
+        12,
+        4,
+        false
+      ],
+      "dayPillar": "기유",
+      "sourceGanji": "신해(辛亥)년 신축(辛丑)월 기유(己酉)일",
+      "sourceMonth": "1972-01"
+    },
+    {
+      "solar": [
+        1972,
+        1,
+        20
+      ],
+      "lunar": [
+        1971,
+        12,
+        5,
+        false
+      ],
+      "dayPillar": "경술",
+      "sourceGanji": "신해(辛亥)년 신축(辛丑)월 경술(庚戌)일",
+      "sourceMonth": "1972-01"
+    },
+    {
+      "solar": [
+        1972,
+        1,
+        21
+      ],
+      "lunar": [
+        1971,
+        12,
+        6,
+        false
+      ],
+      "dayPillar": "신해",
+      "sourceGanji": "신해(辛亥)년 신축(辛丑)월 신해(辛亥)일",
+      "sourceMonth": "1972-01"
+    },
+    {
+      "solar": [
+        1972,
+        1,
+        22
+      ],
+      "lunar": [
+        1971,
+        12,
+        7,
+        false
+      ],
+      "dayPillar": "임자",
+      "sourceGanji": "신해(辛亥)년 신축(辛丑)월 임자(壬子)일",
+      "sourceMonth": "1972-01"
+    },
+    {
+      "solar": [
+        1972,
+        1,
+        23
+      ],
+      "lunar": [
+        1971,
+        12,
+        8,
+        false
+      ],
+      "dayPillar": "계축",
+      "sourceGanji": "신해(辛亥)년 신축(辛丑)월 계축(癸丑)일",
+      "sourceMonth": "1972-01"
+    },
+    {
+      "solar": [
+        1972,
+        1,
+        24
+      ],
+      "lunar": [
+        1971,
+        12,
+        9,
+        false
+      ],
+      "dayPillar": "갑인",
+      "sourceGanji": "신해(辛亥)년 신축(辛丑)월 갑인(甲寅)일",
+      "sourceMonth": "1972-01"
+    },
+    {
+      "solar": [
+        1972,
+        1,
+        25
+      ],
+      "lunar": [
+        1971,
+        12,
+        10,
+        false
+      ],
+      "dayPillar": "을묘",
+      "sourceGanji": "신해(辛亥)년 신축(辛丑)월 을묘(乙卯)일",
+      "sourceMonth": "1972-01"
+    },
+    {
+      "solar": [
+        1972,
+        1,
+        26
+      ],
+      "lunar": [
+        1971,
+        12,
+        11,
+        false
+      ],
+      "dayPillar": "병진",
+      "sourceGanji": "신해(辛亥)년 신축(辛丑)월 병진(丙辰)일",
+      "sourceMonth": "1972-01"
+    },
+    {
+      "solar": [
+        1972,
+        1,
+        27
+      ],
+      "lunar": [
+        1971,
+        12,
+        12,
+        false
+      ],
+      "dayPillar": "정사",
+      "sourceGanji": "신해(辛亥)년 신축(辛丑)월 정사(丁巳)일",
+      "sourceMonth": "1972-01"
+    },
+    {
+      "solar": [
+        1972,
+        1,
+        28
+      ],
+      "lunar": [
+        1971,
+        12,
+        13,
+        false
+      ],
+      "dayPillar": "무오",
+      "sourceGanji": "신해(辛亥)년 신축(辛丑)월 무오(戊午)일",
+      "sourceMonth": "1972-01"
+    },
+    {
+      "solar": [
+        1972,
+        1,
+        29
+      ],
+      "lunar": [
+        1971,
+        12,
+        14,
+        false
+      ],
+      "dayPillar": "기미",
+      "sourceGanji": "신해(辛亥)년 신축(辛丑)월 기미(己未)일",
+      "sourceMonth": "1972-01"
+    },
+    {
+      "solar": [
+        1972,
+        1,
+        30
+      ],
+      "lunar": [
+        1971,
+        12,
+        15,
+        false
+      ],
+      "dayPillar": "경신",
+      "sourceGanji": "신해(辛亥)년 신축(辛丑)월 경신(庚申)일",
+      "sourceMonth": "1972-01"
+    },
+    {
+      "solar": [
+        1972,
+        1,
+        31
+      ],
+      "lunar": [
+        1971,
+        12,
+        16,
+        false
+      ],
+      "dayPillar": "신유",
+      "sourceGanji": "신해(辛亥)년 신축(辛丑)월 신유(辛酉)일",
+      "sourceMonth": "1972-01"
+    },
+    {
+      "solar": [
+        1972,
+        7,
+        1
+      ],
+      "lunar": [
+        1972,
+        5,
+        21,
+        false
+      ],
+      "dayPillar": "계사",
+      "sourceGanji": "임자(壬子)년 병오(丙午)월 계사(癸巳)일",
+      "sourceMonth": "1972-07"
+    },
+    {
+      "solar": [
+        1972,
+        7,
+        2
+      ],
+      "lunar": [
+        1972,
+        5,
+        22,
+        false
+      ],
+      "dayPillar": "갑오",
+      "sourceGanji": "임자(壬子)년 병오(丙午)월 갑오(甲午)일",
+      "sourceMonth": "1972-07"
+    },
+    {
+      "solar": [
+        1972,
+        7,
+        3
+      ],
+      "lunar": [
+        1972,
+        5,
+        23,
+        false
+      ],
+      "dayPillar": "을미",
+      "sourceGanji": "임자(壬子)년 병오(丙午)월 을미(乙未)일",
+      "sourceMonth": "1972-07"
+    },
+    {
+      "solar": [
+        1972,
+        7,
+        4
+      ],
+      "lunar": [
+        1972,
+        5,
+        24,
+        false
+      ],
+      "dayPillar": "병신",
+      "sourceGanji": "임자(壬子)년 병오(丙午)월 병신(丙申)일",
+      "sourceMonth": "1972-07"
+    },
+    {
+      "solar": [
+        1972,
+        7,
+        5
+      ],
+      "lunar": [
+        1972,
+        5,
+        25,
+        false
+      ],
+      "dayPillar": "정유",
+      "sourceGanji": "임자(壬子)년 병오(丙午)월 정유(丁酉)일",
+      "sourceMonth": "1972-07"
+    },
+    {
+      "solar": [
+        1972,
+        7,
+        6
+      ],
+      "lunar": [
+        1972,
+        5,
+        26,
+        false
+      ],
+      "dayPillar": "무술",
+      "sourceGanji": "임자(壬子)년 병오(丙午)월 무술(戊戌)일",
+      "sourceMonth": "1972-07"
+    },
+    {
+      "solar": [
+        1972,
+        7,
+        7
+      ],
+      "lunar": [
+        1972,
+        5,
+        27,
+        false
+      ],
+      "dayPillar": "기해",
+      "sourceGanji": "임자(壬子)년 병오(丙午)월 기해(己亥)일",
+      "sourceMonth": "1972-07"
+    },
+    {
+      "solar": [
+        1972,
+        7,
+        8
+      ],
+      "lunar": [
+        1972,
+        5,
+        28,
+        false
+      ],
+      "dayPillar": "경자",
+      "sourceGanji": "임자(壬子)년 병오(丙午)월 경자(庚子)일",
+      "sourceMonth": "1972-07"
+    },
+    {
+      "solar": [
+        1972,
+        7,
+        9
+      ],
+      "lunar": [
+        1972,
+        5,
+        29,
+        false
+      ],
+      "dayPillar": "신축",
+      "sourceGanji": "임자(壬子)년 병오(丙午)월 신축(辛丑)일",
+      "sourceMonth": "1972-07"
+    },
+    {
+      "solar": [
+        1972,
+        7,
+        10
+      ],
+      "lunar": [
+        1972,
+        5,
+        30,
+        false
+      ],
+      "dayPillar": "임인",
+      "sourceGanji": "임자(壬子)년 병오(丙午)월 임인(壬寅)일",
+      "sourceMonth": "1972-07"
+    },
+    {
+      "solar": [
+        1972,
+        7,
+        11
+      ],
+      "lunar": [
+        1972,
+        6,
+        1,
+        false
+      ],
+      "dayPillar": "계묘",
+      "sourceGanji": "임자(壬子)년 정미(丁未)월 계묘(癸卯)일",
+      "sourceMonth": "1972-07"
+    },
+    {
+      "solar": [
+        1972,
+        7,
+        12
+      ],
+      "lunar": [
+        1972,
+        6,
+        2,
+        false
+      ],
+      "dayPillar": "갑진",
+      "sourceGanji": "임자(壬子)년 정미(丁未)월 갑진(甲辰)일",
+      "sourceMonth": "1972-07"
+    },
+    {
+      "solar": [
+        1972,
+        7,
+        13
+      ],
+      "lunar": [
+        1972,
+        6,
+        3,
+        false
+      ],
+      "dayPillar": "을사",
+      "sourceGanji": "임자(壬子)년 정미(丁未)월 을사(乙巳)일",
+      "sourceMonth": "1972-07"
+    },
+    {
+      "solar": [
+        1972,
+        7,
+        14
+      ],
+      "lunar": [
+        1972,
+        6,
+        4,
+        false
+      ],
+      "dayPillar": "병오",
+      "sourceGanji": "임자(壬子)년 정미(丁未)월 병오(丙午)일",
+      "sourceMonth": "1972-07"
+    },
+    {
+      "solar": [
+        1972,
+        7,
+        15
+      ],
+      "lunar": [
+        1972,
+        6,
+        5,
+        false
+      ],
+      "dayPillar": "정미",
+      "sourceGanji": "임자(壬子)년 정미(丁未)월 정미(丁未)일",
+      "sourceMonth": "1972-07"
+    },
+    {
+      "solar": [
+        1972,
+        7,
+        16
+      ],
+      "lunar": [
+        1972,
+        6,
+        6,
+        false
+      ],
+      "dayPillar": "무신",
+      "sourceGanji": "임자(壬子)년 정미(丁未)월 무신(戊申)일",
+      "sourceMonth": "1972-07"
+    },
+    {
+      "solar": [
+        1972,
+        7,
+        17
+      ],
+      "lunar": [
+        1972,
+        6,
+        7,
+        false
+      ],
+      "dayPillar": "기유",
+      "sourceGanji": "임자(壬子)년 정미(丁未)월 기유(己酉)일",
+      "sourceMonth": "1972-07"
+    },
+    {
+      "solar": [
+        1972,
+        7,
+        18
+      ],
+      "lunar": [
+        1972,
+        6,
+        8,
+        false
+      ],
+      "dayPillar": "경술",
+      "sourceGanji": "임자(壬子)년 정미(丁未)월 경술(庚戌)일",
+      "sourceMonth": "1972-07"
+    },
+    {
+      "solar": [
+        1972,
+        7,
+        19
+      ],
+      "lunar": [
+        1972,
+        6,
+        9,
+        false
+      ],
+      "dayPillar": "신해",
+      "sourceGanji": "임자(壬子)년 정미(丁未)월 신해(辛亥)일",
+      "sourceMonth": "1972-07"
+    },
+    {
+      "solar": [
+        1972,
+        7,
+        20
+      ],
+      "lunar": [
+        1972,
+        6,
+        10,
+        false
+      ],
+      "dayPillar": "임자",
+      "sourceGanji": "임자(壬子)년 정미(丁未)월 임자(壬子)일",
+      "sourceMonth": "1972-07"
+    },
+    {
+      "solar": [
+        1972,
+        7,
+        21
+      ],
+      "lunar": [
+        1972,
+        6,
+        11,
+        false
+      ],
+      "dayPillar": "계축",
+      "sourceGanji": "임자(壬子)년 정미(丁未)월 계축(癸丑)일",
+      "sourceMonth": "1972-07"
+    },
+    {
+      "solar": [
+        1972,
+        7,
+        22
+      ],
+      "lunar": [
+        1972,
+        6,
+        12,
+        false
+      ],
+      "dayPillar": "갑인",
+      "sourceGanji": "임자(壬子)년 정미(丁未)월 갑인(甲寅)일",
+      "sourceMonth": "1972-07"
+    },
+    {
+      "solar": [
+        1972,
+        7,
+        23
+      ],
+      "lunar": [
+        1972,
+        6,
+        13,
+        false
+      ],
+      "dayPillar": "을묘",
+      "sourceGanji": "임자(壬子)년 정미(丁未)월 을묘(乙卯)일",
+      "sourceMonth": "1972-07"
+    },
+    {
+      "solar": [
+        1972,
+        7,
+        24
+      ],
+      "lunar": [
+        1972,
+        6,
+        14,
+        false
+      ],
+      "dayPillar": "병진",
+      "sourceGanji": "임자(壬子)년 정미(丁未)월 병진(丙辰)일",
+      "sourceMonth": "1972-07"
+    },
+    {
+      "solar": [
+        1972,
+        7,
+        25
+      ],
+      "lunar": [
+        1972,
+        6,
+        15,
+        false
+      ],
+      "dayPillar": "정사",
+      "sourceGanji": "임자(壬子)년 정미(丁未)월 정사(丁巳)일",
+      "sourceMonth": "1972-07"
+    },
+    {
+      "solar": [
+        1972,
+        7,
+        26
+      ],
+      "lunar": [
+        1972,
+        6,
+        16,
+        false
+      ],
+      "dayPillar": "무오",
+      "sourceGanji": "임자(壬子)년 정미(丁未)월 무오(戊午)일",
+      "sourceMonth": "1972-07"
+    },
+    {
+      "solar": [
+        1972,
+        7,
+        27
+      ],
+      "lunar": [
+        1972,
+        6,
+        17,
+        false
+      ],
+      "dayPillar": "기미",
+      "sourceGanji": "임자(壬子)년 정미(丁未)월 기미(己未)일",
+      "sourceMonth": "1972-07"
+    },
+    {
+      "solar": [
+        1972,
+        7,
+        28
+      ],
+      "lunar": [
+        1972,
+        6,
+        18,
+        false
+      ],
+      "dayPillar": "경신",
+      "sourceGanji": "임자(壬子)년 정미(丁未)월 경신(庚申)일",
+      "sourceMonth": "1972-07"
+    },
+    {
+      "solar": [
+        1972,
+        7,
+        29
+      ],
+      "lunar": [
+        1972,
+        6,
+        19,
+        false
+      ],
+      "dayPillar": "신유",
+      "sourceGanji": "임자(壬子)년 정미(丁未)월 신유(辛酉)일",
+      "sourceMonth": "1972-07"
+    },
+    {
+      "solar": [
+        1972,
+        7,
+        30
+      ],
+      "lunar": [
+        1972,
+        6,
+        20,
+        false
+      ],
+      "dayPillar": "임술",
+      "sourceGanji": "임자(壬子)년 정미(丁未)월 임술(壬戌)일",
+      "sourceMonth": "1972-07"
+    },
+    {
+      "solar": [
+        1972,
+        7,
+        31
+      ],
+      "lunar": [
+        1972,
+        6,
+        21,
+        false
+      ],
+      "dayPillar": "계해",
+      "sourceGanji": "임자(壬子)년 정미(丁未)월 계해(癸亥)일",
+      "sourceMonth": "1972-07"
+    },
+    {
+      "solar": [
+        1987,
+        5,
+        1
+      ],
+      "lunar": [
+        1987,
+        4,
+        4,
+        false
+      ],
+      "dayPillar": "경술",
+      "sourceGanji": "정묘(丁卯)년 을사(乙巳)월 경술(庚戌)일",
+      "sourceMonth": "1987-05"
+    },
+    {
+      "solar": [
+        1987,
+        5,
+        2
+      ],
+      "lunar": [
+        1987,
+        4,
+        5,
+        false
+      ],
+      "dayPillar": "신해",
+      "sourceGanji": "정묘(丁卯)년 을사(乙巳)월 신해(辛亥)일",
+      "sourceMonth": "1987-05"
+    },
+    {
+      "solar": [
+        1987,
+        5,
+        3
+      ],
+      "lunar": [
+        1987,
+        4,
+        6,
+        false
+      ],
+      "dayPillar": "임자",
+      "sourceGanji": "정묘(丁卯)년 을사(乙巳)월 임자(壬子)일",
+      "sourceMonth": "1987-05"
+    },
+    {
+      "solar": [
+        1987,
+        5,
+        4
+      ],
+      "lunar": [
+        1987,
+        4,
+        7,
+        false
+      ],
+      "dayPillar": "계축",
+      "sourceGanji": "정묘(丁卯)년 을사(乙巳)월 계축(癸丑)일",
+      "sourceMonth": "1987-05"
+    },
+    {
+      "solar": [
+        1987,
+        5,
+        5
+      ],
+      "lunar": [
+        1987,
+        4,
+        8,
+        false
+      ],
+      "dayPillar": "갑인",
+      "sourceGanji": "정묘(丁卯)년 을사(乙巳)월 갑인(甲寅)일",
+      "sourceMonth": "1987-05"
+    },
+    {
+      "solar": [
+        1987,
+        5,
+        6
+      ],
+      "lunar": [
+        1987,
+        4,
+        9,
+        false
+      ],
+      "dayPillar": "을묘",
+      "sourceGanji": "정묘(丁卯)년 을사(乙巳)월 을묘(乙卯)일",
+      "sourceMonth": "1987-05"
+    },
+    {
+      "solar": [
+        1987,
+        5,
+        7
+      ],
+      "lunar": [
+        1987,
+        4,
+        10,
+        false
+      ],
+      "dayPillar": "병진",
+      "sourceGanji": "정묘(丁卯)년 을사(乙巳)월 병진(丙辰)일",
+      "sourceMonth": "1987-05"
+    },
+    {
+      "solar": [
+        1987,
+        5,
+        8
+      ],
+      "lunar": [
+        1987,
+        4,
+        11,
+        false
+      ],
+      "dayPillar": "정사",
+      "sourceGanji": "정묘(丁卯)년 을사(乙巳)월 정사(丁巳)일",
+      "sourceMonth": "1987-05"
+    },
+    {
+      "solar": [
+        1987,
+        5,
+        9
+      ],
+      "lunar": [
+        1987,
+        4,
+        12,
+        false
+      ],
+      "dayPillar": "무오",
+      "sourceGanji": "정묘(丁卯)년 을사(乙巳)월 무오(戊午)일",
+      "sourceMonth": "1987-05"
+    },
+    {
+      "solar": [
+        1987,
+        5,
+        10
+      ],
+      "lunar": [
+        1987,
+        4,
+        13,
+        false
+      ],
+      "dayPillar": "기미",
+      "sourceGanji": "정묘(丁卯)년 을사(乙巳)월 기미(己未)일",
+      "sourceMonth": "1987-05"
+    },
+    {
+      "solar": [
+        1987,
+        5,
+        11
+      ],
+      "lunar": [
+        1987,
+        4,
+        14,
+        false
+      ],
+      "dayPillar": "경신",
+      "sourceGanji": "정묘(丁卯)년 을사(乙巳)월 경신(庚申)일",
+      "sourceMonth": "1987-05"
+    },
+    {
+      "solar": [
+        1987,
+        5,
+        12
+      ],
+      "lunar": [
+        1987,
+        4,
+        15,
+        false
+      ],
+      "dayPillar": "신유",
+      "sourceGanji": "정묘(丁卯)년 을사(乙巳)월 신유(辛酉)일",
+      "sourceMonth": "1987-05"
+    },
+    {
+      "solar": [
+        1987,
+        5,
+        13
+      ],
+      "lunar": [
+        1987,
+        4,
+        16,
+        false
+      ],
+      "dayPillar": "임술",
+      "sourceGanji": "정묘(丁卯)년 을사(乙巳)월 임술(壬戌)일",
+      "sourceMonth": "1987-05"
+    },
+    {
+      "solar": [
+        1987,
+        5,
+        14
+      ],
+      "lunar": [
+        1987,
+        4,
+        17,
+        false
+      ],
+      "dayPillar": "계해",
+      "sourceGanji": "정묘(丁卯)년 을사(乙巳)월 계해(癸亥)일",
+      "sourceMonth": "1987-05"
+    },
+    {
+      "solar": [
+        1987,
+        5,
+        15
+      ],
+      "lunar": [
+        1987,
+        4,
+        18,
+        false
+      ],
+      "dayPillar": "갑자",
+      "sourceGanji": "정묘(丁卯)년 을사(乙巳)월 갑자(甲子)일",
+      "sourceMonth": "1987-05"
+    },
+    {
+      "solar": [
+        1987,
+        5,
+        16
+      ],
+      "lunar": [
+        1987,
+        4,
+        19,
+        false
+      ],
+      "dayPillar": "을축",
+      "sourceGanji": "정묘(丁卯)년 을사(乙巳)월 을축(乙丑)일",
+      "sourceMonth": "1987-05"
+    },
+    {
+      "solar": [
+        1987,
+        5,
+        17
+      ],
+      "lunar": [
+        1987,
+        4,
+        20,
+        false
+      ],
+      "dayPillar": "병인",
+      "sourceGanji": "정묘(丁卯)년 을사(乙巳)월 병인(丙寅)일",
+      "sourceMonth": "1987-05"
+    },
+    {
+      "solar": [
+        1987,
+        5,
+        18
+      ],
+      "lunar": [
+        1987,
+        4,
+        21,
+        false
+      ],
+      "dayPillar": "정묘",
+      "sourceGanji": "정묘(丁卯)년 을사(乙巳)월 정묘(丁卯)일",
+      "sourceMonth": "1987-05"
+    },
+    {
+      "solar": [
+        1987,
+        5,
+        19
+      ],
+      "lunar": [
+        1987,
+        4,
+        22,
+        false
+      ],
+      "dayPillar": "무진",
+      "sourceGanji": "정묘(丁卯)년 을사(乙巳)월 무진(戊辰)일",
+      "sourceMonth": "1987-05"
+    },
+    {
+      "solar": [
+        1987,
+        5,
+        20
+      ],
+      "lunar": [
+        1987,
+        4,
+        23,
+        false
+      ],
+      "dayPillar": "기사",
+      "sourceGanji": "정묘(丁卯)년 을사(乙巳)월 기사(己巳)일",
+      "sourceMonth": "1987-05"
+    },
+    {
+      "solar": [
+        1987,
+        5,
+        21
+      ],
+      "lunar": [
+        1987,
+        4,
+        24,
+        false
+      ],
+      "dayPillar": "경오",
+      "sourceGanji": "정묘(丁卯)년 을사(乙巳)월 경오(庚午)일",
+      "sourceMonth": "1987-05"
+    },
+    {
+      "solar": [
+        1987,
+        5,
+        22
+      ],
+      "lunar": [
+        1987,
+        4,
+        25,
+        false
+      ],
+      "dayPillar": "신미",
+      "sourceGanji": "정묘(丁卯)년 을사(乙巳)월 신미(辛未)일",
+      "sourceMonth": "1987-05"
+    },
+    {
+      "solar": [
+        1987,
+        5,
+        23
+      ],
+      "lunar": [
+        1987,
+        4,
+        26,
+        false
+      ],
+      "dayPillar": "임신",
+      "sourceGanji": "정묘(丁卯)년 을사(乙巳)월 임신(壬申)일",
+      "sourceMonth": "1987-05"
+    },
+    {
+      "solar": [
+        1987,
+        5,
+        24
+      ],
+      "lunar": [
+        1987,
+        4,
+        27,
+        false
+      ],
+      "dayPillar": "계유",
+      "sourceGanji": "정묘(丁卯)년 을사(乙巳)월 계유(癸酉)일",
+      "sourceMonth": "1987-05"
+    },
+    {
+      "solar": [
+        1987,
+        5,
+        25
+      ],
+      "lunar": [
+        1987,
+        4,
+        28,
+        false
+      ],
+      "dayPillar": "갑술",
+      "sourceGanji": "정묘(丁卯)년 을사(乙巳)월 갑술(甲戌)일",
+      "sourceMonth": "1987-05"
+    },
+    {
+      "solar": [
+        1987,
+        5,
+        26
+      ],
+      "lunar": [
+        1987,
+        4,
+        29,
+        false
+      ],
+      "dayPillar": "을해",
+      "sourceGanji": "정묘(丁卯)년 을사(乙巳)월 을해(乙亥)일",
+      "sourceMonth": "1987-05"
+    },
+    {
+      "solar": [
+        1987,
+        5,
+        27
+      ],
+      "lunar": [
+        1987,
+        4,
+        30,
+        false
+      ],
+      "dayPillar": "병자",
+      "sourceGanji": "정묘(丁卯)년 을사(乙巳)월 병자(丙子)일",
+      "sourceMonth": "1987-05"
+    },
+    {
+      "solar": [
+        1987,
+        5,
+        28
+      ],
+      "lunar": [
+        1987,
+        5,
+        1,
+        false
+      ],
+      "dayPillar": "정축",
+      "sourceGanji": "정묘(丁卯)년 병오(丙午)월 정축(丁丑)일",
+      "sourceMonth": "1987-05"
+    },
+    {
+      "solar": [
+        1987,
+        5,
+        29
+      ],
+      "lunar": [
+        1987,
+        5,
+        2,
+        false
+      ],
+      "dayPillar": "무인",
+      "sourceGanji": "정묘(丁卯)년 병오(丙午)월 무인(戊寅)일",
+      "sourceMonth": "1987-05"
+    },
+    {
+      "solar": [
+        1987,
+        5,
+        30
+      ],
+      "lunar": [
+        1987,
+        5,
+        3,
+        false
+      ],
+      "dayPillar": "기묘",
+      "sourceGanji": "정묘(丁卯)년 병오(丙午)월 기묘(己卯)일",
+      "sourceMonth": "1987-05"
+    },
+    {
+      "solar": [
+        1987,
+        5,
+        31
+      ],
+      "lunar": [
+        1987,
+        5,
+        4,
+        false
+      ],
+      "dayPillar": "경진",
+      "sourceGanji": "정묘(丁卯)년 병오(丙午)월 경진(庚辰)일",
+      "sourceMonth": "1987-05"
+    },
+    {
+      "solar": [
+        1987,
+        10,
+        1
+      ],
+      "lunar": [
+        1987,
+        8,
+        9,
+        false
+      ],
+      "dayPillar": "계미",
+      "sourceGanji": "정묘(丁卯)년 기유(己酉)월 계미(癸未)일",
+      "sourceMonth": "1987-10"
+    },
+    {
+      "solar": [
+        1987,
+        10,
+        2
+      ],
+      "lunar": [
+        1987,
+        8,
+        10,
+        false
+      ],
+      "dayPillar": "갑신",
+      "sourceGanji": "정묘(丁卯)년 기유(己酉)월 갑신(甲申)일",
+      "sourceMonth": "1987-10"
+    },
+    {
+      "solar": [
+        1987,
+        10,
+        3
+      ],
+      "lunar": [
+        1987,
+        8,
+        11,
+        false
+      ],
+      "dayPillar": "을유",
+      "sourceGanji": "정묘(丁卯)년 기유(己酉)월 을유(乙酉)일",
+      "sourceMonth": "1987-10"
+    },
+    {
+      "solar": [
+        1987,
+        10,
+        4
+      ],
+      "lunar": [
+        1987,
+        8,
+        12,
+        false
+      ],
+      "dayPillar": "병술",
+      "sourceGanji": "정묘(丁卯)년 기유(己酉)월 병술(丙戌)일",
+      "sourceMonth": "1987-10"
+    },
+    {
+      "solar": [
+        1987,
+        10,
+        5
+      ],
+      "lunar": [
+        1987,
+        8,
+        13,
+        false
+      ],
+      "dayPillar": "정해",
+      "sourceGanji": "정묘(丁卯)년 기유(己酉)월 정해(丁亥)일",
+      "sourceMonth": "1987-10"
+    },
+    {
+      "solar": [
+        1987,
+        10,
+        6
+      ],
+      "lunar": [
+        1987,
+        8,
+        14,
+        false
+      ],
+      "dayPillar": "무자",
+      "sourceGanji": "정묘(丁卯)년 기유(己酉)월 무자(戊子)일",
+      "sourceMonth": "1987-10"
+    },
+    {
+      "solar": [
+        1987,
+        10,
+        7
+      ],
+      "lunar": [
+        1987,
+        8,
+        15,
+        false
+      ],
+      "dayPillar": "기축",
+      "sourceGanji": "정묘(丁卯)년 기유(己酉)월 기축(己丑)일",
+      "sourceMonth": "1987-10"
+    },
+    {
+      "solar": [
+        1987,
+        10,
+        8
+      ],
+      "lunar": [
+        1987,
+        8,
+        16,
+        false
+      ],
+      "dayPillar": "경인",
+      "sourceGanji": "정묘(丁卯)년 기유(己酉)월 경인(庚寅)일",
+      "sourceMonth": "1987-10"
+    },
+    {
+      "solar": [
+        1987,
+        10,
+        9
+      ],
+      "lunar": [
+        1987,
+        8,
+        17,
+        false
+      ],
+      "dayPillar": "신묘",
+      "sourceGanji": "정묘(丁卯)년 기유(己酉)월 신묘(辛卯)일",
+      "sourceMonth": "1987-10"
+    },
+    {
+      "solar": [
+        1987,
+        10,
+        10
+      ],
+      "lunar": [
+        1987,
+        8,
+        18,
+        false
+      ],
+      "dayPillar": "임진",
+      "sourceGanji": "정묘(丁卯)년 기유(己酉)월 임진(壬辰)일",
+      "sourceMonth": "1987-10"
+    },
+    {
+      "solar": [
+        1987,
+        10,
+        11
+      ],
+      "lunar": [
+        1987,
+        8,
+        19,
+        false
+      ],
+      "dayPillar": "계사",
+      "sourceGanji": "정묘(丁卯)년 기유(己酉)월 계사(癸巳)일",
+      "sourceMonth": "1987-10"
+    },
+    {
+      "solar": [
+        1987,
+        10,
+        12
+      ],
+      "lunar": [
+        1987,
+        8,
+        20,
+        false
+      ],
+      "dayPillar": "갑오",
+      "sourceGanji": "정묘(丁卯)년 기유(己酉)월 갑오(甲午)일",
+      "sourceMonth": "1987-10"
+    },
+    {
+      "solar": [
+        1987,
+        10,
+        13
+      ],
+      "lunar": [
+        1987,
+        8,
+        21,
+        false
+      ],
+      "dayPillar": "을미",
+      "sourceGanji": "정묘(丁卯)년 기유(己酉)월 을미(乙未)일",
+      "sourceMonth": "1987-10"
+    },
+    {
+      "solar": [
+        1987,
+        10,
+        14
+      ],
+      "lunar": [
+        1987,
+        8,
+        22,
+        false
+      ],
+      "dayPillar": "병신",
+      "sourceGanji": "정묘(丁卯)년 기유(己酉)월 병신(丙申)일",
+      "sourceMonth": "1987-10"
+    },
+    {
+      "solar": [
+        1987,
+        10,
+        15
+      ],
+      "lunar": [
+        1987,
+        8,
+        23,
+        false
+      ],
+      "dayPillar": "정유",
+      "sourceGanji": "정묘(丁卯)년 기유(己酉)월 정유(丁酉)일",
+      "sourceMonth": "1987-10"
+    },
+    {
+      "solar": [
+        1987,
+        10,
+        16
+      ],
+      "lunar": [
+        1987,
+        8,
+        24,
+        false
+      ],
+      "dayPillar": "무술",
+      "sourceGanji": "정묘(丁卯)년 기유(己酉)월 무술(戊戌)일",
+      "sourceMonth": "1987-10"
+    },
+    {
+      "solar": [
+        1987,
+        10,
+        17
+      ],
+      "lunar": [
+        1987,
+        8,
+        25,
+        false
+      ],
+      "dayPillar": "기해",
+      "sourceGanji": "정묘(丁卯)년 기유(己酉)월 기해(己亥)일",
+      "sourceMonth": "1987-10"
+    },
+    {
+      "solar": [
+        1987,
+        10,
+        18
+      ],
+      "lunar": [
+        1987,
+        8,
+        26,
+        false
+      ],
+      "dayPillar": "경자",
+      "sourceGanji": "정묘(丁卯)년 기유(己酉)월 경자(庚子)일",
+      "sourceMonth": "1987-10"
+    },
+    {
+      "solar": [
+        1987,
+        10,
+        19
+      ],
+      "lunar": [
+        1987,
+        8,
+        27,
+        false
+      ],
+      "dayPillar": "신축",
+      "sourceGanji": "정묘(丁卯)년 기유(己酉)월 신축(辛丑)일",
+      "sourceMonth": "1987-10"
+    },
+    {
+      "solar": [
+        1987,
+        10,
+        20
+      ],
+      "lunar": [
+        1987,
+        8,
+        28,
+        false
+      ],
+      "dayPillar": "임인",
+      "sourceGanji": "정묘(丁卯)년 기유(己酉)월 임인(壬寅)일",
+      "sourceMonth": "1987-10"
+    },
+    {
+      "solar": [
+        1987,
+        10,
+        21
+      ],
+      "lunar": [
+        1987,
+        8,
+        29,
+        false
+      ],
+      "dayPillar": "계묘",
+      "sourceGanji": "정묘(丁卯)년 기유(己酉)월 계묘(癸卯)일",
+      "sourceMonth": "1987-10"
+    },
+    {
+      "solar": [
+        1987,
+        10,
+        22
+      ],
+      "lunar": [
+        1987,
+        8,
+        30,
+        false
+      ],
+      "dayPillar": "갑진",
+      "sourceGanji": "정묘(丁卯)년 기유(己酉)월 갑진(甲辰)일",
+      "sourceMonth": "1987-10"
+    },
+    {
+      "solar": [
+        1987,
+        10,
+        23
+      ],
+      "lunar": [
+        1987,
+        9,
+        1,
+        false
+      ],
+      "dayPillar": "을사",
+      "sourceGanji": "정묘(丁卯)년 경술(庚戌)월 을사(乙巳)일",
+      "sourceMonth": "1987-10"
+    },
+    {
+      "solar": [
+        1987,
+        10,
+        24
+      ],
+      "lunar": [
+        1987,
+        9,
+        2,
+        false
+      ],
+      "dayPillar": "병오",
+      "sourceGanji": "정묘(丁卯)년 경술(庚戌)월 병오(丙午)일",
+      "sourceMonth": "1987-10"
+    },
+    {
+      "solar": [
+        1987,
+        10,
+        25
+      ],
+      "lunar": [
+        1987,
+        9,
+        3,
+        false
+      ],
+      "dayPillar": "정미",
+      "sourceGanji": "정묘(丁卯)년 경술(庚戌)월 정미(丁未)일",
+      "sourceMonth": "1987-10"
+    },
+    {
+      "solar": [
+        1987,
+        10,
+        26
+      ],
+      "lunar": [
+        1987,
+        9,
+        4,
+        false
+      ],
+      "dayPillar": "무신",
+      "sourceGanji": "정묘(丁卯)년 경술(庚戌)월 무신(戊申)일",
+      "sourceMonth": "1987-10"
+    },
+    {
+      "solar": [
+        1987,
+        10,
+        27
+      ],
+      "lunar": [
+        1987,
+        9,
+        5,
+        false
+      ],
+      "dayPillar": "기유",
+      "sourceGanji": "정묘(丁卯)년 경술(庚戌)월 기유(己酉)일",
+      "sourceMonth": "1987-10"
+    },
+    {
+      "solar": [
+        1987,
+        10,
+        28
+      ],
+      "lunar": [
+        1987,
+        9,
+        6,
+        false
+      ],
+      "dayPillar": "경술",
+      "sourceGanji": "정묘(丁卯)년 경술(庚戌)월 경술(庚戌)일",
+      "sourceMonth": "1987-10"
+    },
+    {
+      "solar": [
+        1987,
+        10,
+        29
+      ],
+      "lunar": [
+        1987,
+        9,
+        7,
+        false
+      ],
+      "dayPillar": "신해",
+      "sourceGanji": "정묘(丁卯)년 경술(庚戌)월 신해(辛亥)일",
+      "sourceMonth": "1987-10"
+    },
+    {
+      "solar": [
+        1987,
+        10,
+        30
+      ],
+      "lunar": [
+        1987,
+        9,
+        8,
+        false
+      ],
+      "dayPillar": "임자",
+      "sourceGanji": "정묘(丁卯)년 경술(庚戌)월 임자(壬子)일",
+      "sourceMonth": "1987-10"
+    },
+    {
+      "solar": [
+        1987,
+        10,
+        31
+      ],
+      "lunar": [
+        1987,
+        9,
+        9,
+        false
+      ],
+      "dayPillar": "계축",
+      "sourceGanji": "정묘(丁卯)년 경술(庚戌)월 계축(癸丑)일",
+      "sourceMonth": "1987-10"
+    },
+    {
+      "solar": [
+        1988,
+        5,
+        1
+      ],
+      "lunar": [
+        1988,
+        3,
+        16,
+        false
+      ],
+      "dayPillar": "병진",
+      "sourceGanji": "무진(戊辰)년 병진(丙辰)월 병진(丙辰)일",
+      "sourceMonth": "1988-05"
+    },
+    {
+      "solar": [
+        1988,
+        5,
+        2
+      ],
+      "lunar": [
+        1988,
+        3,
+        17,
+        false
+      ],
+      "dayPillar": "정사",
+      "sourceGanji": "무진(戊辰)년 병진(丙辰)월 정사(丁巳)일",
+      "sourceMonth": "1988-05"
+    },
+    {
+      "solar": [
+        1988,
+        5,
+        3
+      ],
+      "lunar": [
+        1988,
+        3,
+        18,
+        false
+      ],
+      "dayPillar": "무오",
+      "sourceGanji": "무진(戊辰)년 병진(丙辰)월 무오(戊午)일",
+      "sourceMonth": "1988-05"
+    },
+    {
+      "solar": [
+        1988,
+        5,
+        4
+      ],
+      "lunar": [
+        1988,
+        3,
+        19,
+        false
+      ],
+      "dayPillar": "기미",
+      "sourceGanji": "무진(戊辰)년 병진(丙辰)월 기미(己未)일",
+      "sourceMonth": "1988-05"
+    },
+    {
+      "solar": [
+        1988,
+        5,
+        5
+      ],
+      "lunar": [
+        1988,
+        3,
+        20,
+        false
+      ],
+      "dayPillar": "경신",
+      "sourceGanji": "무진(戊辰)년 병진(丙辰)월 경신(庚申)일",
+      "sourceMonth": "1988-05"
+    },
+    {
+      "solar": [
+        1988,
+        5,
+        6
+      ],
+      "lunar": [
+        1988,
+        3,
+        21,
+        false
+      ],
+      "dayPillar": "신유",
+      "sourceGanji": "무진(戊辰)년 병진(丙辰)월 신유(辛酉)일",
+      "sourceMonth": "1988-05"
+    },
+    {
+      "solar": [
+        1988,
+        5,
+        7
+      ],
+      "lunar": [
+        1988,
+        3,
+        22,
+        false
+      ],
+      "dayPillar": "임술",
+      "sourceGanji": "무진(戊辰)년 병진(丙辰)월 임술(壬戌)일",
+      "sourceMonth": "1988-05"
+    },
+    {
+      "solar": [
+        1988,
+        5,
+        8
+      ],
+      "lunar": [
+        1988,
+        3,
+        23,
+        false
+      ],
+      "dayPillar": "계해",
+      "sourceGanji": "무진(戊辰)년 병진(丙辰)월 계해(癸亥)일",
+      "sourceMonth": "1988-05"
+    },
+    {
+      "solar": [
+        1988,
+        5,
+        9
+      ],
+      "lunar": [
+        1988,
+        3,
+        24,
+        false
+      ],
+      "dayPillar": "갑자",
+      "sourceGanji": "무진(戊辰)년 병진(丙辰)월 갑자(甲子)일",
+      "sourceMonth": "1988-05"
+    },
+    {
+      "solar": [
+        1988,
+        5,
+        10
+      ],
+      "lunar": [
+        1988,
+        3,
+        25,
+        false
+      ],
+      "dayPillar": "을축",
+      "sourceGanji": "무진(戊辰)년 병진(丙辰)월 을축(乙丑)일",
+      "sourceMonth": "1988-05"
+    },
+    {
+      "solar": [
+        1988,
+        5,
+        11
+      ],
+      "lunar": [
+        1988,
+        3,
+        26,
+        false
+      ],
+      "dayPillar": "병인",
+      "sourceGanji": "무진(戊辰)년 병진(丙辰)월 병인(丙寅)일",
+      "sourceMonth": "1988-05"
+    },
+    {
+      "solar": [
+        1988,
+        5,
+        12
+      ],
+      "lunar": [
+        1988,
+        3,
+        27,
+        false
+      ],
+      "dayPillar": "정묘",
+      "sourceGanji": "무진(戊辰)년 병진(丙辰)월 정묘(丁卯)일",
+      "sourceMonth": "1988-05"
+    },
+    {
+      "solar": [
+        1988,
+        5,
+        13
+      ],
+      "lunar": [
+        1988,
+        3,
+        28,
+        false
+      ],
+      "dayPillar": "무진",
+      "sourceGanji": "무진(戊辰)년 병진(丙辰)월 무진(戊辰)일",
+      "sourceMonth": "1988-05"
+    },
+    {
+      "solar": [
+        1988,
+        5,
+        14
+      ],
+      "lunar": [
+        1988,
+        3,
+        29,
+        false
+      ],
+      "dayPillar": "기사",
+      "sourceGanji": "무진(戊辰)년 병진(丙辰)월 기사(己巳)일",
+      "sourceMonth": "1988-05"
+    },
+    {
+      "solar": [
+        1988,
+        5,
+        15
+      ],
+      "lunar": [
+        1988,
+        3,
+        30,
+        false
+      ],
+      "dayPillar": "경오",
+      "sourceGanji": "무진(戊辰)년 병진(丙辰)월 경오(庚午)일",
+      "sourceMonth": "1988-05"
+    },
+    {
+      "solar": [
+        1988,
+        5,
+        16
+      ],
+      "lunar": [
+        1988,
+        4,
+        1,
+        false
+      ],
+      "dayPillar": "신미",
+      "sourceGanji": "무진(戊辰)년 정사(丁巳)월 신미(辛未)일",
+      "sourceMonth": "1988-05"
+    },
+    {
+      "solar": [
+        1988,
+        5,
+        17
+      ],
+      "lunar": [
+        1988,
+        4,
+        2,
+        false
+      ],
+      "dayPillar": "임신",
+      "sourceGanji": "무진(戊辰)년 정사(丁巳)월 임신(壬申)일",
+      "sourceMonth": "1988-05"
+    },
+    {
+      "solar": [
+        1988,
+        5,
+        18
+      ],
+      "lunar": [
+        1988,
+        4,
+        3,
+        false
+      ],
+      "dayPillar": "계유",
+      "sourceGanji": "무진(戊辰)년 정사(丁巳)월 계유(癸酉)일",
+      "sourceMonth": "1988-05"
+    },
+    {
+      "solar": [
+        1988,
+        5,
+        19
+      ],
+      "lunar": [
+        1988,
+        4,
+        4,
+        false
+      ],
+      "dayPillar": "갑술",
+      "sourceGanji": "무진(戊辰)년 정사(丁巳)월 갑술(甲戌)일",
+      "sourceMonth": "1988-05"
+    },
+    {
+      "solar": [
+        1988,
+        5,
+        20
+      ],
+      "lunar": [
+        1988,
+        4,
+        5,
+        false
+      ],
+      "dayPillar": "을해",
+      "sourceGanji": "무진(戊辰)년 정사(丁巳)월 을해(乙亥)일",
+      "sourceMonth": "1988-05"
+    },
+    {
+      "solar": [
+        1988,
+        5,
+        21
+      ],
+      "lunar": [
+        1988,
+        4,
+        6,
+        false
+      ],
+      "dayPillar": "병자",
+      "sourceGanji": "무진(戊辰)년 정사(丁巳)월 병자(丙子)일",
+      "sourceMonth": "1988-05"
+    },
+    {
+      "solar": [
+        1988,
+        5,
+        22
+      ],
+      "lunar": [
+        1988,
+        4,
+        7,
+        false
+      ],
+      "dayPillar": "정축",
+      "sourceGanji": "무진(戊辰)년 정사(丁巳)월 정축(丁丑)일",
+      "sourceMonth": "1988-05"
+    },
+    {
+      "solar": [
+        1988,
+        5,
+        23
+      ],
+      "lunar": [
+        1988,
+        4,
+        8,
+        false
+      ],
+      "dayPillar": "무인",
+      "sourceGanji": "무진(戊辰)년 정사(丁巳)월 무인(戊寅)일",
+      "sourceMonth": "1988-05"
+    },
+    {
+      "solar": [
+        1988,
+        5,
+        24
+      ],
+      "lunar": [
+        1988,
+        4,
+        9,
+        false
+      ],
+      "dayPillar": "기묘",
+      "sourceGanji": "무진(戊辰)년 정사(丁巳)월 기묘(己卯)일",
+      "sourceMonth": "1988-05"
+    },
+    {
+      "solar": [
+        1988,
+        5,
+        25
+      ],
+      "lunar": [
+        1988,
+        4,
+        10,
+        false
+      ],
+      "dayPillar": "경진",
+      "sourceGanji": "무진(戊辰)년 정사(丁巳)월 경진(庚辰)일",
+      "sourceMonth": "1988-05"
+    },
+    {
+      "solar": [
+        1988,
+        5,
+        26
+      ],
+      "lunar": [
+        1988,
+        4,
+        11,
+        false
+      ],
+      "dayPillar": "신사",
+      "sourceGanji": "무진(戊辰)년 정사(丁巳)월 신사(辛巳)일",
+      "sourceMonth": "1988-05"
+    },
+    {
+      "solar": [
+        1988,
+        5,
+        27
+      ],
+      "lunar": [
+        1988,
+        4,
+        12,
+        false
+      ],
+      "dayPillar": "임오",
+      "sourceGanji": "무진(戊辰)년 정사(丁巳)월 임오(壬午)일",
+      "sourceMonth": "1988-05"
+    },
+    {
+      "solar": [
+        1988,
+        5,
+        28
+      ],
+      "lunar": [
+        1988,
+        4,
+        13,
+        false
+      ],
+      "dayPillar": "계미",
+      "sourceGanji": "무진(戊辰)년 정사(丁巳)월 계미(癸未)일",
+      "sourceMonth": "1988-05"
+    },
+    {
+      "solar": [
+        1988,
+        5,
+        29
+      ],
+      "lunar": [
+        1988,
+        4,
+        14,
+        false
+      ],
+      "dayPillar": "갑신",
+      "sourceGanji": "무진(戊辰)년 정사(丁巳)월 갑신(甲申)일",
+      "sourceMonth": "1988-05"
+    },
+    {
+      "solar": [
+        1988,
+        5,
+        30
+      ],
+      "lunar": [
+        1988,
+        4,
+        15,
+        false
+      ],
+      "dayPillar": "을유",
+      "sourceGanji": "무진(戊辰)년 정사(丁巳)월 을유(乙酉)일",
+      "sourceMonth": "1988-05"
+    },
+    {
+      "solar": [
+        1988,
+        5,
+        31
+      ],
+      "lunar": [
+        1988,
+        4,
+        16,
+        false
+      ],
+      "dayPillar": "병술",
+      "sourceGanji": "무진(戊辰)년 정사(丁巳)월 병술(丙戌)일",
+      "sourceMonth": "1988-05"
+    },
+    {
+      "solar": [
+        1988,
+        10,
+        1
+      ],
+      "lunar": [
+        1988,
+        8,
+        21,
+        false
+      ],
+      "dayPillar": "기축",
+      "sourceGanji": "무진(戊辰)년 신유(辛酉)월 기축(己丑)일",
+      "sourceMonth": "1988-10"
+    },
+    {
+      "solar": [
+        1988,
+        10,
+        2
+      ],
+      "lunar": [
+        1988,
+        8,
+        22,
+        false
+      ],
+      "dayPillar": "경인",
+      "sourceGanji": "무진(戊辰)년 신유(辛酉)월 경인(庚寅)일",
+      "sourceMonth": "1988-10"
+    },
+    {
+      "solar": [
+        1988,
+        10,
+        3
+      ],
+      "lunar": [
+        1988,
+        8,
+        23,
+        false
+      ],
+      "dayPillar": "신묘",
+      "sourceGanji": "무진(戊辰)년 신유(辛酉)월 신묘(辛卯)일",
+      "sourceMonth": "1988-10"
+    },
+    {
+      "solar": [
+        1988,
+        10,
+        4
+      ],
+      "lunar": [
+        1988,
+        8,
+        24,
+        false
+      ],
+      "dayPillar": "임진",
+      "sourceGanji": "무진(戊辰)년 신유(辛酉)월 임진(壬辰)일",
+      "sourceMonth": "1988-10"
+    },
+    {
+      "solar": [
+        1988,
+        10,
+        5
+      ],
+      "lunar": [
+        1988,
+        8,
+        25,
+        false
+      ],
+      "dayPillar": "계사",
+      "sourceGanji": "무진(戊辰)년 신유(辛酉)월 계사(癸巳)일",
+      "sourceMonth": "1988-10"
+    },
+    {
+      "solar": [
+        1988,
+        10,
+        6
+      ],
+      "lunar": [
+        1988,
+        8,
+        26,
+        false
+      ],
+      "dayPillar": "갑오",
+      "sourceGanji": "무진(戊辰)년 신유(辛酉)월 갑오(甲午)일",
+      "sourceMonth": "1988-10"
+    },
+    {
+      "solar": [
+        1988,
+        10,
+        7
+      ],
+      "lunar": [
+        1988,
+        8,
+        27,
+        false
+      ],
+      "dayPillar": "을미",
+      "sourceGanji": "무진(戊辰)년 신유(辛酉)월 을미(乙未)일",
+      "sourceMonth": "1988-10"
+    },
+    {
+      "solar": [
+        1988,
+        10,
+        8
+      ],
+      "lunar": [
+        1988,
+        8,
+        28,
+        false
+      ],
+      "dayPillar": "병신",
+      "sourceGanji": "무진(戊辰)년 신유(辛酉)월 병신(丙申)일",
+      "sourceMonth": "1988-10"
+    },
+    {
+      "solar": [
+        1988,
+        10,
+        9
+      ],
+      "lunar": [
+        1988,
+        8,
+        29,
+        false
+      ],
+      "dayPillar": "정유",
+      "sourceGanji": "무진(戊辰)년 신유(辛酉)월 정유(丁酉)일",
+      "sourceMonth": "1988-10"
+    },
+    {
+      "solar": [
+        1988,
+        10,
+        10
+      ],
+      "lunar": [
+        1988,
+        8,
+        30,
+        false
+      ],
+      "dayPillar": "무술",
+      "sourceGanji": "무진(戊辰)년 신유(辛酉)월 무술(戊戌)일",
+      "sourceMonth": "1988-10"
+    },
+    {
+      "solar": [
+        1988,
+        10,
+        11
+      ],
+      "lunar": [
+        1988,
+        9,
+        1,
+        false
+      ],
+      "dayPillar": "기해",
+      "sourceGanji": "무진(戊辰)년 임술(壬戌)월 기해(己亥)일",
+      "sourceMonth": "1988-10"
+    },
+    {
+      "solar": [
+        1988,
+        10,
+        12
+      ],
+      "lunar": [
+        1988,
+        9,
+        2,
+        false
+      ],
+      "dayPillar": "경자",
+      "sourceGanji": "무진(戊辰)년 임술(壬戌)월 경자(庚子)일",
+      "sourceMonth": "1988-10"
+    },
+    {
+      "solar": [
+        1988,
+        10,
+        13
+      ],
+      "lunar": [
+        1988,
+        9,
+        3,
+        false
+      ],
+      "dayPillar": "신축",
+      "sourceGanji": "무진(戊辰)년 임술(壬戌)월 신축(辛丑)일",
+      "sourceMonth": "1988-10"
+    },
+    {
+      "solar": [
+        1988,
+        10,
+        14
+      ],
+      "lunar": [
+        1988,
+        9,
+        4,
+        false
+      ],
+      "dayPillar": "임인",
+      "sourceGanji": "무진(戊辰)년 임술(壬戌)월 임인(壬寅)일",
+      "sourceMonth": "1988-10"
+    },
+    {
+      "solar": [
+        1988,
+        10,
+        15
+      ],
+      "lunar": [
+        1988,
+        9,
+        5,
+        false
+      ],
+      "dayPillar": "계묘",
+      "sourceGanji": "무진(戊辰)년 임술(壬戌)월 계묘(癸卯)일",
+      "sourceMonth": "1988-10"
+    },
+    {
+      "solar": [
+        1988,
+        10,
+        16
+      ],
+      "lunar": [
+        1988,
+        9,
+        6,
+        false
+      ],
+      "dayPillar": "갑진",
+      "sourceGanji": "무진(戊辰)년 임술(壬戌)월 갑진(甲辰)일",
+      "sourceMonth": "1988-10"
+    },
+    {
+      "solar": [
+        1988,
+        10,
+        17
+      ],
+      "lunar": [
+        1988,
+        9,
+        7,
+        false
+      ],
+      "dayPillar": "을사",
+      "sourceGanji": "무진(戊辰)년 임술(壬戌)월 을사(乙巳)일",
+      "sourceMonth": "1988-10"
+    },
+    {
+      "solar": [
+        1988,
+        10,
+        18
+      ],
+      "lunar": [
+        1988,
+        9,
+        8,
+        false
+      ],
+      "dayPillar": "병오",
+      "sourceGanji": "무진(戊辰)년 임술(壬戌)월 병오(丙午)일",
+      "sourceMonth": "1988-10"
+    },
+    {
+      "solar": [
+        1988,
+        10,
+        19
+      ],
+      "lunar": [
+        1988,
+        9,
+        9,
+        false
+      ],
+      "dayPillar": "정미",
+      "sourceGanji": "무진(戊辰)년 임술(壬戌)월 정미(丁未)일",
+      "sourceMonth": "1988-10"
+    },
+    {
+      "solar": [
+        1988,
+        10,
+        20
+      ],
+      "lunar": [
+        1988,
+        9,
+        10,
+        false
+      ],
+      "dayPillar": "무신",
+      "sourceGanji": "무진(戊辰)년 임술(壬戌)월 무신(戊申)일",
+      "sourceMonth": "1988-10"
+    },
+    {
+      "solar": [
+        1988,
+        10,
+        21
+      ],
+      "lunar": [
+        1988,
+        9,
+        11,
+        false
+      ],
+      "dayPillar": "기유",
+      "sourceGanji": "무진(戊辰)년 임술(壬戌)월 기유(己酉)일",
+      "sourceMonth": "1988-10"
+    },
+    {
+      "solar": [
+        1988,
+        10,
+        22
+      ],
+      "lunar": [
+        1988,
+        9,
+        12,
+        false
+      ],
+      "dayPillar": "경술",
+      "sourceGanji": "무진(戊辰)년 임술(壬戌)월 경술(庚戌)일",
+      "sourceMonth": "1988-10"
+    },
+    {
+      "solar": [
+        1988,
+        10,
+        23
+      ],
+      "lunar": [
+        1988,
+        9,
+        13,
+        false
+      ],
+      "dayPillar": "신해",
+      "sourceGanji": "무진(戊辰)년 임술(壬戌)월 신해(辛亥)일",
+      "sourceMonth": "1988-10"
+    },
+    {
+      "solar": [
+        1988,
+        10,
+        24
+      ],
+      "lunar": [
+        1988,
+        9,
+        14,
+        false
+      ],
+      "dayPillar": "임자",
+      "sourceGanji": "무진(戊辰)년 임술(壬戌)월 임자(壬子)일",
+      "sourceMonth": "1988-10"
+    },
+    {
+      "solar": [
+        1988,
+        10,
+        25
+      ],
+      "lunar": [
+        1988,
+        9,
+        15,
+        false
+      ],
+      "dayPillar": "계축",
+      "sourceGanji": "무진(戊辰)년 임술(壬戌)월 계축(癸丑)일",
+      "sourceMonth": "1988-10"
+    },
+    {
+      "solar": [
+        1988,
+        10,
+        26
+      ],
+      "lunar": [
+        1988,
+        9,
+        16,
+        false
+      ],
+      "dayPillar": "갑인",
+      "sourceGanji": "무진(戊辰)년 임술(壬戌)월 갑인(甲寅)일",
+      "sourceMonth": "1988-10"
+    },
+    {
+      "solar": [
+        1988,
+        10,
+        27
+      ],
+      "lunar": [
+        1988,
+        9,
+        17,
+        false
+      ],
+      "dayPillar": "을묘",
+      "sourceGanji": "무진(戊辰)년 임술(壬戌)월 을묘(乙卯)일",
+      "sourceMonth": "1988-10"
+    },
+    {
+      "solar": [
+        1988,
+        10,
+        28
+      ],
+      "lunar": [
+        1988,
+        9,
+        18,
+        false
+      ],
+      "dayPillar": "병진",
+      "sourceGanji": "무진(戊辰)년 임술(壬戌)월 병진(丙辰)일",
+      "sourceMonth": "1988-10"
+    },
+    {
+      "solar": [
+        1988,
+        10,
+        29
+      ],
+      "lunar": [
+        1988,
+        9,
+        19,
+        false
+      ],
+      "dayPillar": "정사",
+      "sourceGanji": "무진(戊辰)년 임술(壬戌)월 정사(丁巳)일",
+      "sourceMonth": "1988-10"
+    },
+    {
+      "solar": [
+        1988,
+        10,
+        30
+      ],
+      "lunar": [
+        1988,
+        9,
+        20,
+        false
+      ],
+      "dayPillar": "무오",
+      "sourceGanji": "무진(戊辰)년 임술(壬戌)월 무오(戊午)일",
+      "sourceMonth": "1988-10"
+    },
+    {
+      "solar": [
+        1988,
+        10,
+        31
+      ],
+      "lunar": [
+        1988,
+        9,
+        21,
+        false
+      ],
+      "dayPillar": "기미",
+      "sourceGanji": "무진(戊辰)년 임술(壬戌)월 기미(己未)일",
+      "sourceMonth": "1988-10"
+    },
+    {
+      "solar": [
+        2000,
+        2,
+        1
+      ],
+      "lunar": [
+        1999,
+        12,
+        26,
+        false
+      ],
+      "dayPillar": "기축",
+      "sourceGanji": "기묘(己卯)년 정축(丁丑)월 기축(己丑)일",
+      "sourceMonth": "2000-02"
+    },
+    {
+      "solar": [
+        2000,
+        2,
+        2
+      ],
+      "lunar": [
+        1999,
+        12,
+        27,
+        false
+      ],
+      "dayPillar": "경인",
+      "sourceGanji": "기묘(己卯)년 정축(丁丑)월 경인(庚寅)일",
+      "sourceMonth": "2000-02"
+    },
+    {
+      "solar": [
+        2000,
+        2,
+        3
+      ],
+      "lunar": [
+        1999,
+        12,
+        28,
+        false
+      ],
+      "dayPillar": "신묘",
+      "sourceGanji": "기묘(己卯)년 정축(丁丑)월 신묘(辛卯)일",
+      "sourceMonth": "2000-02"
+    },
+    {
+      "solar": [
+        2000,
+        2,
+        4
+      ],
+      "lunar": [
+        1999,
+        12,
+        29,
+        false
+      ],
+      "dayPillar": "임진",
+      "sourceGanji": "기묘(己卯)년 정축(丁丑)월 임진(壬辰)일",
+      "sourceMonth": "2000-02"
+    },
+    {
+      "solar": [
+        2000,
+        2,
+        5
+      ],
+      "lunar": [
+        2000,
+        1,
+        1,
+        false
+      ],
+      "dayPillar": "계사",
+      "sourceGanji": "경진(庚辰)년 무인(戊寅)월 계사(癸巳)일",
+      "sourceMonth": "2000-02"
+    },
+    {
+      "solar": [
+        2000,
+        2,
+        6
+      ],
+      "lunar": [
+        2000,
+        1,
+        2,
+        false
+      ],
+      "dayPillar": "갑오",
+      "sourceGanji": "경진(庚辰)년 무인(戊寅)월 갑오(甲午)일",
+      "sourceMonth": "2000-02"
+    },
+    {
+      "solar": [
+        2000,
+        2,
+        7
+      ],
+      "lunar": [
+        2000,
+        1,
+        3,
+        false
+      ],
+      "dayPillar": "을미",
+      "sourceGanji": "경진(庚辰)년 무인(戊寅)월 을미(乙未)일",
+      "sourceMonth": "2000-02"
+    },
+    {
+      "solar": [
+        2000,
+        2,
+        8
+      ],
+      "lunar": [
+        2000,
+        1,
+        4,
+        false
+      ],
+      "dayPillar": "병신",
+      "sourceGanji": "경진(庚辰)년 무인(戊寅)월 병신(丙申)일",
+      "sourceMonth": "2000-02"
+    },
+    {
+      "solar": [
+        2000,
+        2,
+        9
+      ],
+      "lunar": [
+        2000,
+        1,
+        5,
+        false
+      ],
+      "dayPillar": "정유",
+      "sourceGanji": "경진(庚辰)년 무인(戊寅)월 정유(丁酉)일",
+      "sourceMonth": "2000-02"
+    },
+    {
+      "solar": [
+        2000,
+        2,
+        10
+      ],
+      "lunar": [
+        2000,
+        1,
+        6,
+        false
+      ],
+      "dayPillar": "무술",
+      "sourceGanji": "경진(庚辰)년 무인(戊寅)월 무술(戊戌)일",
+      "sourceMonth": "2000-02"
+    },
+    {
+      "solar": [
+        2000,
+        2,
+        11
+      ],
+      "lunar": [
+        2000,
+        1,
+        7,
+        false
+      ],
+      "dayPillar": "기해",
+      "sourceGanji": "경진(庚辰)년 무인(戊寅)월 기해(己亥)일",
+      "sourceMonth": "2000-02"
+    },
+    {
+      "solar": [
+        2000,
+        2,
+        12
+      ],
+      "lunar": [
+        2000,
+        1,
+        8,
+        false
+      ],
+      "dayPillar": "경자",
+      "sourceGanji": "경진(庚辰)년 무인(戊寅)월 경자(庚子)일",
+      "sourceMonth": "2000-02"
+    },
+    {
+      "solar": [
+        2000,
+        2,
+        13
+      ],
+      "lunar": [
+        2000,
+        1,
+        9,
+        false
+      ],
+      "dayPillar": "신축",
+      "sourceGanji": "경진(庚辰)년 무인(戊寅)월 신축(辛丑)일",
+      "sourceMonth": "2000-02"
+    },
+    {
+      "solar": [
+        2000,
+        2,
+        14
+      ],
+      "lunar": [
+        2000,
+        1,
+        10,
+        false
+      ],
+      "dayPillar": "임인",
+      "sourceGanji": "경진(庚辰)년 무인(戊寅)월 임인(壬寅)일",
+      "sourceMonth": "2000-02"
+    },
+    {
+      "solar": [
+        2000,
+        2,
+        15
+      ],
+      "lunar": [
+        2000,
+        1,
+        11,
+        false
+      ],
+      "dayPillar": "계묘",
+      "sourceGanji": "경진(庚辰)년 무인(戊寅)월 계묘(癸卯)일",
+      "sourceMonth": "2000-02"
+    },
+    {
+      "solar": [
+        2000,
+        2,
+        16
+      ],
+      "lunar": [
+        2000,
+        1,
+        12,
+        false
+      ],
+      "dayPillar": "갑진",
+      "sourceGanji": "경진(庚辰)년 무인(戊寅)월 갑진(甲辰)일",
+      "sourceMonth": "2000-02"
+    },
+    {
+      "solar": [
+        2000,
+        2,
+        17
+      ],
+      "lunar": [
+        2000,
+        1,
+        13,
+        false
+      ],
+      "dayPillar": "을사",
+      "sourceGanji": "경진(庚辰)년 무인(戊寅)월 을사(乙巳)일",
+      "sourceMonth": "2000-02"
+    },
+    {
+      "solar": [
+        2000,
+        2,
+        18
+      ],
+      "lunar": [
+        2000,
+        1,
+        14,
+        false
+      ],
+      "dayPillar": "병오",
+      "sourceGanji": "경진(庚辰)년 무인(戊寅)월 병오(丙午)일",
+      "sourceMonth": "2000-02"
+    },
+    {
+      "solar": [
+        2000,
+        2,
+        19
+      ],
+      "lunar": [
+        2000,
+        1,
+        15,
+        false
+      ],
+      "dayPillar": "정미",
+      "sourceGanji": "경진(庚辰)년 무인(戊寅)월 정미(丁未)일",
+      "sourceMonth": "2000-02"
+    },
+    {
+      "solar": [
+        2000,
+        2,
+        20
+      ],
+      "lunar": [
+        2000,
+        1,
+        16,
+        false
+      ],
+      "dayPillar": "무신",
+      "sourceGanji": "경진(庚辰)년 무인(戊寅)월 무신(戊申)일",
+      "sourceMonth": "2000-02"
+    },
+    {
+      "solar": [
+        2000,
+        2,
+        21
+      ],
+      "lunar": [
+        2000,
+        1,
+        17,
+        false
+      ],
+      "dayPillar": "기유",
+      "sourceGanji": "경진(庚辰)년 무인(戊寅)월 기유(己酉)일",
+      "sourceMonth": "2000-02"
+    },
+    {
+      "solar": [
+        2000,
+        2,
+        22
+      ],
+      "lunar": [
+        2000,
+        1,
+        18,
+        false
+      ],
+      "dayPillar": "경술",
+      "sourceGanji": "경진(庚辰)년 무인(戊寅)월 경술(庚戌)일",
+      "sourceMonth": "2000-02"
+    },
+    {
+      "solar": [
+        2000,
+        2,
+        23
+      ],
+      "lunar": [
+        2000,
+        1,
+        19,
+        false
+      ],
+      "dayPillar": "신해",
+      "sourceGanji": "경진(庚辰)년 무인(戊寅)월 신해(辛亥)일",
+      "sourceMonth": "2000-02"
+    },
+    {
+      "solar": [
+        2000,
+        2,
+        24
+      ],
+      "lunar": [
+        2000,
+        1,
+        20,
+        false
+      ],
+      "dayPillar": "임자",
+      "sourceGanji": "경진(庚辰)년 무인(戊寅)월 임자(壬子)일",
+      "sourceMonth": "2000-02"
+    },
+    {
+      "solar": [
+        2000,
+        2,
+        25
+      ],
+      "lunar": [
+        2000,
+        1,
+        21,
+        false
+      ],
+      "dayPillar": "계축",
+      "sourceGanji": "경진(庚辰)년 무인(戊寅)월 계축(癸丑)일",
+      "sourceMonth": "2000-02"
+    },
+    {
+      "solar": [
+        2000,
+        2,
+        26
+      ],
+      "lunar": [
+        2000,
+        1,
+        22,
+        false
+      ],
+      "dayPillar": "갑인",
+      "sourceGanji": "경진(庚辰)년 무인(戊寅)월 갑인(甲寅)일",
+      "sourceMonth": "2000-02"
+    },
+    {
+      "solar": [
+        2000,
+        2,
+        27
+      ],
+      "lunar": [
+        2000,
+        1,
+        23,
+        false
+      ],
+      "dayPillar": "을묘",
+      "sourceGanji": "경진(庚辰)년 무인(戊寅)월 을묘(乙卯)일",
+      "sourceMonth": "2000-02"
+    },
+    {
+      "solar": [
+        2000,
+        2,
+        28
+      ],
+      "lunar": [
+        2000,
+        1,
+        24,
+        false
+      ],
+      "dayPillar": "병진",
+      "sourceGanji": "경진(庚辰)년 무인(戊寅)월 병진(丙辰)일",
+      "sourceMonth": "2000-02"
+    },
+    {
+      "solar": [
+        2000,
+        2,
+        29
+      ],
+      "lunar": [
+        2000,
+        1,
+        25,
+        false
+      ],
+      "dayPillar": "정사",
+      "sourceGanji": "경진(庚辰)년 무인(戊寅)월 정사(丁巳)일",
+      "sourceMonth": "2000-02"
+    },
+    {
+      "solar": [
+        2012,
+        5,
+        1
+      ],
+      "lunar": [
+        2012,
+        3,
+        11,
+        true
+      ],
+      "dayPillar": "임술",
+      "sourceGanji": "임진(壬辰)년 임술(壬戌)일",
+      "sourceMonth": "2012-05"
+    },
+    {
+      "solar": [
+        2012,
+        5,
+        2
+      ],
+      "lunar": [
+        2012,
+        3,
+        12,
+        true
+      ],
+      "dayPillar": "계해",
+      "sourceGanji": "임진(壬辰)년 계해(癸亥)일",
+      "sourceMonth": "2012-05"
+    },
+    {
+      "solar": [
+        2012,
+        5,
+        3
+      ],
+      "lunar": [
+        2012,
+        3,
+        13,
+        true
+      ],
+      "dayPillar": "갑자",
+      "sourceGanji": "임진(壬辰)년 갑자(甲子)일",
+      "sourceMonth": "2012-05"
+    },
+    {
+      "solar": [
+        2012,
+        5,
+        4
+      ],
+      "lunar": [
+        2012,
+        3,
+        14,
+        true
+      ],
+      "dayPillar": "을축",
+      "sourceGanji": "임진(壬辰)년 을축(乙丑)일",
+      "sourceMonth": "2012-05"
+    },
+    {
+      "solar": [
+        2012,
+        5,
+        5
+      ],
+      "lunar": [
+        2012,
+        3,
+        15,
+        true
+      ],
+      "dayPillar": "병인",
+      "sourceGanji": "임진(壬辰)년 병인(丙寅)일",
+      "sourceMonth": "2012-05"
+    },
+    {
+      "solar": [
+        2012,
+        5,
+        6
+      ],
+      "lunar": [
+        2012,
+        3,
+        16,
+        true
+      ],
+      "dayPillar": "정묘",
+      "sourceGanji": "임진(壬辰)년 정묘(丁卯)일",
+      "sourceMonth": "2012-05"
+    },
+    {
+      "solar": [
+        2012,
+        5,
+        7
+      ],
+      "lunar": [
+        2012,
+        3,
+        17,
+        true
+      ],
+      "dayPillar": "무진",
+      "sourceGanji": "임진(壬辰)년 무진(戊辰)일",
+      "sourceMonth": "2012-05"
+    },
+    {
+      "solar": [
+        2012,
+        5,
+        8
+      ],
+      "lunar": [
+        2012,
+        3,
+        18,
+        true
+      ],
+      "dayPillar": "기사",
+      "sourceGanji": "임진(壬辰)년 기사(己巳)일",
+      "sourceMonth": "2012-05"
+    },
+    {
+      "solar": [
+        2012,
+        5,
+        9
+      ],
+      "lunar": [
+        2012,
+        3,
+        19,
+        true
+      ],
+      "dayPillar": "경오",
+      "sourceGanji": "임진(壬辰)년 경오(庚午)일",
+      "sourceMonth": "2012-05"
+    },
+    {
+      "solar": [
+        2012,
+        5,
+        10
+      ],
+      "lunar": [
+        2012,
+        3,
+        20,
+        true
+      ],
+      "dayPillar": "신미",
+      "sourceGanji": "임진(壬辰)년 신미(辛未)일",
+      "sourceMonth": "2012-05"
+    },
+    {
+      "solar": [
+        2012,
+        5,
+        11
+      ],
+      "lunar": [
+        2012,
+        3,
+        21,
+        true
+      ],
+      "dayPillar": "임신",
+      "sourceGanji": "임진(壬辰)년 임신(壬申)일",
+      "sourceMonth": "2012-05"
+    },
+    {
+      "solar": [
+        2012,
+        5,
+        12
+      ],
+      "lunar": [
+        2012,
+        3,
+        22,
+        true
+      ],
+      "dayPillar": "계유",
+      "sourceGanji": "임진(壬辰)년 계유(癸酉)일",
+      "sourceMonth": "2012-05"
+    },
+    {
+      "solar": [
+        2012,
+        5,
+        13
+      ],
+      "lunar": [
+        2012,
+        3,
+        23,
+        true
+      ],
+      "dayPillar": "갑술",
+      "sourceGanji": "임진(壬辰)년 갑술(甲戌)일",
+      "sourceMonth": "2012-05"
+    },
+    {
+      "solar": [
+        2012,
+        5,
+        14
+      ],
+      "lunar": [
+        2012,
+        3,
+        24,
+        true
+      ],
+      "dayPillar": "을해",
+      "sourceGanji": "임진(壬辰)년 을해(乙亥)일",
+      "sourceMonth": "2012-05"
+    },
+    {
+      "solar": [
+        2012,
+        5,
+        15
+      ],
+      "lunar": [
+        2012,
+        3,
+        25,
+        true
+      ],
+      "dayPillar": "병자",
+      "sourceGanji": "임진(壬辰)년 병자(丙子)일",
+      "sourceMonth": "2012-05"
+    },
+    {
+      "solar": [
+        2012,
+        5,
+        16
+      ],
+      "lunar": [
+        2012,
+        3,
+        26,
+        true
+      ],
+      "dayPillar": "정축",
+      "sourceGanji": "임진(壬辰)년 정축(丁丑)일",
+      "sourceMonth": "2012-05"
+    },
+    {
+      "solar": [
+        2012,
+        5,
+        17
+      ],
+      "lunar": [
+        2012,
+        3,
+        27,
+        true
+      ],
+      "dayPillar": "무인",
+      "sourceGanji": "임진(壬辰)년 무인(戊寅)일",
+      "sourceMonth": "2012-05"
+    },
+    {
+      "solar": [
+        2012,
+        5,
+        18
+      ],
+      "lunar": [
+        2012,
+        3,
+        28,
+        true
+      ],
+      "dayPillar": "기묘",
+      "sourceGanji": "임진(壬辰)년 기묘(己卯)일",
+      "sourceMonth": "2012-05"
+    },
+    {
+      "solar": [
+        2012,
+        5,
+        19
+      ],
+      "lunar": [
+        2012,
+        3,
+        29,
+        true
+      ],
+      "dayPillar": "경진",
+      "sourceGanji": "임진(壬辰)년 경진(庚辰)일",
+      "sourceMonth": "2012-05"
+    },
+    {
+      "solar": [
+        2012,
+        5,
+        20
+      ],
+      "lunar": [
+        2012,
+        3,
+        30,
+        true
+      ],
+      "dayPillar": "신사",
+      "sourceGanji": "임진(壬辰)년 신사(辛巳)일",
+      "sourceMonth": "2012-05"
+    },
+    {
+      "solar": [
+        2012,
+        5,
+        21
+      ],
+      "lunar": [
+        2012,
+        4,
+        1,
+        false
+      ],
+      "dayPillar": "임오",
+      "sourceGanji": "임진(壬辰)년 을사(乙巳)월 임오(壬午)일",
+      "sourceMonth": "2012-05"
+    },
+    {
+      "solar": [
+        2012,
+        5,
+        22
+      ],
+      "lunar": [
+        2012,
+        4,
+        2,
+        false
+      ],
+      "dayPillar": "계미",
+      "sourceGanji": "임진(壬辰)년 을사(乙巳)월 계미(癸未)일",
+      "sourceMonth": "2012-05"
+    },
+    {
+      "solar": [
+        2012,
+        5,
+        23
+      ],
+      "lunar": [
+        2012,
+        4,
+        3,
+        false
+      ],
+      "dayPillar": "갑신",
+      "sourceGanji": "임진(壬辰)년 을사(乙巳)월 갑신(甲申)일",
+      "sourceMonth": "2012-05"
+    },
+    {
+      "solar": [
+        2012,
+        5,
+        24
+      ],
+      "lunar": [
+        2012,
+        4,
+        4,
+        false
+      ],
+      "dayPillar": "을유",
+      "sourceGanji": "임진(壬辰)년 을사(乙巳)월 을유(乙酉)일",
+      "sourceMonth": "2012-05"
+    },
+    {
+      "solar": [
+        2012,
+        5,
+        25
+      ],
+      "lunar": [
+        2012,
+        4,
+        5,
+        false
+      ],
+      "dayPillar": "병술",
+      "sourceGanji": "임진(壬辰)년 을사(乙巳)월 병술(丙戌)일",
+      "sourceMonth": "2012-05"
+    },
+    {
+      "solar": [
+        2012,
+        5,
+        26
+      ],
+      "lunar": [
+        2012,
+        4,
+        6,
+        false
+      ],
+      "dayPillar": "정해",
+      "sourceGanji": "임진(壬辰)년 을사(乙巳)월 정해(丁亥)일",
+      "sourceMonth": "2012-05"
+    },
+    {
+      "solar": [
+        2012,
+        5,
+        27
+      ],
+      "lunar": [
+        2012,
+        4,
+        7,
+        false
+      ],
+      "dayPillar": "무자",
+      "sourceGanji": "임진(壬辰)년 을사(乙巳)월 무자(戊子)일",
+      "sourceMonth": "2012-05"
+    },
+    {
+      "solar": [
+        2012,
+        5,
+        28
+      ],
+      "lunar": [
+        2012,
+        4,
+        8,
+        false
+      ],
+      "dayPillar": "기축",
+      "sourceGanji": "임진(壬辰)년 을사(乙巳)월 기축(己丑)일",
+      "sourceMonth": "2012-05"
+    },
+    {
+      "solar": [
+        2012,
+        5,
+        29
+      ],
+      "lunar": [
+        2012,
+        4,
+        9,
+        false
+      ],
+      "dayPillar": "경인",
+      "sourceGanji": "임진(壬辰)년 을사(乙巳)월 경인(庚寅)일",
+      "sourceMonth": "2012-05"
+    },
+    {
+      "solar": [
+        2012,
+        5,
+        30
+      ],
+      "lunar": [
+        2012,
+        4,
+        10,
+        false
+      ],
+      "dayPillar": "신묘",
+      "sourceGanji": "임진(壬辰)년 을사(乙巳)월 신묘(辛卯)일",
+      "sourceMonth": "2012-05"
+    },
+    {
+      "solar": [
+        2012,
+        5,
+        31
+      ],
+      "lunar": [
+        2012,
+        4,
+        11,
+        false
+      ],
+      "dayPillar": "임진",
+      "sourceGanji": "임진(壬辰)년 을사(乙巳)월 임진(壬辰)일",
+      "sourceMonth": "2012-05"
+    },
+    {
+      "solar": [
+        2020,
+        5,
+        1
+      ],
+      "lunar": [
+        2020,
+        4,
+        9,
+        false
+      ],
+      "dayPillar": "갑진",
+      "sourceGanji": "경자(庚子)년 신사(辛巳)월 갑진(甲辰)일",
+      "sourceMonth": "2020-05"
+    },
+    {
+      "solar": [
+        2020,
+        5,
+        2
+      ],
+      "lunar": [
+        2020,
+        4,
+        10,
+        false
+      ],
+      "dayPillar": "을사",
+      "sourceGanji": "경자(庚子)년 신사(辛巳)월 을사(乙巳)일",
+      "sourceMonth": "2020-05"
+    },
+    {
+      "solar": [
+        2020,
+        5,
+        3
+      ],
+      "lunar": [
+        2020,
+        4,
+        11,
+        false
+      ],
+      "dayPillar": "병오",
+      "sourceGanji": "경자(庚子)년 신사(辛巳)월 병오(丙午)일",
+      "sourceMonth": "2020-05"
+    },
+    {
+      "solar": [
+        2020,
+        5,
+        4
+      ],
+      "lunar": [
+        2020,
+        4,
+        12,
+        false
+      ],
+      "dayPillar": "정미",
+      "sourceGanji": "경자(庚子)년 신사(辛巳)월 정미(丁未)일",
+      "sourceMonth": "2020-05"
+    },
+    {
+      "solar": [
+        2020,
+        5,
+        5
+      ],
+      "lunar": [
+        2020,
+        4,
+        13,
+        false
+      ],
+      "dayPillar": "무신",
+      "sourceGanji": "경자(庚子)년 신사(辛巳)월 무신(戊申)일",
+      "sourceMonth": "2020-05"
+    },
+    {
+      "solar": [
+        2020,
+        5,
+        6
+      ],
+      "lunar": [
+        2020,
+        4,
+        14,
+        false
+      ],
+      "dayPillar": "기유",
+      "sourceGanji": "경자(庚子)년 신사(辛巳)월 기유(己酉)일",
+      "sourceMonth": "2020-05"
+    },
+    {
+      "solar": [
+        2020,
+        5,
+        7
+      ],
+      "lunar": [
+        2020,
+        4,
+        15,
+        false
+      ],
+      "dayPillar": "경술",
+      "sourceGanji": "경자(庚子)년 신사(辛巳)월 경술(庚戌)일",
+      "sourceMonth": "2020-05"
+    },
+    {
+      "solar": [
+        2020,
+        5,
+        8
+      ],
+      "lunar": [
+        2020,
+        4,
+        16,
+        false
+      ],
+      "dayPillar": "신해",
+      "sourceGanji": "경자(庚子)년 신사(辛巳)월 신해(辛亥)일",
+      "sourceMonth": "2020-05"
+    },
+    {
+      "solar": [
+        2020,
+        5,
+        9
+      ],
+      "lunar": [
+        2020,
+        4,
+        17,
+        false
+      ],
+      "dayPillar": "임자",
+      "sourceGanji": "경자(庚子)년 신사(辛巳)월 임자(壬子)일",
+      "sourceMonth": "2020-05"
+    },
+    {
+      "solar": [
+        2020,
+        5,
+        10
+      ],
+      "lunar": [
+        2020,
+        4,
+        18,
+        false
+      ],
+      "dayPillar": "계축",
+      "sourceGanji": "경자(庚子)년 신사(辛巳)월 계축(癸丑)일",
+      "sourceMonth": "2020-05"
+    },
+    {
+      "solar": [
+        2020,
+        5,
+        11
+      ],
+      "lunar": [
+        2020,
+        4,
+        19,
+        false
+      ],
+      "dayPillar": "갑인",
+      "sourceGanji": "경자(庚子)년 신사(辛巳)월 갑인(甲寅)일",
+      "sourceMonth": "2020-05"
+    },
+    {
+      "solar": [
+        2020,
+        5,
+        12
+      ],
+      "lunar": [
+        2020,
+        4,
+        20,
+        false
+      ],
+      "dayPillar": "을묘",
+      "sourceGanji": "경자(庚子)년 신사(辛巳)월 을묘(乙卯)일",
+      "sourceMonth": "2020-05"
+    },
+    {
+      "solar": [
+        2020,
+        5,
+        13
+      ],
+      "lunar": [
+        2020,
+        4,
+        21,
+        false
+      ],
+      "dayPillar": "병진",
+      "sourceGanji": "경자(庚子)년 신사(辛巳)월 병진(丙辰)일",
+      "sourceMonth": "2020-05"
+    },
+    {
+      "solar": [
+        2020,
+        5,
+        14
+      ],
+      "lunar": [
+        2020,
+        4,
+        22,
+        false
+      ],
+      "dayPillar": "정사",
+      "sourceGanji": "경자(庚子)년 신사(辛巳)월 정사(丁巳)일",
+      "sourceMonth": "2020-05"
+    },
+    {
+      "solar": [
+        2020,
+        5,
+        15
+      ],
+      "lunar": [
+        2020,
+        4,
+        23,
+        false
+      ],
+      "dayPillar": "무오",
+      "sourceGanji": "경자(庚子)년 신사(辛巳)월 무오(戊午)일",
+      "sourceMonth": "2020-05"
+    },
+    {
+      "solar": [
+        2020,
+        5,
+        16
+      ],
+      "lunar": [
+        2020,
+        4,
+        24,
+        false
+      ],
+      "dayPillar": "기미",
+      "sourceGanji": "경자(庚子)년 신사(辛巳)월 기미(己未)일",
+      "sourceMonth": "2020-05"
+    },
+    {
+      "solar": [
+        2020,
+        5,
+        17
+      ],
+      "lunar": [
+        2020,
+        4,
+        25,
+        false
+      ],
+      "dayPillar": "경신",
+      "sourceGanji": "경자(庚子)년 신사(辛巳)월 경신(庚申)일",
+      "sourceMonth": "2020-05"
+    },
+    {
+      "solar": [
+        2020,
+        5,
+        18
+      ],
+      "lunar": [
+        2020,
+        4,
+        26,
+        false
+      ],
+      "dayPillar": "신유",
+      "sourceGanji": "경자(庚子)년 신사(辛巳)월 신유(辛酉)일",
+      "sourceMonth": "2020-05"
+    },
+    {
+      "solar": [
+        2020,
+        5,
+        19
+      ],
+      "lunar": [
+        2020,
+        4,
+        27,
+        false
+      ],
+      "dayPillar": "임술",
+      "sourceGanji": "경자(庚子)년 신사(辛巳)월 임술(壬戌)일",
+      "sourceMonth": "2020-05"
+    },
+    {
+      "solar": [
+        2020,
+        5,
+        20
+      ],
+      "lunar": [
+        2020,
+        4,
+        28,
+        false
+      ],
+      "dayPillar": "계해",
+      "sourceGanji": "경자(庚子)년 신사(辛巳)월 계해(癸亥)일",
+      "sourceMonth": "2020-05"
+    },
+    {
+      "solar": [
+        2020,
+        5,
+        21
+      ],
+      "lunar": [
+        2020,
+        4,
+        29,
+        false
+      ],
+      "dayPillar": "갑자",
+      "sourceGanji": "경자(庚子)년 신사(辛巳)월 갑자(甲子)일",
+      "sourceMonth": "2020-05"
+    },
+    {
+      "solar": [
+        2020,
+        5,
+        22
+      ],
+      "lunar": [
+        2020,
+        4,
+        30,
+        false
+      ],
+      "dayPillar": "을축",
+      "sourceGanji": "경자(庚子)년 신사(辛巳)월 을축(乙丑)일",
+      "sourceMonth": "2020-05"
+    },
+    {
+      "solar": [
+        2020,
+        5,
+        23
+      ],
+      "lunar": [
+        2020,
+        4,
+        1,
+        true
+      ],
+      "dayPillar": "병인",
+      "sourceGanji": "경자(庚子)년 병인(丙寅)일",
+      "sourceMonth": "2020-05"
+    },
+    {
+      "solar": [
+        2020,
+        5,
+        24
+      ],
+      "lunar": [
+        2020,
+        4,
+        2,
+        true
+      ],
+      "dayPillar": "정묘",
+      "sourceGanji": "경자(庚子)년 정묘(丁卯)일",
+      "sourceMonth": "2020-05"
+    },
+    {
+      "solar": [
+        2020,
+        5,
+        25
+      ],
+      "lunar": [
+        2020,
+        4,
+        3,
+        true
+      ],
+      "dayPillar": "무진",
+      "sourceGanji": "경자(庚子)년 무진(戊辰)일",
+      "sourceMonth": "2020-05"
+    },
+    {
+      "solar": [
+        2020,
+        5,
+        26
+      ],
+      "lunar": [
+        2020,
+        4,
+        4,
+        true
+      ],
+      "dayPillar": "기사",
+      "sourceGanji": "경자(庚子)년 기사(己巳)일",
+      "sourceMonth": "2020-05"
+    },
+    {
+      "solar": [
+        2020,
+        5,
+        27
+      ],
+      "lunar": [
+        2020,
+        4,
+        5,
+        true
+      ],
+      "dayPillar": "경오",
+      "sourceGanji": "경자(庚子)년 경오(庚午)일",
+      "sourceMonth": "2020-05"
+    },
+    {
+      "solar": [
+        2020,
+        5,
+        28
+      ],
+      "lunar": [
+        2020,
+        4,
+        6,
+        true
+      ],
+      "dayPillar": "신미",
+      "sourceGanji": "경자(庚子)년 신미(辛未)일",
+      "sourceMonth": "2020-05"
+    },
+    {
+      "solar": [
+        2020,
+        5,
+        29
+      ],
+      "lunar": [
+        2020,
+        4,
+        7,
+        true
+      ],
+      "dayPillar": "임신",
+      "sourceGanji": "경자(庚子)년 임신(壬申)일",
+      "sourceMonth": "2020-05"
+    },
+    {
+      "solar": [
+        2020,
+        5,
+        30
+      ],
+      "lunar": [
+        2020,
+        4,
+        8,
+        true
+      ],
+      "dayPillar": "계유",
+      "sourceGanji": "경자(庚子)년 계유(癸酉)일",
+      "sourceMonth": "2020-05"
+    },
+    {
+      "solar": [
+        2020,
+        5,
+        31
+      ],
+      "lunar": [
+        2020,
+        4,
+        9,
+        true
+      ],
+      "dayPillar": "갑술",
+      "sourceGanji": "경자(庚子)년 갑술(甲戌)일",
+      "sourceMonth": "2020-05"
+    },
+    {
+      "solar": [
+        2020,
+        6,
+        1
+      ],
+      "lunar": [
+        2020,
+        4,
+        10,
+        true
+      ],
+      "dayPillar": "을해",
+      "sourceGanji": "경자(庚子)년 을해(乙亥)일",
+      "sourceMonth": "2020-06"
+    },
+    {
+      "solar": [
+        2020,
+        6,
+        2
+      ],
+      "lunar": [
+        2020,
+        4,
+        11,
+        true
+      ],
+      "dayPillar": "병자",
+      "sourceGanji": "경자(庚子)년 병자(丙子)일",
+      "sourceMonth": "2020-06"
+    },
+    {
+      "solar": [
+        2020,
+        6,
+        3
+      ],
+      "lunar": [
+        2020,
+        4,
+        12,
+        true
+      ],
+      "dayPillar": "정축",
+      "sourceGanji": "경자(庚子)년 정축(丁丑)일",
+      "sourceMonth": "2020-06"
+    },
+    {
+      "solar": [
+        2020,
+        6,
+        4
+      ],
+      "lunar": [
+        2020,
+        4,
+        13,
+        true
+      ],
+      "dayPillar": "무인",
+      "sourceGanji": "경자(庚子)년 무인(戊寅)일",
+      "sourceMonth": "2020-06"
+    },
+    {
+      "solar": [
+        2020,
+        6,
+        5
+      ],
+      "lunar": [
+        2020,
+        4,
+        14,
+        true
+      ],
+      "dayPillar": "기묘",
+      "sourceGanji": "경자(庚子)년 기묘(己卯)일",
+      "sourceMonth": "2020-06"
+    },
+    {
+      "solar": [
+        2020,
+        6,
+        6
+      ],
+      "lunar": [
+        2020,
+        4,
+        15,
+        true
+      ],
+      "dayPillar": "경진",
+      "sourceGanji": "경자(庚子)년 경진(庚辰)일",
+      "sourceMonth": "2020-06"
+    },
+    {
+      "solar": [
+        2020,
+        6,
+        7
+      ],
+      "lunar": [
+        2020,
+        4,
+        16,
+        true
+      ],
+      "dayPillar": "신사",
+      "sourceGanji": "경자(庚子)년 신사(辛巳)일",
+      "sourceMonth": "2020-06"
+    },
+    {
+      "solar": [
+        2020,
+        6,
+        8
+      ],
+      "lunar": [
+        2020,
+        4,
+        17,
+        true
+      ],
+      "dayPillar": "임오",
+      "sourceGanji": "경자(庚子)년 임오(壬午)일",
+      "sourceMonth": "2020-06"
+    },
+    {
+      "solar": [
+        2020,
+        6,
+        9
+      ],
+      "lunar": [
+        2020,
+        4,
+        18,
+        true
+      ],
+      "dayPillar": "계미",
+      "sourceGanji": "경자(庚子)년 계미(癸未)일",
+      "sourceMonth": "2020-06"
+    },
+    {
+      "solar": [
+        2020,
+        6,
+        10
+      ],
+      "lunar": [
+        2020,
+        4,
+        19,
+        true
+      ],
+      "dayPillar": "갑신",
+      "sourceGanji": "경자(庚子)년 갑신(甲申)일",
+      "sourceMonth": "2020-06"
+    },
+    {
+      "solar": [
+        2020,
+        6,
+        11
+      ],
+      "lunar": [
+        2020,
+        4,
+        20,
+        true
+      ],
+      "dayPillar": "을유",
+      "sourceGanji": "경자(庚子)년 을유(乙酉)일",
+      "sourceMonth": "2020-06"
+    },
+    {
+      "solar": [
+        2020,
+        6,
+        12
+      ],
+      "lunar": [
+        2020,
+        4,
+        21,
+        true
+      ],
+      "dayPillar": "병술",
+      "sourceGanji": "경자(庚子)년 병술(丙戌)일",
+      "sourceMonth": "2020-06"
+    },
+    {
+      "solar": [
+        2020,
+        6,
+        13
+      ],
+      "lunar": [
+        2020,
+        4,
+        22,
+        true
+      ],
+      "dayPillar": "정해",
+      "sourceGanji": "경자(庚子)년 정해(丁亥)일",
+      "sourceMonth": "2020-06"
+    },
+    {
+      "solar": [
+        2020,
+        6,
+        14
+      ],
+      "lunar": [
+        2020,
+        4,
+        23,
+        true
+      ],
+      "dayPillar": "무자",
+      "sourceGanji": "경자(庚子)년 무자(戊子)일",
+      "sourceMonth": "2020-06"
+    },
+    {
+      "solar": [
+        2020,
+        6,
+        15
+      ],
+      "lunar": [
+        2020,
+        4,
+        24,
+        true
+      ],
+      "dayPillar": "기축",
+      "sourceGanji": "경자(庚子)년 기축(己丑)일",
+      "sourceMonth": "2020-06"
+    },
+    {
+      "solar": [
+        2020,
+        6,
+        16
+      ],
+      "lunar": [
+        2020,
+        4,
+        25,
+        true
+      ],
+      "dayPillar": "경인",
+      "sourceGanji": "경자(庚子)년 경인(庚寅)일",
+      "sourceMonth": "2020-06"
+    },
+    {
+      "solar": [
+        2020,
+        6,
+        17
+      ],
+      "lunar": [
+        2020,
+        4,
+        26,
+        true
+      ],
+      "dayPillar": "신묘",
+      "sourceGanji": "경자(庚子)년 신묘(辛卯)일",
+      "sourceMonth": "2020-06"
+    },
+    {
+      "solar": [
+        2020,
+        6,
+        18
+      ],
+      "lunar": [
+        2020,
+        4,
+        27,
+        true
+      ],
+      "dayPillar": "임진",
+      "sourceGanji": "경자(庚子)년 임진(壬辰)일",
+      "sourceMonth": "2020-06"
+    },
+    {
+      "solar": [
+        2020,
+        6,
+        19
+      ],
+      "lunar": [
+        2020,
+        4,
+        28,
+        true
+      ],
+      "dayPillar": "계사",
+      "sourceGanji": "경자(庚子)년 계사(癸巳)일",
+      "sourceMonth": "2020-06"
+    },
+    {
+      "solar": [
+        2020,
+        6,
+        20
+      ],
+      "lunar": [
+        2020,
+        4,
+        29,
+        true
+      ],
+      "dayPillar": "갑오",
+      "sourceGanji": "경자(庚子)년 갑오(甲午)일",
+      "sourceMonth": "2020-06"
+    },
+    {
+      "solar": [
+        2020,
+        6,
+        21
+      ],
+      "lunar": [
+        2020,
+        5,
+        1,
+        false
+      ],
+      "dayPillar": "을미",
+      "sourceGanji": "경자(庚子)년 임오(壬午)월 을미(乙未)일",
+      "sourceMonth": "2020-06"
+    },
+    {
+      "solar": [
+        2020,
+        6,
+        22
+      ],
+      "lunar": [
+        2020,
+        5,
+        2,
+        false
+      ],
+      "dayPillar": "병신",
+      "sourceGanji": "경자(庚子)년 임오(壬午)월 병신(丙申)일",
+      "sourceMonth": "2020-06"
+    },
+    {
+      "solar": [
+        2020,
+        6,
+        23
+      ],
+      "lunar": [
+        2020,
+        5,
+        3,
+        false
+      ],
+      "dayPillar": "정유",
+      "sourceGanji": "경자(庚子)년 임오(壬午)월 정유(丁酉)일",
+      "sourceMonth": "2020-06"
+    },
+    {
+      "solar": [
+        2020,
+        6,
+        24
+      ],
+      "lunar": [
+        2020,
+        5,
+        4,
+        false
+      ],
+      "dayPillar": "무술",
+      "sourceGanji": "경자(庚子)년 임오(壬午)월 무술(戊戌)일",
+      "sourceMonth": "2020-06"
+    },
+    {
+      "solar": [
+        2020,
+        6,
+        25
+      ],
+      "lunar": [
+        2020,
+        5,
+        5,
+        false
+      ],
+      "dayPillar": "기해",
+      "sourceGanji": "경자(庚子)년 임오(壬午)월 기해(己亥)일",
+      "sourceMonth": "2020-06"
+    },
+    {
+      "solar": [
+        2020,
+        6,
+        26
+      ],
+      "lunar": [
+        2020,
+        5,
+        6,
+        false
+      ],
+      "dayPillar": "경자",
+      "sourceGanji": "경자(庚子)년 임오(壬午)월 경자(庚子)일",
+      "sourceMonth": "2020-06"
+    },
+    {
+      "solar": [
+        2020,
+        6,
+        27
+      ],
+      "lunar": [
+        2020,
+        5,
+        7,
+        false
+      ],
+      "dayPillar": "신축",
+      "sourceGanji": "경자(庚子)년 임오(壬午)월 신축(辛丑)일",
+      "sourceMonth": "2020-06"
+    },
+    {
+      "solar": [
+        2020,
+        6,
+        28
+      ],
+      "lunar": [
+        2020,
+        5,
+        8,
+        false
+      ],
+      "dayPillar": "임인",
+      "sourceGanji": "경자(庚子)년 임오(壬午)월 임인(壬寅)일",
+      "sourceMonth": "2020-06"
+    },
+    {
+      "solar": [
+        2020,
+        6,
+        29
+      ],
+      "lunar": [
+        2020,
+        5,
+        9,
+        false
+      ],
+      "dayPillar": "계묘",
+      "sourceGanji": "경자(庚子)년 임오(壬午)월 계묘(癸卯)일",
+      "sourceMonth": "2020-06"
+    },
+    {
+      "solar": [
+        2020,
+        6,
+        30
+      ],
+      "lunar": [
+        2020,
+        5,
+        10,
+        false
+      ],
+      "dayPillar": "갑진",
+      "sourceGanji": "경자(庚子)년 임오(壬午)월 갑진(甲辰)일",
+      "sourceMonth": "2020-06"
+    },
+    {
+      "solar": [
+        2025,
+        7,
+        1
+      ],
+      "lunar": [
+        2025,
+        6,
+        7,
+        false
+      ],
+      "dayPillar": "신미",
+      "sourceGanji": "을사(乙巳)년 계미(癸未)월 신미(辛未)일",
+      "sourceMonth": "2025-07"
+    },
+    {
+      "solar": [
+        2025,
+        7,
+        2
+      ],
+      "lunar": [
+        2025,
+        6,
+        8,
+        false
+      ],
+      "dayPillar": "임신",
+      "sourceGanji": "을사(乙巳)년 계미(癸未)월 임신(壬申)일",
+      "sourceMonth": "2025-07"
+    },
+    {
+      "solar": [
+        2025,
+        7,
+        3
+      ],
+      "lunar": [
+        2025,
+        6,
+        9,
+        false
+      ],
+      "dayPillar": "계유",
+      "sourceGanji": "을사(乙巳)년 계미(癸未)월 계유(癸酉)일",
+      "sourceMonth": "2025-07"
+    },
+    {
+      "solar": [
+        2025,
+        7,
+        4
+      ],
+      "lunar": [
+        2025,
+        6,
+        10,
+        false
+      ],
+      "dayPillar": "갑술",
+      "sourceGanji": "을사(乙巳)년 계미(癸未)월 갑술(甲戌)일",
+      "sourceMonth": "2025-07"
+    },
+    {
+      "solar": [
+        2025,
+        7,
+        5
+      ],
+      "lunar": [
+        2025,
+        6,
+        11,
+        false
+      ],
+      "dayPillar": "을해",
+      "sourceGanji": "을사(乙巳)년 계미(癸未)월 을해(乙亥)일",
+      "sourceMonth": "2025-07"
+    },
+    {
+      "solar": [
+        2025,
+        7,
+        6
+      ],
+      "lunar": [
+        2025,
+        6,
+        12,
+        false
+      ],
+      "dayPillar": "병자",
+      "sourceGanji": "을사(乙巳)년 계미(癸未)월 병자(丙子)일",
+      "sourceMonth": "2025-07"
+    },
+    {
+      "solar": [
+        2025,
+        7,
+        7
+      ],
+      "lunar": [
+        2025,
+        6,
+        13,
+        false
+      ],
+      "dayPillar": "정축",
+      "sourceGanji": "을사(乙巳)년 계미(癸未)월 정축(丁丑)일",
+      "sourceMonth": "2025-07"
+    },
+    {
+      "solar": [
+        2025,
+        7,
+        8
+      ],
+      "lunar": [
+        2025,
+        6,
+        14,
+        false
+      ],
+      "dayPillar": "무인",
+      "sourceGanji": "을사(乙巳)년 계미(癸未)월 무인(戊寅)일",
+      "sourceMonth": "2025-07"
+    },
+    {
+      "solar": [
+        2025,
+        7,
+        9
+      ],
+      "lunar": [
+        2025,
+        6,
+        15,
+        false
+      ],
+      "dayPillar": "기묘",
+      "sourceGanji": "을사(乙巳)년 계미(癸未)월 기묘(己卯)일",
+      "sourceMonth": "2025-07"
+    },
+    {
+      "solar": [
+        2025,
+        7,
+        10
+      ],
+      "lunar": [
+        2025,
+        6,
+        16,
+        false
+      ],
+      "dayPillar": "경진",
+      "sourceGanji": "을사(乙巳)년 계미(癸未)월 경진(庚辰)일",
+      "sourceMonth": "2025-07"
+    },
+    {
+      "solar": [
+        2025,
+        7,
+        11
+      ],
+      "lunar": [
+        2025,
+        6,
+        17,
+        false
+      ],
+      "dayPillar": "신사",
+      "sourceGanji": "을사(乙巳)년 계미(癸未)월 신사(辛巳)일",
+      "sourceMonth": "2025-07"
+    },
+    {
+      "solar": [
+        2025,
+        7,
+        12
+      ],
+      "lunar": [
+        2025,
+        6,
+        18,
+        false
+      ],
+      "dayPillar": "임오",
+      "sourceGanji": "을사(乙巳)년 계미(癸未)월 임오(壬午)일",
+      "sourceMonth": "2025-07"
+    },
+    {
+      "solar": [
+        2025,
+        7,
+        13
+      ],
+      "lunar": [
+        2025,
+        6,
+        19,
+        false
+      ],
+      "dayPillar": "계미",
+      "sourceGanji": "을사(乙巳)년 계미(癸未)월 계미(癸未)일",
+      "sourceMonth": "2025-07"
+    },
+    {
+      "solar": [
+        2025,
+        7,
+        14
+      ],
+      "lunar": [
+        2025,
+        6,
+        20,
+        false
+      ],
+      "dayPillar": "갑신",
+      "sourceGanji": "을사(乙巳)년 계미(癸未)월 갑신(甲申)일",
+      "sourceMonth": "2025-07"
+    },
+    {
+      "solar": [
+        2025,
+        7,
+        15
+      ],
+      "lunar": [
+        2025,
+        6,
+        21,
+        false
+      ],
+      "dayPillar": "을유",
+      "sourceGanji": "을사(乙巳)년 계미(癸未)월 을유(乙酉)일",
+      "sourceMonth": "2025-07"
+    },
+    {
+      "solar": [
+        2025,
+        7,
+        16
+      ],
+      "lunar": [
+        2025,
+        6,
+        22,
+        false
+      ],
+      "dayPillar": "병술",
+      "sourceGanji": "을사(乙巳)년 계미(癸未)월 병술(丙戌)일",
+      "sourceMonth": "2025-07"
+    },
+    {
+      "solar": [
+        2025,
+        7,
+        17
+      ],
+      "lunar": [
+        2025,
+        6,
+        23,
+        false
+      ],
+      "dayPillar": "정해",
+      "sourceGanji": "을사(乙巳)년 계미(癸未)월 정해(丁亥)일",
+      "sourceMonth": "2025-07"
+    },
+    {
+      "solar": [
+        2025,
+        7,
+        18
+      ],
+      "lunar": [
+        2025,
+        6,
+        24,
+        false
+      ],
+      "dayPillar": "무자",
+      "sourceGanji": "을사(乙巳)년 계미(癸未)월 무자(戊子)일",
+      "sourceMonth": "2025-07"
+    },
+    {
+      "solar": [
+        2025,
+        7,
+        19
+      ],
+      "lunar": [
+        2025,
+        6,
+        25,
+        false
+      ],
+      "dayPillar": "기축",
+      "sourceGanji": "을사(乙巳)년 계미(癸未)월 기축(己丑)일",
+      "sourceMonth": "2025-07"
+    },
+    {
+      "solar": [
+        2025,
+        7,
+        20
+      ],
+      "lunar": [
+        2025,
+        6,
+        26,
+        false
+      ],
+      "dayPillar": "경인",
+      "sourceGanji": "을사(乙巳)년 계미(癸未)월 경인(庚寅)일",
+      "sourceMonth": "2025-07"
+    },
+    {
+      "solar": [
+        2025,
+        7,
+        21
+      ],
+      "lunar": [
+        2025,
+        6,
+        27,
+        false
+      ],
+      "dayPillar": "신묘",
+      "sourceGanji": "을사(乙巳)년 계미(癸未)월 신묘(辛卯)일",
+      "sourceMonth": "2025-07"
+    },
+    {
+      "solar": [
+        2025,
+        7,
+        22
+      ],
+      "lunar": [
+        2025,
+        6,
+        28,
+        false
+      ],
+      "dayPillar": "임진",
+      "sourceGanji": "을사(乙巳)년 계미(癸未)월 임진(壬辰)일",
+      "sourceMonth": "2025-07"
+    },
+    {
+      "solar": [
+        2025,
+        7,
+        23
+      ],
+      "lunar": [
+        2025,
+        6,
+        29,
+        false
+      ],
+      "dayPillar": "계사",
+      "sourceGanji": "을사(乙巳)년 계미(癸未)월 계사(癸巳)일",
+      "sourceMonth": "2025-07"
+    },
+    {
+      "solar": [
+        2025,
+        7,
+        24
+      ],
+      "lunar": [
+        2025,
+        6,
+        30,
+        false
+      ],
+      "dayPillar": "갑오",
+      "sourceGanji": "을사(乙巳)년 계미(癸未)월 갑오(甲午)일",
+      "sourceMonth": "2025-07"
+    },
+    {
+      "solar": [
+        2025,
+        7,
+        25
+      ],
+      "lunar": [
+        2025,
+        6,
+        1,
+        true
+      ],
+      "dayPillar": "을미",
+      "sourceGanji": "을사(乙巳)년 을미(乙未)일",
+      "sourceMonth": "2025-07"
+    },
+    {
+      "solar": [
+        2025,
+        7,
+        26
+      ],
+      "lunar": [
+        2025,
+        6,
+        2,
+        true
+      ],
+      "dayPillar": "병신",
+      "sourceGanji": "을사(乙巳)년 병신(丙申)일",
+      "sourceMonth": "2025-07"
+    },
+    {
+      "solar": [
+        2025,
+        7,
+        27
+      ],
+      "lunar": [
+        2025,
+        6,
+        3,
+        true
+      ],
+      "dayPillar": "정유",
+      "sourceGanji": "을사(乙巳)년 정유(丁酉)일",
+      "sourceMonth": "2025-07"
+    },
+    {
+      "solar": [
+        2025,
+        7,
+        28
+      ],
+      "lunar": [
+        2025,
+        6,
+        4,
+        true
+      ],
+      "dayPillar": "무술",
+      "sourceGanji": "을사(乙巳)년 무술(戊戌)일",
+      "sourceMonth": "2025-07"
+    },
+    {
+      "solar": [
+        2025,
+        7,
+        29
+      ],
+      "lunar": [
+        2025,
+        6,
+        5,
+        true
+      ],
+      "dayPillar": "기해",
+      "sourceGanji": "을사(乙巳)년 기해(己亥)일",
+      "sourceMonth": "2025-07"
+    },
+    {
+      "solar": [
+        2025,
+        7,
+        30
+      ],
+      "lunar": [
+        2025,
+        6,
+        6,
+        true
+      ],
+      "dayPillar": "경자",
+      "sourceGanji": "을사(乙巳)년 경자(庚子)일",
+      "sourceMonth": "2025-07"
+    },
+    {
+      "solar": [
+        2025,
+        7,
+        31
+      ],
+      "lunar": [
+        2025,
+        6,
+        7,
+        true
+      ],
+      "dayPillar": "신축",
+      "sourceGanji": "을사(乙巳)년 신축(辛丑)일",
+      "sourceMonth": "2025-07"
+    },
+    {
+      "solar": [
+        2025,
+        8,
+        1
+      ],
+      "lunar": [
+        2025,
+        6,
+        8,
+        true
+      ],
+      "dayPillar": "임인",
+      "sourceGanji": "을사(乙巳)년 임인(壬寅)일",
+      "sourceMonth": "2025-08"
+    },
+    {
+      "solar": [
+        2025,
+        8,
+        2
+      ],
+      "lunar": [
+        2025,
+        6,
+        9,
+        true
+      ],
+      "dayPillar": "계묘",
+      "sourceGanji": "을사(乙巳)년 계묘(癸卯)일",
+      "sourceMonth": "2025-08"
+    },
+    {
+      "solar": [
+        2025,
+        8,
+        3
+      ],
+      "lunar": [
+        2025,
+        6,
+        10,
+        true
+      ],
+      "dayPillar": "갑진",
+      "sourceGanji": "을사(乙巳)년 갑진(甲辰)일",
+      "sourceMonth": "2025-08"
+    },
+    {
+      "solar": [
+        2025,
+        8,
+        4
+      ],
+      "lunar": [
+        2025,
+        6,
+        11,
+        true
+      ],
+      "dayPillar": "을사",
+      "sourceGanji": "을사(乙巳)년 을사(乙巳)일",
+      "sourceMonth": "2025-08"
+    },
+    {
+      "solar": [
+        2025,
+        8,
+        5
+      ],
+      "lunar": [
+        2025,
+        6,
+        12,
+        true
+      ],
+      "dayPillar": "병오",
+      "sourceGanji": "을사(乙巳)년 병오(丙午)일",
+      "sourceMonth": "2025-08"
+    },
+    {
+      "solar": [
+        2025,
+        8,
+        6
+      ],
+      "lunar": [
+        2025,
+        6,
+        13,
+        true
+      ],
+      "dayPillar": "정미",
+      "sourceGanji": "을사(乙巳)년 정미(丁未)일",
+      "sourceMonth": "2025-08"
+    },
+    {
+      "solar": [
+        2025,
+        8,
+        7
+      ],
+      "lunar": [
+        2025,
+        6,
+        14,
+        true
+      ],
+      "dayPillar": "무신",
+      "sourceGanji": "을사(乙巳)년 무신(戊申)일",
+      "sourceMonth": "2025-08"
+    },
+    {
+      "solar": [
+        2025,
+        8,
+        8
+      ],
+      "lunar": [
+        2025,
+        6,
+        15,
+        true
+      ],
+      "dayPillar": "기유",
+      "sourceGanji": "을사(乙巳)년 기유(己酉)일",
+      "sourceMonth": "2025-08"
+    },
+    {
+      "solar": [
+        2025,
+        8,
+        9
+      ],
+      "lunar": [
+        2025,
+        6,
+        16,
+        true
+      ],
+      "dayPillar": "경술",
+      "sourceGanji": "을사(乙巳)년 경술(庚戌)일",
+      "sourceMonth": "2025-08"
+    },
+    {
+      "solar": [
+        2025,
+        8,
+        10
+      ],
+      "lunar": [
+        2025,
+        6,
+        17,
+        true
+      ],
+      "dayPillar": "신해",
+      "sourceGanji": "을사(乙巳)년 신해(辛亥)일",
+      "sourceMonth": "2025-08"
+    },
+    {
+      "solar": [
+        2025,
+        8,
+        11
+      ],
+      "lunar": [
+        2025,
+        6,
+        18,
+        true
+      ],
+      "dayPillar": "임자",
+      "sourceGanji": "을사(乙巳)년 임자(壬子)일",
+      "sourceMonth": "2025-08"
+    },
+    {
+      "solar": [
+        2025,
+        8,
+        12
+      ],
+      "lunar": [
+        2025,
+        6,
+        19,
+        true
+      ],
+      "dayPillar": "계축",
+      "sourceGanji": "을사(乙巳)년 계축(癸丑)일",
+      "sourceMonth": "2025-08"
+    },
+    {
+      "solar": [
+        2025,
+        8,
+        13
+      ],
+      "lunar": [
+        2025,
+        6,
+        20,
+        true
+      ],
+      "dayPillar": "갑인",
+      "sourceGanji": "을사(乙巳)년 갑인(甲寅)일",
+      "sourceMonth": "2025-08"
+    },
+    {
+      "solar": [
+        2025,
+        8,
+        14
+      ],
+      "lunar": [
+        2025,
+        6,
+        21,
+        true
+      ],
+      "dayPillar": "을묘",
+      "sourceGanji": "을사(乙巳)년 을묘(乙卯)일",
+      "sourceMonth": "2025-08"
+    },
+    {
+      "solar": [
+        2025,
+        8,
+        15
+      ],
+      "lunar": [
+        2025,
+        6,
+        22,
+        true
+      ],
+      "dayPillar": "병진",
+      "sourceGanji": "을사(乙巳)년 병진(丙辰)일",
+      "sourceMonth": "2025-08"
+    },
+    {
+      "solar": [
+        2025,
+        8,
+        16
+      ],
+      "lunar": [
+        2025,
+        6,
+        23,
+        true
+      ],
+      "dayPillar": "정사",
+      "sourceGanji": "을사(乙巳)년 정사(丁巳)일",
+      "sourceMonth": "2025-08"
+    },
+    {
+      "solar": [
+        2025,
+        8,
+        17
+      ],
+      "lunar": [
+        2025,
+        6,
+        24,
+        true
+      ],
+      "dayPillar": "무오",
+      "sourceGanji": "을사(乙巳)년 무오(戊午)일",
+      "sourceMonth": "2025-08"
+    },
+    {
+      "solar": [
+        2025,
+        8,
+        18
+      ],
+      "lunar": [
+        2025,
+        6,
+        25,
+        true
+      ],
+      "dayPillar": "기미",
+      "sourceGanji": "을사(乙巳)년 기미(己未)일",
+      "sourceMonth": "2025-08"
+    },
+    {
+      "solar": [
+        2025,
+        8,
+        19
+      ],
+      "lunar": [
+        2025,
+        6,
+        26,
+        true
+      ],
+      "dayPillar": "경신",
+      "sourceGanji": "을사(乙巳)년 경신(庚申)일",
+      "sourceMonth": "2025-08"
+    },
+    {
+      "solar": [
+        2025,
+        8,
+        20
+      ],
+      "lunar": [
+        2025,
+        6,
+        27,
+        true
+      ],
+      "dayPillar": "신유",
+      "sourceGanji": "을사(乙巳)년 신유(辛酉)일",
+      "sourceMonth": "2025-08"
+    },
+    {
+      "solar": [
+        2025,
+        8,
+        21
+      ],
+      "lunar": [
+        2025,
+        6,
+        28,
+        true
+      ],
+      "dayPillar": "임술",
+      "sourceGanji": "을사(乙巳)년 임술(壬戌)일",
+      "sourceMonth": "2025-08"
+    },
+    {
+      "solar": [
+        2025,
+        8,
+        22
+      ],
+      "lunar": [
+        2025,
+        6,
+        29,
+        true
+      ],
+      "dayPillar": "계해",
+      "sourceGanji": "을사(乙巳)년 계해(癸亥)일",
+      "sourceMonth": "2025-08"
+    },
+    {
+      "solar": [
+        2025,
+        8,
+        23
+      ],
+      "lunar": [
+        2025,
+        7,
+        1,
+        false
+      ],
+      "dayPillar": "갑자",
+      "sourceGanji": "을사(乙巳)년 갑신(甲申)월 갑자(甲子)일",
+      "sourceMonth": "2025-08"
+    },
+    {
+      "solar": [
+        2025,
+        8,
+        24
+      ],
+      "lunar": [
+        2025,
+        7,
+        2,
+        false
+      ],
+      "dayPillar": "을축",
+      "sourceGanji": "을사(乙巳)년 갑신(甲申)월 을축(乙丑)일",
+      "sourceMonth": "2025-08"
+    },
+    {
+      "solar": [
+        2025,
+        8,
+        25
+      ],
+      "lunar": [
+        2025,
+        7,
+        3,
+        false
+      ],
+      "dayPillar": "병인",
+      "sourceGanji": "을사(乙巳)년 갑신(甲申)월 병인(丙寅)일",
+      "sourceMonth": "2025-08"
+    },
+    {
+      "solar": [
+        2025,
+        8,
+        26
+      ],
+      "lunar": [
+        2025,
+        7,
+        4,
+        false
+      ],
+      "dayPillar": "정묘",
+      "sourceGanji": "을사(乙巳)년 갑신(甲申)월 정묘(丁卯)일",
+      "sourceMonth": "2025-08"
+    },
+    {
+      "solar": [
+        2025,
+        8,
+        27
+      ],
+      "lunar": [
+        2025,
+        7,
+        5,
+        false
+      ],
+      "dayPillar": "무진",
+      "sourceGanji": "을사(乙巳)년 갑신(甲申)월 무진(戊辰)일",
+      "sourceMonth": "2025-08"
+    },
+    {
+      "solar": [
+        2025,
+        8,
+        28
+      ],
+      "lunar": [
+        2025,
+        7,
+        6,
+        false
+      ],
+      "dayPillar": "기사",
+      "sourceGanji": "을사(乙巳)년 갑신(甲申)월 기사(己巳)일",
+      "sourceMonth": "2025-08"
+    },
+    {
+      "solar": [
+        2025,
+        8,
+        29
+      ],
+      "lunar": [
+        2025,
+        7,
+        7,
+        false
+      ],
+      "dayPillar": "경오",
+      "sourceGanji": "을사(乙巳)년 갑신(甲申)월 경오(庚午)일",
+      "sourceMonth": "2025-08"
+    },
+    {
+      "solar": [
+        2025,
+        8,
+        30
+      ],
+      "lunar": [
+        2025,
+        7,
+        8,
+        false
+      ],
+      "dayPillar": "신미",
+      "sourceGanji": "을사(乙巳)년 갑신(甲申)월 신미(辛未)일",
+      "sourceMonth": "2025-08"
+    },
+    {
+      "solar": [
+        2025,
+        8,
+        31
+      ],
+      "lunar": [
+        2025,
+        7,
+        9,
+        false
+      ],
+      "dayPillar": "임신",
+      "sourceGanji": "을사(乙巳)년 갑신(甲申)월 임신(壬申)일",
+      "sourceMonth": "2025-08"
+    },
+    {
+      "solar": [
+        2026,
+        2,
+        1
+      ],
+      "lunar": [
+        2025,
+        12,
+        14,
+        false
+      ],
+      "dayPillar": "병오",
+      "sourceGanji": "을사(乙巳)년 기축(己丑)월 병오(丙午)일",
+      "sourceMonth": "2026-02"
+    },
+    {
+      "solar": [
+        2026,
+        2,
+        2
+      ],
+      "lunar": [
+        2025,
+        12,
+        15,
+        false
+      ],
+      "dayPillar": "정미",
+      "sourceGanji": "을사(乙巳)년 기축(己丑)월 정미(丁未)일",
+      "sourceMonth": "2026-02"
+    },
+    {
+      "solar": [
+        2026,
+        2,
+        3
+      ],
+      "lunar": [
+        2025,
+        12,
+        16,
+        false
+      ],
+      "dayPillar": "무신",
+      "sourceGanji": "을사(乙巳)년 기축(己丑)월 무신(戊申)일",
+      "sourceMonth": "2026-02"
+    },
+    {
+      "solar": [
+        2026,
+        2,
+        4
+      ],
+      "lunar": [
+        2025,
+        12,
+        17,
+        false
+      ],
+      "dayPillar": "기유",
+      "sourceGanji": "을사(乙巳)년 기축(己丑)월 기유(己酉)일",
+      "sourceMonth": "2026-02"
+    },
+    {
+      "solar": [
+        2026,
+        2,
+        5
+      ],
+      "lunar": [
+        2025,
+        12,
+        18,
+        false
+      ],
+      "dayPillar": "경술",
+      "sourceGanji": "을사(乙巳)년 기축(己丑)월 경술(庚戌)일",
+      "sourceMonth": "2026-02"
+    },
+    {
+      "solar": [
+        2026,
+        2,
+        6
+      ],
+      "lunar": [
+        2025,
+        12,
+        19,
+        false
+      ],
+      "dayPillar": "신해",
+      "sourceGanji": "을사(乙巳)년 기축(己丑)월 신해(辛亥)일",
+      "sourceMonth": "2026-02"
+    },
+    {
+      "solar": [
+        2026,
+        2,
+        7
+      ],
+      "lunar": [
+        2025,
+        12,
+        20,
+        false
+      ],
+      "dayPillar": "임자",
+      "sourceGanji": "을사(乙巳)년 기축(己丑)월 임자(壬子)일",
+      "sourceMonth": "2026-02"
+    },
+    {
+      "solar": [
+        2026,
+        2,
+        8
+      ],
+      "lunar": [
+        2025,
+        12,
+        21,
+        false
+      ],
+      "dayPillar": "계축",
+      "sourceGanji": "을사(乙巳)년 기축(己丑)월 계축(癸丑)일",
+      "sourceMonth": "2026-02"
+    },
+    {
+      "solar": [
+        2026,
+        2,
+        9
+      ],
+      "lunar": [
+        2025,
+        12,
+        22,
+        false
+      ],
+      "dayPillar": "갑인",
+      "sourceGanji": "을사(乙巳)년 기축(己丑)월 갑인(甲寅)일",
+      "sourceMonth": "2026-02"
+    },
+    {
+      "solar": [
+        2026,
+        2,
+        10
+      ],
+      "lunar": [
+        2025,
+        12,
+        23,
+        false
+      ],
+      "dayPillar": "을묘",
+      "sourceGanji": "을사(乙巳)년 기축(己丑)월 을묘(乙卯)일",
+      "sourceMonth": "2026-02"
+    },
+    {
+      "solar": [
+        2026,
+        2,
+        11
+      ],
+      "lunar": [
+        2025,
+        12,
+        24,
+        false
+      ],
+      "dayPillar": "병진",
+      "sourceGanji": "을사(乙巳)년 기축(己丑)월 병진(丙辰)일",
+      "sourceMonth": "2026-02"
+    },
+    {
+      "solar": [
+        2026,
+        2,
+        12
+      ],
+      "lunar": [
+        2025,
+        12,
+        25,
+        false
+      ],
+      "dayPillar": "정사",
+      "sourceGanji": "을사(乙巳)년 기축(己丑)월 정사(丁巳)일",
+      "sourceMonth": "2026-02"
+    },
+    {
+      "solar": [
+        2026,
+        2,
+        13
+      ],
+      "lunar": [
+        2025,
+        12,
+        26,
+        false
+      ],
+      "dayPillar": "무오",
+      "sourceGanji": "을사(乙巳)년 기축(己丑)월 무오(戊午)일",
+      "sourceMonth": "2026-02"
+    },
+    {
+      "solar": [
+        2026,
+        2,
+        14
+      ],
+      "lunar": [
+        2025,
+        12,
+        27,
+        false
+      ],
+      "dayPillar": "기미",
+      "sourceGanji": "을사(乙巳)년 기축(己丑)월 기미(己未)일",
+      "sourceMonth": "2026-02"
+    },
+    {
+      "solar": [
+        2026,
+        2,
+        15
+      ],
+      "lunar": [
+        2025,
+        12,
+        28,
+        false
+      ],
+      "dayPillar": "경신",
+      "sourceGanji": "을사(乙巳)년 기축(己丑)월 경신(庚申)일",
+      "sourceMonth": "2026-02"
+    },
+    {
+      "solar": [
+        2026,
+        2,
+        16
+      ],
+      "lunar": [
+        2025,
+        12,
+        29,
+        false
+      ],
+      "dayPillar": "신유",
+      "sourceGanji": "을사(乙巳)년 기축(己丑)월 신유(辛酉)일",
+      "sourceMonth": "2026-02"
+    },
+    {
+      "solar": [
+        2026,
+        2,
+        17
+      ],
+      "lunar": [
+        2026,
+        1,
+        1,
+        false
+      ],
+      "dayPillar": "임술",
+      "sourceGanji": "병오(丙午)년 경인(庚寅)월 임술(壬戌)일",
+      "sourceMonth": "2026-02"
+    },
+    {
+      "solar": [
+        2026,
+        2,
+        18
+      ],
+      "lunar": [
+        2026,
+        1,
+        2,
+        false
+      ],
+      "dayPillar": "계해",
+      "sourceGanji": "병오(丙午)년 경인(庚寅)월 계해(癸亥)일",
+      "sourceMonth": "2026-02"
+    },
+    {
+      "solar": [
+        2026,
+        2,
+        19
+      ],
+      "lunar": [
+        2026,
+        1,
+        3,
+        false
+      ],
+      "dayPillar": "갑자",
+      "sourceGanji": "병오(丙午)년 경인(庚寅)월 갑자(甲子)일",
+      "sourceMonth": "2026-02"
+    },
+    {
+      "solar": [
+        2026,
+        2,
+        20
+      ],
+      "lunar": [
+        2026,
+        1,
+        4,
+        false
+      ],
+      "dayPillar": "을축",
+      "sourceGanji": "병오(丙午)년 경인(庚寅)월 을축(乙丑)일",
+      "sourceMonth": "2026-02"
+    },
+    {
+      "solar": [
+        2026,
+        2,
+        21
+      ],
+      "lunar": [
+        2026,
+        1,
+        5,
+        false
+      ],
+      "dayPillar": "병인",
+      "sourceGanji": "병오(丙午)년 경인(庚寅)월 병인(丙寅)일",
+      "sourceMonth": "2026-02"
+    },
+    {
+      "solar": [
+        2026,
+        2,
+        22
+      ],
+      "lunar": [
+        2026,
+        1,
+        6,
+        false
+      ],
+      "dayPillar": "정묘",
+      "sourceGanji": "병오(丙午)년 경인(庚寅)월 정묘(丁卯)일",
+      "sourceMonth": "2026-02"
+    },
+    {
+      "solar": [
+        2026,
+        2,
+        23
+      ],
+      "lunar": [
+        2026,
+        1,
+        7,
+        false
+      ],
+      "dayPillar": "무진",
+      "sourceGanji": "병오(丙午)년 경인(庚寅)월 무진(戊辰)일",
+      "sourceMonth": "2026-02"
+    },
+    {
+      "solar": [
+        2026,
+        2,
+        24
+      ],
+      "lunar": [
+        2026,
+        1,
+        8,
+        false
+      ],
+      "dayPillar": "기사",
+      "sourceGanji": "병오(丙午)년 경인(庚寅)월 기사(己巳)일",
+      "sourceMonth": "2026-02"
+    },
+    {
+      "solar": [
+        2026,
+        2,
+        25
+      ],
+      "lunar": [
+        2026,
+        1,
+        9,
+        false
+      ],
+      "dayPillar": "경오",
+      "sourceGanji": "병오(丙午)년 경인(庚寅)월 경오(庚午)일",
+      "sourceMonth": "2026-02"
+    },
+    {
+      "solar": [
+        2026,
+        2,
+        26
+      ],
+      "lunar": [
+        2026,
+        1,
+        10,
+        false
+      ],
+      "dayPillar": "신미",
+      "sourceGanji": "병오(丙午)년 경인(庚寅)월 신미(辛未)일",
+      "sourceMonth": "2026-02"
+    },
+    {
+      "solar": [
+        2026,
+        2,
+        27
+      ],
+      "lunar": [
+        2026,
+        1,
+        11,
+        false
+      ],
+      "dayPillar": "임신",
+      "sourceGanji": "병오(丙午)년 경인(庚寅)월 임신(壬申)일",
+      "sourceMonth": "2026-02"
+    },
+    {
+      "solar": [
+        2026,
+        2,
+        28
+      ],
+      "lunar": [
+        2026,
+        1,
+        12,
+        false
+      ],
+      "dayPillar": "계유",
+      "sourceGanji": "병오(丙午)년 경인(庚寅)월 계유(癸酉)일",
+      "sourceMonth": "2026-02"
+    },
+    {
+      "solar": [
+        2026,
+        10,
+        1
+      ],
+      "lunar": [
+        2026,
+        8,
+        21,
+        false
+      ],
+      "dayPillar": "무신",
+      "sourceGanji": "병오(丙午)년 정유(丁酉)월 무신(戊申)일",
+      "sourceMonth": "2026-10"
+    },
+    {
+      "solar": [
+        2026,
+        10,
+        2
+      ],
+      "lunar": [
+        2026,
+        8,
+        22,
+        false
+      ],
+      "dayPillar": "기유",
+      "sourceGanji": "병오(丙午)년 정유(丁酉)월 기유(己酉)일",
+      "sourceMonth": "2026-10"
+    },
+    {
+      "solar": [
+        2026,
+        10,
+        3
+      ],
+      "lunar": [
+        2026,
+        8,
+        23,
+        false
+      ],
+      "dayPillar": "경술",
+      "sourceGanji": "병오(丙午)년 정유(丁酉)월 경술(庚戌)일",
+      "sourceMonth": "2026-10"
+    },
+    {
+      "solar": [
+        2026,
+        10,
+        4
+      ],
+      "lunar": [
+        2026,
+        8,
+        24,
+        false
+      ],
+      "dayPillar": "신해",
+      "sourceGanji": "병오(丙午)년 정유(丁酉)월 신해(辛亥)일",
+      "sourceMonth": "2026-10"
+    },
+    {
+      "solar": [
+        2026,
+        10,
+        5
+      ],
+      "lunar": [
+        2026,
+        8,
+        25,
+        false
+      ],
+      "dayPillar": "임자",
+      "sourceGanji": "병오(丙午)년 정유(丁酉)월 임자(壬子)일",
+      "sourceMonth": "2026-10"
+    },
+    {
+      "solar": [
+        2026,
+        10,
+        6
+      ],
+      "lunar": [
+        2026,
+        8,
+        26,
+        false
+      ],
+      "dayPillar": "계축",
+      "sourceGanji": "병오(丙午)년 정유(丁酉)월 계축(癸丑)일",
+      "sourceMonth": "2026-10"
+    },
+    {
+      "solar": [
+        2026,
+        10,
+        7
+      ],
+      "lunar": [
+        2026,
+        8,
+        27,
+        false
+      ],
+      "dayPillar": "갑인",
+      "sourceGanji": "병오(丙午)년 정유(丁酉)월 갑인(甲寅)일",
+      "sourceMonth": "2026-10"
+    },
+    {
+      "solar": [
+        2026,
+        10,
+        8
+      ],
+      "lunar": [
+        2026,
+        8,
+        28,
+        false
+      ],
+      "dayPillar": "을묘",
+      "sourceGanji": "병오(丙午)년 정유(丁酉)월 을묘(乙卯)일",
+      "sourceMonth": "2026-10"
+    },
+    {
+      "solar": [
+        2026,
+        10,
+        9
+      ],
+      "lunar": [
+        2026,
+        8,
+        29,
+        false
+      ],
+      "dayPillar": "병진",
+      "sourceGanji": "병오(丙午)년 정유(丁酉)월 병진(丙辰)일",
+      "sourceMonth": "2026-10"
+    },
+    {
+      "solar": [
+        2026,
+        10,
+        10
+      ],
+      "lunar": [
+        2026,
+        8,
+        30,
+        false
+      ],
+      "dayPillar": "정사",
+      "sourceGanji": "병오(丙午)년 정유(丁酉)월 정사(丁巳)일",
+      "sourceMonth": "2026-10"
+    },
+    {
+      "solar": [
+        2026,
+        10,
+        11
+      ],
+      "lunar": [
+        2026,
+        9,
+        1,
+        false
+      ],
+      "dayPillar": "무오",
+      "sourceGanji": "병오(丙午)년 무술(戊戌)월 무오(戊午)일",
+      "sourceMonth": "2026-10"
+    },
+    {
+      "solar": [
+        2026,
+        10,
+        12
+      ],
+      "lunar": [
+        2026,
+        9,
+        2,
+        false
+      ],
+      "dayPillar": "기미",
+      "sourceGanji": "병오(丙午)년 무술(戊戌)월 기미(己未)일",
+      "sourceMonth": "2026-10"
+    },
+    {
+      "solar": [
+        2026,
+        10,
+        13
+      ],
+      "lunar": [
+        2026,
+        9,
+        3,
+        false
+      ],
+      "dayPillar": "경신",
+      "sourceGanji": "병오(丙午)년 무술(戊戌)월 경신(庚申)일",
+      "sourceMonth": "2026-10"
+    },
+    {
+      "solar": [
+        2026,
+        10,
+        14
+      ],
+      "lunar": [
+        2026,
+        9,
+        4,
+        false
+      ],
+      "dayPillar": "신유",
+      "sourceGanji": "병오(丙午)년 무술(戊戌)월 신유(辛酉)일",
+      "sourceMonth": "2026-10"
+    },
+    {
+      "solar": [
+        2026,
+        10,
+        15
+      ],
+      "lunar": [
+        2026,
+        9,
+        5,
+        false
+      ],
+      "dayPillar": "임술",
+      "sourceGanji": "병오(丙午)년 무술(戊戌)월 임술(壬戌)일",
+      "sourceMonth": "2026-10"
+    },
+    {
+      "solar": [
+        2026,
+        10,
+        16
+      ],
+      "lunar": [
+        2026,
+        9,
+        6,
+        false
+      ],
+      "dayPillar": "계해",
+      "sourceGanji": "병오(丙午)년 무술(戊戌)월 계해(癸亥)일",
+      "sourceMonth": "2026-10"
+    },
+    {
+      "solar": [
+        2026,
+        10,
+        17
+      ],
+      "lunar": [
+        2026,
+        9,
+        7,
+        false
+      ],
+      "dayPillar": "갑자",
+      "sourceGanji": "병오(丙午)년 무술(戊戌)월 갑자(甲子)일",
+      "sourceMonth": "2026-10"
+    },
+    {
+      "solar": [
+        2026,
+        10,
+        18
+      ],
+      "lunar": [
+        2026,
+        9,
+        8,
+        false
+      ],
+      "dayPillar": "을축",
+      "sourceGanji": "병오(丙午)년 무술(戊戌)월 을축(乙丑)일",
+      "sourceMonth": "2026-10"
+    },
+    {
+      "solar": [
+        2026,
+        10,
+        19
+      ],
+      "lunar": [
+        2026,
+        9,
+        9,
+        false
+      ],
+      "dayPillar": "병인",
+      "sourceGanji": "병오(丙午)년 무술(戊戌)월 병인(丙寅)일",
+      "sourceMonth": "2026-10"
+    },
+    {
+      "solar": [
+        2026,
+        10,
+        20
+      ],
+      "lunar": [
+        2026,
+        9,
+        10,
+        false
+      ],
+      "dayPillar": "정묘",
+      "sourceGanji": "병오(丙午)년 무술(戊戌)월 정묘(丁卯)일",
+      "sourceMonth": "2026-10"
+    },
+    {
+      "solar": [
+        2026,
+        10,
+        21
+      ],
+      "lunar": [
+        2026,
+        9,
+        11,
+        false
+      ],
+      "dayPillar": "무진",
+      "sourceGanji": "병오(丙午)년 무술(戊戌)월 무진(戊辰)일",
+      "sourceMonth": "2026-10"
+    },
+    {
+      "solar": [
+        2026,
+        10,
+        22
+      ],
+      "lunar": [
+        2026,
+        9,
+        12,
+        false
+      ],
+      "dayPillar": "기사",
+      "sourceGanji": "병오(丙午)년 무술(戊戌)월 기사(己巳)일",
+      "sourceMonth": "2026-10"
+    },
+    {
+      "solar": [
+        2026,
+        10,
+        23
+      ],
+      "lunar": [
+        2026,
+        9,
+        13,
+        false
+      ],
+      "dayPillar": "경오",
+      "sourceGanji": "병오(丙午)년 무술(戊戌)월 경오(庚午)일",
+      "sourceMonth": "2026-10"
+    },
+    {
+      "solar": [
+        2026,
+        10,
+        24
+      ],
+      "lunar": [
+        2026,
+        9,
+        14,
+        false
+      ],
+      "dayPillar": "신미",
+      "sourceGanji": "병오(丙午)년 무술(戊戌)월 신미(辛未)일",
+      "sourceMonth": "2026-10"
+    },
+    {
+      "solar": [
+        2026,
+        10,
+        25
+      ],
+      "lunar": [
+        2026,
+        9,
+        15,
+        false
+      ],
+      "dayPillar": "임신",
+      "sourceGanji": "병오(丙午)년 무술(戊戌)월 임신(壬申)일",
+      "sourceMonth": "2026-10"
+    },
+    {
+      "solar": [
+        2026,
+        10,
+        26
+      ],
+      "lunar": [
+        2026,
+        9,
+        16,
+        false
+      ],
+      "dayPillar": "계유",
+      "sourceGanji": "병오(丙午)년 무술(戊戌)월 계유(癸酉)일",
+      "sourceMonth": "2026-10"
+    },
+    {
+      "solar": [
+        2026,
+        10,
+        27
+      ],
+      "lunar": [
+        2026,
+        9,
+        17,
+        false
+      ],
+      "dayPillar": "갑술",
+      "sourceGanji": "병오(丙午)년 무술(戊戌)월 갑술(甲戌)일",
+      "sourceMonth": "2026-10"
+    },
+    {
+      "solar": [
+        2026,
+        10,
+        28
+      ],
+      "lunar": [
+        2026,
+        9,
+        18,
+        false
+      ],
+      "dayPillar": "을해",
+      "sourceGanji": "병오(丙午)년 무술(戊戌)월 을해(乙亥)일",
+      "sourceMonth": "2026-10"
+    },
+    {
+      "solar": [
+        2026,
+        10,
+        29
+      ],
+      "lunar": [
+        2026,
+        9,
+        19,
+        false
+      ],
+      "dayPillar": "병자",
+      "sourceGanji": "병오(丙午)년 무술(戊戌)월 병자(丙子)일",
+      "sourceMonth": "2026-10"
+    },
+    {
+      "solar": [
+        2026,
+        10,
+        30
+      ],
+      "lunar": [
+        2026,
+        9,
+        20,
+        false
+      ],
+      "dayPillar": "정축",
+      "sourceGanji": "병오(丙午)년 무술(戊戌)월 정축(丁丑)일",
+      "sourceMonth": "2026-10"
+    },
+    {
+      "solar": [
+        2026,
+        10,
+        31
+      ],
+      "lunar": [
+        2026,
+        9,
+        21,
+        false
+      ],
+      "dayPillar": "무인",
+      "sourceGanji": "병오(丙午)년 무술(戊戌)월 무인(戊寅)일",
+      "sourceMonth": "2026-10"
+    }
+  ],
+  "limitations": [
+    "Selected months only, not continuous coverage of 1908..2026.",
+    "The source lunar year/month ganji are not solar-term saju year/month pillars.",
+    "Historical outputs are the current service's proleptic Gregorian conversion, not period birth records or clock-transition evidence.",
+    "Day pillars are published date labels; they do not select 23:00 vs midnight or validate hour pillars."
+  ]
+}

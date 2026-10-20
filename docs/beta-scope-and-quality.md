@@ -75,3 +75,7 @@ python3 tools/check_docs.py
 ```
 
 `--check`는 자료 재현 여부를 검사한다. `--release-check`의 예상 종료 코드는 **2**다. 아직 없는 전문가·계산 승인과 사용자·외부 체험을 통과로 간주하지 않는다. 실제 실행 결과와 모바일 화면은 [QA 기록](../web/qa.md)에 남긴다.
+
+## 2026-10-20 후속 검토
+
+새 KASI 730일·풀이 100조합과 저장 계산의 기준/후보 표시를 [후속 감수](calendar-reading-release-review.md)에 추가했다. 위 베타 범위·풀이 v2·저장 결과는 유지한다. [종합 출시 조건](../research/validation/reports/release-readiness.md)은 자료 재현과 실제 미완료 승인 8개를 구분한다.

@@ -4,7 +4,7 @@
 
 ## 현재 상태
 
-- 기준일: 2026-10-19.
+- 기준일: 2026-10-20.
 - 10월 12일 ZIP의 체크섬을 대조하고 Git 이력을 복원했다. 10월 14일 별도 분기에서는 [캐릭터 설계](docs/13-character-plan.md)를 선별 통합했다.
 - 현재 작업 위치: `/Users/chulwan/Documents/Codex/2026-10-12/oxaz1234-gmail-com-google-drive-3/saju`.
 - 원격 저장소: https://github.com/wani3000/saju (main).
@@ -80,3 +80,5 @@
 첫 베타 범위는 [점수 없는 기호 설명판](docs/beta-scope-and-quality.md)으로 고정했다. 신규 문구는 `source-observations-copy-v2`이며 기존 결과는 보존한다. 문장·조건 17사례와 원문 22명조를 검토했고 연구 198개·웹 74개 검사 및 모바일 입력→결과→공유를 확인했다. 로컬 비공개 후보이며 실제 전문가 감수·사용자 이해도 관찰·외부 체험·유료 전환은 미완료다.
 
 사용 흐름·보안·출시 전 검사는 [로컬 자동 점검](docs/local-release-checks.md)으로 재현한다. 새로고침 시 소유권 확인 후 화면을 복원하고 수정 후 확인 화면으로 복귀한다. 정확한 API 경로·주문 소유권을 보강했으며 웹 77개 및 모바일 8사례 검사를 CI에 연결했다.
+
+2026-10-20 [달력·풀이 후속 감수와 출시 준비](docs/calendar-reading-release-review.md): KASI 16개 연도·24개월·730일을 추가 대조하고 풀이 100조합을 검사했다. 저장 계산의 후보값·자정/태양시 기준·역사 시각 주의를 화면에 보완했다. 연구 207개·웹 80개·모바일 12사례 통과. 계산/풀이 버전과 기존 결과는 유지하며 [출시 조건 8개](research/validation/reports/release-readiness.md)는 계속 미완료다.

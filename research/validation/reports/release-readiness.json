@@ -1,0 +1,113 @@
+{
+  "version": "local-release-readiness-v1",
+  "reviewedOn": "2026-10-20",
+  "scopeVersion": "private-beta-scope-v1",
+  "engineVersion": "research-civil-midnight-v5",
+  "readingVersion": "source-observations-copy-v2",
+  "evidence": {
+    "status": "source-reports-reproduced",
+    "calendarDays": 730,
+    "calendarYears": [
+      1908,
+      1912,
+      1920,
+      1930,
+      1940,
+      1948,
+      1954,
+      1961,
+      1972,
+      1987,
+      1988,
+      2000,
+      2012,
+      2020,
+      2025,
+      2026
+    ],
+    "calendarMonths": 24,
+    "syntheticReadingCombinations": 100,
+    "originalReferenceCharts": 22,
+    "betaCopyCases": 17,
+    "reports": [
+      {
+        "file": "calendar-reading-audit.json",
+        "sha256": "1065539b644cfc8e569908d0fa4c7ff93d29e334ed4df708e70309dcb4c52924"
+      },
+      {
+        "file": "beta-quality-audit.json",
+        "sha256": "382ef1fe844e57534433fdbeaed723a4315c646d8679f15d1ddc60dfbe33c9f3"
+      }
+    ]
+  },
+  "automatedSuiteExecution": "Not executed by this command. Unit/browser/DB/build checks are separate CI steps.",
+  "gates": [
+    {
+      "id": "calendar-policy",
+      "status": "pending",
+      "reason": "CALENDAR_POLICY_PENDING",
+      "evidence": "Range, midnight/solar-time convention, 1954 clock interpretation and model adoption need review."
+    },
+    {
+      "id": "expert-interpretation",
+      "status": "not-completed",
+      "reason": "EXPERT_REVIEW_PENDING",
+      "evidence": "Source/editorial review by Codex does not provide a human expert signature."
+    },
+    {
+      "id": "user-comprehension",
+      "status": "not-started",
+      "reason": "USER_STUDY_NOT_STARTED",
+      "evidence": "Observed human participants: 0."
+    },
+    {
+      "id": "private-access",
+      "status": "not-verified",
+      "reason": "PRIVATE_ACCESS_UNVERIFIED",
+      "evidence": "No externally hosted private pilot or access-control verification."
+    },
+    {
+      "id": "external-auth",
+      "status": "deferred-until-ready",
+      "reason": "EXTERNAL_AUTH_UNVERIFIED",
+      "evidence": "Supabase/Kakao actual round trip deferred at user direction; no credentials inspected."
+    },
+    {
+      "id": "external-payment",
+      "status": "deferred-until-ready",
+      "reason": "EXTERNAL_PAYMENT_UNVERIFIED",
+      "evidence": "NICEPAY actual sandbox round trip deferred; local mocks are not external payment evidence."
+    },
+    {
+      "id": "paid-product",
+      "status": "deferred",
+      "reason": "PAID_PRODUCT_NOT_APPROVED",
+      "evidence": "First free / additional KRW 2900 plan retained; paid scope/value and any score require separate approval."
+    },
+    {
+      "id": "operations",
+      "status": "not-verified",
+      "reason": "OPERATIONS_UNVERIFIED",
+      "evidence": "Hosted backup/restore, monitoring, support, consent/retention/refund policy and rollback rehearsal remain pending."
+    }
+  ],
+  "blockerIds": [
+    "CALENDAR_POLICY_PENDING",
+    "EXPERT_REVIEW_PENDING",
+    "USER_STUDY_NOT_STARTED",
+    "PRIVATE_ACCESS_UNVERIFIED",
+    "EXTERNAL_AUTH_UNVERIFIED",
+    "EXTERNAL_PAYMENT_UNVERIFIED",
+    "PAID_PRODUCT_NOT_APPROVED",
+    "OPERATIONS_UNVERIFIED"
+  ],
+  "status": "blocked",
+  "publicReleaseApproved": false,
+  "realChargesEnabled": false,
+  "humanExpertSignoff": "not-completed",
+  "limitations": [
+    "Reproducing reports cannot approve factual calendar accuracy or relationship predictions.",
+    "A passing CI run does not complete any human, external-service or hosted-operations gate.",
+    "No environment variable, secret, service account, deployment or actual user data is read or changed."
+  ]
+}

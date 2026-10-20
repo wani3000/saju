@@ -154,3 +154,7 @@ node research/validation/audit-extended-sources.mjs --check
 # 운영 미승인 종료 코드 2
 node research/validation/audit-extended-sources.mjs --release-check
 ```
+
+## 2026-10-20 KASI 월별 자료와 출시 준비 보고서
+
+`python3 collect-kasi-months.py --check`는 고정된 24개월·730행과 압축/원문 해시를 오프라인 검사한다. 재수집은 `--download`를 명시한 경우에만 실행한다. 공개 자료의 음력 연·월 표기는 절입 사주 연·월의 정답으로 사용하지 않는다. `node audit-calendar-reading.mjs --check`는 달력·기존 풀이의 연결, `node audit-release-readiness.mjs --check`는 종합 보고서를 재현한다. 후자의 `--release-check`는 현재 코드 2(미완료 조건 8개)가 기대값이며 0으로 우회하지 않는다. [근거·한계·화면 변경](../../docs/calendar-reading-release-review.md).

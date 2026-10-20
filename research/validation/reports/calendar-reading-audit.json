@@ -1,0 +1,322 @@
+{
+  "auditVersion": "calendar-reading-source-review-v1",
+  "reviewedOn": "2026-10-20",
+  "reviewer": "Codex",
+  "sourceScope": "KASI public monthly Gregorian conversion rows fetched separately from the pinned candidate table; not an independent astronomical model.",
+  "sourceSelection": {
+    "months": 24,
+    "years": [
+      1908,
+      1912,
+      1920,
+      1930,
+      1940,
+      1948,
+      1954,
+      1961,
+      1972,
+      1987,
+      1988,
+      2000,
+      2012,
+      2020,
+      2025,
+      2026
+    ],
+    "dateRows": 730,
+    "leapDateRows": 78
+  },
+  "checks": {
+    "solarToLunar": {
+      "passed": 730,
+      "failed": 0
+    },
+    "lunarToSolar": {
+      "passed": 730,
+      "failed": 0
+    },
+    "publishedDayLabelUnknownTime": {
+      "passed": 730,
+      "failed": 0
+    },
+    "noInventedHour": {
+      "passed": 730,
+      "failed": 0
+    },
+    "publishedDayLabelKnownMinutes": {
+      "passed": 5100,
+      "failed": 0
+    },
+    "calendarToReadingEvidence": {
+      "passed": 730,
+      "failed": 0
+    },
+    "noCalendarApprovalOrScore": {
+      "passed": 730,
+      "failed": 0
+    },
+    "lunarProfileEquivalent": {
+      "passed": 699,
+      "failed": 0
+    }
+  },
+  "failures": [],
+  "checksPassed": true,
+  "refusalScope": "Pinned IANA/v5 mechanism rechecks only; not additional historical evidence.",
+  "refusedKnownMinutes": {
+    "NONEXISTENT_BIRTH_TIME": 6,
+    "AMBIGUOUS_BIRTH_TIME": 2,
+    "HISTORICAL_CLOCK_SOURCE_DISPUTE": 2
+  },
+  "lunarInputRangeExcluded": {
+    "count": 31,
+    "solarDates": [
+      [
+        1908,
+        1,
+        1
+      ],
+      [
+        1908,
+        1,
+        2
+      ],
+      [
+        1908,
+        1,
+        3
+      ],
+      [
+        1908,
+        1,
+        4
+      ],
+      [
+        1908,
+        1,
+        5
+      ],
+      [
+        1908,
+        1,
+        6
+      ],
+      [
+        1908,
+        1,
+        7
+      ],
+      [
+        1908,
+        1,
+        8
+      ],
+      [
+        1908,
+        1,
+        9
+      ],
+      [
+        1908,
+        1,
+        10
+      ],
+      [
+        1908,
+        1,
+        11
+      ],
+      [
+        1908,
+        1,
+        12
+      ],
+      [
+        1908,
+        1,
+        13
+      ],
+      [
+        1908,
+        1,
+        14
+      ],
+      [
+        1908,
+        1,
+        15
+      ],
+      [
+        1908,
+        1,
+        16
+      ],
+      [
+        1908,
+        1,
+        17
+      ],
+      [
+        1908,
+        1,
+        18
+      ],
+      [
+        1908,
+        1,
+        19
+      ],
+      [
+        1908,
+        1,
+        20
+      ],
+      [
+        1908,
+        1,
+        21
+      ],
+      [
+        1908,
+        1,
+        22
+      ],
+      [
+        1908,
+        1,
+        23
+      ],
+      [
+        1908,
+        1,
+        24
+      ],
+      [
+        1908,
+        1,
+        25
+      ],
+      [
+        1908,
+        1,
+        26
+      ],
+      [
+        1908,
+        1,
+        27
+      ],
+      [
+        1908,
+        1,
+        28
+      ],
+      [
+        1908,
+        1,
+        29
+      ],
+      [
+        1908,
+        1,
+        30
+      ],
+      [
+        1908,
+        1,
+        31
+      ]
+    ],
+    "reason": "Gregorian 1908 dates can fall in lunar 1907, below the current lunar input lower bound. Raw conversion is checked; app-range equivalence is not claimed."
+  },
+  "lunarYearMonthAreNotSaju": {
+    "publishedMonthLabels": 652,
+    "yearMonthLabelDifferences": 139,
+    "examples": [
+      {
+        "solar": [
+          1908,
+          1,
+          4
+        ],
+        "sourceLunarYear": "정미",
+        "sourceLunarMonth": "계축",
+        "sajuYear": "정미",
+        "sajuMonth": "임자"
+      },
+      {
+        "solar": [
+          1908,
+          1,
+          5
+        ],
+        "sourceLunarYear": "정미",
+        "sourceLunarMonth": "계축",
+        "sajuYear": "정미",
+        "sajuMonth": "임자"
+      },
+      {
+        "solar": [
+          1908,
+          1,
+          6
+        ],
+        "sourceLunarYear": "정미",
+        "sourceLunarMonth": "계축",
+        "sajuYear": "정미",
+        "sajuMonth": "임자"
+      },
+      {
+        "solar": [
+          1908,
+          4,
+          1
+        ],
+        "sourceLunarYear": "무신",
+        "sourceLunarMonth": "병진",
+        "sajuYear": "무신",
+        "sajuMonth": "을묘"
+      },
+      {
+        "solar": [
+          1908,
+          4,
+          2
+        ],
+        "sourceLunarYear": "무신",
+        "sourceLunarMonth": "병진",
+        "sajuYear": "무신",
+        "sajuMonth": "을묘"
+      },
+      {
+        "solar": [
+          1908,
+          4,
+          3
+        ],
+        "sourceLunarYear": "무신",
+        "sourceLunarMonth": "병진",
+        "sajuYear": "무신",
+        "sajuMonth": "을묘"
+      }
+    ],
+    "verdict": "Expected convention difference, excluded from calendar failure counts."
+  },
+  "productionApproved": false,
+  "expertSignoff": "not-completed",
+  "limitations": [
+    "24 selected months are not continuous verification of the supported years.",
+    "Published calendar date labels do not prove birth-clock practice, hour pillars or a universally correct day-boundary convention.",
+    "No new strength, transformation, compatibility score or relationship prediction is introduced.",
+    "2026 fixtures include dates after the review date; calendar arithmetic tests do not relax the web future-birth rejection."
+  ],
+  "readingPermutations": {
+    "cases": 100,
+    "failures": [],
+    "candidateExpansionDoesNotAddConfirmedFacts": true,
+    "passed": true,
+    "scope": "Five day-element representatives x both sides x four editorial relationships; structural invariants only, no inferred relationship quality."
+  },
+  "sourceManifestSha256": "81da3513663e78281460d5292d199b39033c86f33b31bfc881783a05ee1e185c",
+  "derivedRowsSha256": "68941e8bfd8677d45588ed76178e81e71dea45c71af350b688a37baeb8f58ad8"
+}

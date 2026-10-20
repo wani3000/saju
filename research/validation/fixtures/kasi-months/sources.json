@@ -1,0 +1,388 @@
+{
+  "sources": [
+    {
+      "year": 1908,
+      "month": 1,
+      "file": "kasi-1908-01.html.gz",
+      "url": "https://astro.kasi.re.kr/kor/life/pageView/5",
+      "method": "POST",
+      "parameters": {
+        "search_year": "1908",
+        "search_month": "01",
+        "search_dp": "1",
+        "search_check": "G"
+      },
+      "retrievedOn": "2026-10-20",
+      "sha256": "b59eb044d1b043cc7945dd75000ee330989d4f106d0cabf5443a53faccb4e4e7",
+      "gzipSha256": "061be013baa24fd4d6842f557732fb13675b864990cd35a97e8c31aa1ca28b62"
+    },
+    {
+      "year": 1908,
+      "month": 4,
+      "file": "kasi-1908-04.html.gz",
+      "url": "https://astro.kasi.re.kr/kor/life/pageView/5",
+      "method": "POST",
+      "parameters": {
+        "search_year": "1908",
+        "search_month": "04",
+        "search_dp": "1",
+        "search_check": "G"
+      },
+      "retrievedOn": "2026-10-20",
+      "sha256": "c8be1af23df022340bd6d9f98e8888d4384998bb98bc58b6cd9e38d23181e94a",
+      "gzipSha256": "f98e2167e128fa162b0788e6876e9c0d8d7d62105db5adfc249e3422a26eeb94"
+    },
+    {
+      "year": 1912,
+      "month": 2,
+      "file": "kasi-1912-02.html.gz",
+      "url": "https://astro.kasi.re.kr/kor/life/pageView/5",
+      "method": "POST",
+      "parameters": {
+        "search_year": "1912",
+        "search_month": "02",
+        "search_dp": "1",
+        "search_check": "G"
+      },
+      "retrievedOn": "2026-10-20",
+      "sha256": "89b6acbee36c8f57cf6084d9c09604a8431c683e1dfdf3eeb184f30c733927fe",
+      "gzipSha256": "eaf2ea5c16972136786ec99c353ec1dd336fa5dbdcefa65f1dee406174888630"
+    },
+    {
+      "year": 1920,
+      "month": 2,
+      "file": "kasi-1920-02.html.gz",
+      "url": "https://astro.kasi.re.kr/kor/life/pageView/5",
+      "method": "POST",
+      "parameters": {
+        "search_year": "1920",
+        "search_month": "02",
+        "search_dp": "1",
+        "search_check": "G"
+      },
+      "retrievedOn": "2026-10-20",
+      "sha256": "2dd14a1f0fdbb7e2296b8f49db690cefc7104d475f69078112ce38a06b7f7f4f",
+      "gzipSha256": "8afed60b32d7ce014090410f4a940081de3ac6f20b6746393ccb86a2fae3b340"
+    },
+    {
+      "year": 1930,
+      "month": 1,
+      "file": "kasi-1930-01.html.gz",
+      "url": "https://astro.kasi.re.kr/kor/life/pageView/5",
+      "method": "POST",
+      "parameters": {
+        "search_year": "1930",
+        "search_month": "01",
+        "search_dp": "1",
+        "search_check": "G"
+      },
+      "retrievedOn": "2026-10-20",
+      "sha256": "a4a12eb749229e36fd7ff97b371088e326b028cb396edd6b04bb2ef7d07dc82b",
+      "gzipSha256": "978a94633f94d373ae1145bcacdbfd612094cb40108b6114bf0495c4a5567ac1"
+    },
+    {
+      "year": 1940,
+      "month": 2,
+      "file": "kasi-1940-02.html.gz",
+      "url": "https://astro.kasi.re.kr/kor/life/pageView/5",
+      "method": "POST",
+      "parameters": {
+        "search_year": "1940",
+        "search_month": "02",
+        "search_dp": "1",
+        "search_check": "G"
+      },
+      "retrievedOn": "2026-10-20",
+      "sha256": "8a932311fac6399f5fee878d99fe797786373c53071d520bfedd9fa855ad9f5b",
+      "gzipSha256": "27a3191dcc825a34823d1ee7528debfe3fdeab73c5e2b9600bc3e0ea185778d8"
+    },
+    {
+      "year": 1948,
+      "month": 6,
+      "file": "kasi-1948-06.html.gz",
+      "url": "https://astro.kasi.re.kr/kor/life/pageView/5",
+      "method": "POST",
+      "parameters": {
+        "search_year": "1948",
+        "search_month": "06",
+        "search_dp": "1",
+        "search_check": "G"
+      },
+      "retrievedOn": "2026-10-20",
+      "sha256": "c37c10431ba1fd87309379a863fa1405545fdab91b3b0fbb553fc5c38abbff46",
+      "gzipSha256": "4aa08ae7ec6e2579d6fa54b3e2b0279459fcd3a96325544a74bdd39e9c4c2712"
+    },
+    {
+      "year": 1954,
+      "month": 3,
+      "file": "kasi-1954-03.html.gz",
+      "url": "https://astro.kasi.re.kr/kor/life/pageView/5",
+      "method": "POST",
+      "parameters": {
+        "search_year": "1954",
+        "search_month": "03",
+        "search_dp": "1",
+        "search_check": "G"
+      },
+      "retrievedOn": "2026-10-20",
+      "sha256": "3e8b99ab817d47dba5d35b5e592cb16f52198aefdac3bcd5e1216deffbe184b2",
+      "gzipSha256": "a19d181f95110b461e804354750e7b5cac5e2cccf5797b84cc6877ac272413d8"
+    },
+    {
+      "year": 1954,
+      "month": 12,
+      "file": "kasi-1954-12.html.gz",
+      "url": "https://astro.kasi.re.kr/kor/life/pageView/5",
+      "method": "POST",
+      "parameters": {
+        "search_year": "1954",
+        "search_month": "12",
+        "search_dp": "1",
+        "search_check": "G"
+      },
+      "retrievedOn": "2026-10-20",
+      "sha256": "abbd5b10ef2957ef4901815fd970f30c89ae3b0a95df6e5e9ab9adc43f49f810",
+      "gzipSha256": "ea1914da541f323599fe28b3759e9c97424892afc1b5bd1f815efc892eea783b"
+    },
+    {
+      "year": 1961,
+      "month": 8,
+      "file": "kasi-1961-08.html.gz",
+      "url": "https://astro.kasi.re.kr/kor/life/pageView/5",
+      "method": "POST",
+      "parameters": {
+        "search_year": "1961",
+        "search_month": "08",
+        "search_dp": "1",
+        "search_check": "G"
+      },
+      "retrievedOn": "2026-10-20",
+      "sha256": "c216ecb1d49e8d24850aab12d1929be054c77e0c58bb5588bc5d35131e0f2d5b",
+      "gzipSha256": "47e01f94729c174ce32541323cf22047e56e8a083f3a2bfa43caed8710093e00"
+    },
+    {
+      "year": 1972,
+      "month": 1,
+      "file": "kasi-1972-01.html.gz",
+      "url": "https://astro.kasi.re.kr/kor/life/pageView/5",
+      "method": "POST",
+      "parameters": {
+        "search_year": "1972",
+        "search_month": "01",
+        "search_dp": "1",
+        "search_check": "G"
+      },
+      "retrievedOn": "2026-10-20",
+      "sha256": "50ae3886010ad708310a50356f2b584b70fa9aeba3a69b187dbdd2daed1ba743",
+      "gzipSha256": "60aa140addc7bceb5b7c7e367a0a6aed4d4dfb91e151c43a89c3450d5f305f9e"
+    },
+    {
+      "year": 1972,
+      "month": 7,
+      "file": "kasi-1972-07.html.gz",
+      "url": "https://astro.kasi.re.kr/kor/life/pageView/5",
+      "method": "POST",
+      "parameters": {
+        "search_year": "1972",
+        "search_month": "07",
+        "search_dp": "1",
+        "search_check": "G"
+      },
+      "retrievedOn": "2026-10-20",
+      "sha256": "e8ccc70fbe36d16b037a42c44b720cdcfca134c963cbcb395224754c31bd9624",
+      "gzipSha256": "6b8978d7f7217eb076bbac6d5d819cadb10087bf226450cb3467f9d578e44ec0"
+    },
+    {
+      "year": 1987,
+      "month": 5,
+      "file": "kasi-1987-05.html.gz",
+      "url": "https://astro.kasi.re.kr/kor/life/pageView/5",
+      "method": "POST",
+      "parameters": {
+        "search_year": "1987",
+        "search_month": "05",
+        "search_dp": "1",
+        "search_check": "G"
+      },
+      "retrievedOn": "2026-10-20",
+      "sha256": "dedf9977f8c28309e2d220fa9bcd877ac4e8841c23aff15300c41404f8f819ac",
+      "gzipSha256": "4f943ede74b0376f4f29fc578f3ecbd4be878b1ea6262e4bbdbad8695d2a0a6f"
+    },
+    {
+      "year": 1987,
+      "month": 10,
+      "file": "kasi-1987-10.html.gz",
+      "url": "https://astro.kasi.re.kr/kor/life/pageView/5",
+      "method": "POST",
+      "parameters": {
+        "search_year": "1987",
+        "search_month": "10",
+        "search_dp": "1",
+        "search_check": "G"
+      },
+      "retrievedOn": "2026-10-20",
+      "sha256": "1391bd7357aad1961a85b83324ccd92dd28c21f52e7a5c454e840e61bd863229",
+      "gzipSha256": "e6d208523c3e3b76c3b27a9f91349414c67b21398304cf01621f435dfdab44d4"
+    },
+    {
+      "year": 1988,
+      "month": 5,
+      "file": "kasi-1988-05.html.gz",
+      "url": "https://astro.kasi.re.kr/kor/life/pageView/5",
+      "method": "POST",
+      "parameters": {
+        "search_year": "1988",
+        "search_month": "05",
+        "search_dp": "1",
+        "search_check": "G"
+      },
+      "retrievedOn": "2026-10-20",
+      "sha256": "58aeed44187bf5cdedcafe90e9416769a7e311de2ac2e252fbc4b6506b4c259f",
+      "gzipSha256": "da2faa608be3ebc5f9d80187a7de05f459a13d0aa8abb1f962a4141fd7eeceb3"
+    },
+    {
+      "year": 1988,
+      "month": 10,
+      "file": "kasi-1988-10.html.gz",
+      "url": "https://astro.kasi.re.kr/kor/life/pageView/5",
+      "method": "POST",
+      "parameters": {
+        "search_year": "1988",
+        "search_month": "10",
+        "search_dp": "1",
+        "search_check": "G"
+      },
+      "retrievedOn": "2026-10-20",
+      "sha256": "a502069ede6b1cda0c1b4c28a79b5f9252807e15e17a50b2b69264982cf5f047",
+      "gzipSha256": "89eda7dd9c6f4e53e82ccedf9d6a77ec8fc822a92d6fd789f3c4a3cf416cdd2f"
+    },
+    {
+      "year": 2000,
+      "month": 2,
+      "file": "kasi-2000-02.html.gz",
+      "url": "https://astro.kasi.re.kr/kor/life/pageView/5",
+      "method": "POST",
+      "parameters": {
+        "search_year": "2000",
+        "search_month": "02",
+        "search_dp": "1",
+        "search_check": "G"
+      },
+      "retrievedOn": "2026-10-20",
+      "sha256": "88cf091f4e6e8d7d19a5809d3755ad923f009563cd4d7a5b2de979665a6f0719",
+      "gzipSha256": "92d9418df3d13373c73b312b1e9625c73864f68542decf9c630e7d65039912e7"
+    },
+    {
+      "year": 2012,
+      "month": 5,
+      "file": "kasi-2012-05.html.gz",
+      "url": "https://astro.kasi.re.kr/kor/life/pageView/5",
+      "method": "POST",
+      "parameters": {
+        "search_year": "2012",
+        "search_month": "05",
+        "search_dp": "1",
+        "search_check": "G"
+      },
+      "retrievedOn": "2026-10-20",
+      "sha256": "31e553206adabc3f843a3f630813f44de284dbc6153d5760e452bb5aca71d0cd",
+      "gzipSha256": "a96ac4ad99d63ec27d3e603388f6f29d3d2b41267c9c35b21de3f8954f1fc80f"
+    },
+    {
+      "year": 2020,
+      "month": 5,
+      "file": "kasi-2020-05.html.gz",
+      "url": "https://astro.kasi.re.kr/kor/life/pageView/5",
+      "method": "POST",
+      "parameters": {
+        "search_year": "2020",
+        "search_month": "05",
+        "search_dp": "1",
+        "search_check": "G"
+      },
+      "retrievedOn": "2026-10-20",
+      "sha256": "65c905f4a408653851e0d2ad4c2f6e86361d7a539241425bbdaa51515376220f",
+      "gzipSha256": "974002fd58b06d774aafe799e9b4d26e3b05ff1b4f0853704745446a750e6a23"
+    },
+    {
+      "year": 2020,
+      "month": 6,
+      "file": "kasi-2020-06.html.gz",
+      "url": "https://astro.kasi.re.kr/kor/life/pageView/5",
+      "method": "POST",
+      "parameters": {
+        "search_year": "2020",
+        "search_month": "06",
+        "search_dp": "1",
+        "search_check": "G"
+      },
+      "retrievedOn": "2026-10-20",
+      "sha256": "b81126c3752bbaa4a465d2422bcd5bd123c2696ee661dfdb258a100fe009e9a0",
+      "gzipSha256": "963532e619e1175973cf1e1c21dd0d0cb7deab78bdb8b9076cce3ccb2cb269d8"
+    },
+    {
+      "year": 2025,
+      "month": 7,
+      "file": "kasi-2025-07.html.gz",
+      "url": "https://astro.kasi.re.kr/kor/life/pageView/5",
+      "method": "POST",
+      "parameters": {
+        "search_year": "2025",
+        "search_month": "07",
+        "search_dp": "1",
+        "search_check": "G"
+      },
+      "retrievedOn": "2026-10-20",
+      "sha256": "1248e16154a756558df1bae5aff669220f141568febfc6df5d44951069282003",
+      "gzipSha256": "a3bc08f8f2b0219bb8fd54aeb8e6f8f3af6e5d11dc8628a08351c73091a6a770"
+    },
+    {
+      "year": 2025,
+      "month": 8,
+      "file": "kasi-2025-08.html.gz",
+      "url": "https://astro.kasi.re.kr/kor/life/pageView/5",
+      "method": "POST",
+      "parameters": {
+        "search_year": "2025",
+        "search_month": "08",
+        "search_dp": "1",
+        "search_check": "G"
+      },
+      "retrievedOn": "2026-10-20",
+      "sha256": "b66e9fde59be49abaad24cf866aed7709a64b51e13269370846436e70da56c5f",
+      "gzipSha256": "9cf1ad187e4a095599360be2e26e0335a34cd2515ae0d4f1d4c6d5ffdd55d399"
+    },
+    {
+      "year": 2026,
+      "month": 2,
+      "file": "kasi-2026-02.html.gz",
+      "url": "https://astro.kasi.re.kr/kor/life/pageView/5",
+      "method": "POST",
+      "parameters": {
+        "search_year": "2026",
+        "search_month": "02",
+        "search_dp": "1",
+        "search_check": "G"
+      },
+      "retrievedOn": "2026-10-20",
+      "sha256": "7801bec9d73fd56756b8bc8c5dd7b4ce7b87d95fac59a245fb3daf0ee28ebe14",
+      "gzipSha256": "f9321151a54384fe2c58946fb7653acdb9ab71fb0d8c73fe53b2aef09187d4f0"
+    },
+    {
+      "year": 2026,
+      "month": 10,
+      "file": "kasi-2026-10.html.gz",
+      "url": "https://astro.kasi.re.kr/kor/life/pageView/5",
+      "method": "POST",
+      "parameters": {
+        "search_year": "2026",
+        "search_month": "10",
+        "search_dp": "1",
+        "search_check": "G"
+      },
+      "retrievedOn": "2026-10-20",
+      "sha256": "0ccadfead7edd41e7a5af441ed72a58fc6a81f3542b3b1d05462b75e5054e060",
+      "gzipSha256": "803895e5b7a4bacf662a37a884a79cfe6436ae86145962711da0eb96ca062aa4"
+    }
+  ]
+}

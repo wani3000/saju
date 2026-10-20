@@ -4,17 +4,18 @@ async function start(page: Page) {
   await page.goto("/");
   await page.getByRole("button",{name:"첫 상대 무료로 보기",exact:true}).click();
 }
-async function review(page: Page) {
+async function review(page: Page, changeMe?: (page: Page) => Promise<void>) {
   await start(page);
   await page.getByRole("button",{name:"가상 정보 채우기"}).click();
+  await changeMe?.(page);
   await page.getByRole("button",{name:"저장하고 다음"}).click();
   await expect(page.getByRole("heading",{name:"상대방의 정보",exact:true})).toBeVisible();
   await page.getByRole("button",{name:"가상 정보 채우기"}).click();
   await page.getByRole("button",{name:"저장하고 다음"}).click();
   await expect(page.getByRole("heading",{name:"두 사람을 확인해요"})).toBeVisible();
 }
-async function result(page: Page) {
-  await review(page);
+async function result(page: Page, changeMe?: (page: Page) => Promise<void>) {
+  await review(page, changeMe);
   await page.getByRole("checkbox",{name:consent}).check();
   await page.getByRole("button",{name:"무료 기호 비교 보기"}).click();
   await expect(page.getByRole("heading",{name:"두 사람의 사주 기호",exact:true})).toBeVisible();
@@ -127,4 +128,28 @@ test("logout clears screen hints, recovery keeps the result and erasure disables
   await expect(page.getByRole("button",{name:"첫 상대 무료로 보기",exact:true})).toBeVisible();
   const publicPage=await context.newPage();await publicPage.goto(url);
   await expect(publicPage.getByRole("heading",{name:/지금은 볼 수 없는/})).toBeVisible();
+});
+
+for (const scenario of [
+  {id:"pre-standard-clock",year:"1908",month:"1",day:"1",expected:"1908년 4월 이전에는 서울 지역 평균시"},
+  {id:"solar-term-candidates",year:"2024",month:"2",day:"4",expected:"후보는 확률이나 정확도 순서가 아니에요."},
+]) test(`stored calculation review: ${scenario.id}`,async({page},testInfo)=>{
+  await result(page,async p=>{
+    await p.getByRole("textbox",{name:"년",exact:true}).fill(scenario.year);
+    await p.getByRole("textbox",{name:"월",exact:true}).fill(scenario.month);
+    await p.getByRole("textbox",{name:"일",exact:true}).fill(scenario.day);
+  });
+  const before=await (await page.request.get("/api/state")).json();
+  await page.getByText("생년월일 연구 계산 확인",{exact:true}).click();
+  await expect(page.getByText(new RegExp(scenario.expected.replace(/[().]/g,"\\$&")))).toBeVisible();
+  await expect(page.getByText("양력 환산: "+scenario.year+"년 "+scenario.month+"월 "+scenario.day+"일",{exact:true})).toBeVisible();
+  await expect(page.locator("dl.pillars").first().getByText("시간 모름",{exact:true})).toBeVisible();
+  if(scenario.id==="solar-term-candidates") {
+    await expect(page.locator("dl.pillars").first().getByText("계묘 / 갑진",{exact:true})).toBeVisible();
+    await expect(page.locator("dl.pillars").first().getByText("을축 / 병인",{exact:true})).toBeVisible();
+  }
+  await noOverflow(page);
+  await page.screenshot({path:testInfo.outputPath(scenario.id+".png"),fullPage:true,timeout:5000});
+  const after=await (await page.request.get("/api/state")).json();
+  expect(after.results).toEqual(before.results);expect(after.orders).toHaveLength(0);
 });

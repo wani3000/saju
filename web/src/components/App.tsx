@@ -8,6 +8,7 @@ import {
   type SavedResult,
 } from "@/domain/model";
 import PersonForm from "./PersonForm";
+import { reviewStoredChart } from "@/domain/chart-review";
 import { checkpoint, navigationKey, restoreNavigation } from "@/domain/navigation";
 function clearNavigation() {
   try { sessionStorage.removeItem(navigationKey); } catch { /* Storage can be unavailable. */ }
@@ -564,48 +565,21 @@ export default function App() {
                       중이며 시간 모름은 후보를 보존합니다.
                     </p>
                     {Object.entries(current.charts).map(([key, value]) => {
-                      const c = value as {
-                        pillars: Record<string, string | null>;
-                        candidates?: Record<string, string[]>;
-                        clockReview?: { reason: string };
-                      };
+                      const review = reviewStoredChart(value);
                       return (
                         <div key={key}>
-                          {c.clockReview && (
-                            <p className="notice">
-                              이 날짜는 과거 표준시 변경 자료가 서로 달라 검토 중이에요.
-                              출생 시간은 확정하지 않았어요.
-                            </p>
-                          )}
-                          <h3>
-                            {key === "me"
-                              ? current.me.name
-                              : current.other.name}
-                          </h3>
-                          <dl className="pillars">
-                            {Object.entries(c.pillars).map(([k, v]) => (
-                              <div key={k}>
-                                <dt>
-                                  {
-                                    {
-                                      year: "연주",
-                                      month: "월주",
-                                      day: "일주",
-                                      hour: "시주",
-                                    }[k]
-                                  }
-                                </dt>
-                                <dd>{v ?? "미확정"}</dd>
+                          <h3>{key === "me" ? current.me.name : current.other.name}</h3>
+                          {review.solarLabel && <p className="hint">양력 환산: {review.solarLabel}</p>}
+                          {review.conventions.map(text => <p className="hint" key={text}>{text}</p>)}
+                          {review.warnings.map(text => <p className="notice" key={text}>{text}</p>)}
+                          <dl className="pillars review-pillars">
+                            {review.pillars.map(p => (
+                              <div key={p.key}>
+                                <dt>{p.label}</dt>
+                                <dd>{p.value}</dd>
                               </div>
                             ))}
                           </dl>
-                          {c.candidates &&
-                            Object.keys(c.candidates).length > 0 && (
-                              <p>
-                                절입 경계로 가능한 결과가 여러 개예요. 임의로
-                                하나를 고르지 않았어요.
-                              </p>
-                            )}
                         </div>
                       );
                     })}
