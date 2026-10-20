@@ -11,7 +11,11 @@ const localEnv = Object.fromEntries(
   ["PATH", "HOME", "TMPDIR", "TEMP", "SystemRoot", "CI"].filter(k => process.env[k] !== undefined)
     .map(k => [k, process.env[k]]),
 );
-Object.assign(localEnv, { LC_ALL: "C", LANG: "C", SAJU_MODE: "research", PAYMENT_PROVIDER: "mock", SAJU_RESTORE_CHECK: "isolated-cluster" });
+Object.assign(localEnv, {
+  LC_ALL: "C", LANG: "C", SAJU_MODE: "research", PAYMENT_PROVIDER: "mock", SAJU_RESTORE_CHECK: "isolated-cluster",
+  PGPASSFILE: path.join(dir, "no-password-file"),
+  PGSERVICEFILE: path.join(dir, "no-service-file"),
+});
 function run(command, args, extra = {}) {
   const r = spawnSync(command, args, { encoding: "utf8", env: localEnv, ...extra });
   if (r.status !== 0)
@@ -46,6 +50,7 @@ try {
   started = true;
   const url = `postgresql://saju_admin@localhost:55439/postgres?host=${encodeURIComponent(dir)}`;
   run(path.join(bin, "psql"), [
+    "-X",
     url,
     "-v",
     "ON_ERROR_STOP=1",
@@ -53,6 +58,7 @@ try {
     "CREATE DATABASE saju_test",
   ]);
   run(path.join(bin, "psql"), [
+    "-X",
     url,
     "-v",
     "ON_ERROR_STOP=1",
