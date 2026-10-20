@@ -1,0 +1,67 @@
+{
+  "kind": "blank-template-not-participant-evidence",
+  "version": "comprehension-session-v1",
+  "engineVersion": "research-civil-midnight-v5",
+  "readingVersion": "source-observations-copy-v2",
+  "participantCode": null,
+  "voluntaryParticipationConfirmed": false,
+  "actualSessionOn": null,
+  "tasks": [
+    "Enter synthetic self and partner data",
+    "Edit and resume after reload",
+    "Explain the result in own words",
+    "Preview then share and revoke",
+    "Return to saved result without repurchase",
+    "Erase the synthetic account"
+  ],
+  "taskObservations": [],
+  "questions": [
+    {
+      "id": "Q1",
+      "prompt": "기준 오행은 사주 전체의 오행 비율인가요?",
+      "facilitatorExpected": "아니요. 태어난 날의 글자 한 개의 분류예요.",
+      "verbatimAnswer": null,
+      "understanding": "not-observed",
+      "assistanceRequired": null
+    },
+    {
+      "id": "Q2",
+      "prompt": "충이 있으면 관계가 나쁘다는 뜻인가요?",
+      "facilitatorExpected": "아니요. 기호의 짝 이름만 설명해요.",
+      "verbatimAnswer": null,
+      "understanding": "not-observed",
+      "assistanceRequired": null
+    },
+    {
+      "id": "Q3",
+      "prompt": "대화 제안은 생일로 추론한 성격인가요?",
+      "facilitatorExpected": "아니요. 관계 유형에 맞춘 편집 제안이에요.",
+      "verbatimAnswer": null,
+      "understanding": "not-observed",
+      "assistanceRequired": null
+    },
+    {
+      "id": "Q4",
+      "prompt": "공개 공유에서 생일·사주 기호를 볼 수 있나요?",
+      "facilitatorExpected": "아니요. 공개용 별명과 대화 주제만 공유해요.",
+      "verbatimAnswer": null,
+      "understanding": "not-observed",
+      "assistanceRequired": null
+    },
+    {
+      "id": "Q5",
+      "prompt": "새 버전이 나오면 이미 저장한 결과도 바뀌나요?",
+      "facilitatorExpected": "아니요. 생성 당시 버전을 보관해요.",
+      "verbatimAnswer": null,
+      "understanding": "not-observed",
+      "assistanceRequired": null
+    }
+  ],
+  "privacyComprehension": {
+    "autosaveExplained": "not-observed",
+    "publicAliasRiskExplained": "not-observed"
+  },
+  "barriers": [],
+  "followupRequired": null,
+  "completed": false
+}

@@ -59,6 +59,18 @@ r = await request("comparisons", {
 assert.equal(r.status, 422);
 assert.equal((await r.json()).code, "HISTORICAL_CLOCK_SOURCE_DISPUTE");
 assert.equal((await (await request("state")).json()).free, "available");
+for (const [month, day, code] of [["5", "8", "NONEXISTENT_BIRTH_TIME"], ["10", "9", "AMBIGUOUS_BIRTH_TIME"]]) {
+  r = await request("comparisons", {
+    pair: { ...pair, me: { ...pair.me, year: "1988", month, day, timeKnown: true, hour: "2", minute: "30" } },
+    key: randomUUID(), consent: true,
+  });
+  assert.equal(r.status, 422);
+  assert.equal((await r.json()).code, code);
+  const state = await (await request("state")).json();
+  assert.equal(state.free, "available");
+  assert.equal(state.orders.length, 0);
+  assert.deepEqual(state.draft, pair);
+}
 r = await request("comparisons", { pair, key: randomUUID(), consent: true });
 assert.equal(r.status, 200);
 const { id } = await r.json();

@@ -36,11 +36,14 @@ test("health distinguishes normal queue and live leases from failed and expired 
     assert.equal(report.status, "ok");
     assert.deepEqual(report.jobs, {
       queued: 2,
+      delayedQueued: 0,
+      oldestQueuedComparisonSeconds: report.jobs.oldestQueuedComparisonSeconds,
       running: 1,
       failed: 0,
       expiredLeases: 0,
       oldestExpiredLeaseSeconds: 0,
     });
+    assert.ok(report.jobs.oldestQueuedComparisonSeconds < 300);
     await db.query(
       "UPDATE generation_jobs SET lease_until=now()-interval '2 minutes' WHERE comparison_id=$1",
       [b.id],
@@ -67,6 +70,44 @@ test("health distinguishes normal queue and live leases from failed and expired 
   } finally {
     await db.close();
   }
+});
+
+test("a stopped worker produces a delayed-queue alert and maintenance clears it without exposing IDs", async () => {
+  const db = await setup();
+  try {
+    const { id, owner } = await queued(db);
+    await db.query("UPDATE comparisons SET created_at=now()-interval '6 minutes' WHERE id=$1", [id]);
+    const report = await health(db);
+    assert.deepEqual(report.reasons, ["DELAYED_QUEUE"]);
+    assert.equal(report.jobs.delayedQueued, 1);
+    assert.ok(report.jobs.oldestQueuedComparisonSeconds >= 360);
+    assert.equal(JSON.stringify(report).includes(id), false);
+    assert.equal(JSON.stringify(report).includes(owner), false);
+    const result = await maintenance(db);
+    assert.equal(result.health.status, "ok");
+    assert.equal(result.health.jobs.delayedQueued, 0);
+    assert.equal(result.health.jobs.oldestQueuedComparisonSeconds, 0);
+    assert.equal((await s.state(db, owner)).results.length, 1);
+  } finally { await db.close(); }
+});
+
+test("queue alarm threshold uses comparison age and ignores old completed jobs and fresh queued jobs", async () => {
+  const db = await setup();
+  try {
+    const old = await queued(db);
+    await db.query("UPDATE comparisons SET created_at=now()-interval '1 day' WHERE id=$1", [old.id]);
+    await s.runJobs(db, old.owner);
+    const fresh = await queued(db);
+    await db.query("UPDATE comparisons SET created_at=now()-interval '299 seconds' WHERE id=$1", [fresh.id]);
+    assert.equal((await health(db)).jobs.delayedQueued, 0);
+    // PostgreSQL now() is stable inside the transaction: test the exact inclusive endpoint.
+    await db.transaction(async tx => {
+      await tx.query("UPDATE comparisons SET created_at=now()-interval '300 seconds' WHERE id=$1", [fresh.id]);
+      const report = await health({ ...db, query: tx.query.bind(tx) });
+      assert.equal(report.jobs.delayedQueued, 1);
+      assert.equal(report.jobs.oldestQueuedComparisonSeconds, 300);
+    });
+  } finally { await db.close(); }
 });
 
 test("health separates pending payment states and reports order age, excluding closed orders", async () => {

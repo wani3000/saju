@@ -19,6 +19,9 @@ web/.data/
 web/src/generated/*.mjs
 web/*.tsbuildinfo
 
+# Completed human-review/user-study records belong outside the public repository.
+.local-review/
+
 # Large, verified external ephemeris (restore by manifest; never application data)
 research/validation/.ephemeris-cache/
 

@@ -16,6 +16,14 @@ export function chart(p: Person) {
       ...(p.timeKnown ? { hour: +p.hour, minute: +p.minute } : {}),
     });
   } catch (error) {
+    const code = error instanceof Error ? error.message : "";
+    const protectedErrors: Record<string, string> = {
+      NONEXISTENT_BIRTH_TIME: "이 시각은 과거 시계 변경으로 존재하지 않는 시각이에요. 출생 기록의 날짜와 시각을 확인해 주세요. 다른 시각으로 자동 보정하지 않았어요.",
+      AMBIGUOUS_BIRTH_TIME: "이 시각은 과거 시계 변경으로 두 번 나타나요. 어느 시각인지 확정할 수 없어 계산을 보류했어요. 출생 기록을 확인해 주세요.",
+      OUT_OF_RESEARCH_RANGE: "입력 연도와 양력 환산 연도가 모두 1908~2026년 범위여야 해요. 음력 입력이라면 양력 환산 날짜도 확인해 주세요.",
+    };
+    if (Object.hasOwn(protectedErrors, code))
+      throw new AppError(code, 422, protectedErrors[code]);
     if (error instanceof Error && error.message === "HISTORICAL_CLOCK_SOURCE_DISPUTE")
       throw new AppError("HISTORICAL_CLOCK_SOURCE_DISPUTE", 422,
         "이 출생 시각은 과거 표준시 변경 자료가 서로 달라 지금은 계산할 수 없어요. 입력한 시각을 그대로 보관해 주세요.");

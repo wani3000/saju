@@ -2,6 +2,8 @@ import { one, type Database } from "./db";
 import { runJobs } from "./service";
 import { reconcilePayment, refundPayment } from "./payments";
 import { AppError } from "../domain/model";
+// Local alarm starting point, not a production SLO or queue residence time.
+export const queuedComparisonAlertSeconds = 300;
 export async function erasePersonalData(
   db: Database,
   owner: string,
@@ -149,12 +151,14 @@ export async function health(db: Database) {
   const row = (await one(
     db,
     `WITH jobs AS (
-      SELECT count(*) FILTER (WHERE state='queued')::int AS queued,
-        count(*) FILTER (WHERE state='running')::int AS running,
-        count(*) FILTER (WHERE state='failed')::int AS failed,
-        count(*) FILTER (WHERE state='running' AND (lease_until IS NULL OR lease_until<now()))::int AS expired_leases,
-        coalesce(floor(max(extract(epoch FROM now()-lease_until)) FILTER (WHERE state='running' AND lease_until<now())),0)::float8 AS oldest_expired_lease_seconds
-      FROM generation_jobs
+      SELECT count(*) FILTER (WHERE j.state='queued')::int AS queued,
+        count(*) FILTER (WHERE j.state='queued' AND c.created_at<=now()-make_interval(secs => $1))::int AS delayed_queued,
+        coalesce(greatest(0,floor(max(extract(epoch FROM now()-c.created_at)) FILTER (WHERE j.state='queued'))),0)::float8 AS oldest_queued_comparison_seconds,
+        count(*) FILTER (WHERE j.state='running')::int AS running,
+        count(*) FILTER (WHERE j.state='failed')::int AS failed,
+        count(*) FILTER (WHERE j.state='running' AND (lease_until IS NULL OR lease_until<now()))::int AS expired_leases,
+        coalesce(floor(max(extract(epoch FROM now()-lease_until)) FILTER (WHERE j.state='running' AND lease_until<now())),0)::float8 AS oldest_expired_lease_seconds
+      FROM generation_jobs j JOIN comparisons c ON c.id=j.comparison_id AND c.owner_id=j.owner_id
     ), payments AS (
       SELECT count(*) FILTER (WHERE state='confirming')::int AS confirming,
         count(*) FILTER (WHERE state='confirmation_unknown')::int AS confirmation_unknown,
@@ -162,9 +166,12 @@ export async function health(db: Database) {
         coalesce(greatest(0,floor(max(extract(epoch FROM now()-created_at)))),0)::float8 AS oldest_pending_order_seconds
       FROM orders WHERE state IN ('confirming','confirmation_unknown','refund_pending')
     ) SELECT * FROM jobs CROSS JOIN payments`,
+    [queuedComparisonAlertSeconds],
   ))!;
   const jobs = {
     queued: row.queued as number,
+    delayedQueued: row.delayed_queued as number,
+    oldestQueuedComparisonSeconds: row.oldest_queued_comparison_seconds as number,
     running: row.running as number,
     failed: row.failed as number,
     expiredLeases: row.expired_leases as number,
@@ -180,6 +187,7 @@ export async function health(db: Database) {
   const reasons: string[] = [];
   if (jobs.failed) reasons.push("FAILED_JOBS");
   if (jobs.expiredLeases) reasons.push("EXPIRED_LEASES");
+  if (jobs.delayedQueued) reasons.push("DELAYED_QUEUE");
   if (
     payments.confirming ||
     payments.confirmationUnknown ||

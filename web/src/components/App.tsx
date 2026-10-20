@@ -8,6 +8,7 @@ import {
   type SavedResult,
 } from "@/domain/model";
 import PersonForm from "./PersonForm";
+import ResearchNotice from "./ResearchNotice";
 import { reviewStoredChart } from "@/domain/chart-review";
 import { checkpoint, navigationKey, restoreNavigation } from "@/domain/navigation";
 function clearNavigation() {
@@ -414,12 +415,13 @@ export default function App() {
               <p className="hint center">
                 입력한 생일로 두 사람의 사주 기호를 비교해요.
                 <br />
-                비공개 베타이며 궁합 점수는 제공하지 않아요.
+                로컬 검토판이며 궁합 점수는 제공하지 않아요.
               </p>
             </>
           )}
           {(view === "me" || view === "other") && (
             <>
+              <ResearchNotice />
               <PersonForm
                 key={view}
                 person={view === "me" ? pair.me : pair.other}

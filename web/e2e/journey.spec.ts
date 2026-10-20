@@ -24,6 +24,55 @@ async function noOverflow(page: Page) {
   const size=await page.evaluate(()=>({viewport:innerWidth,document:document.documentElement.scrollWidth}));
   expect(size.document).toBeLessThanOrEqual(size.viewport);
 }
+test("input policy and autosave notice are keyboard readable with doubled text before typing", async ({page}, testInfo) => {
+  await start(page);
+  const notice = page.getByRole("complementary", {name:"입력 전 확인"});
+  await expect(notice).toContainText("입력하는 동안");
+  await expect(notice).toContainText("자동 저장");
+  const summary = notice.locator("summary");
+  await summary.focus();
+  await page.keyboard.press("Space");
+  await expect(notice.getByRole("heading", {name:"계산 범위와 기준"})).toBeVisible();
+  await expect(notice).toContainText("양력 환산 연도");
+  await expect(notice).toContainText("로그인 연결 식별자는 남아요");
+  const before = await (await page.request.get("/api/state")).json();
+  expect(before.draft).toBeNull();
+  await page.evaluate(() => {
+    const sizes = [...document.querySelectorAll<HTMLElement>("h1,h2,h3,p,label,legend,input,select,button,summary,span,small")]
+      .map(el => [el, parseFloat(getComputedStyle(el).fontSize)] as const);
+    for (const [el, size] of sizes) el.style.fontSize = `${size * 2}px`;
+  });
+  await noOverflow(page);
+  await page.getByRole("button", {name:"가상 정보 채우기"}).click();
+  await page.getByRole("button", {name:"저장하고 다음"}).click();
+  await expect(page.getByRole("heading", {name:"상대방의 정보",exact:true})).toBeVisible();
+  await noOverflow(page);
+  await page.screenshot({path:testInfo.outputPath("input-policy-large-text.png"),fullPage:true,timeout:5000});
+});
+
+for (const scenario of [
+  {month:"5",day:"8",message:"존재하지 않는 시각"},
+  {month:"10",day:"9",message:"두 번 나타나요"},
+]) test(`protected historical clock: ${scenario.month}-${scenario.day}`, async ({page}) => {
+  await review(page, async p => {
+    await p.getByRole("textbox", {name:"년",exact:true}).fill("1988");
+    await p.getByRole("textbox", {name:"월",exact:true}).fill(scenario.month);
+    await p.getByRole("textbox", {name:"일",exact:true}).fill(scenario.day);
+    await p.getByRole("checkbox", {name:"시간을 몰라요"}).uncheck();
+    await p.getByRole("textbox", {name:"시 (0~23)",exact:true}).fill("2");
+    await p.getByRole("textbox", {name:"분 (0~59)",exact:true}).fill("30");
+  });
+  await page.getByRole("checkbox", {name:consent}).check();
+  await page.getByRole("button", {name:"무료 기호 비교 보기"}).click();
+  await expect(page.locator("main").getByRole("alert")).toContainText(scenario.message);
+  const state = await (await page.request.get("/api/state")).json();
+  expect(state.free).toBe("available");
+  expect(state.orders).toHaveLength(0);
+  expect(state.results).toHaveLength(0);
+  expect(state.draft.me.hour).toBe("2");
+  expect(state.draft.me.minute).toBe("30");
+  await noOverflow(page);
+});
 test("input errors, direct edit return and reload preserve the server draft without restoring consent",async({page},testInfo)=>{
   await start(page);
   await page.getByRole("button",{name:"저장하고 다음"}).click();

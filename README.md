@@ -5,6 +5,7 @@
 ## 현재 상태
 
 - 기준일: 2026-10-20.
+- 최신 준비: [계산 정책 권장안](docs/calculation-policy-candidate.md), [감수·사용자 검토 실행 묶음](docs/launch-review-kit.md), [출시·운영 절차](docs/launch-operations-runbook.md)를 마련했다. 입력 전 자동 저장/계산 기준 안내와 과거 시계 오류 구분, 대기 요청 지연 감지를 보완했다. 연구 246개·웹 86개·모바일 18사례 및 로컬 PostgreSQL 복원 통과. 실제 감수·사용자 관찰·외부/운영 승인 8건은 미완료다.
 - 10월 12일 ZIP의 체크섬을 대조하고 Git 이력을 복원했다. 10월 14일 별도 분기에서는 [캐릭터 설계](docs/13-character-plan.md)를 선별 통합했다.
 - 현재 작업 위치: `/Users/chulwan/Documents/Codex/2026-10-12/oxaz1234-gmail-com-google-drive-3/saju`.
 - 원격 저장소: https://github.com/wani3000/saju (main).

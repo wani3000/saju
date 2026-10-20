@@ -1,0 +1,100 @@
+{
+  "version": "launch-preparation-v1",
+  "status": "prepared-for-review-not-approved",
+  "publicReleaseApproved": false,
+  "realChargesEnabled": false,
+  "humanParticipantsObserved": 0,
+  "policyId": "local-explanation-calculation-policy-v1",
+  "engineVersion": "research-civil-midnight-v5",
+  "readingVersion": "source-observations-copy-v2",
+  "expertReviewItems": 46,
+  "sourceArtifacts": [
+    {
+      "file": "web/content/research-policy.json",
+      "sha256": "ce1f0d876de0c64260bcf01ee47d99779aebc392e0da4f0f5001147bc129243d"
+    },
+    {
+      "file": "research/validation/beta-scope.json",
+      "sha256": "9b17c5037d1380f902978f28c1a829a874ebad044ae4241191fe1e95db375bd9"
+    },
+    {
+      "file": "research/validation/reports/release-readiness.json",
+      "sha256": "b194f1e7b60f94966bf2471439c5eed1d462f824b7c86d107e72cfe7abdfa592"
+    },
+    {
+      "file": "research/validation/reports/beta-quality-audit.json",
+      "sha256": "382ef1fe844e57534433fdbeaed723a4315c646d8679f15d1ddc60dfbe33c9f3"
+    },
+    {
+      "file": "research/validation/reports/rescue-wangqi-audit.json",
+      "sha256": "d79468028c217ef18eef6ed63c855469162d8cb77bf5d1bb5737b53bbed99f7c"
+    }
+  ],
+  "gates": [
+    {
+      "id": "calendar-policy",
+      "status": "pending",
+      "reason": "CALENDAR_POLICY_PENDING",
+      "evidence": "Range, midnight/solar-time convention, 1954 clock interpretation and model adoption need review.",
+      "ownerRole": "calculation-reviewer",
+      "nextStep": "docs/calculation-policy-candidate.md"
+    },
+    {
+      "id": "expert-interpretation",
+      "status": "not-completed",
+      "reason": "EXPERT_REVIEW_PENDING",
+      "evidence": "Source/editorial review by Codex does not provide a human expert signature.",
+      "ownerRole": "human-domain-reviewer",
+      "nextStep": "docs/launch-review-kit.md"
+    },
+    {
+      "id": "user-comprehension",
+      "status": "not-started",
+      "reason": "USER_STUDY_NOT_STARTED",
+      "evidence": "Observed human participants: 0.",
+      "ownerRole": "research-facilitator-and-volunteers",
+      "nextStep": "docs/launch-review-kit.md"
+    },
+    {
+      "id": "private-access",
+      "status": "not-verified",
+      "reason": "PRIVATE_ACCESS_UNVERIFIED",
+      "evidence": "No externally hosted private pilot or access-control verification.",
+      "ownerRole": "developer-and-host-operator",
+      "nextStep": "docs/launch-operations-runbook.md"
+    },
+    {
+      "id": "external-auth",
+      "status": "deferred-until-ready",
+      "reason": "EXTERNAL_AUTH_UNVERIFIED",
+      "evidence": "Supabase/Kakao actual round trip deferred at user direction; no credentials inspected.",
+      "ownerRole": "account-owner-and-developer-when-ready",
+      "nextStep": "docs/launch-operations-runbook.md"
+    },
+    {
+      "id": "external-payment",
+      "status": "deferred-until-ready",
+      "reason": "EXTERNAL_PAYMENT_UNVERIFIED",
+      "evidence": "NICEPAY actual sandbox round trip deferred; local mocks are not external payment evidence.",
+      "ownerRole": "merchant-owner-and-developer-when-ready",
+      "nextStep": "docs/launch-operations-runbook.md"
+    },
+    {
+      "id": "paid-product",
+      "status": "deferred",
+      "reason": "PAID_PRODUCT_NOT_APPROVED",
+      "evidence": "First free / additional KRW 2900 plan retained; paid scope/value and any score require separate approval.",
+      "ownerRole": "product-owner",
+      "nextStep": "docs/launch-operations-runbook.md"
+    },
+    {
+      "id": "operations",
+      "status": "not-verified",
+      "reason": "OPERATIONS_UNVERIFIED",
+      "evidence": "Hosted backup/restore, monitoring, support, consent/retention/refund policy and rollback rehearsal remain pending.",
+      "ownerRole": "service-owner-and-host-operator",
+      "nextStep": "docs/launch-operations-runbook.md"
+    }
+  ],
+  "validation": "Template generation does not execute tests, certify policy, host a pilot or perform human review."
+}

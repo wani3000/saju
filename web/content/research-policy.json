@@ -1,0 +1,27 @@
+{
+  "id": "local-explanation-calculation-policy-v1",
+  "status": "candidate-not-production-approved",
+  "engineVersion": "research-civil-midnight-v5",
+  "readingVersion": "source-observations-copy-v2",
+  "productionApproved": false,
+  "input": { "region": "KR", "minimumYear": 1908, "maximumYear": 2026, "futureBirths": false },
+  "conventions": {
+    "dayBoundary": "midnight",
+    "yearMonthClock": "historical-utc",
+    "dayHourClock": "civil-wall",
+    "solarCorrection": false,
+    "unknownTime": "preserve-candidates-without-hour",
+    "boundaryReviewSeconds": 120
+  },
+  "comparisonPositions": ["year", "month", "day"],
+  "display": {
+    "range": "국내 출생 · 1908~2026년 연구 범위이며 오늘 이후 생일은 지원하지 않아요. 음력은 입력 연도와 양력 환산 연도가 모두 범위 안이어야 해요.",
+    "clock": "하루는 현지 시계의 자정에 바뀌며, 해·달은 입춘·절기 기준이에요. 태양시 보정은 하지 않아요.",
+    "uncertainty": "시간을 모르면 시주를 만들지 않아요. 절기 경계에서는 후보를 함께 남기며 하나를 임의로 고르지 않아요.",
+    "history": "과거 시계 변경으로 중복되거나 사라진 시각과 1954년 자료가 다른 일부 시각은 계산을 보류해요. 1908년 4월 이전과 1972년 이전의 시계 기준도 추가 검토 중이에요.",
+    "meaning": "연·월·일의 공통 기호만 비교해요. 성격·관계의 좋고 나쁨, 강약·합화 최종 판정과 궁합 점수는 제공하지 않아요.",
+    "storage": "입력하는 동안 별명·생년월일·출생 시간·관계가 이 개발 서버에 자동 저장돼요. 지금은 가상 정보로 검토해 주세요.",
+    "sharing": "새 기호 풀이의 공유 카드에는 직접 정한 공개 별명과 대화 주제만 담겨요. 공유할 내용은 미리보기에서 확인할 수 있어요.",
+    "erasure": "보관함의 ‘내 정보 삭제’로 생일·결과·공유 링크를 지울 수 있어요. 주문·동의·무료 이용 기록과 로그인 연결 식별자는 남아요. 확정할 운영 보관 기간은 아직 정해지지 않았어요."
+  }
+}
