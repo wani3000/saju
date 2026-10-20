@@ -1,6 +1,23 @@
 # 김춘배 훈장 임시 체험 배포
 
-## 최신: 성향·궁합 이야기 v3
+## 최신: 전체 사주 성격·궁합 v4 · 2026-10-21
+
+[전체 사주 반영 범위](whole-chart-personality-v4.md)를 새 결과에 적용했다.
+
+- GitHub 소스c0d80c5의 Research/Web/Prototype validation 모두 성공.
+- 소스 c0d80c5 / 배포 dpl_Bm4boq1buQacjdVvCxtfCAddVAVp / Ready / preview.
+- 주소: https://chunbae-preview-qgxvpp7o7-oxaz1234-gmailcoms-projects.vercel.app
+- 7일 체험 링크 만료: 2026-10-28 08:03:54 KST. 토큰은 사용자에게만 전달하고 Git에서 제외한다. 프로젝트 접근 보호와 외부 전송 차단을 유지한다.
+- 원격 Chrome에서 가상 나래/하루의 출생 시간9:30/11:30 입력→동의→두 시주 포함 성격/궁합 생성. 월주의 상관/편인 차이가 같은 기둥 자리 비교와 대화 제안에 반영됨을 확인했다. 연/월/일/시 세부와 십성 근거 펼침, 새로고침 복원 확인.
+- 한쪽만 시간을 아는 경우도 로컬 UI와 단위 검사에서 확인했다. 모르는 쪽의 시주는 만들지 않으며 같은 일주의 월주/시간 변경이 실제 해설을 바꾼다.
+- 웹111개·HTTP/모바일18사례·빌드/타입/정적 빌드 통과. 원격 HTTP200, 배포와 로컬 JS/CSS 해시 일치, noindex와 CSP connect-src none 유지.
+- 320/390px 가로 넘침 없음, 앱 출처 console error/warn 없음. 실제 외부 인증/PG·전문가 승인·사용자 관찰의 완료 증거는 아니다.
+
+[성격390px](../web/qa-evidence/chunbae-v4-personality-390.jpg) · [궁합390px](../web/qa-evidence/chunbae-v4-pair-390.jpg) · [궁합320px](../web/qa-evidence/chunbae-v4-pair-320.jpg) · [기둥/시주 근거](../web/qa-evidence/chunbae-v4-evidence-390.jpg).
+
+이전 배포와 결과는 아래의 당시 기록으로 보존한다.
+
+## 이전: 성향·궁합 이야기 v3
 
 2026-10-20 사용자 피드백에 따른 [새 결과](symbolic-personality-v3.md)를 배포했다.
 
