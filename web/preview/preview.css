@@ -1,0 +1,4 @@
+.preview-banner { max-width:520px; margin:auto; padding:14px 24px; border-bottom:1px solid var(--line); font-size:14px; line-height:1.7; color:var(--muted); }
+.preview-banner strong { color:var(--ink); }
+.preview-banner summary { font-size:13px; font-weight:400; text-decoration:underline; text-underline-offset:3px; margin-top:3px; }
+.preview-banner p { font-size:14px; margin:10px 0; }

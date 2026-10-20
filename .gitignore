@@ -27,3 +27,7 @@ research/validation/.ephemeris-cache/
 
 # Full primary-source PDFs; page images and hashes are committed instead.
 research/validation/.reference-cache/
+
+# Isolated static demo build and local deployment metadata
+web/.preview-dist/
+.vercel/

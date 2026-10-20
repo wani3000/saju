@@ -27,6 +27,8 @@ jobs:
         run: PG_BIN="$(pg_config --bindir)" npm run test:postgres --prefix web
       - run: npm run build --prefix web
       - run: npm run typecheck --prefix web
+      - name: Build isolated browser preview
+        run: npm run build:preview --prefix web
       - name: Install test browser
         working-directory: web
         run: npx playwright install --with-deps chromium

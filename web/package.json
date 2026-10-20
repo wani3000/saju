@@ -19,7 +19,8 @@
     "test:postgres": "node scripts/postgres-check.mjs",
     "test:journey": "node scripts/check-journey.mjs",
     "check:staging": "tsx scripts/staging.ts",
-    "start:staging": "tsx scripts/staging.ts --start"
+    "start:staging": "tsx scripts/staging.ts --start",
+    "build:preview": "npm run engine && node preview/build.mjs"
   },
   "dependencies": {
     "@electric-sql/pglite": "0.5.9",

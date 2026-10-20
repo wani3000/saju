@@ -24,7 +24,7 @@ type Order = {
   state: string;
   provider: string;
 };
-type State = {
+export type State = {
   kind: string;
   authEnabled: boolean;
   authLinked: boolean;
@@ -50,7 +50,7 @@ type State = {
   provider: string;
   tossClientKey: string | null;
 };
-async function api(
+async function serverApi(
   path: string,
   body?: unknown,
   method = body === undefined ? "GET" : "POST",
@@ -66,7 +66,11 @@ async function api(
   return data;
 }
 let boot: Promise<unknown> | undefined;
-export default function App() {
+export default function App({ request: api = serverApi, preview = false, onResetPreview }: {
+  request?: typeof serverApi;
+  preview?: boolean;
+  onResetPreview?: () => void;
+} = {}) {
   const [data, setData] = useState<State | null>(null),
     [pair, setPair] = useState<Pair | null>(null);
   const [view, setView] = useState("home"),
@@ -353,7 +357,7 @@ export default function App() {
           보관함
         </button>
       </header>
-      {view !== "home" && <div className="mode">연구 체험 · 실제 결제 없음</div>}
+      {view !== "home" && <div className="mode">{preview ? "임시 체험 · 실제 결제 없음" : "연구 체험 · 실제 결제 없음"}</div>}
       {view !== "home" && (
         <div className="journey-navigation">
         <button
@@ -425,14 +429,14 @@ export default function App() {
               <details className="home-information">
                 <summary>{character.displayName}과 체험 안내</summary>
                 <p>{character.description}</p><p>{character.notice}</p>
-                <p>지금은 로컬 연구 체험이며 실제 결제는 없어요. 첫 상대 무료·추가 상대 2,900원은 정식 서비스의 예정 가격이에요.</p>
+                <p>{preview ? "임시 체험판이에요. 입력과 결과는 이 탭에만 임시 보관하고 서버로 보내지 않아요. 로그인·복구 코드·공개 공유 링크는 제공하지 않아요." : "지금은 로컬 연구 체험이며 실제 결제는 없어요."} 첫 상대 무료·추가 상대 2,900원은 정식 서비스의 예정 가격이에요.</p>
                 <button className="secondary" onClick={() => navigate("map")}>나의 관계 지도 보기</button>
               </details>
             </>
           )}
           {(view === "me" || view === "other") && (
             <>
-              <ResearchNotice />
+              <ResearchNotice localOnly={preview} />
               <PersonForm
                 key={view}
                 person={view === "me" ? pair.me : pair.other}
@@ -493,7 +497,7 @@ export default function App() {
                   로 진행하며 실제 돈은 청구되지 않아요.
                 </p>
                 <p>
-                  입력과 연구 계산은 이 개발 서버에 저장돼요. 확인된 사주 기호를
+                  {preview ? "입력과 연구 계산은 이 탭에만 임시 보관돼요." : "입력과 연구 계산은 이 개발 서버에 저장돼요."} 확인된 사주 기호를
                   설명하며, 대화 제안은 관계에 맞춰 따로 제공해요. 궁합 점수는 제공하지 않아요.
                 </p>
                 <label className="choice">
@@ -505,7 +509,7 @@ export default function App() {
                   연구 체험과 두 사람의 정보 저장에 동의해요.
                 </label>
               </section>
-              {data.free !== "available" && data.kind !== "member" && (
+              {data.free !== "available" && data.kind !== "member" && !preview && (
                 <button
                   className="secondary"
                   onClick={() => navigate("account")}
@@ -609,7 +613,7 @@ export default function App() {
                       navigate("share");
                     }}
                   >
-                    생일 없이 이야기 공유
+                    {preview ? "공유할 내용 미리보기" : "생일 없이 이야기 공유"}
                   </button>
                   <button className="secondary" onClick={() => navigate("map")}>
                     관계 지도 보기
@@ -839,7 +843,7 @@ export default function App() {
           {view === "share" && current && (
             <>
               <p>
-                링크를 아는 사람은 누구나 볼 수 있어요.
+                {preview ? "임시 체험판은 공유할 내용만 미리 볼 수 있어요. 공개 링크는 만들지 않아요." : "링크를 아는 사람은 누구나 볼 수 있어요."}
                 <br />
                 생일과 다른 사람의 목록은 공개하지 않아요.
               </p>
@@ -874,7 +878,7 @@ export default function App() {
               </section>
               <button
                 className="primary"
-                disabled={busy || aliases.some((x) => !x.trim())}
+                disabled={preview || busy || aliases.some((x) => !x.trim())}
                 onClick={() =>
                   act(async () => {
                     const out = await api(`results/${current.id}/shares`, {
@@ -885,7 +889,7 @@ export default function App() {
                   })
                 }
               >
-                이 내용으로 30일 공유 링크 만들기
+                {preview ? "공개 공유는 정식 연결 후 제공해요" : "이 내용으로 30일 공유 링크 만들기"}
               </button>
               {shareLink && (
                 <section className="card">
@@ -944,7 +948,15 @@ export default function App() {
                 ))}
             </>
           )}
-          {view === "account" && (
+          {view === "account" && preview && (
+            <section className="card">
+              <h2>이 탭의 체험 기록</h2>
+              <p>입력과 결과는 지금 열린 브라우저 탭에만 임시 보관해요. 같은 탭을 새로고침하면 이어 볼 수 있고, 다른 기기와는 연결되지 않아요.</p>
+              <p>정식 로그인·복구 코드·공개 공유·실제 결제는 아직 연결하지 않았어요. 가상 정보로 체험해 주세요.</p>
+              <button className="secondary" onClick={onResetPreview}>체험 기록 초기화</button>
+            </section>
+          )}
+          {view === "account" && !preview && (
             <>
               <section className="card">
                 <h2>내 이야기 보관하기</h2>
