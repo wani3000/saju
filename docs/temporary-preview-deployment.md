@@ -1,5 +1,20 @@
 # 김춘배 훈장 임시 체험 배포
 
+## 최신: 성향·궁합 이야기 v3
+
+2026-10-20 사용자 피드백에 따른 [새 결과](symbolic-personality-v3.md)를 배포했다.
+
+- 소스789b09c / 배포 dpl_EhsTjrhFGVZ51Uehqm8ejVjnaCQU / Ready / preview.
+- 주소: https://chunbae-preview-58jegkl9h-oxaz1234-gmailcoms-projects.vercel.app
+- 로그인 없이 여는 새 체험 링크는 2026-10-27 22:48:20 KST 만료. 토큰은 사용자에게만 전달하고 Git에 저장하지 않는다. 이전 링크는 이전 결과 버전으로 남는다.
+- 원격에서 가상 정보→동의→한자/독음/오행 뜻→병화 표현가·정화 세심가→동일 오행 궁합/개별 대화→친구 조언 확인. 성향 펼침과 새로고침 후 같은 결과 확인. 로컬에서는 연인 조언도 확인했다.
+- HTTP200, 로컬과 JS/CSS 해시 일치, noindex와 기존 CSP connect-src none 유지. 새 프로젝트 자동화 자격증명 생성이나 접근 보호 해제 없음.
+- 웹102개·HTTP·모바일18사례·최종 빌드/타입/정적 빌드 및 소스789b09c GitHub3개 validation 성공. 실제 외부 인증/PG·전문가 승인 상태는 그대로다.
+
+[한자390px](../web/qa-evidence/chunbae-v3-hanja-390.jpg) · [성향390px](../web/qa-evidence/chunbae-v3-type-390.jpg) · [성향320px](../web/qa-evidence/chunbae-v3-type-320.jpg) · [궁합390px](../web/qa-evidence/chunbae-v3-pair-390.jpg).
+
+## 최초: 기호 설명 v2 배포 기록
+
 2026-10-20 사용자 요청으로 현재 App·연구 엔진·풀이를 재사용한 브라우저 단독 체험판을 배포했다. 정식 서비스 출시는 아니다.
 
 | 항목 | 확인값 |
