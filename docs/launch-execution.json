@@ -1,0 +1,13 @@
+{
+  "version": "launch-execution-v1",
+  "requestedOn": "2026-10-20",
+  "instruction": "2는 건너뛰고, 1>3>4로 진행해.",
+  "sequence": ["calculation-and-reading-review", "external-auth-and-payment", "operations"],
+  "userComprehension": {
+    "status": "skipped-by-user",
+    "completed": false,
+    "observedParticipants": 0
+  },
+  "publicReleaseApproved": false,
+  "realChargesEnabled": false
+}

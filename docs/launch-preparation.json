@@ -7,8 +7,29 @@
   "policyId": "local-explanation-calculation-policy-v1",
   "engineVersion": "research-civil-midnight-v5",
   "readingVersion": "source-observations-copy-v2",
+  "executionSequence": [
+    "calculation-and-reading-review",
+    "external-auth-and-payment",
+    "operations"
+  ],
+  "skippedByUser": [
+    "user-comprehension"
+  ],
+  "pendingGateIds": [
+    "calendar-policy",
+    "expert-interpretation",
+    "private-access",
+    "external-auth",
+    "external-payment",
+    "paid-product",
+    "operations"
+  ],
   "expertReviewItems": 46,
   "sourceArtifacts": [
+    {
+      "file": "docs/launch-execution.json",
+      "sha256": "435b77fea3cd5505dfd772888a705f968c89e25d75f9830d07ce2e11f62fef63"
+    },
     {
       "file": "web/content/research-policy.json",
       "sha256": "ce1f0d876de0c64260bcf01ee47d99779aebc392e0da4f0f5001147bc129243d"
@@ -49,9 +70,9 @@
     },
     {
       "id": "user-comprehension",
-      "status": "not-started",
-      "reason": "USER_STUDY_NOT_STARTED",
-      "evidence": "Observed human participants: 0.",
+      "status": "skipped-by-user",
+      "reason": "USER_STUDY_SKIPPED_BY_REQUEST",
+      "evidence": "Explicit user instruction recorded in docs/launch-execution.json; 0 observed participants, no completed study.",
       "ownerRole": "research-facilitator-and-volunteers",
       "nextStep": "docs/launch-review-kit.md"
     },

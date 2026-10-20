@@ -17,7 +17,9 @@
     "maintenance": "tsx scripts/maintenance.ts",
     "health": "tsx scripts/maintenance.ts --health",
     "test:postgres": "node scripts/postgres-check.mjs",
-    "test:journey": "node scripts/check-journey.mjs"
+    "test:journey": "node scripts/check-journey.mjs",
+    "check:staging": "tsx scripts/staging.ts",
+    "start:staging": "tsx scripts/staging.ts --start"
   },
   "dependencies": {
     "@electric-sql/pglite": "0.5.9",

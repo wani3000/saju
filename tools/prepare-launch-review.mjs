@@ -13,7 +13,16 @@ export function validateLaunchBaseline({ readiness, quality, scope, policy }) {
       JSON.stringify(policy.comparisonPositions) !== JSON.stringify(scope.comparisonPositions))
     throw new Error('INPUT_POLICY_SCOPE_DRIFT');
 }
+export function validateExecutionDecision(decision) {
+  if (decision.version !== 'launch-execution-v1' ||
+      JSON.stringify(decision.sequence) !== JSON.stringify(['calculation-and-reading-review', 'external-auth-and-payment', 'operations']) ||
+      decision.userComprehension?.status !== 'skipped-by-user' || decision.userComprehension.completed !== false ||
+      decision.userComprehension.observedParticipants !== 0 || decision.publicReleaseApproved !== false || decision.realChargesEnabled !== false)
+    throw new Error('EXECUTION_DECISION_REQUIRES_RECONCILIATION');
+  return decision;
+}
 export function buildLaunchPreparation() {
+  const execution = validateExecutionDecision(load('docs/launch-execution.json'));
   const readiness = load('research/validation/reports/release-readiness.json');
   const quality = load('research/validation/reports/beta-quality-audit.json');
   const rescue = load('research/validation/reports/rescue-wangqi-audit.json');
@@ -53,14 +62,18 @@ export function buildLaunchPreparation() {
       understanding: 'not-observed', assistanceRequired: null })),
     privacyComprehension: { autosaveExplained: 'not-observed', publicAliasRiskExplained: 'not-observed' },
     barriers: [], followupRequired: null, completed: false };
-  const sources = ['web/content/research-policy.json', 'research/validation/beta-scope.json',
+  const sources = ['docs/launch-execution.json', 'web/content/research-policy.json', 'research/validation/beta-scope.json',
     'research/validation/reports/release-readiness.json', 'research/validation/reports/beta-quality-audit.json',
     'research/validation/reports/rescue-wangqi-audit.json'];
   const preparation = { version: 'launch-preparation-v1', status: 'prepared-for-review-not-approved',
     publicReleaseApproved: false, realChargesEnabled: false, humanParticipantsObserved: 0,
     policyId: policy.id, engineVersion: policy.engineVersion, readingVersion: policy.readingVersion,
+    executionSequence: execution.sequence, skippedByUser: ['user-comprehension'], pendingGateIds: readiness.gates.filter(g => g.id !== 'user-comprehension').map(g => g.id),
     expertReviewItems: expert.items.length, sourceArtifacts: sources.map(file => ({ file, sha256: digest(file) })),
-    gates: readiness.gates.map(g => ({ ...g, ownerRole: owners[g.id][0], nextStep: owners[g.id][1] })),
+    gates: readiness.gates.map(g => ({ ...g,
+      ...(g.id === 'user-comprehension' ? { status: 'skipped-by-user', reason: 'USER_STUDY_SKIPPED_BY_REQUEST',
+        evidence: 'Explicit user instruction recorded in docs/launch-execution.json; 0 observed participants, no completed study.' } : {}),
+      ownerRole: owners[g.id][0], nextStep: owners[g.id][1] })),
     validation: 'Template generation does not execute tests, certify policy, host a pilot or perform human review.' };
   return { preparation, expert, study };
 }
@@ -80,5 +93,5 @@ if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) 
       if (readFileSync(new URL(file, root), 'utf8') !== text) throw new Error('LAUNCH_PREPARATION_STALE: '+file);
     } else writeFileSync(new URL(file, root), text);
   }
-  console.log(`PASS: ${pack.expert.items.length} blank review items; 0 observed participants; ${pack.preparation.gates.length} incomplete release gates retained.`);
+  console.log(`PASS: ${pack.expert.items.length} blank review items; 0 observed participants; ${pack.preparation.pendingGateIds.length} pending gates; 1 user-requested skip (not a completed study).`);
 }

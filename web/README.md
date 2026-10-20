@@ -142,3 +142,9 @@ API·PG 반환·웹훅은 요청 본문을 읽는 중 16KiB를 넘으면 413, �
 웹 88개, HTTP, 320/390px 모바일 18사례, 빌드·타입, 로컬 PostgreSQL 21테이블 복원/권한 검사를 통과했다. 실제 Chrome에서 입력→결과→공유 미리보기 및 인물 안내를 확인했다. 외부 인증·PG 검증이나 공개 출시 완료를 뜻하지 않는다.
 
 입력부터 결과까지 [훈장 말투·전체 여정 기준](../docs/chunbae-journey-voice.md)을 적용했다. `journey-copy.json`은 현재 화면의 안내만 담당하고 저장된 풀이 버전과 분리한다. 입력은 단계가 보이는 기록장, 결과는 세 부분 해설과 인장, 공유·지도·보관함은 같은 한지 디자인을 사용한다.
+
+## 외부 연동·운영 시작 전 검사
+
+[1→3→4 실행 안내](../docs/launch-sequence-1-3-4.md)에 따라 별도 테스트 설정을 사용한다. `staging.env.example`을 Git 제외 `.env.staging.local`에 복사하고 비공개로 채운다. `npm run check:staging -- --settings .env.staging.local`은 네트워크/DB를 건드리지 않고 누락·잘못된 형식/운영키·TLS 해제·공개 secret 변수를 검사한다. 통과는 실제 연동 성공이 아니며 미준비는 종료2, 파일/인자 오류는 값 없이 종료1이다.
+
+`npm run start:staging -- --settings .env.staging.local`은 같은 검사 통과 후에만 127.0.0.1:4180에서 Next를 시작한다. 별도 DB 마이그레이션·호스팅/접근 제어·실제 로그인/PG·운영 복구 검증을 대신하지 않는다. 기존 로컬 실행과 생성된 결과 버전은 유지한다.
