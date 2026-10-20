@@ -1,4 +1,7 @@
 import type { Reading } from "../domain/model";
+import type { NatalAnalysis,PairAnalysis } from "../domain/natal-facts";
+export function analyzeNatal(profile: unknown): NatalAnalysis;
+export function compareProfiles(first: unknown,second: unknown): PairAnalysis;
 export function buildSelectedReading(first: unknown, second: unknown, relationship: string): Reading;
 export const selectedReadingPolicy: {
   version: string;

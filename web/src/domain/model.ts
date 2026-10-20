@@ -1,5 +1,6 @@
 import { z } from "zod";
 import type { SymbolicReading } from "./symbolic-reading";
+import type { WholeChartReading } from "./whole-chart-reading";
 export const personSchema = z
   .object({
     id: z.uuid(),
@@ -50,6 +51,7 @@ export const samplePerson = (other = false): Person => ({
   day: other ? "21" : "12",
 });
 export type Reading = {
+  wholeChart?: WholeChartReading;
   interpretation?: SymbolicReading;
   label: string;
   title: string;

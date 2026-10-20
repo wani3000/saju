@@ -51,7 +51,7 @@ await build({
   plugins: [{
     name: "embed-reviewed-reading-sources",
     setup(b) {
-      b.onLoad({filter: /(?:reading-rules|selected-reading|beta-reading)\.mjs$/}, async args => {
+      b.onLoad({filter: /(?:reading-rules|natal-rules|selected-reading|beta-reading)\.mjs$/}, async args => {
         let source = await readFile(args.path, "utf8");
         const pattern = /JSON\.parse\(readFileSync\(new URL\('([^']+\.json)', import\.meta\.url\)\)\)/g;
         const matches = [...source.matchAll(pattern)];

@@ -108,20 +108,27 @@ test("free snapshot reload, private evidence, share preview and revocation stay 
   await result(page);
   const before=await (await page.request.get("/api/state")).json();
   const story=before.results[0].reading.interpretation;
+  const whole=before.results[0].reading.wholeChart;
   for(const p of story.people) {
     const name=p.side==="me"?before.results[0].me.name:before.results[0].other.name;
     const profile=page.getByRole("region",{name:`${name}의 성향 유형`,exact:true});
-    await expect(profile.getByRole("heading",{name:p.type.title,exact:true})).toBeVisible();
-    await profile.locator("summary").click();
-    await expect(profile.getByText(p.type.work,{exact:true})).toBeVisible();
+    const person=whole.people.find((person:{side:string})=>person.side===p.side);
+    await expect(profile.getByRole("heading",{name:person.summary.title,exact:true})).toBeVisible();
+    await profile.getByText("가까운 사이와 일할 때의 모습",{exact:true}).click();
+    await expect(profile.getByText(person.summary.work,{exact:true})).toBeVisible();
+    await profile.getByText("연·월·일·시 풀이와 근거 펼치기",{exact:true}).click();
+    await expect(profile.getByRole("heading",{name:"확인한 십성 전체",exact:true})).toBeVisible();
   }
-  await expect(page.getByRole("heading",{name:story.pair.title,exact:true})).toBeVisible();
+  await expect(page.getByRole("heading",{name:whole.pair.title,exact:true})).toBeVisible();
   await expect(page.getByText(story.relationship.question,{exact:true})).toBeVisible();
   await page.reload();
   await expect(page.getByRole("heading",{name:"두 사람의 사주 이야기",exact:true})).toBeVisible();
   await page.getByText("비교 근거와 확인 범위",{exact:true}).click();
-  await expect(page.getByText(/묘·유의 지지 육충/)).toBeVisible();
-  await expect(page.getByText(/을·경의 천간 합/)).toBeVisible();
+  const symbols=page.locator("details").filter({has:page.getByText("비교 근거와 확인 범위",{exact:true})});
+  for(const family of ["branch-clash","stem-combination"]) {
+    const fact=before.results[0].reading.basis.observations.find((f:{family:string})=>f.family===family);
+    await expect(symbols.getByText(fact.text,{exact:true})).toBeVisible();
+  }
   await noOverflow(page);
   await page.screenshot({path:testInfo.outputPath("result.png"),fullPage:true,timeout:5000});
   await page.getByRole("button",{name:"생일 없이 이야기 공유"}).click();

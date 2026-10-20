@@ -561,7 +561,7 @@ footer {
 .story-type-symbol { color: var(--muted); font-size: 16px; margin: 6px 0 16px; }
 .story-keywords { display: flex; flex-wrap: wrap; gap: 8px; padding: 0; list-style: none; }
 .story-keywords li { border: 1px solid var(--line); padding: 3px 10px; font-size: 14px; background: #fffaf0; }
-.saju-story h3, .saju-story h4 { font-family: "Noto Serif KR",serif; }
+.saju-story h3, .saju-story h4 { font-family: "Noto Serif KR",serif; word-break: keep-all; overflow-wrap: anywhere; }
 .saju-story h4 { font-size: 18px; margin: 24px 0 8px; }
 .story-more { margin-top: 24px; border-top: 1px dashed var(--line); padding-top: 14px; }
 .story-more summary { font-size: 16px; line-height: 1.9; }
@@ -569,6 +569,11 @@ footer {
 .story-question { margin: 24px 0; padding: 18px 16px; border-left: 3px solid #80644a; background: #efe6d680; font-family: "Noto Serif KR",serif; }
 .story-closing { padding: 26px 0 8px; }
 .story-closing h2 { font-size: 22px; }
+.story-evidence-list { padding-left: 20px; font-size: 15px; color: var(--muted); }
+.story-evidence-list li { margin: 10px 0; overflow-wrap: anywhere; }
+.whole-evidence > section { padding: 12px 0; border-bottom: 1px solid var(--line); }
+.whole-pair-section { padding: 14px 0; }
+.whole-pair-section h3 { font-size: 21px; line-height: 1.65; }
 .evidence-record { padding: 18px; }
 .evidence-record summary { font-size: 17px; font-weight: 500; }
 .evidence-record > div + div { border-top: 1px solid var(--line); margin-top: 24px; padding-top: 8px; }

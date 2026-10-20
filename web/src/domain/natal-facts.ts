@@ -1,0 +1,12 @@
+import type {ReadingSource} from "./model";
+export type Position="year"|"month"|"day"|"hour";
+export type Coverage={side:string;includedPositions:Position[];omittedPositions:Position[];clockReviewRequired:boolean;boundaryReviewRequired:boolean};
+export type SymbolFinding={ruleId:string;family:string;label:string;endpoints:{side:string;position:Position}[];
+  certainty:"all-candidates"|"candidate-dependent";witnesses:string[][];source:ReadingSource};
+export type PairAnalysis={ruleVersion:string;engineVersion:string;coverage:Coverage[];findings:SymbolFinding[]};
+export type TenGodFact={id:string;position:Position;layer:"visible"|"hidden";targetStem:string;label:string;direction:string;
+  certainty:"all-candidates"|"candidate-dependent";sources:ReadingSource[]};
+export type NatalAnalysis={ruleVersion:string;engineVersion:string;coverage:Coverage[];
+  dayReference:{confirmedStem:string|null};monthContext:{branches:string[]};
+  hiddenStems:{position:Position;alternatives:{pillar:string;branch:string;stems:string[]}[];source:ReadingSource}[];
+  tenGods:TenGodFact[];relations:PairAnalysis};
