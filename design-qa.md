@@ -66,3 +66,8 @@ final result: passed
 미해결 P0/P1/P2 없음. P3: 원본 모형과 동일 서체를 확정할 수 없어 자체 호스팅 Noto 서체를 유지하며, 결과의 사진은 읽을 내용이 먼저 나오도록 의도적으로 소형화했다. 새 풀이·차트 버전을 만들거나 이전 결과를 교체하지 않았다.
 
 최종 build/typecheck, 웹88개, HTTP·모바일18사례 통과. CUA에서 오류 focus→가상 두 사람 입력→동의→결과→공유 미리보기→지도→보관함과 앱 출처 console error/warn 0건 확인. 실제 링크 열기·철회·복원은 자동 여정으로 확인했다. 새로운 외부 서비스/실결제/배포/인간 감수는 없으며 8개 출시 조건 미완료 유지.
+
+
+## 2026-10-20 원격 임시 체험판 확인
+
+기존 App·자산과 체험 안내만 사용한 [원격 체험판](docs/temporary-preview-deployment.md)을 Chrome390/320px에서 확인했다. [시작390px](web/qa-evidence/chunbae-hosted-home-390.jpg)·[시작320px](web/qa-evidence/chunbae-hosted-home-320.jpg)·[결과390px](web/qa-evidence/chunbae-hosted-result-390.jpg). 가로 넘침 없음. 사진/한지/명조/먹갈색 및 춘배 인장 유지. 작은320px 시작 설명의 마지막 어미가 줄바꿈되는 P3는 남아 있으며 기능을 막지 않는다. 실제 외부 인증/PG·기기 전체 검증은 아니다.
