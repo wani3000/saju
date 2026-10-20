@@ -1,0 +1,70 @@
+{
+  "checkedOn": "2026-10-20",
+  "appId": "6761322235",
+  "screenshots": [
+    {
+      "step": 1,
+      "file": "01-store-intro.webp",
+      "url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/6e/2e/5f/6e2e5fb3-0fb1-09f3-f42c-0abb1a1d2752/ios-1-intro.png/600x1300bb.webp",
+      "sha256": "397530baee32260ff555d9950b8b787136989550510be951dd091149a6a85c1c",
+      "type": "developer-published-store-screenshot-not-live-app-session"
+    },
+    {
+      "step": 2,
+      "file": "02-store-empty-state.webp",
+      "url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/62/2a/93/622a93ca-0d2f-2dac-ae4d-19905cd88bbf/ios-2-chat-empty.png/600x1300bb.webp",
+      "sha256": "f0be63830e666075c2a1e52b8e7800d8d5aab430e12ca16b81ff6b90734f3d91",
+      "type": "developer-published-store-screenshot-not-live-app-session"
+    },
+    {
+      "step": 3,
+      "file": "03-store-conversation.webp",
+      "url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/b6/c1/83/b6c183f3-fa40-5910-a1d3-f0c61caa3c09/ios-3-chat.png/600x1300bb.webp",
+      "sha256": "f5cfe053a5b854a7f7a13db8cbf53f7fa57eab2c3e24f74d19ce52d1265da3d0",
+      "type": "developer-published-store-screenshot-not-live-app-session"
+    },
+    {
+      "step": 4,
+      "file": "04-store-profile.webp",
+      "url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/b3/10/4b/b3104bca-8a31-7724-4fb4-219f284efc83/ios-4-pillars.png/600x1300bb.webp",
+      "sha256": "787666563f58d38e0726533ec3157ede708dcaf0c0d3b6b4fee87a9b9c6ed175",
+      "type": "developer-published-store-screenshot-not-live-app-session"
+    },
+    {
+      "step": 5,
+      "file": "05-store-letter.webp",
+      "url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/f3/76/a2/f376a29f-0b60-6560-06d7-73f77321ee2e/ios-5-letter.png/600x1300bb.webp",
+      "sha256": "e795ae39b83ed95b37c10b6bd417cce693f2e65f28e9317ca0c9d5fb475859ef",
+      "type": "developer-published-store-screenshot-not-live-app-session"
+    }
+  ],
+  "liveBrowserCaptures": [
+    {
+      "file": "app-store.png",
+      "sha256": "c7e3e9214d8858c2a41af19377fb38da4cc79a629ac0f1e9eb649483004231b6",
+      "kind": "actual-public-web-browser-capture"
+    },
+    {
+      "file": "06-developer-home.png",
+      "sha256": "84011ce28346d3e5516d9e8ee55a16851c47948082401ef6160fefa552d2796b",
+      "kind": "actual-public-web-browser-capture"
+    },
+    {
+      "file": "07-live-story-390.png",
+      "sha256": "a8d8c5c96fba977a457cb2cf4c08b2bd870e96c51e3fbf9471ce70fd49449cc8",
+      "kind": "actual-public-web-browser-capture"
+    },
+    {
+      "file": "08-live-notice-390.png",
+      "sha256": "c7f7d0438d50eec1e637154f9a32ea057f2ca798b9e1598bd377e67ec345759c",
+      "kind": "actual-public-web-browser-capture"
+    },
+    {
+      "file": "09-live-input-390.png",
+      "sha256": "4e704c4a72db1496db556b85e9a302f9aa663c42befea115cdeade35d09e1734",
+      "kind": "actual-public-web-browser-capture"
+    }
+  ],
+  "nativeAppExecuted": false,
+  "externalBirthInputSubmitted": false
+}

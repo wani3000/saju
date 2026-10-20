@@ -1,0 +1,77 @@
+{
+  "createdOn": "2026-10-20",
+  "tool": "built-in image_gen",
+  "set": "documentary-ui-v2",
+  "status": "awaiting-selection-not-implemented",
+  "logicalViewport": {
+    "width": 390,
+    "height": 844
+  },
+  "documentaryPhoto": {
+    "file": "../documentary/reading-by-window.png",
+    "generatedSource": "/Users/chulwan/.codex/generated_images/01a12f07-681e-7e60-8302-88347393b8da/exec-34cd2c1a-8c8e-488e-b2c2-6b1d2e4d6b85.png",
+    "prompt": "Use case: historical-scene, photographic concept asset. Direction name: 창가에서 책을 읽는 노인.\nCreate ONE standalone archival-documentary-style photograph, landscape 4:3, composition intended as an app's atmospheric hero asset, not a UI mockup. No typography, captions, dates, logos or graphic overlays. Date anchor of design project is2026-10-20; image itself has no date. This is a newly generated fictional period scene, NOT a reproduction or claim of an actual archive.\nUser specifically requests a Joseon-era Korean male grandfather who DOES NOT look at the camera, with the feel of a photograph casually recorded by an American missionary visiting Korea around the late19th/early20th-century transition.\nReference roles: attached black-and-white small interior scene gives understated documentary room framing, grain and everyday activity; attached prior mobile concept gives ONLY loose character continuity for an original elderly Korean male and traditional study. Discard all prior app UI and the posed eye contact/beauty-photo treatment.\nA genuinely elderly Korean man with a weathered face, sparse white beard, modest worn pale hanbok and an unostentatious cloth head covering, seated cross-legged at a low wooden desk in a dim ordinary hanok room, quietly READING an open bound book. Camera is a few meters away, slightly off to his SIDE, nearly a three-quarter profile. His head is bent30degrees, both eyes unambiguously directed DOWN at the pages. He is completely absorbed, unaware of the photographer; no smile for viewer, no head raised toward lens, no staged dignified portrait, NO EYE CONTACT. The room occupies more of the frame than his face; include bare plaster, wooden lattice window, uneven floor, simple everyday possessions, small untidy book pile. He sits off-center naturally; imperfect ordinary framing, not a polished symmetric film set.\nVisual medium: convincing modest late19th/early20th photographic print scan, neutral monochrome with just slightly warm aged paper base, soft low-resolution detail, muted contrast, compressed tonal range, imperfect exposure with bright window and dark room, old-lens edge softness, subtle long-exposure softness around the fingers and tiny natural print wear. Texture should be embedded naturally, not a clean modern DSLR photo with a generic grain filter. No dramatic studio rim lighting, no modern cinematic shallow-depth-of-field bokeh, no glossy skin, no ultra-sharp whiskers, no fashionable wardrobe, no fantasy smoke, no theatrical sage costume or shiny props, no overdone scratches. Keep it humane, observant, plain, quiet, and unromanticized. Photograph fills canvas without a decorative card frame.",
+    "fictionalGeneratedScene": true,
+    "sha256": "5d65b1b9bfe017a29ead32df0a5f222987740e46549fed2d2928f926a652221a",
+    "referenceImagePaths": [
+      "/Users/chulwan/.codex/attachments/d65285c8-462b-4d7d-bc24-48f2a49b4458/스크린샷 2026-10-20 오후 2.25.19.png",
+      "design/characters/joseon/03-monochrome-study.png"
+    ]
+  },
+  "items": [
+    {
+      "displayedOption": 1,
+      "file": "01-ink-record.png",
+      "direction": "오래된 서재의 기록",
+      "source": "/Users/chulwan/.codex/generated_images/01a12f07-681e-7e60-8302-88347393b8da/exec-6021a09d-f2d3-45a3-b041-ac2b2f59b25e.png",
+      "prompt": "Create realistic production-quality UI design, focused primary screen with strong hierarchy and purposeful whitespace. Use case ui-mockup. Direction name: 오래된 서재의 기록.\nONE mobile welcome screen, logical390x844 portrait, app content only, no device/OS/browser frames, no multi-screen collage. Current design date2026-10-20, no visible years or dates.\nUser correction: a Joseon male grandfather MUST NOT LOOK AT CAMERA; the photograph should feel like a plain historical documentary photograph made by a visiting American missionary, not a polished portrait. User also explicitly asks that design direction be based on actually checked Kim Guija app. Attached references have now been directly inspected:\nReference1 our ORIGINAL fictional male grandfather photograph: use this precise scene and downward reading pose as the main image; retain his downward eyes, distance, side view, modest clothing, room and old photographic grain. No eye contact anywhere, no isolated face medallion looking at viewer.\nReference2 developer-published actual app introduction screenshot: use only restrained dark brown/ink atmosphere, story-first grouping, serif/brush heading relationship, small red detail, spacious layout.\nReference3 actual app empty-state screenshot: use only aged cream hanji surface, generous quiet space, subtle warm brown strokes.\nReference4 actual app letter screenshot: use only a restrained paper-and-ink material feeling.\nDo not reproduce the female character, competitor title, biography, dates, exact copy, screenshots as UI content, logos, or medical/predictive claims. Own app remains two-person birthday entry and traditional SYMBOL explanation, no chat box, no new chat navigation, no divination scores.\nLayout: muted deep ink-brown full base with large margins; small masthead “사주 할아버지” and unobtrusive “보관함”. Large readable but restrained heading “두 사람의 이야기를” newline “차분히 살펴보세.” Below it a landscape photograph panel with slight real print edge (not a glossy rounded card), showing the original male reading at desk, room visible and face small. Under photo one thin divider, then a brief warm-ivory text block on same dark surface “생일로 살펴보는 사주 기호”. Supporting line “내 정보와 상대의 생일을 차례로 적어 주세요.” One wide muted parchment button with dark lettering “두 사람의 생일 적기”. Subtle lower caption “점수 없는 설명형 베타”. A tiny red square seal mark as decoration, no text inside it.\nPhotos must remain low contrast print scans but UI TEXT MUST HAVE STRONG readable contrast, never copy competitor's low-contrast tiny gray text. Body18–20 logicalpx, CTA56px+ height. Korean typography at most2fonts, calm modern Korean serif plus legible sans for controls, no ornamental oversized slogan. No cherry blossom decorations, no novelty fortune cards, no glossy gradients, no harsh cinematic rim light. Picture fills about35percent of screen; whole layout fits844logicalpx without clipping.",
+      "sha256": "0a5fbb55c91d40c63711813e76540b084ec97c4fbb9e3dae5ac149154045cf95",
+      "actualPixelSize": [
+        853,
+        1844
+      ],
+      "referenceImagePaths": [
+        "design/characters/joseon/documentary/reading-by-window.png",
+        "reference/guija-2026-10-20/01-store-intro.webp",
+        "reference/guija-2026-10-20/02-store-empty-state.webp",
+        "reference/guija-2026-10-20/05-store-letter.webp"
+      ]
+    },
+    {
+      "displayedOption": 2,
+      "file": "02-paper-greeting.png",
+      "direction": "한지에 남은 인사",
+      "source": "/Users/chulwan/.codex/generated_images/01a12f07-681e-7e60-8302-88347393b8da/exec-0dcd6773-a9bd-48a3-b7d3-3153ab72f204.png",
+      "prompt": "Create realistic production-quality UI design with clear hierarchy, strong typography and generous purposeful spacing. Use case ui-mockup. Direction name: 한지에 남은 인사.\nONE mobile app welcome screen logical390x844 portrait, app content only, no phone, device bezel, OS icons, browser chrome, marketing captions outside screen, montage or extra screens. Project date2026-10-20, do not show dates.\nThis is refinement based on user-provided real app example and camera-gaze correction. User requests original fictional Joseon male grandfather, photographed candidly as if by an American missionary visitor, NOT looking into camera. The attached original male photograph is mandatory visual identity/reference: keep the same grandfather bent over book, side profile with eyes down, plain hanbok, surrounding room, low sharpness and soft archival monochrome. No frontal face portrait, no eye contact in tiny avatar either.\nReference images2 and3 are actual developer-published empty-state and conversation screenshots of Kim Guija app, directly inspected now. Learn its subtle pale cream hanji, small personal figure/name masthead, quiet center hierarchy, sparse interface, soft warm brown rules, muted red stamp accent. Reference4 is the actual developer-published letter screenshot for paper texture. DO NOT reproduce competitor woman, portrait, name, exact wording, chat messages, biography, dates or exact arrangement.\nOur product stays a TWO-PERSON birthday input and traditional symbol explanation flow, not a chatbot; no input composer, messages, chat tabs, freeform question field or invented features.\nDesign a very quiet light HANJI mobile screen. Top a small off-center original side-profile male thumbnail derived from the supplied reading photo and title “사주 할아버지”, a “보관함” text action. Give substantial breathable cream space. Near upper-middle a modest horizontal archival print of the whole original study scene, roughly260x190logicalpx with a subtle irregular paper edge; the man is small inside the room, looking down at his book. Under it centered understated heading “누구와의 이야기가” newline “궁금한가?”. Supporting copy “생일로 두 사람의 사주 기호를 살펴보세.” Then a tiny neutral line “내 정보부터 차례로 입력해요”. A thin short divider gives breathing room.\nNear bottom a single wide flat warm-brown button “두 사람의 생일 적기”, at least56px tall, ivory high-contrast lettering; subtle red square seal mark by the divider. Bottom understated “점수 없는 설명형 베타”. No oversized poster typography, florals, mountains, ornate arches, glossy shapes, feature cards or chips. Keep the design close in atmosphere to the REAL cream app screenshots while making an original composition.\nKorean body18–20logicalpx, heading28–32logicalpx, at most2fonts (lightly expressive Korean serif + readable Korean sans). Strong contrast for readable copy, no tiny washed-out text borrowed from reference. All content within844logicalpx, natural unclipped spacing, sparse high-quality traditional-modern interface.",
+      "sha256": "82961b06683856a817486f245a5849f0559e2f696ada5bc7d828222a844cdc38",
+      "actualPixelSize": [
+        853,
+        1844
+      ],
+      "referenceImagePaths": [
+        "design/characters/joseon/documentary/reading-by-window.png",
+        "reference/guija-2026-10-20/02-store-empty-state.webp",
+        "reference/guija-2026-10-20/03-store-conversation.webp",
+        "reference/guija-2026-10-20/05-store-letter.webp"
+      ]
+    },
+    {
+      "displayedOption": 3,
+      "file": "03-study-letter.png",
+      "direction": "서재에서 건네는 편지",
+      "source": "/Users/chulwan/.codex/generated_images/01a12f07-681e-7e60-8302-88347393b8da/exec-b77d1fc6-b077-4071-8319-de1c74c458d6.png",
+      "prompt": "Create realistic production-quality UI design with strong typography, clear hierarchy and quiet generous spacing. Use case ui-mockup. Direction name: 서재에서 건네는 편지.\nONE mobile welcome screen logical390x844 portrait. App content only; no device, OS, browser chrome, marketing frame, montage or second screen. Date anchor2026-10-20, no visible dated claims.\nUser's exact art direction is a Joseon-era original male grandfather absorbed in an activity, NEVER looking into the camera, photographed like an old visiting American missionary's documentary record. Reference1 is our generated original grandfather reading-by-window photograph. Preserve its wide candid room view, downturned eyes toward page, non-posed side profile, ordinary worn pale hanbok, elderly face, small figure, window and desk. Never turn him toward viewer or add a smiling headshot, even in small avatar. Old low-detail slightly warm monochrome print, not sharp modern fashion/film still.\nReference2 is the actual developer-published letter screen of Kim Guija app, and reference3 its actual empty-state screenshot: they ground subtle paper material, dark warm ink, a discreet reddish seal, long calm space, restrained personal greeting. Reference4 actual intro screen grounds old documentary image context. Do not copy competitor character/face/name/biography/dates, actual text, branding, arrangement or screenshots; create original design language within that general atmosphere.\nOur app is two-person birthday-input / traditional symbol explanations, no chat composer, no messages interface, prediction score, live advice features, or invented notifications.\nExplore a distinct letter-like welcome structure: narrow deep brown masthead strip with “사주 할아버지” at left and “보관함” right; below it a short wide black-and-white documentary photograph strip of the original reading room across full content width, about30percent of height, retaining the grandfather not centered and gazing down. Under photo, a single flat light parchment letter surface filling the remaining screen (not a card inside a card, no background shadow).\nSmall restrained section label “서재에서 건네는 인사”. Heading in a beautiful READABLE Korean serif “서두르지 말고,” newline “차분히 적어보게.” Below, a short personal invitation laid out like a letter: “나와 소중한 사람의 생일을 알려주게.” then “두 사람의 사주 기호를 함께 살펴보세.” A tiny unobtrusive red seal near end, no complex lettering.\nOne clear wide muted cinnabar button near bottom “두 사람의 생일 적기”, natural rectangle slightly softened corners not pill; button at least56logicalpx tall, high-contrast ivory lettering. Footer “점수 없는 설명형 베타”.\nUse18–20logicalpx body,28–32heading, max2fonts; strong readable warm black on cream. No giant poster headlines, ornamental flowers, mountains, gold flourishes, glossy gradients, false claim of real historic archive or actual historical person's biography. All content fits within844logicalpx, generous paper margins and purposeful negative space, minimal quiet traditional product design.",
+      "sha256": "1cc9ad4d35c0b900ae6b8e0344b5ce97e906094dec357a4996dc990fc3b4b5ad",
+      "actualPixelSize": [
+        853,
+        1844
+      ],
+      "referenceImagePaths": [
+        "design/characters/joseon/documentary/reading-by-window.png",
+        "reference/guija-2026-10-20/05-store-letter.webp",
+        "reference/guija-2026-10-20/02-store-empty-state.webp",
+        "reference/guija-2026-10-20/01-store-intro.webp"
+      ]
+    }
+  ]
+}
