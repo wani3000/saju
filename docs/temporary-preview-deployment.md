@@ -1,6 +1,17 @@
 # 김춘배 훈장 임시 체험 배포
 
-## 최신: 고정 버튼·간결한 입력 화면 · 2026-10-21
+## 현재 접근: 로그인 없는 공개 테스트 · 2026-10-21
+
+사용자가 Vercel 로그인이 필요하다고 알려 누구나 테스트할 수 있도록 명시적으로 요청했다. 전용 `chunbae-preview` 프로젝트(prj_OFQZ94cPRQBbZBfiz8OhIz5oY7JT)의 `ssoProtection`을 `all_except_custom_domains`에서 `null`로 변경했다. 팀 기본값과 다른 프로젝트는 변경하지 않았다. 비밀번호/Trusted IP 보호는 원래 null이었다.
+
+- 공개 테스트 주소: https://chunbae-preview-l1jmuae45-oxaz1234-gmailcoms-projects.vercel.app
+- 공유 인증 쿼리·Vercel 로그인·7일 공유 링크가 필요 없다. 현재 배포1258c92/dpl_FGmPv9sCdCF7Ry66vRLe9Wnzqc4j를 그대로 사용한다.
+- 쿠키 저장소·Authorization 헤더·공유 쿼리 없이 일반 HTTP 요청을 보내 리디렉션 없는200과 실제 앱을 확인했다. JS/CSS도 인증 없이200이며 기존 로컬 빌드와 SHA-256 일치. CSP connect-src none/noindex 유지.
+- 이 프로젝트의 기존/향후 배포에도 로그인 보호 해제가 적용된다. [Vercel 공식 동작](https://vercel.com/docs/deployment-protection/methods-to-protect-deployments/vercel-authentication)을 확인했고 사용자의 공개 테스트 요청 범위에서 변경했다. 앱 소스·정적 체험 저장·외부 인증/PG·정식 출시 상태는 변경하지 않았다.
+
+아래의 공유 링크 만료/접근 보호 기록은 변경 전 당시 상태다.
+
+## 최신 화면: 고정 버튼·간결한 입력 화면 · 2026-10-21
 
 - 소스1258c92 / 배포dpl_FGmPv9sCdCF7Ry66vRLe9Wnzqc4j / Ready / preview.
 - 주소: https://chunbae-preview-l1jmuae45-oxaz1234-gmailcoms-projects.vercel.app
