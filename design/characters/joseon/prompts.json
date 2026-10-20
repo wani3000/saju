@@ -1,0 +1,52 @@
+{
+  "createdOn": "2026-10-20",
+  "tool": "built-in image_gen",
+  "logicalViewport": {
+    "width": 390,
+    "height": 844
+  },
+  "status": "three-concepts-awaiting-user-selection",
+  "references": [
+    "/Users/chulwan/.codex/attachments/d65285c8-462b-4d7d-bc24-48f2a49b4458/스크린샷 2026-10-20 오후 2.25.19.png",
+    "/Users/chulwan/.codex/attachments/398874c6-372d-4986-9bd8-d1ab3dda4270/스크린샷 2026-10-20 오후 2.25.31.png",
+    "design/characters/tigers/02-tiger.png"
+  ],
+  "items": [
+    {
+      "displayedOption": 1,
+      "file": "01-hanji-study.png",
+      "direction": "한지 서재의 노선생",
+      "source": "/Users/chulwan/.codex/generated_images/01a12f07-681e-7e60-8302-88347393b8da/exec-798a7f96-91eb-4006-8dc0-bb7ce53379e3.png",
+      "prompt": "Create realistic, production-quality UI design with clear hierarchy, strong typography, intentional imagery, purposeful spacing. Use case: ui-mockup. Direction name: 한지 서재의 노선생.\nDesign ONE complete mobile app welcome screen, logical dimensions 390 x 844 portrait. App content only, NO device bezel, phone, OS indicators, browser chrome, presentation board or multiple panels. Current date anchor 2026-10-20, no visible dates needed.\nReference roles: first attached small monochrome scene provides quiet historical Korean room mood only; second is a competitor female elderly character listing for general friendly believable elderly-person concept ONLY, do not reproduce her face, name, logo, text or app layout; third attached tiger screen supplies the existing product's single-action hierarchy and large legible Korean typography ONLY, replace animal identity and orange plastic styling entirely.\nUser request: Joseon-era Korean concept with an ORIGINAL male grandfather character. The service remains a two-person birthday input and traditional symbol explanation app, not a chatbot, no chat bubbles or chat input, no new features.\nArt direction: natural cinematic photographic portrait of an ORIGINAL fictional elderly Korean man about 75, kind intelligent eyes, thin white beard, black traditional gat and understated ivory/gray hanbok. Seated beside a low wooden desk, bound paper books, subtle wooden lattice behind him, authentic tactile photographic textures, warm soft side light, calm welcoming expression. Main portrait occupies upper-middle 45 percent, integrated into a restrained ivory hanji paper base with subtle grain. Deep ink-charcoal typography, muted dark indigo primary button, tiny restrained cinnabar seal accent as decoration without fake words. Dignified and friendly, not scary, not fantasy wizard, no supernatural effects. Very generous whitespace; no nested cards, unnecessary metrics or feature inventory.\nLayout: small masthead “사주 할아버지” with a small “보관함” text action. Large portrait below. Main heading below portrait: “어서 오너라.” then “우리 사이를 살펴보자.” Supporting copy: “생일로 살펴보는 두 사람의 사주 기호”. One wide clear button “생일 입력하고 시작하기”. Bottom subtle line “점수 없는 설명형 베타”.\nUse accurate readable Hangul, elegant Korean serif for heading and clean Korean sans-serif for controls, max two fonts. Product body 18–20px logical, primary button at least56px tall, clear high contrast. All text and button fit within 844 logical px height, natural portrait ratio, no clipping. Do not add the reference competitor's name or claim scientific accuracy, predictions or approved scores.",
+      "sha256": "28bd91fdb72fba8148faa074a5968494becbafa46e5f9cde4b6baa71c3ab8caf",
+      "actualPixelSize": [
+        853,
+        1844
+      ]
+    },
+    {
+      "displayedOption": 2,
+      "file": "02-sarangbang.png",
+      "direction": "사랑방의 다정한 어르신",
+      "source": "/Users/chulwan/.codex/generated_images/01a12f07-681e-7e60-8302-88347393b8da/exec-abdf46f0-d7bb-4acb-b205-5f388ab27269.png",
+      "prompt": "Create realistic production-quality UI design with clear hierarchy, strong typography, intentional imagery, purposeful spacing. Use case ui-mockup. Direction name: 사랑방의 다정한 어르신.\nONE focused mobile app welcome screen, logical 390 x 844 portrait. App content only; no phone/device mask, OS/status bar, browser chrome, presentation frame, montage or multiple screens. Date anchor 2026-10-20, no date needed.\nReference images: first old black-and-white room photo = quiet Korean historical household mood only. Second elderly female competitor listing = natural elderly facial detail and approachable human character only; change to a wholly original fictional MALE grandfather, no copied face/name/brand/listing layout. Third existing tiger welcome screen = existing product's warm simplicity, two-person birthday journey and readable large type, NOT animal styling. This redesign is explicitly a Joseon-themed male grandfather app. Keep the service as birthday input and two-person traditional symbol explanation, no chatbot, message bubbles, fortune predictions or scored ranking.\nExplore a clearly different layout from an image-heavy hero: editorial invitation on softly aged plain cream hanji, a large calm Korean serif heading in the upper third, a little small masthead “사주 할아버지” upper left and “보관함” upper right. Main greeting “허허, 잘 왔네.” then secondary line “누구와의 이야기가 궁금한가?”. Under it, a generously spaced oval waist-up photographic portrait of an original Korean man age78 with full short white beard, smiling eye wrinkles, friendly slightly asymmetrical smile, hair tied neatly and simple dark cloth headband, NO gat. Ivory hanbok with faded warm brown sleeveless outer garment. Hands resting on closed traditional book, a tiny wood teacup beside him, plain warm plaster wall and faint wooden lattice, soft natural daylight. He feels like the affectionate grandfather at the village sarangbang, human believable face, no cartoon, no stock photo studio suit, no modern objects.\nPortrait takes about central 38 percent, framed by ample flat cream margins and a slim traditional arch hint, no ornate border. Typography dark walnut, button muted deep oxblood/cinnabar red with offwhite lettering, decorative details minimal. Body copy below portrait: “생일로 살펴보는 두 사람의 사주 기호”. One wide button “생일 입력하고 시작하기”. Subtle footer “점수 없는 설명형 베타”. No cards inside cards, no feature grid, no fake metrics.\nKorean body 18-20 logicalpx, easy readable heading, at most2 fonts, controls tall56px+, strong accessible contrast, all content fits comfortably in844 logicalpx with natural ratio and no clipped text. Render Hangul accurately. Distinct composition, welcoming refined and tactile, not a scary shaman or fantasy sage.",
+      "sha256": "12cdf5a0f5706276277b1a8e5a45a409fb21adfc4c7b6a1c01e166d207aed305",
+      "actualPixelSize": [
+        853,
+        1844
+      ]
+    },
+    {
+      "displayedOption": 3,
+      "file": "03-monochrome-study.png",
+      "direction": "흑백 서재의 조선 어르신",
+      "source": "/Users/chulwan/.codex/generated_images/01a12f07-681e-7e60-8302-88347393b8da/exec-28f6cb7d-57f7-4d5d-9540-5e361a29a2ca.png",
+      "prompt": "Create realistic production-quality UI design with clear hierarchy, strong typography, intentional imagery and purposeful spacing. Use case ui-mockup. Direction name: 흑백 서재의 조선 어르신.\nONE mobile app welcome screen, logical390x844 portrait. App content only, no bezel, phone body, OS/status icons, browser chrome, presentation border, multiple ideas or panels. Date anchor2026-10-20, no dated mock content.\nFirst attached user reference monochrome historical room scene is the strongest mood source: evoke its quiet cinematic Korean interior, aged wood, desk, gentle film grain. Second elderly female competitor listing is ONLY proof of the kind of believable elderly-person premise, not a face or brand or layout to copy. Third existing product tiger UI grounds the single primary birthday-input action and large Korean type. User explicitly wants Joseon concept with an ORIGINAL male GRANDFATHER. New fictional elderly male face, no likeness to reference woman. Existing product is two-person birthday input, symbol explanation, saved results/share; do not invent chat interface, fortune score or fortune predictions.\nVisually very different from a light character card: cinematic black-and-white photographic scene occupies upper60percent fullbleed. Kind Korean elderly scholar about80, fine weathered wrinkles, slender long white beard, a small understated dark traditional head covering, pale hanbok with deep charcoal overrobe, sitting at low wood desk with paper books, looks up toward visitor with soft reassuring half smile. Gentle soft window light, black ink shadows, filmic gray highlights, believable antique Korean study, no modern props, no mystical smoke, no crystal balls, no fantasy effects. Like a beautiful old film still, not horror or aggressive authority.\nTop over photo a sparse white masthead “사주 할아버지” and small “보관함” action on a dark enough background. At bottom of photographic area an oversized short warm white Korean serif greeting “왔는가.” Use one clear word, no long overlay paragraph.\nLower40percent is a warm ivory hanji area with a simple straight photographic transition, no stacked cards. Large dark Korean heading “두 사람의 이야기를” newline “천천히 살펴보세.” Body copy “생일로 살펴보는 두 사람의 사주 기호”. Large fullwidth deep muted pine-green button “생일 입력하고 시작하기”. Subtle footer “점수 없는 설명형 베타”.\nClear modern mobile usability with period atmosphere, max2fonts, heading Korean serif, controls Korean sans serif; body18–20 logicalpx, at least56px tall primary button, generous spacing, all text fits the844 logicalpx screen without clipping. No full-screen rounded app card, no unnecessary frames or navigation features. Accurate Hangul.",
+      "sha256": "32f9a022d2292c60345f4d265a5a2a847cb367fbb368a1a0a65b0e83819737f0",
+      "actualPixelSize": [
+        853,
+        1844
+      ]
+    }
+  ]
+}
