@@ -63,6 +63,7 @@ test('new source audit and existing copy reports reproduce; extra calendar evide
 });
 test('reproduced calendar and reading evidence never become human, external-service or public-release approval',()=>{
  const r=buildReleaseReadiness();assert.equal(r.evidence.status,'source-reports-reproduced');
+ assert.equal(r.evidence.monthHourSourceAnchors,10);assert.equal(r.evidence.monthHourChecks.hourMinuteProbes,14400);
  assert.equal(r.status,'blocked');assert.equal(r.publicReleaseApproved,false);assert.equal(r.realChargesEnabled,false);
  assert.equal(r.humanExpertSignoff,'not-completed');assert.equal(r.blockerIds.length,8);
  for(const id of ['CALENDAR_POLICY_PENDING','EXPERT_REVIEW_PENDING','USER_STUDY_NOT_STARTED','EXTERNAL_AUTH_UNVERIFIED','EXTERNAL_PAYMENT_UNVERIFIED'])assert.ok(r.blockerIds.includes(id));

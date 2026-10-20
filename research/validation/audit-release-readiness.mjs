@@ -4,14 +4,15 @@ import {createHash} from 'node:crypto';
 import {gunzipSync} from 'node:zlib';
 import {pathToFileURL} from 'node:url';
 import {buildCalendarReadingAudit} from './audit-calendar-reading.mjs';
+import {buildMonthHourAudit} from './audit-month-hour.mjs';
 import {buildBetaQualityPack} from './beta-quality-pack.mjs';
 import {privateBetaScope} from './beta-reading.mjs';
 const read=p=>readFileSync(new URL(p,import.meta.url));
 const hash=b=>createHash('sha256').update(b).digest('hex');
 export function buildReleaseReadiness() {
- const calendar=buildCalendarReadingAudit(),quality=buildBetaQualityPack();
- if(!calendar.checksPassed||!quality.checksPassed)throw new Error('REVIEW_EVIDENCE_FAILED');
- for(const [name,current] of [['calendar-reading-audit.json',calendar],['beta-quality-audit.json',quality]])
+ const calendar=buildCalendarReadingAudit(),quality=buildBetaQualityPack(),monthHour=buildMonthHourAudit();
+ if(!calendar.checksPassed||!quality.checksPassed||!monthHour.checksPassed)throw new Error('REVIEW_EVIDENCE_FAILED');
+ for(const [name,current] of [['calendar-reading-audit.json',calendar],['beta-quality-audit.json',quality],['month-hour-audit.json',monthHour]])
   if(read('reports/'+name).toString()!==JSON.stringify(current,null,2)+'\n')throw new Error('REVIEW_EVIDENCE_STALE');
  const sources=JSON.parse(read('fixtures/kasi-months/sources.json'));
  for(const s of sources.sources) {
@@ -34,7 +35,8 @@ export function buildReleaseReadiness() {
    calendarYears:calendar.sourceSelection.years,calendarMonths:calendar.sourceSelection.months,
    syntheticReadingCombinations:calendar.readingPermutations.cases,originalReferenceCharts:quality.sourceReferenceBank.length,
    betaCopyCases:quality.cases.length,
-   reports:['calendar-reading-audit.json','beta-quality-audit.json'].map(file=>({file,sha256:hash(read('reports/'+file))}))},
+   monthHourSourceAnchors:monthHour.sourceAnchorGroups,monthHourChecks:monthHour.counts,
+   reports:['calendar-reading-audit.json','beta-quality-audit.json','month-hour-audit.json'].map(file=>({file,sha256:hash(read('reports/'+file))}))},
   automatedSuiteExecution:'Not executed by this command. Unit/browser/DB/build checks are separate CI steps.',
   gates,blockerIds:gates.filter(g=>g.status!=='approved').map(g=>g.reason),
   status:'blocked',publicReleaseApproved:false,realChargesEnabled:false,
@@ -46,6 +48,7 @@ export function buildReleaseReadiness() {
 export function renderReleaseReadiness(r) {
  return ['# 출시 준비 종합 검토','','현재 상태: **출시 차단 유지**. 외부 연동은 준비 후 진행합니다.',
   '',`자료 재현: 달력 ${r.evidence.calendarDays}일·풀이 조합 ${r.evidence.syntheticReadingCombinations}개·원문 ${r.evidence.originalReferenceCharts}명조·편집 초안 ${r.evidence.betaCopyCases}개.`,
+  '',`월간·시간 천간 원문 ${r.evidence.monthHourSourceAnchors}묶음 → 파생 월주 ${r.evidence.monthHourChecks.monthCombinations}조합·시각 ${r.evidence.monthHourChecks.hourMinuteProbes}분을 추가 재현합니다.`,
   '','| 항목 | 상태 | 차단 사유 |','|---|---|---|',...r.gates.map(g=>`| ${g.id} | ${g.status} | ${g.reason} |`),
   '','이 명령은 자료 해시와 보고서 재현을 검사합니다. 단위·브라우저·DB·빌드 검사를 대신 실행하지 않습니다.',
   '','[구조화 결과](release-readiness.json) · [근거와 후속 작업](../../../docs/calendar-reading-release-review.md)',''].join('\n');

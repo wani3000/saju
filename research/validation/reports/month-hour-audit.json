@@ -1,0 +1,24 @@
+{
+  "version": "month-hour-source-anchors-v1",
+  "reviewedOn": "2026-10-20",
+  "sourceId": "yuanhai-1926-ntl-9900014379",
+  "sourceAnchorGroups": 10,
+  "counts": {
+    "monthCombinations": 120,
+    "hourMinuteProbes": 14400,
+    "lateZiPolicyProbes": 20
+  },
+  "failures": [],
+  "checksPassed": true,
+  "sourceFixtureSha256": "16116ecf5dde71306b0f7c99a7309903c859c472f9f20371778f65753c3c64e9",
+  "engineVersion": "research-civil-midnight-v5",
+  "readingVersion": "source-observations-copy-v2",
+  "productionApproved": false,
+  "humanExpertSignoff": false,
+  "limitations": [
+    "Ten source anchor groups and sequential progression. Generated combinations are mechanism checks, not independently published 120-cell tables. No modern civil-clock boundary, DST, historical timezone, strength, transformation or compatibility score is established by these passages.",
+    "14400 minute probes use ten KASI published day labels and a derived source progression; they are not 14400 independent observations.",
+    "Midnight, 23:00 and split Zi are explicitly tested implementation conventions. The source does not select a modern civil-clock policy.",
+    "No engine, stored result, reading, strength, transformation or score rule is changed by this audit."
+  ]
+}

@@ -186,7 +186,7 @@ try {
       process.env.DATABASE_URL = runtimeUrl;
     }
     console.log(
-      "Hosted anonymous role with table grants: RLS reads/writes denied.",
+      "Isolated PostgreSQL anonymous role with table grants: RLS reads/writes denied.",
     );
     console.log(
       "PostgreSQL: two connection pools, 12 concurrent free requests, SKIP LOCKED, duplicate approval, refund fencing, active-guest retention and restricted-role DDL denial passed.",

@@ -1,0 +1,78 @@
+{
+  "version": "month-hour-source-anchors-v1",
+  "reviewedOn": "2026-10-20",
+  "sourceId": "yuanhai-1926-ntl-9900014379",
+  "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+  "pages": [
+    {
+      "file": "yuanhai-1926-page-39.jpg",
+      "pdfPage": 39,
+      "printedPage": 20,
+      "sha256": "4bd91483ff4303e41c8d2d8fd8d410cdb31b5540ea38fd9356c4dea4df22d6a4"
+    },
+    {
+      "file": "yuanhai-1926-page-40.jpg",
+      "pdfPage": 40,
+      "printedPage": 21,
+      "sha256": "efc419a27c4320822702aa90be2ee5aff1145a4f4557e21848f44fa8c8c7b8b3"
+    }
+  ],
+  "month": {
+    "heading": "論年上起月例",
+    "pdfPage": 39,
+    "text": "甲己之年丙作首。乙庚之歲戊為頭。丙辛之歲尋庚上。丁壬壬位順行流。若言戊癸何方發。甲寅之上好追求。",
+    "continuationPdfPage": 40,
+    "sequenceText": "一月一位順行。",
+    "anchors": [
+      {
+        "stems": "甲己",
+        "start": "丙"
+      },
+      {
+        "stems": "乙庚",
+        "start": "戊"
+      },
+      {
+        "stems": "丙辛",
+        "start": "庚"
+      },
+      {
+        "stems": "丁壬",
+        "start": "壬"
+      },
+      {
+        "stems": "戊癸",
+        "start": "甲"
+      }
+    ]
+  },
+  "hour": {
+    "heading": "論日上起時例",
+    "pdfPage": 40,
+    "text": "甲己還加甲。乙庚丙作初。丙辛從戊起。丁壬庚子居。戊癸何方發。壬子是真途。",
+    "sequenceText": "其法以甲己日從子上起甲子。至人本生時止。餘皆做此。",
+    "anchors": [
+      {
+        "stems": "甲己",
+        "start": "甲"
+      },
+      {
+        "stems": "乙庚",
+        "start": "丙"
+      },
+      {
+        "stems": "丙辛",
+        "start": "戊"
+      },
+      {
+        "stems": "丁壬",
+        "start": "庚"
+      },
+      {
+        "stems": "戊癸",
+        "start": "壬"
+      }
+    ]
+  },
+  "scope": "Ten source anchor groups and sequential progression. Generated combinations are mechanism checks, not independently published 120-cell tables. No modern civil-clock boundary, DST, historical timezone, strength, transformation or compatibility score is established by these passages."
+}

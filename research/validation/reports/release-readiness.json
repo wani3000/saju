@@ -29,6 +29,12 @@
     "syntheticReadingCombinations": 100,
     "originalReferenceCharts": 22,
     "betaCopyCases": 17,
+    "monthHourSourceAnchors": 10,
+    "monthHourChecks": {
+      "monthCombinations": 120,
+      "hourMinuteProbes": 14400,
+      "lateZiPolicyProbes": 20
+    },
     "reports": [
       {
         "file": "calendar-reading-audit.json",
@@ -37,6 +43,10 @@
       {
         "file": "beta-quality-audit.json",
         "sha256": "382ef1fe844e57534433fdbeaed723a4315c646d8679f15d1ddc60dfbe33c9f3"
+      },
+      {
+        "file": "month-hour-audit.json",
+        "sha256": "0e91ec2c5c2401a135e8cab11dc1622718a2230f29f699f7881b8e0587740771"
       }
     ]
   },

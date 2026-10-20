@@ -1,13 +1,19 @@
 // Creates an isolated temporary cluster. Never connects to a user's configured DATABASE_URL.
-import { mkdtemp, rm } from "node:fs/promises";
+import { mkdtemp, rm, readFile } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import path from "node:path";
 import { spawnSync } from "node:child_process";
 import assert from "node:assert/strict";
 const bin = process.env.PG_BIN ?? "/opt/homebrew/opt/postgresql@17/bin";
 const dir = await mkdtemp(path.join(tmpdir(), "saju-pg-"));
+// Do not inherit app/PG/auth/payment configuration from the caller or read .env.
+const localEnv = Object.fromEntries(
+  ["PATH", "HOME", "TMPDIR", "TEMP", "SystemRoot", "CI"].filter(k => process.env[k] !== undefined)
+    .map(k => [k, process.env[k]]),
+);
+Object.assign(localEnv, { LC_ALL: "C", LANG: "C", SAJU_MODE: "research", PAYMENT_PROVIDER: "mock", SAJU_RESTORE_CHECK: "isolated-cluster" });
 function run(command, args, extra = {}) {
-  const r = spawnSync(command, args, { encoding: "utf8", ...extra });
+  const r = spawnSync(command, args, { encoding: "utf8", env: localEnv, ...extra });
   if (r.status !== 0)
     throw new Error(
       `${path.basename(command)} failed: ${r.stderr || r.stdout}`,
@@ -61,7 +67,7 @@ try {
     {
       encoding: "utf8",
       timeout: 10000,
-      env: { ...process.env, DATABASE_URL: testUrl },
+      env: { ...localEnv, DATABASE_URL: testUrl },
     },
   );
   assert.equal(uninitialized.status, 1);
@@ -74,7 +80,7 @@ try {
     run(
       process.execPath,
       ["--import", "tsx", "scripts/postgres-scenarios.ts"],
-      { env: { ...process.env, DATABASE_URL: testUrl } },
+      { env: { ...localEnv, DATABASE_URL: testUrl } },
     ),
   );
   for (const args of [
@@ -85,7 +91,7 @@ try {
     const report = JSON.parse(
       run(process.execPath, ["--import", "tsx", ...args], {
         env: {
-          ...process.env,
+          ...localEnv,
           DATABASE_URL: testUrl.replace("saju_admin@", "saju_runtime@"),
         },
       }),
@@ -95,6 +101,10 @@ try {
   console.log(
     "Operational CLIs: uninitialized DB exits 1 without raw errors; recovered DB exits 0.",
   );
+  const fixture = path.join(dir, "restore-fixture.json");
+  console.log(run(process.execPath, ["--import", "tsx", "scripts/restore-scenarios.ts", "seed", fixture], {
+    env: { ...localEnv, DATABASE_URL: testUrl.replace("saju_admin@", "saju_runtime@") },
+  }));
   run(path.join(bin, "pg_dump"), [
     "--format=custom",
     "--file",
@@ -108,15 +118,18 @@ try {
     restoreUrl,
     path.join(dir, "backup.dump"),
   ]);
-  const sql =
-    "SELECT jsonb_agg(to_jsonb(r) ORDER BY comparison_id)::text FROM results r";
-  const before = run(path.join(bin, "psql"), [testUrl, "-Atc", sql]);
-  const after = run(path.join(bin, "psql"), [restoreUrl, "-Atc", sql]);
-  if (before !== after || before.trim() === "")
-    throw new Error("BACKUP_RESTORE_MISMATCH");
-  console.log(
-    "PostgreSQL backup restored into a separate DB; immutable result snapshots match.",
-  );
+  const schema = db => run(path.join(bin, "pg_dump"), ["--schema-only", "--no-comments", "--dbname", db])
+    // PostgreSQL 17+ random psql restriction keys are not schema differences.
+    .split("\n").filter(line => !/^\\(?:un)?restrict /.test(line)).join("\n");
+  assert.equal(schema(restoreUrl), schema(testUrl), "RESTORED_SCHEMA_ACL_POLICY_MISMATCH");
+  console.log(run(process.execPath, ["--import", "tsx", "scripts/restore-scenarios.ts", "verify", fixture], {
+    env: { ...localEnv, DATABASE_URL: restoreUrl.replace("saju_admin@", "saju_runtime@") },
+  }));
+  console.log("PostgreSQL separate-DB restore: schema, constraints, indexes, ACLs and RLS policies match; no hosted recovery approval implied.");
+} catch (error) {
+  // This log belongs only to the owned synthetic cluster and contains no service configuration.
+  if (!started) console.error(await readFile(path.join(dir, "server.log"), "utf8").catch(() => "Cluster startup failed before log creation."));
+  throw error;
 } finally {
   if (started)
     run(path.join(bin, "pg_ctl"), [
