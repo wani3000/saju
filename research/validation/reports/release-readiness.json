@@ -35,6 +35,12 @@
       "hourMinuteProbes": 14400,
       "lateZiPolicyProbes": 20
     },
+    "scopedCriteria": {
+      "calendarPolicyProbes": 1296,
+      "guardCases": 12,
+      "calendarInputs": 4,
+      "fiveElementCounterexamples": 8
+    },
     "reports": [
       {
         "file": "calendar-reading-audit.json",
@@ -47,6 +53,10 @@
       {
         "file": "month-hour-audit.json",
         "sha256": "0e91ec2c5c2401a135e8cab11dc1622718a2230f29f699f7881b8e0587740771"
+      },
+      {
+        "file": "policy-criteria-audit.json",
+        "sha256": "395f50d43c083c6051e33a85b1a72a1a313818f2bff38e31d4c6c8336179f16b"
       }
     ]
   },

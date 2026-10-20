@@ -160,3 +160,5 @@ node research/validation/audit-extended-sources.mjs --release-check
 `python3 collect-kasi-months.py --check`는 고정된 24개월·730행과 압축/원문 해시를 오프라인 검사한다. 재수집은 `--download`를 명시한 경우에만 실행한다. 공개 자료의 음력 연·월 표기는 절입 사주 연·월의 정답으로 사용하지 않는다. `node audit-calendar-reading.mjs --check`는 달력·기존 풀이의 연결, `node audit-release-readiness.mjs --check`는 종합 보고서를 재현한다. 후자의 `--release-check`는 현재 코드 2(미완료 조건 8개)가 기대값이며 0으로 우회하지 않는다. [근거·한계·화면 변경](../../docs/calendar-reading-release-review.md).
 
 `node audit-month-hour.mjs --check`는 『評註淵海子平』 PDF 39~40쪽의 시작값 10묶음·페이지 해시에서 파생 월주 120조합과 시각 14,400분을 재현한다. KASI 일진 10행을 사용하며 파생 조합을 독립 사료로 세지 않는다. 늦은 자시 정책은 선언한 구현 관습으로 검사한다. 연구 전체 213개, 계산·풀이 버전은 유지한다. [원문과 로컬 복원 검증](../../docs/month-hour-restore-review.md).
+
+`node audit-policy-criteria.mjs --check`는 계산 정책 끝점 1,296건, 다섯 합의 일시 기피 12구조·달력 입력 4개, 극단 원문 명조 20개의 오행 구비 가설을 재현한다. 관찰과 최종 판단은 별도이며 새 모듈 `scoped-criteria.mjs`의 합화 결론·궁합 점수는 null이다. 연구 전체 227개. `--release-check`는 미승인 코드 2다. [출처·정규화·반례·보류 기준](../../docs/policy-criteria-review.md).

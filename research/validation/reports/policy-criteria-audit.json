@@ -1,0 +1,1581 @@
+{
+  "ruleVersion": "scoped-source-criteria-v1",
+  "reviewedOn": "2026-10-20",
+  "reviewer": "Codex source and mechanism review; no human signoff",
+  "productionApproved": false,
+  "sourceFixtureSha256": "30faea116dde2129e93f465140139fbb5f39ac131147e3246403aff737a9ac53",
+  "calendar": {
+    "engineVersion": "research-civil-midnight-v5",
+    "productionApproved": false,
+    "monthBoundaryProbes": 1296,
+    "failures": [],
+    "checksPassed": true,
+    "choices": [
+      {
+        "id": "range",
+        "value": "1908..2026 for input and converted solar year",
+        "status": "selected-for-local-research"
+      },
+      {
+        "id": "year-month-clock",
+        "value": "historical UTC coordinate / Jie boundary; lunar year/month names are distinct",
+        "status": "selected-for-local-research"
+      },
+      {
+        "id": "day-hour-clock",
+        "value": "civil wall / midnight; no DST removal or solar-time correction",
+        "status": "selected-for-local-research"
+      },
+      {
+        "id": "birth-minute",
+        "value": "[minute start, next minute); lower review-edge ending minute excluded, upper starting minute included",
+        "status": "mechanism-checked"
+      },
+      {
+        "id": "review-margin",
+        "value": "120 seconds; not an astronomical error bound or a claim outside the window",
+        "status": "provisional-review-envelope"
+      },
+      {
+        "id": "unknown-hour",
+        "value": "whole civil date; no invented hour or probability over candidates",
+        "status": "selected-for-local-research"
+      },
+      {
+        "id": "historical-clock",
+        "value": "reject IANA gaps/folds; preserve 1954 source dispute and LMT/pre-1972 limitations",
+        "status": "source-dispute-retained"
+      },
+      {
+        "id": "production-adoption",
+        "value": null,
+        "status": "not-approved"
+      }
+    ],
+    "scope": "324 engine Jie boundaries in 2000..2026 x four policy edge probes. Mechanism checks, not additional independent astronomy or historical clock evidence."
+  },
+  "guards": [
+    {
+      "id": "갑기",
+      "review": {
+        "ruleVersion": "scoped-source-criteria-v1",
+        "productionApproved": false,
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "alternatives": [
+          {
+            "pair": "갑기",
+            "partnerPresence": "observed",
+            "partnerPositions": [
+              "year"
+            ],
+            "contextMatched": true,
+            "triggers": [
+              {
+                "position": "hour",
+                "component": "stem",
+                "symbol": "병"
+              }
+            ],
+            "hourUnobserved": false,
+            "status": "listed-trigger-observed",
+            "unresolved": [
+              "除月喜丙 is preserved from the 1926 scan. The online transcription reads 余月喜丙; no automatic exception or emendation is adopted.",
+              "不可見火 / 見木氣 requires a qi model; not reduced to counting visible fire or wood stems."
+            ],
+            "source": {
+              "sourceId": "sanming-1926",
+              "pdfPage": 129,
+              "pdfSha256": "c6eac6fca6411e45cb801f9b771aca6dd6a6d2dfb57ecc36ea5f42ecf1ac8bf9"
+            },
+            "transformationEstablished": null,
+            "sourceClauseFinalVerdict": null
+          }
+        ],
+        "status": "listed-trigger-observed",
+        "triggerInEveryCandidate": true,
+        "listedPreference": {
+          "hourMatch": "outside-listed-example",
+          "monthMatch": true,
+          "status": "outside-complete-preference-example"
+        },
+        "transformationEstablished": null,
+        "sourceClauseFinalVerdict": null,
+        "scope": "The selected edition lists these day/hour symbols in a specific month paragraph. Trigger presence, partner presence, preference and final transformation are separate.",
+        "candidatePolicy": "Cartesian marginal combinations are a conservative review envelope; partial triggers are not proved jointly feasible or probabilistic.",
+        "unresolved": [
+          "生旺有氣, textual exceptions, repeated partners and rescue/conflict precedence are not resolved by a literal trigger check.",
+          "No trigger is not a passed condition; an observed trigger is not a chart-wide failure or a cross-person penalty."
+        ]
+      }
+    },
+    {
+      "id": "갑기-reverse",
+      "review": {
+        "ruleVersion": "scoped-source-criteria-v1",
+        "productionApproved": false,
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "alternatives": [
+          {
+            "pair": "갑기",
+            "partnerPresence": "observed",
+            "partnerPositions": [
+              "year"
+            ],
+            "contextMatched": true,
+            "triggers": [
+              {
+                "position": "hour",
+                "component": "stem",
+                "symbol": "병"
+              }
+            ],
+            "hourUnobserved": false,
+            "status": "listed-trigger-observed",
+            "unresolved": [
+              "除月喜丙 is preserved from the 1926 scan. The online transcription reads 余月喜丙; no automatic exception or emendation is adopted.",
+              "不可見火 / 見木氣 requires a qi model; not reduced to counting visible fire or wood stems."
+            ],
+            "source": {
+              "sourceId": "sanming-1926",
+              "pdfPage": 129,
+              "pdfSha256": "c6eac6fca6411e45cb801f9b771aca6dd6a6d2dfb57ecc36ea5f42ecf1ac8bf9"
+            },
+            "transformationEstablished": null,
+            "sourceClauseFinalVerdict": null
+          }
+        ],
+        "status": "listed-trigger-observed",
+        "triggerInEveryCandidate": true,
+        "listedPreference": {
+          "hourMatch": "outside-listed-example",
+          "monthMatch": true,
+          "status": "outside-complete-preference-example"
+        },
+        "transformationEstablished": null,
+        "sourceClauseFinalVerdict": null,
+        "scope": "The selected edition lists these day/hour symbols in a specific month paragraph. Trigger presence, partner presence, preference and final transformation are separate.",
+        "candidatePolicy": "Cartesian marginal combinations are a conservative review envelope; partial triggers are not proved jointly feasible or probabilistic.",
+        "unresolved": [
+          "生旺有氣, textual exceptions, repeated partners and rescue/conflict precedence are not resolved by a literal trigger check.",
+          "No trigger is not a passed condition; an observed trigger is not a chart-wide failure or a cross-person penalty."
+        ]
+      }
+    },
+    {
+      "id": "을경",
+      "review": {
+        "ruleVersion": "scoped-source-criteria-v1",
+        "productionApproved": false,
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "alternatives": [
+          {
+            "pair": "을경",
+            "partnerPresence": "observed",
+            "partnerPositions": [
+              "year"
+            ],
+            "contextMatched": true,
+            "triggers": [
+              {
+                "position": "hour",
+                "component": "branch",
+                "symbol": "자"
+              }
+            ],
+            "hourUnobserved": false,
+            "status": "listed-trigger-observed",
+            "unresolved": [
+              "死敗 is not independently classified by this direct hour-branch check."
+            ],
+            "source": {
+              "sourceId": "sanming-1926",
+              "pdfPage": 129,
+              "pdfSha256": "c6eac6fca6411e45cb801f9b771aca6dd6a6d2dfb57ecc36ea5f42ecf1ac8bf9"
+            },
+            "transformationEstablished": null,
+            "sourceClauseFinalVerdict": null
+          }
+        ],
+        "status": "listed-trigger-observed",
+        "triggerInEveryCandidate": true,
+        "listedPreference": {
+          "hourMatch": "outside-listed-example",
+          "monthMatch": true,
+          "status": "outside-complete-preference-example"
+        },
+        "transformationEstablished": null,
+        "sourceClauseFinalVerdict": null,
+        "scope": "The selected edition lists these day/hour symbols in a specific month paragraph. Trigger presence, partner presence, preference and final transformation are separate.",
+        "candidatePolicy": "Cartesian marginal combinations are a conservative review envelope; partial triggers are not proved jointly feasible or probabilistic.",
+        "unresolved": [
+          "生旺有氣, textual exceptions, repeated partners and rescue/conflict precedence are not resolved by a literal trigger check.",
+          "No trigger is not a passed condition; an observed trigger is not a chart-wide failure or a cross-person penalty."
+        ]
+      }
+    },
+    {
+      "id": "을경-reverse",
+      "review": {
+        "ruleVersion": "scoped-source-criteria-v1",
+        "productionApproved": false,
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "alternatives": [
+          {
+            "pair": "을경",
+            "partnerPresence": "observed",
+            "partnerPositions": [
+              "year"
+            ],
+            "contextMatched": true,
+            "triggers": [
+              {
+                "position": "hour",
+                "component": "branch",
+                "symbol": "자"
+              }
+            ],
+            "hourUnobserved": false,
+            "status": "listed-trigger-observed",
+            "unresolved": [
+              "死敗 is not independently classified by this direct hour-branch check."
+            ],
+            "source": {
+              "sourceId": "sanming-1926",
+              "pdfPage": 129,
+              "pdfSha256": "c6eac6fca6411e45cb801f9b771aca6dd6a6d2dfb57ecc36ea5f42ecf1ac8bf9"
+            },
+            "transformationEstablished": null,
+            "sourceClauseFinalVerdict": null
+          }
+        ],
+        "status": "listed-trigger-observed",
+        "triggerInEveryCandidate": true,
+        "listedPreference": {
+          "hourMatch": "outside-listed-example",
+          "monthMatch": true,
+          "status": "outside-complete-preference-example"
+        },
+        "transformationEstablished": null,
+        "sourceClauseFinalVerdict": null,
+        "scope": "The selected edition lists these day/hour symbols in a specific month paragraph. Trigger presence, partner presence, preference and final transformation are separate.",
+        "candidatePolicy": "Cartesian marginal combinations are a conservative review envelope; partial triggers are not proved jointly feasible or probabilistic.",
+        "unresolved": [
+          "生旺有氣, textual exceptions, repeated partners and rescue/conflict precedence are not resolved by a literal trigger check.",
+          "No trigger is not a passed condition; an observed trigger is not a chart-wide failure or a cross-person penalty."
+        ]
+      }
+    },
+    {
+      "id": "병신",
+      "review": {
+        "ruleVersion": "scoped-source-criteria-v1",
+        "productionApproved": false,
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "alternatives": [
+          {
+            "pair": "병신",
+            "partnerPresence": "observed",
+            "partnerPositions": [
+              "year",
+              "hour"
+            ],
+            "contextMatched": true,
+            "triggers": [
+              {
+                "position": "hour",
+                "component": "branch",
+                "symbol": "묘"
+              }
+            ],
+            "hourUnobserved": false,
+            "status": "listed-trigger-observed",
+            "unresolved": [],
+            "source": {
+              "sourceId": "sanming-1926",
+              "pdfPage": 129,
+              "pdfSha256": "c6eac6fca6411e45cb801f9b771aca6dd6a6d2dfb57ecc36ea5f42ecf1ac8bf9"
+            },
+            "transformationEstablished": null,
+            "sourceClauseFinalVerdict": null
+          }
+        ],
+        "status": "listed-trigger-observed",
+        "triggerInEveryCandidate": true,
+        "listedPreference": {
+          "hourMatch": "outside-listed-example",
+          "monthMatch": true,
+          "status": "outside-complete-preference-example"
+        },
+        "transformationEstablished": null,
+        "sourceClauseFinalVerdict": null,
+        "scope": "The selected edition lists these day/hour symbols in a specific month paragraph. Trigger presence, partner presence, preference and final transformation are separate.",
+        "candidatePolicy": "Cartesian marginal combinations are a conservative review envelope; partial triggers are not proved jointly feasible or probabilistic.",
+        "unresolved": [
+          "生旺有氣, textual exceptions, repeated partners and rescue/conflict precedence are not resolved by a literal trigger check.",
+          "No trigger is not a passed condition; an observed trigger is not a chart-wide failure or a cross-person penalty."
+        ]
+      }
+    },
+    {
+      "id": "병신-reverse",
+      "review": {
+        "ruleVersion": "scoped-source-criteria-v1",
+        "productionApproved": false,
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "alternatives": [
+          {
+            "pair": "병신",
+            "partnerPresence": "observed",
+            "partnerPositions": [
+              "year"
+            ],
+            "contextMatched": true,
+            "triggers": [
+              {
+                "position": "hour",
+                "component": "branch",
+                "symbol": "묘"
+              }
+            ],
+            "hourUnobserved": false,
+            "status": "listed-trigger-observed",
+            "unresolved": [],
+            "source": {
+              "sourceId": "sanming-1926",
+              "pdfPage": 129,
+              "pdfSha256": "c6eac6fca6411e45cb801f9b771aca6dd6a6d2dfb57ecc36ea5f42ecf1ac8bf9"
+            },
+            "transformationEstablished": null,
+            "sourceClauseFinalVerdict": null
+          }
+        ],
+        "status": "listed-trigger-observed",
+        "triggerInEveryCandidate": true,
+        "listedPreference": {
+          "hourMatch": "outside-listed-example",
+          "monthMatch": true,
+          "status": "outside-complete-preference-example"
+        },
+        "transformationEstablished": null,
+        "sourceClauseFinalVerdict": null,
+        "scope": "The selected edition lists these day/hour symbols in a specific month paragraph. Trigger presence, partner presence, preference and final transformation are separate.",
+        "candidatePolicy": "Cartesian marginal combinations are a conservative review envelope; partial triggers are not proved jointly feasible or probabilistic.",
+        "unresolved": [
+          "生旺有氣, textual exceptions, repeated partners and rescue/conflict precedence are not resolved by a literal trigger check.",
+          "No trigger is not a passed condition; an observed trigger is not a chart-wide failure or a cross-person penalty."
+        ]
+      }
+    },
+    {
+      "id": "정임",
+      "review": {
+        "ruleVersion": "scoped-source-criteria-v1",
+        "productionApproved": false,
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "alternatives": [
+          {
+            "pair": "정임",
+            "partnerPresence": "observed",
+            "partnerPositions": [
+              "year"
+            ],
+            "contextMatched": true,
+            "triggers": [
+              {
+                "position": "hour",
+                "component": "branch",
+                "symbol": "오"
+              }
+            ],
+            "hourUnobserved": false,
+            "status": "listed-trigger-observed",
+            "unresolved": [],
+            "source": {
+              "sourceId": "sanming-1926",
+              "pdfPage": 129,
+              "pdfSha256": "c6eac6fca6411e45cb801f9b771aca6dd6a6d2dfb57ecc36ea5f42ecf1ac8bf9"
+            },
+            "transformationEstablished": null,
+            "sourceClauseFinalVerdict": null
+          }
+        ],
+        "status": "listed-trigger-observed",
+        "triggerInEveryCandidate": true,
+        "listedPreference": {
+          "hourMatch": "outside-listed-example",
+          "monthMatch": true,
+          "status": "outside-complete-preference-example"
+        },
+        "transformationEstablished": null,
+        "sourceClauseFinalVerdict": null,
+        "scope": "The selected edition lists these day/hour symbols in a specific month paragraph. Trigger presence, partner presence, preference and final transformation are separate.",
+        "candidatePolicy": "Cartesian marginal combinations are a conservative review envelope; partial triggers are not proved jointly feasible or probabilistic.",
+        "unresolved": [
+          "生旺有氣, textual exceptions, repeated partners and rescue/conflict precedence are not resolved by a literal trigger check.",
+          "No trigger is not a passed condition; an observed trigger is not a chart-wide failure or a cross-person penalty."
+        ]
+      }
+    },
+    {
+      "id": "정임-reverse",
+      "review": {
+        "ruleVersion": "scoped-source-criteria-v1",
+        "productionApproved": false,
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "alternatives": [
+          {
+            "pair": "정임",
+            "partnerPresence": "observed",
+            "partnerPositions": [
+              "year"
+            ],
+            "contextMatched": true,
+            "triggers": [
+              {
+                "position": "hour",
+                "component": "branch",
+                "symbol": "오"
+              }
+            ],
+            "hourUnobserved": false,
+            "status": "listed-trigger-observed",
+            "unresolved": [],
+            "source": {
+              "sourceId": "sanming-1926",
+              "pdfPage": 129,
+              "pdfSha256": "c6eac6fca6411e45cb801f9b771aca6dd6a6d2dfb57ecc36ea5f42ecf1ac8bf9"
+            },
+            "transformationEstablished": null,
+            "sourceClauseFinalVerdict": null
+          }
+        ],
+        "status": "listed-trigger-observed",
+        "triggerInEveryCandidate": true,
+        "listedPreference": {
+          "hourMatch": "outside-listed-example",
+          "monthMatch": true,
+          "status": "outside-complete-preference-example"
+        },
+        "transformationEstablished": null,
+        "sourceClauseFinalVerdict": null,
+        "scope": "The selected edition lists these day/hour symbols in a specific month paragraph. Trigger presence, partner presence, preference and final transformation are separate.",
+        "candidatePolicy": "Cartesian marginal combinations are a conservative review envelope; partial triggers are not proved jointly feasible or probabilistic.",
+        "unresolved": [
+          "生旺有氣, textual exceptions, repeated partners and rescue/conflict precedence are not resolved by a literal trigger check.",
+          "No trigger is not a passed condition; an observed trigger is not a chart-wide failure or a cross-person penalty."
+        ]
+      }
+    },
+    {
+      "id": "무계",
+      "review": {
+        "ruleVersion": "scoped-source-criteria-v1",
+        "productionApproved": false,
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "alternatives": [
+          {
+            "pair": "무계",
+            "partnerPresence": "observed",
+            "partnerPositions": [
+              "year"
+            ],
+            "contextMatched": true,
+            "triggers": [
+              {
+                "position": "hour",
+                "component": "branch",
+                "symbol": "묘"
+              }
+            ],
+            "hourUnobserved": false,
+            "status": "listed-trigger-observed",
+            "unresolved": [
+              "若犯戊己 has unresolved position/premise scope. It is not applied to every visible 戊/己, including the pair itself."
+            ],
+            "source": {
+              "sourceId": "sanming-1926",
+              "pdfPage": 129,
+              "pdfSha256": "c6eac6fca6411e45cb801f9b771aca6dd6a6d2dfb57ecc36ea5f42ecf1ac8bf9"
+            },
+            "transformationEstablished": null,
+            "sourceClauseFinalVerdict": null
+          }
+        ],
+        "status": "listed-trigger-observed",
+        "triggerInEveryCandidate": true,
+        "listedPreference": {
+          "hourMatch": "outside-listed-example",
+          "monthMatch": true,
+          "status": "outside-complete-preference-example"
+        },
+        "transformationEstablished": null,
+        "sourceClauseFinalVerdict": null,
+        "scope": "The selected edition lists these day/hour symbols in a specific month paragraph. Trigger presence, partner presence, preference and final transformation are separate.",
+        "candidatePolicy": "Cartesian marginal combinations are a conservative review envelope; partial triggers are not proved jointly feasible or probabilistic.",
+        "unresolved": [
+          "生旺有氣, textual exceptions, repeated partners and rescue/conflict precedence are not resolved by a literal trigger check.",
+          "No trigger is not a passed condition; an observed trigger is not a chart-wide failure or a cross-person penalty."
+        ]
+      }
+    },
+    {
+      "id": "무계-reverse",
+      "review": {
+        "ruleVersion": "scoped-source-criteria-v1",
+        "productionApproved": false,
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "alternatives": [
+          {
+            "pair": "무계",
+            "partnerPresence": "observed",
+            "partnerPositions": [
+              "year"
+            ],
+            "contextMatched": true,
+            "triggers": [
+              {
+                "position": "hour",
+                "component": "branch",
+                "symbol": "묘"
+              }
+            ],
+            "hourUnobserved": false,
+            "status": "listed-trigger-observed",
+            "unresolved": [
+              "若犯戊己 has unresolved position/premise scope. It is not applied to every visible 戊/己, including the pair itself."
+            ],
+            "source": {
+              "sourceId": "sanming-1926",
+              "pdfPage": 129,
+              "pdfSha256": "c6eac6fca6411e45cb801f9b771aca6dd6a6d2dfb57ecc36ea5f42ecf1ac8bf9"
+            },
+            "transformationEstablished": null,
+            "sourceClauseFinalVerdict": null
+          }
+        ],
+        "status": "listed-trigger-observed",
+        "triggerInEveryCandidate": true,
+        "listedPreference": {
+          "hourMatch": "outside-listed-example",
+          "monthMatch": true,
+          "status": "outside-complete-preference-example"
+        },
+        "transformationEstablished": null,
+        "sourceClauseFinalVerdict": null,
+        "scope": "The selected edition lists these day/hour symbols in a specific month paragraph. Trigger presence, partner presence, preference and final transformation are separate.",
+        "candidatePolicy": "Cartesian marginal combinations are a conservative review envelope; partial triggers are not proved jointly feasible or probabilistic.",
+        "unresolved": [
+          "生旺有氣, textual exceptions, repeated partners and rescue/conflict precedence are not resolved by a literal trigger check.",
+          "No trigger is not a passed condition; an observed trigger is not a chart-wide failure or a cross-person penalty."
+        ]
+      }
+    },
+    {
+      "id": "preferred-hour-with-day-guard",
+      "review": {
+        "ruleVersion": "scoped-source-criteria-v1",
+        "productionApproved": false,
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "alternatives": [
+          {
+            "pair": "무계",
+            "partnerPresence": "observed",
+            "partnerPositions": [
+              "year"
+            ],
+            "contextMatched": true,
+            "triggers": [
+              {
+                "position": "day",
+                "component": "branch",
+                "symbol": "유"
+              }
+            ],
+            "hourUnobserved": false,
+            "status": "listed-trigger-observed",
+            "unresolved": [
+              "若犯戊己 has unresolved position/premise scope. It is not applied to every visible 戊/己, including the pair itself."
+            ],
+            "source": {
+              "sourceId": "sanming-1926",
+              "pdfPage": 129,
+              "pdfSha256": "c6eac6fca6411e45cb801f9b771aca6dd6a6d2dfb57ecc36ea5f42ecf1ac8bf9"
+            },
+            "transformationEstablished": null,
+            "sourceClauseFinalVerdict": null
+          }
+        ],
+        "status": "listed-trigger-observed",
+        "triggerInEveryCandidate": true,
+        "listedPreference": {
+          "hourMatch": "listed-preferred-hour",
+          "monthMatch": true,
+          "status": "preference-example-matched"
+        },
+        "transformationEstablished": null,
+        "sourceClauseFinalVerdict": null,
+        "scope": "The selected edition lists these day/hour symbols in a specific month paragraph. Trigger presence, partner presence, preference and final transformation are separate.",
+        "candidatePolicy": "Cartesian marginal combinations are a conservative review envelope; partial triggers are not proved jointly feasible or probabilistic.",
+        "unresolved": [
+          "生旺有氣, textual exceptions, repeated partners and rescue/conflict precedence are not resolved by a literal trigger check.",
+          "No trigger is not a passed condition; an observed trigger is not a chart-wide failure or a cross-person penalty."
+        ]
+      }
+    },
+    {
+      "id": "known-day-guard-unknown-hour",
+      "review": {
+        "ruleVersion": "scoped-source-criteria-v1",
+        "productionApproved": false,
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day"
+            ],
+            "omittedPositions": [
+              "hour"
+            ],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "alternatives": [
+          {
+            "pair": "무계",
+            "partnerPresence": "observed",
+            "partnerPositions": [
+              "year"
+            ],
+            "contextMatched": true,
+            "triggers": [
+              {
+                "position": "day",
+                "component": "branch",
+                "symbol": "유"
+              }
+            ],
+            "hourUnobserved": true,
+            "status": "listed-trigger-observed",
+            "unresolved": [
+              "若犯戊己 has unresolved position/premise scope. It is not applied to every visible 戊/己, including the pair itself."
+            ],
+            "source": {
+              "sourceId": "sanming-1926",
+              "pdfPage": 129,
+              "pdfSha256": "c6eac6fca6411e45cb801f9b771aca6dd6a6d2dfb57ecc36ea5f42ecf1ac8bf9"
+            },
+            "transformationEstablished": null,
+            "sourceClauseFinalVerdict": null
+          }
+        ],
+        "status": "listed-trigger-observed",
+        "triggerInEveryCandidate": true,
+        "listedPreference": {
+          "hourMatch": "unobserved",
+          "monthMatch": true,
+          "status": "incomplete-observation"
+        },
+        "transformationEstablished": null,
+        "sourceClauseFinalVerdict": null,
+        "scope": "The selected edition lists these day/hour symbols in a specific month paragraph. Trigger presence, partner presence, preference and final transformation are separate.",
+        "candidatePolicy": "Cartesian marginal combinations are a conservative review envelope; partial triggers are not proved jointly feasible or probabilistic.",
+        "unresolved": [
+          "生旺有氣, textual exceptions, repeated partners and rescue/conflict precedence are not resolved by a literal trigger check.",
+          "No trigger is not a passed condition; an observed trigger is not a chart-wide failure or a cross-person penalty."
+        ]
+      }
+    }
+  ],
+  "calendarInputs": [
+    {
+      "id": "known-time",
+      "review": {
+        "ruleVersion": "scoped-source-criteria-v1",
+        "productionApproved": false,
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "alternatives": [
+          {
+            "pair": "정임",
+            "partnerPresence": "absent",
+            "partnerPositions": [],
+            "contextMatched": true,
+            "triggers": [
+              {
+                "position": "hour",
+                "component": "branch",
+                "symbol": "오"
+              }
+            ],
+            "hourUnobserved": false,
+            "status": "listed-trigger-observed",
+            "unresolved": [],
+            "source": {
+              "sourceId": "sanming-1926",
+              "pdfPage": 129,
+              "pdfSha256": "c6eac6fca6411e45cb801f9b771aca6dd6a6d2dfb57ecc36ea5f42ecf1ac8bf9"
+            },
+            "transformationEstablished": null,
+            "sourceClauseFinalVerdict": null
+          }
+        ],
+        "status": "listed-trigger-observed",
+        "triggerInEveryCandidate": true,
+        "listedPreference": {
+          "hourMatch": "outside-listed-example",
+          "monthMatch": true,
+          "status": "no-day-partner"
+        },
+        "transformationEstablished": null,
+        "sourceClauseFinalVerdict": null,
+        "scope": "The selected edition lists these day/hour symbols in a specific month paragraph. Trigger presence, partner presence, preference and final transformation are separate.",
+        "candidatePolicy": "Cartesian marginal combinations are a conservative review envelope; partial triggers are not proved jointly feasible or probabilistic.",
+        "unresolved": [
+          "生旺有氣, textual exceptions, repeated partners and rescue/conflict precedence are not resolved by a literal trigger check.",
+          "No trigger is not a passed condition; an observed trigger is not a chart-wide failure or a cross-person penalty."
+        ]
+      }
+    },
+    {
+      "id": "unknown-time",
+      "review": {
+        "ruleVersion": "scoped-source-criteria-v1",
+        "productionApproved": false,
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day"
+            ],
+            "omittedPositions": [
+              "hour"
+            ],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "alternatives": [
+          {
+            "pair": "정임",
+            "partnerPresence": "hour-unobserved",
+            "partnerPositions": [],
+            "contextMatched": true,
+            "triggers": [],
+            "hourUnobserved": true,
+            "status": "hour-unobserved",
+            "unresolved": [],
+            "source": {
+              "sourceId": "sanming-1926",
+              "pdfPage": 129,
+              "pdfSha256": "c6eac6fca6411e45cb801f9b771aca6dd6a6d2dfb57ecc36ea5f42ecf1ac8bf9"
+            },
+            "transformationEstablished": null,
+            "sourceClauseFinalVerdict": null
+          }
+        ],
+        "status": "hour-unobserved",
+        "triggerInEveryCandidate": false,
+        "listedPreference": {
+          "hourMatch": "unobserved",
+          "monthMatch": true,
+          "status": "incomplete-observation"
+        },
+        "transformationEstablished": null,
+        "sourceClauseFinalVerdict": null,
+        "scope": "The selected edition lists these day/hour symbols in a specific month paragraph. Trigger presence, partner presence, preference and final transformation are separate.",
+        "candidatePolicy": "Cartesian marginal combinations are a conservative review envelope; partial triggers are not proved jointly feasible or probabilistic.",
+        "unresolved": [
+          "生旺有氣, textual exceptions, repeated partners and rescue/conflict precedence are not resolved by a literal trigger check.",
+          "No trigger is not a passed condition; an observed trigger is not a chart-wide failure or a cross-person penalty."
+        ]
+      }
+    },
+    {
+      "id": "term-candidates",
+      "review": {
+        "ruleVersion": "scoped-source-criteria-v1",
+        "productionApproved": false,
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": true
+          }
+        ],
+        "alternatives": [
+          {
+            "pair": "무계",
+            "partnerPresence": "absent",
+            "partnerPositions": [],
+            "contextMatched": false,
+            "triggers": [],
+            "hourUnobserved": false,
+            "status": "outside-listed-month-context",
+            "unresolved": [
+              "若犯戊己 has unresolved position/premise scope. It is not applied to every visible 戊/己, including the pair itself."
+            ],
+            "source": {
+              "sourceId": "sanming-1926",
+              "pdfPage": 129,
+              "pdfSha256": "c6eac6fca6411e45cb801f9b771aca6dd6a6d2dfb57ecc36ea5f42ecf1ac8bf9"
+            },
+            "transformationEstablished": null,
+            "sourceClauseFinalVerdict": null
+          },
+          {
+            "pair": "무계",
+            "partnerPresence": "observed",
+            "partnerPositions": [
+              "year"
+            ],
+            "contextMatched": false,
+            "triggers": [],
+            "hourUnobserved": false,
+            "status": "outside-listed-month-context",
+            "unresolved": [
+              "若犯戊己 has unresolved position/premise scope. It is not applied to every visible 戊/己, including the pair itself."
+            ],
+            "source": {
+              "sourceId": "sanming-1926",
+              "pdfPage": 129,
+              "pdfSha256": "c6eac6fca6411e45cb801f9b771aca6dd6a6d2dfb57ecc36ea5f42ecf1ac8bf9"
+            },
+            "transformationEstablished": null,
+            "sourceClauseFinalVerdict": null
+          }
+        ],
+        "status": "outside-listed-month-context",
+        "triggerInEveryCandidate": false,
+        "listedPreference": {
+          "hourMatch": "outside-listed-example",
+          "monthMatch": false,
+          "status": null
+        },
+        "transformationEstablished": null,
+        "sourceClauseFinalVerdict": null,
+        "scope": "The selected edition lists these day/hour symbols in a specific month paragraph. Trigger presence, partner presence, preference and final transformation are separate.",
+        "candidatePolicy": "Cartesian marginal combinations are a conservative review envelope; partial triggers are not proved jointly feasible or probabilistic.",
+        "unresolved": [
+          "生旺有氣, textual exceptions, repeated partners and rescue/conflict precedence are not resolved by a literal trigger check.",
+          "No trigger is not a passed condition; an observed trigger is not a chart-wide failure or a cross-person penalty."
+        ]
+      }
+    },
+    {
+      "id": "clock-source-dispute",
+      "review": {
+        "ruleVersion": "scoped-source-criteria-v1",
+        "productionApproved": false,
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day"
+            ],
+            "omittedPositions": [
+              "hour"
+            ],
+            "clockReviewRequired": true,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "alternatives": [
+          {
+            "pair": "병신",
+            "partnerPresence": "hour-unobserved",
+            "partnerPositions": [],
+            "contextMatched": false,
+            "triggers": [],
+            "hourUnobserved": true,
+            "status": "outside-listed-month-context",
+            "unresolved": [],
+            "source": {
+              "sourceId": "sanming-1926",
+              "pdfPage": 129,
+              "pdfSha256": "c6eac6fca6411e45cb801f9b771aca6dd6a6d2dfb57ecc36ea5f42ecf1ac8bf9"
+            },
+            "transformationEstablished": null,
+            "sourceClauseFinalVerdict": null
+          }
+        ],
+        "status": "outside-listed-month-context",
+        "triggerInEveryCandidate": false,
+        "listedPreference": {
+          "hourMatch": "unobserved",
+          "monthMatch": false,
+          "status": "incomplete-observation"
+        },
+        "transformationEstablished": null,
+        "sourceClauseFinalVerdict": null,
+        "scope": "The selected edition lists these day/hour symbols in a specific month paragraph. Trigger presence, partner presence, preference and final transformation are separate.",
+        "candidatePolicy": "Cartesian marginal combinations are a conservative review envelope; partial triggers are not proved jointly feasible or probabilistic.",
+        "unresolved": [
+          "生旺有氣, textual exceptions, repeated partners and rescue/conflict precedence are not resolved by a literal trigger check.",
+          "No trigger is not a passed condition; an observed trigger is not a chart-wide failure or a cross-person penalty."
+        ]
+      }
+    }
+  ],
+  "strength": {
+    "status": "rejected-as-sufficient-balance-criterion",
+    "scope": "Twenty source extreme cases, using the separately pinned static hidden-stem convention without weights.",
+    "cases": [
+      {
+        "id": "wood-too-strong",
+        "sourceLabel": "木太旺",
+        "pdfPage": 178,
+        "observedElements": [
+          "목",
+          "수",
+          "토",
+          "화"
+        ],
+        "allFivePresent": false,
+        "sourceCategory": "too-strong"
+      },
+      {
+        "id": "wood-extremely-strong",
+        "sourceLabel": "木旺極",
+        "pdfPage": 179,
+        "observedElements": [
+          "목",
+          "수",
+          "토",
+          "화"
+        ],
+        "allFivePresent": false,
+        "sourceCategory": "extremely-strong"
+      },
+      {
+        "id": "wood-too-weak",
+        "sourceLabel": "木太衰",
+        "pdfPage": 179,
+        "observedElements": [
+          "금",
+          "목",
+          "수",
+          "토",
+          "화"
+        ],
+        "allFivePresent": true,
+        "sourceCategory": "too-weak"
+      },
+      {
+        "id": "wood-extremely-weak",
+        "sourceLabel": "木衰極",
+        "pdfPage": 180,
+        "observedElements": [
+          "금",
+          "목",
+          "토",
+          "화"
+        ],
+        "allFivePresent": false,
+        "sourceCategory": "extremely-weak"
+      },
+      {
+        "id": "fire-too-strong",
+        "sourceLabel": "火太旺",
+        "pdfPage": 180,
+        "observedElements": [
+          "금",
+          "목",
+          "수",
+          "토",
+          "화"
+        ],
+        "allFivePresent": true,
+        "sourceCategory": "too-strong"
+      },
+      {
+        "id": "fire-extremely-strong",
+        "sourceLabel": "火旺極",
+        "pdfPage": 181,
+        "observedElements": [
+          "금",
+          "목",
+          "토",
+          "화"
+        ],
+        "allFivePresent": false,
+        "sourceCategory": "extremely-strong"
+      },
+      {
+        "id": "fire-too-weak",
+        "sourceLabel": "火太衰",
+        "pdfPage": 181,
+        "observedElements": [
+          "금",
+          "수",
+          "토",
+          "화"
+        ],
+        "allFivePresent": false,
+        "sourceCategory": "too-weak"
+      },
+      {
+        "id": "fire-extremely-weak",
+        "sourceLabel": "火衰極",
+        "pdfPage": 182,
+        "observedElements": [
+          "금",
+          "목",
+          "수",
+          "토",
+          "화"
+        ],
+        "allFivePresent": true,
+        "sourceCategory": "extremely-weak"
+      },
+      {
+        "id": "earth-too-strong",
+        "sourceLabel": "土太旺",
+        "pdfPage": 182,
+        "observedElements": [
+          "금",
+          "목",
+          "수",
+          "토",
+          "화"
+        ],
+        "allFivePresent": true,
+        "sourceCategory": "too-strong"
+      },
+      {
+        "id": "earth-extremely-strong",
+        "sourceLabel": "土旺極",
+        "pdfPage": 183,
+        "observedElements": [
+          "금",
+          "목",
+          "수",
+          "토",
+          "화"
+        ],
+        "allFivePresent": true,
+        "sourceCategory": "extremely-strong"
+      },
+      {
+        "id": "earth-too-weak",
+        "sourceLabel": "土太衰",
+        "pdfPage": 183,
+        "observedElements": [
+          "금",
+          "목",
+          "수",
+          "토"
+        ],
+        "allFivePresent": false,
+        "sourceCategory": "too-weak"
+      },
+      {
+        "id": "earth-extremely-weak",
+        "sourceLabel": "土衰極",
+        "pdfPage": 184,
+        "observedElements": [
+          "금",
+          "목",
+          "수",
+          "토"
+        ],
+        "allFivePresent": false,
+        "sourceCategory": "extremely-weak"
+      },
+      {
+        "id": "metal-too-strong",
+        "sourceLabel": "金太旺",
+        "pdfPage": 184,
+        "observedElements": [
+          "금",
+          "목",
+          "수",
+          "토"
+        ],
+        "allFivePresent": false,
+        "sourceCategory": "too-strong"
+      },
+      {
+        "id": "metal-extremely-strong",
+        "sourceLabel": "金旺極",
+        "pdfPage": 185,
+        "observedElements": [
+          "금",
+          "목",
+          "수",
+          "토",
+          "화"
+        ],
+        "allFivePresent": true,
+        "sourceCategory": "extremely-strong"
+      },
+      {
+        "id": "metal-too-weak",
+        "sourceLabel": "金太衰",
+        "pdfPage": 185,
+        "observedElements": [
+          "금",
+          "목",
+          "토",
+          "화"
+        ],
+        "allFivePresent": false,
+        "sourceCategory": "too-weak"
+      },
+      {
+        "id": "metal-extremely-weak",
+        "sourceLabel": "金衰極",
+        "pdfPage": 186,
+        "observedElements": [
+          "금",
+          "목",
+          "수",
+          "토",
+          "화"
+        ],
+        "allFivePresent": true,
+        "sourceCategory": "extremely-weak"
+      },
+      {
+        "id": "water-too-strong",
+        "sourceLabel": "水太旺",
+        "pdfPage": 186,
+        "observedElements": [
+          "금",
+          "목",
+          "수",
+          "토",
+          "화"
+        ],
+        "allFivePresent": true,
+        "sourceCategory": "too-strong"
+      },
+      {
+        "id": "water-extremely-strong",
+        "sourceLabel": "水旺極",
+        "pdfPage": 187,
+        "observedElements": [
+          "금",
+          "목",
+          "수"
+        ],
+        "allFivePresent": false,
+        "sourceCategory": "extremely-strong"
+      },
+      {
+        "id": "water-too-weak",
+        "sourceLabel": "水太衰",
+        "pdfPage": 187,
+        "observedElements": [
+          "목",
+          "수",
+          "토",
+          "화"
+        ],
+        "allFivePresent": false,
+        "sourceCategory": "too-weak"
+      },
+      {
+        "id": "water-extremely-weak",
+        "sourceLabel": "水衰極",
+        "pdfPage": 188,
+        "observedElements": [
+          "목",
+          "수",
+          "토",
+          "화"
+        ],
+        "allFivePresent": false,
+        "sourceCategory": "extremely-weak"
+      }
+    ],
+    "counterexamples": [
+      "wood-too-weak",
+      "fire-too-strong",
+      "fire-extremely-weak",
+      "earth-too-strong",
+      "earth-extremely-strong",
+      "metal-extremely-strong",
+      "metal-extremely-weak",
+      "water-too-strong"
+    ],
+    "generalStrength": null,
+    "moderation": null,
+    "limitation": "Five categories being present does not establish their relative strength. A missing category likewise does not prove imbalance; this corpus has no balanced reference class."
+  },
+  "pair": {
+    "ruleVersion": "scoped-source-criteria-v1",
+    "productionApproved": false,
+    "individuals": [
+      {
+        "strength": {
+          "ruleVersion": "source-case-veto-and-score-review-v1",
+          "productionApproved": false,
+          "coverage": [
+            {
+              "side": "self",
+              "includedPositions": [
+                "year",
+                "month",
+                "day",
+                "hour"
+              ],
+              "omittedPositions": [],
+              "clockReviewRequired": false,
+              "boundaryReviewRequired": false
+            }
+          ],
+          "status": "outside-reference-corpus",
+          "sourceClassification": null,
+          "matches": [],
+          "sourceAttributedTransformation": null,
+          "generalClassification": null,
+          "moderation": null,
+          "score": null,
+          "limitations": [
+            "Twenty deliberately selected extreme cases contain no balanced reference class",
+            "No nearest-chart inference, default balance, numerical thresholds or prediction",
+            "An exact source match is not calendar approval; coverage flags still apply",
+            "The source year/month transformation example is not a day-stem or cross-person rule"
+          ]
+        },
+        "guards": {
+          "ruleVersion": "scoped-source-criteria-v1",
+          "productionApproved": false,
+          "coverage": [
+            {
+              "side": "self",
+              "includedPositions": [
+                "year",
+                "month",
+                "day",
+                "hour"
+              ],
+              "omittedPositions": [],
+              "clockReviewRequired": false,
+              "boundaryReviewRequired": false
+            }
+          ],
+          "alternatives": [
+            {
+              "pair": "갑기",
+              "partnerPresence": "observed",
+              "partnerPositions": [
+                "year"
+              ],
+              "contextMatched": true,
+              "triggers": [
+                {
+                  "position": "hour",
+                  "component": "stem",
+                  "symbol": "병"
+                }
+              ],
+              "hourUnobserved": false,
+              "status": "listed-trigger-observed",
+              "unresolved": [
+                "除月喜丙 is preserved from the 1926 scan. The online transcription reads 余月喜丙; no automatic exception or emendation is adopted.",
+                "不可見火 / 見木氣 requires a qi model; not reduced to counting visible fire or wood stems."
+              ],
+              "source": {
+                "sourceId": "sanming-1926",
+                "pdfPage": 129,
+                "pdfSha256": "c6eac6fca6411e45cb801f9b771aca6dd6a6d2dfb57ecc36ea5f42ecf1ac8bf9"
+              },
+              "transformationEstablished": null,
+              "sourceClauseFinalVerdict": null
+            }
+          ],
+          "status": "listed-trigger-observed",
+          "triggerInEveryCandidate": true,
+          "listedPreference": {
+            "hourMatch": "outside-listed-example",
+            "monthMatch": true,
+            "status": "outside-complete-preference-example"
+          },
+          "transformationEstablished": null,
+          "sourceClauseFinalVerdict": null,
+          "scope": "The selected edition lists these day/hour symbols in a specific month paragraph. Trigger presence, partner presence, preference and final transformation are separate.",
+          "candidatePolicy": "Cartesian marginal combinations are a conservative review envelope; partial triggers are not proved jointly feasible or probabilistic.",
+          "unresolved": [
+            "生旺有氣, textual exceptions, repeated partners and rescue/conflict precedence are not resolved by a literal trigger check.",
+            "No trigger is not a passed condition; an observed trigger is not a chart-wide failure or a cross-person penalty."
+          ]
+        }
+      },
+      {
+        "strength": {
+          "ruleVersion": "source-case-veto-and-score-review-v1",
+          "productionApproved": false,
+          "coverage": [
+            {
+              "side": "self",
+              "includedPositions": [
+                "year",
+                "month",
+                "day",
+                "hour"
+              ],
+              "omittedPositions": [],
+              "clockReviewRequired": false,
+              "boundaryReviewRequired": false
+            }
+          ],
+          "status": "outside-reference-corpus",
+          "sourceClassification": null,
+          "matches": [],
+          "sourceAttributedTransformation": null,
+          "generalClassification": null,
+          "moderation": null,
+          "score": null,
+          "limitations": [
+            "Twenty deliberately selected extreme cases contain no balanced reference class",
+            "No nearest-chart inference, default balance, numerical thresholds or prediction",
+            "An exact source match is not calendar approval; coverage flags still apply",
+            "The source year/month transformation example is not a day-stem or cross-person rule"
+          ]
+        },
+        "guards": {
+          "ruleVersion": "scoped-source-criteria-v1",
+          "productionApproved": false,
+          "coverage": [
+            {
+              "side": "self",
+              "includedPositions": [
+                "year",
+                "month",
+                "day",
+                "hour"
+              ],
+              "omittedPositions": [],
+              "clockReviewRequired": false,
+              "boundaryReviewRequired": false
+            }
+          ],
+          "alternatives": [
+            {
+              "pair": "무계",
+              "partnerPresence": "observed",
+              "partnerPositions": [
+                "year"
+              ],
+              "contextMatched": true,
+              "triggers": [
+                {
+                  "position": "day",
+                  "component": "branch",
+                  "symbol": "유"
+                }
+              ],
+              "hourUnobserved": false,
+              "status": "listed-trigger-observed",
+              "unresolved": [
+                "若犯戊己 has unresolved position/premise scope. It is not applied to every visible 戊/己, including the pair itself."
+              ],
+              "source": {
+                "sourceId": "sanming-1926",
+                "pdfPage": 129,
+                "pdfSha256": "c6eac6fca6411e45cb801f9b771aca6dd6a6d2dfb57ecc36ea5f42ecf1ac8bf9"
+              },
+              "transformationEstablished": null,
+              "sourceClauseFinalVerdict": null
+            }
+          ],
+          "status": "listed-trigger-observed",
+          "triggerInEveryCandidate": true,
+          "listedPreference": {
+            "hourMatch": "listed-preferred-hour",
+            "monthMatch": true,
+            "status": "preference-example-matched"
+          },
+          "transformationEstablished": null,
+          "sourceClauseFinalVerdict": null,
+          "scope": "The selected edition lists these day/hour symbols in a specific month paragraph. Trigger presence, partner presence, preference and final transformation are separate.",
+          "candidatePolicy": "Cartesian marginal combinations are a conservative review envelope; partial triggers are not proved jointly feasible or probabilistic.",
+          "unresolved": [
+            "生旺有氣, textual exceptions, repeated partners and rescue/conflict precedence are not resolved by a literal trigger check.",
+            "No trigger is not a passed condition; an observed trigger is not a chart-wide failure or a cross-person penalty."
+          ]
+        }
+      }
+    ],
+    "score": null,
+    "normalizedCompatibility": null,
+    "mapRadius": null,
+    "reason": "Source statements about one chart contain no adopted relationship effect, numeric weight or pairwise aggregation scale."
+  },
+  "checksPassed": true,
+  "limitations": [
+    "Named day/hour triggers are source-position observations; remaining qi/exception/rescue conditions remain unresolved.",
+    "Five-element presence is not strength or balance. Individual source labels are not pairwise relationship effects.",
+    "Earlier reports, app copy v2, calculated profiles and saved/purchased/shared snapshots are unchanged."
+  ]
+}

@@ -1,0 +1,134 @@
+{
+  "version": "scoped-source-criteria-v1",
+  "reviewedOn": "2026-10-20",
+  "reviewer": "Codex visual collation; punctuation added. No expert signoff.",
+  "sourceId": "sanming-1926",
+  "pdfSha256": "c6eac6fca6411e45cb801f9b771aca6dd6a6d2dfb57ecc36ea5f42ecf1ac8bf9",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/2/23/NLC416-13jh000156-94145_%E4%B8%89%E5%91%BD%E9%80%9A%E6%9C%83.pdf",
+  "pages": [
+    {
+      "pdfPage": 128,
+      "printedPage": 50,
+      "file": "sanming-1926-page-128.png",
+      "sha256": "085acffe1c8278ecd9b9f3deef2e348ebd9c45fc5e4dddb09bfae3d296997338"
+    },
+    {
+      "pdfPage": 129,
+      "printedPage": 51,
+      "file": "sanming-1926-page-129.png",
+      "sha256": "b68042785e0a2fa391a2f08e741cf90cacd78160fa437a3afa7467a6215410d4"
+    }
+  ],
+  "guards": [
+    {
+      "pair": "갑기",
+      "months": [
+        "진",
+        "술",
+        "축",
+        "미"
+      ],
+      "positions": [
+        "hour"
+      ],
+      "component": "stem",
+      "symbols": [
+        "병",
+        "정"
+      ],
+      "text": "是甲己日怕丙丁時。除月喜丙。",
+      "context": "四季月其土成象",
+      "unresolved": [
+        "除月喜丙 is preserved from the 1926 scan. The online transcription reads 余月喜丙; no automatic exception or emendation is adopted.",
+        "不可見火 / 見木氣 requires a qi model; not reduced to counting visible fire or wood stems."
+      ]
+    },
+    {
+      "pair": "을경",
+      "months": [
+        "신",
+        "유"
+      ],
+      "positions": [
+        "hour"
+      ],
+      "component": "branch",
+      "symbols": [
+        "자",
+        "인"
+      ],
+      "text": "不喜死敗。故此月有乙庚日怕子寅時。",
+      "context": "申酉月其金成象",
+      "unresolved": [
+        "死敗 is not independently classified by this direct hour-branch check."
+      ]
+    },
+    {
+      "pair": "병신",
+      "months": [
+        "해",
+        "자"
+      ],
+      "positions": [
+        "hour"
+      ],
+      "component": "branch",
+      "symbols": [
+        "묘",
+        "사"
+      ],
+      "text": "故此月有丙辛日怕卯巳時。",
+      "context": "亥子月其水成象",
+      "unresolved": []
+    },
+    {
+      "pair": "정임",
+      "months": [
+        "인",
+        "묘"
+      ],
+      "positions": [
+        "hour"
+      ],
+      "component": "branch",
+      "symbols": [
+        "오",
+        "신"
+      ],
+      "text": "故此月有丁壬日怕午申時。",
+      "context": "寅卯月其木成象",
+      "unresolved": []
+    },
+    {
+      "pair": "무계",
+      "months": [
+        "사",
+        "오"
+      ],
+      "positions": [
+        "day",
+        "hour"
+      ],
+      "component": "branch",
+      "symbols": [
+        "묘",
+        "유"
+      ],
+      "text": "怕卯酉日時。若犯戊己是火見土則暗伏不明。",
+      "context": "巳午月其火成象",
+      "unresolved": [
+        "若犯戊己 has unresolved position/premise scope. It is not applied to every visible 戊/己, including the pair itself."
+      ]
+    }
+  ],
+  "normalization": "此月 and adjacent paragraphs are conservatively scoped to the listed month examples. Day-stem pair in one chart only. Named symbols/positions are literal observations, not generic qi, strength or transformation predicates.",
+  "textCollation": {
+    "url": "https://zh.wikisource.org/zh-hant/三命通會/卷二",
+    "section": "論十干化氣",
+    "accessedOn": "2026-10-20",
+    "adoptedAsScanCorrection": false,
+    "notes": "Online transcription is not a second inspected scan. It reads 余月喜丙 and 見木氣則克壞 where the pinned 1926 scan reads 除月喜丙 and 見木氣則愈衰. Source-specific wording retained.",
+    "permanentUrl": "https://zh.wikisource.org/w/index.php?oldid=2292392&title=%E4%B8%89%E5%91%BD%E9%80%9A%E6%9C%83/%E5%8D%B7%E4%BA%8C",
+    "revisionId": 2292392
+  }
+}
