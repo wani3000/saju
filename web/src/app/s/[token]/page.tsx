@@ -49,7 +49,7 @@ export default async function Shared({
           <p>공유가 철회되었거나, 링크가 만료되었어요.</p>
         </>
       )}
-      <p className="hint">{character.displayName} · 조선풍 가상 인물</p>
+      <p className="hint">{character.displayName}의 서당에서</p>
       <Link className="button" href="/">
         나도 시작하기
       </Link>

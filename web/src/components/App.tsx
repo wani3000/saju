@@ -8,9 +8,9 @@ import {
   type SavedResult,
 } from "@/domain/model";
 import PersonForm from "./PersonForm";
-import ResearchNotice from "./ResearchNotice";
+import FixedActions from "./FixedActions";
+import IconChevronLeftLine from "@karrotmarket/react-monochrome-icon/IconChevronLeftLine";
 import GuideNote from "./GuideNote";
-import JourneyProgress from "./JourneyProgress";
 import PersonalityReading from "./PersonalityReading";
 import { character, journeyCopy, shareArtwork } from "@/domain/presentation";
 import { reviewStoredChart } from "@/domain/chart-review";
@@ -349,8 +349,9 @@ export default function App({ request: api = serverApi, preview = false, onReset
         share: journeyCopy.share.guide, account: journeyCopy.account.guide } as Record<string, string>)[view];
   return (
     <main className={`shell${view === "home" ? " home-shell" : " journey-shell"}${view === "result" ? " result-shell" : ""}`}>
-      <header>
-        <button className="brand" onClick={() => navigate("home")} aria-label={`${character.displayName} 시작 화면`}>
+      <header className={`app-header${view === "home" ? " landing-header" : ""}`}>
+        {view !== "home" && <button className="icon-button" aria-label="뒤로가기" onClick={() => navigate(editing ? "review" : ({ other: "me", review: "other", share: "result" } as Record<string, string>)[view] ?? "home")}><IconChevronLeftLine size={28} aria-hidden="true" /></button>}
+        <button className={`brand${view !== "home" ? " compact-brand" : ""}`} onClick={() => navigate("home")} aria-label={`${character.displayName} 시작 화면`}>
           <img className="guide-avatar" src={character.avatar} width={44} height={44} alt="" />
           <span><strong>{character.displayName}</strong><small>{character.setting}</small></span>
         </button>
@@ -358,27 +359,6 @@ export default function App({ request: api = serverApi, preview = false, onReset
           보관함
         </button>
       </header>
-      {view !== "home" && <div className="mode">{preview ? "임시 체험 · 실제 결제 없음" : "연구 체험 · 실제 결제 없음"}</div>}
-      {view !== "home" && (
-        <div className="journey-navigation">
-        <button
-          className="text-button back"
-          onClick={() =>
-            navigate(editing ? "review" :
-              (
-                { other: "me", review: "other", share: "result" } as Record<
-                  string,
-                  string
-                >
-              )[view] ?? "home",
-            )
-          }
-        >
-          ← 뒤로
-        </button>
-        {data && pair && <JourneyProgress stage={view} />}
-        </div>
-      )}
       {view !== "home" && <h1 ref={heading} tabIndex={-1}>
         {header}
       </h1>}
@@ -417,27 +397,21 @@ export default function App({ request: api = serverApi, preview = false, onReset
               <p className="home-invitation">{character.invitation}</p>
               <p className="home-step">내 정보부터 차례로 입력해요.</p>
               <span className="seal-window" aria-hidden="true"><img src={character.seal} alt="" /></span>
-              <div className="home-actions">
-                <button
-                  className="primary"
-                  disabled={busy}
-                  onClick={() => navigate("me")}
-                >
+              <section className="home-information" aria-label="김춘배 훈장 소개">
+                <h2>충청북도 괴산의 서당,<br />김춘배 훈장이네.</h2>
+                <p>이 작은 서당에서 글을 가르치고,<br />찾아온 이들의 이야기를 듣고 있지.</p>
+                <p>자네와 소중한 사람의 생일을 적어 주게.<br />타고난 성정과 함께하는 모습을<br />차근차근 풀어 보겠네.</p>
+              </section>
+              <FixedActions>
+                <button className="primary" disabled={busy} onClick={() => navigate("me")}>
                   {data.draft ? "저장한 입력 이어가기" : "두 사람의 생일 적기"}
                 </button>
-              </div>
-              <p className="home-caption">조선풍 가상 인물 · 사주 성향과 궁합 이야기</p>
-              <details className="home-information">
-                <summary>{character.displayName}과 체험 안내</summary>
-                <p>{character.description}</p><p>{character.notice}</p>
-                <p>{preview ? "임시 체험판이에요. 입력과 결과는 이 탭에만 임시 보관하고 서버로 보내지 않아요. 로그인·복구 코드·공개 공유 링크는 제공하지 않아요." : "지금은 로컬 연구 체험이며 실제 결제는 없어요."} 첫 상대 무료·추가 상대 2,900원은 정식 서비스의 예정 가격이에요.</p>
                 <button className="secondary" onClick={() => navigate("map")}>나의 관계 지도 보기</button>
-              </details>
+              </FixedActions>
             </>
           )}
           {(view === "me" || view === "other") && (
             <>
-              <ResearchNotice localOnly={preview} />
               <PersonForm
                 key={view}
                 person={view === "me" ? pair.me : pair.other}
@@ -489,7 +463,7 @@ export default function App({ request: api = serverApi, preview = false, onReset
                     : "추가 이야기는 2,900원 예정이에요"}
                 </h2>
                 <p>
-                  지금은 연구 체험 중이에요. 추가 이용은{" "}
+                  지금은 체험판이에요. 추가 이용은{" "}
                   {data.provider === "mock"
                     ? "모의 결제"
                     : data.provider === "nicepay-test"
@@ -498,7 +472,7 @@ export default function App({ request: api = serverApi, preview = false, onReset
                   로 진행하며 실제 돈은 청구되지 않아요.
                 </p>
                 <p>
-                  {preview ? "입력과 연구 계산은 이 탭에만 임시 보관돼요." : "입력과 연구 계산은 이 개발 서버에 저장돼요."} 연·월·일·시의 구성, 십성·지장간·월령과 합충을 함께 풀어 성격과 궁합 이야기를 들려드려요. 시간을 모르면 세 기둥만 사용해요. 궁합 점수는 매기지 않아요.
+                  두 사람의 사주를 함께 살펴보고, 성격과 어울리는 모습을 이야기해 드려요. 태어난 시간을 모르면 아는 내용만으로 풀어드려요.
                 </p>
                 <label className="choice">
                   <input
@@ -506,7 +480,7 @@ export default function App({ request: api = serverApi, preview = false, onReset
                     checked={consent}
                     onChange={(e) => setConsent(e.target.checked)}
                   />
-                  연구 체험과 두 사람의 정보 저장에 동의해요.
+                  두 사람의 정보로 사주 이야기를 보는 데 동의해요.
                 </label>
               </section>
               {data.free !== "available" && data.kind !== "member" && !preview && (
@@ -517,6 +491,7 @@ export default function App({ request: api = serverApi, preview = false, onReset
                   먼저 복구 코드 만들기
                 </button>
               )}
+              <FixedActions>
               <button
                 className="primary"
                 disabled={busy || !consent}
@@ -528,6 +503,7 @@ export default function App({ request: api = serverApi, preview = false, onReset
                     ? "무료 사주 이야기 보기"
                     : "추가 이용 확인하기"}
               </button>
+              </FixedActions>
             </>
           )}
           {view === "result" && (
@@ -562,7 +538,7 @@ export default function App({ request: api = serverApi, preview = false, onReset
                     <div className="reading-signature">
                       <span className="seal-window" aria-hidden="true"><img src={character.seal} alt="" /></span>
                       <p>{character.displayName}의 서당에서</p>
-                      <p className="hint">조선풍 가상 인물 · {current.reading.interpretation ? "사주 상징으로 나누는 성향 이야기" : "점수 없는 기호 설명"}</p>
+                      <p className="hint">{current.reading.interpretation ? "사주 상징으로 나누는 성향 이야기" : "점수 없는 기호 설명"}</p>
                     </div>
                   </article>
                   {current.reading.basis && (
@@ -950,9 +926,9 @@ export default function App({ request: api = serverApi, preview = false, onReset
           )}
           {view === "account" && preview && (
             <section className="card">
-              <h2>이 탭의 체험 기록</h2>
-              <p>입력과 결과는 지금 열린 브라우저 탭에만 임시 보관해요. 같은 탭을 새로고침하면 이어 볼 수 있고, 다른 기기와는 연결되지 않아요.</p>
-              <p>정식 로그인·복구 코드·공개 공유·실제 결제는 아직 연결하지 않았어요. 가상 정보로 체험해 주세요.</p>
+              <h2>나의 체험 기록</h2>
+              <p>이곳에서 만든 이야기를 다시 볼 수 있어요. 기록을 지우면 처음부터 둘러볼 수 있어요.</p>
+              <p>로그인과 실제 결제는 준비 중이에요.</p>
               <button className="secondary" onClick={onResetPreview}>체험 기록 초기화</button>
             </section>
           )}
@@ -1221,7 +1197,7 @@ export default function App({ request: api = serverApi, preview = false, onReset
           )}
         </>
       )}
-      {view !== "home" && <footer>{character.displayName} · 조선풍 가상 인물과 나누는 이야기</footer>}
+      {view !== "home" && <footer>{character.displayName}의 서당에서</footer>}
     </main>
   );
 }

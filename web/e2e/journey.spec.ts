@@ -1,5 +1,5 @@
 import { test, expect, type Page } from "@playwright/test";
-const consent = "연구 체험과 두 사람의 정보 저장에 동의해요.";
+const consent = "두 사람의 정보로 사주 이야기를 보는 데 동의해요.";
 async function start(page: Page) {
   await page.goto("/");
   await page.getByRole("button",{name:"두 사람의 생일 적기",exact:true}).click();
@@ -8,10 +8,10 @@ async function review(page: Page, changeMe?: (page: Page) => Promise<void>) {
   await start(page);
   await page.getByRole("button",{name:"가상 정보 채우기"}).click();
   await changeMe?.(page);
-  await page.getByRole("button",{name:"저장하고 다음"}).click();
+  await page.getByRole("button",{name:"다음"}).click();
   await expect(page.getByRole("heading",{name:"상대방의 정보",exact:true})).toBeVisible();
   await page.getByRole("button",{name:"가상 정보 채우기"}).click();
-  await page.getByRole("button",{name:"저장하고 다음"}).click();
+  await page.getByRole("button",{name:"다음"}).click();
   await expect(page.getByRole("heading",{name:"두 사람의 기록 확인"})).toBeVisible();
 }
 async function result(page: Page, changeMe?: (page: Page) => Promise<void>) {
@@ -25,19 +25,22 @@ async function noOverflow(page: Page) {
   const size=await page.evaluate(()=>({viewport:innerWidth,document:document.documentElement.scrollWidth}));
   expect(size.document).toBeLessThanOrEqual(size.viewport);
 }
-test("input policy and autosave notice are keyboard readable with doubled text before typing", async ({page}, testInfo) => {
-  await start(page);
-  const notice = page.getByRole("complementary", {name:"입력 전 확인"});
-  await expect(notice).toContainText("입력하는 동안");
-  await expect(notice).toContainText("자동 저장");
-  const summary = notice.locator("summary");
-  await summary.focus();
-  await page.keyboard.press("Space");
-  await expect(notice.getByRole("heading", {name:"계산 범위와 기준"})).toBeVisible();
-  await expect(notice).toContainText("양력 환산 연도");
-  await expect(notice).toContainText("로그인 연결 식별자는 남아요");
-  const before = await (await page.request.get("/api/state")).json();
-  expect(before.draft).toBeNull();
+test("fixed landing actions, header back and large-text sequential pages stay usable", async ({page}, testInfo) => {
+  await page.goto("/");
+  const dock = page.getByRole("group", {name:"다음 화면으로"});
+  await expect(dock.getByRole("button", {name:"두 사람의 생일 적기"})).toBeVisible();
+  await expect(dock.getByRole("button", {name:"나의 관계 지도 보기"})).toBeVisible();
+  const before = await dock.boundingBox();
+  await page.getByRole("region", {name:"김춘배 훈장 소개"}).scrollIntoViewIfNeeded();
+  const after = await dock.boundingBox();
+  expect(after!.y).toBe(before!.y);
+  expect(Math.round(after!.y + after!.height)).toBe(page.viewportSize()!.height);
+  await dock.getByRole("button", {name:"나의 관계 지도 보기"}).click();
+  await expect(page.getByRole("heading", {name:"함께한 이야기"})).toBeVisible();
+  await page.getByRole("button", {name:"뒤로가기",exact:true}).click();
+  await page.getByRole("button", {name:"두 사람의 생일 적기",exact:true}).click();
+  await expect(page.getByRole("list", {name:"생일 입력과 결과 순서"})).toHaveCount(0);
+  await expect(page.getByText(/브라우저 탭|서버로 보내지|입력하는 동안/)).toHaveCount(0);
   await page.evaluate(() => {
     const sizes = [...document.querySelectorAll<HTMLElement>("h1,h2,h3,p,label,legend,input,select,button,summary,span,small")]
       .map(el => [el, parseFloat(getComputedStyle(el).fontSize)] as const);
@@ -45,10 +48,19 @@ test("input policy and autosave notice are keyboard readable with doubled text b
   });
   await noOverflow(page);
   await page.getByRole("button", {name:"가상 정보 채우기"}).click();
-  await page.getByRole("button", {name:"저장하고 다음"}).click();
+  const next = page.getByRole("button", {name:"다음",exact:true});
+  await expect(next).toBeInViewport();
+  // Final time choice must be scrollable above the dock even when text doubles.
+  const lastChoice = page.getByRole("checkbox", {name:"시간을 몰라요"});
+  await lastChoice.scrollIntoViewIfNeeded();
+  const choiceBox = await lastChoice.boundingBox(), dockBox = await dock.boundingBox();
+  expect(choiceBox!.y + choiceBox!.height).toBeLessThanOrEqual(dockBox!.y);
+  await next.click();
   await expect(page.getByRole("heading", {name:"상대방의 정보",exact:true})).toBeVisible();
+  await page.getByRole("button", {name:"뒤로가기",exact:true}).click();
+  await expect(page.getByLabel("부를 이름",{exact:true})).toHaveValue("나래");
   await noOverflow(page);
-  await page.screenshot({path:testInfo.outputPath("input-policy-large-text.png"),fullPage:true,timeout:5000});
+  await page.screenshot({path:testInfo.outputPath("fixed-actions-large-text.png"),fullPage:true,timeout:5000});
 });
 
 for (const scenario of [
@@ -76,20 +88,20 @@ for (const scenario of [
 });
 test("input errors, direct edit return and reload preserve the server draft without restoring consent",async({page},testInfo)=>{
   await start(page);
-  await page.getByRole("button",{name:"저장하고 다음"}).click();
+  await page.getByRole("button",{name:"다음"}).click();
   await expect(page.getByLabel("부를 이름",{exact:true})).toBeFocused();
   await expect(page.locator("main").getByRole("alert")).toBeVisible();
   await page.getByRole("button",{name:"가상 정보 채우기"}).click();
-  await page.getByRole("button",{name:"저장하고 다음"}).click();
+  await page.getByRole("button",{name:"다음"}).click();
   await expect(page.getByRole("heading",{name:"상대방의 정보",exact:true})).toBeVisible();
   await page.reload();
   await expect(page.getByRole("heading",{name:"상대방의 정보",exact:true})).toBeVisible();
   await page.getByRole("button",{name:"가상 정보 채우기"}).click();
-  await page.getByRole("button",{name:"저장하고 다음"}).click();
+  await page.getByRole("button",{name:"다음"}).click();
   await page.getByRole("checkbox",{name:consent}).check();
   await page.getByRole("button",{name:"수정",exact:true}).first().click();
   await page.getByLabel("부를 이름",{exact:true}).fill("가상나");
-  await page.getByRole("button",{name:"저장하고 다음"}).click();
+  await page.getByRole("button",{name:"다음"}).click();
   await expect(page.getByRole("heading",{name:"두 사람의 기록 확인"})).toBeVisible();
   await expect(page.getByRole("heading",{name:"가상나",exact:true})).toBeVisible();
   await expect(page.getByRole("checkbox",{name:consent})).not.toBeChecked();
@@ -152,7 +164,7 @@ test("free snapshot reload, private evidence, share preview and revocation stay 
   await expect(page.getByRole("heading",{name:"함께 나눌 이야기",exact:true})).toBeVisible();
   await page.getByRole("button",{name:"이 링크 철회하기"}).click();
   await publicPage.reload();await expect(publicPage.getByRole("heading",{name:/지금은 볼 수 없는/})).toBeVisible();
-  await page.getByRole("button",{name:"← 뒤로",exact:true}).click();
+  await page.getByRole("button",{name:"뒤로가기",exact:true}).click();
   await expect(page.getByRole("heading",{name:"두 사람의 사주 이야기",exact:true})).toBeVisible();
   const after=await (await page.request.get("/api/state")).json();
   expect(after.results).toEqual(before.results);expect(after.orders).toHaveLength(0);
@@ -162,12 +174,12 @@ test("failed draft save retains typed inputs and retry advances only after persi
   await start(page);
   await page.route("**/api/draft",route=>route.fulfill({status:503,contentType:"application/json",body:JSON.stringify({message:"저장 연결을 확인해 주세요."})}));
   await page.getByRole("button",{name:"가상 정보 채우기"}).click();
-  await page.getByRole("button",{name:"저장하고 다음"}).click();
+  await page.getByRole("button",{name:"다음"}).click();
   await expect(page.locator("main").getByRole("alert")).toContainText("저장 연결을 확인해 주세요.");
   await expect(page.getByLabel("부를 이름",{exact:true})).toHaveValue("나래");
   await expect(page.getByRole("heading",{name:"나의 정보",exact:true})).toBeVisible();
   await page.unroute("**/api/draft");
-  await page.getByRole("button",{name:"저장하고 다음"}).click();
+  await page.getByRole("button",{name:"다음"}).click();
   await expect(page.getByRole("heading",{name:"상대방의 정보",exact:true})).toBeVisible();
   await page.reload();
   await expect(page.getByRole("heading",{name:"상대방의 정보",exact:true})).toBeVisible();

@@ -490,21 +490,6 @@ footer {
 .journey-shell h1 { margin: 18px 0; }
 .journey-shell h2, .shared h2 { font-family: "Noto Serif KR", serif; font-weight: 500; }
 .brand strong { white-space: normal; }
-.journey-progress {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 8px;
-  list-style: none;
-  padding: 0;
-  margin: 8px 0 24px;
-  color: var(--muted);
-  font-size: 14px;
-  line-height: 1.5;
-}
-.journey-progress li { min-width: 0; padding: 0 0 10px; border-bottom: 1px solid var(--line); }
-.journey-progress [aria-current="step"] { color: var(--ink); border-bottom: 2px solid var(--orange); font-weight: 700; }
-.journey-order { display: block; font-family: "Noto Serif KR", serif; font-size: 12px; margin-bottom: 4px; }
-.journey-progress .completed { color: var(--ink); }
 .guide-note { margin: 0 0 18px; }
 .guide-byline { font-size: 13px; color: #8b4437; margin: 0 0 9px; }
 .guide-quote { font-family: "Noto Serif KR", serif; font-size: 18px; line-height: 1.75; margin: 0; }
@@ -615,3 +600,21 @@ footer {
 }
 
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+
+/* The action dock is shared by the landing, birthday pages and confirmation. */
+.shell:has(.fixed-actions) { padding-bottom: calc(var(--action-height, 210px) + 28px); }
+.app-header { min-height: 64px; gap: 8px; margin: -24px -24px 20px; padding: 8px 16px; position: sticky; top: 0; z-index: 20; background: var(--cream); border-bottom: 1px solid #d8c8af66; }
+.app-header .brand { flex: 1; }
+.compact-brand .guide-avatar, .compact-brand small { display: none; }
+.compact-brand strong { font-size: 18px; }
+.icon-button { display: grid; place-items: center; width: 48px; height: 48px; flex-shrink: 0; padding: 10px; border: 0; background: none; border-radius: 8px; }
+.landing-header { margin: -28px -28px 0; padding: 10px 20px; }
+.home-information { border: 0; text-align: center; padding: 6px 0 16px; margin: 0; }
+.home-information h2 { font-family: "Noto Serif KR", serif; font-size: 21px; font-weight: 500; line-height: 1.8; }
+.home-information p { font-family: "Noto Serif KR", serif; font-size: 16px; line-height: 2; color: var(--muted); }
+.fixed-actions { position: fixed; z-index: 30; bottom: 0; left: 50%; transform: translateX(-50%); width: 100%; max-width: 520px; padding: 20px 24px calc(20px + env(safe-area-inset-bottom)); background: var(--cream); display: flex; flex-direction: column; gap: 10px; }
+.fixed-actions::before { content: ""; position: absolute; bottom: 100%; left: 0; right: 0; height: 36px; background: linear-gradient(to bottom, #f7f0e400, var(--cream)); pointer-events: none; }
+.fixed-actions .primary, .fixed-actions .secondary { margin: 0; padding-top: 20px; padding-bottom: 20px; font-family: "Noto Serif KR", serif; font-size: 19px; font-weight: 500; }
+.person-form input, .person-form select, .choice { scroll-margin-top: 90px; scroll-margin-bottom: 220px; }
+@media (min-width: 650px) { .app-header { margin: -30px -36px 20px; padding-inline: 28px; } }
+@media (max-width: 360px) { .app-header { margin: -18px -16px 18px; padding-inline: 8px; } .landing-header { margin: -22px -20px 0; padding-inline: 12px; } .fixed-actions { padding-inline: 20px; } .compact-brand strong { font-size: 16px; } }

@@ -1,5 +1,6 @@
 "use client";
 import { useId, useRef, useState } from "react";
+import FixedActions from "./FixedActions";
 import { type Person, samplePerson } from "@/domain/model";
 import { personInputErrors, type InputField } from "@/domain/person-input";
 export default function PersonForm({
@@ -185,16 +186,18 @@ export default function PersonForm({
         )}
       </fieldset>
       <p className="hint">
-        국내 출생 기준 · 1908~2026년 연구 범위
+        국내 출생 기준 · 1908~2026년 입력 가능
         <br />
-        시간을 모르면 시주를 만들지 않아요.
+        태어난 시간을 몰라도 괜찮아요.
       </p>
       <p className="save-status" role="status">
         {saved}
       </p>
-      <button className="primary" type="submit" disabled={busy}>
-        {busy ? "저장 중…" : "저장하고 다음"}
-      </button>
+      <FixedActions>
+        <button className="primary" type="submit" disabled={busy}>
+          {busy ? "확인 중…" : "다음"}
+        </button>
+      </FixedActions>
     </form>
   );
 }
