@@ -545,6 +545,30 @@ footer {
 .reading-signature .seal-window { margin: 8px auto 12px; }
 .reading-signature > p:not(.hint) { font-family: "Noto Serif KR", serif; font-size: 16px; margin: 0; }
 .reading-signature .hint { font-size: 13px; }
+.story-chart { margin: 24px 0; }
+.story-chart h3 { font-size: 20px; }
+.story-pillars { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); border: 1px solid var(--line); margin: 16px 0 0; }
+.story-pillars > div { min-width: 0; text-align: center; border-right: 1px solid var(--line); padding: 10px 3px; }
+.story-pillars > div:last-child { border: 0; }
+.story-pillars .day-pillar { background: #e8ddc5a3; }
+.story-pillars dt { font-size: 14px; margin-bottom: 8px; }
+.story-pillars dd { margin: 0; display: grid; gap: 8px; font-size: 14px; }
+.pillar-hanja { font-family: "Noto Serif KR",serif; font-weight: 500; font-size: clamp(23px,7vw,32px); line-height: 1.5; }
+.pillar-unresolved { font-size: 13px; font-weight: 400; overflow-wrap: anywhere; }
+.story-day-key { font-size: 15px; line-height: 1.9; }
+.story-profile { margin: 28px 0 0; padding: 24px 0; border-top: 1px solid var(--line); }
+.story-profile h3 { font-size: 24px; line-height: 1.6; margin: 0 0 8px; word-break: keep-all; overflow-wrap: anywhere; }
+.story-type-symbol { color: var(--muted); font-size: 16px; margin: 6px 0 16px; }
+.story-keywords { display: flex; flex-wrap: wrap; gap: 8px; padding: 0; list-style: none; }
+.story-keywords li { border: 1px solid var(--line); padding: 3px 10px; font-size: 14px; background: #fffaf0; }
+.saju-story h3, .saju-story h4 { font-family: "Noto Serif KR",serif; }
+.saju-story h4 { font-size: 18px; margin: 24px 0 8px; }
+.story-more { margin-top: 24px; border-top: 1px dashed var(--line); padding-top: 14px; }
+.story-more summary { font-size: 16px; line-height: 1.9; }
+.story-pair-symbols { font-size: 16px; color: var(--muted); word-break: keep-all; overflow-wrap: anywhere; }
+.story-question { margin: 24px 0; padding: 18px 16px; border-left: 3px solid #80644a; background: #efe6d680; font-family: "Noto Serif KR",serif; }
+.story-closing { padding: 26px 0 8px; }
+.story-closing h2 { font-size: 22px; }
 .evidence-record { padding: 18px; }
 .evidence-record summary { font-size: 17px; font-weight: 500; }
 .evidence-record > div + div { border-top: 1px solid var(--line); margin-top: 24px; padding-top: 8px; }
@@ -584,3 +608,5 @@ footer {
   word-break: keep-all;
   overflow-wrap: anywhere;
 }
+
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }

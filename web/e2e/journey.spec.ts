@@ -17,8 +17,9 @@ async function review(page: Page, changeMe?: (page: Page) => Promise<void>) {
 async function result(page: Page, changeMe?: (page: Page) => Promise<void>) {
   await review(page, changeMe);
   await page.getByRole("checkbox",{name:consent}).check();
-  await page.getByRole("button",{name:"무료 기호 비교 보기"}).click();
-  await expect(page.getByRole("heading",{name:"두 사람의 사주 기호",exact:true})).toBeVisible();
+  await page.getByRole("button",{name:"무료 사주 이야기 보기"}).click();
+  await expect(page.getByRole("heading",{name:"두 사람의 사주 이야기",exact:true})).toBeVisible();
+
 }
 async function noOverflow(page: Page) {
   const size=await page.evaluate(()=>({viewport:innerWidth,document:document.documentElement.scrollWidth}));
@@ -63,7 +64,7 @@ for (const scenario of [
     await p.getByRole("textbox", {name:"분 (0~59)",exact:true}).fill("30");
   });
   await page.getByRole("checkbox", {name:consent}).check();
-  await page.getByRole("button", {name:"무료 기호 비교 보기"}).click();
+  await page.getByRole("button", {name:"무료 사주 이야기 보기"}).click();
   await expect(page.locator("main").getByRole("alert")).toContainText(scenario.message);
   const state = await (await page.request.get("/api/state")).json();
   expect(state.free).toBe("available");
@@ -106,8 +107,18 @@ test("free snapshot reload, private evidence, share preview and revocation stay 
   const errors:string[]=[];page.on("pageerror",e=>errors.push(e.message));
   await result(page);
   const before=await (await page.request.get("/api/state")).json();
+  const story=before.results[0].reading.interpretation;
+  for(const p of story.people) {
+    const name=p.side==="me"?before.results[0].me.name:before.results[0].other.name;
+    const profile=page.getByRole("region",{name:`${name}의 성향 유형`,exact:true});
+    await expect(profile.getByRole("heading",{name:p.type.title,exact:true})).toBeVisible();
+    await profile.locator("summary").click();
+    await expect(profile.getByText(p.type.work,{exact:true})).toBeVisible();
+  }
+  await expect(page.getByRole("heading",{name:story.pair.title,exact:true})).toBeVisible();
+  await expect(page.getByText(story.relationship.question,{exact:true})).toBeVisible();
   await page.reload();
-  await expect(page.getByRole("heading",{name:"두 사람의 사주 기호",exact:true})).toBeVisible();
+  await expect(page.getByRole("heading",{name:"두 사람의 사주 이야기",exact:true})).toBeVisible();
   await page.getByText("비교 근거와 확인 범위",{exact:true}).click();
   await expect(page.getByText(/묘·유의 지지 육충/)).toBeVisible();
   await expect(page.getByText(/을·경의 천간 합/)).toBeVisible();
@@ -135,7 +146,7 @@ test("free snapshot reload, private evidence, share preview and revocation stay 
   await page.getByRole("button",{name:"이 링크 철회하기"}).click();
   await publicPage.reload();await expect(publicPage.getByRole("heading",{name:/지금은 볼 수 없는/})).toBeVisible();
   await page.getByRole("button",{name:"← 뒤로",exact:true}).click();
-  await expect(page.getByRole("heading",{name:"두 사람의 사주 기호",exact:true})).toBeVisible();
+  await expect(page.getByRole("heading",{name:"두 사람의 사주 이야기",exact:true})).toBeVisible();
   const after=await (await page.request.get("/api/state")).json();
   expect(after.results).toEqual(before.results);expect(after.orders).toHaveLength(0);
   expect(errors).toEqual([]);
@@ -190,7 +201,8 @@ for (const scenario of [
   });
   const before=await (await page.request.get("/api/state")).json();
   await page.getByText("생년월일 연구 계산 확인",{exact:true}).click();
-  await expect(page.getByText(new RegExp(scenario.expected.replace(/[().]/g,"\\$&")))).toBeVisible();
+  const savedReview=page.locator("details").filter({has:page.getByText("생년월일 연구 계산 확인",{exact:true})});
+  await expect(savedReview.getByText(new RegExp(scenario.expected.replace(/[().]/g,"\\$&")))).toBeVisible();
   await expect(page.getByText("양력 환산: "+scenario.year+"년 "+scenario.month+"월 "+scenario.day+"일",{exact:true})).toBeVisible();
   await expect(page.locator("dl.pillars").first().getByText("시간 모름",{exact:true})).toBeVisible();
   if(scenario.id==="solar-term-candidates") {

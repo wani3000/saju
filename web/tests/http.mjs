@@ -79,9 +79,12 @@ r = await request("results/" + id);
 assert.equal(r.status, 200);
 const savedReading = (await r.json()).reading;
 assert.equal(savedReading.score, null);
-assert.equal(savedReading.ruleVersion, "source-observations-copy-v2");
+assert.equal(savedReading.ruleVersion, "symbolic-personality-copy-v3");
 assert.equal(savedReading.basis.kind, "source-symbol-comparison");
-assert.ok(savedReading.strength.includes("태어난 날"));
+assert.equal(savedReading.interpretation.kind,"ten-stem-story");
+assert.equal(savedReading.interpretation.people.length,2);
+assert.equal(savedReading.interpretation.people[0].pillars.find(p=>p.key==="day").hanja,"丙子");
+assert.ok(savedReading.interpretation.pair.meeting);
 assert.deepEqual(savedReading.basis.comparisonPositions,["year","month","day"]);
 const beforeMalformed = await (await request("state")).json();
 for (const [path, method, body] of [

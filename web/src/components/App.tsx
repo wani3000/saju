@@ -11,6 +11,7 @@ import PersonForm from "./PersonForm";
 import ResearchNotice from "./ResearchNotice";
 import GuideNote from "./GuideNote";
 import JourneyProgress from "./JourneyProgress";
+import PersonalityReading from "./PersonalityReading";
 import { character, journeyCopy, shareArtwork } from "@/domain/presentation";
 import { reviewStoredChart } from "@/domain/chart-review";
 import { checkpoint, navigationKey, restoreNavigation } from "@/domain/navigation";
@@ -425,7 +426,7 @@ export default function App({ request: api = serverApi, preview = false, onReset
                   {data.draft ? "저장한 입력 이어가기" : "두 사람의 생일 적기"}
                 </button>
               </div>
-              <p className="home-caption">조선풍 가상 인물 · 점수 없는 설명형 베타</p>
+              <p className="home-caption">조선풍 가상 인물 · 사주 성향과 궁합 이야기</p>
               <details className="home-information">
                 <summary>{character.displayName}과 체험 안내</summary>
                 <p>{character.description}</p><p>{character.notice}</p>
@@ -497,8 +498,7 @@ export default function App({ request: api = serverApi, preview = false, onReset
                   로 진행하며 실제 돈은 청구되지 않아요.
                 </p>
                 <p>
-                  {preview ? "입력과 연구 계산은 이 탭에만 임시 보관돼요." : "입력과 연구 계산은 이 개발 서버에 저장돼요."} 확인된 사주 기호를
-                  설명하며, 대화 제안은 관계에 맞춰 따로 제공해요. 궁합 점수는 제공하지 않아요.
+                  {preview ? "입력과 연구 계산은 이 탭에만 임시 보관돼요." : "입력과 연구 계산은 이 개발 서버에 저장돼요."} 한자 사주표를 풀고, 일간의 상징으로 각자의 성향과 두 사람의 궁합 이야기를 들려드려요. 실제 성격 검사나 관계 예측은 아니며 궁합 점수는 매기지 않아요.
                 </p>
                 <label className="choice">
                   <input
@@ -525,7 +525,7 @@ export default function App({ request: api = serverApi, preview = false, onReset
                 {busy
                   ? "확인 중…"
                   : data.free === "available"
-                    ? "무료 기호 비교 보기"
+                    ? "무료 사주 이야기 보기"
                     : "추가 이용 확인하기"}
               </button>
             </>
@@ -534,18 +534,18 @@ export default function App({ request: api = serverApi, preview = false, onReset
             <>
               {current ? (
                 <>
-                  <article className="reading-paper" aria-label="두 사람의 기호 설명 기록">
+                  <article className="reading-paper" aria-label={current.reading.interpretation ? "두 사람의 사주 성향과 궁합 기록" : "두 사람의 기호 설명 기록"}>
                     <div className="reading-cover">
                       <img src={character.photo} alt={character.photoAlt} width={1495} height={1052} />
                       <div><p className="reading-kicker">서당에서 건네는 기록</p>
-                        <h2 className="result-title">{current.reading.title}</h2>
+                        <h2 className="result-title">{current.reading.interpretation ? "두 사람의 사주 이야기" : current.reading.title}</h2>
                       </div>
                     </div>
                     <p className="badge">{current.reading.label}</p>
                     <p className="notice">
                       {current.reading.basis?.notice ?? "생일로 판단한 궁합 풀이가 아닌 고정 예시예요. 실제 규칙 감수 후 제공할 예정이에요."}
                     </p>
-                    {[
+                    {current.reading.interpretation ? <PersonalityReading result={current} /> : [
                       [current.reading.basis ? "두 사람의 기준 오행" : "잘 맞춰 가는 점", current.reading.strength],
                       [current.reading.basis ? "함께 살펴볼 기호" : "서로 알아갈 점", current.reading.difference],
                       ["오늘의 작은 제안", current.reading.advice],
@@ -562,7 +562,7 @@ export default function App({ request: api = serverApi, preview = false, onReset
                     <div className="reading-signature">
                       <span className="seal-window" aria-hidden="true"><img src={character.seal} alt="" /></span>
                       <p>{character.displayName}의 서당에서</p>
-                      <p className="hint">조선풍 가상 인물 · 점수 없는 기호 설명</p>
+                      <p className="hint">조선풍 가상 인물 · {current.reading.interpretation ? "사주 상징으로 나누는 성향 이야기" : "점수 없는 기호 설명"}</p>
                     </div>
                   </article>
                   {current.reading.basis && (
@@ -668,7 +668,7 @@ export default function App({ request: api = serverApi, preview = false, onReset
                     {pending?.state === "failed"
                       ? "결과 준비에 실패했어요. 같은 이용권으로 다시 시도할 수 있어요."
                       : pending?.state === "queued" || pending?.state === "processing"
-                        ? "기호 설명을 준비하고 있어요. 잠시 후 상태를 확인해 주세요."
+                        ? "사주 이야기를 준비하고 있어요. 잠시 후 상태를 확인해 주세요."
                         : "진행 중인 요청을 확인해 주세요."}
                   </p>
                   <button

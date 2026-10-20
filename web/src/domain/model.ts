@@ -1,4 +1,5 @@
 import { z } from "zod";
+import type { SymbolicReading } from "./symbolic-reading";
 export const personSchema = z
   .object({
     id: z.uuid(),
@@ -49,6 +50,7 @@ export const samplePerson = (other = false): Person => ({
   day: other ? "21" : "12",
 });
 export type Reading = {
+  interpretation?: SymbolicReading;
   label: string;
   title: string;
   strength: string;

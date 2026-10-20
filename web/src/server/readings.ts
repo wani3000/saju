@@ -2,6 +2,7 @@ import { z } from "zod";
 import catalog from "../../content/readings.json";
 import { buildSelectedReading, selectedReadingPolicy, buildBetaReading, privateBetaScope } from "../generated/selected-reading.mjs";
 import { AppError, type Reading } from "../domain/model";
+import { addSymbolicReading, symbolicReadingVersion } from "../domain/symbolic-reading";
 
 const text = z.string().trim().min(1).max(160);
 const releaseSchema = z.object({
@@ -31,14 +32,16 @@ export function validateReadingCatalog(input: unknown) {
   return parsed;
 }
 const checked = validateReadingCatalog(catalog);
-export const currentReadingVersion = privateBetaScope.readingVersion;
+export const currentReadingVersion = symbolicReadingVersion;
 export function readingForVersion(version: string, context?: {
   charts: Record<string, unknown>; relation: string;
 }): Reading {
-  if (version === selectedReadingPolicy.version || version === privateBetaScope.readingVersion) {
+  if (version === symbolicReadingVersion || version === selectedReadingPolicy.version || version === privateBetaScope.readingVersion) {
     if (!context) throw new AppError("READING_CONTEXT_REQUIRED", 503,
       "저장된 계산을 확인할 수 없어요. 잠시 후 다시 시도해 주세요.");
     try {
+      if (version === symbolicReadingVersion) return addSymbolicReading(
+        buildBetaReading(context.charts.me, context.charts.other, context.relation),context.charts,context.relation);
       return (version === privateBetaScope.readingVersion ? buildBetaReading : buildSelectedReading)(context.charts.me, context.charts.other, context.relation);
     } catch {
       throw new AppError("READING_CONTEXT_INVALID", 503,
