@@ -15,3 +15,5 @@ python3 -m http.server 64927 --bind 127.0.0.1 --directory .preview-dist
 `.preview-dist`는 Git 제외된 정적 출력이다. 서버/환경변수/DB 파일을 복사하지 않고 생성 JS/CSS·폰트·창작 그림·라이선스·정적 헤더만 포함한다. 빌드 그래프에서 engine/readings 이외의 서버 모듈과 비공개 파일 유입을 거절한다. Vercel 배포는 이 출력 폴더만 업로드하고 기존 앱 프로젝트/도메인과 연결하지 않는다.
 
 빌드를 다시 하면 출력 폴더와 내부 Vercel 링크가 초기화된다. 배포 전 올바른 전용 프로젝트/팀으로 명시적으로 link하고 inspect한 뒤 preview 환경에 배포한다. 생산 환경으로 promote하지 않는다. 프로젝트명 chunbae-preview, 팀 oxaz1234-gmailcoms-projects. 실제 URL/배포 상태는 검증 후 프로젝트 작업 기록에 남긴다.
+
+2026-10-21 사용자 요청으로 랜딩의 소개/생일·지도 고정 행동과 입력의 하단 다음, SEED 상단 뒤로가기를 적용했다. 기술적인 임시 저장/전송 안내는 화면에서 제거했지만 이 문서의 구현 범위와 CSP/탭 저장/외부 연동 제한은 유지한다. [최신 배포](../../docs/temporary-preview-deployment.md).

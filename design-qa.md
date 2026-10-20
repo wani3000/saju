@@ -89,3 +89,9 @@ final result: passed
 실제 최종 원격 화면: [성격390px](web/qa-evidence/chunbae-v4-personality-390.jpg) · [궁합390px](web/qa-evidence/chunbae-v4-pair-390.jpg) · [궁합320px](web/qa-evidence/chunbae-v4-pair-320.jpg) · [시주와 기둥별 근거](web/qa-evidence/chunbae-v4-evidence-390.jpg). 모두 JPEG·가상 정보다. 새 비주얼 자산을 생성하거나 시안 방향을 교체하지 않았다.
 
 P2로 긴 소제목/근거 summary의 단어가 중간에 끊기던 부분을 keep-all/anywhere로 수정했다. 같은 다섯 십성 묶음에서 차이를 비워 두던 내용도 같은 위치의 실제 십성 비교로 바꾸고 재촬영했다. 최종320/390px 가로 넘침 없음. 기존 원본 서체/그림/브랜드 배치 유지, 새 점수 막대나 가중치 도식 없음. P3: 종합 해설은 길어져 세부 근거와 친밀감/업무 설명을 접어 둔다. 실제 기기 전체 접근성 인증은 아니다.
+
+## 2026-10-21 하단 고정 버튼과 상단 헤더
+
+선택된 조선2안의 사진/한지/먹갈색/서체를 유지하고 사용자 요청의5항목을 적용했다. 실제 배포1258c92에서390px 랜딩·도장 아래 훈장 소개와320/390px 입력 화면을 캡처했다. 버튼 상하20px, 상단 투명 그라데이션, 두 버튼의 묶음 고정, SEED chevron과 타이틀 아래 배치를 확인했다. 입력 중 탭/서버 안내와 네 단계 표시는 보이지 않는다. 고정 영역 높이를 실제로 측정해 글씨2배에서 마지막 입력칸을 가리지 않는지 모바일 여정으로 확인했다. 원격 생일→상대→확인→결과·새로고침과 지도/뒤로가기까지 통과. 앱 출처 오류/경고0건. 실기기/실제 사용자 관찰의 증거는 아니다.
+
+[랜딩](web/qa-evidence/chunbae-fixed-home-390.jpg) · [소개](web/qa-evidence/chunbae-fixed-intro-390.jpg) · [입력390](web/qa-evidence/chunbae-fixed-input-390.jpg) · [입력320](web/qa-evidence/chunbae-fixed-input-320.jpg).

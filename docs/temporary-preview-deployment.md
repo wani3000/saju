@@ -1,6 +1,18 @@
 # 김춘배 훈장 임시 체험 배포
 
-## 최신: 전체 사주 성격·궁합 v4 · 2026-10-21
+## 최신: 고정 버튼·간결한 입력 화면 · 2026-10-21
+
+- 소스1258c92 / 배포dpl_FGmPv9sCdCF7Ry66vRLe9Wnzqc4j / Ready / preview.
+- 주소: https://chunbae-preview-l1jmuae45-oxaz1234-gmailcoms-projects.vercel.app
+- 7일 체험 링크 만료: 2026-10-28 08:25:47 KST. 토큰은 사용자에게만 전달하며 Git에서 제외한다.
+- 랜딩의 생일/지도 두 버튼과 입력/확인 진행 버튼을 하단 고정. 20px 상하 여백, 투명 그라데이션, 안전 영역과 실제 높이 보정. 훈장 소개는 도장 아래 본문으로 이동. SEED chevron을 상단 헤더에 배치하고 네 단계 표시/기술 안내/인물 창작 고지의 화면 노출을 제거했다(사용자 요청).
+- 웹111/111, HTTP 여정, 최종 빌드/타입/정적 빌드와320/390px 모바일18/18 통과. 자동 여정은 글씨2배의 고정 위치/스크롤/뒤로가기와 기존 소유권·공유·복원·모의 결제를 포함한다.
+- 실제 원격 Chrome에서 두 버튼·도장 아래 소개·뒤로가기·별도 입력 화면·동의/결과·새로고침 복원 확인. 320px clientWidth/scrollWidth320/320, SEED svg와 fixed 위치 확인. 앱 출처 console error/warn0건.
+- 새로운 쿠키 저장소로 체험 링크 HTTP200·실제 앱·로컬과 JS/CSS 해시 일치·CSP connect-src none·noindex 확인. 기존 접근 보호·외부 연동 보류·v4 풀이와 저장 스냅샷을 유지한다.
+
+[랜딩390px](../web/qa-evidence/chunbae-fixed-home-390.jpg) · [도장 아래 소개390px](../web/qa-evidence/chunbae-fixed-intro-390.jpg) · [입력390px](../web/qa-evidence/chunbae-fixed-input-390.jpg) · [입력320px](../web/qa-evidence/chunbae-fixed-input-320.jpg).
+
+## 이전: 전체 사주 성격·궁합 v4 · 2026-10-21
 
 [전체 사주 반영 범위](whole-chart-personality-v4.md)를 새 결과에 적용했다.
 
