@@ -41,6 +41,12 @@
       "calendarInputs": 4,
       "fiveElementCounterexamples": 8
     },
+    "rescueWangqi": {
+      "sourceCharts": 4,
+      "rescuePatterns": 3,
+      "calendarInputs": 4,
+      "syntheticWeightRegimes": 3
+    },
     "reports": [
       {
         "file": "calendar-reading-audit.json",
@@ -57,6 +63,10 @@
       {
         "file": "policy-criteria-audit.json",
         "sha256": "395f50d43c083c6051e33a85b1a72a1a313818f2bff38e31d4c6c8336179f16b"
+      },
+      {
+        "file": "rescue-wangqi-audit.json",
+        "sha256": "d79468028c217ef18eef6ed63c855469162d8cb77bf5d1bb5737b53bbed99f7c"
       }
     ]
   },

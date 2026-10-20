@@ -65,6 +65,7 @@ test('reproduced calendar and reading evidence never become human, external-serv
  const r=buildReleaseReadiness();assert.equal(r.evidence.status,'source-reports-reproduced');
  assert.equal(r.evidence.monthHourSourceAnchors,10);assert.equal(r.evidence.monthHourChecks.hourMinuteProbes,14400);
  assert.deepEqual(r.evidence.scopedCriteria,{calendarPolicyProbes:1296,guardCases:12,calendarInputs:4,fiveElementCounterexamples:8});
+ assert.deepEqual(r.evidence.rescueWangqi,{sourceCharts:4,rescuePatterns:3,calendarInputs:4,syntheticWeightRegimes:3});
  assert.equal(r.status,'blocked');assert.equal(r.publicReleaseApproved,false);assert.equal(r.realChargesEnabled,false);
  assert.equal(r.humanExpertSignoff,'not-completed');assert.equal(r.blockerIds.length,8);
  for(const id of ['CALENDAR_POLICY_PENDING','EXPERT_REVIEW_PENDING','USER_STUDY_NOT_STARTED','EXTERNAL_AUTH_UNVERIFIED','EXTERNAL_PAYMENT_UNVERIFIED'])assert.ok(r.blockerIds.includes(id));

@@ -6,14 +6,15 @@ import {pathToFileURL} from 'node:url';
 import {buildCalendarReadingAudit} from './audit-calendar-reading.mjs';
 import {buildMonthHourAudit} from './audit-month-hour.mjs';
 import {buildPolicyCriteriaAudit} from './audit-policy-criteria.mjs';
+import {buildRescueWangqiAudit} from './audit-rescue-wangqi.mjs';
 import {buildBetaQualityPack} from './beta-quality-pack.mjs';
 import {privateBetaScope} from './beta-reading.mjs';
 const read=p=>readFileSync(new URL(p,import.meta.url));
 const hash=b=>createHash('sha256').update(b).digest('hex');
 export function buildReleaseReadiness() {
- const calendar=buildCalendarReadingAudit(),quality=buildBetaQualityPack(),monthHour=buildMonthHourAudit(),criteria=buildPolicyCriteriaAudit();
- if(!calendar.checksPassed||!quality.checksPassed||!monthHour.checksPassed||!criteria.checksPassed)throw new Error('REVIEW_EVIDENCE_FAILED');
- for(const [name,current] of [['calendar-reading-audit.json',calendar],['beta-quality-audit.json',quality],['month-hour-audit.json',monthHour],['policy-criteria-audit.json',criteria]])
+ const calendar=buildCalendarReadingAudit(),quality=buildBetaQualityPack(),monthHour=buildMonthHourAudit(),criteria=buildPolicyCriteriaAudit(),rescue=buildRescueWangqiAudit();
+ if(!calendar.checksPassed||!quality.checksPassed||!monthHour.checksPassed||!criteria.checksPassed||!rescue.checksPassed)throw new Error('REVIEW_EVIDENCE_FAILED');
+ for(const [name,current] of [['calendar-reading-audit.json',calendar],['beta-quality-audit.json',quality],['month-hour-audit.json',monthHour],['policy-criteria-audit.json',criteria],['rescue-wangqi-audit.json',rescue]])
   if(read('reports/'+name).toString()!==JSON.stringify(current,null,2)+'\n')throw new Error('REVIEW_EVIDENCE_STALE');
  const sources=JSON.parse(read('fixtures/kasi-months/sources.json'));
  for(const s of sources.sources) {
@@ -39,7 +40,8 @@ export function buildReleaseReadiness() {
    monthHourSourceAnchors:monthHour.sourceAnchorGroups,monthHourChecks:monthHour.counts,
    scopedCriteria:{calendarPolicyProbes:criteria.calendar.monthBoundaryProbes,guardCases:criteria.guards.length,
     calendarInputs:criteria.calendarInputs.length,fiveElementCounterexamples:criteria.strength.counterexamples.length},
-   reports:['calendar-reading-audit.json','beta-quality-audit.json','month-hour-audit.json','policy-criteria-audit.json'].map(file=>({file,sha256:hash(read('reports/'+file))}))},
+   rescueWangqi:{sourceCharts:rescue.references.length,rescuePatterns:rescue.rescue.length,calendarInputs:rescue.calendarInputs.length,syntheticWeightRegimes:rescue.weights.probes.length},
+   reports:['calendar-reading-audit.json','beta-quality-audit.json','month-hour-audit.json','policy-criteria-audit.json','rescue-wangqi-audit.json'].map(file=>({file,sha256:hash(read('reports/'+file))}))},
   automatedSuiteExecution:'Not executed by this command. Unit/browser/DB/build checks are separate CI steps.',
   gates,blockerIds:gates.filter(g=>g.status!=='approved').map(g=>g.reason),
   status:'blocked',publicReleaseApproved:false,realChargesEnabled:false,
@@ -53,6 +55,7 @@ export function renderReleaseReadiness(r) {
   '',`자료 재현: 달력 ${r.evidence.calendarDays}일·풀이 조합 ${r.evidence.syntheticReadingCombinations}개·원문 ${r.evidence.originalReferenceCharts}명조·편집 초안 ${r.evidence.betaCopyCases}개.`,
   '',`월간·시간 천간 원문 ${r.evidence.monthHourSourceAnchors}묶음 → 파생 월주 ${r.evidence.monthHourChecks.monthCombinations}조합·시각 ${r.evidence.monthHourChecks.hourMinuteProbes}분을 추가 재현합니다.`,
   '',`계산 정책 ${r.evidence.scopedCriteria.calendarPolicyProbes}경계·합화 기피 ${r.evidence.scopedCriteria.guardCases}사례·오행 구비의 중화 반례 ${r.evidence.scopedCriteria.fiveElementCounterexamples}건을 재현합니다.`,
+  '',`합화 원문 ${r.evidence.rescueWangqi.sourceCharts}사례·구응 ${r.evidence.rescueWangqi.rescuePatterns}구조·합성 가중치 ${r.evidence.rescueWangqi.syntheticWeightRegimes}조건을 추가 재현합니다.`,
   '','| 항목 | 상태 | 차단 사유 |','|---|---|---|',...r.gates.map(g=>`| ${g.id} | ${g.status} | ${g.reason} |`),
   '','이 명령은 자료 해시와 보고서 재현을 검사합니다. 단위·브라우저·DB·빌드 검사를 대신 실행하지 않습니다.',
   '','[구조화 결과](release-readiness.json) · [근거와 후속 작업](../../../docs/calendar-reading-release-review.md)',''].join('\n');

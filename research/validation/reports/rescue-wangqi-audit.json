@@ -1,0 +1,3424 @@
+{
+  "ruleVersion": "rescue-wangqi-source-v1",
+  "reviewedOn": "2026-10-20",
+  "reviewer": "Codex visual/source/mechanism review; no human expert signoff",
+  "productionApproved": false,
+  "sourceFixtureSha256": "e95953e018adecfc0eac98688a4bd94e4b8c75e2448a27330127bef28693ecf3",
+  "references": [
+    {
+      "id": "earth-true-qi-insufficient",
+      "review": {
+        "ruleVersion": "rescue-wangqi-source-v1",
+        "productionApproved": false,
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "status": "exact-source-transformation-case",
+        "sourceClassification": {
+          "id": "earth-true-qi-insufficient",
+          "label": "合神真實乃謂真化",
+          "sourceSaysTrueTransformation": true,
+          "target": "transformed-qi",
+          "element": "토",
+          "qiLabel": "化神洩氣不足",
+          "qiCategory": "insufficient",
+          "attributedPremises": [
+            "甲乙得申金及丑內辛金制住，不起爭妒之風",
+            "己土臨旺，與日主親切而合"
+          ],
+          "premisesEstablishedByGenericRules": null,
+          "source": {
+            "sourceId": "ditian-1947",
+            "pdfPage": 377,
+            "pdfSha256": "d6a7d1daf6513ce9fb9940ff8331b96804c10cdafbeac00d4d3d0a37229e1803"
+          }
+        },
+        "matches": [
+          {
+            "id": "earth-true-qi-insufficient",
+            "pdfPage": 377,
+            "match": "exact-four-pillars"
+          }
+        ],
+        "literalChen": {
+          "observedInSomeCandidate": true,
+          "observedInEveryCandidate": true,
+          "absenceConfirmed": false
+        },
+        "priorPreference": {
+          "hourMatch": "outside-listed-example",
+          "monthMatch": false,
+          "status": "outside-complete-preference-example"
+        },
+        "priorJiaJiConditions": {
+          "ruleVersion": "seasonal-strength-transformation-review-v1",
+          "productionApproved": false,
+          "scope": "Jia-Ji day-stem combination only; other pairs have no condition model here.",
+          "dependencies": {
+            "contextRuleVersion": "month-combination-context-research-v1",
+            "natalRuleVersion": "natal-definitions-research-v1",
+            "symbolRuleVersion": "symbol-relations-research-v1",
+            "engineVersion": "research-civil-midnight-v5"
+          },
+          "coverage": [
+            {
+              "side": "self",
+              "includedPositions": [
+                "year",
+                "month",
+                "day",
+                "hour"
+              ],
+              "omittedPositions": [],
+              "clockReviewRequired": false,
+              "boundaryReviewRequired": false
+            }
+          ],
+          "status": "necessary-condition-failed",
+          "alternatives": [
+            {
+              "status": "necessary-condition-failed",
+              "reasons": [
+                "month-earth-branch",
+                "no-extra-jia",
+                "no-visible-eul"
+              ],
+              "checks": [
+                {
+                  "id": "month-earth-branch",
+                  "state": "failed"
+                },
+                {
+                  "id": "one-visible-partner",
+                  "state": "met"
+                },
+                {
+                  "id": "no-extra-jia",
+                  "state": "failed"
+                },
+                {
+                  "id": "no-visible-eul",
+                  "state": "failed"
+                },
+                {
+                  "id": "no-explicit-intervening-obstruction",
+                  "state": "met"
+                }
+              ]
+            }
+          ],
+          "commonFailedChecks": [
+            "month-earth-branch",
+            "no-extra-jia",
+            "no-visible-eul"
+          ],
+          "candidatePolicy": "Universal over supplied marginal combinations; partial assignments not proved jointly feasible; no probabilities.",
+          "targetElement": "토",
+          "transformedElement": null,
+          "transformationEstablished": false,
+          "sources": [
+            {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "transcriptionSha256": "3c2bef1a4c92ff21373516338bf739b78a73aff0ed285e20a299f5ba64b75fb3",
+              "sectionId": "transformation-general",
+              "pdfPages": [
+                167
+              ]
+            },
+            {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "transcriptionSha256": "3c2bef1a4c92ff21373516338bf739b78a73aff0ed285e20a299f5ba64b75fb3",
+              "sectionId": "jia-ji-month-and-rivals",
+              "pdfPages": [
+                171
+              ]
+            },
+            {
+              "id": "ziping-1926-nlc-46443-vol2",
+              "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+              "pdfPages": [
+                20
+              ],
+              "sectionId": "intervening-stem"
+            }
+          ],
+          "unresolvedConditions": [
+            "Source moderation (太過/不及) has no reviewed numeric or exhaustive qualitative criterion",
+            "Other 合化 pairs and conflicts between source conventions remain unreviewed",
+            "Printed 甲乙 wording on page 171 is preserved, not silently emended",
+            "Passing necessary checks is not a sufficient proof of transformation"
+          ]
+        },
+        "transformationEstablished": null,
+        "wangQiEstablished": null,
+        "originalDayStrength": null,
+        "moderation": null,
+        "score": null,
+        "policy": "Edition-specific exact source attribution only. Do not use this case or an already-true-transformation exception to prove its own premises, override other editions, or classify the original day stem.",
+        "phaseSources": [
+          {
+            "sourceId": "ditian-1947",
+            "pdfPages": [
+              374,
+              375
+            ],
+            "pdfSha256": "d6a7d1daf6513ce9fb9940ff8331b96804c10cdafbeac00d4d3d0a37229e1803",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/d/db/SSID-11335994_%E6%BB%B4%E5%A4%A9%E9%AB%93%E9%97%A1%E5%BE%AE.pdf",
+            "sectionId": "true-transformation-exception"
+          },
+          {
+            "sourceId": "ditian-1947",
+            "pdfPages": [
+              375,
+              376
+            ],
+            "pdfSha256": "d6a7d1daf6513ce9fb9940ff8331b96804c10cdafbeac00d4d3d0a37229e1803",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/d/db/SSID-11335994_%E6%BB%B4%E5%A4%A9%E9%AB%93%E9%97%A1%E5%BE%AE.pdf",
+            "sectionId": "chen-metaphor"
+          },
+          {
+            "sourceId": "ditian-1947",
+            "pdfPages": [
+              376
+            ],
+            "pdfSha256": "d6a7d1daf6513ce9fb9940ff8331b96804c10cdafbeac00d4d3d0a37229e1803",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/d/db/SSID-11335994_%E6%BB%B4%E5%A4%A9%E9%AB%93%E9%97%A1%E5%BE%AE.pdf",
+            "sectionId": "post-transformation-strength"
+          }
+        ]
+      }
+    },
+    {
+      "id": "earth-true-qi-surplus",
+      "review": {
+        "ruleVersion": "rescue-wangqi-source-v1",
+        "productionApproved": false,
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "status": "exact-source-transformation-case",
+        "sourceClassification": {
+          "id": "earth-true-qi-surplus",
+          "label": "真化氣有餘",
+          "sourceSaysTrueTransformation": true,
+          "target": "transformed-qi",
+          "element": "토",
+          "qiLabel": "真化氣有餘",
+          "qiCategory": "surplus",
+          "attributedPremises": [
+            "土旺乘權，剋去壬水",
+            "又無比劫"
+          ],
+          "premisesEstablishedByGenericRules": null,
+          "source": {
+            "sourceId": "ditian-1947",
+            "pdfPage": 378,
+            "pdfSha256": "d6a7d1daf6513ce9fb9940ff8331b96804c10cdafbeac00d4d3d0a37229e1803"
+          }
+        },
+        "matches": [
+          {
+            "id": "earth-true-qi-surplus",
+            "pdfPage": 378,
+            "match": "exact-four-pillars"
+          }
+        ],
+        "literalChen": {
+          "observedInSomeCandidate": true,
+          "observedInEveryCandidate": true,
+          "absenceConfirmed": false
+        },
+        "priorPreference": {
+          "hourMatch": "outside-listed-example",
+          "monthMatch": true,
+          "status": "outside-complete-preference-example"
+        },
+        "priorJiaJiConditions": {
+          "ruleVersion": "seasonal-strength-transformation-review-v1",
+          "productionApproved": false,
+          "scope": "Jia-Ji day-stem combination only; other pairs have no condition model here.",
+          "dependencies": {
+            "contextRuleVersion": "month-combination-context-research-v1",
+            "natalRuleVersion": "natal-definitions-research-v1",
+            "symbolRuleVersion": "symbol-relations-research-v1",
+            "engineVersion": "research-civil-midnight-v5"
+          },
+          "coverage": [
+            {
+              "side": "self",
+              "includedPositions": [
+                "year",
+                "month",
+                "day",
+                "hour"
+              ],
+              "omittedPositions": [],
+              "clockReviewRequired": false,
+              "boundaryReviewRequired": false
+            }
+          ],
+          "status": "reviewed-necessary-conditions-met",
+          "alternatives": [
+            {
+              "status": "reviewed-necessary-conditions-met",
+              "reasons": [],
+              "checks": [
+                {
+                  "id": "month-earth-branch",
+                  "state": "met"
+                },
+                {
+                  "id": "one-visible-partner",
+                  "state": "met"
+                },
+                {
+                  "id": "no-extra-jia",
+                  "state": "met"
+                },
+                {
+                  "id": "no-visible-eul",
+                  "state": "met"
+                },
+                {
+                  "id": "no-explicit-intervening-obstruction",
+                  "state": "met"
+                }
+              ]
+            }
+          ],
+          "commonFailedChecks": [],
+          "candidatePolicy": "Universal over supplied marginal combinations; partial assignments not proved jointly feasible; no probabilities.",
+          "targetElement": "토",
+          "transformedElement": null,
+          "transformationEstablished": false,
+          "sources": [
+            {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "transcriptionSha256": "3c2bef1a4c92ff21373516338bf739b78a73aff0ed285e20a299f5ba64b75fb3",
+              "sectionId": "transformation-general",
+              "pdfPages": [
+                167
+              ]
+            },
+            {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "transcriptionSha256": "3c2bef1a4c92ff21373516338bf739b78a73aff0ed285e20a299f5ba64b75fb3",
+              "sectionId": "jia-ji-month-and-rivals",
+              "pdfPages": [
+                171
+              ]
+            },
+            {
+              "id": "ziping-1926-nlc-46443-vol2",
+              "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+              "pdfPages": [
+                20
+              ],
+              "sectionId": "intervening-stem"
+            }
+          ],
+          "unresolvedConditions": [
+            "Source moderation (太過/不及) has no reviewed numeric or exhaustive qualitative criterion",
+            "Other 合化 pairs and conflicts between source conventions remain unreviewed",
+            "Printed 甲乙 wording on page 171 is preserved, not silently emended",
+            "Passing necessary checks is not a sufficient proof of transformation"
+          ]
+        },
+        "transformationEstablished": null,
+        "wangQiEstablished": null,
+        "originalDayStrength": null,
+        "moderation": null,
+        "score": null,
+        "policy": "Edition-specific exact source attribution only. Do not use this case or an already-true-transformation exception to prove its own premises, override other editions, or classify the original day stem.",
+        "phaseSources": [
+          {
+            "sourceId": "ditian-1947",
+            "pdfPages": [
+              374,
+              375
+            ],
+            "pdfSha256": "d6a7d1daf6513ce9fb9940ff8331b96804c10cdafbeac00d4d3d0a37229e1803",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/d/db/SSID-11335994_%E6%BB%B4%E5%A4%A9%E9%AB%93%E9%97%A1%E5%BE%AE.pdf",
+            "sectionId": "true-transformation-exception"
+          },
+          {
+            "sourceId": "ditian-1947",
+            "pdfPages": [
+              375,
+              376
+            ],
+            "pdfSha256": "d6a7d1daf6513ce9fb9940ff8331b96804c10cdafbeac00d4d3d0a37229e1803",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/d/db/SSID-11335994_%E6%BB%B4%E5%A4%A9%E9%AB%93%E9%97%A1%E5%BE%AE.pdf",
+            "sectionId": "chen-metaphor"
+          },
+          {
+            "sourceId": "ditian-1947",
+            "pdfPages": [
+              376
+            ],
+            "pdfSha256": "d6a7d1daf6513ce9fb9940ff8331b96804c10cdafbeac00d4d3d0a37229e1803",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/d/db/SSID-11335994_%E6%BB%B4%E5%A4%A9%E9%AB%93%E9%97%A1%E5%BE%AE.pdf",
+            "sectionId": "post-transformation-strength"
+          }
+        ]
+      }
+    },
+    {
+      "id": "wood-true-qi-surplus",
+      "review": {
+        "ruleVersion": "rescue-wangqi-source-v1",
+        "productionApproved": false,
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "status": "exact-source-transformation-case",
+        "sourceClassification": {
+          "id": "wood-true-qi-surplus",
+          "label": "化象斯真",
+          "sourceSaysTrueTransformation": true,
+          "target": "transformed-qi",
+          "element": "목",
+          "qiLabel": "化氣有餘",
+          "qiCategory": "surplus",
+          "attributedPremises": [],
+          "premisesEstablishedByGenericRules": null,
+          "source": {
+            "sourceId": "ditian-1947",
+            "pdfPage": 378,
+            "pdfSha256": "d6a7d1daf6513ce9fb9940ff8331b96804c10cdafbeac00d4d3d0a37229e1803"
+          }
+        },
+        "matches": [
+          {
+            "id": "wood-true-qi-surplus",
+            "pdfPage": 378,
+            "match": "exact-four-pillars"
+          }
+        ],
+        "literalChen": {
+          "observedInSomeCandidate": true,
+          "observedInEveryCandidate": true,
+          "absenceConfirmed": false
+        },
+        "priorPreference": {
+          "hourMatch": "listed-preferred-hour",
+          "monthMatch": true,
+          "status": "preference-example-matched"
+        },
+        "priorJiaJiConditions": {
+          "ruleVersion": "seasonal-strength-transformation-review-v1",
+          "productionApproved": false,
+          "scope": "Jia-Ji day-stem combination only; other pairs have no condition model here.",
+          "dependencies": {
+            "contextRuleVersion": "month-combination-context-research-v1",
+            "natalRuleVersion": "natal-definitions-research-v1",
+            "symbolRuleVersion": "symbol-relations-research-v1",
+            "engineVersion": "research-civil-midnight-v5"
+          },
+          "coverage": [
+            {
+              "side": "self",
+              "includedPositions": [
+                "year",
+                "month",
+                "day",
+                "hour"
+              ],
+              "omittedPositions": [],
+              "clockReviewRequired": false,
+              "boundaryReviewRequired": false
+            }
+          ],
+          "status": "outside-reviewed-pair",
+          "alternatives": [
+            {
+              "status": "outside-reviewed-pair",
+              "reasons": [
+                "day-stem-not-jia-or-ji"
+              ],
+              "checks": []
+            }
+          ],
+          "commonFailedChecks": [],
+          "candidatePolicy": "Universal over supplied marginal combinations; partial assignments not proved jointly feasible; no probabilities.",
+          "targetElement": "토",
+          "transformedElement": null,
+          "transformationEstablished": false,
+          "sources": [
+            {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "transcriptionSha256": "3c2bef1a4c92ff21373516338bf739b78a73aff0ed285e20a299f5ba64b75fb3",
+              "sectionId": "transformation-general",
+              "pdfPages": [
+                167
+              ]
+            },
+            {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "transcriptionSha256": "3c2bef1a4c92ff21373516338bf739b78a73aff0ed285e20a299f5ba64b75fb3",
+              "sectionId": "jia-ji-month-and-rivals",
+              "pdfPages": [
+                171
+              ]
+            },
+            {
+              "id": "ziping-1926-nlc-46443-vol2",
+              "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+              "pdfPages": [
+                20
+              ],
+              "sectionId": "intervening-stem"
+            }
+          ],
+          "unresolvedConditions": [
+            "Source moderation (太過/不及) has no reviewed numeric or exhaustive qualitative criterion",
+            "Other 合化 pairs and conflicts between source conventions remain unreviewed",
+            "Printed 甲乙 wording on page 171 is preserved, not silently emended",
+            "Passing necessary checks is not a sufficient proof of transformation"
+          ]
+        },
+        "transformationEstablished": null,
+        "wangQiEstablished": null,
+        "originalDayStrength": null,
+        "moderation": null,
+        "score": null,
+        "policy": "Edition-specific exact source attribution only. Do not use this case or an already-true-transformation exception to prove its own premises, override other editions, or classify the original day stem.",
+        "phaseSources": [
+          {
+            "sourceId": "ditian-1947",
+            "pdfPages": [
+              374,
+              375
+            ],
+            "pdfSha256": "d6a7d1daf6513ce9fb9940ff8331b96804c10cdafbeac00d4d3d0a37229e1803",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/d/db/SSID-11335994_%E6%BB%B4%E5%A4%A9%E9%AB%93%E9%97%A1%E5%BE%AE.pdf",
+            "sectionId": "true-transformation-exception"
+          },
+          {
+            "sourceId": "ditian-1947",
+            "pdfPages": [
+              375,
+              376
+            ],
+            "pdfSha256": "d6a7d1daf6513ce9fb9940ff8331b96804c10cdafbeac00d4d3d0a37229e1803",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/d/db/SSID-11335994_%E6%BB%B4%E5%A4%A9%E9%AB%93%E9%97%A1%E5%BE%AE.pdf",
+            "sectionId": "chen-metaphor"
+          },
+          {
+            "sourceId": "ditian-1947",
+            "pdfPages": [
+              376
+            ],
+            "pdfSha256": "d6a7d1daf6513ce9fb9940ff8331b96804c10cdafbeac00d4d3d0a37229e1803",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/d/db/SSID-11335994_%E6%BB%B4%E5%A4%A9%E9%AB%93%E9%97%A1%E5%BE%AE.pdf",
+            "sectionId": "post-transformation-strength"
+          }
+        ]
+      }
+    },
+    {
+      "id": "wood-true-without-chen",
+      "review": {
+        "ruleVersion": "rescue-wangqi-source-v1",
+        "productionApproved": false,
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "status": "exact-source-transformation-case",
+        "sourceClassification": {
+          "id": "wood-true-without-chen",
+          "label": "化象更真",
+          "sourceSaysTrueTransformation": true,
+          "target": "transformed-qi",
+          "element": "목",
+          "qiLabel": "化神更有餘",
+          "qiCategory": "surplus",
+          "attributedPremises": [],
+          "premisesEstablishedByGenericRules": null,
+          "source": {
+            "sourceId": "ditian-1947",
+            "pdfPage": 379,
+            "pdfSha256": "d6a7d1daf6513ce9fb9940ff8331b96804c10cdafbeac00d4d3d0a37229e1803"
+          }
+        },
+        "matches": [
+          {
+            "id": "wood-true-without-chen",
+            "pdfPage": 379,
+            "match": "exact-four-pillars"
+          }
+        ],
+        "literalChen": {
+          "observedInSomeCandidate": false,
+          "observedInEveryCandidate": false,
+          "absenceConfirmed": true
+        },
+        "priorPreference": {
+          "hourMatch": "outside-listed-example",
+          "monthMatch": true,
+          "status": "outside-complete-preference-example"
+        },
+        "priorJiaJiConditions": {
+          "ruleVersion": "seasonal-strength-transformation-review-v1",
+          "productionApproved": false,
+          "scope": "Jia-Ji day-stem combination only; other pairs have no condition model here.",
+          "dependencies": {
+            "contextRuleVersion": "month-combination-context-research-v1",
+            "natalRuleVersion": "natal-definitions-research-v1",
+            "symbolRuleVersion": "symbol-relations-research-v1",
+            "engineVersion": "research-civil-midnight-v5"
+          },
+          "coverage": [
+            {
+              "side": "self",
+              "includedPositions": [
+                "year",
+                "month",
+                "day",
+                "hour"
+              ],
+              "omittedPositions": [],
+              "clockReviewRequired": false,
+              "boundaryReviewRequired": false
+            }
+          ],
+          "status": "outside-reviewed-pair",
+          "alternatives": [
+            {
+              "status": "outside-reviewed-pair",
+              "reasons": [
+                "day-stem-not-jia-or-ji"
+              ],
+              "checks": []
+            }
+          ],
+          "commonFailedChecks": [],
+          "candidatePolicy": "Universal over supplied marginal combinations; partial assignments not proved jointly feasible; no probabilities.",
+          "targetElement": "토",
+          "transformedElement": null,
+          "transformationEstablished": false,
+          "sources": [
+            {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "transcriptionSha256": "3c2bef1a4c92ff21373516338bf739b78a73aff0ed285e20a299f5ba64b75fb3",
+              "sectionId": "transformation-general",
+              "pdfPages": [
+                167
+              ]
+            },
+            {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "transcriptionSha256": "3c2bef1a4c92ff21373516338bf739b78a73aff0ed285e20a299f5ba64b75fb3",
+              "sectionId": "jia-ji-month-and-rivals",
+              "pdfPages": [
+                171
+              ]
+            },
+            {
+              "id": "ziping-1926-nlc-46443-vol2",
+              "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+              "pdfPages": [
+                20
+              ],
+              "sectionId": "intervening-stem"
+            }
+          ],
+          "unresolvedConditions": [
+            "Source moderation (太過/不及) has no reviewed numeric or exhaustive qualitative criterion",
+            "Other 合化 pairs and conflicts between source conventions remain unreviewed",
+            "Printed 甲乙 wording on page 171 is preserved, not silently emended",
+            "Passing necessary checks is not a sufficient proof of transformation"
+          ]
+        },
+        "transformationEstablished": null,
+        "wangQiEstablished": null,
+        "originalDayStrength": null,
+        "moderation": null,
+        "score": null,
+        "policy": "Edition-specific exact source attribution only. Do not use this case or an already-true-transformation exception to prove its own premises, override other editions, or classify the original day stem.",
+        "phaseSources": [
+          {
+            "sourceId": "ditian-1947",
+            "pdfPages": [
+              374,
+              375
+            ],
+            "pdfSha256": "d6a7d1daf6513ce9fb9940ff8331b96804c10cdafbeac00d4d3d0a37229e1803",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/d/db/SSID-11335994_%E6%BB%B4%E5%A4%A9%E9%AB%93%E9%97%A1%E5%BE%AE.pdf",
+            "sectionId": "true-transformation-exception"
+          },
+          {
+            "sourceId": "ditian-1947",
+            "pdfPages": [
+              375,
+              376
+            ],
+            "pdfSha256": "d6a7d1daf6513ce9fb9940ff8331b96804c10cdafbeac00d4d3d0a37229e1803",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/d/db/SSID-11335994_%E6%BB%B4%E5%A4%A9%E9%AB%93%E9%97%A1%E5%BE%AE.pdf",
+            "sectionId": "chen-metaphor"
+          },
+          {
+            "sourceId": "ditian-1947",
+            "pdfPages": [
+              376
+            ],
+            "pdfSha256": "d6a7d1daf6513ce9fb9940ff8331b96804c10cdafbeac00d4d3d0a37229e1803",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/d/db/SSID-11335994_%E6%BB%B4%E5%A4%A9%E9%AB%93%E9%97%A1%E5%BE%AE.pdf",
+            "sectionId": "post-transformation-strength"
+          }
+        ]
+      }
+    }
+  ],
+  "rescue": [
+    {
+      "id": "officer-injury-resource",
+      "review": {
+        "ruleVersion": "rescue-wangqi-source-v1",
+        "productionApproved": false,
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "patterns": [
+          {
+            "id": "officer-injury-resource",
+            "resourceRole": "conditional-response",
+            "source": {
+              "sourceId": "ziping-1926-nlc-46443-vol2",
+              "pdfPages": [
+                25,
+                26
+              ],
+              "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+              "url": "https://upload.wikimedia.org/wikipedia/commons/d/d5/NLC416-13jh002326-46443_%E6%B7%B5%E6%B5%B7%E5%AD%90%E5%B9%B3_%E5%AD%90%E5%B9%B3%E7%9C%9F%E8%A9%AE_%E7%AC%AC2%E5%8D%B7.pdf",
+              "sectionId": "rescue-officer-injury-resource"
+            },
+            "alternatives": [
+              {
+                "frameCandidates": [
+                  {
+                    "branch": "묘",
+                    "stem": "을",
+                    "label": "정관"
+                  }
+                ],
+                "groups": [
+                  {
+                    "id": "injury",
+                    "evidence": [
+                      {
+                        "position": "year",
+                        "stem": "신",
+                        "label": "상관"
+                      },
+                      {
+                        "position": "month",
+                        "stem": "신",
+                        "label": "상관"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "response",
+                    "evidence": [
+                      {
+                        "position": "hour",
+                        "stem": "병",
+                        "label": "편인"
+                      }
+                    ]
+                  }
+                ],
+                "otherVisibleActors": [],
+                "actorsObserved": true,
+                "hourUnobserved": false,
+                "status": "frame-and-visible-actors-observed",
+                "frameEstablished": null,
+                "actualHarm": null,
+                "effectiveRescue": null
+              }
+            ],
+            "actorsInEveryCandidate": true,
+            "status": "actors-observed-all-candidates",
+            "frameEstablished": null,
+            "actualHarm": null,
+            "effectiveRescue": null
+          },
+          {
+            "id": "killing-food-resource-wealth",
+            "resourceRole": "conditional-obstacle",
+            "source": {
+              "sourceId": "ziping-1926-nlc-46443-vol2",
+              "pdfPages": [
+                26
+              ],
+              "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+              "url": "https://upload.wikimedia.org/wikipedia/commons/d/d5/NLC416-13jh002326-46443_%E6%B7%B5%E6%B5%B7%E5%AD%90%E5%B9%B3_%E5%AD%90%E5%B9%B3%E7%9C%9F%E8%A9%AE_%E7%AC%AC2%E5%8D%B7.pdf",
+              "sectionId": "rescue-killing-food-resource-wealth"
+            },
+            "alternatives": [
+              {
+                "frameCandidates": [],
+                "groups": [
+                  {
+                    "id": "food-control",
+                    "evidence": []
+                  },
+                  {
+                    "id": "resource-obstacle",
+                    "evidence": [
+                      {
+                        "position": "hour",
+                        "stem": "병",
+                        "label": "편인"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "wealth-response",
+                    "evidence": []
+                  }
+                ],
+                "otherVisibleActors": [
+                  {
+                    "position": "year",
+                    "stem": "신",
+                    "label": "상관"
+                  },
+                  {
+                    "position": "month",
+                    "stem": "신",
+                    "label": "상관"
+                  }
+                ],
+                "actorsObserved": false,
+                "hourUnobserved": false,
+                "status": "outside-static-month-frame-candidates",
+                "frameEstablished": null,
+                "actualHarm": null,
+                "effectiveRescue": null
+              }
+            ],
+            "actorsInEveryCandidate": false,
+            "status": "actors-not-completely-observed",
+            "frameEstablished": null,
+            "actualHarm": null,
+            "effectiveRescue": null
+          },
+          {
+            "id": "wealth-rob-officer",
+            "resourceRole": "not-the-listed-response",
+            "source": {
+              "sourceId": "ziping-1926-nlc-46443-vol2",
+              "pdfPages": [
+                26
+              ],
+              "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+              "url": "https://upload.wikimedia.org/wikipedia/commons/d/d5/NLC416-13jh002326-46443_%E6%B7%B5%E6%B5%B7%E5%AD%90%E5%B9%B3_%E5%AD%90%E5%B9%B3%E7%9C%9F%E8%A9%AE_%E7%AC%AC2%E5%8D%B7.pdf",
+              "sectionId": "rescue-wealth-rob-officer"
+            },
+            "alternatives": [
+              {
+                "frameCandidates": [],
+                "groups": [
+                  {
+                    "id": "rob",
+                    "evidence": []
+                  },
+                  {
+                    "id": "officer-response",
+                    "evidence": []
+                  }
+                ],
+                "otherVisibleActors": [
+                  {
+                    "position": "year",
+                    "stem": "신",
+                    "label": "상관"
+                  },
+                  {
+                    "position": "month",
+                    "stem": "신",
+                    "label": "상관"
+                  },
+                  {
+                    "position": "hour",
+                    "stem": "병",
+                    "label": "편인"
+                  }
+                ],
+                "actorsObserved": false,
+                "hourUnobserved": false,
+                "status": "outside-static-month-frame-candidates",
+                "frameEstablished": null,
+                "actualHarm": null,
+                "effectiveRescue": null
+              }
+            ],
+            "actorsInEveryCandidate": false,
+            "status": "actors-not-completely-observed",
+            "frameEstablished": null,
+            "actualHarm": null,
+            "effectiveRescue": null
+          }
+        ],
+        "effectiveRescue": null,
+        "strength": null,
+        "score": null,
+        "scope": "Static monthly hidden stems propose frame candidates only. Non-day visible stems supply actors; presence is not effective control, 月令用神 or a proved 格局.",
+        "candidatePolicy": "Universal over supplied marginal assignments; partial observations have unproved joint feasibility and no probabilities.",
+        "normalizations": [
+          "官 -> 正官, 七煞 -> 偏官, 傷 -> 傷官, 食 -> 食神; unqualified 印/財 preserve both polarity classes under the pinned research terminology.",
+          "Static monthly hidden-stem candidates do not establish 月令用神/格局. Only visible non-day stems fill 透/actor observations.",
+          "Source case attribution, conditional rescue, before/after transformation and cross-person effects are distinct layers."
+        ],
+        "unresolved": [
+          "Frame selection, force, rooting, position, other harms and rescue priority remain unadjudicated.",
+          "These 用神/格局 rescue patterns are not automatically 合化 rescue rules."
+        ]
+      }
+    },
+    {
+      "id": "killing-food-resource-wealth",
+      "review": {
+        "ruleVersion": "rescue-wangqi-source-v1",
+        "productionApproved": false,
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "patterns": [
+          {
+            "id": "officer-injury-resource",
+            "resourceRole": "conditional-response",
+            "source": {
+              "sourceId": "ziping-1926-nlc-46443-vol2",
+              "pdfPages": [
+                25,
+                26
+              ],
+              "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+              "url": "https://upload.wikimedia.org/wikipedia/commons/d/d5/NLC416-13jh002326-46443_%E6%B7%B5%E6%B5%B7%E5%AD%90%E5%B9%B3_%E5%AD%90%E5%B9%B3%E7%9C%9F%E8%A9%AE_%E7%AC%AC2%E5%8D%B7.pdf",
+              "sectionId": "rescue-officer-injury-resource"
+            },
+            "alternatives": [
+              {
+                "frameCandidates": [],
+                "groups": [
+                  {
+                    "id": "injury",
+                    "evidence": []
+                  },
+                  {
+                    "id": "response",
+                    "evidence": [
+                      {
+                        "position": "year",
+                        "stem": "임",
+                        "label": "편인"
+                      }
+                    ]
+                  }
+                ],
+                "otherVisibleActors": [
+                  {
+                    "position": "month",
+                    "stem": "무",
+                    "label": "편재"
+                  },
+                  {
+                    "position": "hour",
+                    "stem": "병",
+                    "label": "식신"
+                  }
+                ],
+                "actorsObserved": false,
+                "hourUnobserved": false,
+                "status": "outside-static-month-frame-candidates",
+                "frameEstablished": null,
+                "actualHarm": null,
+                "effectiveRescue": null
+              }
+            ],
+            "actorsInEveryCandidate": false,
+            "status": "actors-not-completely-observed",
+            "frameEstablished": null,
+            "actualHarm": null,
+            "effectiveRescue": null
+          },
+          {
+            "id": "killing-food-resource-wealth",
+            "resourceRole": "conditional-obstacle",
+            "source": {
+              "sourceId": "ziping-1926-nlc-46443-vol2",
+              "pdfPages": [
+                26
+              ],
+              "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+              "url": "https://upload.wikimedia.org/wikipedia/commons/d/d5/NLC416-13jh002326-46443_%E6%B7%B5%E6%B5%B7%E5%AD%90%E5%B9%B3_%E5%AD%90%E5%B9%B3%E7%9C%9F%E8%A9%AE_%E7%AC%AC2%E5%8D%B7.pdf",
+              "sectionId": "rescue-killing-food-resource-wealth"
+            },
+            "alternatives": [
+              {
+                "frameCandidates": [
+                  {
+                    "branch": "신",
+                    "stem": "경",
+                    "label": "편관"
+                  }
+                ],
+                "groups": [
+                  {
+                    "id": "food-control",
+                    "evidence": [
+                      {
+                        "position": "hour",
+                        "stem": "병",
+                        "label": "식신"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "resource-obstacle",
+                    "evidence": [
+                      {
+                        "position": "year",
+                        "stem": "임",
+                        "label": "편인"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "wealth-response",
+                    "evidence": [
+                      {
+                        "position": "month",
+                        "stem": "무",
+                        "label": "편재"
+                      }
+                    ]
+                  }
+                ],
+                "otherVisibleActors": [],
+                "actorsObserved": true,
+                "hourUnobserved": false,
+                "status": "frame-and-visible-actors-observed",
+                "frameEstablished": null,
+                "actualHarm": null,
+                "effectiveRescue": null
+              }
+            ],
+            "actorsInEveryCandidate": true,
+            "status": "actors-observed-all-candidates",
+            "frameEstablished": null,
+            "actualHarm": null,
+            "effectiveRescue": null
+          },
+          {
+            "id": "wealth-rob-officer",
+            "resourceRole": "not-the-listed-response",
+            "source": {
+              "sourceId": "ziping-1926-nlc-46443-vol2",
+              "pdfPages": [
+                26
+              ],
+              "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+              "url": "https://upload.wikimedia.org/wikipedia/commons/d/d5/NLC416-13jh002326-46443_%E6%B7%B5%E6%B5%B7%E5%AD%90%E5%B9%B3_%E5%AD%90%E5%B9%B3%E7%9C%9F%E8%A9%AE_%E7%AC%AC2%E5%8D%B7.pdf",
+              "sectionId": "rescue-wealth-rob-officer"
+            },
+            "alternatives": [
+              {
+                "frameCandidates": [
+                  {
+                    "branch": "신",
+                    "stem": "무",
+                    "label": "편재"
+                  }
+                ],
+                "groups": [
+                  {
+                    "id": "rob",
+                    "evidence": []
+                  },
+                  {
+                    "id": "officer-response",
+                    "evidence": []
+                  }
+                ],
+                "otherVisibleActors": [
+                  {
+                    "position": "year",
+                    "stem": "임",
+                    "label": "편인"
+                  },
+                  {
+                    "position": "month",
+                    "stem": "무",
+                    "label": "편재"
+                  },
+                  {
+                    "position": "hour",
+                    "stem": "병",
+                    "label": "식신"
+                  }
+                ],
+                "actorsObserved": false,
+                "hourUnobserved": false,
+                "status": "not-all-visible-actors-observed",
+                "frameEstablished": null,
+                "actualHarm": null,
+                "effectiveRescue": null
+              }
+            ],
+            "actorsInEveryCandidate": false,
+            "status": "actors-not-completely-observed",
+            "frameEstablished": null,
+            "actualHarm": null,
+            "effectiveRescue": null
+          }
+        ],
+        "effectiveRescue": null,
+        "strength": null,
+        "score": null,
+        "scope": "Static monthly hidden stems propose frame candidates only. Non-day visible stems supply actors; presence is not effective control, 月令用神 or a proved 格局.",
+        "candidatePolicy": "Universal over supplied marginal assignments; partial observations have unproved joint feasibility and no probabilities.",
+        "normalizations": [
+          "官 -> 正官, 七煞 -> 偏官, 傷 -> 傷官, 食 -> 食神; unqualified 印/財 preserve both polarity classes under the pinned research terminology.",
+          "Static monthly hidden-stem candidates do not establish 月令用神/格局. Only visible non-day stems fill 透/actor observations.",
+          "Source case attribution, conditional rescue, before/after transformation and cross-person effects are distinct layers."
+        ],
+        "unresolved": [
+          "Frame selection, force, rooting, position, other harms and rescue priority remain unadjudicated.",
+          "These 用神/格局 rescue patterns are not automatically 合化 rescue rules."
+        ]
+      }
+    },
+    {
+      "id": "wealth-rob-officer",
+      "review": {
+        "ruleVersion": "rescue-wangqi-source-v1",
+        "productionApproved": false,
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "patterns": [
+          {
+            "id": "officer-injury-resource",
+            "resourceRole": "conditional-response",
+            "source": {
+              "sourceId": "ziping-1926-nlc-46443-vol2",
+              "pdfPages": [
+                25,
+                26
+              ],
+              "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+              "url": "https://upload.wikimedia.org/wikipedia/commons/d/d5/NLC416-13jh002326-46443_%E6%B7%B5%E6%B5%B7%E5%AD%90%E5%B9%B3_%E5%AD%90%E5%B9%B3%E7%9C%9F%E8%A9%AE_%E7%AC%AC2%E5%8D%B7.pdf",
+              "sectionId": "rescue-officer-injury-resource"
+            },
+            "alternatives": [
+              {
+                "frameCandidates": [],
+                "groups": [
+                  {
+                    "id": "injury",
+                    "evidence": []
+                  },
+                  {
+                    "id": "response",
+                    "evidence": []
+                  }
+                ],
+                "otherVisibleActors": [
+                  {
+                    "position": "year",
+                    "stem": "을",
+                    "label": "겁재"
+                  },
+                  {
+                    "position": "month",
+                    "stem": "경",
+                    "label": "편관"
+                  },
+                  {
+                    "position": "hour",
+                    "stem": "신",
+                    "label": "정관"
+                  }
+                ],
+                "actorsObserved": false,
+                "hourUnobserved": false,
+                "status": "outside-static-month-frame-candidates",
+                "frameEstablished": null,
+                "actualHarm": null,
+                "effectiveRescue": null
+              }
+            ],
+            "actorsInEveryCandidate": false,
+            "status": "actors-not-completely-observed",
+            "frameEstablished": null,
+            "actualHarm": null,
+            "effectiveRescue": null
+          },
+          {
+            "id": "killing-food-resource-wealth",
+            "resourceRole": "conditional-obstacle",
+            "source": {
+              "sourceId": "ziping-1926-nlc-46443-vol2",
+              "pdfPages": [
+                26
+              ],
+              "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+              "url": "https://upload.wikimedia.org/wikipedia/commons/d/d5/NLC416-13jh002326-46443_%E6%B7%B5%E6%B5%B7%E5%AD%90%E5%B9%B3_%E5%AD%90%E5%B9%B3%E7%9C%9F%E8%A9%AE_%E7%AC%AC2%E5%8D%B7.pdf",
+              "sectionId": "rescue-killing-food-resource-wealth"
+            },
+            "alternatives": [
+              {
+                "frameCandidates": [],
+                "groups": [
+                  {
+                    "id": "food-control",
+                    "evidence": []
+                  },
+                  {
+                    "id": "resource-obstacle",
+                    "evidence": []
+                  },
+                  {
+                    "id": "wealth-response",
+                    "evidence": []
+                  }
+                ],
+                "otherVisibleActors": [
+                  {
+                    "position": "year",
+                    "stem": "을",
+                    "label": "겁재"
+                  },
+                  {
+                    "position": "month",
+                    "stem": "경",
+                    "label": "편관"
+                  },
+                  {
+                    "position": "hour",
+                    "stem": "신",
+                    "label": "정관"
+                  }
+                ],
+                "actorsObserved": false,
+                "hourUnobserved": false,
+                "status": "outside-static-month-frame-candidates",
+                "frameEstablished": null,
+                "actualHarm": null,
+                "effectiveRescue": null
+              }
+            ],
+            "actorsInEveryCandidate": false,
+            "status": "actors-not-completely-observed",
+            "frameEstablished": null,
+            "actualHarm": null,
+            "effectiveRescue": null
+          },
+          {
+            "id": "wealth-rob-officer",
+            "resourceRole": "not-the-listed-response",
+            "source": {
+              "sourceId": "ziping-1926-nlc-46443-vol2",
+              "pdfPages": [
+                26
+              ],
+              "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+              "url": "https://upload.wikimedia.org/wikipedia/commons/d/d5/NLC416-13jh002326-46443_%E6%B7%B5%E6%B5%B7%E5%AD%90%E5%B9%B3_%E5%AD%90%E5%B9%B3%E7%9C%9F%E8%A9%AE_%E7%AC%AC2%E5%8D%B7.pdf",
+              "sectionId": "rescue-wealth-rob-officer"
+            },
+            "alternatives": [
+              {
+                "frameCandidates": [
+                  {
+                    "branch": "진",
+                    "stem": "무",
+                    "label": "편재"
+                  }
+                ],
+                "groups": [
+                  {
+                    "id": "rob",
+                    "evidence": [
+                      {
+                        "position": "year",
+                        "stem": "을",
+                        "label": "겁재"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "officer-response",
+                    "evidence": [
+                      {
+                        "position": "hour",
+                        "stem": "신",
+                        "label": "정관"
+                      }
+                    ]
+                  }
+                ],
+                "otherVisibleActors": [
+                  {
+                    "position": "month",
+                    "stem": "경",
+                    "label": "편관"
+                  }
+                ],
+                "actorsObserved": true,
+                "hourUnobserved": false,
+                "status": "frame-and-visible-actors-observed",
+                "frameEstablished": null,
+                "actualHarm": null,
+                "effectiveRescue": null
+              }
+            ],
+            "actorsInEveryCandidate": true,
+            "status": "actors-observed-all-candidates",
+            "frameEstablished": null,
+            "actualHarm": null,
+            "effectiveRescue": null
+          }
+        ],
+        "effectiveRescue": null,
+        "strength": null,
+        "score": null,
+        "scope": "Static monthly hidden stems propose frame candidates only. Non-day visible stems supply actors; presence is not effective control, 月令用神 or a proved 格局.",
+        "candidatePolicy": "Universal over supplied marginal assignments; partial observations have unproved joint feasibility and no probabilities.",
+        "normalizations": [
+          "官 -> 正官, 七煞 -> 偏官, 傷 -> 傷官, 食 -> 食神; unqualified 印/財 preserve both polarity classes under the pinned research terminology.",
+          "Static monthly hidden-stem candidates do not establish 月令用神/格局. Only visible non-day stems fill 透/actor observations.",
+          "Source case attribution, conditional rescue, before/after transformation and cross-person effects are distinct layers."
+        ],
+        "unresolved": [
+          "Frame selection, force, rooting, position, other harms and rescue priority remain unadjudicated.",
+          "These 用神/格局 rescue patterns are not automatically 合化 rescue rules."
+        ]
+      }
+    }
+  ],
+  "calendarInputs": [
+    {
+      "id": "known-time",
+      "review": {
+        "ruleVersion": "rescue-wangqi-source-v1",
+        "productionApproved": false,
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "patterns": [
+          {
+            "id": "officer-injury-resource",
+            "resourceRole": "conditional-response",
+            "source": {
+              "sourceId": "ziping-1926-nlc-46443-vol2",
+              "pdfPages": [
+                25,
+                26
+              ],
+              "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+              "url": "https://upload.wikimedia.org/wikipedia/commons/d/d5/NLC416-13jh002326-46443_%E6%B7%B5%E6%B5%B7%E5%AD%90%E5%B9%B3_%E5%AD%90%E5%B9%B3%E7%9C%9F%E8%A9%AE_%E7%AC%AC2%E5%8D%B7.pdf",
+              "sectionId": "rescue-officer-injury-resource"
+            },
+            "alternatives": [
+              {
+                "frameCandidates": [],
+                "groups": [
+                  {
+                    "id": "injury",
+                    "evidence": []
+                  },
+                  {
+                    "id": "response",
+                    "evidence": [
+                      {
+                        "position": "month",
+                        "stem": "경",
+                        "label": "편인"
+                      }
+                    ]
+                  }
+                ],
+                "otherVisibleActors": [
+                  {
+                    "position": "year",
+                    "stem": "병",
+                    "label": "편재"
+                  },
+                  {
+                    "position": "hour",
+                    "stem": "병",
+                    "label": "편재"
+                  }
+                ],
+                "actorsObserved": false,
+                "hourUnobserved": false,
+                "status": "outside-static-month-frame-candidates",
+                "frameEstablished": null,
+                "actualHarm": null,
+                "effectiveRescue": null
+              }
+            ],
+            "actorsInEveryCandidate": false,
+            "status": "actors-not-completely-observed",
+            "frameEstablished": null,
+            "actualHarm": null,
+            "effectiveRescue": null
+          },
+          {
+            "id": "killing-food-resource-wealth",
+            "resourceRole": "conditional-obstacle",
+            "source": {
+              "sourceId": "ziping-1926-nlc-46443-vol2",
+              "pdfPages": [
+                26
+              ],
+              "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+              "url": "https://upload.wikimedia.org/wikipedia/commons/d/d5/NLC416-13jh002326-46443_%E6%B7%B5%E6%B5%B7%E5%AD%90%E5%B9%B3_%E5%AD%90%E5%B9%B3%E7%9C%9F%E8%A9%AE_%E7%AC%AC2%E5%8D%B7.pdf",
+              "sectionId": "rescue-killing-food-resource-wealth"
+            },
+            "alternatives": [
+              {
+                "frameCandidates": [
+                  {
+                    "branch": "인",
+                    "stem": "무",
+                    "label": "편관"
+                  }
+                ],
+                "groups": [
+                  {
+                    "id": "food-control",
+                    "evidence": []
+                  },
+                  {
+                    "id": "resource-obstacle",
+                    "evidence": [
+                      {
+                        "position": "month",
+                        "stem": "경",
+                        "label": "편인"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "wealth-response",
+                    "evidence": [
+                      {
+                        "position": "year",
+                        "stem": "병",
+                        "label": "편재"
+                      },
+                      {
+                        "position": "hour",
+                        "stem": "병",
+                        "label": "편재"
+                      }
+                    ]
+                  }
+                ],
+                "otherVisibleActors": [],
+                "actorsObserved": false,
+                "hourUnobserved": false,
+                "status": "not-all-visible-actors-observed",
+                "frameEstablished": null,
+                "actualHarm": null,
+                "effectiveRescue": null
+              }
+            ],
+            "actorsInEveryCandidate": false,
+            "status": "actors-not-completely-observed",
+            "frameEstablished": null,
+            "actualHarm": null,
+            "effectiveRescue": null
+          },
+          {
+            "id": "wealth-rob-officer",
+            "resourceRole": "not-the-listed-response",
+            "source": {
+              "sourceId": "ziping-1926-nlc-46443-vol2",
+              "pdfPages": [
+                26
+              ],
+              "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+              "url": "https://upload.wikimedia.org/wikipedia/commons/d/d5/NLC416-13jh002326-46443_%E6%B7%B5%E6%B5%B7%E5%AD%90%E5%B9%B3_%E5%AD%90%E5%B9%B3%E7%9C%9F%E8%A9%AE_%E7%AC%AC2%E5%8D%B7.pdf",
+              "sectionId": "rescue-wealth-rob-officer"
+            },
+            "alternatives": [
+              {
+                "frameCandidates": [
+                  {
+                    "branch": "인",
+                    "stem": "병",
+                    "label": "편재"
+                  }
+                ],
+                "groups": [
+                  {
+                    "id": "rob",
+                    "evidence": []
+                  },
+                  {
+                    "id": "officer-response",
+                    "evidence": []
+                  }
+                ],
+                "otherVisibleActors": [
+                  {
+                    "position": "year",
+                    "stem": "병",
+                    "label": "편재"
+                  },
+                  {
+                    "position": "month",
+                    "stem": "경",
+                    "label": "편인"
+                  },
+                  {
+                    "position": "hour",
+                    "stem": "병",
+                    "label": "편재"
+                  }
+                ],
+                "actorsObserved": false,
+                "hourUnobserved": false,
+                "status": "not-all-visible-actors-observed",
+                "frameEstablished": null,
+                "actualHarm": null,
+                "effectiveRescue": null
+              }
+            ],
+            "actorsInEveryCandidate": false,
+            "status": "actors-not-completely-observed",
+            "frameEstablished": null,
+            "actualHarm": null,
+            "effectiveRescue": null
+          }
+        ],
+        "effectiveRescue": null,
+        "strength": null,
+        "score": null,
+        "scope": "Static monthly hidden stems propose frame candidates only. Non-day visible stems supply actors; presence is not effective control, 月令用神 or a proved 格局.",
+        "candidatePolicy": "Universal over supplied marginal assignments; partial observations have unproved joint feasibility and no probabilities.",
+        "normalizations": [
+          "官 -> 正官, 七煞 -> 偏官, 傷 -> 傷官, 食 -> 食神; unqualified 印/財 preserve both polarity classes under the pinned research terminology.",
+          "Static monthly hidden-stem candidates do not establish 月令用神/格局. Only visible non-day stems fill 透/actor observations.",
+          "Source case attribution, conditional rescue, before/after transformation and cross-person effects are distinct layers."
+        ],
+        "unresolved": [
+          "Frame selection, force, rooting, position, other harms and rescue priority remain unadjudicated.",
+          "These 用神/格局 rescue patterns are not automatically 合化 rescue rules."
+        ]
+      }
+    },
+    {
+      "id": "unknown-time",
+      "review": {
+        "ruleVersion": "rescue-wangqi-source-v1",
+        "productionApproved": false,
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day"
+            ],
+            "omittedPositions": [
+              "hour"
+            ],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "patterns": [
+          {
+            "id": "officer-injury-resource",
+            "resourceRole": "conditional-response",
+            "source": {
+              "sourceId": "ziping-1926-nlc-46443-vol2",
+              "pdfPages": [
+                25,
+                26
+              ],
+              "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+              "url": "https://upload.wikimedia.org/wikipedia/commons/d/d5/NLC416-13jh002326-46443_%E6%B7%B5%E6%B5%B7%E5%AD%90%E5%B9%B3_%E5%AD%90%E5%B9%B3%E7%9C%9F%E8%A9%AE_%E7%AC%AC2%E5%8D%B7.pdf",
+              "sectionId": "rescue-officer-injury-resource"
+            },
+            "alternatives": [
+              {
+                "frameCandidates": [],
+                "groups": [
+                  {
+                    "id": "injury",
+                    "evidence": []
+                  },
+                  {
+                    "id": "response",
+                    "evidence": [
+                      {
+                        "position": "month",
+                        "stem": "경",
+                        "label": "편인"
+                      }
+                    ]
+                  }
+                ],
+                "otherVisibleActors": [
+                  {
+                    "position": "year",
+                    "stem": "병",
+                    "label": "편재"
+                  }
+                ],
+                "actorsObserved": false,
+                "hourUnobserved": true,
+                "status": "outside-static-month-frame-candidates",
+                "frameEstablished": null,
+                "actualHarm": null,
+                "effectiveRescue": null
+              }
+            ],
+            "actorsInEveryCandidate": false,
+            "status": "actors-not-completely-observed",
+            "frameEstablished": null,
+            "actualHarm": null,
+            "effectiveRescue": null
+          },
+          {
+            "id": "killing-food-resource-wealth",
+            "resourceRole": "conditional-obstacle",
+            "source": {
+              "sourceId": "ziping-1926-nlc-46443-vol2",
+              "pdfPages": [
+                26
+              ],
+              "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+              "url": "https://upload.wikimedia.org/wikipedia/commons/d/d5/NLC416-13jh002326-46443_%E6%B7%B5%E6%B5%B7%E5%AD%90%E5%B9%B3_%E5%AD%90%E5%B9%B3%E7%9C%9F%E8%A9%AE_%E7%AC%AC2%E5%8D%B7.pdf",
+              "sectionId": "rescue-killing-food-resource-wealth"
+            },
+            "alternatives": [
+              {
+                "frameCandidates": [
+                  {
+                    "branch": "인",
+                    "stem": "무",
+                    "label": "편관"
+                  }
+                ],
+                "groups": [
+                  {
+                    "id": "food-control",
+                    "evidence": []
+                  },
+                  {
+                    "id": "resource-obstacle",
+                    "evidence": [
+                      {
+                        "position": "month",
+                        "stem": "경",
+                        "label": "편인"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "wealth-response",
+                    "evidence": [
+                      {
+                        "position": "year",
+                        "stem": "병",
+                        "label": "편재"
+                      }
+                    ]
+                  }
+                ],
+                "otherVisibleActors": [],
+                "actorsObserved": false,
+                "hourUnobserved": true,
+                "status": "hour-unobserved-actors-incomplete",
+                "frameEstablished": null,
+                "actualHarm": null,
+                "effectiveRescue": null
+              }
+            ],
+            "actorsInEveryCandidate": false,
+            "status": "actors-not-completely-observed",
+            "frameEstablished": null,
+            "actualHarm": null,
+            "effectiveRescue": null
+          },
+          {
+            "id": "wealth-rob-officer",
+            "resourceRole": "not-the-listed-response",
+            "source": {
+              "sourceId": "ziping-1926-nlc-46443-vol2",
+              "pdfPages": [
+                26
+              ],
+              "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+              "url": "https://upload.wikimedia.org/wikipedia/commons/d/d5/NLC416-13jh002326-46443_%E6%B7%B5%E6%B5%B7%E5%AD%90%E5%B9%B3_%E5%AD%90%E5%B9%B3%E7%9C%9F%E8%A9%AE_%E7%AC%AC2%E5%8D%B7.pdf",
+              "sectionId": "rescue-wealth-rob-officer"
+            },
+            "alternatives": [
+              {
+                "frameCandidates": [
+                  {
+                    "branch": "인",
+                    "stem": "병",
+                    "label": "편재"
+                  }
+                ],
+                "groups": [
+                  {
+                    "id": "rob",
+                    "evidence": []
+                  },
+                  {
+                    "id": "officer-response",
+                    "evidence": []
+                  }
+                ],
+                "otherVisibleActors": [
+                  {
+                    "position": "year",
+                    "stem": "병",
+                    "label": "편재"
+                  },
+                  {
+                    "position": "month",
+                    "stem": "경",
+                    "label": "편인"
+                  }
+                ],
+                "actorsObserved": false,
+                "hourUnobserved": true,
+                "status": "hour-unobserved-actors-incomplete",
+                "frameEstablished": null,
+                "actualHarm": null,
+                "effectiveRescue": null
+              }
+            ],
+            "actorsInEveryCandidate": false,
+            "status": "actors-not-completely-observed",
+            "frameEstablished": null,
+            "actualHarm": null,
+            "effectiveRescue": null
+          }
+        ],
+        "effectiveRescue": null,
+        "strength": null,
+        "score": null,
+        "scope": "Static monthly hidden stems propose frame candidates only. Non-day visible stems supply actors; presence is not effective control, 月令用神 or a proved 格局.",
+        "candidatePolicy": "Universal over supplied marginal assignments; partial observations have unproved joint feasibility and no probabilities.",
+        "normalizations": [
+          "官 -> 正官, 七煞 -> 偏官, 傷 -> 傷官, 食 -> 食神; unqualified 印/財 preserve both polarity classes under the pinned research terminology.",
+          "Static monthly hidden-stem candidates do not establish 月令用神/格局. Only visible non-day stems fill 透/actor observations.",
+          "Source case attribution, conditional rescue, before/after transformation and cross-person effects are distinct layers."
+        ],
+        "unresolved": [
+          "Frame selection, force, rooting, position, other harms and rescue priority remain unadjudicated.",
+          "These 用神/格局 rescue patterns are not automatically 合化 rescue rules."
+        ]
+      }
+    },
+    {
+      "id": "term-candidates",
+      "review": {
+        "ruleVersion": "rescue-wangqi-source-v1",
+        "productionApproved": false,
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": true
+          }
+        ],
+        "patterns": [
+          {
+            "id": "officer-injury-resource",
+            "resourceRole": "conditional-response",
+            "source": {
+              "sourceId": "ziping-1926-nlc-46443-vol2",
+              "pdfPages": [
+                25,
+                26
+              ],
+              "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+              "url": "https://upload.wikimedia.org/wikipedia/commons/d/d5/NLC416-13jh002326-46443_%E6%B7%B5%E6%B5%B7%E5%AD%90%E5%B9%B3_%E5%AD%90%E5%B9%B3%E7%9C%9F%E8%A9%AE_%E7%AC%AC2%E5%8D%B7.pdf",
+              "sectionId": "rescue-officer-injury-resource"
+            },
+            "alternatives": [
+              {
+                "frameCandidates": [],
+                "groups": [
+                  {
+                    "id": "injury",
+                    "evidence": [
+                      {
+                        "position": "hour",
+                        "stem": "신",
+                        "label": "상관"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "response",
+                    "evidence": []
+                  }
+                ],
+                "otherVisibleActors": [
+                  {
+                    "position": "year",
+                    "stem": "갑",
+                    "label": "편관"
+                  },
+                  {
+                    "position": "month",
+                    "stem": "을",
+                    "label": "정관"
+                  }
+                ],
+                "actorsObserved": false,
+                "hourUnobserved": false,
+                "status": "outside-static-month-frame-candidates",
+                "frameEstablished": null,
+                "actualHarm": null,
+                "effectiveRescue": null
+              },
+              {
+                "frameCandidates": [],
+                "groups": [
+                  {
+                    "id": "injury",
+                    "evidence": [
+                      {
+                        "position": "hour",
+                        "stem": "신",
+                        "label": "상관"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "response",
+                    "evidence": []
+                  }
+                ],
+                "otherVisibleActors": [
+                  {
+                    "position": "year",
+                    "stem": "계",
+                    "label": "정재"
+                  },
+                  {
+                    "position": "month",
+                    "stem": "을",
+                    "label": "정관"
+                  }
+                ],
+                "actorsObserved": false,
+                "hourUnobserved": false,
+                "status": "outside-static-month-frame-candidates",
+                "frameEstablished": null,
+                "actualHarm": null,
+                "effectiveRescue": null
+              },
+              {
+                "frameCandidates": [],
+                "groups": [
+                  {
+                    "id": "injury",
+                    "evidence": [
+                      {
+                        "position": "hour",
+                        "stem": "신",
+                        "label": "상관"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "response",
+                    "evidence": [
+                      {
+                        "position": "month",
+                        "stem": "병",
+                        "label": "편인"
+                      }
+                    ]
+                  }
+                ],
+                "otherVisibleActors": [
+                  {
+                    "position": "year",
+                    "stem": "갑",
+                    "label": "편관"
+                  }
+                ],
+                "actorsObserved": false,
+                "hourUnobserved": false,
+                "status": "outside-static-month-frame-candidates",
+                "frameEstablished": null,
+                "actualHarm": null,
+                "effectiveRescue": null
+              },
+              {
+                "frameCandidates": [],
+                "groups": [
+                  {
+                    "id": "injury",
+                    "evidence": [
+                      {
+                        "position": "hour",
+                        "stem": "신",
+                        "label": "상관"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "response",
+                    "evidence": [
+                      {
+                        "position": "month",
+                        "stem": "병",
+                        "label": "편인"
+                      }
+                    ]
+                  }
+                ],
+                "otherVisibleActors": [
+                  {
+                    "position": "year",
+                    "stem": "계",
+                    "label": "정재"
+                  }
+                ],
+                "actorsObserved": false,
+                "hourUnobserved": false,
+                "status": "outside-static-month-frame-candidates",
+                "frameEstablished": null,
+                "actualHarm": null,
+                "effectiveRescue": null
+              }
+            ],
+            "actorsInEveryCandidate": false,
+            "status": "actors-not-completely-observed",
+            "frameEstablished": null,
+            "actualHarm": null,
+            "effectiveRescue": null
+          },
+          {
+            "id": "killing-food-resource-wealth",
+            "resourceRole": "conditional-obstacle",
+            "source": {
+              "sourceId": "ziping-1926-nlc-46443-vol2",
+              "pdfPages": [
+                26
+              ],
+              "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+              "url": "https://upload.wikimedia.org/wikipedia/commons/d/d5/NLC416-13jh002326-46443_%E6%B7%B5%E6%B5%B7%E5%AD%90%E5%B9%B3_%E5%AD%90%E5%B9%B3%E7%9C%9F%E8%A9%AE_%E7%AC%AC2%E5%8D%B7.pdf",
+              "sectionId": "rescue-killing-food-resource-wealth"
+            },
+            "alternatives": [
+              {
+                "frameCandidates": [],
+                "groups": [
+                  {
+                    "id": "food-control",
+                    "evidence": []
+                  },
+                  {
+                    "id": "resource-obstacle",
+                    "evidence": []
+                  },
+                  {
+                    "id": "wealth-response",
+                    "evidence": []
+                  }
+                ],
+                "otherVisibleActors": [
+                  {
+                    "position": "year",
+                    "stem": "갑",
+                    "label": "편관"
+                  },
+                  {
+                    "position": "month",
+                    "stem": "을",
+                    "label": "정관"
+                  },
+                  {
+                    "position": "hour",
+                    "stem": "신",
+                    "label": "상관"
+                  }
+                ],
+                "actorsObserved": false,
+                "hourUnobserved": false,
+                "status": "outside-static-month-frame-candidates",
+                "frameEstablished": null,
+                "actualHarm": null,
+                "effectiveRescue": null
+              },
+              {
+                "frameCandidates": [],
+                "groups": [
+                  {
+                    "id": "food-control",
+                    "evidence": []
+                  },
+                  {
+                    "id": "resource-obstacle",
+                    "evidence": []
+                  },
+                  {
+                    "id": "wealth-response",
+                    "evidence": [
+                      {
+                        "position": "year",
+                        "stem": "계",
+                        "label": "정재"
+                      }
+                    ]
+                  }
+                ],
+                "otherVisibleActors": [
+                  {
+                    "position": "month",
+                    "stem": "을",
+                    "label": "정관"
+                  },
+                  {
+                    "position": "hour",
+                    "stem": "신",
+                    "label": "상관"
+                  }
+                ],
+                "actorsObserved": false,
+                "hourUnobserved": false,
+                "status": "outside-static-month-frame-candidates",
+                "frameEstablished": null,
+                "actualHarm": null,
+                "effectiveRescue": null
+              },
+              {
+                "frameCandidates": [
+                  {
+                    "branch": "인",
+                    "stem": "갑",
+                    "label": "편관"
+                  }
+                ],
+                "groups": [
+                  {
+                    "id": "food-control",
+                    "evidence": []
+                  },
+                  {
+                    "id": "resource-obstacle",
+                    "evidence": [
+                      {
+                        "position": "month",
+                        "stem": "병",
+                        "label": "편인"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "wealth-response",
+                    "evidence": []
+                  }
+                ],
+                "otherVisibleActors": [
+                  {
+                    "position": "year",
+                    "stem": "갑",
+                    "label": "편관"
+                  },
+                  {
+                    "position": "hour",
+                    "stem": "신",
+                    "label": "상관"
+                  }
+                ],
+                "actorsObserved": false,
+                "hourUnobserved": false,
+                "status": "not-all-visible-actors-observed",
+                "frameEstablished": null,
+                "actualHarm": null,
+                "effectiveRescue": null
+              },
+              {
+                "frameCandidates": [
+                  {
+                    "branch": "인",
+                    "stem": "갑",
+                    "label": "편관"
+                  }
+                ],
+                "groups": [
+                  {
+                    "id": "food-control",
+                    "evidence": []
+                  },
+                  {
+                    "id": "resource-obstacle",
+                    "evidence": [
+                      {
+                        "position": "month",
+                        "stem": "병",
+                        "label": "편인"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "wealth-response",
+                    "evidence": [
+                      {
+                        "position": "year",
+                        "stem": "계",
+                        "label": "정재"
+                      }
+                    ]
+                  }
+                ],
+                "otherVisibleActors": [
+                  {
+                    "position": "hour",
+                    "stem": "신",
+                    "label": "상관"
+                  }
+                ],
+                "actorsObserved": false,
+                "hourUnobserved": false,
+                "status": "not-all-visible-actors-observed",
+                "frameEstablished": null,
+                "actualHarm": null,
+                "effectiveRescue": null
+              }
+            ],
+            "actorsInEveryCandidate": false,
+            "status": "actors-not-completely-observed",
+            "frameEstablished": null,
+            "actualHarm": null,
+            "effectiveRescue": null
+          },
+          {
+            "id": "wealth-rob-officer",
+            "resourceRole": "not-the-listed-response",
+            "source": {
+              "sourceId": "ziping-1926-nlc-46443-vol2",
+              "pdfPages": [
+                26
+              ],
+              "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+              "url": "https://upload.wikimedia.org/wikipedia/commons/d/d5/NLC416-13jh002326-46443_%E6%B7%B5%E6%B5%B7%E5%AD%90%E5%B9%B3_%E5%AD%90%E5%B9%B3%E7%9C%9F%E8%A9%AE_%E7%AC%AC2%E5%8D%B7.pdf",
+              "sectionId": "rescue-wealth-rob-officer"
+            },
+            "alternatives": [
+              {
+                "frameCandidates": [],
+                "groups": [
+                  {
+                    "id": "rob",
+                    "evidence": []
+                  },
+                  {
+                    "id": "officer-response",
+                    "evidence": []
+                  }
+                ],
+                "otherVisibleActors": [
+                  {
+                    "position": "year",
+                    "stem": "갑",
+                    "label": "편관"
+                  },
+                  {
+                    "position": "month",
+                    "stem": "병",
+                    "label": "편인"
+                  },
+                  {
+                    "position": "hour",
+                    "stem": "신",
+                    "label": "상관"
+                  }
+                ],
+                "actorsObserved": false,
+                "hourUnobserved": false,
+                "status": "outside-static-month-frame-candidates",
+                "frameEstablished": null,
+                "actualHarm": null,
+                "effectiveRescue": null
+              },
+              {
+                "frameCandidates": [],
+                "groups": [
+                  {
+                    "id": "rob",
+                    "evidence": []
+                  },
+                  {
+                    "id": "officer-response",
+                    "evidence": []
+                  }
+                ],
+                "otherVisibleActors": [
+                  {
+                    "position": "year",
+                    "stem": "계",
+                    "label": "정재"
+                  },
+                  {
+                    "position": "month",
+                    "stem": "병",
+                    "label": "편인"
+                  },
+                  {
+                    "position": "hour",
+                    "stem": "신",
+                    "label": "상관"
+                  }
+                ],
+                "actorsObserved": false,
+                "hourUnobserved": false,
+                "status": "outside-static-month-frame-candidates",
+                "frameEstablished": null,
+                "actualHarm": null,
+                "effectiveRescue": null
+              },
+              {
+                "frameCandidates": [
+                  {
+                    "branch": "축",
+                    "stem": "계",
+                    "label": "정재"
+                  }
+                ],
+                "groups": [
+                  {
+                    "id": "rob",
+                    "evidence": []
+                  },
+                  {
+                    "id": "officer-response",
+                    "evidence": [
+                      {
+                        "position": "month",
+                        "stem": "을",
+                        "label": "정관"
+                      }
+                    ]
+                  }
+                ],
+                "otherVisibleActors": [
+                  {
+                    "position": "year",
+                    "stem": "갑",
+                    "label": "편관"
+                  },
+                  {
+                    "position": "hour",
+                    "stem": "신",
+                    "label": "상관"
+                  }
+                ],
+                "actorsObserved": false,
+                "hourUnobserved": false,
+                "status": "not-all-visible-actors-observed",
+                "frameEstablished": null,
+                "actualHarm": null,
+                "effectiveRescue": null
+              },
+              {
+                "frameCandidates": [
+                  {
+                    "branch": "축",
+                    "stem": "계",
+                    "label": "정재"
+                  }
+                ],
+                "groups": [
+                  {
+                    "id": "rob",
+                    "evidence": []
+                  },
+                  {
+                    "id": "officer-response",
+                    "evidence": [
+                      {
+                        "position": "month",
+                        "stem": "을",
+                        "label": "정관"
+                      }
+                    ]
+                  }
+                ],
+                "otherVisibleActors": [
+                  {
+                    "position": "year",
+                    "stem": "계",
+                    "label": "정재"
+                  },
+                  {
+                    "position": "hour",
+                    "stem": "신",
+                    "label": "상관"
+                  }
+                ],
+                "actorsObserved": false,
+                "hourUnobserved": false,
+                "status": "not-all-visible-actors-observed",
+                "frameEstablished": null,
+                "actualHarm": null,
+                "effectiveRescue": null
+              }
+            ],
+            "actorsInEveryCandidate": false,
+            "status": "actors-not-completely-observed",
+            "frameEstablished": null,
+            "actualHarm": null,
+            "effectiveRescue": null
+          }
+        ],
+        "effectiveRescue": null,
+        "strength": null,
+        "score": null,
+        "scope": "Static monthly hidden stems propose frame candidates only. Non-day visible stems supply actors; presence is not effective control, 月令用神 or a proved 格局.",
+        "candidatePolicy": "Universal over supplied marginal assignments; partial observations have unproved joint feasibility and no probabilities.",
+        "normalizations": [
+          "官 -> 正官, 七煞 -> 偏官, 傷 -> 傷官, 食 -> 食神; unqualified 印/財 preserve both polarity classes under the pinned research terminology.",
+          "Static monthly hidden-stem candidates do not establish 月令用神/格局. Only visible non-day stems fill 透/actor observations.",
+          "Source case attribution, conditional rescue, before/after transformation and cross-person effects are distinct layers."
+        ],
+        "unresolved": [
+          "Frame selection, force, rooting, position, other harms and rescue priority remain unadjudicated.",
+          "These 用神/格局 rescue patterns are not automatically 合化 rescue rules."
+        ]
+      }
+    },
+    {
+      "id": "clock-source-dispute",
+      "review": {
+        "ruleVersion": "rescue-wangqi-source-v1",
+        "productionApproved": false,
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day"
+            ],
+            "omittedPositions": [
+              "hour"
+            ],
+            "clockReviewRequired": true,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "patterns": [
+          {
+            "id": "officer-injury-resource",
+            "resourceRole": "conditional-response",
+            "source": {
+              "sourceId": "ziping-1926-nlc-46443-vol2",
+              "pdfPages": [
+                25,
+                26
+              ],
+              "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+              "url": "https://upload.wikimedia.org/wikipedia/commons/d/d5/NLC416-13jh002326-46443_%E6%B7%B5%E6%B5%B7%E5%AD%90%E5%B9%B3_%E5%AD%90%E5%B9%B3%E7%9C%9F%E8%A9%AE_%E7%AC%AC2%E5%8D%B7.pdf",
+              "sectionId": "rescue-officer-injury-resource"
+            },
+            "alternatives": [
+              {
+                "frameCandidates": [],
+                "groups": [
+                  {
+                    "id": "injury",
+                    "evidence": []
+                  },
+                  {
+                    "id": "response",
+                    "evidence": [
+                      {
+                        "position": "year",
+                        "stem": "갑",
+                        "label": "편인"
+                      }
+                    ]
+                  }
+                ],
+                "otherVisibleActors": [
+                  {
+                    "position": "month",
+                    "stem": "정",
+                    "label": "겁재"
+                  }
+                ],
+                "actorsObserved": false,
+                "hourUnobserved": true,
+                "status": "outside-static-month-frame-candidates",
+                "frameEstablished": null,
+                "actualHarm": null,
+                "effectiveRescue": null
+              }
+            ],
+            "actorsInEveryCandidate": false,
+            "status": "actors-not-completely-observed",
+            "frameEstablished": null,
+            "actualHarm": null,
+            "effectiveRescue": null
+          },
+          {
+            "id": "killing-food-resource-wealth",
+            "resourceRole": "conditional-obstacle",
+            "source": {
+              "sourceId": "ziping-1926-nlc-46443-vol2",
+              "pdfPages": [
+                26
+              ],
+              "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+              "url": "https://upload.wikimedia.org/wikipedia/commons/d/d5/NLC416-13jh002326-46443_%E6%B7%B5%E6%B5%B7%E5%AD%90%E5%B9%B3_%E5%AD%90%E5%B9%B3%E7%9C%9F%E8%A9%AE_%E7%AC%AC2%E5%8D%B7.pdf",
+              "sectionId": "rescue-killing-food-resource-wealth"
+            },
+            "alternatives": [
+              {
+                "frameCandidates": [],
+                "groups": [
+                  {
+                    "id": "food-control",
+                    "evidence": []
+                  },
+                  {
+                    "id": "resource-obstacle",
+                    "evidence": [
+                      {
+                        "position": "year",
+                        "stem": "갑",
+                        "label": "편인"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "wealth-response",
+                    "evidence": []
+                  }
+                ],
+                "otherVisibleActors": [
+                  {
+                    "position": "month",
+                    "stem": "정",
+                    "label": "겁재"
+                  }
+                ],
+                "actorsObserved": false,
+                "hourUnobserved": true,
+                "status": "outside-static-month-frame-candidates",
+                "frameEstablished": null,
+                "actualHarm": null,
+                "effectiveRescue": null
+              }
+            ],
+            "actorsInEveryCandidate": false,
+            "status": "actors-not-completely-observed",
+            "frameEstablished": null,
+            "actualHarm": null,
+            "effectiveRescue": null
+          },
+          {
+            "id": "wealth-rob-officer",
+            "resourceRole": "not-the-listed-response",
+            "source": {
+              "sourceId": "ziping-1926-nlc-46443-vol2",
+              "pdfPages": [
+                26
+              ],
+              "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+              "url": "https://upload.wikimedia.org/wikipedia/commons/d/d5/NLC416-13jh002326-46443_%E6%B7%B5%E6%B5%B7%E5%AD%90%E5%B9%B3_%E5%AD%90%E5%B9%B3%E7%9C%9F%E8%A9%AE_%E7%AC%AC2%E5%8D%B7.pdf",
+              "sectionId": "rescue-wealth-rob-officer"
+            },
+            "alternatives": [
+              {
+                "frameCandidates": [],
+                "groups": [
+                  {
+                    "id": "rob",
+                    "evidence": [
+                      {
+                        "position": "month",
+                        "stem": "정",
+                        "label": "겁재"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "officer-response",
+                    "evidence": []
+                  }
+                ],
+                "otherVisibleActors": [
+                  {
+                    "position": "year",
+                    "stem": "갑",
+                    "label": "편인"
+                  }
+                ],
+                "actorsObserved": false,
+                "hourUnobserved": true,
+                "status": "outside-static-month-frame-candidates",
+                "frameEstablished": null,
+                "actualHarm": null,
+                "effectiveRescue": null
+              }
+            ],
+            "actorsInEveryCandidate": false,
+            "status": "actors-not-completely-observed",
+            "frameEstablished": null,
+            "actualHarm": null,
+            "effectiveRescue": null
+          }
+        ],
+        "effectiveRescue": null,
+        "strength": null,
+        "score": null,
+        "scope": "Static monthly hidden stems propose frame candidates only. Non-day visible stems supply actors; presence is not effective control, 月令用神 or a proved 格局.",
+        "candidatePolicy": "Universal over supplied marginal assignments; partial observations have unproved joint feasibility and no probabilities.",
+        "normalizations": [
+          "官 -> 正官, 七煞 -> 偏官, 傷 -> 傷官, 食 -> 食神; unqualified 印/財 preserve both polarity classes under the pinned research terminology.",
+          "Static monthly hidden-stem candidates do not establish 月令用神/格局. Only visible non-day stems fill 透/actor observations.",
+          "Source case attribution, conditional rescue, before/after transformation and cross-person effects are distinct layers."
+        ],
+        "unresolved": [
+          "Frame selection, force, rooting, position, other harms and rescue priority remain unadjudicated.",
+          "These 用神/格局 rescue patterns are not automatically 合化 rescue rules."
+        ]
+      }
+    }
+  ],
+  "shortcutCounterexamples": {
+    "literalChenNecessary": [
+      "wood-true-without-chen"
+    ],
+    "listedPreferredHourNecessary": [
+      "earth-true-qi-insufficient",
+      "earth-true-qi-surplus",
+      "wood-true-without-chen"
+    ],
+    "noExtraJiaEulUniversal": [
+      "earth-true-qi-insufficient"
+    ],
+    "scope": "Cross-edition universal shortcuts only; these do not decide the meaning of Sanming 時上旺氣 or override source-specific clauses."
+  },
+  "weights": {
+    "scope": "Synthetic feature vectors and hypothetical raw utilities only; not approved compatibility scores, suggested weights or probabilities.",
+    "pairA": {
+      "combination": 2,
+      "clash": 1
+    },
+    "pairB": {
+      "combination": 1,
+      "clash": 0
+    },
+    "probes": [
+      {
+        "hypotheticalCombinationWeight": 1,
+        "hypotheticalClashCost": 0.5,
+        "rawA": 1.5,
+        "rawB": 1,
+        "ordering": "A-above-B"
+      },
+      {
+        "hypotheticalCombinationWeight": 1,
+        "hypotheticalClashCost": 1,
+        "rawA": 1,
+        "rawB": 1,
+        "ordering": "tie"
+      },
+      {
+        "hypotheticalCombinationWeight": 1,
+        "hypotheticalClashCost": 2,
+        "rawA": 0,
+        "rawB": 1,
+        "ordering": "B-above-A"
+      }
+    ],
+    "orderingIdentified": false,
+    "adoptedWeights": null,
+    "score": null,
+    "uniformResourceBenefit": {
+      "adoptable": false,
+      "contexts": [
+        {
+          "id": "officer-injury-resource",
+          "resourceRole": "conditional-response",
+          "source": {
+            "sourceId": "ziping-1926-nlc-46443-vol2",
+            "pdfPages": [
+              25,
+              26
+            ],
+            "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/d/d5/NLC416-13jh002326-46443_%E6%B7%B5%E6%B5%B7%E5%AD%90%E5%B9%B3_%E5%AD%90%E5%B9%B3%E7%9C%9F%E8%A9%AE_%E7%AC%AC2%E5%8D%B7.pdf",
+            "sectionId": "rescue-officer-injury-resource"
+          }
+        },
+        {
+          "id": "killing-food-resource-wealth",
+          "resourceRole": "conditional-obstacle",
+          "source": {
+            "sourceId": "ziping-1926-nlc-46443-vol2",
+            "pdfPages": [
+              26
+            ],
+            "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/d/d5/NLC416-13jh002326-46443_%E6%B7%B5%E6%B5%B7%E5%AD%90%E5%B9%B3_%E5%AD%90%E5%B9%B3%E7%9C%9F%E8%A9%AE_%E7%AC%AC2%E5%8D%B7.pdf",
+            "sectionId": "rescue-killing-food-resource-wealth"
+          }
+        }
+      ],
+      "reason": "The same resource class is a response in one source frame and an obstacle in another; no context-free relationship weight follows."
+    },
+    "evidenceStatus": "No pair-outcome observations or adopted quantitative effect sizes are available in these source passages."
+  },
+  "pair": {
+    "ruleVersion": "rescue-wangqi-source-v1",
+    "productionApproved": false,
+    "individuals": [
+      {
+        "rescue": {
+          "ruleVersion": "rescue-wangqi-source-v1",
+          "productionApproved": false,
+          "coverage": [
+            {
+              "side": "self",
+              "includedPositions": [
+                "year",
+                "month",
+                "day",
+                "hour"
+              ],
+              "omittedPositions": [],
+              "clockReviewRequired": false,
+              "boundaryReviewRequired": false
+            }
+          ],
+          "patterns": [
+            {
+              "id": "officer-injury-resource",
+              "resourceRole": "conditional-response",
+              "source": {
+                "sourceId": "ziping-1926-nlc-46443-vol2",
+                "pdfPages": [
+                  25,
+                  26
+                ],
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "url": "https://upload.wikimedia.org/wikipedia/commons/d/d5/NLC416-13jh002326-46443_%E6%B7%B5%E6%B5%B7%E5%AD%90%E5%B9%B3_%E5%AD%90%E5%B9%B3%E7%9C%9F%E8%A9%AE_%E7%AC%AC2%E5%8D%B7.pdf",
+                "sectionId": "rescue-officer-injury-resource"
+              },
+              "alternatives": [
+                {
+                  "frameCandidates": [
+                    {
+                      "branch": "묘",
+                      "stem": "을",
+                      "label": "정관"
+                    }
+                  ],
+                  "groups": [
+                    {
+                      "id": "injury",
+                      "evidence": [
+                        {
+                          "position": "year",
+                          "stem": "신",
+                          "label": "상관"
+                        },
+                        {
+                          "position": "month",
+                          "stem": "신",
+                          "label": "상관"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "response",
+                      "evidence": [
+                        {
+                          "position": "hour",
+                          "stem": "병",
+                          "label": "편인"
+                        }
+                      ]
+                    }
+                  ],
+                  "otherVisibleActors": [],
+                  "actorsObserved": true,
+                  "hourUnobserved": false,
+                  "status": "frame-and-visible-actors-observed",
+                  "frameEstablished": null,
+                  "actualHarm": null,
+                  "effectiveRescue": null
+                }
+              ],
+              "actorsInEveryCandidate": true,
+              "status": "actors-observed-all-candidates",
+              "frameEstablished": null,
+              "actualHarm": null,
+              "effectiveRescue": null
+            },
+            {
+              "id": "killing-food-resource-wealth",
+              "resourceRole": "conditional-obstacle",
+              "source": {
+                "sourceId": "ziping-1926-nlc-46443-vol2",
+                "pdfPages": [
+                  26
+                ],
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "url": "https://upload.wikimedia.org/wikipedia/commons/d/d5/NLC416-13jh002326-46443_%E6%B7%B5%E6%B5%B7%E5%AD%90%E5%B9%B3_%E5%AD%90%E5%B9%B3%E7%9C%9F%E8%A9%AE_%E7%AC%AC2%E5%8D%B7.pdf",
+                "sectionId": "rescue-killing-food-resource-wealth"
+              },
+              "alternatives": [
+                {
+                  "frameCandidates": [],
+                  "groups": [
+                    {
+                      "id": "food-control",
+                      "evidence": []
+                    },
+                    {
+                      "id": "resource-obstacle",
+                      "evidence": [
+                        {
+                          "position": "hour",
+                          "stem": "병",
+                          "label": "편인"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "wealth-response",
+                      "evidence": []
+                    }
+                  ],
+                  "otherVisibleActors": [
+                    {
+                      "position": "year",
+                      "stem": "신",
+                      "label": "상관"
+                    },
+                    {
+                      "position": "month",
+                      "stem": "신",
+                      "label": "상관"
+                    }
+                  ],
+                  "actorsObserved": false,
+                  "hourUnobserved": false,
+                  "status": "outside-static-month-frame-candidates",
+                  "frameEstablished": null,
+                  "actualHarm": null,
+                  "effectiveRescue": null
+                }
+              ],
+              "actorsInEveryCandidate": false,
+              "status": "actors-not-completely-observed",
+              "frameEstablished": null,
+              "actualHarm": null,
+              "effectiveRescue": null
+            },
+            {
+              "id": "wealth-rob-officer",
+              "resourceRole": "not-the-listed-response",
+              "source": {
+                "sourceId": "ziping-1926-nlc-46443-vol2",
+                "pdfPages": [
+                  26
+                ],
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "url": "https://upload.wikimedia.org/wikipedia/commons/d/d5/NLC416-13jh002326-46443_%E6%B7%B5%E6%B5%B7%E5%AD%90%E5%B9%B3_%E5%AD%90%E5%B9%B3%E7%9C%9F%E8%A9%AE_%E7%AC%AC2%E5%8D%B7.pdf",
+                "sectionId": "rescue-wealth-rob-officer"
+              },
+              "alternatives": [
+                {
+                  "frameCandidates": [],
+                  "groups": [
+                    {
+                      "id": "rob",
+                      "evidence": []
+                    },
+                    {
+                      "id": "officer-response",
+                      "evidence": []
+                    }
+                  ],
+                  "otherVisibleActors": [
+                    {
+                      "position": "year",
+                      "stem": "신",
+                      "label": "상관"
+                    },
+                    {
+                      "position": "month",
+                      "stem": "신",
+                      "label": "상관"
+                    },
+                    {
+                      "position": "hour",
+                      "stem": "병",
+                      "label": "편인"
+                    }
+                  ],
+                  "actorsObserved": false,
+                  "hourUnobserved": false,
+                  "status": "outside-static-month-frame-candidates",
+                  "frameEstablished": null,
+                  "actualHarm": null,
+                  "effectiveRescue": null
+                }
+              ],
+              "actorsInEveryCandidate": false,
+              "status": "actors-not-completely-observed",
+              "frameEstablished": null,
+              "actualHarm": null,
+              "effectiveRescue": null
+            }
+          ],
+          "effectiveRescue": null,
+          "strength": null,
+          "score": null,
+          "scope": "Static monthly hidden stems propose frame candidates only. Non-day visible stems supply actors; presence is not effective control, 月令用神 or a proved 格局.",
+          "candidatePolicy": "Universal over supplied marginal assignments; partial observations have unproved joint feasibility and no probabilities.",
+          "normalizations": [
+            "官 -> 正官, 七煞 -> 偏官, 傷 -> 傷官, 食 -> 食神; unqualified 印/財 preserve both polarity classes under the pinned research terminology.",
+            "Static monthly hidden-stem candidates do not establish 月令用神/格局. Only visible non-day stems fill 透/actor observations.",
+            "Source case attribution, conditional rescue, before/after transformation and cross-person effects are distinct layers."
+          ],
+          "unresolved": [
+            "Frame selection, force, rooting, position, other harms and rescue priority remain unadjudicated.",
+            "These 用神/格局 rescue patterns are not automatically 合化 rescue rules."
+          ]
+        },
+        "transformation": {
+          "ruleVersion": "rescue-wangqi-source-v1",
+          "productionApproved": false,
+          "coverage": [
+            {
+              "side": "self",
+              "includedPositions": [
+                "year",
+                "month",
+                "day",
+                "hour"
+              ],
+              "omittedPositions": [],
+              "clockReviewRequired": false,
+              "boundaryReviewRequired": false
+            }
+          ],
+          "status": "outside-reference-corpus",
+          "sourceClassification": null,
+          "matches": [],
+          "literalChen": {
+            "observedInSomeCandidate": true,
+            "observedInEveryCandidate": true,
+            "absenceConfirmed": false
+          },
+          "priorPreference": {
+            "hourMatch": "listed-preferred-hour",
+            "monthMatch": false,
+            "status": "no-day-partner"
+          },
+          "priorJiaJiConditions": {
+            "ruleVersion": "seasonal-strength-transformation-review-v1",
+            "productionApproved": false,
+            "scope": "Jia-Ji day-stem combination only; other pairs have no condition model here.",
+            "dependencies": {
+              "contextRuleVersion": "month-combination-context-research-v1",
+              "natalRuleVersion": "natal-definitions-research-v1",
+              "symbolRuleVersion": "symbol-relations-research-v1",
+              "engineVersion": "research-civil-midnight-v5"
+            },
+            "coverage": [
+              {
+                "side": "self",
+                "includedPositions": [
+                  "year",
+                  "month",
+                  "day",
+                  "hour"
+                ],
+                "omittedPositions": [],
+                "clockReviewRequired": false,
+                "boundaryReviewRequired": false
+              }
+            ],
+            "status": "outside-reviewed-pair",
+            "alternatives": [
+              {
+                "status": "outside-reviewed-pair",
+                "reasons": [
+                  "day-stem-not-jia-or-ji"
+                ],
+                "checks": []
+              }
+            ],
+            "commonFailedChecks": [],
+            "candidatePolicy": "Universal over supplied marginal combinations; partial assignments not proved jointly feasible; no probabilities.",
+            "targetElement": "토",
+            "transformedElement": null,
+            "transformationEstablished": false,
+            "sources": [
+              {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "transcriptionSha256": "3c2bef1a4c92ff21373516338bf739b78a73aff0ed285e20a299f5ba64b75fb3",
+                "sectionId": "transformation-general",
+                "pdfPages": [
+                  167
+                ]
+              },
+              {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "transcriptionSha256": "3c2bef1a4c92ff21373516338bf739b78a73aff0ed285e20a299f5ba64b75fb3",
+                "sectionId": "jia-ji-month-and-rivals",
+                "pdfPages": [
+                  171
+                ]
+              },
+              {
+                "id": "ziping-1926-nlc-46443-vol2",
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "pdfPages": [
+                  20
+                ],
+                "sectionId": "intervening-stem"
+              }
+            ],
+            "unresolvedConditions": [
+              "Source moderation (太過/不及) has no reviewed numeric or exhaustive qualitative criterion",
+              "Other 合化 pairs and conflicts between source conventions remain unreviewed",
+              "Printed 甲乙 wording on page 171 is preserved, not silently emended",
+              "Passing necessary checks is not a sufficient proof of transformation"
+            ]
+          },
+          "transformationEstablished": null,
+          "wangQiEstablished": null,
+          "originalDayStrength": null,
+          "moderation": null,
+          "score": null,
+          "policy": "Edition-specific exact source attribution only. Do not use this case or an already-true-transformation exception to prove its own premises, override other editions, or classify the original day stem.",
+          "phaseSources": [
+            {
+              "sourceId": "ditian-1947",
+              "pdfPages": [
+                374,
+                375
+              ],
+              "pdfSha256": "d6a7d1daf6513ce9fb9940ff8331b96804c10cdafbeac00d4d3d0a37229e1803",
+              "url": "https://upload.wikimedia.org/wikipedia/commons/d/db/SSID-11335994_%E6%BB%B4%E5%A4%A9%E9%AB%93%E9%97%A1%E5%BE%AE.pdf",
+              "sectionId": "true-transformation-exception"
+            },
+            {
+              "sourceId": "ditian-1947",
+              "pdfPages": [
+                375,
+                376
+              ],
+              "pdfSha256": "d6a7d1daf6513ce9fb9940ff8331b96804c10cdafbeac00d4d3d0a37229e1803",
+              "url": "https://upload.wikimedia.org/wikipedia/commons/d/db/SSID-11335994_%E6%BB%B4%E5%A4%A9%E9%AB%93%E9%97%A1%E5%BE%AE.pdf",
+              "sectionId": "chen-metaphor"
+            },
+            {
+              "sourceId": "ditian-1947",
+              "pdfPages": [
+                376
+              ],
+              "pdfSha256": "d6a7d1daf6513ce9fb9940ff8331b96804c10cdafbeac00d4d3d0a37229e1803",
+              "url": "https://upload.wikimedia.org/wikipedia/commons/d/db/SSID-11335994_%E6%BB%B4%E5%A4%A9%E9%AB%93%E9%97%A1%E5%BE%AE.pdf",
+              "sectionId": "post-transformation-strength"
+            }
+          ]
+        }
+      },
+      {
+        "rescue": {
+          "ruleVersion": "rescue-wangqi-source-v1",
+          "productionApproved": false,
+          "coverage": [
+            {
+              "side": "self",
+              "includedPositions": [
+                "year",
+                "month",
+                "day",
+                "hour"
+              ],
+              "omittedPositions": [],
+              "clockReviewRequired": false,
+              "boundaryReviewRequired": false
+            }
+          ],
+          "patterns": [
+            {
+              "id": "officer-injury-resource",
+              "resourceRole": "conditional-response",
+              "source": {
+                "sourceId": "ziping-1926-nlc-46443-vol2",
+                "pdfPages": [
+                  25,
+                  26
+                ],
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "url": "https://upload.wikimedia.org/wikipedia/commons/d/d5/NLC416-13jh002326-46443_%E6%B7%B5%E6%B5%B7%E5%AD%90%E5%B9%B3_%E5%AD%90%E5%B9%B3%E7%9C%9F%E8%A9%AE_%E7%AC%AC2%E5%8D%B7.pdf",
+                "sectionId": "rescue-officer-injury-resource"
+              },
+              "alternatives": [
+                {
+                  "frameCandidates": [],
+                  "groups": [
+                    {
+                      "id": "injury",
+                      "evidence": []
+                    },
+                    {
+                      "id": "response",
+                      "evidence": [
+                        {
+                          "position": "year",
+                          "stem": "임",
+                          "label": "편인"
+                        }
+                      ]
+                    }
+                  ],
+                  "otherVisibleActors": [
+                    {
+                      "position": "month",
+                      "stem": "무",
+                      "label": "편재"
+                    },
+                    {
+                      "position": "hour",
+                      "stem": "병",
+                      "label": "식신"
+                    }
+                  ],
+                  "actorsObserved": false,
+                  "hourUnobserved": false,
+                  "status": "outside-static-month-frame-candidates",
+                  "frameEstablished": null,
+                  "actualHarm": null,
+                  "effectiveRescue": null
+                }
+              ],
+              "actorsInEveryCandidate": false,
+              "status": "actors-not-completely-observed",
+              "frameEstablished": null,
+              "actualHarm": null,
+              "effectiveRescue": null
+            },
+            {
+              "id": "killing-food-resource-wealth",
+              "resourceRole": "conditional-obstacle",
+              "source": {
+                "sourceId": "ziping-1926-nlc-46443-vol2",
+                "pdfPages": [
+                  26
+                ],
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "url": "https://upload.wikimedia.org/wikipedia/commons/d/d5/NLC416-13jh002326-46443_%E6%B7%B5%E6%B5%B7%E5%AD%90%E5%B9%B3_%E5%AD%90%E5%B9%B3%E7%9C%9F%E8%A9%AE_%E7%AC%AC2%E5%8D%B7.pdf",
+                "sectionId": "rescue-killing-food-resource-wealth"
+              },
+              "alternatives": [
+                {
+                  "frameCandidates": [
+                    {
+                      "branch": "신",
+                      "stem": "경",
+                      "label": "편관"
+                    }
+                  ],
+                  "groups": [
+                    {
+                      "id": "food-control",
+                      "evidence": [
+                        {
+                          "position": "hour",
+                          "stem": "병",
+                          "label": "식신"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "resource-obstacle",
+                      "evidence": [
+                        {
+                          "position": "year",
+                          "stem": "임",
+                          "label": "편인"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "wealth-response",
+                      "evidence": [
+                        {
+                          "position": "month",
+                          "stem": "무",
+                          "label": "편재"
+                        }
+                      ]
+                    }
+                  ],
+                  "otherVisibleActors": [],
+                  "actorsObserved": true,
+                  "hourUnobserved": false,
+                  "status": "frame-and-visible-actors-observed",
+                  "frameEstablished": null,
+                  "actualHarm": null,
+                  "effectiveRescue": null
+                }
+              ],
+              "actorsInEveryCandidate": true,
+              "status": "actors-observed-all-candidates",
+              "frameEstablished": null,
+              "actualHarm": null,
+              "effectiveRescue": null
+            },
+            {
+              "id": "wealth-rob-officer",
+              "resourceRole": "not-the-listed-response",
+              "source": {
+                "sourceId": "ziping-1926-nlc-46443-vol2",
+                "pdfPages": [
+                  26
+                ],
+                "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+                "url": "https://upload.wikimedia.org/wikipedia/commons/d/d5/NLC416-13jh002326-46443_%E6%B7%B5%E6%B5%B7%E5%AD%90%E5%B9%B3_%E5%AD%90%E5%B9%B3%E7%9C%9F%E8%A9%AE_%E7%AC%AC2%E5%8D%B7.pdf",
+                "sectionId": "rescue-wealth-rob-officer"
+              },
+              "alternatives": [
+                {
+                  "frameCandidates": [
+                    {
+                      "branch": "신",
+                      "stem": "무",
+                      "label": "편재"
+                    }
+                  ],
+                  "groups": [
+                    {
+                      "id": "rob",
+                      "evidence": []
+                    },
+                    {
+                      "id": "officer-response",
+                      "evidence": []
+                    }
+                  ],
+                  "otherVisibleActors": [
+                    {
+                      "position": "year",
+                      "stem": "임",
+                      "label": "편인"
+                    },
+                    {
+                      "position": "month",
+                      "stem": "무",
+                      "label": "편재"
+                    },
+                    {
+                      "position": "hour",
+                      "stem": "병",
+                      "label": "식신"
+                    }
+                  ],
+                  "actorsObserved": false,
+                  "hourUnobserved": false,
+                  "status": "not-all-visible-actors-observed",
+                  "frameEstablished": null,
+                  "actualHarm": null,
+                  "effectiveRescue": null
+                }
+              ],
+              "actorsInEveryCandidate": false,
+              "status": "actors-not-completely-observed",
+              "frameEstablished": null,
+              "actualHarm": null,
+              "effectiveRescue": null
+            }
+          ],
+          "effectiveRescue": null,
+          "strength": null,
+          "score": null,
+          "scope": "Static monthly hidden stems propose frame candidates only. Non-day visible stems supply actors; presence is not effective control, 月令用神 or a proved 格局.",
+          "candidatePolicy": "Universal over supplied marginal assignments; partial observations have unproved joint feasibility and no probabilities.",
+          "normalizations": [
+            "官 -> 正官, 七煞 -> 偏官, 傷 -> 傷官, 食 -> 食神; unqualified 印/財 preserve both polarity classes under the pinned research terminology.",
+            "Static monthly hidden-stem candidates do not establish 月令用神/格局. Only visible non-day stems fill 透/actor observations.",
+            "Source case attribution, conditional rescue, before/after transformation and cross-person effects are distinct layers."
+          ],
+          "unresolved": [
+            "Frame selection, force, rooting, position, other harms and rescue priority remain unadjudicated.",
+            "These 用神/格局 rescue patterns are not automatically 合化 rescue rules."
+          ]
+        },
+        "transformation": {
+          "ruleVersion": "rescue-wangqi-source-v1",
+          "productionApproved": false,
+          "coverage": [
+            {
+              "side": "self",
+              "includedPositions": [
+                "year",
+                "month",
+                "day",
+                "hour"
+              ],
+              "omittedPositions": [],
+              "clockReviewRequired": false,
+              "boundaryReviewRequired": false
+            }
+          ],
+          "status": "outside-reference-corpus",
+          "sourceClassification": null,
+          "matches": [],
+          "literalChen": {
+            "observedInSomeCandidate": false,
+            "observedInEveryCandidate": false,
+            "absenceConfirmed": true
+          },
+          "priorPreference": {
+            "hourMatch": "outside-listed-example",
+            "monthMatch": false,
+            "status": "no-day-partner"
+          },
+          "priorJiaJiConditions": {
+            "ruleVersion": "seasonal-strength-transformation-review-v1",
+            "productionApproved": false,
+            "scope": "Jia-Ji day-stem combination only; other pairs have no condition model here.",
+            "dependencies": {
+              "contextRuleVersion": "month-combination-context-research-v1",
+              "natalRuleVersion": "natal-definitions-research-v1",
+              "symbolRuleVersion": "symbol-relations-research-v1",
+              "engineVersion": "research-civil-midnight-v5"
+            },
+            "coverage": [
+              {
+                "side": "self",
+                "includedPositions": [
+                  "year",
+                  "month",
+                  "day",
+                  "hour"
+                ],
+                "omittedPositions": [],
+                "clockReviewRequired": false,
+                "boundaryReviewRequired": false
+              }
+            ],
+            "status": "no-day-combination",
+            "alternatives": [
+              {
+                "status": "no-day-combination",
+                "reasons": [
+                  "no-visible-day-partner"
+                ],
+                "checks": []
+              }
+            ],
+            "commonFailedChecks": [],
+            "candidatePolicy": "Universal over supplied marginal combinations; partial assignments not proved jointly feasible; no probabilities.",
+            "targetElement": "토",
+            "transformedElement": null,
+            "transformationEstablished": false,
+            "sources": [
+              {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "transcriptionSha256": "3c2bef1a4c92ff21373516338bf739b78a73aff0ed285e20a299f5ba64b75fb3",
+                "sectionId": "transformation-general",
+                "pdfPages": [
+                  167
+                ]
+              },
+              {
+                "id": "yuanhai-1926-ntl-9900014379",
+                "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+                "transcriptionSha256": "3c2bef1a4c92ff21373516338bf739b78a73aff0ed285e20a299f5ba64b75fb3",
+                "sectionId": "jia-ji-month-and-rivals",
+                "pdfPages": [
+                  171
+                ]
+              }
+            ],
+            "unresolvedConditions": [
+              "Source moderation (太過/不及) has no reviewed numeric or exhaustive qualitative criterion",
+              "Other 合化 pairs and conflicts between source conventions remain unreviewed",
+              "Printed 甲乙 wording on page 171 is preserved, not silently emended",
+              "Passing necessary checks is not a sufficient proof of transformation"
+            ]
+          },
+          "transformationEstablished": null,
+          "wangQiEstablished": null,
+          "originalDayStrength": null,
+          "moderation": null,
+          "score": null,
+          "policy": "Edition-specific exact source attribution only. Do not use this case or an already-true-transformation exception to prove its own premises, override other editions, or classify the original day stem.",
+          "phaseSources": [
+            {
+              "sourceId": "ditian-1947",
+              "pdfPages": [
+                374,
+                375
+              ],
+              "pdfSha256": "d6a7d1daf6513ce9fb9940ff8331b96804c10cdafbeac00d4d3d0a37229e1803",
+              "url": "https://upload.wikimedia.org/wikipedia/commons/d/db/SSID-11335994_%E6%BB%B4%E5%A4%A9%E9%AB%93%E9%97%A1%E5%BE%AE.pdf",
+              "sectionId": "true-transformation-exception"
+            },
+            {
+              "sourceId": "ditian-1947",
+              "pdfPages": [
+                375,
+                376
+              ],
+              "pdfSha256": "d6a7d1daf6513ce9fb9940ff8331b96804c10cdafbeac00d4d3d0a37229e1803",
+              "url": "https://upload.wikimedia.org/wikipedia/commons/d/db/SSID-11335994_%E6%BB%B4%E5%A4%A9%E9%AB%93%E9%97%A1%E5%BE%AE.pdf",
+              "sectionId": "chen-metaphor"
+            },
+            {
+              "sourceId": "ditian-1947",
+              "pdfPages": [
+                376
+              ],
+              "pdfSha256": "d6a7d1daf6513ce9fb9940ff8331b96804c10cdafbeac00d4d3d0a37229e1803",
+              "url": "https://upload.wikimedia.org/wikipedia/commons/d/db/SSID-11335994_%E6%BB%B4%E5%A4%A9%E9%AB%93%E9%97%A1%E5%BE%AE.pdf",
+              "sectionId": "post-transformation-strength"
+            }
+          ]
+        }
+      }
+    ],
+    "score": null,
+    "normalizedCompatibility": null,
+    "mapRadius": null,
+    "reason": "Personal frame/phase observations and source-case judgments are not cross-person outcome effects or numeric weights."
+  },
+  "checksPassed": true,
+  "limitations": [
+    "Four source examples are not verified birth records or outcome observations.",
+    "Static month-frame candidates and visible actor groups do not establish 格局, real harm, force or effective rescue.",
+    "True transformation is a source-attributed premise; transformed qi strength is distinct from original-day strength.",
+    "Existing app v5/v2, stored/purchased/shared results and earlier source reports remain unchanged."
+  ]
+}
