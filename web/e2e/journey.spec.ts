@@ -249,12 +249,12 @@ for(const [relation,title,lastTitle] of [
   expect(state.results[0].other.relation).toBe(relation);
   const whole=state.results[0].reading.wholeChart;
   for(const paragraph of whole.pair.sections.find((s:{id:string})=>s.id==="conversation").text.split("\n")) await expect(page.getByText(paragraph,{exact:true})).toBeVisible();
-  for(const section of whole.pair.sections.filter((s:{id:string})=>["gift-me","gift-other","together","future"].includes(s.id))) {
+  for(const section of whole.pair.sections.filter((s:{id:string})=>["gift-me","gift-other","shared","different","together"].includes(s.id))) {
     await expect(page.getByRole("heading",{name:section.title,exact:true})).toBeVisible();
   }
   for(const person of whole.people) {
     const profile=page.getByRole("region",{name:`${person.side==="me"?state.results[0].me.name:state.results[0].other.name}의 성향 유형`});
-    for(const item of person.summary.strength.split("\n")) await expect(profile.locator(".story-traits").getByText(item.split(": ")[0],{exact:true})).toBeVisible();
+    for(const item of person.summary.strength.split("\n")) await expect(profile.locator(".story-traits").first().getByText(item.split(": ")[0],{exact:true})).toBeVisible();
   }
   await noOverflow(page);
   await page.reload();

@@ -2,8 +2,9 @@ import {test} from "node:test";
 import assert from "node:assert/strict";
 import {chart,validatePair} from "../src/server/engine";
 import {samplePerson,publicCard} from "../src/domain/model";
-import {readingForVersion,currentReadingVersion} from "../src/server/readings";
+import {readingForVersion} from "../src/server/readings";
 import {addRelationshipStory} from "../src/domain/relationship-story";
+const currentReadingVersion="chunbae-relationship-story-v7";
 const oldVersion="chunbae-everyday-copy-v6";
 const context=()=>({charts:validatePair({me:samplePerson(),other:samplePerson(true)}).charts,relation:"친구"});
 for(const relation of ["연인","친구","가족","동료"]) test(`${relation}: reciprocal help, dialogue and boundaries use stored facts without changing previous results`,()=>{

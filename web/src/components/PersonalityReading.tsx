@@ -39,7 +39,7 @@ export default function PersonalityReading({result}:{result:SavedResult}) {
   const story=result.reading.interpretation;
   if(!story) return null;
   const whole=result.reading.wholeChart;
-  const everyday=["chunbae-everyday-copy-v6","chunbae-relationship-story-v7"].includes(whole?.version??"");
+  const everyday=["chunbae-everyday-copy-v6","chunbae-relationship-story-v7","chunbae-coherent-whole-chart-v8"].includes(whole?.version??"");
   const easy=everyday||whole?.version==="chunbae-easy-relationship-copy-v5";
   const name=(side:string)=>side==="me"?result.me.name:result.other.name;
   return <div className="saju-story">
@@ -74,7 +74,7 @@ export default function PersonalityReading({result}:{result:SavedResult}) {
           <h4>단점 · 조심하면 좋은 점</h4><ReadingText list={everyday} text={profile?.summary.watch ?? p.type.watch}/>
           {profile&&<FullProfileDetails person={profile} />}
           <details className="story-more"><summary>{easy?"이 관계에서 편안해지는 방법":"가까운 사이와 일할 때의 모습"}</summary>
-            <h4>{easy&&result.other.relation==="연인"?"사랑하는 사람에게 바라는 배려":"서로에게 바라는 배려"}</h4><p>{profile?.summary.affection ?? p.type.affection}</p>
+            <h4>{easy&&result.other.relation==="연인"?"사랑하는 사람에게 바라는 배려":"서로에게 바라는 배려"}</h4><ReadingText text={profile?.summary.affection ?? p.type.affection}/>
             <h4>{easy?"상대에게 보탤 수 있는 도움":"함께 일을 할 때"}</h4><ReadingText text={profile?.summary.work ?? p.type.work}/>
           </details>
         </> : <p>태어난 날의 글자가 하나로 정해지지 않아 성격을 서둘러 붙이지 않았네. 아래 기록에서 생일과 시간을 먼저 살펴보게.</p>}

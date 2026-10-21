@@ -12,7 +12,8 @@ const familyOrder:RoleFamily[]=["peer","output","practical","structure","resourc
 const unique=(xs:string[])=>[...new Set(xs)];
 export type ChartEvidence={id:string;position:Position;layer:"visible"|"hidden";stem:string;role:string;family:RoleFamily;text:string;sources:ReadingSource[]};
 export type ReadingFacet={id:string;title:string;text:string;evidence:string[]};
-export type WholePerson={side:"me"|"other";includedPositions:Position[];omittedPositions:Position[];
+import type {NarrativeTrait} from "./coherent-reading";
+export type WholePerson={narrative?:NarrativeTrait[];side:"me"|"other";includedPositions:Position[];omittedPositions:Position[];
   season:{branches:string[];label:string;commonGroup:string|null;text:string};
   families:RoleFamily[];evidence:ChartEvidence[];facets:ReadingFacet[];
   summary:{title:string;text:string;strength:string;watch:string;affection:string;work:string};
