@@ -23,8 +23,8 @@ function FullProfileDetails({person}:{person:WholePerson}) {
 function WholePairReading({whole}:{whole:WholeChartReading}) {
   return <section className="reading-entry" aria-labelledby="story-pair-title">
     <p className="reading-kicker">三 · 두 사람의 마음을 살피다</p>
-    <h2 id="story-pair-title">{whole.pair.title}</h2><p>{whole.pair.summary}</p>
-    <p className="hint">{whole.pair.scope}</p>
+    <h2 id="story-pair-title">{whole.pair.title}</h2><ReadingText text={whole.pair.summary}/>
+    <details className="story-more"><summary>풀이에 사용한 기록</summary><p className="hint">{whole.pair.scope}</p>{whole.pair.observations.map(o=><p key={o.id} className="hint">{o.text}</p>)}</details>
     {whole.pair.sections.map(f=><section className="whole-pair-section" key={f.id}>
       <h3>{f.title}</h3><ReadingText text={f.text}/>
       {f.evidence.length>0&&<details className="story-more"><summary>{f.title}의 근거 보기</summary>
@@ -39,7 +39,7 @@ export default function PersonalityReading({result}:{result:SavedResult}) {
   const story=result.reading.interpretation;
   if(!story) return null;
   const whole=result.reading.wholeChart;
-  const everyday=whole?.version==="chunbae-everyday-copy-v6";
+  const everyday=["chunbae-everyday-copy-v6","chunbae-relationship-story-v7"].includes(whole?.version??"");
   const easy=everyday||whole?.version==="chunbae-easy-relationship-copy-v5";
   const name=(side:string)=>side==="me"?result.me.name:result.other.name;
   return <div className="saju-story">
@@ -75,7 +75,7 @@ export default function PersonalityReading({result}:{result:SavedResult}) {
           {profile&&<FullProfileDetails person={profile} />}
           <details className="story-more"><summary>{easy?"이 관계에서 편안해지는 방법":"가까운 사이와 일할 때의 모습"}</summary>
             <h4>{easy&&result.other.relation==="연인"?"사랑하는 사람에게 바라는 배려":"서로에게 바라는 배려"}</h4><p>{profile?.summary.affection ?? p.type.affection}</p>
-            <h4>{easy?"둘이 함께 해 볼 일":"함께 일을 할 때"}</h4><p>{profile?.summary.work ?? p.type.work}</p>
+            <h4>{easy?"상대에게 보탤 수 있는 도움":"함께 일을 할 때"}</h4><ReadingText text={profile?.summary.work ?? p.type.work}/>
           </details>
         </> : <p>태어난 날의 글자가 하나로 정해지지 않아 성격을 서둘러 붙이지 않았네. 아래 기록에서 생일과 시간을 먼저 살펴보게.</p>}
       </section>;})}
@@ -96,7 +96,7 @@ export default function PersonalityReading({result}:{result:SavedResult}) {
     <section className="reading-entry" aria-labelledby="story-relation-title">
       <p className="reading-kicker">四 · 일상으로 가져가기</p>
       <h2 id="story-relation-title">{story.relationship.label}</h2>
-      <ReadingText text={story.relationship.scene}/><p>{story.relationship.suggestion}</p>
+      <ReadingText text={story.relationship.scene}/><ReadingText text={story.relationship.suggestion}/>
       <blockquote className="story-question">{story.relationship.question}</blockquote>
       <p className="hint">훈장의 말 가운데 두 사람에게 맞는 것을 골라 써 보게. 서로의 마음은 직접 나누는 말에서 가장 잘 알 수 있다네.</p>
     </section>

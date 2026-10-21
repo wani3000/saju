@@ -36,15 +36,18 @@ import {addEasyRelationshipReading,easyReadingVersion} from "../domain/easy-rela
 
 import {addEverydayReading,everydayReadingVersion} from "../domain/everyday-reading";
 
+import {addRelationshipStory,relationshipStoryVersion} from "../domain/relationship-story";
+
 const checked = validateReadingCatalog(catalog);
-export const currentReadingVersion = everydayReadingVersion;
+export const currentReadingVersion = relationshipStoryVersion;
 export function readingForVersion(version: string, context?: {
   charts: Record<string, unknown>; relation: string;
 }): Reading {
-  if ([everydayReadingVersion,easyReadingVersion,wholeChartVersion,symbolicReadingVersion,selectedReadingPolicy.version,privateBetaScope.readingVersion].includes(version)) {
+  if ([relationshipStoryVersion,everydayReadingVersion,easyReadingVersion,wholeChartVersion,symbolicReadingVersion,selectedReadingPolicy.version,privateBetaScope.readingVersion].includes(version)) {
     if (!context) throw new AppError("READING_CONTEXT_REQUIRED", 503,
       "저장된 계산을 확인할 수 없어요. 잠시 후 다시 시도해 주세요.");
     try {
+      if(version===relationshipStoryVersion) return addRelationshipStory(readingForVersion(everydayReadingVersion,context),context.relation);
       if(version===everydayReadingVersion) return addEverydayReading(readingForVersion(easyReadingVersion,context),context.relation);
       if(version===easyReadingVersion) return addEasyRelationshipReading(buildWholeChartReading(
         buildBetaReading(context.charts.me,context.charts.other,context.relation),context.charts,context.relation),context.relation);

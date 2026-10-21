@@ -2,8 +2,9 @@ import {test} from "node:test";
 import assert from "node:assert/strict";
 import {chart,validatePair} from "../src/server/engine";
 import {samplePerson,publicCard} from "../src/domain/model";
-import {readingForVersion,currentReadingVersion} from "../src/server/readings";
+import {readingForVersion} from "../src/server/readings";
 import {easyReadingVersion} from "../src/domain/easy-relationship-reading";
+const currentReadingVersion="chunbae-everyday-copy-v6";
 const context=()=>({charts:validatePair({me:samplePerson(),other:samplePerson(true)}).charts,relation:"연인"});
 test("everyday prose preserves previous snapshots, evidence and public privacy in all relationships",()=>{
   for(const relation of ["친구","연인","가족","동료"]) {
