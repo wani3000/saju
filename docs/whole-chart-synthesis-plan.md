@@ -55,3 +55,7 @@
 - [보고서](../research/validation/reports/whole-chart-synthesis.md), [측정값/사례](../research/validation/reports/whole-chart-synthesis.json).
 
 20개 정확한 원전 사례 연결, 출생 입력 5종(일반/시간 알려짐/오월 자료 문제/절기 경계/역사 시계), 같은 십성·다른 자리 비교를 기록했다. 끊긴 근거 연결 0건, 후보 전용 사실을 확정 근거로 승격한 건수 0건, 미검증 최종 판정 0건이다. 앱에 새 종합 판정을 노출하지 않았으므로 공개 체험 재배포는 하지 않는다.
+
+## 2026-10-22 후속 정정
+
+극단20사례 외에 저장소에 이미 있던 중화/계절 반례2건이 v1 통합에서 빠졌음을 확인했다. [후속 감수](boundary-priority-review.md)에서 연결을 보완한 종합 v2는 총22원전사례를 포함한다. 1개의 중화 판어만으로 일반 경계가 확정되는 것은 아니다. [OpenAI 설명 모델 검토](openai-narration-review.md)도 기록했다.

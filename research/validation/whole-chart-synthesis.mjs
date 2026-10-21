@@ -6,9 +6,10 @@ import {calculateSeasonalCommand} from './seasonal-command.mjs';
 import {adjudicateStrengthReference,adjudicateTransformationVetoes} from './adjudication-review.mjs';
 import {analyzeGeneralBalance,analyzeHourAndInteractions} from './hour-balance-review.mjs';
 import {reviewRescueActors,reviewTransformationReference} from './rescue-wangqi-review.mjs';
+import {reviewBoundaryPriority} from './boundary-priority-review.mjs';
 import {compareProfiles} from './reading-analysis.mjs';
 
-export const synthesisVersion='whole-chart-evidence-synthesis-research-v1';
+export const synthesisVersion='whole-chart-evidence-synthesis-research-v2';
 const names={year:'연주',month:'월주',day:'일주',hour:'시주'};
 const unique=xs=>[...new Set(xs)].sort();
 const certain=f=>f.certainty==='all-candidates';
@@ -38,6 +39,7 @@ export function synthesizeProfile(profile) {
  }
  const reference=adjudicateStrengthReference(profile),veto=adjudicateTransformationVetoes(profile);
  const balance=analyzeGeneralBalance(profile),hour=analyzeHourAndInteractions(profile),rescue=reviewRescueActors(profile),transformationReference=reviewTransformationReference(profile);
+ const boundaryPriority=reviewBoundaryPriority(profile);
  const missing=[];
  if(!profile.timeKnown)missing.push('UNKNOWN_HOUR');
  if(natal.dayReference.confirmedStem===null)missing.push('UNRESOLVED_DAY_REFERENCE');
@@ -45,12 +47,13 @@ export function synthesizeProfile(profile) {
  if(profile.boundaryReview)missing.push('SOLAR_TERM_BOUNDARY_REVIEW');
  if(profile.clockReview)missing.push('HISTORICAL_CLOCK_REVIEW');
  return {version:synthesisVersion,productionApproved:false,scope:'individual-structure-review',coverage:natal.coverage,
-  dependencies:{natal:natal.ruleVersion,context:context.ruleVersion,reference:reference.ruleVersion,hour:hour.ruleVersion,rescue:rescue.ruleVersion},
+  dependencies:{natal:natal.ruleVersion,context:context.ruleVersion,reference:reference.ruleVersion,hour:hour.ruleVersion,rescue:rescue.ruleVersion,boundaryPriority:boundaryPriority.version},
   month:natal.monthContext,confirmedEvidence:confirmed,deferredEvidence:deferred,joins,
-  reviews:{reference,veto,balance,hour,rescue,transformationReference},
+  reviews:{reference,veto,balance,hour,rescue,transformationReference,boundaryPriority},
   decisions:[
    {id:'strength',status:'deferred',value:null,dependsOn:['month','day-root-observation','month-exposure','seasonal-command','transformation'],blockers:unique([...missing,'NO_REVIEWED_GENERAL_STRENGTH_BOUNDARY']),referenceOnly:reference.sourceClassification},
-   {id:'transformation',status:'deferred',value:null,dependsOn:['combination-context','veto','hour','rescue','seasonal-command'],blockers:unique([...missing,'SOURCE_PRECEDENCE_AND_SUFFICIENT_CONDITIONS_UNRESOLVED']),sourceClauseStatus:veto.status},
+   {id:'moderation',status:'deferred',value:null,dependsOn:['strength','balance','boundaryPriority'],blockers:unique([...missing,'NO_REVIEWED_GENERAL_MODERATION_BOUNDARY']),referenceOnly:boundaryPriority.moderationReference.sourceClassification},
+   {id:'transformation',status:'deferred',value:null,dependsOn:['combination-context','veto','hour','rescue','seasonal-command','boundaryPriority'],blockers:unique([...missing,'SOURCE_PRECEDENCE_AND_SUFFICIENT_CONDITIONS_UNRESOLVED']),sourceClauseStatus:veto.status},
    {id:'personality',status:'deferred',value:null,dependsOn:['strength','transformation','joins'],blockers:['NO_REVIEWED_STRUCTURE_TO_PERSONALITY_RULE']},
   ],
   seasonalCommand:{status:'birth-input-required',confirmedStem:null},
