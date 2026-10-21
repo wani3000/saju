@@ -5,9 +5,9 @@
 ## 현재 상태
 
 - 기준일: 2026-10-21.
-- 최신 결과: [전체 사주 성격·궁합 v4](docs/whole-chart-personality-v4.md)는 연·월·일·시의 십성·지장간·월령·합충을 함께 읽는다. 시간 모름은 세 기둥만 반영하고, 기존 v2/v3 결과는 보존한다. 전통 상징의 해설이며 실제 성격 검사·관계 예측/점수는 아니다.
+- 최신 결과: [쉬운 훈장 말투·관계별 풀이 v5](docs/easy-relationship-v5.md)는 사주표부터 쉬운 말로 설명하고 친구/연인/가족/동료별 배려·궁합 본문·마무리를 제공한다. [전체 사주 성격·궁합 v4](docs/whole-chart-personality-v4.md)는 연·월·일·시의 십성·지장간·월령·합충을 함께 읽는다. 시간 모름은 세 기둥만 반영하고, 기존 v2/v3 결과는 보존한다. 전통 상징의 해설이며 실제 성격 검사·관계 예측/점수는 아니다.
 - 최신 디자인: 사용자가 [조선 기록 사진풍 2안](design/characters/joseon/documentary-ui-v2/02-paper-greeting.png)을 선택했다. **충청북도 괴산의 서당 훈장, 김춘배 할아버지**를 가상 인물로 설정하고 한지·먹갈색 화면을 실제 web 앱에 적용했다. [입력부터 결과·공유까지의 말투/기록장 화면](docs/chunbae-journey-voice.md)도 적용했다. 카메라를 보지 않는 창작 사진이며 [인물·자산](design/characters/joseon/chunbae-v1/README.md)과 [실제 화면 비교 검수](design-qa.md)를 보존한다. 참고 서비스는 [공개 화면](docs/guija-design-reference-review.md)만 확인했고 설치 앱 내부 동작은 미검증이다.
-- 최신 준비: [계산 정책 권장안](docs/calculation-policy-candidate.md), [감수·사용자 검토 실행 묶음](docs/launch-review-kit.md), [출시·운영 절차](docs/launch-operations-runbook.md)를 마련했다. 간결한 입력 화면·하단 고정 버튼과 과거 시계 오류 구분, 대기 요청 지연 감지를 보완했다. 연구 247개·웹 111개·모바일 18사례 및 로컬 PostgreSQL 복원 통과. 최신 [사용자 지정 1→3→4](docs/launch-sequence-1-3-4.md)에 따라 사용자 관찰은 건너뛰며 나머지7개 감수·외부/운영 승인 항목은 미완료다.
+- 최신 준비: [계산 정책 권장안](docs/calculation-policy-candidate.md), [감수·사용자 검토 실행 묶음](docs/launch-review-kit.md), [출시·운영 절차](docs/launch-operations-runbook.md)를 마련했다. 간결한 입력 화면·하단 고정 버튼과 과거 시계 오류 구분, 대기 요청 지연 감지를 보완했다. 연구 247개·웹 119개·모바일 26사례 및 로컬 PostgreSQL 복원 통과. 최신 [사용자 지정 1→3→4](docs/launch-sequence-1-3-4.md)에 따라 사용자 관찰은 건너뛰며 나머지7개 감수·외부/운영 승인 항목은 미완료다.
 - 10월 12일 ZIP의 체크섬을 대조하고 Git 이력을 복원했다. 10월 14일 별도 분기에서는 [캐릭터 설계](docs/13-character-plan.md)를 선별 통합했다.
 - 현재 작업 위치: `/Users/chulwan/Documents/Codex/2026-10-12/oxaz1234-gmail-com-google-drive-3/saju`.
 - 원격 저장소: https://github.com/wani3000/saju (main).

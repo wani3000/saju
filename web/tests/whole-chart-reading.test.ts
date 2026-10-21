@@ -2,11 +2,11 @@ import {test} from "node:test";
 import assert from "node:assert/strict";
 import {chart,validatePair} from "../src/server/engine";
 import {samplePerson,publicCard,type Reading} from "../src/domain/model";
-import {readingForVersion,currentReadingVersion} from "../src/server/readings";
+import {readingForVersion} from "../src/server/readings";
 import {analyzeNatal,compareProfiles} from "../src/generated/selected-reading.mjs";
 
 const context=()=>({charts:validatePair({me:samplePerson(),other:samplePerson(true)}).charts,relation:"친구"});
-const read=(c:ReturnType<typeof context>)=>readingForVersion(currentReadingVersion,c);
+const read=(c:ReturnType<typeof context>)=>readingForVersion("whole-chart-personality-copy-v4",c);
 test("coinciding broad families still produce concrete positional differences",()=>{
   const r=read(context()).wholeChart!,[a,b]=r.people;
   assert.deepEqual(a.families,b.families);
@@ -108,7 +108,7 @@ test("v3 and v2 remain immutable and independent; whole readings are copied, det
 });
 
 test("relationship advice changes separately from chart facts and arbitrary unsupported charts fail closed",()=>{
-  const c=context(),a=read(c),b=readingForVersion(currentReadingVersion,{...c,relation:"연인"});
+  const c=context(),a=read(c),b=readingForVersion("whole-chart-personality-copy-v4",{...c,relation:"연인"});
   assert.deepEqual(a.wholeChart,b.wholeChart);assert.notDeepEqual(a.interpretation!.relationship,b.interpretation!.relationship);
   const broken=structuredClone(c);broken.charts.me.pillars.hour="갑자";
   assert.throws(()=>read(broken),{code:"READING_CONTEXT_INVALID"});

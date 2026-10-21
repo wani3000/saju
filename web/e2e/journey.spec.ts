@@ -4,18 +4,20 @@ async function start(page: Page) {
   await page.goto("/");
   await page.getByRole("button",{name:"두 사람의 생일 적기",exact:true}).click();
 }
-async function review(page: Page, changeMe?: (page: Page) => Promise<void>) {
+async function review(page: Page, changeMe?: (page: Page) => Promise<void>, relation="친구") {
   await start(page);
   await page.getByRole("button",{name:"가상 정보 채우기"}).click();
   await changeMe?.(page);
   await page.getByRole("button",{name:"다음"}).click();
   await expect(page.getByRole("heading",{name:"상대방의 정보",exact:true})).toBeVisible();
+  await page.getByLabel("어떤 사이인가요?",{exact:true}).selectOption(relation);
   await page.getByRole("button",{name:"가상 정보 채우기"}).click();
+  await page.getByLabel("어떤 사이인가요?",{exact:true}).selectOption(relation);
   await page.getByRole("button",{name:"다음"}).click();
   await expect(page.getByRole("heading",{name:"두 사람의 기록 확인"})).toBeVisible();
 }
-async function result(page: Page, changeMe?: (page: Page) => Promise<void>) {
-  await review(page, changeMe);
+async function result(page: Page, changeMe?: (page: Page) => Promise<void>, relation="친구") {
+  await review(page, changeMe, relation);
   await page.getByRole("checkbox",{name:consent}).check();
   await page.getByRole("button",{name:"무료 사주 이야기 보기"}).click();
   await expect(page.getByRole("heading",{name:"두 사람의 사주 이야기",exact:true})).toBeVisible();
@@ -126,7 +128,7 @@ test("free snapshot reload, private evidence, share preview and revocation stay 
     const profile=page.getByRole("region",{name:`${name}의 성향 유형`,exact:true});
     const person=whole.people.find((person:{side:string})=>person.side===p.side);
     await expect(profile.getByRole("heading",{name:person.summary.title,exact:true})).toBeVisible();
-    await profile.getByText("가까운 사이와 일할 때의 모습",{exact:true}).click();
+    await profile.getByText("이 관계에서 편안해지는 방법",{exact:true}).click();
     await expect(profile.getByText(person.summary.work,{exact:true})).toBeVisible();
     await profile.getByText("연·월·일·시 풀이와 근거 펼치기",{exact:true}).click();
     await expect(profile.getByRole("heading",{name:"확인한 십성 전체",exact:true})).toBeVisible();
@@ -232,4 +234,23 @@ for (const scenario of [
   await page.screenshot({path:testInfo.outputPath(scenario.id+".png"),fullPage:true,timeout:5000});
   const after=await (await page.request.get("/api/state")).json();
   expect(after.results).toEqual(before.results);expect(after.orders).toHaveLength(0);
+});
+
+for(const [relation,title,lastTitle] of [
+  ["친구","두 사람이 편한 친구가 되는 방법","오래 편한 친구로 지내려면"],
+  ["연인","두 사람이 사랑을 나누는 모습","두 사람의 사랑을 위해 해 볼 일"],
+  ["가족","두 사람이 가족으로 편안해지는 방법","서로 편안한 가족이 되려면"],
+  ["동료","두 사람이 함께 일을 잘하는 방법","믿고 일하는 동료가 되려면"],
+]) test(`easy teacher story matches selected relationship: ${relation}`,async({page},testInfo)=>{
+  await result(page,undefined,relation);
+  await expect(page.getByRole("heading",{name:title,exact:true})).toBeVisible();
+  await expect(page.getByRole("heading",{name:lastTitle,exact:true})).toBeVisible();
+  const state=await(await page.request.get("/api/state")).json();
+  expect(state.results[0].other.relation).toBe(relation);
+  const whole=state.results[0].reading.wholeChart;
+  await expect(page.getByText(whole.pair.sections.find((s:{id:string})=>s.id==="conversation").text,{exact:true})).toBeVisible();
+  await noOverflow(page);
+  await page.reload();
+  await expect(page.getByRole("heading",{name:title,exact:true})).toBeVisible();
+  await page.screenshot({path:testInfo.outputPath(`easy-${relation}.png`),fullPage:true,timeout:5000});
 });
