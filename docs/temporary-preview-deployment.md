@@ -1,3 +1,16 @@
+# 최신: 개인·궁합 일관성 v8 · 2026-10-22
+
+- 공개 체험: https://chunbae-preview-fjozmyej9-oxaz1234-gmailcoms-projects.vercel.app
+- 최종 소스 `5ba7a6d`, 배포 `dpl_9ecLXqR4d2GrgjnzNeNgPHvuCLPd`, chunbae-preview / preview / Ready. 06:34 KST.
+- 같은 열 가지 성향 사전으로 개인/궁합을 연결하고 모든 확인된 기둥의 분류를 사용. 월간 대표 의존·고정 첫 공통점·완전 중복 조언 제거. 받는 사람과 돕는 사람 명시.
+- 웹132개·480결과/120시각 재검사·타입·정적 빌드 통과. 본문 구조 변경 후 Next 빌드·HTTP·320/390px 모바일26개 통과, 마지막 도움 주체 문장 교정 후 웹132개/타입/정적 빌드/원격 화면 재검사.
+- 인증/쿠키 없는 HTTP200·로그인 전환 없음·noindex, JS/CSS 로컬 SHA-256 일치.
+- Chrome 가상 친구 입력→새 결과 생성, 개인 상황별 장단점·양방향 도움·대화 확인.390px clientWidth/scrollWidth390 일치, 새로고침 복원 확인. viewport 해제.
+- [실제 친구 도움 화면](../web/qa-evidence/chunbae-v8-friend-help-390.jpg). [품질 평가와 한계](audits/reading-v8-quality-review.md).
+- 기존 저장 결과 보존. 실제 성격 적중률/전문가 승인/외부 인증·결제·정식 운영 출시는 별도다.
+
+---
+
 # 최신: 관계별 상호작용 이야기 v7 · 2026-10-21
 
 - 공개 체험: https://chunbae-preview-p5ikvb2k3-oxaz1234-gmailcoms-projects.vercel.app
