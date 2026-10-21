@@ -54,6 +54,8 @@ const bridges:Record<string,string>={
  '정인:정인':'상대 이야기를 듣다가 무엇을 원하는지도 직접 물어보게',
  '편인:정인':'상대가 한 말을 곰곰이 살핀 뒤, 참고 있는 바람은 없는지 물어보게',
 };
+// Gifts describe the provider's action, rather than telling the recipient to help themselves.
+const describeHelp=(s:string)=>s.replace(/물어보게$/, '물어봐 줄 수 있네').replace(/말게$/, '않는 것이 좋겠네').replace(/보게$/, '보면 도움이 되겠네').replace(/주게$/, '줄 수 있네');
 const practices:Record<Role,string>={비견:'각자 원하는 선택지를 하나씩 말하고 번갈아 골라 보게',겁재:'함께할 작은 일 하나를 정하고 각자가 맡을 몫을 나눠 보게',식신:'무리 없이 꾸준히 해 줄 수 있는 작은 관심을 하나씩 정해 보게',상관:'상대 의견을 한 문장으로 되짚은 다음 자기 의견을 말해 보게',편재:'한번 해 볼 일에 쓸 시간과 비용의 한도를 먼저 정해 보게',정재:'일정이 바뀔 때 언제까지 알려 줄지 미리 약속해 보게',편관:'급할수록 당장 할 일 두 가지만 골라 하나씩 나눠 맡아 보게',정관:'할 수 있는 부탁과 어려운 부탁을 각각 하나씩 말해 보게',편인:'생각이 필요한 질문은 바로 답하지 않아도 될 시간을 정해 보게',정인:'상대를 챙기기 전에 오늘 자기 마음도 한 가지씩 이야기해 보게'};
 const conditional=(s:string)=>`‘${s}’${(s.charCodeAt(s.length-1)-0xac00)%28===0?'라면':'이라면'}`;
 const object=(s:string)=>`‘${s}’${(s.charCodeAt(s.length-1)-0xac00)%28===0?'를':'을'}`;
@@ -67,7 +69,7 @@ function help(provider:WholePerson,receiver:WholePerson,kind:RelationshipKind,wh
  const matches=ordered.flatMap(target=>{const support=helpers[target.role].map(role=>a.find(t=>t.role===role)).find(Boolean);return support?[{support,target}]:[];});
  const chosen=matches;
  if(!chosen.length)return {text:`${who}에게서 확인한 모습만으로 ${to}에게 딱 맞는 도움을 고르기는 어렵네. 어떤 상황에서 손을 보태면 좋은지 직접 물어보고 작은 부탁부터 맞춰 보게.`,evidence:[],chosen};
- const text=unique(chosen.map(m=>topic[m.target.role])).map(key=>`${scenes[kind][key]}를 생각해 보게. `+chosen.filter(m=>topic[m.target.role]===key).map(({support,target})=>`${to}가 바라는 것이 ${conditional(target.need)} ${bridges[support.role+':'+target.role].replaceAll('상대',to)}.`).join(' ')).join('\n')+`\n${who}도 무리해서 모두 해 줄 필요는 없네. 지금 할 수 있는 도움 하나를 고르고, ${to}도 그 도움을 원하는지 먼저 확인해 보게.`;
+ const text=unique(chosen.map(m=>topic[m.target.role])).map(key=>`${scenes[kind][key]}를 생각해 보게. `+chosen.filter(m=>topic[m.target.role]===key).map(({support,target})=>`${to}가 바라는 것이 ${conditional(target.need)} ${who}는 ${describeHelp(bridges[support.role+':'+target.role]).replaceAll('상대',to)}.`).join(' ')).join('\n')+`\n${who}도 무리해서 모두 해 줄 필요는 없네. 지금 할 수 있는 도움 하나를 고르고, ${to}도 그 도움을 원하는지 먼저 확인해 보게.`;
  return {text,evidence:[...evidence(provider,chosen.map(m=>m.support.role),who),...evidence(receiver,chosen.map(m=>m.target.role),to)],chosen};
 }
 function contextNotes(p:WholePerson){
