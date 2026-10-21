@@ -1,3 +1,14 @@
+# 최신: 일상 언어 장단점 v6 · 2026-10-21
+
+- 공개 체험: https://chunbae-preview-82u2h2omn-oxaz1234-gmailcoms-projects.vercel.app
+- 소스 `d10c475`, 배포 `dpl_FR2pa4hfBbRqxaBgczDu2HEhMcfT`, 전용 chunbae-preview / preview / Ready. 19:18 KST.
+- 장단점을 짧은 제목과 생활 속 행동으로 설명. 한 성향의 장점/단점 연결, 네 관계의 본문·대화 유지. 신규 풀이 v6, 이전 결과 보존.
+- 웹121개·HTTP·320/390px 모바일26개·Next/정적 빌드·타입·문서 검사 통과.
+- 인증/쿠키 없는 HTTP200, noindex 유지. JS/CSS 로컬 해시 일치. Chrome 원격 가상 입력→연인 결과, 장단점 목록/본문 확인. 390px 실제 콘텐츠 폭375px 가로 넘침 없음.
+- [원격 장점 목록](../web/qa-evidence/chunbae-v6-strengths-390.jpg). 실제 사용자 관찰·전문가 승인·외부 연동은 수행하지 않음.
+
+---
+
 # 김춘배 훈장 임시 체험 배포
 
 ## 최신: 쉬운 훈장 말투·관계별 풀이 v5 · 2026-10-21
