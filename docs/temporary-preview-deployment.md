@@ -1,6 +1,18 @@
 # 김춘배 훈장 임시 체험 배포
 
-## 현재 접근: 로그인 없는 공개 테스트 · 2026-10-21
+## 최신: 쉬운 훈장 말투·관계별 풀이 v5 · 2026-10-21
+
+- 소스99b2255 / 배포dpl_3akgJSSESVuLeVYy9qkg3YqNBFNo / Ready / preview.
+- 공개 테스트 주소: https://chunbae-preview-tnhf1b7eh-oxaz1234-gmailcoms-projects.vercel.app
+- 로그인/공유 인증값 없이 익명 HTTP200·실제 앱·JS/CSS200 및 로컬 빌드와 SHA-256 일치 확인. 기존 공개 접근 설정과 noindex/CSP connect-src none을 유지했다.
+- [v5 원고](easy-relationship-v5.md): 사주표부터 쉬운 하게체, 친구/연인/가족/동료별 개인 배려·궁합 본문·마무리. 이전 v4/v3 결과는 보존하고 새 결과에만 적용한다.
+- 최종 웹119/119·HTTP·320/390px 모바일26/26·Next 빌드/타입/정적 빌드 통과. 최종 소스99b2255의 GitHub Research/Web/Prototype validation3개 모두 성공.
+- 실제 원격 Chrome에서 가상 나래/하루·시간 모름·연인 선택→동의→쉬운 사주표/성향·사랑/데이트/서운함 본문·개인별 바람이 담긴 마무리→새로고침 복원 확인. 자세한 근거는 유지하고 본문 단어 중간 줄바꿈을 보완했다.
+- 320/390px에서 문서 너비305/305와375/375(스크롤바 제외), 앱 출처 error/warn0건 확인. 캡처는 해당 뷰포트의 실제 내용 영역이다. 실제 전문가/사용자 관찰·외부 연동 승인으로 세지 않는다.
+
+[사주표390](../web/qa-evidence/chunbae-v5-chart-390.jpg) · [사랑 본문390](../web/qa-evidence/chunbae-v5-love-390.jpg) · [사랑 본문320](../web/qa-evidence/chunbae-v5-love-320.jpg) · [관계별 마무리390](../web/qa-evidence/chunbae-v5-final-390.jpg).
+
+## 이전 접근 변경: 로그인 없는 공개 테스트 · 2026-10-21
 
 사용자가 Vercel 로그인이 필요하다고 알려 누구나 테스트할 수 있도록 명시적으로 요청했다. 전용 `chunbae-preview` 프로젝트(prj_OFQZ94cPRQBbZBfiz8OhIz5oY7JT)의 `ssoProtection`을 `all_except_custom_domains`에서 `null`로 변경했다. 팀 기본값과 다른 프로젝트는 변경하지 않았다. 비밀번호/Trusted IP 보호는 원래 null이었다.
 
