@@ -1,3 +1,15 @@
+# 최신: 관계별 상호작용 이야기 v7 · 2026-10-21
+
+- 공개 체험: https://chunbae-preview-p5ikvb2k3-oxaz1234-gmailcoms-projects.vercel.app
+- 최종 소스 `b2b0ed0`, 배포 `dpl_7uxNXoD547PLR3RRzMU8M1SLZDtA`, chunbae-preview / preview / Ready. 19:30 KST.
+- 연인/친구/가족/동료에 총평·양방향 도움·닮은 점·부담/서운함·대화 예시·함께할 일·오래 지내는 방법 적용. 신규 결과 v7, 기존 결과 보존.
+- 최종 웹126개·HTTP·320/390px 모바일26개·Next/정적 빌드 통과. 타입 검사·문서 검사 통과.
+- 익명 HTTP200·로그인 전환 없음·noindex 유지, 배포 JS/CSS 로컬 해시 일치.
+- 실제 Chrome 가상 입력으로 친구 결과 생성, 양방향 도움과 대화 확인. 조사/문장부호 수정 후 최종 원격 본문 재확인.390px 콘텐츠 폭375px와scrollWidth375px 일치, 새로고침 복원 성공. 임시 viewport 해제.
+- [친구에게 받는 도움 화면](../web/qa-evidence/chunbae-v7-friend-help-390.jpg). 실제 사용자/전문가 감수·외부 연동·운영 승인은 별도다.
+
+---
+
 # 최신: 일상 언어 장단점 v6 · 2026-10-21
 
 - 공개 체험: https://chunbae-preview-82u2h2omn-oxaz1234-gmailcoms-projects.vercel.app
