@@ -38,8 +38,8 @@ export function addRelationshipStory(previous:Reading,relation:string):Reading {
   const pairEvidence=[...evidence(basis(a),"자네"),...evidence(basis(b),"상대")];
   const meGift=gift(a,b,ctx,"자네","상대"),otherGift=gift(b,a,ctx,"상대","자네");
   const common=w.pair.commonFamilies[0];
-  const shared=common?`두 사람의 공통점을 살리려면 ${ctx.activities[common]}부터 해 보면 좋겠네. 비슷한 부분이 있으면 굳이 길게 설명하지 않아도 편한 순간이 생길 수 있지.\n다만 같은 바람이 있다고 늘 같은 선택을 하는 것은 아니네. ${styles[common].risk} 가까운 사이일수록 상대의 뜻을 한 번 더 물어보게.`:"서로 겹치는 분류가 적어도 잘 지낼 수 있네. 함께 편했던 순간과 어려웠던 순간을 하나씩 이야기해 보면, 실제로 잘 맞는 부분을 알아갈 수 있지.";
-  const friction=`${af?`자네는 ${styles[af].need}가 중요할 수 있네. ${styles[af].risk}`:"자네가 어떤 상황에서 불편한지 먼저 말해 보게."}\n${bf?`상대는 ${styles[bf].need}가 중요할 수 있지. ${styles[bf].risk}`:"상대에게도 불편한 순간을 물어보게."}\n${af&&bf&&af===bf?"둘 다 같은 배려를 기다리면 먼저 말하는 사람이 없을 수 있네. 알아서 해 주길 기다리기보다 내 바람부터 꺼내 보게.":"한쪽의 도움 방식과 다른 쪽이 원하는 배려가 다르면, 좋은 뜻으로 한 행동도 서운하게 받아들일 수 있네."}`;
+  const shared=common?`두 사람의 공통점을 살리려면 ${ctx.activities[common]}부터 해 보면 좋겠네. 비슷한 부분이 있으면 굳이 길게 설명하지 않아도 편한 순간이 생길 수 있지.\n다만 같은 바람이 있다고 늘 같은 선택을 하는 것은 아니네. ${styles[common].risk}. 가까운 사이일수록 상대의 뜻을 한 번 더 물어보게.`:"서로 겹치는 분류가 적어도 잘 지낼 수 있네. 함께 편했던 순간과 어려웠던 순간을 하나씩 이야기해 보면, 실제로 잘 맞는 부분을 알아갈 수 있지.";
+  const friction=`${af?`자네에게 중요한 배려는 ‘${styles[af].need}’일 수 있네. ${styles[af].risk}.`:"자네가 어떤 상황에서 불편한지 먼저 말해 보게."}\n${bf?`상대에게 중요한 배려는 ‘${styles[bf].need}’일 수 있지. ${styles[bf].risk}.`:"상대에게도 불편한 순간을 물어보게."}\n${af&&bf&&af===bf?"둘 다 같은 배려를 기다리면 먼저 말하는 사람이 없을 수 있네. 알아서 해 주길 기다리기보다 내 바람부터 꺼내 보게.":"한쪽의 도움 방식과 다른 쪽이 원하는 배려가 다르면, 좋은 뜻으로 한 행동도 서운하게 받아들일 수 있네."}`;
   const conversation=`${ctx.scene}, 이렇게 말을 시작해 보면 좋겠네.\n자네: “${af?styles[af].say:"나는 이 부분이 조금 어려웠어. 이야기해도 될까?"}”\n상대: “${af?styles[af].answer:"응, 어떤 점이 어려웠는지 말해 줘."}”\n상대: “${bf?styles[bf].say:"내가 원하는 것도 같이 이야기하고 싶어."}”\n자네: “${bf?styles[bf].answer:"좋아. 둘 다 편한 방법을 찾아보자."}”\n이 대사는 앞으로 반드시 나눌 말이 아니라, 서로 바라는 것을 차분히 말하는 예시라네.`;
   const activities=unique([...(af?[af]:[]),...(bf?[bf]:[])]).map(f=>ctx.activities[f as RoleFamily]);
   const together=activities.length?`${activities.map((x,i)=>`${i+1}. ${x}`).join("\n")}\n이번에는 한 가지만 해 보고, 끝나고 나서 무엇이 편했고 무엇이 부담이었는지 서로 물어보게.`:"함께 하고 싶은 작은 일부터 하나씩 말해 보게.";
