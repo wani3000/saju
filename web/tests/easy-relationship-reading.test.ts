@@ -6,7 +6,7 @@ import {currentReadingVersion,readingForVersion} from "../src/server/readings";
 import {addEasyRelationshipReading,easyReadingVersion} from "../src/domain/easy-relationship-reading";
 import {wholeChartVersion} from "../src/domain/whole-chart-reading";
 const context=()=>({charts:validatePair({me:samplePerson(),other:samplePerson(true)}).charts,relation:"친구"});
-const read=(c:ReturnType<typeof context>)=>readingForVersion(currentReadingVersion,c);
+const read=(c:ReturnType<typeof context>)=>readingForVersion(easyReadingVersion,c);
 for(const [relation,word] of [["친구","친구"],["연인","사랑"],["가족","가족"],["동료","일"]]) {
   test(`${relation}: selected relationship changes the main pair story, personal advice and final conversation`,()=>{
     const c={...context(),relation},r=read(c),old=readingForVersion(wholeChartVersion,c);

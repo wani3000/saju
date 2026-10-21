@@ -248,7 +248,11 @@ for(const [relation,title,lastTitle] of [
   const state=await(await page.request.get("/api/state")).json();
   expect(state.results[0].other.relation).toBe(relation);
   const whole=state.results[0].reading.wholeChart;
-  await expect(page.getByText(whole.pair.sections.find((s:{id:string})=>s.id==="conversation").text,{exact:true})).toBeVisible();
+  for(const paragraph of whole.pair.sections.find((s:{id:string})=>s.id==="conversation").text.split("\n")) await expect(page.getByText(paragraph,{exact:true})).toBeVisible();
+  for(const person of whole.people) {
+    const profile=page.getByRole("region",{name:`${person.side==="me"?state.results[0].me.name:state.results[0].other.name}의 성향 유형`});
+    for(const item of person.summary.strength.split("\n")) await expect(profile.locator(".story-traits").getByText(item.split(": ")[0],{exact:true})).toBeVisible();
+  }
   await noOverflow(page);
   await page.reload();
   await expect(page.getByRole("heading",{name:title,exact:true})).toBeVisible();

@@ -621,3 +621,8 @@ footer {
 
 /* Let the teacher's Korean sentences wrap between words on narrow screens. */
 .saju-story p, .saju-story li, .saju-story blockquote { word-break: keep-all; overflow-wrap: anywhere; }
+
+.story-traits { padding-left: 1.25em; }
+.story-traits li { margin: 0 0 1.25rem; }
+.story-traits li > strong { font-size: 1.05em; color: var(--ink); }
+.story-traits li > p { margin-top: .35rem; }
