@@ -618,3 +618,6 @@ footer {
 .person-form input, .person-form select, .choice { scroll-margin-top: 90px; scroll-margin-bottom: 220px; }
 @media (min-width: 650px) { .app-header { margin: -30px -36px 20px; padding-inline: 28px; } }
 @media (max-width: 360px) { .app-header { margin: -18px -16px 18px; padding-inline: 8px; } .landing-header { margin: -22px -20px 0; padding-inline: 12px; } .fixed-actions { padding-inline: 20px; } .compact-brand strong { font-size: 16px; } }
+
+/* Let the teacher's Korean sentences wrap between words on narrow screens. */
+.saju-story p, .saju-story li, .saju-story blockquote { word-break: keep-all; overflow-wrap: anywhere; }
