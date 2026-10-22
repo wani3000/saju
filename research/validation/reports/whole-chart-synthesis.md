@@ -1,9 +1,11 @@
-# 전체 구조 종합 검토 whole-chart-evidence-synthesis-research-v3
+# 전체 구조 종합 검토 whole-chart-evidence-synthesis-research-v4
 
 기존 분석을 하나의 근거 흐름으로 연결한 연구 보고서. 일반 강약·성격·궁합 판정은 아님.
 
 {
-  "version": "whole-chart-evidence-synthesis-research-v3",
+  "version": "whole-chart-evidence-synthesis-research-v4",
+  "falseTransformationCases": 2,
+  "falseTransformationExactMatches": 2,
   "sourceCases": 22,
   "moderationSourceMatches": 2,
   "birthCases": 5,

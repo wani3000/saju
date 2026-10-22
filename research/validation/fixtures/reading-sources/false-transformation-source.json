@@ -1,0 +1,73 @@
+{
+  "version": "false-transformation-reference-v1",
+  "reviewedOn": "2026-10-22",
+  "reviewer": "Codex full-page visual collation of pinned 1947 scans, not expert approval",
+  "source": {
+    "sourceId": "ditian-1947",
+    "section": "假化",
+    "pdfSha256": "d6a7d1daf6513ce9fb9940ff8331b96804c10cdafbeac00d4d3d0a37229e1803",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/d/db/SSID-11335994_%E6%BB%B4%E5%A4%A9%E9%AB%93%E9%97%A1%E5%BE%AE.pdf",
+    "pages": [
+      {
+        "pdfPage": 384,
+        "printedPage": 108,
+        "file": "ditian-1947-page-384.png",
+        "sha256": "68abe12eddb2f28f024fd6e578267faf13167c8bdd154ccca83c1acc119b4478"
+      },
+      {
+        "pdfPage": 385,
+        "printedPage": 109,
+        "file": "ditian-1947-page-385.png",
+        "sha256": "35a49518c7d5e35ad2bef1feff1c5f4b33860cf5ce4e0e9ab12f3f1d2fd135e6"
+      },
+      {
+        "pdfPage": 386,
+        "printedPage": 110,
+        "file": "ditian-1947-page-386.png",
+        "sha256": "fb4941067e84d73e31cb4c87871f15b3cc36b76a74517793de33aae3f24472ca"
+      }
+    ]
+  },
+  "excerpt": {
+    "pdfPage": 384,
+    "attribution": "任氏",
+    "text": "假化之局，其象不一。有合神真而日主孤弱者，有化神有餘而日帶根苗者，有合神不真而日主無根者，有化神不足而日主無氣者，有既合化神而日主得劫印生扶者，有既合化而閒神來傷化氣者。",
+    "editorialNote": "Selected visual transcription; punctuation added. 原註 and later fortunes/outcomes are not included."
+  },
+  "cases": [
+    {
+      "id": "earth-false-without-jealousy",
+      "pillars": [
+        "기묘",
+        "갑술",
+        "갑자",
+        "기사"
+      ],
+      "pdfPage": 386,
+      "sourceTerm": "假化",
+      "attributedObservations": [
+        "兩甲兩己，各自相合",
+        "無爭妒之意",
+        "雖是假化，卻有情而不悖"
+      ],
+      "distinction": "Absence of jealousy does not, on its own, establish true transformation."
+    },
+    {
+      "id": "earth-false-combination-true-out-of-season",
+      "pillars": [
+        "갑자",
+        "병자",
+        "갑신",
+        "기사"
+      ],
+      "pdfPage": 386,
+      "sourceTerm": "假化",
+      "attributedObservations": [
+        "合神雖真而失令",
+        "化神假而不清"
+      ],
+      "distinction": "A source calling 合神 true is not the same as calling transformation true."
+    }
+  ],
+  "scope": "Exact source-case attribution only; no general strength/moderation thresholds, transformation verdict, personality or compatibility score."
+}

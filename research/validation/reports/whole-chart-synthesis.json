@@ -1,6 +1,8 @@
 {
   "metrics": {
-    "version": "whole-chart-evidence-synthesis-research-v3",
+    "version": "whole-chart-evidence-synthesis-research-v4",
+    "falseTransformationCases": 2,
+    "falseTransformationExactMatches": 2,
     "sourceCases": 22,
     "moderationSourceMatches": 2,
     "birthCases": 5,
@@ -14,16 +16,1992 @@
     },
     "qualification": "Software/source-case regression, not held-out classifier accuracy or real-person validation."
   },
-  "references": [
+  "falseTransformationReferences": [
     {
-      "id": "wood-too-strong",
+      "id": "earth-false-without-jealousy",
+      "falseTransformationReference": {
+        "id": "earth-false-without-jealousy",
+        "sourceTerm": "假化",
+        "attributedObservations": [
+          "兩甲兩己，各自相合",
+          "無爭妒之意",
+          "雖是假化，卻有情而不悖"
+        ],
+        "distinction": "Absence of jealousy does not, on its own, establish true transformation.",
+        "source": {
+          "sourceId": "ditian-1947",
+          "pdfSha256": "d6a7d1daf6513ce9fb9940ff8331b96804c10cdafbeac00d4d3d0a37229e1803",
+          "pdfPage": 386
+        }
+      },
       "dependencies": {
         "natal": "natal-definitions-research-v1",
         "context": "month-combination-context-research-v1",
         "reference": "source-case-veto-and-score-review-v1",
         "hour": "hour-damage-relational-balance-review-v1",
         "rescue": "rescue-wangqi-source-v1",
-        "boundaryPriority": "source-boundary-priority-review-v2"
+        "boundaryPriority": "source-boundary-priority-review-v2",
+        "falseTransformation": "false-transformation-reference-v1"
+      },
+      "confirmedEvidence": [
+        {
+          "id": "role:year:visible:기:정재",
+          "kind": "ten-god",
+          "certainty": "all-candidates",
+          "positions": [
+            "year"
+          ],
+          "value": {
+            "stem": "기",
+            "role": "정재",
+            "layer": "visible"
+          },
+          "sources": [
+            {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 51,
+              "sectionId": "element-cycles"
+            },
+            {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 56,
+              "sectionId": "day-reference-officer-wealth"
+            },
+            {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 107,
+              "sectionId": "indirect-wealth-examples"
+            }
+          ]
+        },
+        {
+          "id": "role:year:hidden:을:겁재",
+          "kind": "ten-god",
+          "certainty": "all-candidates",
+          "positions": [
+            "year"
+          ],
+          "value": {
+            "stem": "을",
+            "role": "겁재",
+            "layer": "hidden"
+          },
+          "sources": [
+            {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 52,
+              "sectionId": "relation-directions"
+            },
+            {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 112,
+              "sectionId": "peer-terminology-variants"
+            },
+            {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 54,
+              "sectionId": "hidden-stems"
+            }
+          ]
+        },
+        {
+          "id": "role:month:visible:갑:비견",
+          "kind": "ten-god",
+          "certainty": "all-candidates",
+          "positions": [
+            "month"
+          ],
+          "value": {
+            "stem": "갑",
+            "role": "비견",
+            "layer": "visible"
+          },
+          "sources": [
+            {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 52,
+              "sectionId": "relation-directions"
+            },
+            {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 112,
+              "sectionId": "peer-terminology-variants"
+            }
+          ]
+        },
+        {
+          "id": "role:month:hidden:무:편재",
+          "kind": "ten-god",
+          "certainty": "all-candidates",
+          "positions": [
+            "month"
+          ],
+          "value": {
+            "stem": "무",
+            "role": "편재",
+            "layer": "hidden"
+          },
+          "sources": [
+            {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 51,
+              "sectionId": "element-cycles"
+            },
+            {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 56,
+              "sectionId": "day-reference-officer-wealth"
+            },
+            {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 107,
+              "sectionId": "indirect-wealth-examples"
+            },
+            {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 54,
+              "sectionId": "hidden-stems"
+            }
+          ]
+        },
+        {
+          "id": "role:month:hidden:신:정관",
+          "kind": "ten-god",
+          "certainty": "all-candidates",
+          "positions": [
+            "month"
+          ],
+          "value": {
+            "stem": "신",
+            "role": "정관",
+            "layer": "hidden"
+          },
+          "sources": [
+            {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 51,
+              "sectionId": "element-cycles"
+            },
+            {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 56,
+              "sectionId": "day-reference-officer-wealth"
+            },
+            {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 54,
+              "sectionId": "hidden-stems"
+            }
+          ]
+        },
+        {
+          "id": "role:month:hidden:정:상관",
+          "kind": "ten-god",
+          "certainty": "all-candidates",
+          "positions": [
+            "month"
+          ],
+          "value": {
+            "stem": "정",
+            "role": "상관",
+            "layer": "hidden"
+          },
+          "sources": [
+            {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 51,
+              "sectionId": "element-cycles"
+            },
+            {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 57,
+              "sectionId": "resource-output"
+            },
+            {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 108,
+              "sectionId": "food-god-examples"
+            },
+            {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 54,
+              "sectionId": "hidden-stems"
+            }
+          ]
+        },
+        {
+          "id": "role:day:hidden:계:정인",
+          "kind": "ten-god",
+          "certainty": "all-candidates",
+          "positions": [
+            "day"
+          ],
+          "value": {
+            "stem": "계",
+            "role": "정인",
+            "layer": "hidden"
+          },
+          "sources": [
+            {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 51,
+              "sectionId": "element-cycles"
+            },
+            {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 57,
+              "sectionId": "resource-output"
+            },
+            {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 54,
+              "sectionId": "hidden-stems"
+            }
+          ]
+        },
+        {
+          "id": "role:hour:visible:기:정재",
+          "kind": "ten-god",
+          "certainty": "all-candidates",
+          "positions": [
+            "hour"
+          ],
+          "value": {
+            "stem": "기",
+            "role": "정재",
+            "layer": "visible"
+          },
+          "sources": [
+            {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 51,
+              "sectionId": "element-cycles"
+            },
+            {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 56,
+              "sectionId": "day-reference-officer-wealth"
+            },
+            {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 107,
+              "sectionId": "indirect-wealth-examples"
+            }
+          ]
+        },
+        {
+          "id": "role:hour:hidden:경:편관",
+          "kind": "ten-god",
+          "certainty": "all-candidates",
+          "positions": [
+            "hour"
+          ],
+          "value": {
+            "stem": "경",
+            "role": "편관",
+            "layer": "hidden"
+          },
+          "sources": [
+            {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 51,
+              "sectionId": "element-cycles"
+            },
+            {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 56,
+              "sectionId": "day-reference-officer-wealth"
+            },
+            {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 54,
+              "sectionId": "hidden-stems"
+            }
+          ]
+        },
+        {
+          "id": "role:hour:hidden:무:편재",
+          "kind": "ten-god",
+          "certainty": "all-candidates",
+          "positions": [
+            "hour"
+          ],
+          "value": {
+            "stem": "무",
+            "role": "편재",
+            "layer": "hidden"
+          },
+          "sources": [
+            {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 51,
+              "sectionId": "element-cycles"
+            },
+            {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 56,
+              "sectionId": "day-reference-officer-wealth"
+            },
+            {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 107,
+              "sectionId": "indirect-wealth-examples"
+            },
+            {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 54,
+              "sectionId": "hidden-stems"
+            }
+          ]
+        },
+        {
+          "id": "role:hour:hidden:병:식신",
+          "kind": "ten-god",
+          "certainty": "all-candidates",
+          "positions": [
+            "hour"
+          ],
+          "value": {
+            "stem": "병",
+            "role": "식신",
+            "layer": "hidden"
+          },
+          "sources": [
+            {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 51,
+              "sectionId": "element-cycles"
+            },
+            {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 57,
+              "sectionId": "resource-output"
+            },
+            {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 108,
+              "sectionId": "food-god-examples"
+            },
+            {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 54,
+              "sectionId": "hidden-stems"
+            }
+          ]
+        },
+        {
+          "id": "root:year:을:same-element-other-polarity",
+          "kind": "day-root-observation",
+          "certainty": "all-candidates",
+          "positions": [
+            "year"
+          ],
+          "value": {
+            "stem": "을",
+            "match": "same-element-other-polarity"
+          },
+          "sources": [
+            {
+              "id": "ziping-1926-nlc-46443-vol2",
+              "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+              "pdfPages": [
+                21,
+                22
+              ],
+              "sectionId": "root-context"
+            },
+            {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 54,
+              "sectionId": "hidden-stems"
+            }
+          ]
+        },
+        {
+          "id": "combination:day:hour:stem-combination:갑기",
+          "kind": "combination-context",
+          "certainty": "all-candidates",
+          "positions": [
+            "day",
+            "hour"
+          ],
+          "value": {
+            "adjacent": true,
+            "involvesDay": true,
+            "alternatives": [
+              {
+                "interveningControllers": [],
+                "additionalPartners": [
+                  {
+                    "endpoint": "day",
+                    "position": "year",
+                    "stem": "기",
+                    "adjacent": false
+                  },
+                  {
+                    "endpoint": "hour",
+                    "position": "month",
+                    "stem": "갑",
+                    "adjacent": false
+                  }
+                ]
+              }
+            ]
+          },
+          "sources": [
+            {
+              "id": "ziping-1926-nlc-46443-vol2",
+              "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+              "pdfPages": [
+                20
+              ],
+              "sectionId": "intervening-stem"
+            },
+            {
+              "id": "ziping-1926-nlc-46443-vol2",
+              "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+              "pdfPages": [
+                20
+              ],
+              "sectionId": "distant-pair"
+            },
+            {
+              "id": "ziping-1926-nlc-46443-vol2",
+              "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+              "pdfPages": [
+                20
+              ],
+              "sectionId": "day-involvement"
+            },
+            {
+              "id": "ziping-1926-nlc-46443-vol2",
+              "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+              "pdfPages": [
+                20
+              ],
+              "sectionId": "multiple-partners"
+            }
+          ]
+        },
+        {
+          "id": "combination:month:hour:stem-combination:갑기",
+          "kind": "combination-context",
+          "certainty": "all-candidates",
+          "positions": [
+            "month",
+            "hour"
+          ],
+          "value": {
+            "adjacent": false,
+            "involvesDay": false,
+            "alternatives": [
+              {
+                "interveningControllers": [
+                  {
+                    "position": "day",
+                    "stem": "갑",
+                    "target": "hour"
+                  }
+                ],
+                "additionalPartners": [
+                  {
+                    "endpoint": "month",
+                    "position": "year",
+                    "stem": "기",
+                    "adjacent": true
+                  },
+                  {
+                    "endpoint": "hour",
+                    "position": "day",
+                    "stem": "갑",
+                    "adjacent": true
+                  }
+                ]
+              }
+            ]
+          },
+          "sources": [
+            {
+              "id": "ziping-1926-nlc-46443-vol2",
+              "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+              "pdfPages": [
+                20
+              ],
+              "sectionId": "intervening-stem"
+            },
+            {
+              "id": "ziping-1926-nlc-46443-vol2",
+              "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+              "pdfPages": [
+                20
+              ],
+              "sectionId": "distant-pair"
+            },
+            {
+              "id": "ziping-1926-nlc-46443-vol2",
+              "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+              "pdfPages": [
+                20
+              ],
+              "sectionId": "day-involvement"
+            },
+            {
+              "id": "ziping-1926-nlc-46443-vol2",
+              "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+              "pdfPages": [
+                20
+              ],
+              "sectionId": "multiple-partners"
+            }
+          ]
+        },
+        {
+          "id": "combination:year:day:stem-combination:갑기",
+          "kind": "combination-context",
+          "certainty": "all-candidates",
+          "positions": [
+            "year",
+            "day"
+          ],
+          "value": {
+            "adjacent": false,
+            "involvesDay": true,
+            "alternatives": [
+              {
+                "interveningControllers": [
+                  {
+                    "position": "month",
+                    "stem": "갑",
+                    "target": "year"
+                  }
+                ],
+                "additionalPartners": [
+                  {
+                    "endpoint": "year",
+                    "position": "month",
+                    "stem": "갑",
+                    "adjacent": true
+                  },
+                  {
+                    "endpoint": "day",
+                    "position": "hour",
+                    "stem": "기",
+                    "adjacent": true
+                  }
+                ]
+              }
+            ]
+          },
+          "sources": [
+            {
+              "id": "ziping-1926-nlc-46443-vol2",
+              "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+              "pdfPages": [
+                20
+              ],
+              "sectionId": "intervening-stem"
+            },
+            {
+              "id": "ziping-1926-nlc-46443-vol2",
+              "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+              "pdfPages": [
+                20
+              ],
+              "sectionId": "distant-pair"
+            },
+            {
+              "id": "ziping-1926-nlc-46443-vol2",
+              "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+              "pdfPages": [
+                20
+              ],
+              "sectionId": "day-involvement"
+            },
+            {
+              "id": "ziping-1926-nlc-46443-vol2",
+              "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+              "pdfPages": [
+                20
+              ],
+              "sectionId": "multiple-partners"
+            }
+          ]
+        },
+        {
+          "id": "combination:year:month:stem-combination:갑기",
+          "kind": "combination-context",
+          "certainty": "all-candidates",
+          "positions": [
+            "year",
+            "month"
+          ],
+          "value": {
+            "adjacent": true,
+            "involvesDay": false,
+            "alternatives": [
+              {
+                "interveningControllers": [],
+                "additionalPartners": [
+                  {
+                    "endpoint": "year",
+                    "position": "day",
+                    "stem": "갑",
+                    "adjacent": false
+                  },
+                  {
+                    "endpoint": "month",
+                    "position": "hour",
+                    "stem": "기",
+                    "adjacent": false
+                  }
+                ]
+              }
+            ]
+          },
+          "sources": [
+            {
+              "id": "ziping-1926-nlc-46443-vol2",
+              "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+              "pdfPages": [
+                20
+              ],
+              "sectionId": "intervening-stem"
+            },
+            {
+              "id": "ziping-1926-nlc-46443-vol2",
+              "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+              "pdfPages": [
+                20
+              ],
+              "sectionId": "distant-pair"
+            },
+            {
+              "id": "ziping-1926-nlc-46443-vol2",
+              "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+              "pdfPages": [
+                20
+              ],
+              "sectionId": "day-involvement"
+            },
+            {
+              "id": "ziping-1926-nlc-46443-vol2",
+              "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+              "pdfPages": [
+                20
+              ],
+              "sectionId": "multiple-partners"
+            }
+          ]
+        }
+      ],
+      "deferredEvidence": [],
+      "month": {
+        "branches": [
+          "술"
+        ],
+        "source": {
+          "id": "yuanhai-1926-ntl-9900014379",
+          "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+          "pdfPage": 57,
+          "sectionId": "month-context"
+        },
+        "seasonalStrength": null,
+        "note": "월지 후보만 보존. 절기 내 경과 일수·사령·통근·투간을 종합한 강약은 미판정."
+      },
+      "coverage": [
+        {
+          "side": "self",
+          "includedPositions": [
+            "year",
+            "month",
+            "day",
+            "hour"
+          ],
+          "omittedPositions": [],
+          "clockReviewRequired": false,
+          "boundaryReviewRequired": false
+        }
+      ],
+      "joins": [
+        {
+          "id": "distribution:겁재",
+          "rule": "same-role-across-confirmed-positions",
+          "kind": "structural-observation",
+          "evidenceIds": [
+            "role:year:hidden:을:겁재"
+          ],
+          "positions": [
+            "year"
+          ],
+          "text": "겁재은 연주에서 확인되네. 나타난 자리를 함께 기록하되, 반복 횟수를 성격의 강도로 바꾸지는 않았네."
+        },
+        {
+          "id": "distribution:비견",
+          "rule": "same-role-across-confirmed-positions",
+          "kind": "structural-observation",
+          "evidenceIds": [
+            "role:month:visible:갑:비견"
+          ],
+          "positions": [
+            "month"
+          ],
+          "text": "비견은 월주에서 확인되네. 나타난 자리를 함께 기록하되, 반복 횟수를 성격의 강도로 바꾸지는 않았네."
+        },
+        {
+          "id": "distribution:상관",
+          "rule": "same-role-across-confirmed-positions",
+          "kind": "structural-observation",
+          "evidenceIds": [
+            "role:month:hidden:정:상관"
+          ],
+          "positions": [
+            "month"
+          ],
+          "text": "상관은 월주에서 확인되네. 나타난 자리를 함께 기록하되, 반복 횟수를 성격의 강도로 바꾸지는 않았네."
+        },
+        {
+          "id": "distribution:식신",
+          "rule": "same-role-across-confirmed-positions",
+          "kind": "structural-observation",
+          "evidenceIds": [
+            "role:hour:hidden:병:식신"
+          ],
+          "positions": [
+            "hour"
+          ],
+          "text": "식신은 시주에서 확인되네. 나타난 자리를 함께 기록하되, 반복 횟수를 성격의 강도로 바꾸지는 않았네."
+        },
+        {
+          "id": "distribution:정관",
+          "rule": "same-role-across-confirmed-positions",
+          "kind": "structural-observation",
+          "evidenceIds": [
+            "role:month:hidden:신:정관"
+          ],
+          "positions": [
+            "month"
+          ],
+          "text": "정관은 월주에서 확인되네. 나타난 자리를 함께 기록하되, 반복 횟수를 성격의 강도로 바꾸지는 않았네."
+        },
+        {
+          "id": "distribution:정인",
+          "rule": "same-role-across-confirmed-positions",
+          "kind": "structural-observation",
+          "evidenceIds": [
+            "role:day:hidden:계:정인"
+          ],
+          "positions": [
+            "day"
+          ],
+          "text": "정인은 일주에서 확인되네. 나타난 자리를 함께 기록하되, 반복 횟수를 성격의 강도로 바꾸지는 않았네."
+        },
+        {
+          "id": "distribution:정재",
+          "rule": "same-role-across-confirmed-positions",
+          "kind": "structural-observation",
+          "evidenceIds": [
+            "role:year:visible:기:정재",
+            "role:hour:visible:기:정재"
+          ],
+          "positions": [
+            "hour",
+            "year"
+          ],
+          "text": "정재은 시주·연주에서 확인되네. 나타난 자리를 함께 기록하되, 반복 횟수를 성격의 강도로 바꾸지는 않았네."
+        },
+        {
+          "id": "distribution:편관",
+          "rule": "same-role-across-confirmed-positions",
+          "kind": "structural-observation",
+          "evidenceIds": [
+            "role:hour:hidden:경:편관"
+          ],
+          "positions": [
+            "hour"
+          ],
+          "text": "편관은 시주에서 확인되네. 나타난 자리를 함께 기록하되, 반복 횟수를 성격의 강도로 바꾸지는 않았네."
+        },
+        {
+          "id": "distribution:편재",
+          "rule": "same-role-across-confirmed-positions",
+          "kind": "structural-observation",
+          "evidenceIds": [
+            "role:month:hidden:무:편재",
+            "role:hour:hidden:무:편재"
+          ],
+          "positions": [
+            "hour",
+            "month"
+          ],
+          "text": "편재은 시주·월주에서 확인되네. 나타난 자리를 함께 기록하되, 반복 횟수를 성격의 강도로 바꾸지는 않았네."
+        }
+      ],
+      "decisions": [
+        {
+          "id": "strength",
+          "status": "deferred",
+          "value": null,
+          "dependsOn": [
+            "month",
+            "day-root-observation",
+            "month-exposure",
+            "seasonal-command",
+            "transformation"
+          ],
+          "blockers": [
+            "NO_REVIEWED_GENERAL_STRENGTH_BOUNDARY",
+            "SEASONAL_COMMAND_UNRESOLVED"
+          ],
+          "referenceOnly": null
+        },
+        {
+          "id": "moderation",
+          "status": "deferred",
+          "value": null,
+          "dependsOn": [
+            "strength",
+            "balance",
+            "boundaryPriority"
+          ],
+          "blockers": [
+            "NO_REVIEWED_GENERAL_MODERATION_BOUNDARY",
+            "SEASONAL_COMMAND_UNRESOLVED"
+          ],
+          "referenceOnly": null
+        },
+        {
+          "id": "transformation",
+          "status": "deferred",
+          "value": null,
+          "dependsOn": [
+            "combination-context",
+            "veto",
+            "hour",
+            "rescue",
+            "seasonal-command",
+            "boundaryPriority"
+          ],
+          "blockers": [
+            "SEASONAL_COMMAND_UNRESOLVED",
+            "SOURCE_PRECEDENCE_AND_SUFFICIENT_CONDITIONS_UNRESOLVED"
+          ],
+          "sourceClauseStatus": "remaining-conditions-unresolved"
+        },
+        {
+          "id": "personality",
+          "status": "deferred",
+          "value": null,
+          "dependsOn": [
+            "strength",
+            "transformation",
+            "joins"
+          ],
+          "blockers": [
+            "INDIVIDUAL_STRUCTURE_REVIEW_PENDING",
+            "NO_REVIEWED_STRUCTURE_TO_PERSONALITY_RULE"
+          ]
+        }
+      ],
+      "seasonalCommand": {
+        "status": "birth-input-required",
+        "confirmedStem": null
+      },
+      "missing": [],
+      "moderationReference": {
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "status": "outside-reviewed-middle-cases",
+        "sourceClassification": null,
+        "matches": [],
+        "generalStrength": null,
+        "compatibilityScore": null,
+        "policy": "Source case attribution only; the contrast label is not a general weak-class threshold."
+      },
+      "tensions": [
+        {
+          "id": "multiplicity-vs-position",
+          "status": "source-conventions-require-separate-review",
+          "action": "do-not-promote-mingli-cardinality-screen-to-universal-veto",
+          "pairIds": [
+            "day:hour:stem-combination:갑기",
+            "month:hour:stem-combination:갑기",
+            "year:day:stem-combination:갑기",
+            "year:month:stem-combination:갑기"
+          ],
+          "sources": [
+            {
+              "sourceId": "mingli-1932",
+              "sectionId": "five-pair-months",
+              "pdfPages": [
+                28
+              ],
+              "url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/NLC416-13jh001663-59235_%E5%91%BD%E7%90%86%E9%9B%86%E6%88%90.pdf",
+              "pdfSha256": "dbb50d8f5daf8a30269273a3e5dc787133deabd944e76e28d592e58a97348501"
+            },
+            {
+              "sourceId": "mingli-1932",
+              "sectionId": "pair-cardinality-and-hour-route",
+              "pdfPages": [
+                28
+              ],
+              "url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/NLC416-13jh001663-59235_%E5%91%BD%E7%90%86%E9%9B%86%E6%88%90.pdf",
+              "pdfSha256": "dbb50d8f5daf8a30269273a3e5dc787133deabd944e76e28d592e58a97348501"
+            },
+            {
+              "sourceId": "mingli-1932",
+              "sectionId": "true-false-not-binary-season",
+              "pdfPages": [
+                30
+              ],
+              "url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/NLC416-13jh001663-59235_%E5%91%BD%E7%90%86%E9%9B%86%E6%88%90.pdf",
+              "pdfSha256": "dbb50d8f5daf8a30269273a3e5dc787133deabd944e76e28d592e58a97348501"
+            },
+            {
+              "id": "ziping-1926-nlc-46443-vol2",
+              "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+              "pdfPages": [
+                20
+              ],
+              "sectionId": "intervening-stem"
+            },
+            {
+              "id": "ziping-1926-nlc-46443-vol2",
+              "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+              "pdfPages": [
+                20
+              ],
+              "sectionId": "distant-pair"
+            },
+            {
+              "id": "ziping-1926-nlc-46443-vol2",
+              "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+              "pdfPages": [
+                20
+              ],
+              "sectionId": "day-involvement"
+            },
+            {
+              "id": "ziping-1926-nlc-46443-vol2",
+              "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+              "pdfPages": [
+                20
+              ],
+              "sectionId": "multiple-partners"
+            },
+            {
+              "id": "ziping-1926-nlc-46443-vol2",
+              "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+              "pdfPages": [
+                20
+              ],
+              "sectionId": "intervening-stem"
+            },
+            {
+              "id": "ziping-1926-nlc-46443-vol2",
+              "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+              "pdfPages": [
+                20
+              ],
+              "sectionId": "distant-pair"
+            },
+            {
+              "id": "ziping-1926-nlc-46443-vol2",
+              "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+              "pdfPages": [
+                20
+              ],
+              "sectionId": "day-involvement"
+            },
+            {
+              "id": "ziping-1926-nlc-46443-vol2",
+              "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+              "pdfPages": [
+                20
+              ],
+              "sectionId": "multiple-partners"
+            },
+            {
+              "id": "ziping-1926-nlc-46443-vol2",
+              "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+              "pdfPages": [
+                20
+              ],
+              "sectionId": "intervening-stem"
+            },
+            {
+              "id": "ziping-1926-nlc-46443-vol2",
+              "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+              "pdfPages": [
+                20
+              ],
+              "sectionId": "distant-pair"
+            },
+            {
+              "id": "ziping-1926-nlc-46443-vol2",
+              "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+              "pdfPages": [
+                20
+              ],
+              "sectionId": "day-involvement"
+            },
+            {
+              "id": "ziping-1926-nlc-46443-vol2",
+              "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+              "pdfPages": [
+                20
+              ],
+              "sectionId": "multiple-partners"
+            },
+            {
+              "id": "ziping-1926-nlc-46443-vol2",
+              "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+              "pdfPages": [
+                20
+              ],
+              "sectionId": "intervening-stem"
+            },
+            {
+              "id": "ziping-1926-nlc-46443-vol2",
+              "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+              "pdfPages": [
+                20
+              ],
+              "sectionId": "distant-pair"
+            },
+            {
+              "id": "ziping-1926-nlc-46443-vol2",
+              "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+              "pdfPages": [
+                20
+              ],
+              "sectionId": "day-involvement"
+            },
+            {
+              "id": "ziping-1926-nlc-46443-vol2",
+              "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+              "pdfPages": [
+                20
+              ],
+              "sectionId": "multiple-partners"
+            }
+          ]
+        }
+      ],
+      "reference": null,
+      "vetoStatus": "remaining-conditions-unresolved"
+    },
+    {
+      "id": "earth-false-combination-true-out-of-season",
+      "falseTransformationReference": {
+        "id": "earth-false-combination-true-out-of-season",
+        "sourceTerm": "假化",
+        "attributedObservations": [
+          "合神雖真而失令",
+          "化神假而不清"
+        ],
+        "distinction": "A source calling 合神 true is not the same as calling transformation true.",
+        "source": {
+          "sourceId": "ditian-1947",
+          "pdfSha256": "d6a7d1daf6513ce9fb9940ff8331b96804c10cdafbeac00d4d3d0a37229e1803",
+          "pdfPage": 386
+        }
+      },
+      "dependencies": {
+        "natal": "natal-definitions-research-v1",
+        "context": "month-combination-context-research-v1",
+        "reference": "source-case-veto-and-score-review-v1",
+        "hour": "hour-damage-relational-balance-review-v1",
+        "rescue": "rescue-wangqi-source-v1",
+        "boundaryPriority": "source-boundary-priority-review-v2",
+        "falseTransformation": "false-transformation-reference-v1"
+      },
+      "confirmedEvidence": [
+        {
+          "id": "role:year:visible:갑:비견",
+          "kind": "ten-god",
+          "certainty": "all-candidates",
+          "positions": [
+            "year"
+          ],
+          "value": {
+            "stem": "갑",
+            "role": "비견",
+            "layer": "visible"
+          },
+          "sources": [
+            {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 52,
+              "sectionId": "relation-directions"
+            },
+            {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 112,
+              "sectionId": "peer-terminology-variants"
+            }
+          ]
+        },
+        {
+          "id": "role:year:hidden:계:정인",
+          "kind": "ten-god",
+          "certainty": "all-candidates",
+          "positions": [
+            "year"
+          ],
+          "value": {
+            "stem": "계",
+            "role": "정인",
+            "layer": "hidden"
+          },
+          "sources": [
+            {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 51,
+              "sectionId": "element-cycles"
+            },
+            {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 57,
+              "sectionId": "resource-output"
+            },
+            {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 54,
+              "sectionId": "hidden-stems"
+            }
+          ]
+        },
+        {
+          "id": "role:month:visible:병:식신",
+          "kind": "ten-god",
+          "certainty": "all-candidates",
+          "positions": [
+            "month"
+          ],
+          "value": {
+            "stem": "병",
+            "role": "식신",
+            "layer": "visible"
+          },
+          "sources": [
+            {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 51,
+              "sectionId": "element-cycles"
+            },
+            {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 57,
+              "sectionId": "resource-output"
+            },
+            {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 108,
+              "sectionId": "food-god-examples"
+            }
+          ]
+        },
+        {
+          "id": "role:month:hidden:계:정인",
+          "kind": "ten-god",
+          "certainty": "all-candidates",
+          "positions": [
+            "month"
+          ],
+          "value": {
+            "stem": "계",
+            "role": "정인",
+            "layer": "hidden"
+          },
+          "sources": [
+            {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 51,
+              "sectionId": "element-cycles"
+            },
+            {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 57,
+              "sectionId": "resource-output"
+            },
+            {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 54,
+              "sectionId": "hidden-stems"
+            }
+          ]
+        },
+        {
+          "id": "role:day:hidden:경:편관",
+          "kind": "ten-god",
+          "certainty": "all-candidates",
+          "positions": [
+            "day"
+          ],
+          "value": {
+            "stem": "경",
+            "role": "편관",
+            "layer": "hidden"
+          },
+          "sources": [
+            {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 51,
+              "sectionId": "element-cycles"
+            },
+            {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 56,
+              "sectionId": "day-reference-officer-wealth"
+            },
+            {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 54,
+              "sectionId": "hidden-stems"
+            }
+          ]
+        },
+        {
+          "id": "role:day:hidden:무:편재",
+          "kind": "ten-god",
+          "certainty": "all-candidates",
+          "positions": [
+            "day"
+          ],
+          "value": {
+            "stem": "무",
+            "role": "편재",
+            "layer": "hidden"
+          },
+          "sources": [
+            {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 51,
+              "sectionId": "element-cycles"
+            },
+            {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 56,
+              "sectionId": "day-reference-officer-wealth"
+            },
+            {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 107,
+              "sectionId": "indirect-wealth-examples"
+            },
+            {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 54,
+              "sectionId": "hidden-stems"
+            }
+          ]
+        },
+        {
+          "id": "role:day:hidden:임:편인",
+          "kind": "ten-god",
+          "certainty": "all-candidates",
+          "positions": [
+            "day"
+          ],
+          "value": {
+            "stem": "임",
+            "role": "편인",
+            "layer": "hidden"
+          },
+          "sources": [
+            {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 51,
+              "sectionId": "element-cycles"
+            },
+            {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 57,
+              "sectionId": "resource-output"
+            },
+            {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 54,
+              "sectionId": "hidden-stems"
+            }
+          ]
+        },
+        {
+          "id": "role:hour:visible:기:정재",
+          "kind": "ten-god",
+          "certainty": "all-candidates",
+          "positions": [
+            "hour"
+          ],
+          "value": {
+            "stem": "기",
+            "role": "정재",
+            "layer": "visible"
+          },
+          "sources": [
+            {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 51,
+              "sectionId": "element-cycles"
+            },
+            {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 56,
+              "sectionId": "day-reference-officer-wealth"
+            },
+            {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 107,
+              "sectionId": "indirect-wealth-examples"
+            }
+          ]
+        },
+        {
+          "id": "role:hour:hidden:경:편관",
+          "kind": "ten-god",
+          "certainty": "all-candidates",
+          "positions": [
+            "hour"
+          ],
+          "value": {
+            "stem": "경",
+            "role": "편관",
+            "layer": "hidden"
+          },
+          "sources": [
+            {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 51,
+              "sectionId": "element-cycles"
+            },
+            {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 56,
+              "sectionId": "day-reference-officer-wealth"
+            },
+            {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 54,
+              "sectionId": "hidden-stems"
+            }
+          ]
+        },
+        {
+          "id": "role:hour:hidden:무:편재",
+          "kind": "ten-god",
+          "certainty": "all-candidates",
+          "positions": [
+            "hour"
+          ],
+          "value": {
+            "stem": "무",
+            "role": "편재",
+            "layer": "hidden"
+          },
+          "sources": [
+            {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 51,
+              "sectionId": "element-cycles"
+            },
+            {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 56,
+              "sectionId": "day-reference-officer-wealth"
+            },
+            {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 107,
+              "sectionId": "indirect-wealth-examples"
+            },
+            {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 54,
+              "sectionId": "hidden-stems"
+            }
+          ]
+        },
+        {
+          "id": "role:hour:hidden:병:식신",
+          "kind": "ten-god",
+          "certainty": "all-candidates",
+          "positions": [
+            "hour"
+          ],
+          "value": {
+            "stem": "병",
+            "role": "식신",
+            "layer": "hidden"
+          },
+          "sources": [
+            {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 51,
+              "sectionId": "element-cycles"
+            },
+            {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 57,
+              "sectionId": "resource-output"
+            },
+            {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 108,
+              "sectionId": "food-god-examples"
+            },
+            {
+              "id": "yuanhai-1926-ntl-9900014379",
+              "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+              "pdfPage": 54,
+              "sectionId": "hidden-stems"
+            }
+          ]
+        },
+        {
+          "id": "combination:day:hour:stem-combination:갑기",
+          "kind": "combination-context",
+          "certainty": "all-candidates",
+          "positions": [
+            "day",
+            "hour"
+          ],
+          "value": {
+            "adjacent": true,
+            "involvesDay": true,
+            "alternatives": [
+              {
+                "interveningControllers": [],
+                "additionalPartners": [
+                  {
+                    "endpoint": "hour",
+                    "position": "year",
+                    "stem": "갑",
+                    "adjacent": false
+                  }
+                ]
+              }
+            ]
+          },
+          "sources": [
+            {
+              "id": "ziping-1926-nlc-46443-vol2",
+              "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+              "pdfPages": [
+                20
+              ],
+              "sectionId": "intervening-stem"
+            },
+            {
+              "id": "ziping-1926-nlc-46443-vol2",
+              "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+              "pdfPages": [
+                20
+              ],
+              "sectionId": "distant-pair"
+            },
+            {
+              "id": "ziping-1926-nlc-46443-vol2",
+              "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+              "pdfPages": [
+                20
+              ],
+              "sectionId": "day-involvement"
+            },
+            {
+              "id": "ziping-1926-nlc-46443-vol2",
+              "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+              "pdfPages": [
+                20
+              ],
+              "sectionId": "multiple-partners"
+            }
+          ]
+        },
+        {
+          "id": "combination:year:hour:stem-combination:갑기",
+          "kind": "combination-context",
+          "certainty": "all-candidates",
+          "positions": [
+            "year",
+            "hour"
+          ],
+          "value": {
+            "adjacent": false,
+            "involvesDay": false,
+            "alternatives": [
+              {
+                "interveningControllers": [
+                  {
+                    "position": "day",
+                    "stem": "갑",
+                    "target": "hour"
+                  }
+                ],
+                "additionalPartners": [
+                  {
+                    "endpoint": "hour",
+                    "position": "day",
+                    "stem": "갑",
+                    "adjacent": true
+                  }
+                ]
+              }
+            ]
+          },
+          "sources": [
+            {
+              "id": "ziping-1926-nlc-46443-vol2",
+              "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+              "pdfPages": [
+                20
+              ],
+              "sectionId": "intervening-stem"
+            },
+            {
+              "id": "ziping-1926-nlc-46443-vol2",
+              "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+              "pdfPages": [
+                20
+              ],
+              "sectionId": "distant-pair"
+            },
+            {
+              "id": "ziping-1926-nlc-46443-vol2",
+              "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+              "pdfPages": [
+                20
+              ],
+              "sectionId": "day-involvement"
+            },
+            {
+              "id": "ziping-1926-nlc-46443-vol2",
+              "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+              "pdfPages": [
+                20
+              ],
+              "sectionId": "multiple-partners"
+            }
+          ]
+        }
+      ],
+      "deferredEvidence": [],
+      "month": {
+        "branches": [
+          "자"
+        ],
+        "source": {
+          "id": "yuanhai-1926-ntl-9900014379",
+          "pdfSha256": "664bccd1ea4706c609df8ea6cd69a4565db97dc277e876fc22eb125ea41dcc9f",
+          "pdfPage": 57,
+          "sectionId": "month-context"
+        },
+        "seasonalStrength": null,
+        "note": "월지 후보만 보존. 절기 내 경과 일수·사령·통근·투간을 종합한 강약은 미판정."
+      },
+      "coverage": [
+        {
+          "side": "self",
+          "includedPositions": [
+            "year",
+            "month",
+            "day",
+            "hour"
+          ],
+          "omittedPositions": [],
+          "clockReviewRequired": false,
+          "boundaryReviewRequired": false
+        }
+      ],
+      "joins": [
+        {
+          "id": "distribution:비견",
+          "rule": "same-role-across-confirmed-positions",
+          "kind": "structural-observation",
+          "evidenceIds": [
+            "role:year:visible:갑:비견"
+          ],
+          "positions": [
+            "year"
+          ],
+          "text": "비견은 연주에서 확인되네. 나타난 자리를 함께 기록하되, 반복 횟수를 성격의 강도로 바꾸지는 않았네."
+        },
+        {
+          "id": "distribution:식신",
+          "rule": "same-role-across-confirmed-positions",
+          "kind": "structural-observation",
+          "evidenceIds": [
+            "role:month:visible:병:식신",
+            "role:hour:hidden:병:식신"
+          ],
+          "positions": [
+            "hour",
+            "month"
+          ],
+          "text": "식신은 시주·월주에서 확인되네. 나타난 자리를 함께 기록하되, 반복 횟수를 성격의 강도로 바꾸지는 않았네."
+        },
+        {
+          "id": "distribution:정인",
+          "rule": "same-role-across-confirmed-positions",
+          "kind": "structural-observation",
+          "evidenceIds": [
+            "role:year:hidden:계:정인",
+            "role:month:hidden:계:정인"
+          ],
+          "positions": [
+            "month",
+            "year"
+          ],
+          "text": "정인은 월주·연주에서 확인되네. 나타난 자리를 함께 기록하되, 반복 횟수를 성격의 강도로 바꾸지는 않았네."
+        },
+        {
+          "id": "distribution:정재",
+          "rule": "same-role-across-confirmed-positions",
+          "kind": "structural-observation",
+          "evidenceIds": [
+            "role:hour:visible:기:정재"
+          ],
+          "positions": [
+            "hour"
+          ],
+          "text": "정재은 시주에서 확인되네. 나타난 자리를 함께 기록하되, 반복 횟수를 성격의 강도로 바꾸지는 않았네."
+        },
+        {
+          "id": "distribution:편관",
+          "rule": "same-role-across-confirmed-positions",
+          "kind": "structural-observation",
+          "evidenceIds": [
+            "role:day:hidden:경:편관",
+            "role:hour:hidden:경:편관"
+          ],
+          "positions": [
+            "day",
+            "hour"
+          ],
+          "text": "편관은 일주·시주에서 확인되네. 나타난 자리를 함께 기록하되, 반복 횟수를 성격의 강도로 바꾸지는 않았네."
+        },
+        {
+          "id": "distribution:편인",
+          "rule": "same-role-across-confirmed-positions",
+          "kind": "structural-observation",
+          "evidenceIds": [
+            "role:day:hidden:임:편인"
+          ],
+          "positions": [
+            "day"
+          ],
+          "text": "편인은 일주에서 확인되네. 나타난 자리를 함께 기록하되, 반복 횟수를 성격의 강도로 바꾸지는 않았네."
+        },
+        {
+          "id": "distribution:편재",
+          "rule": "same-role-across-confirmed-positions",
+          "kind": "structural-observation",
+          "evidenceIds": [
+            "role:day:hidden:무:편재",
+            "role:hour:hidden:무:편재"
+          ],
+          "positions": [
+            "day",
+            "hour"
+          ],
+          "text": "편재은 일주·시주에서 확인되네. 나타난 자리를 함께 기록하되, 반복 횟수를 성격의 강도로 바꾸지는 않았네."
+        }
+      ],
+      "decisions": [
+        {
+          "id": "strength",
+          "status": "deferred",
+          "value": null,
+          "dependsOn": [
+            "month",
+            "day-root-observation",
+            "month-exposure",
+            "seasonal-command",
+            "transformation"
+          ],
+          "blockers": [
+            "NO_REVIEWED_GENERAL_STRENGTH_BOUNDARY",
+            "SEASONAL_COMMAND_UNRESOLVED"
+          ],
+          "referenceOnly": null
+        },
+        {
+          "id": "moderation",
+          "status": "deferred",
+          "value": null,
+          "dependsOn": [
+            "strength",
+            "balance",
+            "boundaryPriority"
+          ],
+          "blockers": [
+            "NO_REVIEWED_GENERAL_MODERATION_BOUNDARY",
+            "SEASONAL_COMMAND_UNRESOLVED"
+          ],
+          "referenceOnly": null
+        },
+        {
+          "id": "transformation",
+          "status": "deferred",
+          "value": null,
+          "dependsOn": [
+            "combination-context",
+            "veto",
+            "hour",
+            "rescue",
+            "seasonal-command",
+            "boundaryPriority"
+          ],
+          "blockers": [
+            "SEASONAL_COMMAND_UNRESOLVED",
+            "SOURCE_PRECEDENCE_AND_SUFFICIENT_CONDITIONS_UNRESOLVED"
+          ],
+          "sourceClauseStatus": "remaining-conditions-unresolved"
+        },
+        {
+          "id": "personality",
+          "status": "deferred",
+          "value": null,
+          "dependsOn": [
+            "strength",
+            "transformation",
+            "joins"
+          ],
+          "blockers": [
+            "INDIVIDUAL_STRUCTURE_REVIEW_PENDING",
+            "NO_REVIEWED_STRUCTURE_TO_PERSONALITY_RULE"
+          ]
+        }
+      ],
+      "seasonalCommand": {
+        "status": "birth-input-required",
+        "confirmedStem": null
+      },
+      "missing": [],
+      "moderationReference": {
+        "coverage": [
+          {
+            "side": "self",
+            "includedPositions": [
+              "year",
+              "month",
+              "day",
+              "hour"
+            ],
+            "omittedPositions": [],
+            "clockReviewRequired": false,
+            "boundaryReviewRequired": false
+          }
+        ],
+        "status": "outside-reviewed-middle-cases",
+        "sourceClassification": null,
+        "matches": [],
+        "generalStrength": null,
+        "compatibilityScore": null,
+        "policy": "Source case attribution only; the contrast label is not a general weak-class threshold."
+      },
+      "tensions": [
+        {
+          "id": "multiplicity-vs-position",
+          "status": "source-conventions-require-separate-review",
+          "action": "do-not-promote-mingli-cardinality-screen-to-universal-veto",
+          "pairIds": [
+            "day:hour:stem-combination:갑기",
+            "year:hour:stem-combination:갑기"
+          ],
+          "sources": [
+            {
+              "sourceId": "mingli-1932",
+              "sectionId": "five-pair-months",
+              "pdfPages": [
+                28
+              ],
+              "url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/NLC416-13jh001663-59235_%E5%91%BD%E7%90%86%E9%9B%86%E6%88%90.pdf",
+              "pdfSha256": "dbb50d8f5daf8a30269273a3e5dc787133deabd944e76e28d592e58a97348501"
+            },
+            {
+              "sourceId": "mingli-1932",
+              "sectionId": "pair-cardinality-and-hour-route",
+              "pdfPages": [
+                28
+              ],
+              "url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/NLC416-13jh001663-59235_%E5%91%BD%E7%90%86%E9%9B%86%E6%88%90.pdf",
+              "pdfSha256": "dbb50d8f5daf8a30269273a3e5dc787133deabd944e76e28d592e58a97348501"
+            },
+            {
+              "sourceId": "mingli-1932",
+              "sectionId": "true-false-not-binary-season",
+              "pdfPages": [
+                30
+              ],
+              "url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/NLC416-13jh001663-59235_%E5%91%BD%E7%90%86%E9%9B%86%E6%88%90.pdf",
+              "pdfSha256": "dbb50d8f5daf8a30269273a3e5dc787133deabd944e76e28d592e58a97348501"
+            },
+            {
+              "id": "ziping-1926-nlc-46443-vol2",
+              "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+              "pdfPages": [
+                20
+              ],
+              "sectionId": "intervening-stem"
+            },
+            {
+              "id": "ziping-1926-nlc-46443-vol2",
+              "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+              "pdfPages": [
+                20
+              ],
+              "sectionId": "distant-pair"
+            },
+            {
+              "id": "ziping-1926-nlc-46443-vol2",
+              "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+              "pdfPages": [
+                20
+              ],
+              "sectionId": "day-involvement"
+            },
+            {
+              "id": "ziping-1926-nlc-46443-vol2",
+              "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+              "pdfPages": [
+                20
+              ],
+              "sectionId": "multiple-partners"
+            },
+            {
+              "id": "ziping-1926-nlc-46443-vol2",
+              "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+              "pdfPages": [
+                20
+              ],
+              "sectionId": "intervening-stem"
+            },
+            {
+              "id": "ziping-1926-nlc-46443-vol2",
+              "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+              "pdfPages": [
+                20
+              ],
+              "sectionId": "distant-pair"
+            },
+            {
+              "id": "ziping-1926-nlc-46443-vol2",
+              "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+              "pdfPages": [
+                20
+              ],
+              "sectionId": "day-involvement"
+            },
+            {
+              "id": "ziping-1926-nlc-46443-vol2",
+              "pdfSha256": "b1ac0a7dd4dc260647b65bd9338ad815fc0855d78e0ea01ed428237b28eb61c8",
+              "pdfPages": [
+                20
+              ],
+              "sectionId": "multiple-partners"
+            }
+          ]
+        }
+      ],
+      "reference": null,
+      "vetoStatus": "remaining-conditions-unresolved"
+    }
+  ],
+  "references": [
+    {
+      "id": "wood-too-strong",
+      "falseTransformationReference": null,
+      "dependencies": {
+        "natal": "natal-definitions-research-v1",
+        "context": "month-combination-context-research-v1",
+        "reference": "source-case-veto-and-score-review-v1",
+        "hour": "hour-damage-relational-balance-review-v1",
+        "rescue": "rescue-wangqi-source-v1",
+        "boundaryPriority": "source-boundary-priority-review-v2",
+        "falseTransformation": "false-transformation-reference-v1"
       },
       "confirmedEvidence": [
         {
@@ -693,13 +2671,15 @@
     },
     {
       "id": "wood-extremely-strong",
+      "falseTransformationReference": null,
       "dependencies": {
         "natal": "natal-definitions-research-v1",
         "context": "month-combination-context-research-v1",
         "reference": "source-case-veto-and-score-review-v1",
         "hour": "hour-damage-relational-balance-review-v1",
         "rescue": "rescue-wangqi-source-v1",
-        "boundaryPriority": "source-boundary-priority-review-v2"
+        "boundaryPriority": "source-boundary-priority-review-v2",
+        "falseTransformation": "false-transformation-reference-v1"
       },
       "confirmedEvidence": [
         {
@@ -1446,13 +3426,15 @@
     },
     {
       "id": "wood-too-weak",
+      "falseTransformationReference": null,
       "dependencies": {
         "natal": "natal-definitions-research-v1",
         "context": "month-combination-context-research-v1",
         "reference": "source-case-veto-and-score-review-v1",
         "hour": "hour-damage-relational-balance-review-v1",
         "rescue": "rescue-wangqi-source-v1",
-        "boundaryPriority": "source-boundary-priority-review-v2"
+        "boundaryPriority": "source-boundary-priority-review-v2",
+        "falseTransformation": "false-transformation-reference-v1"
       },
       "confirmedEvidence": [
         {
@@ -2251,13 +4233,15 @@
     },
     {
       "id": "wood-extremely-weak",
+      "falseTransformationReference": null,
       "dependencies": {
         "natal": "natal-definitions-research-v1",
         "context": "month-combination-context-research-v1",
         "reference": "source-case-veto-and-score-review-v1",
         "hour": "hour-damage-relational-balance-review-v1",
         "rescue": "rescue-wangqi-source-v1",
-        "boundaryPriority": "source-boundary-priority-review-v2"
+        "boundaryPriority": "source-boundary-priority-review-v2",
+        "falseTransformation": "false-transformation-reference-v1"
       },
       "confirmedEvidence": [
         {
@@ -2994,13 +4978,15 @@
     },
     {
       "id": "fire-too-strong",
+      "falseTransformationReference": null,
       "dependencies": {
         "natal": "natal-definitions-research-v1",
         "context": "month-combination-context-research-v1",
         "reference": "source-case-veto-and-score-review-v1",
         "hour": "hour-damage-relational-balance-review-v1",
         "rescue": "rescue-wangqi-source-v1",
-        "boundaryPriority": "source-boundary-priority-review-v2"
+        "boundaryPriority": "source-boundary-priority-review-v2",
+        "falseTransformation": "false-transformation-reference-v1"
       },
       "confirmedEvidence": [
         {
@@ -3783,13 +5769,15 @@
     },
     {
       "id": "fire-extremely-strong",
+      "falseTransformationReference": null,
       "dependencies": {
         "natal": "natal-definitions-research-v1",
         "context": "month-combination-context-research-v1",
         "reference": "source-case-veto-and-score-review-v1",
         "hour": "hour-damage-relational-balance-review-v1",
         "rescue": "rescue-wangqi-source-v1",
-        "boundaryPriority": "source-boundary-priority-review-v2"
+        "boundaryPriority": "source-boundary-priority-review-v2",
+        "falseTransformation": "false-transformation-reference-v1"
       },
       "confirmedEvidence": [
         {
@@ -4659,13 +6647,15 @@
     },
     {
       "id": "fire-too-weak",
+      "falseTransformationReference": null,
       "dependencies": {
         "natal": "natal-definitions-research-v1",
         "context": "month-combination-context-research-v1",
         "reference": "source-case-veto-and-score-review-v1",
         "hour": "hour-damage-relational-balance-review-v1",
         "rescue": "rescue-wangqi-source-v1",
-        "boundaryPriority": "source-boundary-priority-review-v2"
+        "boundaryPriority": "source-boundary-priority-review-v2",
+        "falseTransformation": "false-transformation-reference-v1"
       },
       "confirmedEvidence": [
         {
@@ -5410,13 +7400,15 @@
     },
     {
       "id": "fire-extremely-weak",
+      "falseTransformationReference": null,
       "dependencies": {
         "natal": "natal-definitions-research-v1",
         "context": "month-combination-context-research-v1",
         "reference": "source-case-veto-and-score-review-v1",
         "hour": "hour-damage-relational-balance-review-v1",
         "rescue": "rescue-wangqi-source-v1",
-        "boundaryPriority": "source-boundary-priority-review-v2"
+        "boundaryPriority": "source-boundary-priority-review-v2",
+        "falseTransformation": "false-transformation-reference-v1"
       },
       "confirmedEvidence": [
         {
@@ -6165,13 +8157,15 @@
     },
     {
       "id": "earth-too-strong",
+      "falseTransformationReference": null,
       "dependencies": {
         "natal": "natal-definitions-research-v1",
         "context": "month-combination-context-research-v1",
         "reference": "source-case-veto-and-score-review-v1",
         "hour": "hour-damage-relational-balance-review-v1",
         "rescue": "rescue-wangqi-source-v1",
-        "boundaryPriority": "source-boundary-priority-review-v2"
+        "boundaryPriority": "source-boundary-priority-review-v2",
+        "falseTransformation": "false-transformation-reference-v1"
       },
       "confirmedEvidence": [
         {
@@ -7030,13 +9024,15 @@
     },
     {
       "id": "earth-extremely-strong",
+      "falseTransformationReference": null,
       "dependencies": {
         "natal": "natal-definitions-research-v1",
         "context": "month-combination-context-research-v1",
         "reference": "source-case-veto-and-score-review-v1",
         "hour": "hour-damage-relational-balance-review-v1",
         "rescue": "rescue-wangqi-source-v1",
-        "boundaryPriority": "source-boundary-priority-review-v2"
+        "boundaryPriority": "source-boundary-priority-review-v2",
+        "falseTransformation": "false-transformation-reference-v1"
       },
       "confirmedEvidence": [
         {
@@ -7951,13 +9947,15 @@
     },
     {
       "id": "earth-too-weak",
+      "falseTransformationReference": null,
       "dependencies": {
         "natal": "natal-definitions-research-v1",
         "context": "month-combination-context-research-v1",
         "reference": "source-case-veto-and-score-review-v1",
         "hour": "hour-damage-relational-balance-review-v1",
         "rescue": "rescue-wangqi-source-v1",
-        "boundaryPriority": "source-boundary-priority-review-v2"
+        "boundaryPriority": "source-boundary-priority-review-v2",
+        "falseTransformation": "false-transformation-reference-v1"
       },
       "confirmedEvidence": [
         {
@@ -8758,13 +10756,15 @@
     },
     {
       "id": "earth-extremely-weak",
+      "falseTransformationReference": null,
       "dependencies": {
         "natal": "natal-definitions-research-v1",
         "context": "month-combination-context-research-v1",
         "reference": "source-case-veto-and-score-review-v1",
         "hour": "hour-damage-relational-balance-review-v1",
         "rescue": "rescue-wangqi-source-v1",
-        "boundaryPriority": "source-boundary-priority-review-v2"
+        "boundaryPriority": "source-boundary-priority-review-v2",
+        "falseTransformation": "false-transformation-reference-v1"
       },
       "confirmedEvidence": [
         {
@@ -9314,13 +11314,15 @@
     },
     {
       "id": "metal-too-strong",
+      "falseTransformationReference": null,
       "dependencies": {
         "natal": "natal-definitions-research-v1",
         "context": "month-combination-context-research-v1",
         "reference": "source-case-veto-and-score-review-v1",
         "hour": "hour-damage-relational-balance-review-v1",
         "rescue": "rescue-wangqi-source-v1",
-        "boundaryPriority": "source-boundary-priority-review-v2"
+        "boundaryPriority": "source-boundary-priority-review-v2",
+        "falseTransformation": "false-transformation-reference-v1"
       },
       "confirmedEvidence": [
         {
@@ -9987,13 +11989,15 @@
     },
     {
       "id": "metal-extremely-strong",
+      "falseTransformationReference": null,
       "dependencies": {
         "natal": "natal-definitions-research-v1",
         "context": "month-combination-context-research-v1",
         "reference": "source-case-veto-and-score-review-v1",
         "hour": "hour-damage-relational-balance-review-v1",
         "rescue": "rescue-wangqi-source-v1",
-        "boundaryPriority": "source-boundary-priority-review-v2"
+        "boundaryPriority": "source-boundary-priority-review-v2",
+        "falseTransformation": "false-transformation-reference-v1"
       },
       "confirmedEvidence": [
         {
@@ -11093,13 +13097,15 @@
     },
     {
       "id": "metal-too-weak",
+      "falseTransformationReference": null,
       "dependencies": {
         "natal": "natal-definitions-research-v1",
         "context": "month-combination-context-research-v1",
         "reference": "source-case-veto-and-score-review-v1",
         "hour": "hour-damage-relational-balance-review-v1",
         "rescue": "rescue-wangqi-source-v1",
-        "boundaryPriority": "source-boundary-priority-review-v2"
+        "boundaryPriority": "source-boundary-priority-review-v2",
+        "falseTransformation": "false-transformation-reference-v1"
       },
       "confirmedEvidence": [
         {
@@ -11714,13 +13720,15 @@
     },
     {
       "id": "metal-extremely-weak",
+      "falseTransformationReference": null,
       "dependencies": {
         "natal": "natal-definitions-research-v1",
         "context": "month-combination-context-research-v1",
         "reference": "source-case-veto-and-score-review-v1",
         "hour": "hour-damage-relational-balance-review-v1",
         "rescue": "rescue-wangqi-source-v1",
-        "boundaryPriority": "source-boundary-priority-review-v2"
+        "boundaryPriority": "source-boundary-priority-review-v2",
+        "falseTransformation": "false-transformation-reference-v1"
       },
       "confirmedEvidence": [
         {
@@ -12305,13 +14313,15 @@
     },
     {
       "id": "water-too-strong",
+      "falseTransformationReference": null,
       "dependencies": {
         "natal": "natal-definitions-research-v1",
         "context": "month-combination-context-research-v1",
         "reference": "source-case-veto-and-score-review-v1",
         "hour": "hour-damage-relational-balance-review-v1",
         "rescue": "rescue-wangqi-source-v1",
-        "boundaryPriority": "source-boundary-priority-review-v2"
+        "boundaryPriority": "source-boundary-priority-review-v2",
+        "falseTransformation": "false-transformation-reference-v1"
       },
       "confirmedEvidence": [
         {
@@ -13058,13 +15068,15 @@
     },
     {
       "id": "water-extremely-strong",
+      "falseTransformationReference": null,
       "dependencies": {
         "natal": "natal-definitions-research-v1",
         "context": "month-combination-context-research-v1",
         "reference": "source-case-veto-and-score-review-v1",
         "hour": "hour-damage-relational-balance-review-v1",
         "rescue": "rescue-wangqi-source-v1",
-        "boundaryPriority": "source-boundary-priority-review-v2"
+        "boundaryPriority": "source-boundary-priority-review-v2",
+        "falseTransformation": "false-transformation-reference-v1"
       },
       "confirmedEvidence": [
         {
@@ -13672,13 +15684,15 @@
     },
     {
       "id": "water-too-weak",
+      "falseTransformationReference": null,
       "dependencies": {
         "natal": "natal-definitions-research-v1",
         "context": "month-combination-context-research-v1",
         "reference": "source-case-veto-and-score-review-v1",
         "hour": "hour-damage-relational-balance-review-v1",
         "rescue": "rescue-wangqi-source-v1",
-        "boundaryPriority": "source-boundary-priority-review-v2"
+        "boundaryPriority": "source-boundary-priority-review-v2",
+        "falseTransformation": "false-transformation-reference-v1"
       },
       "confirmedEvidence": [
         {
@@ -14397,13 +16411,15 @@
     },
     {
       "id": "water-extremely-weak",
+      "falseTransformationReference": null,
       "dependencies": {
         "natal": "natal-definitions-research-v1",
         "context": "month-combination-context-research-v1",
         "reference": "source-case-veto-and-score-review-v1",
         "hour": "hour-damage-relational-balance-review-v1",
         "rescue": "rescue-wangqi-source-v1",
-        "boundaryPriority": "source-boundary-priority-review-v2"
+        "boundaryPriority": "source-boundary-priority-review-v2",
+        "falseTransformation": "false-transformation-reference-v1"
       },
       "confirmedEvidence": [
         {
@@ -15072,13 +17088,15 @@
     },
     {
       "id": "source-balanced-with-clash",
+      "falseTransformationReference": null,
       "dependencies": {
         "natal": "natal-definitions-research-v1",
         "context": "month-combination-context-research-v1",
         "reference": "source-case-veto-and-score-review-v1",
         "hour": "hour-damage-relational-balance-review-v1",
         "rescue": "rescue-wangqi-source-v1",
-        "boundaryPriority": "source-boundary-priority-review-v2"
+        "boundaryPriority": "source-boundary-priority-review-v2",
+        "falseTransformation": "false-transformation-reference-v1"
       },
       "confirmedEvidence": [
         {
@@ -15745,13 +17763,15 @@
     },
     {
       "id": "seasonal-strength-counterexample",
+      "falseTransformationReference": null,
       "dependencies": {
         "natal": "natal-definitions-research-v1",
         "context": "month-combination-context-research-v1",
         "reference": "source-case-veto-and-score-review-v1",
         "hour": "hour-damage-relational-balance-review-v1",
         "rescue": "rescue-wangqi-source-v1",
-        "boundaryPriority": "source-boundary-priority-review-v2"
+        "boundaryPriority": "source-boundary-priority-review-v2",
+        "falseTransformation": "false-transformation-reference-v1"
       },
       "confirmedEvidence": [
         {
@@ -16402,6 +18422,7 @@
   "birthCases": [
     {
       "id": "ordinary",
+      "falseTransformationReference": null,
       "dependencies": {
         "natal": "natal-definitions-research-v1",
         "context": "month-combination-context-research-v1",
@@ -16409,6 +18430,7 @@
         "hour": "hour-damage-relational-balance-review-v1",
         "rescue": "rescue-wangqi-source-v1",
         "boundaryPriority": "source-boundary-priority-review-v2",
+        "falseTransformation": "false-transformation-reference-v1",
         "seasonal": "yuanhai-command-nominal-days-v1"
       },
       "confirmedEvidence": [
@@ -17184,6 +19206,7 @@
     },
     {
       "id": "hour-known",
+      "falseTransformationReference": null,
       "dependencies": {
         "natal": "natal-definitions-research-v1",
         "context": "month-combination-context-research-v1",
@@ -17191,6 +19214,7 @@
         "hour": "hour-damage-relational-balance-review-v1",
         "rescue": "rescue-wangqi-source-v1",
         "boundaryPriority": "source-boundary-priority-review-v2",
+        "falseTransformation": "false-transformation-reference-v1",
         "seasonal": "yuanhai-command-nominal-days-v1"
       },
       "confirmedEvidence": [
@@ -18373,6 +20397,7 @@
     },
     {
       "id": "summer-source-gap",
+      "falseTransformationReference": null,
       "dependencies": {
         "natal": "natal-definitions-research-v1",
         "context": "month-combination-context-research-v1",
@@ -18380,6 +20405,7 @@
         "hour": "hour-damage-relational-balance-review-v1",
         "rescue": "rescue-wangqi-source-v1",
         "boundaryPriority": "source-boundary-priority-review-v2",
+        "falseTransformation": "false-transformation-reference-v1",
         "seasonal": "yuanhai-command-nominal-days-v1"
       },
       "confirmedEvidence": [
@@ -19026,6 +21052,7 @@
     },
     {
       "id": "solar-boundary",
+      "falseTransformationReference": null,
       "dependencies": {
         "natal": "natal-definitions-research-v1",
         "context": "month-combination-context-research-v1",
@@ -19033,6 +21060,7 @@
         "hour": "hour-damage-relational-balance-review-v1",
         "rescue": "rescue-wangqi-source-v1",
         "boundaryPriority": "source-boundary-priority-review-v2",
+        "falseTransformation": "false-transformation-reference-v1",
         "seasonal": "yuanhai-command-nominal-days-v1"
       },
       "confirmedEvidence": [
@@ -20053,6 +22081,7 @@
     },
     {
       "id": "historical-clock",
+      "falseTransformationReference": null,
       "dependencies": {
         "natal": "natal-definitions-research-v1",
         "context": "month-combination-context-research-v1",
@@ -20060,6 +22089,7 @@
         "hour": "hour-damage-relational-balance-review-v1",
         "rescue": "rescue-wangqi-source-v1",
         "boundaryPriority": "source-boundary-priority-review-v2",
+        "falseTransformation": "false-transformation-reference-v1",
         "seasonal": "yuanhai-command-nominal-days-v1"
       },
       "confirmedEvidence": [
@@ -20511,13 +22541,15 @@
   ],
   "positionComparison": [
     {
+      "falseTransformationReference": null,
       "dependencies": {
         "natal": "natal-definitions-research-v1",
         "context": "month-combination-context-research-v1",
         "reference": "source-case-veto-and-score-review-v1",
         "hour": "hour-damage-relational-balance-review-v1",
         "rescue": "rescue-wangqi-source-v1",
-        "boundaryPriority": "source-boundary-priority-review-v2"
+        "boundaryPriority": "source-boundary-priority-review-v2",
+        "falseTransformation": "false-transformation-reference-v1"
       },
       "confirmedEvidence": [
         {
@@ -21360,13 +23392,15 @@
       "vetoStatus": "no-visible-day-partner"
     },
     {
+      "falseTransformationReference": null,
       "dependencies": {
         "natal": "natal-definitions-research-v1",
         "context": "month-combination-context-research-v1",
         "reference": "source-case-veto-and-score-review-v1",
         "hour": "hour-damage-relational-balance-review-v1",
         "rescue": "rescue-wangqi-source-v1",
-        "boundaryPriority": "source-boundary-priority-review-v2"
+        "boundaryPriority": "source-boundary-priority-review-v2",
+        "falseTransformation": "false-transformation-reference-v1"
       },
       "confirmedEvidence": [
         {

@@ -1,6 +1,6 @@
 {
   "version": "condition-boundaries-audit-v1",
-  "synthesisVersion": "whole-chart-evidence-synthesis-research-v3",
+  "synthesisVersion": "whole-chart-evidence-synthesis-research-v4",
   "productionApproved": false,
   "metrics": {
     "sourceClauseCases": 60,
