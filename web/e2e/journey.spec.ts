@@ -1,24 +1,30 @@
 import { test, expect, type Page } from "@playwright/test";
-const consent = "두 사람의 정보로 사주 이야기를 보는 데 동의해요.";
+async function fillPerson(page: Page, other = false) {
+  await page.getByLabel("부를 이름", {exact:true}).fill(other ? "하루" : "나래");
+  for (const [name,value] of [["년",other?"1992":"1990"],["월",other?"5":"3"],["일",other?"21":"12"]])
+    await page.getByRole("textbox",{name,exact:true}).fill(value);
+  await page.getByRole("checkbox",{name:"시간을 몰라요",exact:true}).check();
+}
 async function start(page: Page) {
   await page.goto("/");
   await page.getByRole("button",{name:"두 사람의 생일 적기",exact:true}).click();
 }
 async function review(page: Page, changeMe?: (page: Page) => Promise<void>, relation="친구") {
   await start(page);
-  await page.getByRole("button",{name:"가상 정보 채우기"}).click();
+  await fillPerson(page);
   await changeMe?.(page);
   await page.getByRole("button",{name:"다음"}).click();
   await expect(page.getByRole("heading",{name:"상대방의 정보",exact:true})).toBeVisible();
   await page.getByLabel("어떤 사이인가요?",{exact:true}).selectOption(relation);
-  await page.getByRole("button",{name:"가상 정보 채우기"}).click();
+  await fillPerson(page, true);
   await page.getByLabel("어떤 사이인가요?",{exact:true}).selectOption(relation);
   await page.getByRole("button",{name:"다음"}).click();
   await expect(page.getByRole("heading",{name:"두 사람의 기록 확인"})).toBeVisible();
+  await expect(page.getByRole("checkbox")).toHaveCount(0);
+  await expect(page.getByText(/첫 번째 이야기는 무료예요|두 사람의 정보로|지금은 체험판이에요/)).toHaveCount(0);
 }
 async function result(page: Page, changeMe?: (page: Page) => Promise<void>, relation="친구") {
   await review(page, changeMe, relation);
-  await page.getByRole("checkbox",{name:consent}).check();
   await page.getByRole("button",{name:"무료 사주 이야기 보기"}).click();
   await expect(page.getByRole("heading",{name:"두 사람의 사주 이야기",exact:true})).toBeVisible();
 
@@ -49,7 +55,7 @@ test("fixed landing actions, header back and large-text sequential pages stay us
     for (const [el, size] of sizes) el.style.fontSize = `${size * 2}px`;
   });
   await noOverflow(page);
-  await page.getByRole("button", {name:"가상 정보 채우기"}).click();
+  await fillPerson(page);
   const next = page.getByRole("button", {name:"다음",exact:true});
   await expect(next).toBeInViewport();
   // Final time choice must be scrollable above the dock even when text doubles.
@@ -77,7 +83,6 @@ for (const scenario of [
     await p.getByRole("textbox", {name:"시 (0~23)",exact:true}).fill("2");
     await p.getByRole("textbox", {name:"분 (0~59)",exact:true}).fill("30");
   });
-  await page.getByRole("checkbox", {name:consent}).check();
   await page.getByRole("button", {name:"무료 사주 이야기 보기"}).click();
   await expect(page.locator("main").getByRole("alert")).toContainText(scenario.message);
   const state = await (await page.request.get("/api/state")).json();
@@ -88,29 +93,32 @@ for (const scenario of [
   expect(state.draft.me.minute).toBe("30");
   await noOverflow(page);
 });
-test("input errors, direct edit return and reload preserve the server draft without restoring consent",async({page},testInfo)=>{
+test("input errors, direct edit return and reload preserve the server draft without creating a reading automatically",async({page},testInfo)=>{
   await start(page);
   await page.getByRole("button",{name:"다음"}).click();
   await expect(page.getByLabel("부를 이름",{exact:true})).toBeFocused();
-  await expect(page.locator("main").getByRole("alert")).toBeVisible();
-  await page.getByRole("button",{name:"가상 정보 채우기"}).click();
+  await expect(page.locator("main").getByRole("alert")).toHaveCount(0);
+  await expect(page.getByLabel("부를 이름",{exact:true})).toHaveAttribute("aria-invalid","true");
+  await expect(page.locator(".field-error")).toHaveCount(6);
+  await expect(page.getByRole("textbox",{name:"시 (0~23)",exact:true})).toHaveValue("");
+  await expect(page.getByRole("checkbox",{name:"시간을 몰라요"})).not.toBeChecked();
+  await expect(page.getByRole("button",{name:"가상 정보 채우기"})).toHaveCount(0);
+  await fillPerson(page);
   await page.getByRole("button",{name:"다음"}).click();
   await expect(page.getByRole("heading",{name:"상대방의 정보",exact:true})).toBeVisible();
   await page.reload();
   await expect(page.getByRole("heading",{name:"상대방의 정보",exact:true})).toBeVisible();
-  await page.getByRole("button",{name:"가상 정보 채우기"}).click();
+  await fillPerson(page,true);
   await page.getByRole("button",{name:"다음"}).click();
-  await page.getByRole("checkbox",{name:consent}).check();
   await page.getByRole("button",{name:"수정",exact:true}).first().click();
   await page.getByLabel("부를 이름",{exact:true}).fill("가상나");
   await page.getByRole("button",{name:"다음"}).click();
   await expect(page.getByRole("heading",{name:"두 사람의 기록 확인"})).toBeVisible();
   await expect(page.getByRole("heading",{name:"가상나",exact:true})).toBeVisible();
-  await expect(page.getByRole("checkbox",{name:consent})).not.toBeChecked();
-  await page.getByRole("checkbox",{name:consent}).check();
+  await expect(page.getByRole("button",{name:"무료 사주 이야기 보기"})).toBeEnabled();
   await page.reload();
   await expect(page.getByRole("heading",{name:"두 사람의 기록 확인"})).toBeVisible();
-  await expect(page.getByRole("checkbox",{name:consent})).not.toBeChecked();
+  await expect(page.getByRole("button",{name:"무료 사주 이야기 보기"})).toBeEnabled();
   const state=await (await page.request.get("/api/state")).json();
   expect(state.results).toHaveLength(0);expect(state.free).toBe("available");
   expect(state.draft.me.name).toBe("가상나");
@@ -128,6 +136,9 @@ test("free snapshot reload, private evidence, share preview and revocation stay 
     const profile=page.getByRole("region",{name:`${name}의 성향 유형`,exact:true});
     const person=whole.people.find((person:{side:string})=>person.side===p.side);
     await expect(profile.getByRole("heading",{name:person.summary.title,exact:true})).toBeVisible();
+    const overview=page.locator(".story-chart").filter({has:page.getByRole("heading",{name:`${name}의 사주`,exact:true})}).locator(".story-day-key");
+    await expect(overview).toContainText("사람으로 읽어 볼 수 있겠네");
+    expect((await overview.innerText()).length).toBeLessThan(120);
     await profile.getByText("이 관계에서 편안해지는 방법",{exact:true}).click();
     for(const paragraph of person.summary.work.split("\n")) await expect(profile.getByText(paragraph,{exact:true})).toBeVisible();
     await profile.getByText("연·월·일·시 풀이와 근거 펼치기",{exact:true}).click();
@@ -175,7 +186,7 @@ test("free snapshot reload, private evidence, share preview and revocation stay 
 test("failed draft save retains typed inputs and retry advances only after persistence",async({page})=>{
   await start(page);
   await page.route("**/api/draft",route=>route.fulfill({status:503,contentType:"application/json",body:JSON.stringify({message:"저장 연결을 확인해 주세요."})}));
-  await page.getByRole("button",{name:"가상 정보 채우기"}).click();
+  await fillPerson(page);
   await page.getByRole("button",{name:"다음"}).click();
   await expect(page.locator("main").getByRole("alert")).toContainText("저장 연결을 확인해 주세요.");
   await expect(page.getByLabel("부를 이름",{exact:true})).toHaveValue("나래");

@@ -78,8 +78,7 @@ export default function App({ request: api = serverApi, preview = false, onReset
     [selected, setSelected] = useState<string | null>(null),
     [busy, setBusy] = useState(false),
     [error, setError] = useState(""),
-    [notice, setNotice] = useState(""),
-    [consent, setConsent] = useState(false);
+    [notice, setNotice] = useState("");
   const [saved, setSaved] = useState(""),
     [code, setCode] = useState(""),
     [restore, setRestore] = useState(""),
@@ -273,7 +272,7 @@ export default function App({ request: api = serverApi, preview = false, onReset
     const res = await api("comparisons", {
       pair,
       key: requestKey.current,
-      consent,
+      intent: "request-reading",
     });
     await api("process", {});
     await refresh();
@@ -284,7 +283,6 @@ export default function App({ request: api = serverApi, preview = false, onReset
     if (!pair) return;
     setPair({ ...pair, other: blankPerson() });
     requestKey.current = "";
-    setConsent(false);
     navigate("other");
   }
   async function pay(order: Order) {
@@ -425,7 +423,6 @@ export default function App({ request: api = serverApi, preview = false, onReset
                 }
                 onChange={(p) => {
                   setPair({ ...pair, [view === "me" ? "me" : "other"]: p });
-                  setConsent(false);
                   requestKey.current = "";
                 }}
               />
@@ -455,33 +452,6 @@ export default function App({ request: api = serverApi, preview = false, onReset
                   </section>
                 ))}
               </div>
-              <section className="card consent-record">
-                <h2>
-                  {data.free === "available"
-                    ? "첫 번째 이야기는 무료예요"
-                    : "추가 이야기는 2,900원 예정이에요"}
-                </h2>
-                <p>
-                  지금은 체험판이에요. 추가 이용은{" "}
-                  {data.provider === "mock"
-                    ? "모의 결제"
-                    : data.provider === "nicepay-test"
-                      ? "NICEPAY 테스트 결제"
-                      : "Toss 테스트 결제"}
-                  로 진행하며 실제 돈은 청구되지 않아요.
-                </p>
-                <p>
-                  두 사람의 사주를 함께 살펴보고, 성격과 어울리는 모습을 이야기해 드려요. 태어난 시간을 모르면 아는 내용만으로 풀어드려요.
-                </p>
-                <label className="choice">
-                  <input
-                    type="checkbox"
-                    checked={consent}
-                    onChange={(e) => setConsent(e.target.checked)}
-                  />
-                  두 사람의 정보로 사주 이야기를 보는 데 동의해요.
-                </label>
-              </section>
               {data.free !== "available" && data.kind !== "member" && !preview && (
                 <button
                   className="secondary"
@@ -493,7 +463,7 @@ export default function App({ request: api = serverApi, preview = false, onReset
               <FixedActions>
               <button
                 className="primary"
-                disabled={busy || !consent}
+                disabled={busy}
                 onClick={() => act(start)}
               >
                 {busy
@@ -1067,7 +1037,6 @@ export default function App({ request: api = serverApi, preview = false, onReset
                       await api("recover", { code: restore });
                       clearNavigation();
                       setSelected(null);
-                      setConsent(false);
                       setShareLink("");
                       setAliases(["나", "상대방"]);
                       setRestore("");

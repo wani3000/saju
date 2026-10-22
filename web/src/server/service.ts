@@ -121,14 +121,14 @@ export async function createComparison(
   owner: string,
   input: unknown,
   key: string,
-  consent: boolean,
+  request: boolean | "request-reading",
   provider = "mock",
 ) {
-  if (!z.uuid().safeParse(key).success || consent !== true)
+  if (!z.uuid().safeParse(key).success || (request !== "request-reading" && request !== true))
     throw new AppError(
-      "CONSENT_REQUIRED",
+      "READING_REQUEST_REQUIRED",
       422,
-      "연구용 계산과 입력 정보 저장 안내에 동의해 주세요.",
+      "이야기 보기 버튼을 눌러 다시 요청해 주세요.",
     );
   if (!["mock", "toss-test", "nicepay-test"].includes(provider))
     throw new AppError("LIVE_DISABLED", 503);
@@ -213,7 +213,9 @@ export async function createComparison(
         currentReadingVersion,
       ],
     );
-    await tx.query(
+    // Only older clients with an explicit checkbox create a legacy consent record.
+    // A new button request is already recorded in comparisons; it is not checkbox consent.
+    if (request === true) await tx.query(
       "INSERT INTO consent_records(comparison_id,version) VALUES($1,'research-local-v1')",
       [id],
     );

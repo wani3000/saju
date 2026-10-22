@@ -179,7 +179,7 @@ async function handle(req: NextRequest) {
           owner,
           body.pair,
           String(body.key ?? ""),
-          body.consent,
+          body.intent === "request-reading" ? body.intent : body.consent,
           process.env.PAYMENT_PROVIDER ?? "mock",
         ),
       );

@@ -38,13 +38,15 @@ export const blankPerson = (): Person => ({
   day: "",
   calendar: "solar",
   leap: false,
-  timeKnown: false,
+  timeKnown: true,
   hour: "",
   minute: "",
   relation: "친구",
 });
 export const samplePerson = (other = false): Person => ({
   ...blankPerson(),
+  // Synthetic fixture only; the input screen never fills these values.
+  timeKnown: false,
   name: other ? "하루" : "나래",
   year: other ? "1992" : "1990",
   month: other ? "5" : "3",

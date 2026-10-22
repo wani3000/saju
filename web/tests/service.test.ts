@@ -23,6 +23,19 @@ before(async () => {
 });
 after(async () => db.close());
 const pair = () => ({ me: samplePerson(), other: samplePerson(true) });
+test("reading button requests work without fabricating checkbox consent and remain idempotent", async () => {
+  const id = await owner(), input = pair(), key = randomUUID();
+  await assert.rejects(s.createComparison(db, id, input, key, false), {code:"READING_REQUEST_REQUIRED"});
+  assert.equal((await s.state(db,id)).free,"available");
+  const c = await s.createComparison(db, id, input, key, "request-reading");
+  assert.deepEqual(await s.createComparison(db, id, input, key, "request-reading"), c);
+  assert.equal((await db.query("SELECT * FROM consent_records WHERE comparison_id=$1",[c.id])).rows.length,0);
+  await s.runJobs(db,id);
+  assert.equal((await s.state(db,id)).results.length,1);
+  const legacyOwner = await owner();
+  const legacy = await s.createComparison(db,legacyOwner,pair(),randomUUID(),true);
+  assert.equal((await db.query("SELECT * FROM consent_records WHERE comparison_id=$1",[legacy.id])).rows.length,1);
+});
 test("source-disputed 1954 minutes cannot reserve a free reading", async () => {
   const id = await owner(), input = pair();
   Object.assign(input.me, {year:"1954",month:"3",day:"21",timeKnown:true,hour:"0",minute:"15"});

@@ -1,7 +1,7 @@
 "use client";
 import { useId, useRef, useState } from "react";
 import FixedActions from "./FixedActions";
-import { type Person, samplePerson } from "@/domain/model";
+import { type Person } from "@/domain/model";
 import { personInputErrors, type InputField } from "@/domain/person-input";
 export default function PersonForm({
   person,
@@ -57,19 +57,7 @@ export default function PersonForm({
     >
       <div className="row between record-heading">
         <h2>{other ? "상대방" : "나"}의 정보</h2>
-        <button
-          type="button"
-          className="text-button"
-          onClick={() => onChange({ ...samplePerson(other), id: person.id })}
-        >
-          가상 정보 채우기
-        </button>
       </div>
-      {Object.keys(errors).length > 0 && (
-        <p className="error" role="alert">
-          입력한 내용을 확인해 주세요. 수정할 곳을 각 입력칸 아래에 표시했어요.
-        </p>
-      )}
       <label htmlFor={`${id}-name`}>부를 이름</label>
       <input
         id={`${id}-name`}

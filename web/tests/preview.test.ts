@@ -7,7 +7,7 @@ import {currentReadingVersion,readingForVersion} from "../src/server/readings";
 const pair=()=>({me:samplePerson(),other:samplePerson(true)});
 const store=()=>{const m=new Map<string,string>();return {getItem:(k:string)=>m.get(k)??null,setItem:(k:string,v:string)=>{m.set(k,v);},removeItem:(k:string)=>{m.delete(k);}};};
 async function free(c:ReturnType<typeof previewController>) {
- const p=pair(), {id}=await c.request("comparisons",{pair:p,key:crypto.randomUUID(),consent:true});
+ const p=pair(), {id}=await c.request("comparisons",{pair:p,key:crypto.randomUUID(),intent:"request-reading"});
  await c.request("process",{});return {p,id};
 }
 test("browser preview uses the current calculation and reading, preserves reloads, and isolates another tab",async()=>{
@@ -20,9 +20,9 @@ test("browser preview uses the current calculation and reading, preserves reload
  assert.equal((await previewController(store()).request("state")).results.length,0);
  assert.equal(s.authEnabled,false);assert.equal(s.tossClientKey,null);
 });
-test("preview rejects consent, invalid birth dates, and protected historical clock inputs before consuming a free result",async()=>{
+test("preview rejects missing reading requests, invalid birth dates, and protected historical clock inputs before consuming a free result",async()=>{
  const c=previewController();
- await assert.rejects(c.request("comparisons",{pair:pair(),key:"a",consent:false}),{code:"CONSENT_REQUIRED"});
+ await assert.rejects(c.request("comparisons",{pair:pair(),key:"a",consent:false}),{code:"READING_REQUEST_REQUIRED"});
  const p=pair();p.me.year="1988";p.me.month="5";p.me.day="8";p.me.timeKnown=true;p.me.hour="2";p.me.minute="30";
  await assert.rejects(c.request("comparisons",{pair:p,key:"b",consent:true}),{code:"NONEXISTENT_BIRTH_TIME"});
  assert.equal((await c.request("state")).free,"available");

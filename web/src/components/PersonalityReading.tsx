@@ -1,8 +1,8 @@
+import { personalityOverview } from "@/domain/presentation";
 import type { SavedResult } from "../domain/model";
 import type { WholeChartReading,WholePerson } from "../domain/whole-chart-reading";
 import {familyNames} from "../domain/whole-chart-copy";
 const easyFamilyNames:Record<string,string>={peer:"내 생각을 지키는 힘",output:"마음을 표현하는 힘",practical:"행동으로 챙기는 힘",structure:"약속을 지키는 힘",resource:"차분히 이해하는 힘"};
-const elementMeanings:Record<string,string>={목:"나무",화:"불",토:"흙",금:"쇠",수:"물"};
 
 function ReadingText({text,list=false}:{text:string;list?:boolean}) {
   const lines=text.split("\n");
@@ -54,7 +54,7 @@ export default function PersonalityReading({result}:{result:SavedResult}) {
           <dd><strong className={c.fixed?"pillar-hanja":"pillar-unresolved"} lang={c.fixed?"zh":undefined}>{c.fixed?c.hanja:c.korean}</strong>
             {c.fixed&&<span>{c.korean}</span>}</dd>
         </div>)}</dl>
-        {p.type&&<p className="story-day-key"><strong>{p.type.hanja}({p.type.stem})</strong>{["무","기","계"].includes(p.type.stem)?"는":"은"} {elementMeanings[p.type.element]}을 뜻하는 글자라네. 여기서는 <strong>{p.type.image}</strong>에 빗대어 자네의 모습을 풀어 보겠네.</p>}
+        <p className="story-day-key">{personalityOverview(whole?.people.find(person => person.side === p.side), p.type?.summary ?? "글자가 하나로 정해지지 않아 성격을 서둘러 정하지 않겠네.")}</p>
         {p.notes.map(n=><p className="hint" key={n}>{n}</p>)}
       </div>)}
       <p className="hint">위 표를 왼쪽부터 보면 해·달·날·시간의 순서라네. 달은 옛 달력의 계절이 바뀌는 때를 기준으로 나누었지. 태어난 시간을 모르면 빈자리로 두고, 글자가 하나로 정해지지 않을 때도 억지로 고르지는 않겠네.</p>

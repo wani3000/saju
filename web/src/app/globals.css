@@ -516,7 +516,6 @@ footer {
 .record-field legend { font-family: "Noto Serif KR", serif; font-weight: 500; padding-right: 14px; }
 .record-form .primary { margin-bottom: 0; }
 .record-form .save-status { min-height: 24px; text-align: left; }
-.consent-record h2 { font-size: 22px; }
 .reading-paper { padding: 22px 20px 20px; background: #fffcf5b3; border: 1px solid var(--line); border-radius: 4px; margin: 24px 0; }
 .reading-cover { display: grid; grid-template-columns: 92px minmax(0, 1fr); gap: 16px; align-items: center; }
 .reading-cover img { display: block; width: 92px; height: auto; }

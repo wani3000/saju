@@ -65,11 +65,11 @@
     },
     {
       "file": "web/src/components/App.tsx",
-      "sha256": "1a490b13e19568faa84da91901e75ea6273480e9f91cab428127a4261acd7168"
+      "sha256": "bd26bc62c89c882e14d636bd96ed49389d92b065895801f9ebbe1ceba10ef83b"
     },
     {
       "file": "web/src/app/globals.css",
-      "sha256": "7003cf05153f563cced7564049c39bbb7717885966ac307f29133ff2acf3f5c6"
+      "sha256": "3ef47c648450fb49d00778eed1377b54592ad813b29bc2c8d9ff838d85d1ff72"
     },
     {
       "file": "web/content/journey-copy.json",
@@ -89,11 +89,11 @@
     },
     {
       "file": "web/src/server/service.ts",
-      "sha256": "3f449aaf103aebd9d16b4e95870b2a3d158cb39138ec6a6b64f79db3d98acb4b"
+      "sha256": "7b999a5ede446b9c26be3e088f2450b206c10b3d5fcf0922622731e009b5a101"
     },
     {
       "file": "web/src/app/api/[...path]/route.ts",
-      "sha256": "90cf1c0a5ee79ef74acf1fb4b7368660bd39301c31625fb2d570ad27f95dae30"
+      "sha256": "f80a60f312cc1f4340dce617792a8adc89bdbb91f0031dbd2659f997cadd0e14"
     },
     {
       "file": "web/src/app/auth/callback/route.ts",
@@ -125,7 +125,7 @@
     },
     {
       "file": "web/preview/controller.ts",
-      "sha256": "3962518fab6a4932747e6c34aa28b443553035efa6c0098b17eb03e7a397b9d2"
+      "sha256": "594843ebd21568d88bf4f6421ec429063348595ddb4b83abe848ac7818141a1a"
     },
     {
       "file": "web/content/research-policy.json",

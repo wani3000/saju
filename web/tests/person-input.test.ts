@@ -10,6 +10,8 @@ test("empty and unsupported input identifies each field without treating blank v
     "year",
     "month",
     "day",
+    "hour",
+    "minute",
   ]);
   const p = {
     ...samplePerson(),

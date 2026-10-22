@@ -35,7 +35,7 @@ export function previewController(storage?: Storage) {
       data.draft=parsed.data;data.revision++;persist();return {revision:data.revision};
     }
     if (path === "comparisons" && method === "POST") {
-      if (body?.consent !== true) throw new AppError("CONSENT_REQUIRED",422,"연구 체험과 정보 보관에 동의해 주세요.");
+      if (body?.intent !== "request-reading" && body?.consent !== true) throw new AppError("READING_REQUEST_REQUIRED",422,"이야기 보기 버튼을 눌러 다시 요청해 주세요.");
       const existing=data.comparisons.find(c=>c.key===body.key);
       if (existing) return {id:existing.id};
       const checked=validatePair(body.pair);

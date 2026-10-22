@@ -54,7 +54,7 @@ assert.deepEqual((await r.json()).draft, pair);
 r = await request("comparisons", {
   pair: { ...pair, me: { ...pair.me, year: "1954", month: "3", day: "21",
     timeKnown: true, hour: "0", minute: "15" } },
-  key: randomUUID(), consent: true,
+  key: randomUUID(), intent: "request-reading",
 });
 assert.equal(r.status, 422);
 assert.equal((await r.json()).code, "HISTORICAL_CLOCK_SOURCE_DISPUTE");
@@ -62,7 +62,7 @@ assert.equal((await (await request("state")).json()).free, "available");
 for (const [month, day, code] of [["5", "8", "NONEXISTENT_BIRTH_TIME"], ["10", "9", "AMBIGUOUS_BIRTH_TIME"]]) {
   r = await request("comparisons", {
     pair: { ...pair, me: { ...pair.me, year: "1988", month, day, timeKnown: true, hour: "2", minute: "30" } },
-    key: randomUUID(), consent: true,
+    key: randomUUID(), intent: "request-reading",
   });
   assert.equal(r.status, 422);
   assert.equal((await r.json()).code, code);
@@ -71,7 +71,7 @@ for (const [month, day, code] of [["5", "8", "NONEXISTENT_BIRTH_TIME"], ["10", "
   assert.equal(state.orders.length, 0);
   assert.deepEqual(state.draft, pair);
 }
-r = await request("comparisons", { pair, key: randomUUID(), consent: true });
+r = await request("comparisons", { pair, key: randomUUID(), intent: "request-reading" });
 assert.equal(r.status, 200);
 const { id } = await r.json();
 await request("process", {});
@@ -142,7 +142,7 @@ cookie = firstCookie;
 r = await request("comparisons", {
   pair: { ...pair, other: person(true) },
   key: randomUUID(),
-  consent: true,
+  intent: "request-reading",
 });
 assert.equal(r.status, 409);
 r = await request("recovery-code", {});
@@ -151,7 +151,7 @@ assert.equal(typeof code, "string");
 r = await request("comparisons", {
   pair: { ...pair, other: person(true) },
   key: randomUUID(),
-  consent: true,
+  intent: "request-reading",
 });
 const second = (await r.json()).id;
 const account = await (await request("state")).json();
