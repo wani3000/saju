@@ -5,6 +5,7 @@
 ## 현재 상태
 
 - 기준일: 2026-10-22.
+- [실제 앱 DB 백업·격리 복원 검증](docs/hosted-backup-restore-check.md): 전용 스테이징21테이블의 데이터·스키마·RLS/권한이 로컬 복원본과 일치하고 제한/익명 접근 검사를 통과했다. 원격은 읽기 전용, 임시본 제거 완료. 인증 공급자/장기 백업·전체 재해 복구·지속 감시는 별도다.
 - [실제 외부 연동 상태](docs/external-connection-progress.md): 전용 서울 Supabase DB와 카카오 앱을 연결하고 서버에서 실제 로그인·프로필 저장·새로고침·재로그인을 확인했다. NICEPAY 테스트 왕복과 탈퇴/운영 검증은 미완료다.
 - [카카오 로그인 서버 테스트](https://chunbae-staging.vercel.app/): 로그인 후 프로필과 개인 내역을 서버에서 보관하는 연구용 스테이징. 결제 미연동. [배포·검증 기록](docs/server-staging-deployment.md).
 - [현재 공개 테스트 링크](https://chunbae-preview-5j5jsxtqv-oxaz1234-gmailcoms-projects.vercel.app): 프로필·조회/모의 결제 내역을 포함한 정적 체험판. [배포·원격 검증 기록](docs/temporary-preview-deployment.md). 실제 카카오 로그인·서버 계정 동기화·실결제는 별도 준비 중이다.

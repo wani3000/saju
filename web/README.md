@@ -152,3 +152,7 @@ API·PG 반환·웹훅은 요청 본문을 읽는 중 16KiB를 넘으면 413, �
 `npm run start:staging -- --settings .env.staging.local`은 같은 검사 통과 후에만 127.0.0.1:4180에서 Next를 시작한다. 별도 DB 마이그레이션·호스팅/접근 제어·실제 로그인/PG·운영 복구 검증을 대신하지 않는다. 기존 로컬 실행과 생성된 결과 버전은 유지한다.
 
 실제 연결 재개는 [외부 연동 상태](../docs/external-connection-progress.md)를 확인한다. 외부 서버 시작은 저장소의 SQL 전체 적용과 체크섬을 검증하며, runtime 계정으로 누락 스키마를 자동 생성하지 않는다.
+
+## 실제 스테이징 앱 백업의 로컬 복원 검사
+
+`npm run test:hosted-restore -- --settings .env.staging.local --bootstrap .env.supabase-bootstrap.local --project nwicejxousubxiczwwkb --private-local-copy`는 지정한 연구용 서울 DB를 읽기 전용으로 백업해 자체 생성한 임시 로컬 PostgreSQL17에만 복원한다. 실제 개인정보가 포함될 수 있어 비공개 로컬 복사를 명시해야 한다. 파일 권한600·동일 snapshot·21테이블 데이터/스키마/소유자/RLS/ACL·제한/익명 권한을 확인하고 임시본을 제거한다. 원문·토큰·자격·행 해시는 출력하지 않는다. 관리자를 앱에 등록하거나 원격 복원을 수행하지 않는다. [한계·정리 실패 대응·재현 기록](../docs/hosted-backup-restore-check.md)을 따른다. Supabase auth/스토리지·장기 백업·전체 재해 복구 승인은 포함하지 않는다.

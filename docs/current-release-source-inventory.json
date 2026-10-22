@@ -76,6 +76,14 @@
       "sha256": "8101836b3f8ea67f0565d405e3b9361bab7b4270561cacedd78a46484f13f887"
     },
     {
+      "file": "web/scripts/check-hosted-restore.ts",
+      "sha256": "61d7c142f0af0bb7cde7557bc2d912cbe4bb04f37faf754e435d04a98dc83c19"
+    },
+    {
+      "file": "web/scripts/hosted-restore-target.ts",
+      "sha256": "8626e081358127e2d4d7e5cd8ce5437d6c187d6123db024e526a7632b34cf2c4"
+    },
+    {
       "file": "web/scripts/check-kakao-provider.ts",
       "sha256": "851b5142ca8b929cccafb354cb0c2eeffd7f4f41d713a28ff99fe05d37fe04ce"
     },
