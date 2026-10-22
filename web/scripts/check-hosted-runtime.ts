@@ -9,6 +9,8 @@ import { assertMigrationsApplied, type Database } from "../src/server/db";
 import * as service from "../src/server/service";
 import { erasePersonalData } from "../src/server/operations";
 import { samplePerson } from "../src/domain/model";
+import {bindIdentity,startIdentity} from "../src/server/identity";
+import {hasKakaoSession} from "../src/server/kakao-policy";
 
 let step = "settings";
 let pool: Pool | undefined, client: PoolClient | undefined, begun = false;
@@ -73,6 +75,15 @@ try {
   assert.ok(await service.publicShare(db, secret));
   await service.revokeShare(db, owner.owner, shared.id);
   assert.equal(await service.publicShare(db, secret), null);
+  step = "synthetic-returning-account";
+  const subject = randomUUID();
+  await bindIdentity(db,owner.owner,await startIdentity(db,owner.owner),subject,{displayName:'검증',avatarUrl:null});
+  const returning = await bindIdentity(db,stranger.owner,await startIdentity(db,stranger.owner),subject);
+  assert.equal(returning.owner,owner.owner);assert.equal(returning.ticket,undefined);
+  assert.equal(await hasKakaoSession(db,stranger.owner,service.hash(stranger.secret)),false);
+  const verified = await service.newSession(db,owner.owner,subject);
+  assert.equal(await hasKakaoSession(db,owner.owner,service.hash(verified.secret)),true);
+  assert.equal((await service.state(db,owner.owner)).free,'consumed');
   step = "synthetic-erasure";
   await erasePersonalData(db, owner.owner);
   await assert.rejects(service.result(db, owner.owner, comparison.id), { code: "NOT_FOUND" });
@@ -81,7 +92,8 @@ try {
   assert.equal((await client.query("SELECT count(*)::int AS n FROM accounts")).rows[0].n, before);
   console.log(JSON.stringify({ status: "passed", scope: "hosted-runtime-service-check", tlsVerified: true, restrictedRole: true,
     tablesWithRls: 21, migrationChecksumsVerified: true, ddlDenied: true, authSchemaDenied: true,
-    reading: true, ownership: true, shareRevocation: true, erasure: true, fixtureRolledBack: true,
+    reading: true, ownership: true, shareRevocation: true, returningAccount: true, guestNotAuthenticated: true,
+    erasure: true, fixtureRolledBack: true,
     browserOAuthVerified: false, paymentProviderVerified: false, hostedRestoreVerified: false }));
 } catch (error) {
   const code = (error as { code?: unknown }).code;

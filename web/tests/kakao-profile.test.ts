@@ -42,6 +42,39 @@ test('linked member/recovery/other-owner/expired sessions cannot substitute for 
  const record=await one(db,'SELECT display_name,avatar_url FROM auth_identities WHERE subject=$1',[subject]);
  assert.equal(record?.display_name,null);assert.equal(record?.avatar_url,null);
 });
+test('fresh visitors return directly to the verified account without resetting its free usage, moving data or accepting the guest session',async()=>{
+ const target=await s.newSession(db),guest=await s.newSession(db),subject=randomUUID();
+ await bindIdentity(db,target.owner,await startIdentity(db,target.owner),subject,{displayName:'예전 이름',avatarUrl:null});
+ const c=await s.createComparison(db,target.owner,{me:samplePerson(),other:samplePerson(true)},randomUUID(),true);
+ await s.runJobs(db,target.owner);
+ const attempt=await startIdentity(db,guest.owner);
+ const linked=await bindIdentity(db,guest.owner,attempt,subject,{displayName:'갱신된 이름',avatarUrl:'https://k.kakaocdn.net/profile.jpg'});
+ assert.equal(linked.owner,target.owner);assert.equal(linked.ticket,undefined);
+ assert.equal((await s.state(db,target.owner)).free,'consumed');
+ assert.ok(await s.result(db,target.owner,c.id));
+ assert.equal((await one(db,'SELECT display_name FROM auth_identities WHERE subject=$1',[subject]))?.display_name,'갱신된 이름');
+ assert.equal((await one(db,'SELECT count(*)::int AS n FROM auth_identities WHERE owner_id=$1',[guest.owner]))?.n,0);
+ assert.equal((await one(db,'SELECT count(*)::int AS n FROM merge_tickets WHERE source_id=$1',[guest.owner]))?.n,0);
+ assert.equal(await hasKakaoSession(db,guest.owner,s.hash(guest.secret)),false);
+ await assert.rejects(s.result(db,guest.owner,c.id),{code:'NOT_FOUND'});
+ const fresh=await s.newSession(db,linked.owner,subject);
+ assert.equal(await hasKakaoSession(db,target.owner,s.hash(fresh.secret)),true);
+ await assert.rejects(bindIdentity(db,guest.owner,attempt,subject),{code:'AUTH_EXPIRED'});
+});
+test('drafts, recovery accounts and prior free-use generations still require explicit account review',async()=>{
+ const target=await s.newSession(db),subject=randomUUID();
+ await bindIdentity(db,target.owner,await startIdentity(db,target.owner),subject);
+ for(const setup of [
+  (owner:string)=>s.saveDraft(db,owner,{me:samplePerson(),other:samplePerson(true)},0),
+  (owner:string)=>s.recoveryCode(db,owner),
+  (owner:string)=>db.query('UPDATE free_claims SET generation=1 WHERE owner_id=$1',[owner]),
+ ]){
+  const guest=await s.newSession(db);await setup(guest.owner);
+  const linked=await bindIdentity(db,guest.owner,await startIdentity(db,guest.owner),subject);
+  assert.ok(linked.ticket);assert.equal(linked.owner,undefined);
+  assert.equal(await hasKakaoSession(db,guest.owner,s.hash(guest.secret)),false);
+ }
+});
 test('reading/payment histories are owner scoped, retain refunds, and never include payment credentials',async()=>{
  const a=await s.newSession(db),b=await s.newSession(db),pair={me:samplePerson(),other:samplePerson(true)};
  await bindIdentity(db,a.owner,await startIdentity(db,a.owner),randomUUID());

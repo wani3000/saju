@@ -73,7 +73,7 @@
     },
     {
       "file": "web/scripts/check-hosted-runtime.ts",
-      "sha256": "27fcef3a7f555296c06d584750793c48dbc8f0f303833f41d2e4c0c12e7118fa"
+      "sha256": "8101836b3f8ea67f0565d405e3b9361bab7b4270561cacedd78a46484f13f887"
     },
     {
       "file": "web/scripts/check-kakao-provider.ts",
@@ -81,7 +81,7 @@
     },
     {
       "file": "web/src/components/App.tsx",
-      "sha256": "bd26bc62c89c882e14d636bd96ed49389d92b065895801f9ebbe1ceba10ef83b"
+      "sha256": "947d2be7e2a1f422b3f54e162d8143f49e000440367041efa787830f9184e6c1"
     },
     {
       "file": "web/src/app/globals.css",
@@ -101,7 +101,7 @@
     },
     {
       "file": "web/src/server/identity.ts",
-      "sha256": "ceed870cace099bb4cb075dd84a78317fde3c99db287eb8f4a83ecb314d22619"
+      "sha256": "98e80d575ddeb4551b357754d58007270b5df9b3a1d6451fcedc691a7c639d4e"
     },
     {
       "file": "web/src/server/service.ts",

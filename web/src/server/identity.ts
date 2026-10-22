@@ -57,6 +57,17 @@ export async function bindIdentity(
       throw new AppError("ACCOUNT_DELETED", 409, "삭제된 보관함이에요.");
     if(identity&&profile)await tx.query('UPDATE auth_identities SET display_name=$2,avatar_url=$3 WHERE subject=$1',[subject,profileName(profile.displayName),kakaoAvatar(profile.avatarUrl)]);
     if (identity && identity.owner_id !== owner) {
+      // A fresh login-required visitor has nothing to merge. Reuse the verified
+      // account without transferring its unused guest free claim or any records.
+      // Keep explicit review for drafts, history, recovery and prior free usage.
+      const emptyGuest = await one(tx, `SELECT a.id FROM accounts a JOIN free_claims f ON f.owner_id=a.id
+        WHERE a.id=$1 AND a.kind='guest' AND a.recovery_hash IS NULL
+        AND f.state='available' AND f.generation=0 AND f.comparison_id IS NULL
+        AND NOT EXISTS(SELECT 1 FROM drafts WHERE owner_id=a.id)
+        AND NOT EXISTS(SELECT 1 FROM comparisons WHERE owner_id=a.id)
+        AND NOT EXISTS(SELECT 1 FROM orders WHERE owner_id=a.id)
+        AND NOT EXISTS(SELECT 1 FROM auth_identities WHERE owner_id=a.id)`, [owner]);
+      if(emptyGuest)return {owner:identity.owner_id};
       const ticket = token();
       await tx.query(
         "INSERT INTO merge_tickets(token_hash,source_id,target_id) VALUES($1,$2,$3)",

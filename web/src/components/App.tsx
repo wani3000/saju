@@ -1106,7 +1106,7 @@ export default function App({ request: api = serverApi, preview = false, onReset
               <section className="card">
                 <h2>이 연구 체험에 대해</h2>
                 <p>
-                  운영용 로그인·궁합 규칙 감수·실결제는 아직 준비 중이에요.
+                  이곳은 연구용 체험이에요. 궁합 규칙 감수와 실결제는 아직 준비 중이에요.
                   중요한 판단에는 이 연구 결과를 사용하지 않도록 해 주세요.
                 </p>
               </section>
