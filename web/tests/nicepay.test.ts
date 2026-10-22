@@ -10,7 +10,7 @@ import { openDatabase, migrate, one, type Database } from "../src/server/db";
 import * as s from "../src/server/service";
 import * as p from "../src/server/payments";
 import { samplePerson } from "../src/domain/model";
-import {acceptNicepayWebhook} from "../src/server/nicepay-webhook";
+import {acceptNicepayWebhook,isForeignNicepayNotice} from "../src/server/nicepay-webhook";
 const tid = (o: Record<string, any>) =>
   "T" + o.id.replaceAll("-", "").slice(0, 29);
 const client = "S2_test_fixture",
@@ -53,6 +53,7 @@ function gateway(
     wrongOrder?: boolean;
     badSignature?: boolean;
     lost?: boolean;
+    unapprovedNotFound?: boolean;
   } = {},
 ) {
   let status = "ready",
@@ -61,6 +62,8 @@ function gateway(
   const transport: typeof fetch = async (url, init) => {
     const u = String(url);
     requests.push(u);
+    if(options.unapprovedNotFound && status==="ready" && init?.method!=="POST")
+      return Response.json({resultCode:"U107"},{status:404});
     assert.ok(u.startsWith("https://sandbox-api.nicepay.co.kr/"));
     if (init?.method === "POST") {
       posts++;
@@ -143,6 +146,43 @@ test("lookup binds TID to order before any approval and refuses altered signatur
   await assert.rejects(bad.provider.confirm(o, tid(o)));
   assert.equal(bad.posts(), 0);
 });
+test("verified return approves an authenticated card before lookup; generic U107 cannot approve",async()=>{
+  const o=await order(),g=gateway(o,{unapprovedNotFound:true});
+  await assert.rejects(g.provider.confirm(o,tid(o)),{message:"PAYMENT_NOT_FOUND"});
+  assert.equal(g.posts(),0);
+  const ready=await prepareNicepay(db,o.owner_id,o.id,"http://127.0.0.1:4180");
+  const nonce=new URL(ready.returnUrl).searchParams.get("state")!;
+  const f={orderId:o.id,tid:tid(o),clientId:client,amount:o.amount,authToken:"authenticated-card",
+    signature:s.hash(`authenticated-card${client}${o.amount}${secret}`),authResultCode:"0000"};
+  await assert.rejects(acceptNicepayReturn(db,nonce,{...f,signature:"0".repeat(64)},g.provider));
+  assert.equal(g.posts(),0);
+  await acceptNicepayReturn(db,nonce,f,g.provider);
+  await acceptNicepayReturn(db,nonce,f,g.provider);
+  assert.equal(g.posts(),1);
+  assert.equal((await p.ownedOrder(db,o.owner_id,o.id)).state,"paid");
+  await p.refundPayment(db,o.owner_id,o.id,g.provider);
+  assert.equal((await p.ownedOrder(db,o.owner_id,o.id)).state,"refunded");
+});
+test("authenticated approval rejects a signed receipt for another order without granting access",async()=>{
+  const o=await order(),g=gateway(o,{unapprovedNotFound:true,wrongOrder:true});
+  const ready=await prepareNicepay(db,o.owner_id,o.id,"http://127.0.0.1:4180"),nonce=new URL(ready.returnUrl).searchParams.get("state")!;
+  const f={orderId:o.id,tid:tid(o),clientId:client,amount:o.amount,authToken:"scoped-return",
+    signature:s.hash(`scoped-return${client}${o.amount}${secret}`),authResultCode:"0000"};
+  await assert.rejects(acceptNicepayReturn(db,nonce,f,g.provider),{code:"CONFIRMATION_UNKNOWN"});
+  assert.equal(g.posts(),1);
+  assert.equal((await p.ownedOrder(db,o.owner_id,o.id)).state,"confirmation_unknown");
+  await assert.rejects(s.result(db,o.owner_id,o.comparison_id),{code:"NOT_FOUND"});
+});
+test("lost initial approval is recovered by inquiry on the duplicate signed return",async()=>{
+  const o=await order(),g=gateway(o,{unapprovedNotFound:true,lost:true});
+  const ready=await prepareNicepay(db,o.owner_id,o.id,"http://127.0.0.1:4180"),nonce=new URL(ready.returnUrl).searchParams.get("state")!;
+  const f={orderId:o.id,tid:tid(o),clientId:client,amount:o.amount,authToken:"lost-return",
+    signature:s.hash(`lost-return${client}${o.amount}${secret}`),authResultCode:"0000"};
+  await assert.rejects(acceptNicepayReturn(db,nonce,f,g.provider),{code:"CONFIRMATION_UNKNOWN"});
+  await acceptNicepayReturn(db,nonce,f,g.provider);
+  assert.equal(g.posts(),1);
+  assert.equal((await p.ownedOrder(db,o.owner_id,o.id)).state,"paid");
+});
 test("lost NICEPAY approval recovers by signed inquiry without another charge", async () => {
   const o = await order(),
     g = gateway(o, { lost: true });
@@ -166,9 +206,19 @@ test("shared sandbox acknowledges signed foreign orders without provider calls o
   assert.equal(await acceptNicepayWebhook(db,notification(randomUUID()),foreignProvider),"ignored");
   assert.deepEqual(await one(db,"SELECT count(*)::int AS n FROM payment_events"),before);
 });
-test("malformed and forged webhook notifications are rejected, including foreign orders",async()=>{
-  for(const payload of [null,{},notification("x","x",-1),{...notification("ebook-test"),signature:"0".repeat(64)}])
+test("malformed notices and forged UUID transactions are rejected",async()=>{
+  for(const payload of [null,{},notification("x","x",-1),{...notification(randomUUID()),signature:"0".repeat(64)}])
     await assert.rejects(acceptNicepayWebhook(db,payload),{code:"INVALID_WEBHOOK",status:400});
+});
+test("registration sample with a foreign order is discarded before any DB or provider access",async()=>{
+  const probe={...notification("registration-sample"),signature:"0".repeat(64)};
+  assert.equal(isForeignNicepayNotice(probe),true);
+  assert.equal(await acceptNicepayWebhook(undefined as unknown as Database,probe),"ignored");
+  assert.equal(isForeignNicepayNotice({...probe,orderId:randomUUID()}),false);
+  for(const invalid of [null,{}, {...probe,amount:-1},{...probe,signature:"invalid"}]){
+    assert.equal(isForeignNicepayNotice(invalid),false);
+    await assert.rejects(acceptNicepayWebhook(undefined as unknown as Database,invalid),{code:"INVALID_WEBHOOK"});
+  }
 });
 test("webhook uses queried payment truth; reordered duplicates are one event and refund revokes result",async()=>{
   const o=await order(),g=gateway(o);

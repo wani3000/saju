@@ -29,7 +29,8 @@
     "narration:summarize": "tsx scripts/summarize-narration.ts",
     "narration:audit": "npm run engine && tsx scripts/audit-narration-preparation.ts",
     "release:inventory": "npm run engine && tsx scripts/release-source-inventory.ts",
-    "test:kakao": "node scripts/check-journey.mjs --kakao-required"
+    "test:kakao": "node scripts/check-journey.mjs --kakao-required",
+    "test:nicepay": "node scripts/check-journey.mjs --nicepay-sandbox"
   },
   "dependencies": {
     "@electric-sql/pglite": "0.5.9",

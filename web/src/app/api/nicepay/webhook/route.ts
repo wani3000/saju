@@ -2,7 +2,7 @@ import { readRequestBody } from "@/server/request-body";
 import { AppError } from "@/domain/model";
 import { database } from "@/server/db";
 import { rateLimit } from "@/server/service";
-import { acceptNicepayWebhook,verifyNicepayWebhook } from "@/server/nicepay-webhook";
+import { acceptNicepayWebhook,isForeignNicepayNotice,verifyNicepayWebhook } from "@/server/nicepay-webhook";
 export const runtime = "nodejs";
 export async function POST(req: Request) {
   if (process.env.PAYMENT_PROVIDER !== "nicepay-test")
@@ -11,6 +11,9 @@ export async function POST(req: Request) {
     const raw = await readRequestBody(req);
     let input:unknown;
     try{input=JSON.parse(raw);}catch{throw new AppError("INVALID_WEBHOOK",400);}
+    if(isForeignNicepayNotice(input))return new Response("OK",{
+      headers:{"Content-Type":"text/html","Cache-Control":"no-store"},
+    });
     verifyNicepayWebhook(input);
     const db = await database();
     await rateLimit(db, "nicepay-webhook", 120);

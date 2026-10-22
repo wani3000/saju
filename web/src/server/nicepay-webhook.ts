@@ -13,6 +13,13 @@ const notification = z.object({
   ediDate:z.string().min(1).max(40),
   signature:z.string().regex(/^[a-fA-F0-9]{64}$/),
 });
+export function isForeignNicepayNotice(input:unknown) {
+  const parsed=notification.safeParse(input);
+  // Registration sends a sample notice with a foreign, non-UUID order number.
+  // Such a number can never identify one of our orders. Drop it without any
+  // payment lookup or mutation; OK acknowledges disposal, not authentication.
+  return parsed.success && !z.uuid().safeParse(parsed.data.orderId).success;
+}
 export function verifyNicepayWebhook(input:unknown) {
   const parsed=notification.safeParse(input);
   if(!parsed.success)throw new AppError("INVALID_WEBHOOK",400);
@@ -22,10 +29,10 @@ export function verifyNicepayWebhook(input:unknown) {
   return f;
 }
 export async function acceptNicepayWebhook(db:Database, input:unknown, provider?:Provider) {
+  if(isForeignNicepayNotice(input))return "ignored" as const;
   const f=verifyNicepayWebhook(input);
-  // Acknowledge signed foreign transactions without retries, saving them, or
-  // querying/cancelling them at the gateway. Never use an unverified payload.
-  if(!z.uuid().safeParse(f.orderId).success)return "ignored" as const;
+  // UUID notices must be authenticated before querying our database. A signed
+  // foreign UUID is ignored only after confirming that it is not our order.
   const order=await one(db,"SELECT * FROM orders WHERE id=$1 AND provider='nicepay-test'",[f.orderId]);
   if(!order)return "ignored" as const;
   if(order.amount!==f.amount || (order.payment_key && order.payment_key!==f.tid))

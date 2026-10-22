@@ -117,11 +117,39 @@
     },
     {
       "file": "web/src/server/nicepay-webhook.ts",
-      "sha256": "3db711844a48453d19cb8a5e2e21ffb259431bebd42f79810f5726bc65b5ed71"
+      "sha256": "6fff01a16c386e8cbfd71f914755a567bed8c1826962eccdefd98fdaea45aa65"
     },
     {
       "file": "web/src/app/api/nicepay/webhook/route.ts",
-      "sha256": "9e79905985374a524ed4731784acfaa7e80c9c43d3f408a97eba3663ef0f36e7"
+      "sha256": "dcffe99b0614b7847cbc6a792e388eaae8ee8d117dc346b5055090bdcf9054ce"
+    },
+    {
+      "file": "web/src/server/nicepay.ts",
+      "sha256": "4cc19efc91948a071362422d5e23fbb00af22c1891e134d9d1b96af11f795b10"
+    },
+    {
+      "file": "web/src/server/nicepay-checkout.ts",
+      "sha256": "14a7dec1414a4c5d6d5970139e2f9dda8eaff6b1aca59fd347ccf72b83d3864d"
+    },
+    {
+      "file": "web/src/app/api/nicepay/return/route.ts",
+      "sha256": "75908246343bf99711a5951479d533b9b09243aeb48498a8968d0ea98d6dd9c2"
+    },
+    {
+      "file": "web/scripts/check-nicepay-roundtrip.ts",
+      "sha256": "49c16349e684c1929bc6fe02f264e1c3149546b361753c24c5e9b62e7d962b16"
+    },
+    {
+      "file": "web/scripts/check-journey.mjs",
+      "sha256": "181598f5faf1f462407dfafda41b84e60fe130e9f5561c3691d5612fa3a658b5"
+    },
+    {
+      "file": "web/tests/nicepay.test.ts",
+      "sha256": "f78873f66c2174fa077aa76f1975fb67f53ad75109172396bd47bbc0766703dd"
+    },
+    {
+      "file": "web/tests/nicepay-http.mjs",
+      "sha256": "fc84939a13cf2a1d6950879f2ffea53d75a207e7c0750658c6be0aaea69fc6ae"
     },
     {
       "file": "web/src/app/api/[...path]/route.ts",

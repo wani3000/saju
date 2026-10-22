@@ -7,6 +7,8 @@ import { spawn } from "node:child_process";
 import { createServer } from "node:net";
 import { once } from "node:events";
 const required=process.argv.includes("--kakao-required");
+const nicepay=process.argv.includes("--nicepay-sandbox");
+if(required&&nicepay)throw new Error("CHOOSE_ONE_CHECK_SCOPE");
 const web = fileURLToPath(new URL("../",import.meta.url));
 await access(path.join(web,".next/BUILD_ID"));
 const temp = await mkdtemp(path.join(tmpdir(),"saju-journey-"));
@@ -17,6 +19,7 @@ await new Promise((resolve,reject)=>portServer.close(e=>e?reject(e):resolve()));
 const origin = `http://127.0.0.1:${port}`;
 const env = Object.fromEntries(["PATH","HOME","TMPDIR","TEMP","SystemRoot","CI","PLAYWRIGHT_BROWSERS_PATH"].filter(k=>process.env[k]!==undefined).map(k=>[k,process.env[k]]));
 Object.assign(env,{NODE_ENV:"production",NEXT_TELEMETRY_DISABLED:"1",SAJU_MODE:"research",SAJU_AUTH_MODE:required?'kakao-required':'local-demo',APP_ORIGIN:origin,PAYMENT_PROVIDER:"mock",SAJU_LOCAL_RUN:"1",TEST_ORIGIN:origin});
+if(nicepay)Object.assign(env,{PAYMENT_PROVIDER:"nicepay-test",NICEPAY_MODE:"sandbox",NICEPAY_CLIENT_KEY:"S2_http_fixture",NICEPAY_SECRET_KEY:"http-synthetic-secret"});
 let server;
 let serverLog = "";
 let active;
@@ -42,10 +45,10 @@ try {
     await new Promise(resolve=>setTimeout(resolve,250));
   }
   if(!ready)throw new Error("Isolated server readiness timeout");
-  console.log("Isolated local checks: clean mock environment, temporary DB, disposable browser accounts.");
-  await run([required?"tests/kakao-required-http.mjs":"tests/http.mjs"]);
-  await run(["node_modules/@playwright/test/cli.js","test"]);
-  console.log("PASS: local HTTP and mobile browser journeys; no production readiness is implied.");
+  console.log("Isolated local checks: synthetic credentials, temporary DB, disposable accounts.");
+  await run([nicepay?"tests/nicepay-http.mjs":required?"tests/kakao-required-http.mjs":"tests/http.mjs"]);
+  if(!nicepay)await run(["node_modules/@playwright/test/cli.js","test"]);
+  console.log(nicepay?"PASS: local NICEPAY HTTP guards; no external payment or production readiness is implied.":"PASS: local HTTP and mobile browser journeys; no production readiness is implied.");
 } catch(error) {
   console.error("LOCAL_JOURNEY_FAILED",error.message);
   // Only this isolated server sees synthetic inputs; service credentials were not inherited.

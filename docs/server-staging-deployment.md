@@ -14,7 +14,7 @@
 
 첫 서버 배포 `dpl_CJKtUGfjiwqdBTcL3EjZhaK6zpaQ` / 소스 `9b02143`에서 실제 최초 로그인을 확인했다. 아래 재로그인 불편을 수정한 `0e1f844` / `dpl_EVNv3APFZ9a9ARRbSCH2AunidsVX`에서 재로그인을 다시 검증했다. 후속 `7df465e`는 공유 테스트 상점 웹훅 보완이며 기존 프로필의 새로고침 유지와 익명/오류 응답을 확인했다. SQL 스키마 변경은 없다.
 
-## 설정과 접근 범위
+## 최초 설정과 접근 범위
 
 전용 프로젝트의 production target에 `SAJU_MODE=research`, `SAJU_AUTH_MODE=kakao-required`, `APP_ORIGIN`, `ALLOW_REMOTE_TEST=true`, `DATABASE_URL`, `SUPABASE_URL`, `SUPABASE_PUBLISHABLE_KEY`, `PAYMENT_PROVIDER=nicepay-test`, `NICEPAY_MODE=sandbox`의9개만 등록했다. DB URL은 sensitive 타입·제한 `saju_server` 계정이며 bootstrap 관리자 자격을 올리지 않았다. 로컬 비밀/호스팅 설정은 Git 제외·권한600으로 유지한다. 실제 함수의 filePathMap에서 공개 CA와 마이그레이션001~004 포함을 확인했다.
 
@@ -61,3 +61,8 @@ NICEPAY 결제/취소·실제 다른 기기/카카오 인앱 브라우저·프�
 [기존 NICEPAY 테스트 상점 검수](nicepay-shared-sandbox-review.md)의 다른 서비스 주문 무시·위조 거절·현재 상태 대사·503 재시도 보완을 소스7df465e로 재배포했다. 웹161개·HTTP/모바일28개·Next/Vercel 빌드·소스 현황/문서 검사 통과. 실제 배포는 READY·서울icn1·canonical alias 일치를 확인했다. 익명 랜딩200/no-store, 개인 state401/no-store, 잘못된 JSON 웹훅400/no-store를 확인했다. 실제 브라우저에서 기존 카카오 프로필의 새로고침 유지도 확인했다. 기존 로그인 왕복 검증과 이번 유지 확인은 구분한다.
 
 테스트 키2개 저장과 웹훅 등록은 사용자 확인 대기 상태다. 서버 설정은 기존9개이며 키를 넣거나 NICEPAY API를 호출하지 않았다. 실제 결제 승인·취소·외부 웹훅 통보 검증으로 표시하지 않는다.
+
+
+## 2026-10-22 실제 S2 키 연결 후 배포
+
+기존 테스트 키2개를 사용자 승인 후 sensitive 환경에 추가해 서버 설정은11개이며 staging 사전 검사 누락0개다. 관리자 DB 자격이나 운영 R키는 배포하지 않았다. 실제 현대카드 인증에서 드러난 최초 승인 전 조회 오류와 웹훅 등록 샘플 처리를 수정했다. NICEPAY에 신용카드 웹훅을 저장하고 관리자 TEST호출 성공을 확인했다. [실제 승인/전액 취소와 재검증 범위](nicepay-shared-sandbox-review.md)를 따르며 research mode·실과금 차단은 유지한다. 아래 후속 배포 기록을 현재 기준으로 읽는다.

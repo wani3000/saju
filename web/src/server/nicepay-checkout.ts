@@ -2,7 +2,7 @@ import { z } from "zod";
 import { one, type Database } from "./db";
 import { hash, token, lockOwner } from "./service";
 import { AppError } from "../domain/model";
-import { nicepayCredentials, signatureMatches } from "./nicepay";
+import { NicepayTestProvider, nicepayCredentials, signatureMatches } from "./nicepay";
 import { confirmPayment, type Provider } from "./payments";
 export async function prepareNicepay(
   db: Database,
@@ -74,6 +74,12 @@ export async function acceptNicepayReturn(
     )
   )
     throw new AppError("INVALID_RETURN", 400);
-  await confirmPayment(db, o.owner_id, o.id, f.tid, f.amount, provider);
+  // Approval precedes transaction inquiry for authenticated card payments.
+  // Keep this capability local to the fully verified return; ordinary payment
+  // APIs and webhook/reconciliation providers retain inquiry-only initiation.
+  const gateway=provider instanceof NicepayTestProvider
+    ? provider.forAuthenticatedReturn(o.id,f.tid)
+    : provider??new NicepayTestProvider(client,secret).forAuthenticatedReturn(o.id,f.tid);
+  await confirmPayment(db, o.owner_id, o.id, f.tid, f.amount, gateway);
   // Keep this bounded nonce until expiry to allow duplicate callbacks to finish idempotently.
 }
