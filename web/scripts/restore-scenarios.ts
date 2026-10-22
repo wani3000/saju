@@ -3,7 +3,7 @@ import assert from "node:assert/strict";
 import { readFile, writeFile } from "node:fs/promises";
 import { createHash, randomUUID } from "node:crypto";
 import path from "node:path";
-import { openDatabase, one, type Database } from "../src/server/db";
+import { openDatabase, one, assertMigrationsApplied, type Database } from "../src/server/db";
 import * as s from "../src/server/service";
 import * as p from "../src/server/payments";
 import {bindIdentity,startIdentity} from "../src/server/identity";
@@ -75,6 +75,7 @@ try {
     console.log(`Restore fixture: ${Object.keys(fixture.tables).length} tables fingerprinted; synthetic data only.`);
   } else {
     const f = JSON.parse(await readFile(file, "utf8"));
+    await assertMigrationsApplied(db);
     assert.deepEqual(await manifest(db), f.tables, "RESTORED_TABLE_DATA_MISMATCH");
     // pg_restore must preserve ACLs/RLS; the application never runs as the DB owner.
     await assert.rejects(db.query("CREATE TABLE forbidden_restore(id int)"), { code: "42501" });

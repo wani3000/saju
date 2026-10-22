@@ -56,6 +56,14 @@
   "databaseConnections": 0,
   "sourceArtifacts": [
     {
+      "file": "web/src/server/db.ts",
+      "sha256": "b6ab54db7b9a40cabf0a14a3f146b37f3da422d3086bdf8fb9f1b38ff11dd7fc"
+    },
+    {
+      "file": "web/staging.env.example",
+      "sha256": "ce3e8ae06d533ac3e622ee2c273f791a8d6f49e43f73d936a15818c2b2fa585d"
+    },
+    {
       "file": "web/src/components/App.tsx",
       "sha256": "1a490b13e19568faa84da91901e75ea6273480e9f91cab428127a4261acd7168"
     },

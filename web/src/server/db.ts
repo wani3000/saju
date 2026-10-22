@@ -84,19 +84,32 @@ export async function migrate(db: Database) {
   });
 }
 const globalDb = globalThis as unknown as { sajuDb?: Promise<Database> };
+// Runtime credentials may read the migration ledger, but never run schema changes.
+// Checking only 003 misses the profile/session columns introduced by 004.
+export async function assertMigrationsApplied(db: Sql) {
+  let applied: Row[];
+  try {
+    applied = (await db.query("SELECT name,checksum FROM schema_migrations")).rows;
+  } catch (error) {
+    if ((error as {code?:string}).code === "42P01") throw new Error("RUN_MIGRATIONS_FIRST");
+    throw error;
+  }
+  const dir = path.join(process.cwd(), "db/migrations");
+  const files = (await readdir(dir)).filter(f => /^\d+.*\.sql$/.test(f)).sort();
+  for (const file of files) {
+    const row = applied.find(r => r.name === file);
+    if (!row) throw new Error("RUN_MIGRATIONS_FIRST");
+    const checksum = createHash("sha256").update(await readFile(path.join(dir,file),"utf8")).digest("hex");
+    if (row.checksum !== checksum) throw new Error("MIGRATION_CHECKSUM_CHANGED");
+  }
+}
 export function database() {
   return (globalDb.sajuDb ??= (async () => {
     assertMode();
     const db = await openDatabase();
     try {
       if (!process.env.DATABASE_URL) await migrate(db);
-      else if (
-        !(await one(
-          db,
-          "SELECT name FROM schema_migrations WHERE name='003_server_access.sql'",
-        ))
-      )
-        throw new Error("RUN_MIGRATIONS_FIRST");
+      else await assertMigrationsApplied(db);
       return db;
     } catch (error) {
       // Initialization can fail before the caller receives a handle to close.

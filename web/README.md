@@ -148,3 +148,5 @@ API·PG 반환·웹훅은 요청 본문을 읽는 중 16KiB를 넘으면 413, �
 [1→3→4 실행 안내](../docs/launch-sequence-1-3-4.md)에 따라 별도 테스트 설정을 사용한다. `staging.env.example`을 Git 제외 `.env.staging.local`에 복사하고 비공개로 채운다. `npm run check:staging -- --settings .env.staging.local`은 네트워크/DB를 건드리지 않고 누락·잘못된 형식/운영키·TLS 해제·공개 secret 변수를 검사한다. 통과는 실제 연동 성공이 아니며 미준비는 종료2, 파일/인자 오류는 값 없이 종료1이다.
 
 `npm run start:staging -- --settings .env.staging.local`은 같은 검사 통과 후에만 127.0.0.1:4180에서 Next를 시작한다. 별도 DB 마이그레이션·호스팅/접근 제어·실제 로그인/PG·운영 복구 검증을 대신하지 않는다. 기존 로컬 실행과 생성된 결과 버전은 유지한다.
+
+실제 연결 재개는 [외부 연동 상태](../docs/external-connection-progress.md)를 확인한다. 외부 서버 시작은 저장소의 SQL 전체 적용과 체크섬을 검증하며, runtime 계정으로 누락 스키마를 자동 생성하지 않는다.

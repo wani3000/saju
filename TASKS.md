@@ -425,3 +425,7 @@ IANA 2025b 원본 재컴파일로 28개 전환과 1,918개 입력을 재현했�
 ## 2026-10-22 프로필 체험판 공개 갱신
 
 앱 소스55d065e를 전용 chunbae-preview의 preview에 배포했다. [공개 주소/검증 기록](docs/temporary-preview-deployment.md)의 Ready·익명HTTP200·JS/CSS/SVG해시·원격 프로필/조회/모의 결제 취소 흐름을 확인했다. 실제 카카오 로그인과 외부 탈퇴/결제 준비를 완료로 바꾸지 않는다.
+
+## 2026-10-22 실제 외부 연동 착수
+
+[현재 연동 상태](docs/external-connection-progress.md). 서버용 Vercel chunbae-staging 생성/도메인 소유 확인/로컬 연결을 완료했다. 사용자 본인 로그인 전이므로 카카오 앱/Supabase 프로젝트/사주 PG 키와 거래는 아직 생성·확인하지 않았다. 템플릿 모드 누락과 외부 DB의004 미검사 문제를 수정했고 웹150개·빌드/타입·제한 역할/별도 PostgreSQL 복원 통과. 실제 결제 전환과 정식 출시는 완료로 바꾸지 않는다.

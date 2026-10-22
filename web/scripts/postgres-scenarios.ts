@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import { randomUUID } from "node:crypto";
 import { spawnSync } from "node:child_process";
-import { openDatabase, migrate, one } from "../src/server/db";
+import { openDatabase, migrate, one, assertMigrationsApplied } from "../src/server/db";
 import * as s from "../src/server/service";
 import * as p from "../src/server/payments";
 import { erasePersonalData, health } from "../src/server/operations";
@@ -60,6 +60,7 @@ try {
   const a = await openDatabase(),
     b = await openDatabase();
   try {
+    await assertMigrationsApplied(a);
     await assert.rejects(a.query("CREATE TABLE forbidden(id int)"), {
       code: "42501",
     });

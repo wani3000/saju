@@ -1,7 +1,8 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { spawnSync } from "node:child_process";
-import { mkdtempSync, rmSync, writeFileSync } from "node:fs";
+import { mkdtempSync, rmSync, writeFileSync, readFileSync } from "node:fs";
+import {parseEnv} from "node:util";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { stagingPreflight } from "../src/server/staging-preflight";
@@ -57,4 +58,12 @@ test("staging CLI parses a named file as data, redacts failures, and never start
     const failure=run(["--settings",join(dir,"canary-private-secret")]);assert.equal(failure.status,1);assert.equal(JSON.parse(failure.stdout).code,"STAGING_CHECK_FAILED");
     for(const result of [check,block,failure]) assert.ok(!(result.stdout+result.stderr).includes("canary-private"));
   } finally {rmSync(dir,{recursive:true,force:true});}
+});
+
+test("checked-in staging template retains fixed authentication/payment setup while secrets stay empty",()=>{
+ const template=parseEnv(readFileSync(new URL('../staging.env.example',import.meta.url),'utf8'));
+ assert.equal(template.SAJU_AUTH_MODE,'kakao-required');
+ const fixed=Object.fromEntries(Object.entries(template).filter(([,value])=>value));
+ assert.equal(stagingPreflight({...configured(),...fixed}).status,'configuration-valid-unverified');
+ for(const name of ['DATABASE_URL','SUPABASE_PUBLISHABLE_KEY','NICEPAY_CLIENT_KEY','NICEPAY_SECRET_KEY'])assert.equal(template[name],'');
 });
