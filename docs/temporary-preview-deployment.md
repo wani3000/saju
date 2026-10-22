@@ -1,3 +1,18 @@
+# 최신: 입력 간소화와 성격 한 문장 요약 · 2026-10-22
+
+- 공개 체험: https://chunbae-preview-5j5jsxtqv-oxaz1234-gmailcoms-projects.vercel.app
+- 앱 소스 `a1be727`, 배포 `dpl_A5wkU4pcMRQ6YQcAgzt1HxzH22br`, chunbae-preview / preview / Ready. 12:22 KST. 별도 서버 staging과 운영 대상은 배포하지 않았다.
+- 가상 정보 채우기·공통 입력 오류 배너·확인 화면 무료/체험 설명 및 동의 칸 제거. 오류는 해당 필드 아래 빨간 도움말로 표시한다. 신규 시·분은 빈칸이며 시간 모름은 직접 선택한다. 저장한 선택은 보존한다.
+- 사주표 아래는 저장된 v8의 상황별 성향 전부를 짧은 일상 단어로 요약한다. 첫 항목이나 빈도를 대표 성격으로 삼지 않는다. 이전 버전은 저장 문구를 사용하며 새 풀이를 계산하지 않는다.
+- 새 버튼 요청은 체크박스 동의로 기록하지 않는다. 구형 명시적 동의 기록과 요청 중복 방지·무료권·결제/결과 소유권 보호를 유지한다.
+- 웹152개·타입·Next/정적 빌드·로컬 HTTP/모바일28개·카카오 필수 HTTP/모바일2개 통과. 별도 PostgreSQL21테이블 복원/권한 검증 통과. 실제 외부 OAuth·PG·운영 승인과 구분한다.
+- 익명 HTTP200/리디렉션 없음·noindex·CSP connect-src none 유지, 배포 JS/CSS SHA-256이 로컬 정적 출력과 일치한다.
+- Chrome390px에서 필드별 오류, 초기 시각 빈칸/선택 해제, 실제 시각 및 시간 모름 선택→확인→결과 요약을 직접 확인했다. 별도 원격 Chromium320/390px에서 같은 여정과 새로고침 보존·가로 넘침 없음·pageerror0건을 검증했다. 모두 합성 정보다.
+- [필드 오류390px](../web/qa-evidence/chunbae-input-errors-390.jpg) · [사주표 성격 요약390px](../web/qa-evidence/chunbae-personality-overview-390.jpg).
+- 서버 없는 공개 데모이며 실제 카카오 로그인과 실결제는 아직 연결 전이다.
+
+---
+
 # 최신: 프로필·사주 조회/결제 내역 · 2026-10-22
 
 - 공개 체험: https://chunbae-preview-feqn59usz-oxaz1234-gmailcoms-projects.vercel.app

@@ -6,7 +6,7 @@
 
 - 기준일: 2026-10-22.
 - [실제 외부 연동 착수 상태](docs/external-connection-progress.md): 별도 서버용 chunbae-staging을 준비했다. 카카오/Supabase/NICEPAY 본인 로그인 대기이며, 앱 생성·실제 OAuth·실결제는 아직 미완료다.
-- [현재 공개 테스트 링크](https://chunbae-preview-feqn59usz-oxaz1234-gmailcoms-projects.vercel.app): 프로필·조회/모의 결제 내역을 포함한 정적 체험판. [배포·원격 검증 기록](docs/temporary-preview-deployment.md). 실제 카카오 로그인·서버 계정 동기화·실결제는 별도 준비 중이다.
+- [현재 공개 테스트 링크](https://chunbae-preview-5j5jsxtqv-oxaz1234-gmailcoms-projects.vercel.app): 프로필·조회/모의 결제 내역을 포함한 정적 체험판. [배포·원격 검증 기록](docs/temporary-preview-deployment.md). 실제 카카오 로그인·서버 계정 동기화·실결제는 별도 준비 중이다.
 - 프로필·로그인 후속: [카카오 검수와 조회/결제 내역](docs/kakao-profile-history-review.md). 우측 프로필·내역 두 탭, 로그인 전 서버 차단과 검증 세션 구분을 구현했다. 정적 체험은 로그인 없는 데모이며 실제 OAuth·연결 해제/회원 탈퇴·외부 결제는 미완료다.
 - 새 원전 후속: [가화와 진화 구분](docs/false-transformation-review.md). 1947년 PDF384~386쪽과 가화2명조를 대조한 종합 연구 v4, 전체268개 통과. 일반 강약·중화 임계값과 합화 최종 충분조건·공개 v8 승격은 보류한다.
 - 풀이·출시 후속: [조건 범위와 보류 사유](docs/condition-and-launch-followup.md)를 보완한 종합 연구 v3. 연구264개·웹143개·타입/빌드·모바일26개·로컬 PostgreSQL 21테이블 복원 통과. [현재 소스 현황](docs/current-release-source-inventory.json)은 공개 풀이 v8과 이전 v2 감수 자료를 구분하며 외부/운영/전문 승인7개 미완료를 유지한다.
