@@ -6,7 +6,7 @@
 
 - Chrome에서 Kakao Developers를 열었으나 계정 로그인 필요. 저장된 로그인으로 진입하지 못해 공식 카카오 QR 인증 화면을 열었다. **개발자 앱은 아직 생성되지 않았다.** 본인 인증 뒤 ‘김춘배 훈장’ 전용 앱 생성과 최소 프로필 동의·콜백 설정을 이어간다.
 - Supabase Dashboard도 로그인 필요. GitHub 로그인을 시도했으나 GitHub 계정 입력 단계다. Supabase 연결 기능은 제안했지만 설치·인증 완료는 확인되지 않았다. 새 프로젝트/DB/역할/공급자는 생성되지 않았다.
-- NICEPAY 관리자는 계정 입력 단계. 전자책 `Documents/Codex/2026-07-18/pc/website`의 코드와 과거 온보딩 기록에서 같은 결제사임을 재확인했다. 현재 사주용 테스트 키·운영 계약 완료·새 거래는 확인되지 않았으며 전자책 운영 키/DB를 복사하지 않았다.
+- NICEPAY 관리자는 계정 입력 단계. 전자책 `Documents/Codex/2026-07-18/pc/website`의 코드와 과거 온보딩 기록에서 같은 결제사임을 재확인했다. 현재 사주용 테스트 키·운영 계약 완료·새 거래는 확인되지 않았으며 전자책 운영 키/DB를 복사하지 않았다. 2026-10-22 추가 조사에서는 해당 전자책 Vercel에 NICEPAY 변수4개가 등록된 사실을 확인했다. 아래 추가 조사 기록이 과거의 설정 누락 기록보다 우선한다.
 - 이전 커밋8d05804의 GitHub Research/Web/Prototype validation은 모두 성공했다.
 
 ## 실제로 준비한 서버 대상
@@ -39,3 +39,28 @@
 2. 전용 PostgreSQL 마이그레이션/제한 역할을 적용한 뒤 서버 staging 배포·접근·쿠키·실제 OAuth 왕복·기기 변경과 내역 소유권을 검사한다.
 3. NICEPAY 사주 테스트 상점의 Server 승인/Basic 키로 승인·조회·중복 콜백·취소·권한 회수와 웹훅을 검증한다. 공식 문서는 샌드박스와 운영 키/응답을 구분한다. [테스트 상점](https://github.com/nicepayments/nicepay-manual/blob/main/common/test.md), [키 설정](https://github.com/nicepayments/nicepay-manual/blob/main/common/api.md).
 4. 운영 결제는 상점/서비스 심사·계약·정책·원고/계산 승인과 운영 키가 확인된 뒤 별도 전환한다. 지금 코드의 `research`/테스트 PG 제한을 제거하지 않았다. 실제 카카오 연결 해제/탈퇴 및 외부 웹훅도 [기존 검수](kakao-profile-history-review.md)의 미완료 항목으로 유지한다.
+
+## 2026-10-22 Danielsbook 전자책 소스 재확인
+
+사용자가 ‘다니엘의 서점 / Danielsbook’의 코드·GitHub·로컬 파일을 확인하도록 요청했다. 확인한 전자책 프로젝트의 실제 코드상 이름은 **다니엘의 노트**, 운영 도메인은 `danielsnote.com`이다. ‘Danielsbook’이라는 별도 저장소·프로젝트와 같은 서비스인지는 이름만으로 확정하지 않는다.
+
+- 로컬: `/Users/chulwan/Documents/Codex/2026-07-18/pc/website`.
+- GitHub: [wani3000/book](https://github.com/wani3000/book). 로컬 HEAD와 원격 main은 `82a95ee7d8d4ec38b946c9a0d069a98e4a652d09`로 일치한다. 기존 작업자의 미커밋 주문/라이브러리 변경3파일은 수정하지 않았다.
+- Vercel: `oxaz1234-gmailcoms-projects/danielsnote`, 프로젝트 `prj_4LQYXek8dd6LhL71a1FXYuAn4L4h`. 도메인 루트 HTTP200과 현재 문서 제목 ‘다니엘의 노트’를 확인했다.
+- NICEPAY 모듈: `app/nicepay/server.ts`의 Basic 인증·요청/응답 SHA256 서명·승인/조회/전액 취소, `app/api/nicepay/ready/route.ts`의 로그인/서버 상품 가격/주문 생성, `app/api/nicepay/return/route.ts`의 인증 서명/주문 일치/승인/주문 저장 실패 복구, `app/refunds/process.ts`의 환불/대사/열람 권한 회수. 클라이언트는 공식 `AUTHNICE.requestPay` SDK를 사용한다.
+- 현재 Production 변수 이름 조회에서 **NEXT_PUBLIC_NICEPAY_CLIENT_KEY, NICEPAY_SECRET_KEY, NEXT_PUBLIC_NICEPAY_ENABLED, NICEPAY_MODE의4개 등록을 확인했다.** 8월 인계 문서의 ‘활성 플래그·모드 미설정’을 현재 사실로 재사용하지 않는다. 키 값은 열람/복사하지 않았다. 두 비밀이 아닌 플래그의 개별 조회도 값이 생략되어 활성 여부와 sandbox/production 값은 확정하지 못했다.
+- 과거 인계 문서는19,000원 승인·전액 취소·권한 회수 이력을 기록한다. 일부 구절은 테스트 상점, 일부는 운영 스토어라고 적혀 있어 해당 문서만으로 실운영 승인·현 계약 완료를 확정하지 않는다. 이번에는 실제 주문·승인·조회 거래·환불을 실행하지 않았다.
+
+### 사주 코드와 대조
+
+이미 `web/src/server/nicepay.ts`, `nicepay-checkout.ts`, `web/src/components/nicepay-client.ts`에 같은 결제사의 Server 승인/Basic·서명 검증·조회·전액 취소 흐름이 구현돼 있다. 전자책 모듈을 통째로 복사할 필요는 없다. 전자책의 Turso 주문/PDF 권한은 사주 PostgreSQL 주문/이용권과 구조가 다르며 공유하지 않는다.
+
+| 전자책 설정 | 사주 설정/차이 |
+|---|---|
+| NEXT_PUBLIC_NICEPAY_CLIENT_KEY | NICEPAY_CLIENT_KEY; 사주는 서버가 결제 준비 응답에 필요한 공개 clientId만 전달 |
+| NICEPAY_SECRET_KEY | 같은 이름의 서버 비밀 설정; 실제 값의 재사용 여부는 미확인 |
+| NICEPAY_MODE=sandbox 또는 production | 현재 사주는 sandbox 및 S2 서버 승인 키만 허용 |
+| NEXT_PUBLIC_NICEPAY_ENABLED=true | 사주는 PAYMENT_PROVIDER=nicepay-test로 공급자 선택 |
+| /api/nicepay/return | 사주는 같은 경로에 만료되는 state nonce를 추가하여 주문과 연결 |
+
+따라서 ‘전자책에 설정이 전혀 없다’는 결론을 철회한다. 현재 남은 것은 사주 전용 환경에 사용할 테스트 설정 확인·서버 DB/인증 연결·실제 테스트 왕복 검증이다. 전자책 키를 운영/테스트 구분 없이 복사하거나 사주의 테스트 보호 장치를 해제하지 않았다.
