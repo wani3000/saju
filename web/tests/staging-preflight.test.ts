@@ -36,6 +36,15 @@ test("legacy anon keys remain supported but service-role keys cannot be used for
   assert.equal(stagingPreflight({...configured(),SUPABASE_PUBLISHABLE_KEY:jwt("anon")}).status,"configuration-valid-unverified");
   assert.equal(stagingPreflight({...configured(),SUPABASE_PUBLISHABLE_KEY:jwt("service_role")}).status,"blocked");
 });
+test("AI credentials and access tokens cannot be exposed through Next public settings",()=>{
+ for(const name of ['NEXT_PUBLIC_OPENAI_API_KEY','NEXT_PUBLIC_AI_GATEWAY_API_KEY','NEXT_PUBLIC_VERCEL_OIDC_TOKEN','NEXT_PUBLIC_PROVIDER_ACCESS_TOKEN','NEXT_PUBLIC_AUTH_TOKEN']){
+  const report=stagingPreflight({...configured(),[name]:'canary-private-value'});
+  assert.equal(report.status,'blocked');assert.ok(report.issues.some(i=>i.code==='PUBLIC_SECRET_EXPOSURE'));
+  assert.doesNotMatch(JSON.stringify(report),/canary-private-value/);
+ }
+ const allowed=stagingPreflight({...configured(),NEXT_PUBLIC_OPENAI_MODEL:'gpt-6-luna',NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY:'sb_publishable_synthetic',NEXT_PUBLIC_NICEPAY_CLIENT_KEY:'S2_synthetic'});
+ assert.equal(allowed.status,'configuration-valid-unverified');
+});
 test("staging CLI parses a named file as data, redacts failures, and never starts with missing settings", () => {
   const dir=mkdtempSync(join(tmpdir(),"saju-staging-check-"));
   const env={...Object.fromEntries(["PATH","HOME","TMPDIR"].filter(k=>process.env[k]).map(k=>[k,process.env[k]!])),NODE_ENV:"test" as const};

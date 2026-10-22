@@ -39,3 +39,5 @@
 - 기존 연구 전체 포함 260개 통과. 원전22사례와 출생5사례의 [종합 보고서](../research/validation/reports/whole-chart-synthesis.json) 재생성.
 
 일반 강약·중화 경계와 합화 충분조건은 계속 null이다. 원전 대조를 전문가 승인이나 실제 성격 적중률로 표시하지 않는다. 공개 앱 재배포 대상은 이번 변경에 없다.
+
+후속 [범위·보류 점검](condition-and-launch-followup.md)에서 조건 순서 모듈을 v2로 갱신했다. 검토 필요 표시는 검증된 coverage를 따르며 false/null 값으로 해제하지 않는다. 위 v1 감수 내용과 일반 판정 보류는 유지한다.

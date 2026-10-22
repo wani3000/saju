@@ -46,6 +46,10 @@ jobs:
         run: pnpm --dir research/validation test
       - name: Reproduce release-readiness evidence (not an approval)
         run: node research/validation/audit-release-readiness.mjs --check
+      - name: Reproduce current synthesis and scoped-condition reports
+        run: |
+          node research/validation/audit-whole-chart-synthesis.mjs --check
+          node research/validation/audit-condition-boundaries.mjs --check
       - name: Check launch review worksheets (not human evidence)
         run: node tools/prepare-launch-review.mjs --check
       - name: Set up Python for independent recomputation

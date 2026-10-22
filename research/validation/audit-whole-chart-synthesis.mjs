@@ -1,4 +1,4 @@
-import {writeFileSync} from 'node:fs';
+import {readFileSync,writeFileSync} from 'node:fs';
 import {synthesizeProfile,synthesizeBirth,synthesizePair,synthesisVersion} from './whole-chart-synthesis.mjs';
 import {moderationReferenceCases,referenceProfile} from './beta-quality-pack.mjs';
 import {strengthReferences} from './adjudication-review.mjs';
@@ -17,8 +17,10 @@ const metrics={version:synthesisVersion,sourceCases:refs.length+middle.length,mo
  sameRolesDifferentPositions:{sameRoleSet:JSON.stringify(pair.people.map(a=>[...new Set(a.confirmedEvidence.filter(e=>e.kind==='ten-god').map(e=>e.value.role))].sort())[0])===JSON.stringify(pair.people.map(a=>[...new Set(a.confirmedEvidence.filter(e=>e.kind==='ten-god').map(e=>e.value.role))].sort())[1]),distinctStructure:JSON.stringify(pair.people[0].joins)!==JSON.stringify(pair.people[1].joins)},
  qualification:'Software/source-case regression, not held-out classifier accuracy or real-person validation.'};
 const compact=a=>({dependencies:a.dependencies,confirmedEvidence:a.confirmedEvidence,deferredEvidence:a.deferredEvidence,month:a.month,coverage:a.coverage,joins:a.joins,decisions:a.decisions,seasonalCommand:a.seasonalCommand,missing:a.missing,moderationReference:a.reviews.boundaryPriority.moderationReference,tensions:a.reviews.boundaryPriority.tensions,reference:a.reviews.reference.sourceClassification,vetoStatus:a.reviews.veto.status});
-writeFileSync(new URL('./reports/whole-chart-synthesis.json',import.meta.url),JSON.stringify({metrics,references:[...refs,...middle].map(c=>({id:c.id,...compact(c.analysis)})),birthCases:cases.map(c=>({id:c.id,...compact(c.analysis)})),positionComparison:pair.people.map(compact)},null,2)+'\n');
-const lines=['# 전체 구조 종합 검토 v2','', '기존 분석을 하나의 근거 흐름으로 연결한 연구 보고서. 일반 강약·성격·궁합 판정은 아님.','',JSON.stringify(metrics,null,2),''];
+const args=process.argv.slice(2);if(args.some(x=>x!=='--check')||args.length>1)throw new Error('UNKNOWN_ARGUMENT');
+const save=(name,text)=>{const file=new URL('./reports/'+name,import.meta.url);if(args.length){if(readFileSync(file,'utf8')!==text)throw new Error('SYNTHESIS_REPORT_STALE');}else writeFileSync(file,text);};
+save('whole-chart-synthesis.json',JSON.stringify({metrics,references:[...refs,...middle].map(c=>({id:c.id,...compact(c.analysis)})),birthCases:cases.map(c=>({id:c.id,...compact(c.analysis)})),positionComparison:pair.people.map(compact)},null,2)+'\n');
+const lines=['# 전체 구조 종합 검토 '+synthesisVersion,'', '기존 분석을 하나의 근거 흐름으로 연결한 연구 보고서. 일반 강약·성격·궁합 판정은 아님.','',JSON.stringify(metrics,null,2),''];
 for(const c of cases){lines.push(`## ${c.id}`,`사령: ${c.analysis.seasonalCommand.status}`,...c.analysis.joins.map(j=>`- ${j.text}`),...c.analysis.decisions.map(d=>`- ${d.id}: ${d.status} — ${d.blockers.join(', ')}`),'');}
-writeFileSync(new URL('./reports/whole-chart-synthesis.md',import.meta.url),lines.join('\n')+'\n');
+save('whole-chart-synthesis.md',lines.join('\n')+'\n');
 console.log(JSON.stringify(metrics,null,2));

@@ -9,7 +9,7 @@ import {reviewRescueActors,reviewTransformationReference} from './rescue-wangqi-
 import {reviewBoundaryPriority} from './boundary-priority-review.mjs';
 import {compareProfiles} from './reading-analysis.mjs';
 
-export const synthesisVersion='whole-chart-evidence-synthesis-research-v2';
+export const synthesisVersion='whole-chart-evidence-synthesis-research-v3';
 const names={year:'연주',month:'월주',day:'일주',hour:'시주'};
 const unique=xs=>[...new Set(xs)].sort();
 const certain=f=>f.certainty==='all-candidates';
@@ -44,17 +44,19 @@ export function synthesizeProfile(profile) {
  if(!profile.timeKnown)missing.push('UNKNOWN_HOUR');
  if(natal.dayReference.confirmedStem===null)missing.push('UNRESOLVED_DAY_REFERENCE');
  if(deferred.length)missing.push('CANDIDATE_DEPENDENT_EVIDENCE');
- if(profile.boundaryReview)missing.push('SOLAR_TERM_BOUNDARY_REVIEW');
- if(profile.clockReview)missing.push('HISTORICAL_CLOCK_REVIEW');
+ // Use validated coverage, whose flag semantics are presence-based. Raw false/null
+ // must not silently clear a review that the underlying analysis still requires.
+ if(natal.coverage.some(c=>c.boundaryReviewRequired))missing.push('SOLAR_TERM_BOUNDARY_REVIEW');
+ if(natal.coverage.some(c=>c.clockReviewRequired))missing.push('HISTORICAL_CLOCK_REVIEW');
  return {version:synthesisVersion,productionApproved:false,scope:'individual-structure-review',coverage:natal.coverage,
   dependencies:{natal:natal.ruleVersion,context:context.ruleVersion,reference:reference.ruleVersion,hour:hour.ruleVersion,rescue:rescue.ruleVersion,boundaryPriority:boundaryPriority.version},
   month:natal.monthContext,confirmedEvidence:confirmed,deferredEvidence:deferred,joins,
   reviews:{reference,veto,balance,hour,rescue,transformationReference,boundaryPriority},
   decisions:[
-   {id:'strength',status:'deferred',value:null,dependsOn:['month','day-root-observation','month-exposure','seasonal-command','transformation'],blockers:unique([...missing,'NO_REVIEWED_GENERAL_STRENGTH_BOUNDARY']),referenceOnly:reference.sourceClassification},
-   {id:'moderation',status:'deferred',value:null,dependsOn:['strength','balance','boundaryPriority'],blockers:unique([...missing,'NO_REVIEWED_GENERAL_MODERATION_BOUNDARY']),referenceOnly:boundaryPriority.moderationReference.sourceClassification},
-   {id:'transformation',status:'deferred',value:null,dependsOn:['combination-context','veto','hour','rescue','seasonal-command','boundaryPriority'],blockers:unique([...missing,'SOURCE_PRECEDENCE_AND_SUFFICIENT_CONDITIONS_UNRESOLVED']),sourceClauseStatus:veto.status},
-   {id:'personality',status:'deferred',value:null,dependsOn:['strength','transformation','joins'],blockers:['NO_REVIEWED_STRUCTURE_TO_PERSONALITY_RULE']},
+   {id:'strength',status:'deferred',value:null,dependsOn:['month','day-root-observation','month-exposure','seasonal-command','transformation'],blockers:unique([...missing,'SEASONAL_COMMAND_UNRESOLVED','NO_REVIEWED_GENERAL_STRENGTH_BOUNDARY']),referenceOnly:reference.sourceClassification},
+   {id:'moderation',status:'deferred',value:null,dependsOn:['strength','balance','boundaryPriority'],blockers:unique([...missing,'SEASONAL_COMMAND_UNRESOLVED','NO_REVIEWED_GENERAL_MODERATION_BOUNDARY']),referenceOnly:boundaryPriority.moderationReference.sourceClassification},
+   {id:'transformation',status:'deferred',value:null,dependsOn:['combination-context','veto','hour','rescue','seasonal-command','boundaryPriority'],blockers:unique([...missing,'SEASONAL_COMMAND_UNRESOLVED','SOURCE_PRECEDENCE_AND_SUFFICIENT_CONDITIONS_UNRESOLVED']),sourceClauseStatus:veto.status},
+   {id:'personality',status:'deferred',value:null,dependsOn:['strength','transformation','joins'],blockers:unique([...missing,'INDIVIDUAL_STRUCTURE_REVIEW_PENDING','NO_REVIEWED_STRUCTURE_TO_PERSONALITY_RULE'])},
   ],
   seasonalCommand:{status:'birth-input-required',confirmedStem:null},
   missing,score:null,policy:'All joins require universal facts. Marginal candidate witnesses are not jointly feasible charts. Counts, absent roles and structural recurrence are not strength, deficiency or probability. Source cases stay edition-attributed.'};
@@ -66,7 +68,7 @@ export function synthesizeBirth(input) {
  const command=calculateSeasonalCommand(input);
  result.seasonalCommand=command;
  result.dependencies.seasonal=command.ruleVersion;
- if(command.status!=='single-command')for(const d of result.decisions.filter(d=>d.id!=='personality'))d.blockers=unique([...d.blockers,'SEASONAL_COMMAND_UNRESOLVED']);
+ if(command.status==='single-command')for(const d of result.decisions.filter(d=>d.id!=='personality'))d.blockers=d.blockers.filter(b=>b!=='SEASONAL_COMMAND_UNRESOLVED');
  return result;
 }
 

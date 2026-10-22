@@ -59,3 +59,5 @@
 ## 2026-10-22 후속 정정
 
 극단20사례 외에 저장소에 이미 있던 중화/계절 반례2건이 v1 통합에서 빠졌음을 확인했다. [후속 감수](boundary-priority-review.md)에서 연결을 보완한 종합 v2는 총22원전사례를 포함한다. 1개의 중화 판어만으로 일반 경계가 확정되는 것은 아니다. [OpenAI 설명 모델 검토](openai-narration-review.md)도 기록했다.
+
+후속 v3은 [조건 범위와 보류 전파](condition-and-launch-followup.md)를 보완했다. 원문 조항60조합·원전22개/한 기둥 변형88개/시간 제거22개를 회귀 검증하고, 연구264개가 통과했다. 일반 최종 판정은 여전히 null이며 `audit-whole-chart-synthesis.mjs --check`로 현재 보고서를 CI에서 대조한다.

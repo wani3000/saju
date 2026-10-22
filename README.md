@@ -5,6 +5,7 @@
 ## 현재 상태
 
 - 기준일: 2026-10-22.
+- 풀이·출시 후속: [조건 범위와 보류 사유](docs/condition-and-launch-followup.md)를 보완한 종합 연구 v3. 연구264개·웹143개·타입/빌드·모바일26개·로컬 PostgreSQL 21테이블 복원 통과. [현재 소스 현황](docs/current-release-source-inventory.json)은 공개 풀이 v8과 이전 v2 감수 자료를 구분하며 외부/운영/전문 승인7개 미완료를 유지한다.
 - API 후속: [두 모델 비교 준비](docs/narration-comparison-preparation.md)로 160합성입력·블라인드 감수 양식·서버 후보 생성 모듈을 구현했다. 새10개 포함 웹142개·타입·Next 빌드 통과. OpenAI 재인증/키 생성/실제 비교/모델 선택·앱 활성화는 미완료이며 공개 v8 유지.
 - 종합 풀이 후속: [구조 분석 기반과 실행 순서](docs/whole-chart-synthesis-plan.md)를 추가했다. 연구260개 통과. 중화/대조2사례 연결과 [조건 검토 순서](docs/boundary-priority-review.md)를 보완했다. [OpenAI 설명 모델 검토](docs/openai-narration-review.md)도 기록했다. 전체 구조의 근거 연결 단계이며 공개 v8을 대체하는 최종 강약·성격 엔진은 아니다.
 - 최신 결과: [개인·궁합 일관성 v8](docs/coherent-reading-v8.md)은 확인된 전체 기둥의 열 가지 십성을 같은 상황·행동·배려 기준으로 연결하고 반복을 줄인다. [480결과 재검사](docs/audits/reading-v8-quality-review.md)를 기록했다. 이전 [관계별 상호작용 v7](docs/relationship-story-v7.md)은 총평·양방향 도움·공통점·서운함·대화 예시를 네 관계에 맞춰 설명한다. [일상 언어 장단점 v6](docs/everyday-reading-v6.md)는 짧은 장단점 제목과 구체적인 행동으로 설명한다. [쉬운 훈장 말투·관계별 풀이 v5](docs/easy-relationship-v5.md)는 사주표부터 쉬운 말로 설명하고 친구/연인/가족/동료별 배려·궁합 본문·마무리를 제공한다. [전체 사주 성격·궁합 v4](docs/whole-chart-personality-v4.md)는 연·월·일·시의 십성·지장간·월령·합충을 함께 읽는다. 시간 모름은 세 기둥만 반영하고, 기존 v2/v3 결과는 보존한다. 전통 상징의 해설이며 실제 성격 검사·관계 예측/점수는 아니다.

@@ -1,6 +1,6 @@
 {
   "metrics": {
-    "version": "whole-chart-evidence-synthesis-research-v2",
+    "version": "whole-chart-evidence-synthesis-research-v3",
     "sourceCases": 22,
     "moderationSourceMatches": 2,
     "birthCases": 5,
@@ -23,7 +23,7 @@
         "reference": "source-case-veto-and-score-review-v1",
         "hour": "hour-damage-relational-balance-review-v1",
         "rescue": "rescue-wangqi-source-v1",
-        "boundaryPriority": "source-boundary-priority-review-v1"
+        "boundaryPriority": "source-boundary-priority-review-v2"
       },
       "confirmedEvidence": [
         {
@@ -597,7 +597,8 @@
             "transformation"
           ],
           "blockers": [
-            "NO_REVIEWED_GENERAL_STRENGTH_BOUNDARY"
+            "NO_REVIEWED_GENERAL_STRENGTH_BOUNDARY",
+            "SEASONAL_COMMAND_UNRESOLVED"
           ],
           "referenceOnly": {
             "category": "too-strong",
@@ -616,7 +617,8 @@
             "boundaryPriority"
           ],
           "blockers": [
-            "NO_REVIEWED_GENERAL_MODERATION_BOUNDARY"
+            "NO_REVIEWED_GENERAL_MODERATION_BOUNDARY",
+            "SEASONAL_COMMAND_UNRESOLVED"
           ],
           "referenceOnly": null
         },
@@ -633,6 +635,7 @@
             "boundaryPriority"
           ],
           "blockers": [
+            "SEASONAL_COMMAND_UNRESOLVED",
             "SOURCE_PRECEDENCE_AND_SUFFICIENT_CONDITIONS_UNRESOLVED"
           ],
           "sourceClauseStatus": "no-visible-day-partner"
@@ -647,6 +650,7 @@
             "joins"
           ],
           "blockers": [
+            "INDIVIDUAL_STRUCTURE_REVIEW_PENDING",
             "NO_REVIEWED_STRUCTURE_TO_PERSONALITY_RULE"
           ]
         }
@@ -695,7 +699,7 @@
         "reference": "source-case-veto-and-score-review-v1",
         "hour": "hour-damage-relational-balance-review-v1",
         "rescue": "rescue-wangqi-source-v1",
-        "boundaryPriority": "source-boundary-priority-review-v1"
+        "boundaryPriority": "source-boundary-priority-review-v2"
       },
       "confirmedEvidence": [
         {
@@ -1346,7 +1350,8 @@
             "transformation"
           ],
           "blockers": [
-            "NO_REVIEWED_GENERAL_STRENGTH_BOUNDARY"
+            "NO_REVIEWED_GENERAL_STRENGTH_BOUNDARY",
+            "SEASONAL_COMMAND_UNRESOLVED"
           ],
           "referenceOnly": {
             "category": "extremely-strong",
@@ -1365,7 +1370,8 @@
             "boundaryPriority"
           ],
           "blockers": [
-            "NO_REVIEWED_GENERAL_MODERATION_BOUNDARY"
+            "NO_REVIEWED_GENERAL_MODERATION_BOUNDARY",
+            "SEASONAL_COMMAND_UNRESOLVED"
           ],
           "referenceOnly": null
         },
@@ -1382,6 +1388,7 @@
             "boundaryPriority"
           ],
           "blockers": [
+            "SEASONAL_COMMAND_UNRESOLVED",
             "SOURCE_PRECEDENCE_AND_SUFFICIENT_CONDITIONS_UNRESOLVED"
           ],
           "sourceClauseStatus": "no-visible-day-partner"
@@ -1396,6 +1403,7 @@
             "joins"
           ],
           "blockers": [
+            "INDIVIDUAL_STRUCTURE_REVIEW_PENDING",
             "NO_REVIEWED_STRUCTURE_TO_PERSONALITY_RULE"
           ]
         }
@@ -1444,7 +1452,7 @@
         "reference": "source-case-veto-and-score-review-v1",
         "hour": "hour-damage-relational-balance-review-v1",
         "rescue": "rescue-wangqi-source-v1",
-        "boundaryPriority": "source-boundary-priority-review-v1"
+        "boundaryPriority": "source-boundary-priority-review-v2"
       },
       "confirmedEvidence": [
         {
@@ -2147,7 +2155,8 @@
             "transformation"
           ],
           "blockers": [
-            "NO_REVIEWED_GENERAL_STRENGTH_BOUNDARY"
+            "NO_REVIEWED_GENERAL_STRENGTH_BOUNDARY",
+            "SEASONAL_COMMAND_UNRESOLVED"
           ],
           "referenceOnly": {
             "category": "too-weak",
@@ -2166,7 +2175,8 @@
             "boundaryPriority"
           ],
           "blockers": [
-            "NO_REVIEWED_GENERAL_MODERATION_BOUNDARY"
+            "NO_REVIEWED_GENERAL_MODERATION_BOUNDARY",
+            "SEASONAL_COMMAND_UNRESOLVED"
           ],
           "referenceOnly": null
         },
@@ -2183,6 +2193,7 @@
             "boundaryPriority"
           ],
           "blockers": [
+            "SEASONAL_COMMAND_UNRESOLVED",
             "SOURCE_PRECEDENCE_AND_SUFFICIENT_CONDITIONS_UNRESOLVED"
           ],
           "sourceClauseStatus": "no-visible-day-partner"
@@ -2197,6 +2208,7 @@
             "joins"
           ],
           "blockers": [
+            "INDIVIDUAL_STRUCTURE_REVIEW_PENDING",
             "NO_REVIEWED_STRUCTURE_TO_PERSONALITY_RULE"
           ]
         }
@@ -2245,7 +2257,7 @@
         "reference": "source-case-veto-and-score-review-v1",
         "hour": "hour-damage-relational-balance-review-v1",
         "rescue": "rescue-wangqi-source-v1",
-        "boundaryPriority": "source-boundary-priority-review-v1"
+        "boundaryPriority": "source-boundary-priority-review-v2"
       },
       "confirmedEvidence": [
         {
@@ -2886,7 +2898,8 @@
             "transformation"
           ],
           "blockers": [
-            "NO_REVIEWED_GENERAL_STRENGTH_BOUNDARY"
+            "NO_REVIEWED_GENERAL_STRENGTH_BOUNDARY",
+            "SEASONAL_COMMAND_UNRESOLVED"
           ],
           "referenceOnly": {
             "category": "extremely-weak",
@@ -2905,7 +2918,8 @@
             "boundaryPriority"
           ],
           "blockers": [
-            "NO_REVIEWED_GENERAL_MODERATION_BOUNDARY"
+            "NO_REVIEWED_GENERAL_MODERATION_BOUNDARY",
+            "SEASONAL_COMMAND_UNRESOLVED"
           ],
           "referenceOnly": null
         },
@@ -2922,6 +2936,7 @@
             "boundaryPriority"
           ],
           "blockers": [
+            "SEASONAL_COMMAND_UNRESOLVED",
             "SOURCE_PRECEDENCE_AND_SUFFICIENT_CONDITIONS_UNRESOLVED"
           ],
           "sourceClauseStatus": "no-visible-day-partner"
@@ -2936,6 +2951,7 @@
             "joins"
           ],
           "blockers": [
+            "INDIVIDUAL_STRUCTURE_REVIEW_PENDING",
             "NO_REVIEWED_STRUCTURE_TO_PERSONALITY_RULE"
           ]
         }
@@ -2984,7 +3000,7 @@
         "reference": "source-case-veto-and-score-review-v1",
         "hour": "hour-damage-relational-balance-review-v1",
         "rescue": "rescue-wangqi-source-v1",
-        "boundaryPriority": "source-boundary-priority-review-v1"
+        "boundaryPriority": "source-boundary-priority-review-v2"
       },
       "confirmedEvidence": [
         {
@@ -3671,7 +3687,8 @@
             "transformation"
           ],
           "blockers": [
-            "NO_REVIEWED_GENERAL_STRENGTH_BOUNDARY"
+            "NO_REVIEWED_GENERAL_STRENGTH_BOUNDARY",
+            "SEASONAL_COMMAND_UNRESOLVED"
           ],
           "referenceOnly": {
             "category": "too-strong",
@@ -3690,7 +3707,8 @@
             "boundaryPriority"
           ],
           "blockers": [
-            "NO_REVIEWED_GENERAL_MODERATION_BOUNDARY"
+            "NO_REVIEWED_GENERAL_MODERATION_BOUNDARY",
+            "SEASONAL_COMMAND_UNRESOLVED"
           ],
           "referenceOnly": null
         },
@@ -3707,6 +3725,7 @@
             "boundaryPriority"
           ],
           "blockers": [
+            "SEASONAL_COMMAND_UNRESOLVED",
             "SOURCE_PRECEDENCE_AND_SUFFICIENT_CONDITIONS_UNRESOLVED"
           ],
           "sourceClauseStatus": "no-visible-day-partner"
@@ -3721,6 +3740,7 @@
             "joins"
           ],
           "blockers": [
+            "INDIVIDUAL_STRUCTURE_REVIEW_PENDING",
             "NO_REVIEWED_STRUCTURE_TO_PERSONALITY_RULE"
           ]
         }
@@ -3769,7 +3789,7 @@
         "reference": "source-case-veto-and-score-review-v1",
         "hour": "hour-damage-relational-balance-review-v1",
         "rescue": "rescue-wangqi-source-v1",
-        "boundaryPriority": "source-boundary-priority-review-v1"
+        "boundaryPriority": "source-boundary-priority-review-v2"
       },
       "confirmedEvidence": [
         {
@@ -4543,7 +4563,8 @@
             "transformation"
           ],
           "blockers": [
-            "NO_REVIEWED_GENERAL_STRENGTH_BOUNDARY"
+            "NO_REVIEWED_GENERAL_STRENGTH_BOUNDARY",
+            "SEASONAL_COMMAND_UNRESOLVED"
           ],
           "referenceOnly": {
             "category": "extremely-strong",
@@ -4562,7 +4583,8 @@
             "boundaryPriority"
           ],
           "blockers": [
-            "NO_REVIEWED_GENERAL_MODERATION_BOUNDARY"
+            "NO_REVIEWED_GENERAL_MODERATION_BOUNDARY",
+            "SEASONAL_COMMAND_UNRESOLVED"
           ],
           "referenceOnly": null
         },
@@ -4579,6 +4601,7 @@
             "boundaryPriority"
           ],
           "blockers": [
+            "SEASONAL_COMMAND_UNRESOLVED",
             "SOURCE_PRECEDENCE_AND_SUFFICIENT_CONDITIONS_UNRESOLVED"
           ],
           "sourceClauseStatus": "no-visible-day-partner"
@@ -4593,6 +4616,7 @@
             "joins"
           ],
           "blockers": [
+            "INDIVIDUAL_STRUCTURE_REVIEW_PENDING",
             "NO_REVIEWED_STRUCTURE_TO_PERSONALITY_RULE"
           ]
         }
@@ -4641,7 +4665,7 @@
         "reference": "source-case-veto-and-score-review-v1",
         "hour": "hour-damage-relational-balance-review-v1",
         "rescue": "rescue-wangqi-source-v1",
-        "boundaryPriority": "source-boundary-priority-review-v1"
+        "boundaryPriority": "source-boundary-priority-review-v2"
       },
       "confirmedEvidence": [
         {
@@ -5290,7 +5314,8 @@
             "transformation"
           ],
           "blockers": [
-            "NO_REVIEWED_GENERAL_STRENGTH_BOUNDARY"
+            "NO_REVIEWED_GENERAL_STRENGTH_BOUNDARY",
+            "SEASONAL_COMMAND_UNRESOLVED"
           ],
           "referenceOnly": {
             "category": "too-weak",
@@ -5309,7 +5334,8 @@
             "boundaryPriority"
           ],
           "blockers": [
-            "NO_REVIEWED_GENERAL_MODERATION_BOUNDARY"
+            "NO_REVIEWED_GENERAL_MODERATION_BOUNDARY",
+            "SEASONAL_COMMAND_UNRESOLVED"
           ],
           "referenceOnly": null
         },
@@ -5326,6 +5352,7 @@
             "boundaryPriority"
           ],
           "blockers": [
+            "SEASONAL_COMMAND_UNRESOLVED",
             "SOURCE_PRECEDENCE_AND_SUFFICIENT_CONDITIONS_UNRESOLVED"
           ],
           "sourceClauseStatus": "no-visible-day-partner"
@@ -5340,6 +5367,7 @@
             "joins"
           ],
           "blockers": [
+            "INDIVIDUAL_STRUCTURE_REVIEW_PENDING",
             "NO_REVIEWED_STRUCTURE_TO_PERSONALITY_RULE"
           ]
         }
@@ -5388,7 +5416,7 @@
         "reference": "source-case-veto-and-score-review-v1",
         "hour": "hour-damage-relational-balance-review-v1",
         "rescue": "rescue-wangqi-source-v1",
-        "boundaryPriority": "source-boundary-priority-review-v1"
+        "boundaryPriority": "source-boundary-priority-review-v2"
       },
       "confirmedEvidence": [
         {
@@ -6041,7 +6069,8 @@
             "transformation"
           ],
           "blockers": [
-            "NO_REVIEWED_GENERAL_STRENGTH_BOUNDARY"
+            "NO_REVIEWED_GENERAL_STRENGTH_BOUNDARY",
+            "SEASONAL_COMMAND_UNRESOLVED"
           ],
           "referenceOnly": {
             "category": "extremely-weak",
@@ -6060,7 +6089,8 @@
             "boundaryPriority"
           ],
           "blockers": [
-            "NO_REVIEWED_GENERAL_MODERATION_BOUNDARY"
+            "NO_REVIEWED_GENERAL_MODERATION_BOUNDARY",
+            "SEASONAL_COMMAND_UNRESOLVED"
           ],
           "referenceOnly": null
         },
@@ -6077,6 +6107,7 @@
             "boundaryPriority"
           ],
           "blockers": [
+            "SEASONAL_COMMAND_UNRESOLVED",
             "SOURCE_PRECEDENCE_AND_SUFFICIENT_CONDITIONS_UNRESOLVED"
           ],
           "sourceClauseStatus": "remaining-conditions-unresolved"
@@ -6091,6 +6122,7 @@
             "joins"
           ],
           "blockers": [
+            "INDIVIDUAL_STRUCTURE_REVIEW_PENDING",
             "NO_REVIEWED_STRUCTURE_TO_PERSONALITY_RULE"
           ]
         }
@@ -6139,7 +6171,7 @@
         "reference": "source-case-veto-and-score-review-v1",
         "hour": "hour-damage-relational-balance-review-v1",
         "rescue": "rescue-wangqi-source-v1",
-        "boundaryPriority": "source-boundary-priority-review-v1"
+        "boundaryPriority": "source-boundary-priority-review-v2"
       },
       "confirmedEvidence": [
         {
@@ -6902,7 +6934,8 @@
             "transformation"
           ],
           "blockers": [
-            "NO_REVIEWED_GENERAL_STRENGTH_BOUNDARY"
+            "NO_REVIEWED_GENERAL_STRENGTH_BOUNDARY",
+            "SEASONAL_COMMAND_UNRESOLVED"
           ],
           "referenceOnly": {
             "category": "too-strong",
@@ -6921,7 +6954,8 @@
             "boundaryPriority"
           ],
           "blockers": [
-            "NO_REVIEWED_GENERAL_MODERATION_BOUNDARY"
+            "NO_REVIEWED_GENERAL_MODERATION_BOUNDARY",
+            "SEASONAL_COMMAND_UNRESOLVED"
           ],
           "referenceOnly": null
         },
@@ -6938,6 +6972,7 @@
             "boundaryPriority"
           ],
           "blockers": [
+            "SEASONAL_COMMAND_UNRESOLVED",
             "SOURCE_PRECEDENCE_AND_SUFFICIENT_CONDITIONS_UNRESOLVED"
           ],
           "sourceClauseStatus": "no-visible-day-partner"
@@ -6952,6 +6987,7 @@
             "joins"
           ],
           "blockers": [
+            "INDIVIDUAL_STRUCTURE_REVIEW_PENDING",
             "NO_REVIEWED_STRUCTURE_TO_PERSONALITY_RULE"
           ]
         }
@@ -7000,7 +7036,7 @@
         "reference": "source-case-veto-and-score-review-v1",
         "hour": "hour-damage-relational-balance-review-v1",
         "rescue": "rescue-wangqi-source-v1",
-        "boundaryPriority": "source-boundary-priority-review-v1"
+        "boundaryPriority": "source-boundary-priority-review-v2"
       },
       "confirmedEvidence": [
         {
@@ -7819,7 +7855,8 @@
             "transformation"
           ],
           "blockers": [
-            "NO_REVIEWED_GENERAL_STRENGTH_BOUNDARY"
+            "NO_REVIEWED_GENERAL_STRENGTH_BOUNDARY",
+            "SEASONAL_COMMAND_UNRESOLVED"
           ],
           "referenceOnly": {
             "category": "extremely-strong",
@@ -7838,7 +7875,8 @@
             "boundaryPriority"
           ],
           "blockers": [
-            "NO_REVIEWED_GENERAL_MODERATION_BOUNDARY"
+            "NO_REVIEWED_GENERAL_MODERATION_BOUNDARY",
+            "SEASONAL_COMMAND_UNRESOLVED"
           ],
           "referenceOnly": null
         },
@@ -7855,6 +7893,7 @@
             "boundaryPriority"
           ],
           "blockers": [
+            "SEASONAL_COMMAND_UNRESOLVED",
             "SOURCE_PRECEDENCE_AND_SUFFICIENT_CONDITIONS_UNRESOLVED"
           ],
           "sourceClauseStatus": "no-visible-day-partner"
@@ -7869,6 +7908,7 @@
             "joins"
           ],
           "blockers": [
+            "INDIVIDUAL_STRUCTURE_REVIEW_PENDING",
             "NO_REVIEWED_STRUCTURE_TO_PERSONALITY_RULE"
           ]
         }
@@ -7917,7 +7957,7 @@
         "reference": "source-case-veto-and-score-review-v1",
         "hour": "hour-damage-relational-balance-review-v1",
         "rescue": "rescue-wangqi-source-v1",
-        "boundaryPriority": "source-boundary-priority-review-v1"
+        "boundaryPriority": "source-boundary-priority-review-v2"
       },
       "confirmedEvidence": [
         {
@@ -8622,7 +8662,8 @@
             "transformation"
           ],
           "blockers": [
-            "NO_REVIEWED_GENERAL_STRENGTH_BOUNDARY"
+            "NO_REVIEWED_GENERAL_STRENGTH_BOUNDARY",
+            "SEASONAL_COMMAND_UNRESOLVED"
           ],
           "referenceOnly": {
             "category": "too-weak",
@@ -8641,7 +8682,8 @@
             "boundaryPriority"
           ],
           "blockers": [
-            "NO_REVIEWED_GENERAL_MODERATION_BOUNDARY"
+            "NO_REVIEWED_GENERAL_MODERATION_BOUNDARY",
+            "SEASONAL_COMMAND_UNRESOLVED"
           ],
           "referenceOnly": null
         },
@@ -8658,6 +8700,7 @@
             "boundaryPriority"
           ],
           "blockers": [
+            "SEASONAL_COMMAND_UNRESOLVED",
             "SOURCE_PRECEDENCE_AND_SUFFICIENT_CONDITIONS_UNRESOLVED"
           ],
           "sourceClauseStatus": "remaining-conditions-unresolved"
@@ -8672,6 +8715,7 @@
             "joins"
           ],
           "blockers": [
+            "INDIVIDUAL_STRUCTURE_REVIEW_PENDING",
             "NO_REVIEWED_STRUCTURE_TO_PERSONALITY_RULE"
           ]
         }
@@ -8720,7 +8764,7 @@
         "reference": "source-case-veto-and-score-review-v1",
         "hour": "hour-damage-relational-balance-review-v1",
         "rescue": "rescue-wangqi-source-v1",
-        "boundaryPriority": "source-boundary-priority-review-v1"
+        "boundaryPriority": "source-boundary-priority-review-v2"
       },
       "confirmedEvidence": [
         {
@@ -9174,7 +9218,8 @@
             "transformation"
           ],
           "blockers": [
-            "NO_REVIEWED_GENERAL_STRENGTH_BOUNDARY"
+            "NO_REVIEWED_GENERAL_STRENGTH_BOUNDARY",
+            "SEASONAL_COMMAND_UNRESOLVED"
           ],
           "referenceOnly": {
             "category": "extremely-weak",
@@ -9193,7 +9238,8 @@
             "boundaryPriority"
           ],
           "blockers": [
-            "NO_REVIEWED_GENERAL_MODERATION_BOUNDARY"
+            "NO_REVIEWED_GENERAL_MODERATION_BOUNDARY",
+            "SEASONAL_COMMAND_UNRESOLVED"
           ],
           "referenceOnly": null
         },
@@ -9210,6 +9256,7 @@
             "boundaryPriority"
           ],
           "blockers": [
+            "SEASONAL_COMMAND_UNRESOLVED",
             "SOURCE_PRECEDENCE_AND_SUFFICIENT_CONDITIONS_UNRESOLVED"
           ],
           "sourceClauseStatus": "remaining-conditions-unresolved"
@@ -9224,6 +9271,7 @@
             "joins"
           ],
           "blockers": [
+            "INDIVIDUAL_STRUCTURE_REVIEW_PENDING",
             "NO_REVIEWED_STRUCTURE_TO_PERSONALITY_RULE"
           ]
         }
@@ -9272,7 +9320,7 @@
         "reference": "source-case-veto-and-score-review-v1",
         "hour": "hour-damage-relational-balance-review-v1",
         "rescue": "rescue-wangqi-source-v1",
-        "boundaryPriority": "source-boundary-priority-review-v1"
+        "boundaryPriority": "source-boundary-priority-review-v2"
       },
       "confirmedEvidence": [
         {
@@ -9843,7 +9891,8 @@
             "transformation"
           ],
           "blockers": [
-            "NO_REVIEWED_GENERAL_STRENGTH_BOUNDARY"
+            "NO_REVIEWED_GENERAL_STRENGTH_BOUNDARY",
+            "SEASONAL_COMMAND_UNRESOLVED"
           ],
           "referenceOnly": {
             "category": "too-strong",
@@ -9862,7 +9911,8 @@
             "boundaryPriority"
           ],
           "blockers": [
-            "NO_REVIEWED_GENERAL_MODERATION_BOUNDARY"
+            "NO_REVIEWED_GENERAL_MODERATION_BOUNDARY",
+            "SEASONAL_COMMAND_UNRESOLVED"
           ],
           "referenceOnly": null
         },
@@ -9879,6 +9929,7 @@
             "boundaryPriority"
           ],
           "blockers": [
+            "SEASONAL_COMMAND_UNRESOLVED",
             "SOURCE_PRECEDENCE_AND_SUFFICIENT_CONDITIONS_UNRESOLVED"
           ],
           "sourceClauseStatus": "no-visible-day-partner"
@@ -9893,6 +9944,7 @@
             "joins"
           ],
           "blockers": [
+            "INDIVIDUAL_STRUCTURE_REVIEW_PENDING",
             "NO_REVIEWED_STRUCTURE_TO_PERSONALITY_RULE"
           ]
         }
@@ -9941,7 +9993,7 @@
         "reference": "source-case-veto-and-score-review-v1",
         "hour": "hour-damage-relational-balance-review-v1",
         "rescue": "rescue-wangqi-source-v1",
-        "boundaryPriority": "source-boundary-priority-review-v1"
+        "boundaryPriority": "source-boundary-priority-review-v2"
       },
       "confirmedEvidence": [
         {
@@ -10809,7 +10861,8 @@
             "transformation"
           ],
           "blockers": [
-            "NO_REVIEWED_GENERAL_STRENGTH_BOUNDARY"
+            "NO_REVIEWED_GENERAL_STRENGTH_BOUNDARY",
+            "SEASONAL_COMMAND_UNRESOLVED"
           ],
           "referenceOnly": {
             "category": "extremely-strong",
@@ -10828,7 +10881,8 @@
             "boundaryPriority"
           ],
           "blockers": [
-            "NO_REVIEWED_GENERAL_MODERATION_BOUNDARY"
+            "NO_REVIEWED_GENERAL_MODERATION_BOUNDARY",
+            "SEASONAL_COMMAND_UNRESOLVED"
           ],
           "referenceOnly": null
         },
@@ -10845,6 +10899,7 @@
             "boundaryPriority"
           ],
           "blockers": [
+            "SEASONAL_COMMAND_UNRESOLVED",
             "SOURCE_PRECEDENCE_AND_SUFFICIENT_CONDITIONS_UNRESOLVED"
           ],
           "sourceClauseStatus": "remaining-conditions-unresolved"
@@ -10859,6 +10914,7 @@
             "joins"
           ],
           "blockers": [
+            "INDIVIDUAL_STRUCTURE_REVIEW_PENDING",
             "NO_REVIEWED_STRUCTURE_TO_PERSONALITY_RULE"
           ]
         }
@@ -11043,7 +11099,7 @@
         "reference": "source-case-veto-and-score-review-v1",
         "hour": "hour-damage-relational-balance-review-v1",
         "rescue": "rescue-wangqi-source-v1",
-        "boundaryPriority": "source-boundary-priority-review-v1"
+        "boundaryPriority": "source-boundary-priority-review-v2"
       },
       "confirmedEvidence": [
         {
@@ -11562,7 +11618,8 @@
             "transformation"
           ],
           "blockers": [
-            "NO_REVIEWED_GENERAL_STRENGTH_BOUNDARY"
+            "NO_REVIEWED_GENERAL_STRENGTH_BOUNDARY",
+            "SEASONAL_COMMAND_UNRESOLVED"
           ],
           "referenceOnly": {
             "category": "too-weak",
@@ -11581,7 +11638,8 @@
             "boundaryPriority"
           ],
           "blockers": [
-            "NO_REVIEWED_GENERAL_MODERATION_BOUNDARY"
+            "NO_REVIEWED_GENERAL_MODERATION_BOUNDARY",
+            "SEASONAL_COMMAND_UNRESOLVED"
           ],
           "referenceOnly": null
         },
@@ -11598,6 +11656,7 @@
             "boundaryPriority"
           ],
           "blockers": [
+            "SEASONAL_COMMAND_UNRESOLVED",
             "SOURCE_PRECEDENCE_AND_SUFFICIENT_CONDITIONS_UNRESOLVED"
           ],
           "sourceClauseStatus": "no-visible-day-partner"
@@ -11612,6 +11671,7 @@
             "joins"
           ],
           "blockers": [
+            "INDIVIDUAL_STRUCTURE_REVIEW_PENDING",
             "NO_REVIEWED_STRUCTURE_TO_PERSONALITY_RULE"
           ]
         }
@@ -11660,7 +11720,7 @@
         "reference": "source-case-veto-and-score-review-v1",
         "hour": "hour-damage-relational-balance-review-v1",
         "rescue": "rescue-wangqi-source-v1",
-        "boundaryPriority": "source-boundary-priority-review-v1"
+        "boundaryPriority": "source-boundary-priority-review-v2"
       },
       "confirmedEvidence": [
         {
@@ -12149,7 +12209,8 @@
             "transformation"
           ],
           "blockers": [
-            "NO_REVIEWED_GENERAL_STRENGTH_BOUNDARY"
+            "NO_REVIEWED_GENERAL_STRENGTH_BOUNDARY",
+            "SEASONAL_COMMAND_UNRESOLVED"
           ],
           "referenceOnly": {
             "category": "extremely-weak",
@@ -12168,7 +12229,8 @@
             "boundaryPriority"
           ],
           "blockers": [
-            "NO_REVIEWED_GENERAL_MODERATION_BOUNDARY"
+            "NO_REVIEWED_GENERAL_MODERATION_BOUNDARY",
+            "SEASONAL_COMMAND_UNRESOLVED"
           ],
           "referenceOnly": null
         },
@@ -12185,6 +12247,7 @@
             "boundaryPriority"
           ],
           "blockers": [
+            "SEASONAL_COMMAND_UNRESOLVED",
             "SOURCE_PRECEDENCE_AND_SUFFICIENT_CONDITIONS_UNRESOLVED"
           ],
           "sourceClauseStatus": "no-visible-day-partner"
@@ -12199,6 +12262,7 @@
             "joins"
           ],
           "blockers": [
+            "INDIVIDUAL_STRUCTURE_REVIEW_PENDING",
             "NO_REVIEWED_STRUCTURE_TO_PERSONALITY_RULE"
           ]
         }
@@ -12247,7 +12311,7 @@
         "reference": "source-case-veto-and-score-review-v1",
         "hour": "hour-damage-relational-balance-review-v1",
         "rescue": "rescue-wangqi-source-v1",
-        "boundaryPriority": "source-boundary-priority-review-v1"
+        "boundaryPriority": "source-boundary-priority-review-v2"
       },
       "confirmedEvidence": [
         {
@@ -12898,7 +12962,8 @@
             "transformation"
           ],
           "blockers": [
-            "NO_REVIEWED_GENERAL_STRENGTH_BOUNDARY"
+            "NO_REVIEWED_GENERAL_STRENGTH_BOUNDARY",
+            "SEASONAL_COMMAND_UNRESOLVED"
           ],
           "referenceOnly": {
             "category": "too-strong",
@@ -12917,7 +12982,8 @@
             "boundaryPriority"
           ],
           "blockers": [
-            "NO_REVIEWED_GENERAL_MODERATION_BOUNDARY"
+            "NO_REVIEWED_GENERAL_MODERATION_BOUNDARY",
+            "SEASONAL_COMMAND_UNRESOLVED"
           ],
           "referenceOnly": null
         },
@@ -12934,6 +13000,7 @@
             "boundaryPriority"
           ],
           "blockers": [
+            "SEASONAL_COMMAND_UNRESOLVED",
             "SOURCE_PRECEDENCE_AND_SUFFICIENT_CONDITIONS_UNRESOLVED"
           ],
           "sourceClauseStatus": "no-visible-day-partner"
@@ -12948,6 +13015,7 @@
             "joins"
           ],
           "blockers": [
+            "INDIVIDUAL_STRUCTURE_REVIEW_PENDING",
             "NO_REVIEWED_STRUCTURE_TO_PERSONALITY_RULE"
           ]
         }
@@ -12996,7 +13064,7 @@
         "reference": "source-case-veto-and-score-review-v1",
         "hour": "hour-damage-relational-balance-review-v1",
         "rescue": "rescue-wangqi-source-v1",
-        "boundaryPriority": "source-boundary-priority-review-v1"
+        "boundaryPriority": "source-boundary-priority-review-v2"
       },
       "confirmedEvidence": [
         {
@@ -13508,7 +13576,8 @@
             "transformation"
           ],
           "blockers": [
-            "NO_REVIEWED_GENERAL_STRENGTH_BOUNDARY"
+            "NO_REVIEWED_GENERAL_STRENGTH_BOUNDARY",
+            "SEASONAL_COMMAND_UNRESOLVED"
           ],
           "referenceOnly": {
             "category": "extremely-strong",
@@ -13527,7 +13596,8 @@
             "boundaryPriority"
           ],
           "blockers": [
-            "NO_REVIEWED_GENERAL_MODERATION_BOUNDARY"
+            "NO_REVIEWED_GENERAL_MODERATION_BOUNDARY",
+            "SEASONAL_COMMAND_UNRESOLVED"
           ],
           "referenceOnly": null
         },
@@ -13544,6 +13614,7 @@
             "boundaryPriority"
           ],
           "blockers": [
+            "SEASONAL_COMMAND_UNRESOLVED",
             "SOURCE_PRECEDENCE_AND_SUFFICIENT_CONDITIONS_UNRESOLVED"
           ],
           "sourceClauseStatus": "no-visible-day-partner"
@@ -13558,6 +13629,7 @@
             "joins"
           ],
           "blockers": [
+            "INDIVIDUAL_STRUCTURE_REVIEW_PENDING",
             "NO_REVIEWED_STRUCTURE_TO_PERSONALITY_RULE"
           ]
         }
@@ -13606,7 +13678,7 @@
         "reference": "source-case-veto-and-score-review-v1",
         "hour": "hour-damage-relational-balance-review-v1",
         "rescue": "rescue-wangqi-source-v1",
-        "boundaryPriority": "source-boundary-priority-review-v1"
+        "boundaryPriority": "source-boundary-priority-review-v2"
       },
       "confirmedEvidence": [
         {
@@ -14229,7 +14301,8 @@
             "transformation"
           ],
           "blockers": [
-            "NO_REVIEWED_GENERAL_STRENGTH_BOUNDARY"
+            "NO_REVIEWED_GENERAL_STRENGTH_BOUNDARY",
+            "SEASONAL_COMMAND_UNRESOLVED"
           ],
           "referenceOnly": {
             "category": "too-weak",
@@ -14248,7 +14321,8 @@
             "boundaryPriority"
           ],
           "blockers": [
-            "NO_REVIEWED_GENERAL_MODERATION_BOUNDARY"
+            "NO_REVIEWED_GENERAL_MODERATION_BOUNDARY",
+            "SEASONAL_COMMAND_UNRESOLVED"
           ],
           "referenceOnly": null
         },
@@ -14265,6 +14339,7 @@
             "boundaryPriority"
           ],
           "blockers": [
+            "SEASONAL_COMMAND_UNRESOLVED",
             "SOURCE_PRECEDENCE_AND_SUFFICIENT_CONDITIONS_UNRESOLVED"
           ],
           "sourceClauseStatus": "no-visible-day-partner"
@@ -14279,6 +14354,7 @@
             "joins"
           ],
           "blockers": [
+            "INDIVIDUAL_STRUCTURE_REVIEW_PENDING",
             "NO_REVIEWED_STRUCTURE_TO_PERSONALITY_RULE"
           ]
         }
@@ -14327,7 +14403,7 @@
         "reference": "source-case-veto-and-score-review-v1",
         "hour": "hour-damage-relational-balance-review-v1",
         "rescue": "rescue-wangqi-source-v1",
-        "boundaryPriority": "source-boundary-priority-review-v1"
+        "boundaryPriority": "source-boundary-priority-review-v2"
       },
       "confirmedEvidence": [
         {
@@ -14900,7 +14976,8 @@
             "transformation"
           ],
           "blockers": [
-            "NO_REVIEWED_GENERAL_STRENGTH_BOUNDARY"
+            "NO_REVIEWED_GENERAL_STRENGTH_BOUNDARY",
+            "SEASONAL_COMMAND_UNRESOLVED"
           ],
           "referenceOnly": {
             "category": "extremely-weak",
@@ -14919,7 +14996,8 @@
             "boundaryPriority"
           ],
           "blockers": [
-            "NO_REVIEWED_GENERAL_MODERATION_BOUNDARY"
+            "NO_REVIEWED_GENERAL_MODERATION_BOUNDARY",
+            "SEASONAL_COMMAND_UNRESOLVED"
           ],
           "referenceOnly": null
         },
@@ -14936,6 +15014,7 @@
             "boundaryPriority"
           ],
           "blockers": [
+            "SEASONAL_COMMAND_UNRESOLVED",
             "SOURCE_PRECEDENCE_AND_SUFFICIENT_CONDITIONS_UNRESOLVED"
           ],
           "sourceClauseStatus": "no-visible-day-partner"
@@ -14950,6 +15029,7 @@
             "joins"
           ],
           "blockers": [
+            "INDIVIDUAL_STRUCTURE_REVIEW_PENDING",
             "NO_REVIEWED_STRUCTURE_TO_PERSONALITY_RULE"
           ]
         }
@@ -14998,7 +15078,7 @@
         "reference": "source-case-veto-and-score-review-v1",
         "hour": "hour-damage-relational-balance-review-v1",
         "rescue": "rescue-wangqi-source-v1",
-        "boundaryPriority": "source-boundary-priority-review-v1"
+        "boundaryPriority": "source-boundary-priority-review-v2"
       },
       "confirmedEvidence": [
         {
@@ -15571,7 +15651,8 @@
             "transformation"
           ],
           "blockers": [
-            "NO_REVIEWED_GENERAL_STRENGTH_BOUNDARY"
+            "NO_REVIEWED_GENERAL_STRENGTH_BOUNDARY",
+            "SEASONAL_COMMAND_UNRESOLVED"
           ],
           "referenceOnly": null
         },
@@ -15585,7 +15666,8 @@
             "boundaryPriority"
           ],
           "blockers": [
-            "NO_REVIEWED_GENERAL_MODERATION_BOUNDARY"
+            "NO_REVIEWED_GENERAL_MODERATION_BOUNDARY",
+            "SEASONAL_COMMAND_UNRESOLVED"
           ],
           "referenceOnly": "source-balanced-example"
         },
@@ -15602,6 +15684,7 @@
             "boundaryPriority"
           ],
           "blockers": [
+            "SEASONAL_COMMAND_UNRESOLVED",
             "SOURCE_PRECEDENCE_AND_SUFFICIENT_CONDITIONS_UNRESOLVED"
           ],
           "sourceClauseStatus": "no-visible-day-partner"
@@ -15616,6 +15699,7 @@
             "joins"
           ],
           "blockers": [
+            "INDIVIDUAL_STRUCTURE_REVIEW_PENDING",
             "NO_REVIEWED_STRUCTURE_TO_PERSONALITY_RULE"
           ]
         }
@@ -15667,7 +15751,7 @@
         "reference": "source-case-veto-and-score-review-v1",
         "hour": "hour-damage-relational-balance-review-v1",
         "rescue": "rescue-wangqi-source-v1",
-        "boundaryPriority": "source-boundary-priority-review-v1"
+        "boundaryPriority": "source-boundary-priority-review-v2"
       },
       "confirmedEvidence": [
         {
@@ -16222,7 +16306,8 @@
             "transformation"
           ],
           "blockers": [
-            "NO_REVIEWED_GENERAL_STRENGTH_BOUNDARY"
+            "NO_REVIEWED_GENERAL_STRENGTH_BOUNDARY",
+            "SEASONAL_COMMAND_UNRESOLVED"
           ],
           "referenceOnly": null
         },
@@ -16236,7 +16321,8 @@
             "boundaryPriority"
           ],
           "blockers": [
-            "NO_REVIEWED_GENERAL_MODERATION_BOUNDARY"
+            "NO_REVIEWED_GENERAL_MODERATION_BOUNDARY",
+            "SEASONAL_COMMAND_UNRESOLVED"
           ],
           "referenceOnly": "not-a-generic-balanced-label"
         },
@@ -16253,6 +16339,7 @@
             "boundaryPriority"
           ],
           "blockers": [
+            "SEASONAL_COMMAND_UNRESOLVED",
             "SOURCE_PRECEDENCE_AND_SUFFICIENT_CONDITIONS_UNRESOLVED"
           ],
           "sourceClauseStatus": "all-observed-day-pairs-vetoed"
@@ -16267,6 +16354,7 @@
             "joins"
           ],
           "blockers": [
+            "INDIVIDUAL_STRUCTURE_REVIEW_PENDING",
             "NO_REVIEWED_STRUCTURE_TO_PERSONALITY_RULE"
           ]
         }
@@ -16320,7 +16408,7 @@
         "reference": "source-case-veto-and-score-review-v1",
         "hour": "hour-damage-relational-balance-review-v1",
         "rescue": "rescue-wangqi-source-v1",
-        "boundaryPriority": "source-boundary-priority-review-v1",
+        "boundaryPriority": "source-boundary-priority-review-v2",
         "seasonal": "yuanhai-command-nominal-days-v1"
       },
       "confirmedEvidence": [
@@ -17012,7 +17100,9 @@
             "joins"
           ],
           "blockers": [
-            "NO_REVIEWED_STRUCTURE_TO_PERSONALITY_RULE"
+            "INDIVIDUAL_STRUCTURE_REVIEW_PENDING",
+            "NO_REVIEWED_STRUCTURE_TO_PERSONALITY_RULE",
+            "UNKNOWN_HOUR"
           ]
         }
       ],
@@ -17100,7 +17190,7 @@
         "reference": "source-case-veto-and-score-review-v1",
         "hour": "hour-damage-relational-balance-review-v1",
         "rescue": "rescue-wangqi-source-v1",
-        "boundaryPriority": "source-boundary-priority-review-v1",
+        "boundaryPriority": "source-boundary-priority-review-v2",
         "seasonal": "yuanhai-command-nominal-days-v1"
       },
       "confirmedEvidence": [
@@ -18100,6 +18190,7 @@
             "joins"
           ],
           "blockers": [
+            "INDIVIDUAL_STRUCTURE_REVIEW_PENDING",
             "NO_REVIEWED_STRUCTURE_TO_PERSONALITY_RULE"
           ]
         }
@@ -18288,7 +18379,7 @@
         "reference": "source-case-veto-and-score-review-v1",
         "hour": "hour-damage-relational-balance-review-v1",
         "rescue": "rescue-wangqi-source-v1",
-        "boundaryPriority": "source-boundary-priority-review-v1",
+        "boundaryPriority": "source-boundary-priority-review-v2",
         "seasonal": "yuanhai-command-nominal-days-v1"
       },
       "confirmedEvidence": [
@@ -18853,7 +18944,9 @@
             "joins"
           ],
           "blockers": [
-            "NO_REVIEWED_STRUCTURE_TO_PERSONALITY_RULE"
+            "INDIVIDUAL_STRUCTURE_REVIEW_PENDING",
+            "NO_REVIEWED_STRUCTURE_TO_PERSONALITY_RULE",
+            "UNKNOWN_HOUR"
           ]
         }
       ],
@@ -18939,7 +19032,7 @@
         "reference": "source-case-veto-and-score-review-v1",
         "hour": "hour-damage-relational-balance-review-v1",
         "rescue": "rescue-wangqi-source-v1",
-        "boundaryPriority": "source-boundary-priority-review-v1",
+        "boundaryPriority": "source-boundary-priority-review-v2",
         "seasonal": "yuanhai-command-nominal-days-v1"
       },
       "confirmedEvidence": [
@@ -19892,7 +19985,11 @@
             "joins"
           ],
           "blockers": [
-            "NO_REVIEWED_STRUCTURE_TO_PERSONALITY_RULE"
+            "CANDIDATE_DEPENDENT_EVIDENCE",
+            "INDIVIDUAL_STRUCTURE_REVIEW_PENDING",
+            "NO_REVIEWED_STRUCTURE_TO_PERSONALITY_RULE",
+            "SOLAR_TERM_BOUNDARY_REVIEW",
+            "UNKNOWN_HOUR"
           ]
         }
       ],
@@ -19962,7 +20059,7 @@
         "reference": "source-case-veto-and-score-review-v1",
         "hour": "hour-damage-relational-balance-review-v1",
         "rescue": "rescue-wangqi-source-v1",
-        "boundaryPriority": "source-boundary-priority-review-v1",
+        "boundaryPriority": "source-boundary-priority-review-v2",
         "seasonal": "yuanhai-command-nominal-days-v1"
       },
       "confirmedEvidence": [
@@ -20348,7 +20445,10 @@
             "joins"
           ],
           "blockers": [
-            "NO_REVIEWED_STRUCTURE_TO_PERSONALITY_RULE"
+            "HISTORICAL_CLOCK_REVIEW",
+            "INDIVIDUAL_STRUCTURE_REVIEW_PENDING",
+            "NO_REVIEWED_STRUCTURE_TO_PERSONALITY_RULE",
+            "UNKNOWN_HOUR"
           ]
         }
       ],
@@ -20417,7 +20517,7 @@
         "reference": "source-case-veto-and-score-review-v1",
         "hour": "hour-damage-relational-balance-review-v1",
         "rescue": "rescue-wangqi-source-v1",
-        "boundaryPriority": "source-boundary-priority-review-v1"
+        "boundaryPriority": "source-boundary-priority-review-v2"
       },
       "confirmedEvidence": [
         {
@@ -21175,7 +21275,8 @@
             "transformation"
           ],
           "blockers": [
-            "NO_REVIEWED_GENERAL_STRENGTH_BOUNDARY"
+            "NO_REVIEWED_GENERAL_STRENGTH_BOUNDARY",
+            "SEASONAL_COMMAND_UNRESOLVED"
           ],
           "referenceOnly": null
         },
@@ -21189,7 +21290,8 @@
             "boundaryPriority"
           ],
           "blockers": [
-            "NO_REVIEWED_GENERAL_MODERATION_BOUNDARY"
+            "NO_REVIEWED_GENERAL_MODERATION_BOUNDARY",
+            "SEASONAL_COMMAND_UNRESOLVED"
           ],
           "referenceOnly": null
         },
@@ -21206,6 +21308,7 @@
             "boundaryPriority"
           ],
           "blockers": [
+            "SEASONAL_COMMAND_UNRESOLVED",
             "SOURCE_PRECEDENCE_AND_SUFFICIENT_CONDITIONS_UNRESOLVED"
           ],
           "sourceClauseStatus": "no-visible-day-partner"
@@ -21220,6 +21323,7 @@
             "joins"
           ],
           "blockers": [
+            "INDIVIDUAL_STRUCTURE_REVIEW_PENDING",
             "NO_REVIEWED_STRUCTURE_TO_PERSONALITY_RULE"
           ]
         }
@@ -21262,7 +21366,7 @@
         "reference": "source-case-veto-and-score-review-v1",
         "hour": "hour-damage-relational-balance-review-v1",
         "rescue": "rescue-wangqi-source-v1",
-        "boundaryPriority": "source-boundary-priority-review-v1"
+        "boundaryPriority": "source-boundary-priority-review-v2"
       },
       "confirmedEvidence": [
         {
@@ -22020,7 +22124,8 @@
             "transformation"
           ],
           "blockers": [
-            "NO_REVIEWED_GENERAL_STRENGTH_BOUNDARY"
+            "NO_REVIEWED_GENERAL_STRENGTH_BOUNDARY",
+            "SEASONAL_COMMAND_UNRESOLVED"
           ],
           "referenceOnly": null
         },
@@ -22034,7 +22139,8 @@
             "boundaryPriority"
           ],
           "blockers": [
-            "NO_REVIEWED_GENERAL_MODERATION_BOUNDARY"
+            "NO_REVIEWED_GENERAL_MODERATION_BOUNDARY",
+            "SEASONAL_COMMAND_UNRESOLVED"
           ],
           "referenceOnly": null
         },
@@ -22051,6 +22157,7 @@
             "boundaryPriority"
           ],
           "blockers": [
+            "SEASONAL_COMMAND_UNRESOLVED",
             "SOURCE_PRECEDENCE_AND_SUFFICIENT_CONDITIONS_UNRESOLVED"
           ],
           "sourceClauseStatus": "no-visible-day-partner"
@@ -22065,6 +22172,7 @@
             "joins"
           ],
           "blockers": [
+            "INDIVIDUAL_STRUCTURE_REVIEW_PENDING",
             "NO_REVIEWED_STRUCTURE_TO_PERSONALITY_RULE"
           ]
         }

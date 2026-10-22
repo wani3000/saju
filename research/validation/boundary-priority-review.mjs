@@ -5,7 +5,7 @@ import {reviewScopedGuards} from './scoped-criteria.mjs';
 import {analyzeHourAndInteractions} from './hour-balance-review.mjs';
 import {analyzeFivePairConditions} from './extended-source-review.mjs';
 import {adjudicateTransformationVetoes} from './adjudication-review.mjs';
-export const boundaryPriorityVersion='source-boundary-priority-review-v1';
+export const boundaryPriorityVersion='source-boundary-priority-review-v2';
 
 export function reviewBoundaryPriority(profile) {
  const context=analyzeContext(profile),moderation=reviewModerationReference(profile);
@@ -27,7 +27,7 @@ export function reviewBoundaryPriority(profile) {
  return {version:boundaryPriorityVersion,productionApproved:false,moderationReference:moderation,
   sourceChecks:{guards,hour,cardinality,veto},tensions,
   order:[
-   {id:'coverage',rule:'validate-input-and-preserve-candidates',resolved:profile.timeKnown&&!profile.clockReview&&!profile.boundaryReview&&Object.values(profile.pillars).every(p=>p!==null)},
+   {id:'coverage',rule:'validate-input-and-preserve-candidates',resolved:profile.timeKnown&&context.coverage.every(c=>!c.clockReviewRequired&&!c.boundaryReviewRequired)&&Object.values(profile.pillars).every(p=>p!==null)},
    {id:'scope',rule:'match-source-target-pair-month-and-position-before-applying-clause'},
    {id:'counterconditions',rule:'check-warnings-and-all-partners-before-considering-a-preference'},
    {id:'premises',rule:'do-not-use-conditional-rescue-or-assistance-until-its-premises-are-proved'},

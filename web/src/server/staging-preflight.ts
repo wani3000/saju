@@ -39,7 +39,7 @@ export function stagingPreflight(env: Environment) {
       add("VERIFIED_DATABASE_TLS_REQUIRED", "DATABASE_URL");
   } catch { add("POSTGRES_DATABASE_REQUIRED", "DATABASE_URL"); }
   if (env.NODE_TLS_REJECT_UNAUTHORIZED === "0") add("TLS_VERIFICATION_DISABLED", "NODE_TLS_REJECT_UNAUTHORIZED");
-  if (Object.keys(env).some(k => k.startsWith("NEXT_PUBLIC_") && /SECRET|SERVICE_ROLE|PASSWORD|DATABASE_URL|PRIVATE_KEY/.test(k)))
+  if (Object.keys(env).some(k => k.startsWith("NEXT_PUBLIC_") && /SECRET|SERVICE_ROLE|PASSWORD|DATABASE_URL|PRIVATE_KEY|OPENAI_API_KEY|AI_GATEWAY_API_KEY|ACCESS_TOKEN|AUTH_TOKEN|OIDC_TOKEN/.test(k)))
     add("PUBLIC_SECRET_EXPOSURE", "NEXT_PUBLIC_*");
   return {
     status: issues.length ? "blocked" : "configuration-valid-unverified",

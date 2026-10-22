@@ -1,0 +1,1298 @@
+{
+  "version": "condition-boundaries-audit-v1",
+  "synthesisVersion": "whole-chart-evidence-synthesis-research-v3",
+  "productionApproved": false,
+  "metrics": {
+    "sourceClauseCases": 60,
+    "clauseMismatches": 0,
+    "exactSourceCases": 22,
+    "onePillarMutationCases": 88,
+    "unknownHourCases": 22,
+    "reviewFlagCases": 6,
+    "unsupportedFinalDecisions": 0
+  },
+  "source": {
+    "sourceId": "sanming-1926",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/2/23/NLC416-13jh000156-94145_%E4%B8%89%E5%91%BD%E9%80%9A%E6%9C%83.pdf",
+    "pdfSha256": "c6eac6fca6411e45cb801f9b771aca6dd6a6d2dfb57ecc36ea5f42ecf1ac8bf9",
+    "pages": [
+      {
+        "pdfPage": 128,
+        "file": "sanming-1926-page-128.png",
+        "sha256": "085acffe1c8278ecd9b9f3deef2e348ebd9c45fc5e4dddb09bfae3d296997338"
+      },
+      {
+        "pdfPage": 129,
+        "file": "sanming-1926-page-129.png",
+        "sha256": "b68042785e0a2fa391a2f08e741cf90cacd78160fa437a3afa7467a6215410d4"
+      }
+    ]
+  },
+  "matrix": [
+    {
+      "id": "갑:year:month",
+      "sourcePair": "갑기",
+      "pdfPage": 128,
+      "partnerPosition": "year",
+      "blockerPosition": "month",
+      "expectedVeto": true,
+      "observedVeto": true,
+      "dayClause": false,
+      "finalTransformation": null,
+      "unknownHourFinal": null,
+      "unknownHourClause": null
+    },
+    {
+      "id": "갑:year:hour",
+      "sourcePair": "갑기",
+      "pdfPage": 128,
+      "partnerPosition": "year",
+      "blockerPosition": "hour",
+      "expectedVeto": false,
+      "observedVeto": false,
+      "dayClause": null,
+      "finalTransformation": null,
+      "unknownHourFinal": null,
+      "unknownHourClause": null
+    },
+    {
+      "id": "갑:month:year",
+      "sourcePair": "갑기",
+      "pdfPage": 128,
+      "partnerPosition": "month",
+      "blockerPosition": "year",
+      "expectedVeto": false,
+      "observedVeto": false,
+      "dayClause": null,
+      "finalTransformation": null,
+      "unknownHourFinal": null,
+      "unknownHourClause": null
+    },
+    {
+      "id": "갑:month:hour",
+      "sourcePair": "갑기",
+      "pdfPage": 128,
+      "partnerPosition": "month",
+      "blockerPosition": "hour",
+      "expectedVeto": false,
+      "observedVeto": false,
+      "dayClause": null,
+      "finalTransformation": null,
+      "unknownHourFinal": null,
+      "unknownHourClause": null
+    },
+    {
+      "id": "갑:hour:year",
+      "sourcePair": "갑기",
+      "pdfPage": 128,
+      "partnerPosition": "hour",
+      "blockerPosition": "year",
+      "expectedVeto": false,
+      "observedVeto": false,
+      "dayClause": null,
+      "finalTransformation": null,
+      "unknownHourFinal": null,
+      "unknownHourClause": null
+    },
+    {
+      "id": "갑:hour:month",
+      "sourcePair": "갑기",
+      "pdfPage": 128,
+      "partnerPosition": "hour",
+      "blockerPosition": "month",
+      "expectedVeto": false,
+      "observedVeto": false,
+      "dayClause": null,
+      "finalTransformation": null,
+      "unknownHourFinal": null,
+      "unknownHourClause": null
+    },
+    {
+      "id": "기:year:month",
+      "sourcePair": "갑기",
+      "pdfPage": 128,
+      "partnerPosition": "year",
+      "blockerPosition": "month",
+      "expectedVeto": true,
+      "observedVeto": true,
+      "dayClause": false,
+      "finalTransformation": null,
+      "unknownHourFinal": null,
+      "unknownHourClause": null
+    },
+    {
+      "id": "기:year:hour",
+      "sourcePair": "갑기",
+      "pdfPage": 128,
+      "partnerPosition": "year",
+      "blockerPosition": "hour",
+      "expectedVeto": false,
+      "observedVeto": false,
+      "dayClause": null,
+      "finalTransformation": null,
+      "unknownHourFinal": null,
+      "unknownHourClause": null
+    },
+    {
+      "id": "기:month:year",
+      "sourcePair": "갑기",
+      "pdfPage": 128,
+      "partnerPosition": "month",
+      "blockerPosition": "year",
+      "expectedVeto": false,
+      "observedVeto": false,
+      "dayClause": null,
+      "finalTransformation": null,
+      "unknownHourFinal": null,
+      "unknownHourClause": null
+    },
+    {
+      "id": "기:month:hour",
+      "sourcePair": "갑기",
+      "pdfPage": 128,
+      "partnerPosition": "month",
+      "blockerPosition": "hour",
+      "expectedVeto": false,
+      "observedVeto": false,
+      "dayClause": null,
+      "finalTransformation": null,
+      "unknownHourFinal": null,
+      "unknownHourClause": null
+    },
+    {
+      "id": "기:hour:year",
+      "sourcePair": "갑기",
+      "pdfPage": 128,
+      "partnerPosition": "hour",
+      "blockerPosition": "year",
+      "expectedVeto": false,
+      "observedVeto": false,
+      "dayClause": null,
+      "finalTransformation": null,
+      "unknownHourFinal": null,
+      "unknownHourClause": null
+    },
+    {
+      "id": "기:hour:month",
+      "sourcePair": "갑기",
+      "pdfPage": 128,
+      "partnerPosition": "hour",
+      "blockerPosition": "month",
+      "expectedVeto": false,
+      "observedVeto": false,
+      "dayClause": null,
+      "finalTransformation": null,
+      "unknownHourFinal": null,
+      "unknownHourClause": null
+    },
+    {
+      "id": "을:year:month",
+      "sourcePair": "을경",
+      "pdfPage": 128,
+      "partnerPosition": "year",
+      "blockerPosition": "month",
+      "expectedVeto": true,
+      "observedVeto": true,
+      "dayClause": false,
+      "finalTransformation": null,
+      "unknownHourFinal": null,
+      "unknownHourClause": null
+    },
+    {
+      "id": "을:year:hour",
+      "sourcePair": "을경",
+      "pdfPage": 128,
+      "partnerPosition": "year",
+      "blockerPosition": "hour",
+      "expectedVeto": false,
+      "observedVeto": false,
+      "dayClause": null,
+      "finalTransformation": null,
+      "unknownHourFinal": null,
+      "unknownHourClause": null
+    },
+    {
+      "id": "을:month:year",
+      "sourcePair": "을경",
+      "pdfPage": 128,
+      "partnerPosition": "month",
+      "blockerPosition": "year",
+      "expectedVeto": false,
+      "observedVeto": false,
+      "dayClause": null,
+      "finalTransformation": null,
+      "unknownHourFinal": null,
+      "unknownHourClause": null
+    },
+    {
+      "id": "을:month:hour",
+      "sourcePair": "을경",
+      "pdfPage": 128,
+      "partnerPosition": "month",
+      "blockerPosition": "hour",
+      "expectedVeto": false,
+      "observedVeto": false,
+      "dayClause": null,
+      "finalTransformation": null,
+      "unknownHourFinal": null,
+      "unknownHourClause": null
+    },
+    {
+      "id": "을:hour:year",
+      "sourcePair": "을경",
+      "pdfPage": 128,
+      "partnerPosition": "hour",
+      "blockerPosition": "year",
+      "expectedVeto": false,
+      "observedVeto": false,
+      "dayClause": null,
+      "finalTransformation": null,
+      "unknownHourFinal": null,
+      "unknownHourClause": null
+    },
+    {
+      "id": "을:hour:month",
+      "sourcePair": "을경",
+      "pdfPage": 128,
+      "partnerPosition": "hour",
+      "blockerPosition": "month",
+      "expectedVeto": false,
+      "observedVeto": false,
+      "dayClause": null,
+      "finalTransformation": null,
+      "unknownHourFinal": null,
+      "unknownHourClause": null
+    },
+    {
+      "id": "경:year:month",
+      "sourcePair": "을경",
+      "pdfPage": 128,
+      "partnerPosition": "year",
+      "blockerPosition": "month",
+      "expectedVeto": true,
+      "observedVeto": true,
+      "dayClause": false,
+      "finalTransformation": null,
+      "unknownHourFinal": null,
+      "unknownHourClause": null
+    },
+    {
+      "id": "경:year:hour",
+      "sourcePair": "을경",
+      "pdfPage": 128,
+      "partnerPosition": "year",
+      "blockerPosition": "hour",
+      "expectedVeto": false,
+      "observedVeto": false,
+      "dayClause": null,
+      "finalTransformation": null,
+      "unknownHourFinal": null,
+      "unknownHourClause": null
+    },
+    {
+      "id": "경:month:year",
+      "sourcePair": "을경",
+      "pdfPage": 128,
+      "partnerPosition": "month",
+      "blockerPosition": "year",
+      "expectedVeto": false,
+      "observedVeto": false,
+      "dayClause": null,
+      "finalTransformation": null,
+      "unknownHourFinal": null,
+      "unknownHourClause": null
+    },
+    {
+      "id": "경:month:hour",
+      "sourcePair": "을경",
+      "pdfPage": 128,
+      "partnerPosition": "month",
+      "blockerPosition": "hour",
+      "expectedVeto": false,
+      "observedVeto": false,
+      "dayClause": null,
+      "finalTransformation": null,
+      "unknownHourFinal": null,
+      "unknownHourClause": null
+    },
+    {
+      "id": "경:hour:year",
+      "sourcePair": "을경",
+      "pdfPage": 128,
+      "partnerPosition": "hour",
+      "blockerPosition": "year",
+      "expectedVeto": false,
+      "observedVeto": false,
+      "dayClause": null,
+      "finalTransformation": null,
+      "unknownHourFinal": null,
+      "unknownHourClause": null
+    },
+    {
+      "id": "경:hour:month",
+      "sourcePair": "을경",
+      "pdfPage": 128,
+      "partnerPosition": "hour",
+      "blockerPosition": "month",
+      "expectedVeto": false,
+      "observedVeto": false,
+      "dayClause": null,
+      "finalTransformation": null,
+      "unknownHourFinal": null,
+      "unknownHourClause": null
+    },
+    {
+      "id": "병:year:month",
+      "sourcePair": "병신",
+      "pdfPage": 129,
+      "partnerPosition": "year",
+      "blockerPosition": "month",
+      "expectedVeto": true,
+      "observedVeto": true,
+      "dayClause": false,
+      "finalTransformation": null,
+      "unknownHourFinal": null,
+      "unknownHourClause": null
+    },
+    {
+      "id": "병:year:hour",
+      "sourcePair": "병신",
+      "pdfPage": 129,
+      "partnerPosition": "year",
+      "blockerPosition": "hour",
+      "expectedVeto": true,
+      "observedVeto": true,
+      "dayClause": false,
+      "finalTransformation": null,
+      "unknownHourFinal": null,
+      "unknownHourClause": null
+    },
+    {
+      "id": "병:month:year",
+      "sourcePair": "병신",
+      "pdfPage": 129,
+      "partnerPosition": "month",
+      "blockerPosition": "year",
+      "expectedVeto": true,
+      "observedVeto": true,
+      "dayClause": false,
+      "finalTransformation": null,
+      "unknownHourFinal": null,
+      "unknownHourClause": null
+    },
+    {
+      "id": "병:month:hour",
+      "sourcePair": "병신",
+      "pdfPage": 129,
+      "partnerPosition": "month",
+      "blockerPosition": "hour",
+      "expectedVeto": true,
+      "observedVeto": true,
+      "dayClause": false,
+      "finalTransformation": null,
+      "unknownHourFinal": null,
+      "unknownHourClause": null
+    },
+    {
+      "id": "병:hour:year",
+      "sourcePair": "병신",
+      "pdfPage": 129,
+      "partnerPosition": "hour",
+      "blockerPosition": "year",
+      "expectedVeto": true,
+      "observedVeto": true,
+      "dayClause": false,
+      "finalTransformation": null,
+      "unknownHourFinal": null,
+      "unknownHourClause": null
+    },
+    {
+      "id": "병:hour:month",
+      "sourcePair": "병신",
+      "pdfPage": 129,
+      "partnerPosition": "hour",
+      "blockerPosition": "month",
+      "expectedVeto": true,
+      "observedVeto": true,
+      "dayClause": false,
+      "finalTransformation": null,
+      "unknownHourFinal": null,
+      "unknownHourClause": null
+    },
+    {
+      "id": "신:year:month",
+      "sourcePair": "병신",
+      "pdfPage": 129,
+      "partnerPosition": "year",
+      "blockerPosition": "month",
+      "expectedVeto": true,
+      "observedVeto": true,
+      "dayClause": false,
+      "finalTransformation": null,
+      "unknownHourFinal": null,
+      "unknownHourClause": null
+    },
+    {
+      "id": "신:year:hour",
+      "sourcePair": "병신",
+      "pdfPage": 129,
+      "partnerPosition": "year",
+      "blockerPosition": "hour",
+      "expectedVeto": true,
+      "observedVeto": true,
+      "dayClause": false,
+      "finalTransformation": null,
+      "unknownHourFinal": null,
+      "unknownHourClause": null
+    },
+    {
+      "id": "신:month:year",
+      "sourcePair": "병신",
+      "pdfPage": 129,
+      "partnerPosition": "month",
+      "blockerPosition": "year",
+      "expectedVeto": true,
+      "observedVeto": true,
+      "dayClause": false,
+      "finalTransformation": null,
+      "unknownHourFinal": null,
+      "unknownHourClause": null
+    },
+    {
+      "id": "신:month:hour",
+      "sourcePair": "병신",
+      "pdfPage": 129,
+      "partnerPosition": "month",
+      "blockerPosition": "hour",
+      "expectedVeto": true,
+      "observedVeto": true,
+      "dayClause": false,
+      "finalTransformation": null,
+      "unknownHourFinal": null,
+      "unknownHourClause": null
+    },
+    {
+      "id": "신:hour:year",
+      "sourcePair": "병신",
+      "pdfPage": 129,
+      "partnerPosition": "hour",
+      "blockerPosition": "year",
+      "expectedVeto": true,
+      "observedVeto": true,
+      "dayClause": false,
+      "finalTransformation": null,
+      "unknownHourFinal": null,
+      "unknownHourClause": null
+    },
+    {
+      "id": "신:hour:month",
+      "sourcePair": "병신",
+      "pdfPage": 129,
+      "partnerPosition": "hour",
+      "blockerPosition": "month",
+      "expectedVeto": true,
+      "observedVeto": true,
+      "dayClause": false,
+      "finalTransformation": null,
+      "unknownHourFinal": null,
+      "unknownHourClause": null
+    },
+    {
+      "id": "정:year:month",
+      "sourcePair": "정임",
+      "pdfPage": 129,
+      "partnerPosition": "year",
+      "blockerPosition": "month",
+      "expectedVeto": true,
+      "observedVeto": true,
+      "dayClause": false,
+      "finalTransformation": null,
+      "unknownHourFinal": null,
+      "unknownHourClause": null
+    },
+    {
+      "id": "정:year:hour",
+      "sourcePair": "정임",
+      "pdfPage": 129,
+      "partnerPosition": "year",
+      "blockerPosition": "hour",
+      "expectedVeto": true,
+      "observedVeto": true,
+      "dayClause": false,
+      "finalTransformation": null,
+      "unknownHourFinal": null,
+      "unknownHourClause": null
+    },
+    {
+      "id": "정:month:year",
+      "sourcePair": "정임",
+      "pdfPage": 129,
+      "partnerPosition": "month",
+      "blockerPosition": "year",
+      "expectedVeto": true,
+      "observedVeto": true,
+      "dayClause": false,
+      "finalTransformation": null,
+      "unknownHourFinal": null,
+      "unknownHourClause": null
+    },
+    {
+      "id": "정:month:hour",
+      "sourcePair": "정임",
+      "pdfPage": 129,
+      "partnerPosition": "month",
+      "blockerPosition": "hour",
+      "expectedVeto": true,
+      "observedVeto": true,
+      "dayClause": false,
+      "finalTransformation": null,
+      "unknownHourFinal": null,
+      "unknownHourClause": null
+    },
+    {
+      "id": "정:hour:year",
+      "sourcePair": "정임",
+      "pdfPage": 129,
+      "partnerPosition": "hour",
+      "blockerPosition": "year",
+      "expectedVeto": true,
+      "observedVeto": true,
+      "dayClause": false,
+      "finalTransformation": null,
+      "unknownHourFinal": null,
+      "unknownHourClause": null
+    },
+    {
+      "id": "정:hour:month",
+      "sourcePair": "정임",
+      "pdfPage": 129,
+      "partnerPosition": "hour",
+      "blockerPosition": "month",
+      "expectedVeto": true,
+      "observedVeto": true,
+      "dayClause": false,
+      "finalTransformation": null,
+      "unknownHourFinal": null,
+      "unknownHourClause": null
+    },
+    {
+      "id": "임:year:month",
+      "sourcePair": "정임",
+      "pdfPage": 129,
+      "partnerPosition": "year",
+      "blockerPosition": "month",
+      "expectedVeto": true,
+      "observedVeto": true,
+      "dayClause": false,
+      "finalTransformation": null,
+      "unknownHourFinal": null,
+      "unknownHourClause": null
+    },
+    {
+      "id": "임:year:hour",
+      "sourcePair": "정임",
+      "pdfPage": 129,
+      "partnerPosition": "year",
+      "blockerPosition": "hour",
+      "expectedVeto": true,
+      "observedVeto": true,
+      "dayClause": false,
+      "finalTransformation": null,
+      "unknownHourFinal": null,
+      "unknownHourClause": null
+    },
+    {
+      "id": "임:month:year",
+      "sourcePair": "정임",
+      "pdfPage": 129,
+      "partnerPosition": "month",
+      "blockerPosition": "year",
+      "expectedVeto": true,
+      "observedVeto": true,
+      "dayClause": false,
+      "finalTransformation": null,
+      "unknownHourFinal": null,
+      "unknownHourClause": null
+    },
+    {
+      "id": "임:month:hour",
+      "sourcePair": "정임",
+      "pdfPage": 129,
+      "partnerPosition": "month",
+      "blockerPosition": "hour",
+      "expectedVeto": true,
+      "observedVeto": true,
+      "dayClause": false,
+      "finalTransformation": null,
+      "unknownHourFinal": null,
+      "unknownHourClause": null
+    },
+    {
+      "id": "임:hour:year",
+      "sourcePair": "정임",
+      "pdfPage": 129,
+      "partnerPosition": "hour",
+      "blockerPosition": "year",
+      "expectedVeto": true,
+      "observedVeto": true,
+      "dayClause": false,
+      "finalTransformation": null,
+      "unknownHourFinal": null,
+      "unknownHourClause": null
+    },
+    {
+      "id": "임:hour:month",
+      "sourcePair": "정임",
+      "pdfPage": 129,
+      "partnerPosition": "hour",
+      "blockerPosition": "month",
+      "expectedVeto": true,
+      "observedVeto": true,
+      "dayClause": false,
+      "finalTransformation": null,
+      "unknownHourFinal": null,
+      "unknownHourClause": null
+    },
+    {
+      "id": "무:year:month",
+      "sourcePair": "무계",
+      "pdfPage": 129,
+      "partnerPosition": "year",
+      "blockerPosition": "month",
+      "expectedVeto": true,
+      "observedVeto": true,
+      "dayClause": false,
+      "finalTransformation": null,
+      "unknownHourFinal": null,
+      "unknownHourClause": null
+    },
+    {
+      "id": "무:year:hour",
+      "sourcePair": "무계",
+      "pdfPage": 129,
+      "partnerPosition": "year",
+      "blockerPosition": "hour",
+      "expectedVeto": true,
+      "observedVeto": true,
+      "dayClause": false,
+      "finalTransformation": null,
+      "unknownHourFinal": null,
+      "unknownHourClause": null
+    },
+    {
+      "id": "무:month:year",
+      "sourcePair": "무계",
+      "pdfPage": 129,
+      "partnerPosition": "month",
+      "blockerPosition": "year",
+      "expectedVeto": true,
+      "observedVeto": true,
+      "dayClause": false,
+      "finalTransformation": null,
+      "unknownHourFinal": null,
+      "unknownHourClause": null
+    },
+    {
+      "id": "무:month:hour",
+      "sourcePair": "무계",
+      "pdfPage": 129,
+      "partnerPosition": "month",
+      "blockerPosition": "hour",
+      "expectedVeto": true,
+      "observedVeto": true,
+      "dayClause": false,
+      "finalTransformation": null,
+      "unknownHourFinal": null,
+      "unknownHourClause": null
+    },
+    {
+      "id": "무:hour:year",
+      "sourcePair": "무계",
+      "pdfPage": 129,
+      "partnerPosition": "hour",
+      "blockerPosition": "year",
+      "expectedVeto": true,
+      "observedVeto": true,
+      "dayClause": false,
+      "finalTransformation": null,
+      "unknownHourFinal": null,
+      "unknownHourClause": null
+    },
+    {
+      "id": "무:hour:month",
+      "sourcePair": "무계",
+      "pdfPage": 129,
+      "partnerPosition": "hour",
+      "blockerPosition": "month",
+      "expectedVeto": true,
+      "observedVeto": true,
+      "dayClause": false,
+      "finalTransformation": null,
+      "unknownHourFinal": null,
+      "unknownHourClause": null
+    },
+    {
+      "id": "계:year:month",
+      "sourcePair": "무계",
+      "pdfPage": 129,
+      "partnerPosition": "year",
+      "blockerPosition": "month",
+      "expectedVeto": true,
+      "observedVeto": true,
+      "dayClause": false,
+      "finalTransformation": null,
+      "unknownHourFinal": null,
+      "unknownHourClause": null
+    },
+    {
+      "id": "계:year:hour",
+      "sourcePair": "무계",
+      "pdfPage": 129,
+      "partnerPosition": "year",
+      "blockerPosition": "hour",
+      "expectedVeto": true,
+      "observedVeto": true,
+      "dayClause": false,
+      "finalTransformation": null,
+      "unknownHourFinal": null,
+      "unknownHourClause": null
+    },
+    {
+      "id": "계:month:year",
+      "sourcePair": "무계",
+      "pdfPage": 129,
+      "partnerPosition": "month",
+      "blockerPosition": "year",
+      "expectedVeto": true,
+      "observedVeto": true,
+      "dayClause": false,
+      "finalTransformation": null,
+      "unknownHourFinal": null,
+      "unknownHourClause": null
+    },
+    {
+      "id": "계:month:hour",
+      "sourcePair": "무계",
+      "pdfPage": 129,
+      "partnerPosition": "month",
+      "blockerPosition": "hour",
+      "expectedVeto": true,
+      "observedVeto": true,
+      "dayClause": false,
+      "finalTransformation": null,
+      "unknownHourFinal": null,
+      "unknownHourClause": null
+    },
+    {
+      "id": "계:hour:year",
+      "sourcePair": "무계",
+      "pdfPage": 129,
+      "partnerPosition": "hour",
+      "blockerPosition": "year",
+      "expectedVeto": true,
+      "observedVeto": true,
+      "dayClause": false,
+      "finalTransformation": null,
+      "unknownHourFinal": null,
+      "unknownHourClause": null
+    },
+    {
+      "id": "계:hour:month",
+      "sourcePair": "무계",
+      "pdfPage": 129,
+      "partnerPosition": "hour",
+      "blockerPosition": "month",
+      "expectedVeto": true,
+      "observedVeto": true,
+      "dayClause": false,
+      "finalTransformation": null,
+      "unknownHourFinal": null,
+      "unknownHourClause": null
+    }
+  ],
+  "mutations": [
+    {
+      "sourceCase": "wood-too-strong",
+      "changedPosition": "year",
+      "exactReferenceIds": []
+    },
+    {
+      "sourceCase": "wood-too-strong",
+      "changedPosition": "month",
+      "exactReferenceIds": []
+    },
+    {
+      "sourceCase": "wood-too-strong",
+      "changedPosition": "day",
+      "exactReferenceIds": []
+    },
+    {
+      "sourceCase": "wood-too-strong",
+      "changedPosition": "hour",
+      "exactReferenceIds": []
+    },
+    {
+      "sourceCase": "wood-extremely-strong",
+      "changedPosition": "year",
+      "exactReferenceIds": []
+    },
+    {
+      "sourceCase": "wood-extremely-strong",
+      "changedPosition": "month",
+      "exactReferenceIds": []
+    },
+    {
+      "sourceCase": "wood-extremely-strong",
+      "changedPosition": "day",
+      "exactReferenceIds": []
+    },
+    {
+      "sourceCase": "wood-extremely-strong",
+      "changedPosition": "hour",
+      "exactReferenceIds": []
+    },
+    {
+      "sourceCase": "wood-too-weak",
+      "changedPosition": "year",
+      "exactReferenceIds": []
+    },
+    {
+      "sourceCase": "wood-too-weak",
+      "changedPosition": "month",
+      "exactReferenceIds": []
+    },
+    {
+      "sourceCase": "wood-too-weak",
+      "changedPosition": "day",
+      "exactReferenceIds": []
+    },
+    {
+      "sourceCase": "wood-too-weak",
+      "changedPosition": "hour",
+      "exactReferenceIds": []
+    },
+    {
+      "sourceCase": "wood-extremely-weak",
+      "changedPosition": "year",
+      "exactReferenceIds": []
+    },
+    {
+      "sourceCase": "wood-extremely-weak",
+      "changedPosition": "month",
+      "exactReferenceIds": []
+    },
+    {
+      "sourceCase": "wood-extremely-weak",
+      "changedPosition": "day",
+      "exactReferenceIds": []
+    },
+    {
+      "sourceCase": "wood-extremely-weak",
+      "changedPosition": "hour",
+      "exactReferenceIds": []
+    },
+    {
+      "sourceCase": "fire-too-strong",
+      "changedPosition": "year",
+      "exactReferenceIds": []
+    },
+    {
+      "sourceCase": "fire-too-strong",
+      "changedPosition": "month",
+      "exactReferenceIds": []
+    },
+    {
+      "sourceCase": "fire-too-strong",
+      "changedPosition": "day",
+      "exactReferenceIds": []
+    },
+    {
+      "sourceCase": "fire-too-strong",
+      "changedPosition": "hour",
+      "exactReferenceIds": []
+    },
+    {
+      "sourceCase": "fire-extremely-strong",
+      "changedPosition": "year",
+      "exactReferenceIds": []
+    },
+    {
+      "sourceCase": "fire-extremely-strong",
+      "changedPosition": "month",
+      "exactReferenceIds": []
+    },
+    {
+      "sourceCase": "fire-extremely-strong",
+      "changedPosition": "day",
+      "exactReferenceIds": []
+    },
+    {
+      "sourceCase": "fire-extremely-strong",
+      "changedPosition": "hour",
+      "exactReferenceIds": []
+    },
+    {
+      "sourceCase": "fire-too-weak",
+      "changedPosition": "year",
+      "exactReferenceIds": []
+    },
+    {
+      "sourceCase": "fire-too-weak",
+      "changedPosition": "month",
+      "exactReferenceIds": []
+    },
+    {
+      "sourceCase": "fire-too-weak",
+      "changedPosition": "day",
+      "exactReferenceIds": []
+    },
+    {
+      "sourceCase": "fire-too-weak",
+      "changedPosition": "hour",
+      "exactReferenceIds": []
+    },
+    {
+      "sourceCase": "fire-extremely-weak",
+      "changedPosition": "year",
+      "exactReferenceIds": []
+    },
+    {
+      "sourceCase": "fire-extremely-weak",
+      "changedPosition": "month",
+      "exactReferenceIds": []
+    },
+    {
+      "sourceCase": "fire-extremely-weak",
+      "changedPosition": "day",
+      "exactReferenceIds": []
+    },
+    {
+      "sourceCase": "fire-extremely-weak",
+      "changedPosition": "hour",
+      "exactReferenceIds": []
+    },
+    {
+      "sourceCase": "earth-too-strong",
+      "changedPosition": "year",
+      "exactReferenceIds": []
+    },
+    {
+      "sourceCase": "earth-too-strong",
+      "changedPosition": "month",
+      "exactReferenceIds": []
+    },
+    {
+      "sourceCase": "earth-too-strong",
+      "changedPosition": "day",
+      "exactReferenceIds": []
+    },
+    {
+      "sourceCase": "earth-too-strong",
+      "changedPosition": "hour",
+      "exactReferenceIds": []
+    },
+    {
+      "sourceCase": "earth-extremely-strong",
+      "changedPosition": "year",
+      "exactReferenceIds": []
+    },
+    {
+      "sourceCase": "earth-extremely-strong",
+      "changedPosition": "month",
+      "exactReferenceIds": []
+    },
+    {
+      "sourceCase": "earth-extremely-strong",
+      "changedPosition": "day",
+      "exactReferenceIds": []
+    },
+    {
+      "sourceCase": "earth-extremely-strong",
+      "changedPosition": "hour",
+      "exactReferenceIds": []
+    },
+    {
+      "sourceCase": "earth-too-weak",
+      "changedPosition": "year",
+      "exactReferenceIds": []
+    },
+    {
+      "sourceCase": "earth-too-weak",
+      "changedPosition": "month",
+      "exactReferenceIds": []
+    },
+    {
+      "sourceCase": "earth-too-weak",
+      "changedPosition": "day",
+      "exactReferenceIds": []
+    },
+    {
+      "sourceCase": "earth-too-weak",
+      "changedPosition": "hour",
+      "exactReferenceIds": []
+    },
+    {
+      "sourceCase": "earth-extremely-weak",
+      "changedPosition": "year",
+      "exactReferenceIds": []
+    },
+    {
+      "sourceCase": "earth-extremely-weak",
+      "changedPosition": "month",
+      "exactReferenceIds": []
+    },
+    {
+      "sourceCase": "earth-extremely-weak",
+      "changedPosition": "day",
+      "exactReferenceIds": []
+    },
+    {
+      "sourceCase": "earth-extremely-weak",
+      "changedPosition": "hour",
+      "exactReferenceIds": []
+    },
+    {
+      "sourceCase": "metal-too-strong",
+      "changedPosition": "year",
+      "exactReferenceIds": []
+    },
+    {
+      "sourceCase": "metal-too-strong",
+      "changedPosition": "month",
+      "exactReferenceIds": []
+    },
+    {
+      "sourceCase": "metal-too-strong",
+      "changedPosition": "day",
+      "exactReferenceIds": []
+    },
+    {
+      "sourceCase": "metal-too-strong",
+      "changedPosition": "hour",
+      "exactReferenceIds": []
+    },
+    {
+      "sourceCase": "metal-extremely-strong",
+      "changedPosition": "year",
+      "exactReferenceIds": []
+    },
+    {
+      "sourceCase": "metal-extremely-strong",
+      "changedPosition": "month",
+      "exactReferenceIds": []
+    },
+    {
+      "sourceCase": "metal-extremely-strong",
+      "changedPosition": "day",
+      "exactReferenceIds": []
+    },
+    {
+      "sourceCase": "metal-extremely-strong",
+      "changedPosition": "hour",
+      "exactReferenceIds": []
+    },
+    {
+      "sourceCase": "metal-too-weak",
+      "changedPosition": "year",
+      "exactReferenceIds": []
+    },
+    {
+      "sourceCase": "metal-too-weak",
+      "changedPosition": "month",
+      "exactReferenceIds": []
+    },
+    {
+      "sourceCase": "metal-too-weak",
+      "changedPosition": "day",
+      "exactReferenceIds": []
+    },
+    {
+      "sourceCase": "metal-too-weak",
+      "changedPosition": "hour",
+      "exactReferenceIds": []
+    },
+    {
+      "sourceCase": "metal-extremely-weak",
+      "changedPosition": "year",
+      "exactReferenceIds": []
+    },
+    {
+      "sourceCase": "metal-extremely-weak",
+      "changedPosition": "month",
+      "exactReferenceIds": []
+    },
+    {
+      "sourceCase": "metal-extremely-weak",
+      "changedPosition": "day",
+      "exactReferenceIds": []
+    },
+    {
+      "sourceCase": "metal-extremely-weak",
+      "changedPosition": "hour",
+      "exactReferenceIds": []
+    },
+    {
+      "sourceCase": "water-too-strong",
+      "changedPosition": "year",
+      "exactReferenceIds": []
+    },
+    {
+      "sourceCase": "water-too-strong",
+      "changedPosition": "month",
+      "exactReferenceIds": []
+    },
+    {
+      "sourceCase": "water-too-strong",
+      "changedPosition": "day",
+      "exactReferenceIds": []
+    },
+    {
+      "sourceCase": "water-too-strong",
+      "changedPosition": "hour",
+      "exactReferenceIds": []
+    },
+    {
+      "sourceCase": "water-extremely-strong",
+      "changedPosition": "year",
+      "exactReferenceIds": []
+    },
+    {
+      "sourceCase": "water-extremely-strong",
+      "changedPosition": "month",
+      "exactReferenceIds": []
+    },
+    {
+      "sourceCase": "water-extremely-strong",
+      "changedPosition": "day",
+      "exactReferenceIds": []
+    },
+    {
+      "sourceCase": "water-extremely-strong",
+      "changedPosition": "hour",
+      "exactReferenceIds": []
+    },
+    {
+      "sourceCase": "water-too-weak",
+      "changedPosition": "year",
+      "exactReferenceIds": []
+    },
+    {
+      "sourceCase": "water-too-weak",
+      "changedPosition": "month",
+      "exactReferenceIds": []
+    },
+    {
+      "sourceCase": "water-too-weak",
+      "changedPosition": "day",
+      "exactReferenceIds": []
+    },
+    {
+      "sourceCase": "water-too-weak",
+      "changedPosition": "hour",
+      "exactReferenceIds": []
+    },
+    {
+      "sourceCase": "water-extremely-weak",
+      "changedPosition": "year",
+      "exactReferenceIds": []
+    },
+    {
+      "sourceCase": "water-extremely-weak",
+      "changedPosition": "month",
+      "exactReferenceIds": []
+    },
+    {
+      "sourceCase": "water-extremely-weak",
+      "changedPosition": "day",
+      "exactReferenceIds": []
+    },
+    {
+      "sourceCase": "water-extremely-weak",
+      "changedPosition": "hour",
+      "exactReferenceIds": []
+    },
+    {
+      "sourceCase": "source-balanced-with-clash",
+      "changedPosition": "year",
+      "exactReferenceIds": []
+    },
+    {
+      "sourceCase": "source-balanced-with-clash",
+      "changedPosition": "month",
+      "exactReferenceIds": []
+    },
+    {
+      "sourceCase": "source-balanced-with-clash",
+      "changedPosition": "day",
+      "exactReferenceIds": []
+    },
+    {
+      "sourceCase": "source-balanced-with-clash",
+      "changedPosition": "hour",
+      "exactReferenceIds": []
+    },
+    {
+      "sourceCase": "seasonal-strength-counterexample",
+      "changedPosition": "year",
+      "exactReferenceIds": []
+    },
+    {
+      "sourceCase": "seasonal-strength-counterexample",
+      "changedPosition": "month",
+      "exactReferenceIds": []
+    },
+    {
+      "sourceCase": "seasonal-strength-counterexample",
+      "changedPosition": "day",
+      "exactReferenceIds": []
+    },
+    {
+      "sourceCase": "seasonal-strength-counterexample",
+      "changedPosition": "hour",
+      "exactReferenceIds": []
+    }
+  ],
+  "reviewFlags": [
+    {
+      "flag": "boundaryReview",
+      "value": false,
+      "requiredReason": "SOLAR_TERM_BOUNDARY_REVIEW",
+      "coverageResolved": false
+    },
+    {
+      "flag": "boundaryReview",
+      "value": null,
+      "requiredReason": "SOLAR_TERM_BOUNDARY_REVIEW",
+      "coverageResolved": false
+    },
+    {
+      "flag": "boundaryReview",
+      "value": {},
+      "requiredReason": "SOLAR_TERM_BOUNDARY_REVIEW",
+      "coverageResolved": false
+    },
+    {
+      "flag": "clockReview",
+      "value": false,
+      "requiredReason": "HISTORICAL_CLOCK_REVIEW",
+      "coverageResolved": false
+    },
+    {
+      "flag": "clockReview",
+      "value": null,
+      "requiredReason": "HISTORICAL_CLOCK_REVIEW",
+      "coverageResolved": false
+    },
+    {
+      "flag": "clockReview",
+      "value": {},
+      "requiredReason": "HISTORICAL_CLOCK_REVIEW",
+      "coverageResolved": false
+    }
+  ],
+  "limitations": [
+    "Synthetic arrangement/one-pillar perturbations are regression probes, not new source judgments or real birth charts.",
+    "Source-scoped veto observation does not prove final transformation failure or success across editions.",
+    "No general strength/moderation threshold or personality/compatibility accuracy is established."
+  ]
+}

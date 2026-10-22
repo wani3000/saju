@@ -1,0 +1,101 @@
+{
+  "version": "release-source-inventory-v1",
+  "status": "source-inventory-only-not-production-approved",
+  "versions": {
+    "appEngineWrapper": "manseryeok-research-civil-midnight-v5",
+    "calculationEngine": "research-civil-midnight-v5",
+    "appReading": "chunbae-coherent-whole-chart-v8",
+    "basePolicyReading": "source-observations-copy-v2",
+    "preservedLaunchReviewReading": "source-observations-copy-v2",
+    "researchSynthesis": "whole-chart-evidence-synthesis-research-v3"
+  },
+  "scopeDifferences": [
+    "PRESERVED_REVIEW_PREDATES_CURRENT_READING"
+  ],
+  "knownHourSample": {
+    "includedPositions": [
+      "year",
+      "month",
+      "day",
+      "hour"
+    ],
+    "score": null
+  },
+  "conditionAudit": {
+    "sourceClauseCases": 60,
+    "clauseMismatches": 0,
+    "exactSourceCases": 22,
+    "onePillarMutationCases": 88,
+    "unknownHourCases": 22,
+    "reviewFlagCases": 6,
+    "unsupportedFinalDecisions": 0
+  },
+  "aiEvidence": {
+    "source": "docs/audits/narration-offline-readiness.json",
+    "recordedApiCalls": 0,
+    "recordedQualityEvaluations": 0,
+    "winner": null
+  },
+  "pendingGateIds": [
+    "calendar-policy",
+    "expert-interpretation",
+    "private-access",
+    "external-auth",
+    "external-payment",
+    "paid-product",
+    "operations"
+  ],
+  "skippedByUser": [
+    "user-comprehension"
+  ],
+  "humanParticipantsObserved": 0,
+  "publicReleaseApproved": false,
+  "realChargesEnabled": false,
+  "environmentInspected": false,
+  "externalCalls": 0,
+  "databaseConnections": 0,
+  "sourceArtifacts": [
+    {
+      "file": "web/src/server/readings.ts",
+      "sha256": "aa4cd8f5b9fa86a888821bb6e96d8cdf94667efd4ec77e616524ec80807fc926"
+    },
+    {
+      "file": "web/src/server/staging-preflight.ts",
+      "sha256": "2a936e72ffe7b16825b00c64c4fc6b0e77ed9356805ce25de733e52ee7240f24"
+    },
+    {
+      "file": "web/src/domain/coherent-reading.ts",
+      "sha256": "da3d5ab88c1adc9138340ea9e7f2eac05f23ef21b29f9f8752078836d49e9ac5"
+    },
+    {
+      "file": "web/preview/controller.ts",
+      "sha256": "ae75eba831012180ada4abc0c0706fc62ae6dc9db743b992e509ca1caf84bfb9"
+    },
+    {
+      "file": "web/content/research-policy.json",
+      "sha256": "ce1f0d876de0c64260bcf01ee47d99779aebc392e0da4f0f5001147bc129243d"
+    },
+    {
+      "file": "docs/launch-preparation.json",
+      "sha256": "5a4686770a3bed410c44641dadf18b4114df2c1a155f9364d4357fc4a479b1d1"
+    },
+    {
+      "file": "research/validation/reports/whole-chart-synthesis.json",
+      "sha256": "cc195c75afb0a2d8be852ba34237d65c6c12f3ac311a7d350dfd1cfa49238899"
+    },
+    {
+      "file": "research/validation/reports/condition-boundaries.json",
+      "sha256": "0c2f4c999f90a251a6359f95a3a18ef1764db59825b37757abcc5b047d06e914"
+    },
+    {
+      "file": "docs/audits/narration-offline-readiness.json",
+      "sha256": "6c69e935e9986b4afab5b1b4f1a89180f3331159b06cc1c7303a779d3bf1a169"
+    }
+  ],
+  "limitations": [
+    "This command checks source versions and one synthetic reading; it does not execute the full suites.",
+    "Preserved v2 launch evidence is not a current-v8 expert signoff. No approval or observed user test is inferred.",
+    "A public static preview does not verify hosted server access, auth, payments, backups or production operations.",
+    "Offline AI preparation is not live-model quality or an active app integration."
+  ]
+}
