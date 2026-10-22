@@ -101,7 +101,7 @@
     },
     {
       "file": "web/src/components/App.tsx",
-      "sha256": "947d2be7e2a1f422b3f54e162d8143f49e000440367041efa787830f9184e6c1"
+      "sha256": "1e9bb2eaa67f5db36c3f2fd368dac864b70eb4eba13ba601696170eaa15cec0b"
     },
     {
       "file": "web/src/app/globals.css",
@@ -153,7 +153,7 @@
     },
     {
       "file": "web/scripts/check-journey.mjs",
-      "sha256": "181598f5faf1f462407dfafda41b84e60fe130e9f5561c3691d5612fa3a658b5"
+      "sha256": "731793a103e9b9b6033168446a2b6e747efade4681cb4bb5ed2fcbb233ab7abb"
     },
     {
       "file": "web/tests/nicepay.test.ts",
@@ -162,6 +162,22 @@
     {
       "file": "web/tests/nicepay-http.mjs",
       "sha256": "fc84939a13cf2a1d6950879f2ffea53d75a207e7c0750658c6be0aaea69fc6ae"
+    },
+    {
+      "file": "web/src/components/nicepay-client.ts",
+      "sha256": "f344c4f20f278f7dcad1be26c666249c154d49f6784760ae20515ecf67fb1453"
+    },
+    {
+      "file": "web/src/components/NicepayCheckoutButton.tsx",
+      "sha256": "11b93d14880fd56eb5ec1b64fb5b89e92d228393ae70cbfcfc2f69710b5588fb"
+    },
+    {
+      "file": "web/e2e/nicepay-sandbox.spec.ts",
+      "sha256": "3990f61b3818245412e66536b28d2f53797a3fb4887f88bce7049ac5c62a5d53"
+    },
+    {
+      "file": "web/playwright.config.ts",
+      "sha256": "c9eea6cfbc1f2b2b3a41c5a56260633a4cd711a6bfc128c605fe050e3a20a1d6"
     },
     {
       "file": "web/src/app/api/[...path]/route.ts",

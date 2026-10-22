@@ -47,8 +47,8 @@ try {
   if(!ready)throw new Error("Isolated server readiness timeout");
   console.log("Isolated local checks: synthetic credentials, temporary DB, disposable accounts.");
   await run([nicepay?"tests/nicepay-http.mjs":required?"tests/kakao-required-http.mjs":"tests/http.mjs"]);
-  if(!nicepay)await run(["node_modules/@playwright/test/cli.js","test"]);
-  console.log(nicepay?"PASS: local NICEPAY HTTP guards; no external payment or production readiness is implied.":"PASS: local HTTP and mobile browser journeys; no production readiness is implied.");
+  await run(["node_modules/@playwright/test/cli.js","test"]);
+  console.log(nicepay?"PASS: local NICEPAY HTTP guards and synthetic-SDK mobile launch; no external payment or production readiness is implied.":"PASS: local HTTP and mobile browser journeys; no production readiness is implied.");
 } catch(error) {
   console.error("LOCAL_JOURNEY_FAILED",error.message);
   // Only this isolated server sees synthetic inputs; service credentials were not inherited.

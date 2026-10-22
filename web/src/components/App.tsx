@@ -11,6 +11,7 @@ import PersonForm from "./PersonForm";
 import ProfileHistory, {ProfileAvatar,type HistoryOrder} from "./ProfileHistory";
 import type {ProfileSummary,ReadingHistoryItem} from "@/domain/profile";
 import FixedActions from "./FixedActions";
+import NicepayCheckoutButton from "./NicepayCheckoutButton";
 import IconChevronLeftLine from "@karrotmarket/react-monochrome-icon/IconChevronLeftLine";
 import GuideNote from "./GuideNote";
 import PersonalityReading from "./PersonalityReading";
@@ -298,10 +299,7 @@ export default function App({ request: api = serverApi, preview = false, onReset
       return;
     }
     if (order.provider === "nicepay-test") {
-      const checkout = await api(`orders/${order.id}/prepare`, {});
-      const { openNicepay } = await import("./nicepay-client");
-      await openNicepay(checkout);
-      return;
+      throw new Error("결제창 준비가 끝나면 NICEPAY 결제 버튼을 눌러 주게.");
     }
     if (!data?.tossClientKey)
       throw new Error("Toss 테스트 키가 아직 연결되지 않았어요.");
@@ -580,7 +578,7 @@ export default function App({ request: api = serverApi, preview = false, onReset
                     <br />
                     실제 청구는 없어요.
                   </p>
-                  <button
+                  {pendingOrder.provider === "nicepay-test" ? <NicepayCheckoutButton key={pendingOrder.id} orderId={pendingOrder.id} busy={busy} request={api} run={act}/> : <button
                     className="primary"
                     disabled={busy}
                     onClick={() => act(() => pay(pendingOrder))}
@@ -590,7 +588,7 @@ export default function App({ request: api = serverApi, preview = false, onReset
                       : pendingOrder.provider === "nicepay-test"
                         ? "NICEPAY 테스트 결제하기"
                         : "Toss 테스트 결제하기"}
-                  </button>
+                  </button>}
                   <button
                     className="text-button full"
                     disabled={busy}
