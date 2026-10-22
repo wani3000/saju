@@ -7,12 +7,12 @@
 - 테스트: https://chunbae-staging.vercel.app/
 - Vercel 프로젝트: `chunbae-staging` / `prj_g8ciaxVhxmH3PIunfoqeN9z4jhHJ`.
 - 팀: `oxaz1234-gmailcoms-projects` / `team_R8P4DPGCTnvB9cBXk2YA9Y0u`.
-- 앱 소스: `0e1f844`. 최종 배포 `dpl_EVNv3APFZ9a9ARRbSCH2AunidsVX`, Ready·alias 일치 확인.
-- 고정 배포 URL: https://chunbae-staging-ap8pa03i5-oxaz1234-gmailcoms-projects.vercel.app/
+- 앱 소스: `7df465e`. 최종 배포 `dpl_ATXCmP2shtSgnkRDrXMRrL71rT6c`, Ready·alias 일치 확인.
+- 고정 배포 URL: https://chunbae-staging-e2sbvw36v-oxaz1234-gmailcoms-projects.vercel.app/
 - Node22.x·Next16.4.0, 실행 함수 리전 `icn1`(서울). 빌드 로그의 `iad1`은 업로드된 산출물 배포 작업 위치이며 실행 함수 리전과 구분한다.
 - 저장소의 연구 엔진을 포함해 로컬 `vercel build --prod` 후 `--prebuilt --prod --regions icn1`로 전용 프로젝트에 배포했다. 이 프로젝트의 production target은 안정된 스테이징 alias를 위한 호스팅 구분이다. 앱의 연구 모드나 운영 출시 승인을 바꾸지 않는다.
 
-첫 서버 배포 `dpl_CJKtUGfjiwqdBTcL3EjZhaK6zpaQ` / 소스 `9b02143`에서 실제 최초 로그인을 확인했다. 아래 재로그인 불편을 수정하고 현재 배포에서 다시 검증했다. SQL 스키마 변경은 없다.
+첫 서버 배포 `dpl_CJKtUGfjiwqdBTcL3EjZhaK6zpaQ` / 소스 `9b02143`에서 실제 최초 로그인을 확인했다. 아래 재로그인 불편을 수정한 `0e1f844` / `dpl_EVNv3APFZ9a9ARRbSCH2AunidsVX`에서 재로그인을 다시 검증했다. 후속 `7df465e`는 공유 테스트 상점 웹훅 보완이며 기존 프로필의 새로고침 유지와 익명/오류 응답을 확인했다. SQL 스키마 변경은 없다.
 
 ## 설정과 접근 범위
 
@@ -54,4 +54,10 @@
 
 NICEPAY 결제/취소·실제 다른 기기/카카오 인앱 브라우저·프로필 미동의의 실계정 흐름·연결 해제/탈퇴와 외부 웹훅·호스팅 백업 복원·운영 감시·전문가/출시 승인은 별도 미완료다. 기존 정적 체험판은 이번 서버 배포로 대체하거나 재배포하지 않았다.
 
-후속: [실제 앱 DB 백업의 격리 로컬 복원](hosted-backup-restore-check.md)은21테이블 데이터/스키마/권한 대조를 통과했다. 호스팅 전체 재해 복구·인증 공급자/스토리지 복원·장기 보관·지속 감시는 구분하여 미완료로 유지한다. 운영 도구만 추가했으므로 위 배포는 유지한다.
+후속: [실제 앱 DB 백업의 격리 로컬 복원](hosted-backup-restore-check.md)은21테이블 데이터/스키마/권한 대조를 통과했다. 호스팅 전체 재해 복구·인증 공급자/스토리지 복원·장기 보관·지속 감시는 구분하여 미완료로 유지한다. 해당 백업 도구 작업은 배포를 변경하지 않았다.
+
+## 2026-10-22 공유 테스트 상점 웹훅 보완 배포
+
+[기존 NICEPAY 테스트 상점 검수](nicepay-shared-sandbox-review.md)의 다른 서비스 주문 무시·위조 거절·현재 상태 대사·503 재시도 보완을 소스7df465e로 재배포했다. 웹161개·HTTP/모바일28개·Next/Vercel 빌드·소스 현황/문서 검사 통과. 실제 배포는 READY·서울icn1·canonical alias 일치를 확인했다. 익명 랜딩200/no-store, 개인 state401/no-store, 잘못된 JSON 웹훅400/no-store를 확인했다. 실제 브라우저에서 기존 카카오 프로필의 새로고침 유지도 확인했다. 기존 로그인 왕복 검증과 이번 유지 확인은 구분한다.
+
+테스트 키2개 저장과 웹훅 등록은 사용자 확인 대기 상태다. 서버 설정은 기존9개이며 키를 넣거나 NICEPAY API를 호출하지 않았다. 실제 결제 승인·취소·외부 웹훅 통보 검증으로 표시하지 않는다.
