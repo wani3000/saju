@@ -273,15 +273,42 @@ for(const [relation,title,lastTitle] of [
   await page.screenshot({path:testInfo.outputPath(`easy-${relation}.png`),fullPage:true,timeout:5000});
 });
 
-test('profile opens the saved reading and payment history without confusing free readings with purchases',async({page})=>{
+test('profile distinguishes free readings, pending purchases, paid readings and refunded access',async({page})=>{
  await result(page);
  await page.getByRole('button',{name:'내 프로필',exact:true}).click();
  await expect(page.getByRole('heading',{name:'내 프로필',exact:true})).toBeVisible();
  await expect(page.getByRole('heading',{name:'하루 · 친구',exact:true})).toBeVisible();
  await page.getByRole('button',{name:'결제 내역',exact:true}).click();
  await expect(page.getByText('아직 결제 내역이 없네. 무료로 본 이야기는 사주 조회 내역에 있네.')).toBeVisible();
+ // Local demo membership uses recovery; the hosted run uses a real Kakao login.
+ await page.getByRole('button',{name:'복구 코드 만들기',exact:true}).click();
+ await expect(page.getByLabel('지금 한 번만 표시되는 복구 코드',{exact:true})).toBeVisible();
  await page.getByRole('button',{name:'사주 조회 내역',exact:true}).click();
  await page.getByRole('button',{name:'이야기 다시 보기',exact:true}).click();
  await expect(page.getByRole('heading',{name:'두 사람의 사주 이야기',exact:true})).toBeVisible();
+ await page.getByRole('button',{name:'한 명 더 추가하기',exact:true}).click();
+ await fillPerson(page,true);
+ await page.getByLabel('부를 이름',{exact:true}).fill('유료검증');
+ await page.getByRole('button',{name:'다음',exact:true}).click();
+ await page.getByRole('button',{name:'추가 이용 확인하기',exact:true}).click();
+ await expect(page.getByRole('button',{name:'모의 결제하고 결과 보기',exact:true})).toBeVisible();
+ await page.getByRole('button',{name:'내 프로필',exact:true}).click();
+ await expect(page.getByText('결제를 기다리는 이야기일세.',{exact:true})).toBeVisible();
+ await page.getByRole('button',{name:'결제 내역',exact:true}).click();
+ await expect(page.getByText('결제 전 · 실제 청구 없음',{exact:true})).toBeVisible();
+ await page.getByRole('button',{name:'주문 이어가기',exact:true}).click();
+ await page.getByRole('button',{name:'모의 결제하고 결과 보기',exact:true}).click();
+ await expect(page.getByRole('heading',{name:'나래 · 유료검증',exact:true})).toBeVisible();
+ await page.getByRole('button',{name:'내 프로필',exact:true}).click();
+ await expect(page.getByRole('button',{name:'이야기 다시 보기',exact:true})).toHaveCount(2);
+ await page.getByRole('button',{name:'결제 내역',exact:true}).click();
+ await expect(page.getByText('테스트 승인 완료 · 실제 청구 없음',{exact:true})).toBeVisible();
+ await page.getByRole('button',{name:'테스트 결제 취소',exact:true}).click();
+ await expect(page.getByText('테스트 취소 완료 · 실제 청구 없음',{exact:true})).toBeVisible();
+ await page.getByRole('button',{name:'사주 조회 내역',exact:true}).click();
+ await expect(page.getByText('이용이 취소된 이야기일세.',{exact:true})).toBeVisible();
+ await expect(page.getByRole('button',{name:'이야기 다시 보기',exact:true})).toHaveCount(1);
+ await page.getByRole('button',{name:'이야기 다시 보기',exact:true}).click();
+ await expect(page.getByRole('heading',{name:'나래 · 하루',exact:true})).toBeVisible();
  await noOverflow(page);
 });

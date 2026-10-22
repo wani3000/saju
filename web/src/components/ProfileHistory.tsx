@@ -19,7 +19,7 @@ export default function ProfileHistory({profile,preview,readings,orders,busy,onO
   </div>
   {tab==='readings'?<div aria-label="사주 조회 내역"><h2>사주 조회 내역</h2>{!readings.length&&<p>아직 남긴 이야기가 없네. 두 사람의 생일부터 적어 보게.</p>}{readings.map(r=><article className="card" key={r.id}>
    <h3>{r.other_name||'함께 본 사람'}{r.relation?` · ${r.relation}`:''}</h3><p className="hint">{date(r.created_at)}</p>
-   <p>{r.can_open?'다시 읽을 수 있네.':r.entitlement_state==='revoked'||r.state==='cancelled'?'이용이 취소된 이야기일세.':r.state==='failed'?'준비가 멈췄네. 다시 시도할 수 있네.':r.state==='awaiting-payment'?'결제를 기다리는 이야기일세.':'이야기를 준비하고 있네.'}</p>
+   <p>{r.can_open?'다시 읽을 수 있네.':r.entitlement_state==='revoked'||r.state==='cancelled'?'이용이 취소된 이야기일세.':r.state==='failed'?'준비가 멈췄네. 다시 시도할 수 있네.':['awaiting_payment','awaiting-payment'].includes(r.state)?'결제를 기다리는 이야기일세.':'이야기를 준비하고 있네.'}</p>
    {(r.can_open||r.state!=='cancelled'&&r.entitlement_state!=='revoked')&&<button className="secondary" disabled={busy} onClick={()=>onOpen(r.id)}>{r.can_open?'이야기 다시 보기':'이어서 확인하기'}</button>}
   </article>)}</div>:<div aria-label="결제 내역"><h2>결제 내역</h2><p className="hint">지금은 테스트 내역이며 실제로 청구되지 않네.</p>{!orders.length&&<p>아직 결제 내역이 없네. 무료로 본 이야기는 사주 조회 내역에 있네.</p>}{orders.map(o=><article className="card" key={o.id}>
    <h3>{o.other_name?`${o.other_name}의 이야기`:'추가 이야기'} · {o.amount.toLocaleString('ko-KR')}원</h3><p className="hint">{date(o.created_at)}</p><p>{statuses[o.state]||'상태 확인 필요'} · 실제 청구 없음</p>

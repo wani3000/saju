@@ -56,6 +56,18 @@
   "databaseConnections": 0,
   "sourceArtifacts": [
     {
+      "file": "web/package.json",
+      "sha256": "fb7934fc5941734df9f6fca81b48da2de2b6a19b7ab92f0774b2b329800937a0"
+    },
+    {
+      "file": "web/package-lock.json",
+      "sha256": "252284a0dabfddcc584284187438b0ce093b8a0f726c2ec03777c71f013e87da"
+    },
+    {
+      "file": "web/e2e/journey.spec.ts",
+      "sha256": "b4d75957590237dbe33f7029fe7f6cb2d3966cd087a2bfca3b650ad9ba719a1f"
+    },
+    {
       "file": "web/src/server/db.ts",
       "sha256": "b6ab54db7b9a40cabf0a14a3f146b37f3da422d3086bdf8fb9f1b38ff11dd7fc"
     },
@@ -165,7 +177,7 @@
     },
     {
       "file": "web/src/components/ProfileHistory.tsx",
-      "sha256": "61cd3913f0574dde44fb2c1e2f7ce7d135e5a2de7707098b1044aff4b503d16a"
+      "sha256": "92efe3d0844990e3766aba2d8d6e6d3cacb2fc8a60d595f2f71209fa54473638"
     },
     {
       "file": "web/src/domain/profile.ts",
