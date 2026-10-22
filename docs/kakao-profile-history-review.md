@@ -26,7 +26,7 @@
 
 [카카오 공식 로그인 절차](https://developers.kakao.com/docs/ko/kakaologin/common)는 서비스 로그아웃·카카오 연결 해제·회원 탈퇴를 구분한다. **현재 로그아웃은 이 앱 세션 종료이며, 내 정보 삭제는 앱 기록 삭제다. 카카오 unlink/Supabase 사용자 삭제는 구현·실검증되지 않았다.** 삭제된 식별자를 보존하는 기존 개발 정책도 정식 탈퇴 정책 승인이 아니다. 운영 전 식별자 파기/필수 보존 동의·연결 해제 API·외부 탈퇴 웹훅·세션 철회·재가입/무료권 정책을 함께 확정해야 한다. 이 항목을 완료로 체크하지 않는다.
 
-실제 설정이 없어 외부 왕복은 미실행이다. 준비 후 로그인 성공/취소·쿠키 및 HTTPS·코드 재사용/만료·기기 변경·프로필 변경/미동의·다른 계정 전환·로그아웃/탈퇴 및 웹훅을 검증한다. 모바일 카카오 인앱/외부 브라우저도 실제 기기로 확인해야 한다. [버튼 규정](https://developers.kakao.com/docs/ko/kakaologin/design-guide)과 [공식 리소스](https://developers.kakao.com/tool/resource/login)를 대조했다.
+후속 실제 앱/공급자 설정과 최소 동의 화면 확인은 [연결 기록](external-connection-progress.md)의 최신 항목을 따른다. 아직 앱 서버 OAuth 왕복은 미실행이다. 서버 배포 후 로그인 성공/취소·쿠키 및 HTTPS·코드 재사용/만료·기기 변경·프로필 변경/미동의·다른 계정 전환·로그아웃/탈퇴 및 웹훅을 검증한다. 모바일 카카오 인앱/외부 브라우저도 실제 기기로 확인해야 한다. [버튼 규정](https://developers.kakao.com/docs/ko/kakaologin/design-guide)과 [공식 리소스](https://developers.kakao.com/tool/resource/login)를 대조했다.
 
 ## 체험판과 검증
 
@@ -49,3 +49,6 @@ python3 tools/check_docs.py
 합성 DB 검사는 회원/복구/타 계정/만료 세션의 로그인 우회 차단, 공급자 검사, 표시 정보 정리, 삭제, 환불 이력·열람 철회·소유권을 포함한다. 별도 카카오 필수 모드 HTTP·모바일 검사는 미로그인 생일/내역 진입 차단과 구성 미완료 안내를 확인한다. 일반 로컬 데모 여정은 입력·결과·지도·공유·복구와 프로필 조회를 검증한다. 어느 검사도 실제 OAuth 왕복/실결제·법률 검토·전문가 승인을 대체하지 않는다.
 
 최종 자동 검사: 웹146개, 기존 로컬 모바일28개와 별도 카카오 필수 모바일2개, 양 모드 HTTP, 타입/Next·정적 빌드 통과. 로컬 PostgreSQL21테이블 복원에서 새 프로필·카카오 세션 표식과 복구 세션의 차이도 확인했다. [체험판 프로필390px](../web/qa-evidence/chunbae-profile-history-390.jpg). 공개 배포 상태는 [배포 기록](temporary-preview-deployment.md)에서 별도로 확인한다.
+
+
+2026-10-22 실제 설정 후속: 전용 앱1618169/플로렌스랩·두 프로필 선택 동의·활성 Client Secret·Supabase 이메일 없는 계정 허용을 저장했다. 기본 요청에 이메일이 추가되는 문제를 실재현하고 서버 `queryParams.scope`로 제한했다. 신규 SSR SDK 회귀 검사와 실제 hosted authorize 검사를 통과했으며, 브라우저 동의 화면도 두 선택 항목만 확인했다. 코드 교환/앱 세션과 실제 이용자 탈퇴 검증은 포함하지 않는다.

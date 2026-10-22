@@ -18,6 +18,7 @@
     "health": "tsx scripts/maintenance.ts --health",
     "test:postgres": "node scripts/postgres-check.mjs",
     "test:hosted-runtime": "tsx scripts/check-hosted-runtime.ts",
+    "test:kakao-provider": "tsx scripts/check-kakao-provider.ts",
     "test:journey": "node scripts/check-journey.mjs",
     "check:staging": "tsx scripts/staging.ts",
     "start:staging": "tsx scripts/staging.ts --start",

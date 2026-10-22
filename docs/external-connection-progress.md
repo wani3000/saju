@@ -1,10 +1,10 @@
 # 카카오·NICEPAY 실제 연동 착수
 
-2026-10-22. 사용자가 실제 로그인/결제 연결을 요청하고 카카오 Developers의 사주 전용 앱을 직접 생성하도록 지시했다. 현재 GitHub·Supabase 관리자 로그인과 새 계정의 전용 서울 Free DB 생성·연결은 완료됐으며, 카카오 인증과 실제 OAuth/결제 검증은 남아 있다. 최신 상태는 아래 전용 프로젝트 연결 기록을 따른다. 앱의 실제 OAuth/결제 연결 완료로 표시하지 않는다.
+2026-10-22. 사용자가 실제 로그인/결제 연결을 요청하고 카카오 Developers의 사주 전용 앱을 직접 생성하도록 지시했다. 현재 GitHub·Supabase 관리자 로그인과 새 계정의 전용 서울 Free DB 생성·연결은 완료됐으며, 카카오 앱/공급자 연결과 최소 동의 화면 확인도 완료했다. 앱 서버의 실제 OAuth 복귀/세션 및 결제 검증은 남아 있다. 최신 상태는 아래 전용 프로젝트 연결 기록을 따른다. 앱의 실제 OAuth/결제 연결 완료로 표시하지 않는다.
 
 ## 확인한 상태
 
-- Chrome에서 Kakao Developers를 열었으나 계정 로그인 필요. 저장된 로그인으로 진입하지 못해 공식 카카오 QR 인증 화면을 열었다. **개발자 앱은 아직 생성되지 않았다.** 본인 인증 뒤 ‘김춘배 훈장’ 전용 앱 생성과 최소 프로필 동의·콜백 설정을 이어간다.
+- 최초에는 카카오 본인 로그인이 필요했다. 이후 사용자가 로그인을 완료하고 앱 생성·정책 확인·최소 프로필 키 연결을 승인하여 전용 앱1618169를 생성했다. 아래 최신 카카오 연결 기록을 따른다.
 - Supabase Dashboard 관리자 로그인 완료. 사용자 요청으로 Google→GitHub 로그인과 인증 앱의 추가 인증을 거쳐 wani3000 계정으로 진입했고, Supabase 조직 화면까지 확인했다. 이는 앱 사용자용 카카오 OAuth 연동과 다르다. 무료 프로젝트2개를 모두 사용 중이라는 생성 제한 안내와 비활성 생성 버튼을 확인했다. 새 프로젝트/DB/역할/공급자는 생성되지 않았다. Supabase 연결 플러그인 설치와도 구분한다.
 - NICEPAY 관리자는 계정 입력 단계. 전자책 `Documents/Codex/2026-07-18/pc/website`의 코드와 과거 온보딩 기록에서 같은 결제사임을 재확인했다. 현재 사주용 테스트 키·운영 계약 완료·새 거래는 확인되지 않았으며 전자책 운영 키/DB를 복사하지 않았다. 2026-10-22 추가 조사에서는 해당 전자책 Vercel에 NICEPAY 변수4개가 등록된 사실을 확인했다. 아래 추가 조사 기록이 과거의 설정 누락 기록보다 우선한다.
 - 이전 커밋8d05804의 GitHub Research/Web/Prototype validation은 모두 성공했다.
@@ -89,7 +89,7 @@ Google 계정→GitHub의 기존2단계 인증→Supabase GitHub 로그인 경�
 | 앱 연결 | Supavisor transaction pooler6543, 제한 계정, verify-full TLS |
 | 인증 Site URL | https://chunbae-staging.vercel.app |
 | 인증 Redirect URL | https://chunbae-staging.vercel.app/auth/callback 하나만 등록 |
-| 카카오 공급자 | 전용 개발자 앱·키 미설정, OAuth 왕복 미검증 |
+| 카카오 공급자 | 전용 앱1618169 및 공급자 활성화, 이메일 없이 로그인 허용. 최소 동의 화면 확인, 앱 서버 OAuth 복귀는 미검증 |
 | Vercel 원격 앱 | 아직 미배포·원격 환경변수 미등록 |
 
 관리자와 앱용 DB 비밀번호는 서로 다른 난수로 생성했다. 사용자 계정 로그인 비밀번호와 구분하며, 관리자 연결은 bootstrap 파일에만 두고 앱은 제한 계정을 사용한다. `web/.env.supabase-bootstrap.local`과 `web/.env.staging.local`은 Git 제외·권한600을 확인했다. 비밀값은 문서·검사 출력·커밋에 포함하지 않았다.
@@ -104,3 +104,26 @@ Google 계정→GitHub의 기존2단계 인증→Supabase GitHub 로그인 경�
 
 
 검증: 웹152개, 일반 HTTP/모바일28개, 카카오 필수 HTTP/모바일2개, 타입 검사, Next 빌드, 소스 현황 일치, 문서 검사 통과. API 서버 추적에 CA와 마이그레이션4개 포함을 확인했다. 새 hosted-runtime 명령도 실제 제한 계정으로 통과했다. 서버 staging 배포와 실제 OAuth/결제 왕복은 이 검사에 포함되지 않는다.
+
+
+## 2026-10-22 김춘배 훈장 카카오 앱·Supabase 공급자 연결
+
+사용자가 직접 카카오 로그인을 완료하고 앱 생성·운영정책 준수 확인·인증 키의 Supabase 저장을 승인했다. 필수 상호명은 사용자가 지정한 **플로렌스랩**이다.
+
+- 전용 앱 **김춘배 훈장**, 앱ID **1618169**, 카테고리 엔터테인먼트, 대표 도메인 `https://chunbae-staging.vercel.app`를 생성했다. 기존 전자책 등 다른 앱은 변경하지 않았다.
+- 카카오 로그인 ON. `profile_nickname`, `profile_image`만 **선택 동의**로 저장했다. 이메일·전화번호·생일·성별·친구 목록·메시지 권한은 요청하지 않는다. 실제 카카오 동의 화면에서 상호/서비스명과 두 선택 항목을 확인했다. 사용자의 동의 제출은 하지 않았다.
+- 자동 발급된 전용 REST 키를 `Chunbae Supabase Staging`으로 식별하고, 활성 상태의 카카오 로그인 Client Secret과 함께 Supabase `nwicejxousubxiczwwkb` Kakao 공급자에 저장했다. 키를 프로젝트 파일·Git·클라이언트 번들에 추가하지 않았다.
+- Kakao REST 키의 로그인 Redirect URI는 `https://nwicejxousubxiczwwkb.supabase.co/auth/v1/callback` 하나다. 비즈니스 인증 Redirect URI는 비어 있다. Kakao 공급자 Enabled와 `Allow users without an email` 저장을 확인했다. Supabase 앱 복귀 허용 주소는 기존의 정확한 `https://chunbae-staging.vercel.app/auth/callback`을 유지한다.
+
+### 실제 요청에서 발견한 이메일 범위 문제와 수정
+
+Supabase의 이메일 선택 설정을 켜도 기본 authorize 응답에는 `account_email,profile_image,profile_nickname`이 포함됐다. [공식 구현](https://github.com/supabase/auth/blob/master/internal/api/provider/kakao.go)과 [이슈2574](https://github.com/supabase/auth/issues/2574)의 기본 이메일 범위 문제와 일치했다. SDK의 `scopes` 옵션은 기본 범위에 추가하므로 이 문제를 해결하지 못한다. 앱 서버가 `queryParams.scope=profile_nickname,profile_image`를 보내도록 수정했고, 실제 hosted authorize302의 최종 범위가 정확한 두 항목으로 제한되는 것을 검증했다. `Allow users without an email`만 켰다는 사실을 최소 권한 보장으로 간주하지 않는다.
+
+- 새 SSR SDK 회귀 검사는 네트워크 없이 profile-only `scope`, 정확한 callback, PKCE challenge와 verifier 저장을 확인한다.
+- `npm run test:kakao-provider -- --settings .env.staging.local --project nwicejxousubxiczwwkb`는 승인된 전용 연구 환경만 대상으로 실제 authorize 응답의 공급자/콜백/범위를 검사한다. 사용자 계정 동의·코드 교환·토큰·실제 프로필 값은 출력하지 않는다.
+- 실제 Chrome에서도 카카오 동의 화면에 정상 진입했으며 닉네임과 사진만 선택 항목이었다. 검증용 미완료 동의 탭은 닫았다. 실제 앱 서버 세션을 발급한 것은 아니다.
+
+현재 완료 범위는 **개발자 앱 생성·공급자 설정·최소 권한 요청과 동의 화면 진입**이다. 서버 staging은 아직 미배포다. 따라서 PKCE 코드 교환 후 앱 세션 생성, 재로그인·기기 변경, 사진 미동의/없음의 실제 계정 흐름·탈퇴/웹훅은 미완료로 유지한다. NICEPAY 테스트 키2개와 실제 결제·취소도 별도다. 기존 공개 정적 체험판에 실제 로그인을 붙였다고 표시하지 않는다.
+
+
+연결 후 검증: 새 SSR SDK 회귀1개 포함 웹153개, 타입·Next 빌드, 일반 HTTP/모바일28개와 카카오 필수 HTTP/모바일2개, 소스 현황 일치·문서 검사를 통과했다. 전용 hosted authorize 최소 범위 검사도 통과했다. 새 스키마 변경은 없으며, 이전 원격 DB 검증을 이번 실제 OAuth 완료 근거로 재사용하지 않는다.

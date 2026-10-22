@@ -23,3 +23,11 @@ export function loggedOutState(){return {kind:'guest',authLinked:false,authentic
 
 export const temporaryAuthCookie='chunbae-supabase-auth';
 export const isTemporaryAuthCookie=(name:string)=>/^chunbae-supabase-auth(?:-code-verifier)?(?:\.\d+)?$/.test(name);
+
+// Supabase's Kakao provider appends its default account_email to `scopes`.
+// The provider query parameter `scope` replaces that default; verified against
+// the hosted staging authorize redirect. Keep this separate from `scopes`.
+export function kakaoOAuthOptions(origin:string){
+ return {redirectTo:new URL('/auth/callback',origin).href,skipBrowserRedirect:true,
+  queryParams:{scope:'profile_nickname,profile_image'}};
+}

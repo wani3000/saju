@@ -10,7 +10,7 @@ import { startIdentity, finishIdentity } from "@/server/identity";
 import { prepareNicepay } from "@/server/nicepay-checkout";
 import { erasePersonalData } from "@/server/operations";
 import * as payment from "@/server/payments";
-import {kakaoRequired,hasKakaoSession,requireKakaoSession,loggedOutState} from '@/server/kakao-policy';
+import {kakaoRequired,hasKakaoSession,requireKakaoSession,loggedOutState,kakaoOAuthOptions} from '@/server/kakao-policy';
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 const cookieName = "saju_session";
@@ -117,10 +117,7 @@ async function handle(req: NextRequest) {
       const attempt = await startIdentity(db, owner);
       const { data, error } = await auth.auth.signInWithOAuth({
         provider: "kakao",
-        options: {
-          redirectTo: process.env.APP_ORIGIN + "/auth/callback",
-          skipBrowserRedirect: true,
-        },
+        options: kakaoOAuthOptions(process.env.APP_ORIGIN!),
       });
       if (error || !data.url) throw new AppError("AUTH_UNAVAILABLE", 503);
       res.cookies.set("saju_auth", attempt, {

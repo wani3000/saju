@@ -76,6 +76,10 @@
       "sha256": "27fcef3a7f555296c06d584750793c48dbc8f0f303833f41d2e4c0c12e7118fa"
     },
     {
+      "file": "web/scripts/check-kakao-provider.ts",
+      "sha256": "851b5142ca8b929cccafb354cb0c2eeffd7f4f41d713a28ff99fe05d37fe04ce"
+    },
+    {
       "file": "web/src/components/App.tsx",
       "sha256": "bd26bc62c89c882e14d636bd96ed49389d92b065895801f9ebbe1ceba10ef83b"
     },
@@ -89,7 +93,7 @@
     },
     {
       "file": "web/src/server/kakao-policy.ts",
-      "sha256": "c25dbb4d69acc2ef2d98ebb6b7b823458536b079d274a3648dcca8f64cc1a23f"
+      "sha256": "0b4c35990a1125c063b314227994af51306ff860174415f8c5c21fd224b570e3"
     },
     {
       "file": "web/src/server/auth.ts",
@@ -105,7 +109,7 @@
     },
     {
       "file": "web/src/app/api/[...path]/route.ts",
-      "sha256": "f80a60f312cc1f4340dce617792a8adc89bdbb91f0031dbd2659f997cadd0e14"
+      "sha256": "915a2abed3d4011d6325c59fae9bd72944329dc88f148aecc0f5f25f597b5e45"
     },
     {
       "file": "web/src/app/auth/callback/route.ts",
