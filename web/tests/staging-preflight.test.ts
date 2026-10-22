@@ -5,7 +5,7 @@ import { mkdtempSync, rmSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { stagingPreflight } from "../src/server/staging-preflight";
-const configured = () => ({ SAJU_MODE:"research", APP_ORIGIN:"https://staging.example.test", ALLOW_REMOTE_TEST:"true",
+const configured = () => ({ SAJU_MODE:"research", SAJU_AUTH_MODE:'kakao-required', APP_ORIGIN:"https://staging.example.test", ALLOW_REMOTE_TEST:"true",
   DATABASE_URL:"postgresql://example:canary-private-password@db.example.test/staging?sslmode=verify-full",
   SUPABASE_URL:"https://project.example.test", SUPABASE_PUBLISHABLE_KEY:"sb_publishable_synthetic",
   PAYMENT_PROVIDER:"nicepay-test", NICEPAY_MODE:"sandbox", NICEPAY_CLIENT_KEY:"S2_synthetic", NICEPAY_SECRET_KEY:"canary-private-secret" });
@@ -19,7 +19,7 @@ test("valid-shaped test configuration never implies provider, human, or hosted v
 });
 test("missing or unsafe staging configuration fails closed without echoing credentials", () => {
   assert.equal(stagingPreflight({}).status,"blocked");
-  for (const patch of [{SAJU_MODE:"production"}, {APP_ORIGIN:"https://user:canary-private-password@staging.example.test"},
+  for (const patch of [{SAJU_AUTH_MODE:"local-demo"}, {SAJU_AUTH_MODE:""}, {SAJU_MODE:"production"}, {APP_ORIGIN:"https://user:canary-private-password@staging.example.test"},
     {APP_ORIGIN:"http://localhost:4180"}, {APP_ORIGIN:"https://example.test/subpath"}, {APP_ORIGIN:"https://staging.example.test/"}, {SUPABASE_URL:"https://example.test?key=canary-private-secret"},
     {SUPABASE_PUBLISHABLE_KEY:"sb_secret_canary-private-secret"}, {PAYMENT_PROVIDER:"mock"}, {NICEPAY_MODE:"production"},
     {NICEPAY_CLIENT_KEY:"R1_canary-private-secret"}, {NICEPAY_SECRET_KEY:""}, {DATABASE_URL:""},

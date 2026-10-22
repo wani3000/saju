@@ -21,7 +21,7 @@ export async function lockOwner(tx: Sql, owner: string) {
   )
     throw new AppError("UNAUTHORIZED", 401, "다시 시작해 주세요.");
 }
-export async function newSession(db: Database, owner?: string) {
+export async function newSession(db: Database, owner?: string, authSubject?: string) {
   const secret = token();
   return db.transaction(async (tx) => {
     const id = owner ?? randomUUID();
@@ -30,9 +30,11 @@ export async function newSession(db: Database, owner?: string) {
       await tx.query("INSERT INTO free_claims(owner_id) VALUES($1)", [id]);
     }
     if (owner) await lockOwner(tx, owner);
-    await tx.query("INSERT INTO sessions(token_hash,owner_id) VALUES($1,$2)", [
+    if(authSubject&&(!owner||!(await one(tx,'SELECT subject FROM auth_identities WHERE subject=$1 AND owner_id=$2',[authSubject,owner]))))throw new AppError('INVALID_IDENTITY',401);
+    await tx.query("INSERT INTO sessions(token_hash,owner_id,auth_subject) VALUES($1,$2,$3)", [
       hash(secret),
       id,
+      authSubject??null,
     ]);
     return { owner: id, secret };
   });
@@ -259,9 +261,14 @@ export async function state(db: Sql, owner: string) {
     [owner],
   );
   const orders = await db.query(
-    "SELECT id,comparison_id,amount,state,provider FROM orders WHERE owner_id=$1 ORDER BY created_at DESC",
+    "SELECT o.id,o.comparison_id,o.amount,o.state,o.provider,o.created_at,c.inputs->'other'->>'name' AS other_name FROM orders o JOIN comparisons c ON c.id=o.comparison_id AND c.owner_id=o.owner_id WHERE o.owner_id=$1 ORDER BY o.created_at DESC",
     [owner],
   );
+  const identity=await one(db,'SELECT display_name,avatar_url FROM auth_identities WHERE owner_id=$1',[owner]);
+  const readingHistory=await db.query(`SELECT c.id,c.state,c.created_at,c.inputs->'other'->>'name' AS other_name,c.inputs->'other'->>'relation' AS relation,
+   e.state AS entitlement_state,(e.state='active' AND r.comparison_id IS NOT NULL) IS TRUE AS can_open
+   FROM comparisons c LEFT JOIN entitlements e ON e.comparison_id=c.id AND e.owner_id=c.owner_id
+   LEFT JOIN results r ON r.comparison_id=c.id AND r.owner_id=c.owner_id WHERE c.owner_id=$1 ORDER BY c.created_at DESC`,[owner]);
   return {
     kind: account?.kind,
     authLinked: Boolean(
@@ -276,6 +283,8 @@ export async function state(db: Sql, owner: string) {
     pending: pending.rows,
     shares: shares.rows,
     orders: orders.rows,
+    profile:identity?{displayName:identity.display_name,avatarUrl:identity.avatar_url}:null,
+    readingHistory:readingHistory.rows,
   };
 }
 export async function result(db: Sql, owner: string, id: string) {

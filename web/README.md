@@ -11,16 +11,16 @@ node research/validation/restore-engines.mjs
 pnpm --dir research/validation install --frozen-lockfile
 cd web
 npm ci
-npm run dev
+SAJU_AUTH_MODE=local-demo npm run dev
 ```
 
-주소: http://127.0.0.1:4180. 별도 API 키 없이 실행한다. 기본 DB는 `.data/postgres`의 파일 기반 PGlite이며 Git에서 제외한다. 서버를 종료했다 켜도 입력·결과가 남는다. 개발 화면에는 합성 데이터 채우기 버튼이 있다. 실제 개인정보를 검증 자료로 사용하지 않는다.
+주소: http://127.0.0.1:4180. 위 명령은 별도 키 없는 로컬 체험이다. 기본 실행은 `kakao-required`로, 카카오 설정 전에는 입력과 내역을 열지 않는다. [프로필·인증 검수](../docs/kakao-profile-history-review.md)를 참고한다. 기본 DB는 `.data/postgres`의 파일 기반 PGlite이며 Git에서 제외한다. 서버를 종료했다 켜도 입력·결과가 남는다. 개발 화면에는 합성 데이터 채우기 버튼이 있다. 실제 개인정보를 검증 자료로 사용하지 않는다.
 
 ```sh
 npm test
 npm run db:check
 npm run build
-npm start
+SAJU_AUTH_MODE=local-demo npm start
 # 서버가 실행 중인 별도 터미널
 npm run test:http
 ```
@@ -64,7 +64,7 @@ npm run test:http
 
 NICEPAY 결제 준비 → 서명·20분 반환 토큰 확인 → 거래 소속 조회 → 서버 승인 → 거래 조회 → 이용권 흐름을 구현했다. 웹훅도 서명과 현재 거래를 확인한다. 전액 취소 후 조회가 확인되어야 환불 완료로 기록한다. API 응답을 주입하는 테스트는 통과했지만 실제 NICEPAY 테스트 상점 왕복은 아직 하지 않았다. 승인 전 `ready` 거래 조회 가능 여부도 실제 상점에서 확인해야 한다.
 
-Supabase에 카카오 공급자를 활성화하고 `.env.example`의 URL·publishable key·APP_ORIGIN을 설정한다. redirect allowlist에는 정확한 `APP_ORIGIN/auth/callback`을 등록한다. 서버가 PKCE 코드를 교환하고 `getUser()`로 확인한 식별자만 연결한다. 이미 계정이 있으면 사용자가 합치기/전환을 고른다. 합치기는 현재 입력 기준이 같을 때만 허용하며 주문·결과·공유·무료 이용 이력을 함께 이관한다. 사주 입력·결제 정보는 인증사로 보내지 않고 앱 DB에는 확인된 로그인 식별자만 저장한다. 외부 OAuth 왕복은 프로젝트 설정 후 검증한다.
+Supabase에 카카오 공급자를 활성화하고 `.env.example`의 URL·publishable key·APP_ORIGIN을 설정한다. redirect allowlist에는 정확한 `APP_ORIGIN/auth/callback`을 등록한다. 서버가 PKCE 코드를 교환하고 `getUser()`로 확인한 식별자만 연결한다. 이미 계정이 있으면 사용자가 합치기/전환을 고른다. 합치기는 현재 입력 기준이 같을 때만 허용하며 주문·결과·공유·무료 이용 이력을 함께 이관한다. 사주 입력·결제 정보는 인증사로 보내지 않고 앱 DB에는 확인된 로그인 식별자와 동의한 닉네임·허용된 이미지 주소를 저장한다. 외부 OAuth 왕복은 프로젝트 설정 후 검증한다.
 
 ```sh
 npm run db:migrate

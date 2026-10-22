@@ -2,6 +2,7 @@ import { z } from "zod";
 import { one, type Database, type Sql } from "./db";
 import { hash, token, lockOwner } from "./service";
 import { AppError } from "../domain/model";
+import {kakaoAvatar,profileName,type ProfileSummary} from '../domain/profile';
 export async function startIdentity(db: Database, owner: string) {
   const secret = token();
   await db.transaction(async (tx) => {
@@ -20,6 +21,7 @@ export async function bindIdentity(
   owner: string,
   attempt: string,
   subject: string,
+  profile?:ProfileSummary,
 ) {
   if (!z.uuid().safeParse(subject).success)
     throw new AppError("INVALID_IDENTITY", 401);
@@ -53,6 +55,7 @@ export async function bindIdentity(
     );
     if (identity?.deleted_at || identity?.merged_into)
       throw new AppError("ACCOUNT_DELETED", 409, "삭제된 보관함이에요.");
+    if(identity&&profile)await tx.query('UPDATE auth_identities SET display_name=$2,avatar_url=$3 WHERE subject=$1',[subject,profileName(profile.displayName),kakaoAvatar(profile.avatarUrl)]);
     if (identity && identity.owner_id !== owner) {
       const ticket = token();
       await tx.query(
@@ -62,8 +65,8 @@ export async function bindIdentity(
       return { ticket };
     }
     await tx.query(
-      "INSERT INTO auth_identities(subject,owner_id) VALUES($1,$2) ON CONFLICT(subject) DO NOTHING",
-      [subject, owner],
+      "INSERT INTO auth_identities(subject,owner_id,display_name,avatar_url) VALUES($1,$2,$3,$4) ON CONFLICT(subject) DO NOTHING",
+      [subject, owner,profileName(profile?.displayName),kakaoAvatar(profile?.avatarUrl)],
     );
     await tx.query("UPDATE accounts SET kind='member' WHERE id=$1", [owner]);
     return { owner };

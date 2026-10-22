@@ -4,7 +4,7 @@ import { currentReadingVersion, readingForVersion } from "../src/server/readings
 import type { State } from "../src/components/App";
 const storageKey = "chunbae-static-preview-v1";
 type Storage = Pick<globalThis.Storage, "getItem" | "setItem" | "removeItem">;
-type Comparison = { id: string; pair: Pair; charts: Record<string, unknown>; state: string; key: string; order_id: string | null };
+type Comparison = { id: string; pair: Pair; charts: Record<string, unknown>; state: string; key: string; order_id: string | null; created_at?:string };
 type PreviewData = { version: 1; draft: Pair | null; revision: number; results: SavedResult[];
   comparisons: Comparison[]; orders: State["orders"]; free: boolean };
 const empty = (): PreviewData => ({version:1,draft:null,revision:0,results:[],comparisons:[],orders:[],free:true});
@@ -17,7 +17,8 @@ export function previewController(storage?: Storage) {
       typeof raw.free === "boolean" && Number.isSafeInteger(raw.revision) && (!raw.draft || draftSchema.safeParse(raw.draft).success)) data = raw;
   } catch { /* Private browsing or malformed temporary storage falls back to memory. */ }
   const persist = () => { try { storage?.setItem(storageKey, JSON.stringify(data)); } catch { /* In-memory preview still works. */ } };
-  const state = (): State => ({kind:"preview",authEnabled:false,authLinked:false,draft:data.draft,revision:data.revision,
+  const state = (): State => ({kind:"preview",authEnabled:false,authLinked:false,authRequired:false,authenticated:false,profile:null,
+    readingHistory:data.comparisons.map(c=>({id:c.id,other_name:c.pair.other.name,relation:c.pair.other.relation,created_at:c.created_at??data.results.find(r=>r.id===c.id)?.createdAt??data.orders.find(o=>o.id===c.order_id)?.created_at??"",state:c.state,can_open:data.results.some(r=>r.id===c.id),entitlement_state:c.state==="cancelled"?"revoked":null})),draft:data.draft,revision:data.revision,
     free:data.free ? "available" : "consumed",results:data.results,
     pending:data.comparisons.filter(c=>!data.results.some(r=>r.id===c.id)&&c.state!=="cancelled").map(c=>{
       const order=data.orders.find(o=>o.id===c.order_id);
@@ -39,8 +40,8 @@ export function previewController(storage?: Storage) {
       if (existing) return {id:existing.id};
       const checked=validatePair(body.pair);
       const id=crypto.randomUUID(), order_id=data.free ? null : crypto.randomUUID();
-      data.comparisons.push({id,pair:checked.pair,charts:checked.charts,state:order_id?"awaiting-payment":"queued",key:body.key,order_id});
-      if (order_id) data.orders.push({id:order_id,comparison_id:id,amount:2900,state:"created",provider:"mock"});
+      data.comparisons.push({id,pair:checked.pair,charts:checked.charts,state:order_id?"awaiting-payment":"queued",key:body.key,order_id,created_at:new Date().toISOString()});
+      if (order_id) data.orders.push({id:order_id,comparison_id:id,amount:2900,state:"created",provider:"mock",created_at:new Date().toISOString(),other_name:checked.pair.other.name});
       else data.free=false;
       persist();return {id};
     }

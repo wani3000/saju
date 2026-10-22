@@ -18,6 +18,7 @@ await build({entryPoints:[path.join(web,'preview/main.tsx')],bundle:true,platfor
  await writeFile(path.join(out,'index.html'),`<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow"><meta name="referrer" content="no-referrer"><title>김춘배 훈장 · 임시 체험판</title><link rel="stylesheet" href="/${path.basename(css)}"></head><body><div id="root"></div><script type="module" src="/${path.basename(js)}"></script></body></html>`);
 });
 await cp(path.join(web,'public/assets/chunbae-v1'),path.join(out,'assets/chunbae-v1'),{recursive:true});
+await cp(path.join(web,'public/assets/kakao'),path.join(out,'assets/kakao'),{recursive:true});
 await cp(path.join(web,'licenses'),path.join(out,'licenses'),{recursive:true});
 await writeFile(path.join(out,'robots.txt'),'User-agent: *\nDisallow: /\n');
 await writeFile(path.join(out,'vercel.json'),JSON.stringify({framework:null,headers:[{source:'/(.*)',headers:[

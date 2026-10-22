@@ -8,6 +8,8 @@ import {
   type SavedResult,
 } from "@/domain/model";
 import PersonForm from "./PersonForm";
+import ProfileHistory, {ProfileAvatar,type HistoryOrder} from "./ProfileHistory";
+import type {ProfileSummary,ReadingHistoryItem} from "@/domain/profile";
 import FixedActions from "./FixedActions";
 import IconChevronLeftLine from "@karrotmarket/react-monochrome-icon/IconChevronLeftLine";
 import GuideNote from "./GuideNote";
@@ -18,17 +20,15 @@ import { checkpoint, navigationKey, restoreNavigation } from "@/domain/navigatio
 function clearNavigation() {
   try { sessionStorage.removeItem(navigationKey); } catch { /* Storage can be unavailable. */ }
 }
-type Order = {
-  id: string;
-  comparison_id: string;
-  amount: number;
-  state: string;
-  provider: string;
-};
+type Order = HistoryOrder;
 export type State = {
   kind: string;
   authEnabled: boolean;
   authLinked: boolean;
+  authRequired?: boolean;
+  authenticated?: boolean;
+  profile?: ProfileSummary|null;
+  readingHistory?: ReadingHistoryItem[];
   draft: Pair | null;
   revision: number;
   free: string;
@@ -121,6 +121,7 @@ export default function App({ request: api = serverApi, preview = false, onReset
     return next;
   }
   function navigate(next: string, edit = false) {
+    if (data?.authRequired && !data.authenticated && !["home","account"].includes(next)) next="account";
     setEditing(edit);
     setError("");
     setNotice("");
@@ -153,7 +154,7 @@ export default function App({ request: api = serverApi, preview = false, onReset
         if (!["auth", "orderId", "paymentReturn", "code"].some(k => params.has(k))) {
           let raw = null;
           try { raw = sessionStorage.getItem(navigationKey); } catch { /* Optional storage. */ }
-          const resume = restoreNavigation(raw, initial);
+          const resume = initial.authRequired&&!initial.authenticated ? {view:"home",selected:null,editing:false} : restoreNavigation(raw, initial);
           setSelected(resume.selected);
           navigate(resume.view, resume.editing);
         }
@@ -161,14 +162,14 @@ export default function App({ request: api = serverApi, preview = false, onReset
         if (params.has("auth")) {
           const outcome = params.get("auth");
           window.history.replaceState({}, "", window.location.pathname);
-          setView("account");
+          setView(outcome==="complete"&&initial.authenticated?"me":"account");
           setAuthReview(outcome === "review");
           setNotice(
             outcome === "failed"
               ? "로그인을 마치지 못했어요. 다시 시도해 주세요."
               : outcome === "review"
                 ? "이미 보관함이 있어요. 아래에서 어떻게 열지 선택해 주세요."
-                : "로그인에 보관함을 연결했어요.",
+                : outcome==="complete"&&initial.authenticated ? "로그인했네. 이제 두 사람의 생일을 적어 보게." : "로그인 상태를 확인하지 못했네. 다시 시도해 주게.",
           );
         }
         const order = params.get("orderId"),
@@ -213,7 +214,7 @@ export default function App({ request: api = serverApi, preview = false, onReset
     catch { /* Server storage and the main flow still work without tab storage. */ }
   }, [navigationReady, view, selected, data, editing]);
   async function persist(value: Pair, generation = ownerGeneration.current) {
-    if (generation !== ownerGeneration.current) return;
+    if (generation !== ownerGeneration.current || data?.authRequired && !data.authenticated) return;
     const json = JSON.stringify(value);
     if (json === lastSaved.current) return;
     setSaved("저장 중…");
@@ -355,9 +356,7 @@ export default function App({ request: api = serverApi, preview = false, onReset
           <img className="guide-avatar" src={character.avatar} width={44} height={44} alt="" />
           <span><strong>{character.displayName}</strong><small>{character.setting}</small></span>
         </button>
-        <button className="text-button" onClick={() => navigate("account")}>
-          보관함
-        </button>
+        <button className="icon-button profile-button" aria-label="내 프로필" onClick={() => navigate("account")}><ProfileAvatar profile={data?.profile}/></button>
       </header>
       {view !== "home" && <h1 ref={heading} tabIndex={-1}>
         {header}
@@ -404,7 +403,7 @@ export default function App({ request: api = serverApi, preview = false, onReset
               </section>
               <FixedActions>
                 <button className="primary" disabled={busy} onClick={() => navigate("me")}>
-                  {data.draft ? "저장한 입력 이어가기" : "두 사람의 생일 적기"}
+                  {data.authRequired&&!data.authenticated ? "카카오로 시작하기" : data.draft ? "저장한 입력 이어가기" : "두 사람의 생일 적기"}
                 </button>
                 <button className="secondary" onClick={() => navigate("map")}>나의 관계 지도 보기</button>
               </FixedActions>
@@ -924,34 +923,45 @@ export default function App({ request: api = serverApi, preview = false, onReset
                 ))}
             </>
           )}
+          {view === "account" && (preview || !data.authRequired || data.authenticated) && <ProfileHistory
+            profile={data.profile} preview={preview} readings={data.readingHistory??[]} orders={data.orders} busy={busy}
+            onOpen={id=>{setSelected(id);navigate("result");}}
+            onOrder={(order,action)=>{if(action==="open"){setSelected(order.comparison_id);navigate("result");return;}void act(async()=>{
+              await api(`orders/${order.id}/${action}`,{});if(action==="reconcile")await api("process",{});await refresh();
+              if(action==="refund")setNotice("테스트 취소를 확인했네. 해당 이야기의 열람을 중단했네.");
+            });}}
+          />}
           {view === "account" && preview && (
             <section className="card">
               <h2>나의 체험 기록</h2>
               <p>이곳에서 만든 이야기를 다시 볼 수 있어요. 기록을 지우면 처음부터 둘러볼 수 있어요.</p>
-              <p>로그인과 실제 결제는 준비 중이에요.</p>
+              <p>카카오 로그인과 실제 결제는 준비 중일세.</p>
+              <button className="kakao-login" aria-label="카카오 로그인" disabled><img src="/assets/kakao/login-complete-ko.svg" alt="" width={224} height={46}/></button>
+              <button className="primary" onClick={()=>navigate("me")}>로그인 없이 체험하기</button>
               <button className="secondary" onClick={onResetPreview}>체험 기록 초기화</button>
             </section>
           )}
           {view === "account" && !preview && (
             <>
               <section className="card">
-                <h2>내 이야기 보관하기</h2>
-                {data.authEnabled && !data.authLinked && (
+                <h2>{data.authenticated?"카카오로 연결된 계정":"카카오로 시작하기"}</h2>
+                {!data.authenticated && (
                   <button
-                    className="primary"
-                    disabled={busy}
+                    className="kakao-login"
+                    aria-label="카카오 로그인"
+                    disabled={busy || !data.authEnabled}
                     onClick={() =>
                       act(async () => {
-                        if (pair) await persist(pair);
+                        if (pair && !data.authRequired) await persist(pair);
                         const r = await api("auth/start", {});
                         window.location.assign(r.url);
                       })
                     }
                   >
-                    카카오 로그인으로 보관하기
+                    <img src="/assets/kakao/login-complete-ko.svg" alt="" width={224} height={46}/>
                   </button>
                 )}
-                {data.authLinked && <p>카카오 로그인에 연결된 보관함이에요.</p>}
+                {data.authenticated && <p>카카오로 로그인했네. 다른 기기에서도 같은 계정으로 기록을 열 수 있네.</p>}
                 {!data.authEnabled && (
                   <p className="hint">카카오 로그인 연결을 준비하고 있어요.</p>
                 )}
@@ -960,8 +970,7 @@ export default function App({ request: api = serverApi, preview = false, onReset
                     <h3>기존 보관함을 찾았어요</h3>
                     <p>
                       합치기는 내 생일이 같은 경우에만 가능해요. 기존 보관함만
-                      열면 현재 내용은 여기에 남아요. 전환 전에 복구 코드를
-                      보관해 주세요.
+                      열면 현재 내용은 여기에 남아요.
                     </p>
                     {(["merge", "switch"] as const).map((choice) => (
                       <button
@@ -985,6 +994,9 @@ export default function App({ request: api = serverApi, preview = false, onReset
                     ))}
                   </section>
                 )}
+              </section>
+              {!data.authRequired && <>
+              <section className="card">
                 <p>
                   현재 브라우저에서 30일 동안 다시 볼 수 있어요. 복구 코드를
                   보관하면 다른 브라우저에서도 이 보관함을 열 수 있어요.
@@ -1069,9 +1081,11 @@ export default function App({ request: api = serverApi, preview = false, onReset
                   코드로 보관함 전환
                 </button>
               </section>
+              </>}
+              {(!data.authRequired || data.authenticated) && <>
               <section className="card">
                 <h2>이 브라우저에서 나가기</h2>
-                <p>다시 들어오려면 로그인 연결이나 복구 코드가 필요해요.</p>
+                <p>{data.authRequired?"다시 들어올 때는 카카오로 로그인해 주게.":"다시 들어오려면 로그인 연결이나 복구 코드가 필요해요."}</p>
                 <button
                   className="secondary"
                   disabled={busy}
@@ -1093,7 +1107,7 @@ export default function App({ request: api = serverApi, preview = false, onReset
                 <p>
                   입력한 생일, 결과와 공유 링크를 지워요. 복구 코드로도 되돌릴
                   수 없어요. 주문·동의·무료 이용 기록은 남으며 삭제가 환불을
-                  뜻하지는 않아요.
+                  뜻하지는 않아요. 카카오와 Supabase 계정의 연결 해제는 별도로 준비 중이에요.
                 </p>
                 <label>
                   <input
@@ -1119,73 +1133,7 @@ export default function App({ request: api = serverApi, preview = false, onReset
                   내 정보 삭제
                 </button>
               </section>
-              <h2>테스트 이용 내역</h2>
-              {data.orders.length === 0 && <p>추가 이용 내역이 없어요.</p>}
-              {data.orders.map((o) => (
-                <section className="card" key={o.id}>
-                  <h3>추가 이야기 · {o.amount.toLocaleString()}원</h3>
-                  <p>
-                    {
-                      {
-                        created: "결제 전",
-                        confirming: "승인 확인 중",
-                        confirmation_unknown: "결제 상태 확인 필요",
-                        paid: "테스트 승인 완료",
-                        refund_pending: "테스트 취소 확인 중",
-                        refunded: "테스트 취소 완료",
-                        cancelled: "주문 취소",
-                      }[o.state]
-                    }{" "}
-                    · 실제 청구 없음
-                  </p>
-                  {o.state === "created" && (
-                    <button
-                      className="secondary"
-                      disabled={busy}
-                      onClick={() => {
-                        setSelected(o.comparison_id);
-                        navigate("result");
-                      }}
-                    >
-                      주문 이어가기
-                    </button>
-                  )}
-                  {["confirming", "confirmation_unknown"].includes(o.state) && (
-                    <button
-                      className="secondary"
-                      disabled={busy}
-                      onClick={() =>
-                        act(async () => {
-                          await api(`orders/${o.id}/reconcile`, {});
-                          await api("process", {});
-                          await refresh();
-                        })
-                      }
-                    >
-                      결제 상태 확인
-                    </button>
-                  )}
-                  {["paid", "refund_pending"].includes(o.state) && (
-                    <button
-                      className="secondary"
-                      disabled={busy}
-                      onClick={() =>
-                        act(async () => {
-                          await api(`orders/${o.id}/refund`, {});
-                          await refresh();
-                          setNotice(
-                            "테스트 취소를 확인했어요. 해당 결과와 공유 링크의 열람을 중단했어요.",
-                          );
-                        })
-                      }
-                    >
-                      {o.state === "refund_pending"
-                        ? "취소 재시도"
-                        : "테스트 결제 취소"}
-                    </button>
-                  )}
-                </section>
-              ))}
+              </> }
               <section className="card">
                 <h2>이 연구 체험에 대해</h2>
                 <p>

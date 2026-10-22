@@ -7,7 +7,7 @@
     "appReading": "chunbae-coherent-whole-chart-v8",
     "basePolicyReading": "source-observations-copy-v2",
     "preservedLaunchReviewReading": "source-observations-copy-v2",
-    "researchSynthesis": "whole-chart-evidence-synthesis-research-v3"
+    "researchSynthesis": "whole-chart-evidence-synthesis-research-v4"
   },
   "scopeDifferences": [
     "PRESERVED_REVIEW_PREDATES_CURRENT_READING"
@@ -56,12 +56,60 @@
   "databaseConnections": 0,
   "sourceArtifacts": [
     {
+      "file": "web/src/components/App.tsx",
+      "sha256": "1a490b13e19568faa84da91901e75ea6273480e9f91cab428127a4261acd7168"
+    },
+    {
+      "file": "web/src/app/globals.css",
+      "sha256": "7003cf05153f563cced7564049c39bbb7717885966ac307f29133ff2acf3f5c6"
+    },
+    {
+      "file": "web/content/journey-copy.json",
+      "sha256": "33fe2c702fd62cd80118a9e671e5237558e7cd7dce6ffb23ea4071f59689553a"
+    },
+    {
+      "file": "web/src/server/kakao-policy.ts",
+      "sha256": "c25dbb4d69acc2ef2d98ebb6b7b823458536b079d274a3648dcca8f64cc1a23f"
+    },
+    {
+      "file": "web/src/server/auth.ts",
+      "sha256": "5c0a67b3027a04cccf70b23a61a591dec457e5de7efbfaec7b4dc6f681416799"
+    },
+    {
+      "file": "web/src/server/identity.ts",
+      "sha256": "ceed870cace099bb4cb075dd84a78317fde3c99db287eb8f4a83ecb314d22619"
+    },
+    {
+      "file": "web/src/server/service.ts",
+      "sha256": "3f449aaf103aebd9d16b4e95870b2a3d158cb39138ec6a6b64f79db3d98acb4b"
+    },
+    {
+      "file": "web/src/app/api/[...path]/route.ts",
+      "sha256": "90cf1c0a5ee79ef74acf1fb4b7368660bd39301c31625fb2d570ad27f95dae30"
+    },
+    {
+      "file": "web/src/app/auth/callback/route.ts",
+      "sha256": "8dddc78508cc89ddf2048679518cec6b416c708abebf609eafd4c8afdd761809"
+    },
+    {
+      "file": "web/db/migrations/004_kakao_profile.sql",
+      "sha256": "168d928bba0be020f0cc24185f89cfea989c1a547ccc90973d069628b372a87b"
+    },
+    {
+      "file": "web/src/components/ProfileHistory.tsx",
+      "sha256": "61cd3913f0574dde44fb2c1e2f7ce7d135e5a2de7707098b1044aff4b503d16a"
+    },
+    {
+      "file": "web/src/domain/profile.ts",
+      "sha256": "9d269b09ad11ed2b290c283598bd8a38836815c0ec826561835533b411d832c7"
+    },
+    {
       "file": "web/src/server/readings.ts",
       "sha256": "aa4cd8f5b9fa86a888821bb6e96d8cdf94667efd4ec77e616524ec80807fc926"
     },
     {
       "file": "web/src/server/staging-preflight.ts",
-      "sha256": "2a936e72ffe7b16825b00c64c4fc6b0e77ed9356805ce25de733e52ee7240f24"
+      "sha256": "27860913ea6494b495bf5f8ae64fb78998e6fb6b9c44bebf1893f81f298673f4"
     },
     {
       "file": "web/src/domain/coherent-reading.ts",
@@ -69,7 +117,7 @@
     },
     {
       "file": "web/preview/controller.ts",
-      "sha256": "ae75eba831012180ada4abc0c0706fc62ae6dc9db743b992e509ca1caf84bfb9"
+      "sha256": "3962518fab6a4932747e6c34aa28b443553035efa6c0098b17eb03e7a397b9d2"
     },
     {
       "file": "web/content/research-policy.json",
@@ -81,11 +129,11 @@
     },
     {
       "file": "research/validation/reports/whole-chart-synthesis.json",
-      "sha256": "cc195c75afb0a2d8be852ba34237d65c6c12f3ac311a7d350dfd1cfa49238899"
+      "sha256": "d8c95c776df70a58f0b87bbf19b564e6b33001f6a9e34a51efb5e0eb59216e44"
     },
     {
       "file": "research/validation/reports/condition-boundaries.json",
-      "sha256": "0c2f4c999f90a251a6359f95a3a18ef1764db59825b37757abcc5b047d06e914"
+      "sha256": "2dc6c46aaf1de461b520f952db0abb5b393cb9b3e27d5b756ecfa6c6853fb909"
     },
     {
       "file": "docs/audits/narration-offline-readiness.json",

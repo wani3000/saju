@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { randomUUID } from "node:crypto";
 import { z } from "zod";
 import { readRequestBody } from "@/server/request-body";
-import { database } from "@/server/db";
+import { database,one } from "@/server/db";
 import { AppError } from "@/domain/model";
 import * as service from "@/server/service";
 import { authClient, authEnabled } from "@/server/auth";
@@ -10,6 +10,7 @@ import { startIdentity, finishIdentity } from "@/server/identity";
 import { prepareNicepay } from "@/server/nicepay-checkout";
 import { erasePersonalData } from "@/server/operations";
 import * as payment from "@/server/payments";
+import {kakaoRequired,hasKakaoSession,requireKakaoSession,loggedOutState} from '@/server/kakao-policy';
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 const cookieName = "saju_session";
@@ -17,7 +18,7 @@ function sessionCookie(res: NextResponse, secret: string, req: NextRequest) {
   res.cookies.set(cookieName, secret, {
     httpOnly: true,
     sameSite: "lax",
-    secure: req.nextUrl.protocol === "https:",
+    secure: new URL(process.env.APP_ORIGIN ?? req.nextUrl.origin).protocol === "https:",
     path: "/",
     maxAge: 30 * 86400,
   });
@@ -62,6 +63,8 @@ async function handle(req: NextRequest) {
       process.env.ALLOW_REMOTE_TEST !== "true"
     )
       throw new AppError("LOCAL_ONLY", 503, "현재 로컬 개발용 서비스예요.");
+    if(!["localhost","127.0.0.1","[::1]"].includes(req.nextUrl.hostname) && !kakaoRequired())
+      throw new AppError("UNSAFE_AUTH_MODE",503,"카카오 로그인 설정을 확인해 주세요.");
     let body: Record<string, any> = {};
     if (req.method === "POST") {
       const raw = await readRequestBody(req);
@@ -84,6 +87,7 @@ async function handle(req: NextRequest) {
       return sessionCookie(send({ ok: true }), session.secret, req);
     }
     if (path === "recover" && req.method === "POST") {
+      if(kakaoRequired())throw new AppError('KAKAO_LOGIN_REQUIRED',401,'카카오로 로그인한 뒤 시작해 주세요.');
       await service.rateLimit(db, "recovery-attempt", 20);
       const session = await service.recover(db, String(body.code ?? ""));
       return sessionCookie(send({ ok: true }), session.secret, req);
@@ -95,15 +99,18 @@ async function handle(req: NextRequest) {
         "세션이 만료됐어요. 다시 시작하거나 복구 코드를 입력해 주세요.",
       );
     await service.rateLimit(db, owner);
-    if (path === "state" && req.method === "GET")
+    if (path === "state" && req.method === "GET") {
+      const authenticated=await hasKakaoSession(db,owner,service.hash(req.cookies.get(cookieName)!.value));
       return send({
-        ...(await service.state(db, owner)),
+        ...(kakaoRequired()&&!authenticated?loggedOutState():await service.state(db, owner)),
+        authRequired:kakaoRequired(),authenticated,
         authEnabled: authEnabled(),
         provider: process.env.PAYMENT_PROVIDER ?? "mock",
         tossClientKey: process.env.TOSS_CLIENT_KEY?.startsWith("test_ck_")
           ? process.env.TOSS_CLIENT_KEY
           : null,
       });
+    }
     if (path === "auth/start" && req.method === "POST") {
       const res = send({});
       const auth = authClient(req, res);
@@ -119,7 +126,7 @@ async function handle(req: NextRequest) {
       res.cookies.set("saju_auth", attempt, {
         httpOnly: true,
         sameSite: "lax",
-        secure: req.nextUrl.protocol === "https:",
+        secure: new URL(process.env.APP_ORIGIN!).protocol === "https:",
         path: "/",
         maxAge: 600,
       });
@@ -136,10 +143,16 @@ async function handle(req: NextRequest) {
         req.cookies.get("saju_merge")?.value ?? "",
         body.choice === "merge",
       );
-      const session = await service.newSession(db, target);
+      const identity=await one(db,'SELECT subject FROM auth_identities WHERE owner_id=$1',[target]);
+      if(!identity)throw new AppError('INVALID_IDENTITY',401);
+      const session = await service.newSession(db, target,identity.subject);
       const res = sessionCookie(send({ ok: true }), session.secret, req);
       res.cookies.delete("saju_merge");
       return res;
+    }
+    if(kakaoRequired()){
+      await requireKakaoSession(db,owner,service.hash(req.cookies.get(cookieName)!.value));
+      if(path==='recovery-code')throw new AppError('RECOVERY_UNAVAILABLE',403,'카카오 로그인으로 기록을 다시 열 수 있어요.');
     }
     if (path === "draft" && req.method === "POST")
       return send(await service.saveDraft(db, owner, body.pair, body.revision));

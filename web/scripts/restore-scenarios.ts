@@ -6,6 +6,8 @@ import path from "node:path";
 import { openDatabase, one, type Database } from "../src/server/db";
 import * as s from "../src/server/service";
 import * as p from "../src/server/payments";
+import {bindIdentity,startIdentity} from "../src/server/identity";
+import {hasKakaoSession} from "../src/server/kakao-policy";
 import { samplePerson } from "../src/domain/model";
 const [phase, file] = process.argv.slice(2);
 assert.ok(["seed", "verify"].includes(phase) && file);
@@ -38,6 +40,10 @@ try {
   if (phase === "seed") {
     const session = await s.newSession(db), owner = session.owner;
     const recovery = await s.recoveryCode(db, owner);
+    const subject=randomUUID(),profile={displayName:"가상 춘배",avatarUrl:"https://k.kakaocdn.net/synthetic.jpg"};
+    await bindIdentity(db,owner,await startIdentity(db,owner),subject,profile);
+    const verifiedSession=await s.newSession(db,owner,subject);
+    assert.equal(await hasKakaoSession(db,owner,s.hash(verifiedSession.secret)),true);
     const draft = pair();
     await s.saveDraft(db, owner, draft, 0);
     const free = await s.createComparison(db, owner, pair(), randomUUID(), true);
@@ -59,7 +65,7 @@ try {
     await p.refundPayment(db, owner, refunded.order);
     const pendingOwner = (await s.newSession(db)).owner;
     const pending = await s.createComparison(db, pendingOwner, pair(), randomUUID(), true);
-    const fixture = { owner, session: session.secret, recovery, draft, free: free.id,
+    const fixture = { owner, subject, profile, verifiedSession:verifiedSession.secret, session: session.secret, recovery, draft, free: free.id,
       purchased, refunded, active, revoked, expired, refundedShare,
       pendingOwner, pending: pending.id,
       snapshot: await s.result(db, owner, free.id),
@@ -75,7 +81,10 @@ try {
     await assert.rejects(db.query("DROP TABLE accounts"), { code: "42501" });
     await assert.rejects(db.query("UPDATE schema_migrations SET checksum='bad'"), { code: "42501" });
     assert.equal(await s.sessionOwner(db, f.session), f.owner);
+    assert.equal(await hasKakaoSession(db,f.owner,s.hash(f.verifiedSession)),true);
+    assert.equal(await hasKakaoSession(db,f.owner,s.hash(f.session)),false);
     const state = await s.state(db, f.owner);
+    assert.deepEqual(state.profile,f.profile);
     assert.deepEqual(state.draft, f.draft);
     assert.equal(state.revision, 1);
     assert.equal(state.free, "consumed");
@@ -110,7 +119,9 @@ try {
     assert.equal((await db.query("SELECT * FROM results WHERE comparison_id=$1", [f.pending])).rows.length, 1);
     assert.deepEqual(await s.result(db, f.owner, f.free), f.snapshot);
     assert.deepEqual(await s.result(db, f.owner, f.purchased.comparison), f.purchasedSnapshot);
-    assert.equal((await s.recover(db, f.recovery)).owner, f.owner);
-    console.log(`Restore verified: all ${Object.keys(f.tables).length} table fingerprints, runtime/anonymous permissions, sessions/recovery, drafts, paid/refunded entitlements, share revocation/expiry, ownership and one-time job resumption.`);
+    const recovered=await s.recover(db,f.recovery);
+    assert.equal(recovered.owner,f.owner);
+    assert.equal(await hasKakaoSession(db,f.owner,s.hash(recovered.secret)),false);
+    console.log(`Restore verified: all ${Object.keys(f.tables).length} table fingerprints, runtime/anonymous permissions, sessions/recovery/Kakao stamp and profile, drafts, paid/refunded entitlements, share revocation/expiry, ownership and one-time job resumption.`);
   }
 } finally { await db.close(); }

@@ -46,6 +46,9 @@ test("preview draft revisions, duplicate comparisons and mock confirmations cann
  await c.request(`orders/${order.id}/confirm`,{paymentKey:`mock_${order.id}`,amount:2900});
  await c.request("process",{});
  assert.equal((await c.request("state")).results.filter((r:any)=>r.id===second.id).length,1);
+ const history=(await c.request("state")).readingHistory;assert.equal(history.length,2);assert.ok(history.every((r:any)=>r.can_open&&r.created_at));
+ await c.request(`orders/${order.id}/refund`,{});
+ const refunded=await c.request("state");assert.equal(refunded.orders[0].state,"refunded");assert.equal(refunded.readingHistory.find((r:any)=>r.id===second.id).can_open,false);assert.equal(refunded.authenticated,false);
 });
 test("preview never provides real auth, recovery, external checkout or public share links, and reset affects its namespace only",async()=>{
  const storage=store();storage.setItem("unrelated","keep");

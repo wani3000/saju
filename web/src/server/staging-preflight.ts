@@ -21,6 +21,7 @@ export function stagingPreflight(env: Environment) {
   const issues: Issue[] = [];
   const add = (code: string, setting: string) => issues.push({ code, setting });
   if (env.SAJU_MODE !== "research") add("RESEARCH_MODE_REQUIRED", "SAJU_MODE");
+  if (env.SAJU_AUTH_MODE !== "kakao-required") add("KAKAO_LOGIN_REQUIRED", "SAJU_AUTH_MODE");
   const origin = serviceURL(env.APP_ORIGIN);
   if (!origin || env.APP_ORIGIN !== origin.origin) add("CANONICAL_HTTPS_ORIGIN_REQUIRED", "APP_ORIGIN");
   if (env.ALLOW_REMOTE_TEST !== "true") add("REMOTE_TEST_OPT_IN_REQUIRED", "ALLOW_REMOTE_TEST");

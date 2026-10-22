@@ -7,3 +7,5 @@
 - 김춘배의 창작 사진·아바타·한지·춘배 인장은 기본 이미지 생성 도구로 제작했다. [전체 프롬프트·참고 파일·크기·SHA-256](../../design/characters/joseon/chunbae-v1/prompts.json)을 보존한다. 실존 인물/역사 사진의 인증을 주장하지 않는다. 예시 서비스 캡처는 참고 자료로만 보존하며 런타임에 포함하지 않는다.
 
 - 상단 뒤로가기는 [SEED 공식 아이콘 안내](https://seed-design.io/react/components/iconography/composition)의 `@karrotmarket/react-monochrome-icon` 1.30.0, `IconChevronLeftLine`을 사용한다. [Apache 2.0](seed-icons-APACHE-2.0.txt)과 [저작권/브랜드 고지](seed-icons-NOTICE.txt)를 배포물에 포함한다. 당근의 브랜드 자산이나 제휴 표시는 사용하지 않는다.
+
+- 프로필 기본 아이콘은 같은 SEED 패키지의 `IconPersonCircleLine`이다. 카카오 로그인에는 [공식 버튼 SVG](https://developers.kakao.com/tool/resource/login)를 비율·내용 그대로 사용한다. [출처·사용 범위](kakao-login-NOTICE.txt)를 함께 배포한다.

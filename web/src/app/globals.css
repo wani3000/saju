@@ -626,3 +626,16 @@ footer {
 .story-traits li { margin: 0 0 1.25rem; }
 .story-traits li > strong { font-size: 1.05em; color: var(--ink); }
 .story-traits li > p { margin-top: .35rem; }
+
+.profile-button { margin-left:auto; flex-shrink:0; }
+.profile-avatar { width:44px; height:44px; border-radius:50%; object-fit:cover; }
+.profile-summary { display:flex; gap:16px; align-items:center; }
+.profile-summary > svg,.profile-summary > img { flex-shrink:0; }
+.profile-summary h2 { margin-top:0; }
+.history-tabs { display:flex; gap:8px; margin:24px 0; }
+.history-tabs > button { flex:1; min-width:0; }
+.kakao-login { display:flex; align-items:center; justify-content:center; width:100%; min-height:56px; padding:0; background:#fee500; border:0; border-radius:8px; }
+.kakao-login img { display:block; max-width:100%; height:auto; }
+.kakao-login:disabled { opacity:1; cursor:not-allowed; }
+.profile-summary > div { min-width:0; }
+.profile-history h2,.profile-history h3 { overflow-wrap:anywhere; }

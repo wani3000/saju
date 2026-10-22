@@ -191,19 +191,19 @@ test("logout clears screen hints, recovery keeps the result and erasure disables
   await page.getByRole("button",{name:"생일 없이 이야기 공유"}).click();
   await page.getByRole("button",{name:"이 내용으로 30일 공유 링크 만들기"}).click();
   const url=await page.getByLabel("공유 링크",{exact:true}).inputValue();
-  await page.getByRole("button",{name:"보관함",exact:true}).click();
+  await page.getByRole("button",{name:"내 프로필",exact:true}).click();
   await page.getByRole("button",{name:"복구 코드 만들기",exact:true}).click();
   const code=await page.getByLabel("지금 한 번만 표시되는 복구 코드",{exact:true}).inputValue();
   expect(await page.evaluate(()=>sessionStorage.getItem("saju-navigation-v1"))).not.toContain(code);
   await page.getByRole("button",{name:"보관함에서 나가기",exact:true}).click();
   await expect(page.getByRole("button",{name:"두 사람의 생일 적기",exact:true})).toBeVisible();
-  await page.getByRole("button",{name:"보관함",exact:true}).click();
+  await page.getByRole("button",{name:"내 프로필",exact:true}).click();
   await page.getByLabel("복구 코드",{exact:true}).fill(code);
   await page.getByRole("button",{name:"코드로 보관함 전환",exact:true}).click();
   await expect(page.getByRole("heading",{name:"함께한 이야기",exact:true})).toBeVisible();
   const state=await (await page.request.get("/api/state")).json();
   expect(state.results).toHaveLength(1);expect(state.orders).toHaveLength(0);
-  await page.getByRole("button",{name:"보관함",exact:true}).click();
+  await page.getByRole("button",{name:"내 프로필",exact:true}).click();
   await page.getByRole("checkbox",{name:"내용을 확인했고 내 정보를 지울게요"}).check();
   await page.getByRole("button",{name:"내 정보 삭제",exact:true}).click();
   await expect(page.getByRole("button",{name:"두 사람의 생일 적기",exact:true})).toBeVisible();
@@ -260,4 +260,17 @@ for(const [relation,title,lastTitle] of [
   await page.reload();
   await expect(page.getByRole("heading",{name:title,exact:true})).toBeVisible();
   await page.screenshot({path:testInfo.outputPath(`easy-${relation}.png`),fullPage:true,timeout:5000});
+});
+
+test('profile opens the saved reading and payment history without confusing free readings with purchases',async({page})=>{
+ await result(page);
+ await page.getByRole('button',{name:'내 프로필',exact:true}).click();
+ await expect(page.getByRole('heading',{name:'내 프로필',exact:true})).toBeVisible();
+ await expect(page.getByRole('heading',{name:'하루 · 친구',exact:true})).toBeVisible();
+ await page.getByRole('button',{name:'결제 내역',exact:true}).click();
+ await expect(page.getByText('아직 결제 내역이 없네. 무료로 본 이야기는 사주 조회 내역에 있네.')).toBeVisible();
+ await page.getByRole('button',{name:'사주 조회 내역',exact:true}).click();
+ await page.getByRole('button',{name:'이야기 다시 보기',exact:true}).click();
+ await expect(page.getByRole('heading',{name:'두 사람의 사주 이야기',exact:true})).toBeVisible();
+ await noOverflow(page);
 });

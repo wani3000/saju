@@ -6,6 +6,7 @@ import { fileURLToPath } from "node:url";
 import { spawn } from "node:child_process";
 import { createServer } from "node:net";
 import { once } from "node:events";
+const required=process.argv.includes("--kakao-required");
 const web = fileURLToPath(new URL("../",import.meta.url));
 await access(path.join(web,".next/BUILD_ID"));
 const temp = await mkdtemp(path.join(tmpdir(),"saju-journey-"));
@@ -15,7 +16,7 @@ const port = portServer.address().port;
 await new Promise((resolve,reject)=>portServer.close(e=>e?reject(e):resolve()));
 const origin = `http://127.0.0.1:${port}`;
 const env = Object.fromEntries(["PATH","HOME","TMPDIR","TEMP","SystemRoot","CI","PLAYWRIGHT_BROWSERS_PATH"].filter(k=>process.env[k]!==undefined).map(k=>[k,process.env[k]]));
-Object.assign(env,{NODE_ENV:"production",NEXT_TELEMETRY_DISABLED:"1",SAJU_MODE:"research",APP_ORIGIN:origin,PAYMENT_PROVIDER:"mock",SAJU_LOCAL_RUN:"1",TEST_ORIGIN:origin});
+Object.assign(env,{NODE_ENV:"production",NEXT_TELEMETRY_DISABLED:"1",SAJU_MODE:"research",SAJU_AUTH_MODE:required?'kakao-required':'local-demo',APP_ORIGIN:origin,PAYMENT_PROVIDER:"mock",SAJU_LOCAL_RUN:"1",TEST_ORIGIN:origin});
 let server;
 let serverLog = "";
 let active;
@@ -42,7 +43,7 @@ try {
   }
   if(!ready)throw new Error("Isolated server readiness timeout");
   console.log("Isolated local checks: clean mock environment, temporary DB, disposable browser accounts.");
-  await run(["tests/http.mjs"]);
+  await run([required?"tests/kakao-required-http.mjs":"tests/http.mjs"]);
   await run(["node_modules/@playwright/test/cli.js","test"]);
   console.log("PASS: local HTTP and mobile browser journeys; no production readiness is implied.");
 } catch(error) {

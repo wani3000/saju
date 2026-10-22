@@ -5,6 +5,8 @@
 ## 현재 상태
 
 - 기준일: 2026-10-22.
+- 프로필·로그인 후속: [카카오 검수와 조회/결제 내역](docs/kakao-profile-history-review.md). 우측 프로필·내역 두 탭, 로그인 전 서버 차단과 검증 세션 구분을 구현했다. 정적 체험은 로그인 없는 데모이며 실제 OAuth·연결 해제/회원 탈퇴·외부 결제는 미완료다.
+- 새 원전 후속: [가화와 진화 구분](docs/false-transformation-review.md). 1947년 PDF384~386쪽과 가화2명조를 대조한 종합 연구 v4, 전체268개 통과. 일반 강약·중화 임계값과 합화 최종 충분조건·공개 v8 승격은 보류한다.
 - 풀이·출시 후속: [조건 범위와 보류 사유](docs/condition-and-launch-followup.md)를 보완한 종합 연구 v3. 연구264개·웹143개·타입/빌드·모바일26개·로컬 PostgreSQL 21테이블 복원 통과. [현재 소스 현황](docs/current-release-source-inventory.json)은 공개 풀이 v8과 이전 v2 감수 자료를 구분하며 외부/운영/전문 승인7개 미완료를 유지한다.
 - API 후속: [두 모델 비교 준비](docs/narration-comparison-preparation.md)로 160합성입력·블라인드 감수 양식·서버 후보 생성 모듈을 구현했다. 새10개 포함 웹142개·타입·Next 빌드 통과. OpenAI 재인증/키 생성/실제 비교/모델 선택·앱 활성화는 미완료이며 공개 v8 유지.
 - 종합 풀이 후속: [구조 분석 기반과 실행 순서](docs/whole-chart-synthesis-plan.md)를 추가했다. 연구260개 통과. 중화/대조2사례 연결과 [조건 검토 순서](docs/boundary-priority-review.md)를 보완했다. [OpenAI 설명 모델 검토](docs/openai-narration-review.md)도 기록했다. 전체 구조의 근거 연결 단계이며 공개 v8을 대체하는 최종 강약·성격 엔진은 아니다.

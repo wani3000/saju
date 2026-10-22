@@ -36,4 +36,6 @@ jobs:
         run: npx playwright install --with-deps chromium
       - name: Isolated HTTP and mobile journeys
         run: npm run test:journey --prefix web
+      - name: Required Kakao gate and logged-out mobile flow
+        run: npm run test:kakao --prefix web
       - run: python3 tools/check_docs.py

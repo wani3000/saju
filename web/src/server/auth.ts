@@ -1,5 +1,6 @@
 import { createServerClient } from "@supabase/ssr";
 import { NextRequest, NextResponse } from "next/server";
+import {temporaryAuthCookie} from "./kakao-policy";
 import { AppError } from "../domain/model";
 export const authEnabled = () =>
   Boolean(
@@ -12,13 +13,14 @@ export function authClient(req: NextRequest, res: NextResponse) {
     throw new AppError(
       "AUTH_NOT_CONFIGURED",
       503,
-      "로그인 연결 준비 중이에요. 복구 코드로 보관할 수 있어요.",
+      "카카오 로그인 연결을 준비하고 있어요. 잠시 후 다시 확인해 주세요.",
     );
   return createServerClient(
     process.env.SUPABASE_URL!,
     process.env.SUPABASE_PUBLISHABLE_KEY!,
     {
       cookieOptions: {
+        name: temporaryAuthCookie,
         httpOnly: true,
         sameSite: "lax",
         secure: new URL(process.env.APP_ORIGIN!).protocol === "https:",

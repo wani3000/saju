@@ -1,0 +1,6 @@
+카카오 로그인 버튼 — Kakao Corp. 공식 디자인 리소스
+Source: https://developers.kakao.com/tool/resource/login
+Asset: https://developers.kakao.com/tool/images/resource/preview/login-complete-ko.svg
+Fetched: 2026-10-22
+Official login button SVG used unmodified, preserving aspect ratio. This is a Kakao authentication identifier, not project artwork or an open-source icon. Kakao branding and usage rules apply; no affiliation or endorsement is claimed.
+Design guide: https://developers.kakao.com/docs/ko/kakaologin/design-guide

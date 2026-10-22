@@ -76,6 +76,7 @@ export async function erasePersonalData(
       "UPDATE accounts SET recovery_hash=NULL,deleted_at=now() WHERE id=$1",
       [owner],
     );
+    await tx.query('UPDATE auth_identities SET display_name=NULL,avatar_url=NULL WHERE owner_id=$1',[owner]);
     // Payment/consent/free-use records and auth subject tombstone survive erasure.
     // The latter prevents a deleted account from silently receiving a new free grant.
     await tx.query(
