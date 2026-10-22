@@ -7,8 +7,8 @@
 - 테스트: https://chunbae-staging.vercel.app/
 - Vercel 프로젝트: `chunbae-staging` / `prj_g8ciaxVhxmH3PIunfoqeN9z4jhHJ`.
 - 팀: `oxaz1234-gmailcoms-projects` / `team_R8P4DPGCTnvB9cBXk2YA9Y0u`.
-- 앱 소스: `7df465e`. 최종 배포 `dpl_ATXCmP2shtSgnkRDrXMRrL71rT6c`, Ready·alias 일치 확인.
-- 고정 배포 URL: https://chunbae-staging-e2sbvw36v-oxaz1234-gmailcoms-projects.vercel.app/
+- 앱 소스: `6f1da26`. 최종 배포 `dpl_CYzwZMp1Hs3SaNRD4PQr6ReJW4gY`, Ready·alias 일치 확인.
+- 고정 배포 URL: https://chunbae-staging-bon6byvi6-oxaz1234-gmailcoms-projects.vercel.app/
 - Node22.x·Next16.4.0, 실행 함수 리전 `icn1`(서울). 빌드 로그의 `iad1`은 업로드된 산출물 배포 작업 위치이며 실행 함수 리전과 구분한다.
 - 저장소의 연구 엔진을 포함해 로컬 `vercel build --prod` 후 `--prebuilt --prod --regions icn1`로 전용 프로젝트에 배포했다. 이 프로젝트의 production target은 안정된 스테이징 alias를 위한 호스팅 구분이다. 앱의 연구 모드나 운영 출시 승인을 바꾸지 않는다.
 
@@ -66,3 +66,6 @@ NICEPAY 결제/취소·실제 다른 기기/카카오 인앱 브라우저·프�
 ## 2026-10-22 실제 S2 키 연결 후 배포
 
 기존 테스트 키2개를 사용자 승인 후 sensitive 환경에 추가해 서버 설정은11개이며 staging 사전 검사 누락0개다. 관리자 DB 자격이나 운영 R키는 배포하지 않았다. 실제 현대카드 인증에서 드러난 최초 승인 전 조회 오류와 웹훅 등록 샘플 처리를 수정했다. NICEPAY에 신용카드 웹훅을 저장하고 관리자 TEST호출 성공을 확인했다. [실제 승인/전액 취소와 재검증 범위](nicepay-shared-sandbox-review.md)를 따르며 research mode·실과금 차단은 유지한다. 아래 후속 배포 기록을 현재 기준으로 읽는다.
+
+
+최종 앱 소스6f1da26를 `dpl_CYzwZMp1Hs3SaNRD4PQr6ReJW4gY`로 배포했다. READY·프로젝트 일치·서울icn1·canonical alias의 같은 deployment ID를 Vercel API로 확인했다. 익명 랜딩200, 개인 API401, 잘못된 JSON400, 형식 유효 비UUID 샘플200/OK, 위조 UUID400을 원격 확인했다. 임시 구조 진단 코드는 최종 산출물에서 제거했다. 자동 hosted return 재검증은 현대카드 앱 인증 대기이며 실제 청구는 차단한다.
