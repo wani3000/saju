@@ -10,6 +10,7 @@ import { openDatabase, migrate, one, type Database } from "../src/server/db";
 import * as s from "../src/server/service";
 import * as p from "../src/server/payments";
 import { samplePerson } from "../src/domain/model";
+import {acceptNicepayWebhook} from "../src/server/nicepay-webhook";
 const tid = (o: Record<string, any>) =>
   "T" + o.id.replaceAll("-", "").slice(0, 29);
 const client = "S2_test_fixture",
@@ -151,4 +152,48 @@ test("lost NICEPAY approval recovers by signed inquiry without another charge", 
   await p.reconcilePayment(db, o.owner_id, o.id, g.provider);
   assert.equal(g.posts(), 1);
   assert.equal((await p.ownedOrder(db, o.owner_id, o.id)).state, "paid");
+});
+
+const notification = (orderId:string,key="T_synthetic",amount=2900) => {
+  const ediDate="2026-10-22T20:00:00+09:00";
+  return {orderId,tid:key,amount,ediDate,signature:s.hash(`${key}${amount}${ediDate}${secret}`)};
+};
+test("shared sandbox acknowledges signed foreign orders without provider calls or persisted payloads",async()=>{
+  const before=await one(db,"SELECT count(*)::int AS n FROM payment_events");
+  const foreignProvider:p.Provider={confirm:async()=>{throw new Error("FOREIGN_APPROVAL_FORBIDDEN");},
+    lookup:async()=>{throw new Error("FOREIGN_LOOKUP_FORBIDDEN");},cancel:async()=>{throw new Error("FOREIGN_CANCEL_FORBIDDEN");}};
+  assert.equal(await acceptNicepayWebhook(db,notification("ebook-test-123"),foreignProvider),"ignored");
+  assert.equal(await acceptNicepayWebhook(db,notification(randomUUID()),foreignProvider),"ignored");
+  assert.deepEqual(await one(db,"SELECT count(*)::int AS n FROM payment_events"),before);
+});
+test("malformed and forged webhook notifications are rejected, including foreign orders",async()=>{
+  for(const payload of [null,{},notification("x","x",-1),{...notification("ebook-test"),signature:"0".repeat(64)}])
+    await assert.rejects(acceptNicepayWebhook(db,payload),{code:"INVALID_WEBHOOK",status:400});
+});
+test("webhook uses queried payment truth; reordered duplicates are one event and refund revokes result",async()=>{
+  const o=await order(),g=gateway(o);
+  await p.confirmPayment(db,o.owner_id,o.id,tid(o),o.amount,g.provider);
+  await s.runJobs(db,o.owner_id);
+  const f=notification(o.id,tid(o));
+  assert.equal(await acceptNicepayWebhook(db,{...f,status:"cancelled"},g.provider),"checked");
+  assert.equal((await p.ownedOrder(db,o.owner_id,o.id)).state,"paid");
+  await acceptNicepayWebhook(db,{buyerName:"do not persist",signature:f.signature,ediDate:f.ediDate,amount:f.amount,tid:f.tid,orderId:f.orderId},g.provider);
+  assert.equal((await one(db,"SELECT count(*)::int AS n FROM payment_events WHERE order_id=$1",[o.id]))!.n,1);
+  await assert.rejects(acceptNicepayWebhook(db,notification(o.id,tid(o),1),g.provider),{code:"INVALID_WEBHOOK"});
+  await assert.rejects(acceptNicepayWebhook(db,notification(o.id,"T_wrong"),g.provider),{code:"INVALID_WEBHOOK"});
+  await g.provider.cancel(await p.ownedOrder(db,o.owner_id,o.id));
+  await acceptNicepayWebhook(db,{...f,status:"paid"},g.provider);
+  assert.equal((await p.ownedOrder(db,o.owner_id,o.id)).state,"refunded");
+  await assert.rejects(s.result(db,o.owner_id,o.comparison_id),{code:"NOT_FOUND"});
+  assert.equal(g.posts(),2);
+});
+test("owned webhook provider outage remains retryable and does not grant access or record success",async()=>{
+  const o=await order();
+  const unavailable:p.Provider={lookup:async()=>{throw new Error("SYNTHETIC_OUTAGE");},
+    confirm:async()=>{throw new Error("UNEXPECTED_APPROVAL");},cancel:async()=>{throw new Error("UNEXPECTED_CANCEL");}};
+  await assert.rejects(acceptNicepayWebhook(db,notification(o.id,tid(o)),unavailable),
+    {code:"PAYMENT_LOOKUP_FAILED",status:503});
+  assert.equal((await p.ownedOrder(db,o.owner_id,o.id)).state,"created");
+  assert.equal((await one(db,"SELECT count(*)::int AS n FROM payment_events WHERE order_id=$1",[o.id]))!.n,0);
+  await assert.rejects(s.result(db,o.owner_id,o.comparison_id),{code:"NOT_FOUND"});
 });

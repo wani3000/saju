@@ -116,6 +116,14 @@
       "sha256": "7b999a5ede446b9c26be3e088f2450b206c10b3d5fcf0922622731e009b5a101"
     },
     {
+      "file": "web/src/server/nicepay-webhook.ts",
+      "sha256": "3db711844a48453d19cb8a5e2e21ffb259431bebd42f79810f5726bc65b5ed71"
+    },
+    {
+      "file": "web/src/app/api/nicepay/webhook/route.ts",
+      "sha256": "9e79905985374a524ed4731784acfaa7e80c9c43d3f408a97eba3663ef0f36e7"
+    },
+    {
       "file": "web/src/app/api/[...path]/route.ts",
       "sha256": "915a2abed3d4011d6325c59fae9bd72944329dc88f148aecc0f5f25f597b5e45"
     },
