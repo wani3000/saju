@@ -2,6 +2,8 @@
 
 선택한 [조선 기록 사진풍 2안](../design/characters/joseon/documentary-ui-v2/02-paper-greeting.png)에 **충청북도 괴산의 서당 훈장 김춘배**라는 가상 인물을 적용했다. 기존 [클릭 시안](../prototype/README.md)은 그대로 보존한다.
 
+실제 카카오 로그인 서버: https://chunbae-staging.vercel.app/. [배포·프로필 저장 검증](../docs/server-staging-deployment.md). NICEPAY 결제와 운영 출시는 아직 준비 중이다.
+
 ## 실행
 
 Node 22.17.0에서 검증했다. 루트에서 연구 원본을 복원한 다음 실행한다.
@@ -14,7 +16,7 @@ npm ci
 SAJU_AUTH_MODE=local-demo npm run dev
 ```
 
-주소: http://127.0.0.1:4180. 위 명령은 별도 키 없는 로컬 체험이다. 기본 실행은 `kakao-required`로, 카카오 설정 전에는 입력과 내역을 열지 않는다. [프로필·인증 검수](../docs/kakao-profile-history-review.md)를 참고한다. 기본 DB는 `.data/postgres`의 파일 기반 PGlite이며 Git에서 제외한다. 서버를 종료했다 켜도 입력·결과가 남는다. 개발 화면에는 합성 데이터 채우기 버튼이 있다. 실제 개인정보를 검증 자료로 사용하지 않는다.
+주소: http://127.0.0.1:4180. 위 명령은 별도 키 없는 로컬 체험이다. 기본 실행은 `kakao-required`로, 카카오 설정 전에는 입력과 내역을 열지 않는다. [프로필·인증 검수](../docs/kakao-profile-history-review.md)를 참고한다. 기본 DB는 `.data/postgres`의 파일 기반 PGlite이며 Git에서 제외한다. 서버를 종료했다 켜도 입력·결과가 남는다. 실제 개인정보를 합성 검증 자료로 사용하지 않는다.
 
 ```sh
 npm test

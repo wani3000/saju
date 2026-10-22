@@ -5,9 +5,10 @@
 ## 현재 상태
 
 - 기준일: 2026-10-22.
-- [실제 외부 연동 착수 상태](docs/external-connection-progress.md): 전용 서울 Supabase DB와 플로렌스랩의 김춘배 훈장 카카오 앱을 생성·연결했다. 실제 카카오 선택 동의 화면과 최소 권한 요청은 확인했으며, 서버 staging 배포·로그인 복귀/세션·NICEPAY 테스트 왕복은 미완료다.
+- [실제 외부 연동 상태](docs/external-connection-progress.md): 전용 서울 Supabase DB와 카카오 앱을 연결하고 서버에서 실제 로그인·프로필 저장·새로고침·재로그인을 확인했다. NICEPAY 테스트 왕복과 탈퇴/운영 검증은 미완료다.
+- [카카오 로그인 서버 테스트](https://chunbae-staging.vercel.app/): 로그인 후 프로필과 개인 내역을 서버에서 보관하는 연구용 스테이징. 결제 미연동. [배포·검증 기록](docs/server-staging-deployment.md).
 - [현재 공개 테스트 링크](https://chunbae-preview-5j5jsxtqv-oxaz1234-gmailcoms-projects.vercel.app): 프로필·조회/모의 결제 내역을 포함한 정적 체험판. [배포·원격 검증 기록](docs/temporary-preview-deployment.md). 실제 카카오 로그인·서버 계정 동기화·실결제는 별도 준비 중이다.
-- 프로필·로그인 후속: [카카오 검수와 조회/결제 내역](docs/kakao-profile-history-review.md). 우측 프로필·내역 두 탭, 로그인 전 서버 차단과 검증 세션 구분을 구현했다. 정적 체험은 로그인 없는 데모이며 실제 OAuth·연결 해제/회원 탈퇴·외부 결제는 미완료다.
+- 프로필·로그인 후속: [카카오 검수와 조회/결제 내역](docs/kakao-profile-history-review.md). 우측 프로필·내역 두 탭, 로그인 전 서버 차단과 검증 세션 구분을 구현했다. 정적 체험은 로그인 없는 데모다. 서버의 실제 OAuth/프로필 저장은 확인했으며 연결 해제/회원 탈퇴·외부 결제는 미완료다.
 - 새 원전 후속: [가화와 진화 구분](docs/false-transformation-review.md). 1947년 PDF384~386쪽과 가화2명조를 대조한 종합 연구 v4, 전체268개 통과. 일반 강약·중화 임계값과 합화 최종 충분조건·공개 v8 승격은 보류한다.
 - 풀이·출시 후속: [조건 범위와 보류 사유](docs/condition-and-launch-followup.md)를 보완한 종합 연구 v3. 연구264개·웹143개·타입/빌드·모바일26개·로컬 PostgreSQL 21테이블 복원 통과. [현재 소스 현황](docs/current-release-source-inventory.json)은 공개 풀이 v8과 이전 v2 감수 자료를 구분하며 외부/운영/전문 승인7개 미완료를 유지한다.
 - API 후속: [두 모델 비교 준비](docs/narration-comparison-preparation.md)로 160합성입력·블라인드 감수 양식·서버 후보 생성 모듈을 구현했다. 새10개 포함 웹142개·타입·Next 빌드 통과. OpenAI 재인증/키 생성/실제 비교/모델 선택·앱 활성화는 미완료이며 공개 v8 유지.
