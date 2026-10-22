@@ -1,6 +1,6 @@
 # 카카오·NICEPAY 실제 연동 착수
 
-2026-10-22. 사용자가 실제 로그인/결제 연결을 요청하고 카카오 Developers의 사주 전용 앱을 직접 생성하도록 지시했다. 현재 GitHub·Supabase 관리자 로그인은 완료됐으나 카카오 인증과 전용 Supabase 프로젝트 생성이 남아 있다. 앱의 실제 OAuth/결제 연결 완료로 표시하지 않는다.
+2026-10-22. 사용자가 실제 로그인/결제 연결을 요청하고 카카오 Developers의 사주 전용 앱을 직접 생성하도록 지시했다. 현재 GitHub·Supabase 관리자 로그인과 새 계정의 전용 서울 Free DB 생성·연결은 완료됐으며, 카카오 인증과 실제 OAuth/결제 검증은 남아 있다. 최신 상태는 아래 전용 프로젝트 연결 기록을 따른다. 앱의 실제 OAuth/결제 연결 완료로 표시하지 않는다.
 
 ## 확인한 상태
 
@@ -24,14 +24,14 @@
 | 원격 환경변수 | 조회 당시 없음 |
 | 연결 | web/.vercel에 전용 프로젝트로 연결, Git 제외 |
 
-도메인 소유/등록은 실제 앱 서비스 응답이나 OAuth 성공 증거가 아니다. 비밀값 없는 로컬 설정에 이 origin을 기록했고, DB·인증·PG 값은 비어 있다. 원격 서비스 호출·공급자 키 등록·스키마 적용·서버 배포는 로그인과 설정 확인 이후 진행한다. 사주 전용 DB와 runtime 역할을 사용하고 기존 프로젝트의 데이터에는 마이그레이션하지 않는다. 서버 배포는 연구 엔진 생성과 SQL 파일 포함을 확인한 로컬 prebuilt 경로 또는 저장소 전체 빌드 경로를 사용해야 한다. web 폴더만 원격 업로드하면 상위 연구 엔진 복원 경로가 빠질 수 있다.
+도메인 소유/등록은 실제 앱 서비스 응답이나 OAuth 성공 증거가 아니다. 최초 준비 당시 로컬에는 origin만 있었으나, 아래 후속 작업에서 DB·Supabase 공개 설정과 스키마 적용을 완료했다. NICEPAY 설정과 서버 배포는 아직 남아 있다. 사주 전용 DB와 runtime 역할을 사용하고 기존 프로젝트의 데이터에는 마이그레이션하지 않는다. 서버 배포는 연구 엔진 생성과 SQL 파일 포함을 확인한 로컬 prebuilt 경로 또는 저장소 전체 빌드 경로를 사용해야 한다. web 폴더만 원격 업로드하면 상위 연구 엔진 복원 경로가 빠질 수 있다.
 
 ## 연결 과정에서 수정한 문제
 
 1. `staging.env.example`에 로그인 필수 모드가 빠져 있었다. `SAJU_AUTH_MODE=kakao-required`를 추가하고 비밀값을 입력하지 않는 템플릿 회귀 검사를 추가했다. 기존 로컬 비밀 설정은 값을 출력하지 않고 누락된 모드만 보완했다.
 2. 외부 DB 시작 검사가003까지만 확인해004 프로필 변경이 빠져도 통과할 수 있었다. 모든 배포 마이그레이션의 적용 여부와 체크섬을 읽기 전용으로 확인한다. 누락/변경이면 서버 시작을 거절하며 runtime 자격으로 스키마를 자동 수정하지 않는다.
 
-웹150개·Next 빌드·타입·로컬 PostgreSQL21테이블 복원 통과. 새4개 검사는 최신 프로필 마이그레이션 누락/원장 변조/미초기화 DB 거절과 템플릿 누락을 확인한다. 제한된 runtime 역할 및 복원 DB에서도 원장 읽기 검사를 통과했다. 빌드의 API 추적 파일에 SQL001~004 포함을 확인했다. 현재 로컬 설정 검사는 예상대로 차단되며 누락은 Supabase URL/publishable key·DB URL·NICEPAY 테스트 client/secret의5개다. 이는 외부 연결 성공/실결제 검증이 아니다.
+웹150개·Next 빌드·타입·로컬 PostgreSQL21테이블 복원 통과. 새4개 검사는 최신 프로필 마이그레이션 누락/원장 변조/미초기화 DB 거절과 템플릿 누락을 확인한다. 제한된 runtime 역할 및 복원 DB에서도 원장 읽기 검사를 통과했다. 빌드의 API 추적 파일에 SQL001~004 포함을 확인했다. 당시 로컬 설정 검사는5개 설정 누락으로 차단됐다. 아래 후속 연결 후 최신 누락은 NICEPAY 테스트 client/secret의2개다. 이는 외부 연결 성공/실결제 검증이 아니다.
 
 ## 인증 후 이어갈 순서
 
@@ -71,4 +71,36 @@ Google 계정→GitHub의 기존2단계 인증→Supabase GitHub 로그인 경�
 
 사주 전용 새 프로젝트 화면은 계정의 활성 무료 프로젝트 한도2개 도달로 생성이 차단된다. 기존 프로젝트의 중지·삭제·플랜 변경·새 유료 구독은 실행하지 않았다. Supabase UI 및 [공식 가격](https://supabase.com/pricing)에서 Free는 활성2개, Pro는 월25달러부터와 첫 프로젝트 포함/추가 프로젝트 월10달러부터를 확인했다. 기존 조직을 그대로 업그레이드하면 프로젝트별 컴퓨팅 비용이 달라질 수 있으므로25달러를 조직 전체의 확정 총액으로 보지 않는다.
 
-사용자에게 진행 방식을 요청했고 **다른 Supabase 계정으로 진행**을 선택했다. 사용할 계정 이메일과 기존 가입 여부를 확인 중이며 전환 경로를 점검했다. 실제 프로젝트 자격 설정과 유료 가입은 아직 수행하지 않았다. 카카오 개발자 앱·사주 전용 DB와 키·실제 OAuth/결제 왕복은 미완료다.
+사용자에게 진행 방식을 요청했고 **다른 Supabase 계정으로 진행**을 선택했다. 이후 chulwan0123@gmail.com으로 관리자 로그인을 완료하고 아래 전용 프로젝트를 생성했다. 유료 가입은 수행하지 않았다. 카카오 개발자 앱·실제 OAuth/결제 왕복은 미완료다.
+
+
+## 2026-10-22 새 계정의 서울 Free DB 연결 완료
+
+사용자가 전용 `chunbae-staging` 무료·서울 프로젝트 생성, DB 비밀번호 자동 생성·Git 제외 로컬 보관·앱 연결을 승인했다. `chulwan0123@gmail.com` 계정에서 새 프로젝트를 생성했다. 다른 프로젝트는 변경하지 않았다.
+
+| 항목 | 실제 확인 |
+|---|---|
+| 프로젝트 | chunbae-staging / nwicejxousubxiczwwkb |
+| 조직 | yiyvrvpnpfryirbaelte |
+| 플랜/리전 | Free / Seoul ap-northeast-2 / NANO, Healthy |
+| Supabase URL | https://nwicejxousubxiczwwkb.supabase.co |
+| DB 스키마 | 마이그레이션001~004 적용, 체크섬 일치,21테이블 모두 RLS |
+| 앱 DB 계정 | 전용 saju_server 로그인 + saju_runtime 그룹; superuser/createdb/createrole/bypassrls 없음 |
+| 앱 연결 | Supavisor transaction pooler6543, 제한 계정, verify-full TLS |
+| 인증 Site URL | https://chunbae-staging.vercel.app |
+| 인증 Redirect URL | https://chunbae-staging.vercel.app/auth/callback 하나만 등록 |
+| 카카오 공급자 | 전용 개발자 앱·키 미설정, OAuth 왕복 미검증 |
+| Vercel 원격 앱 | 아직 미배포·원격 환경변수 미등록 |
+
+관리자와 앱용 DB 비밀번호는 서로 다른 난수로 생성했다. 사용자 계정 로그인 비밀번호와 구분하며, 관리자 연결은 bootstrap 파일에만 두고 앱은 제한 계정을 사용한다. `web/.env.supabase-bootstrap.local`과 `web/.env.staging.local`은 Git 제외·권한600을 확인했다. 비밀값은 문서·검사 출력·커밋에 포함하지 않았다.
+
+최초 엄격 TLS 검사는 CA 체인 확인 오류로 거절됐다. 검증을 끄지 않고 해당 프로젝트 Database Settings가 제공한 공식 공개 CA를 `web/certs`에 보존했다. CA 출처·체크섬·만료는 [인증서 기록](../web/certs/README.md)을 따른다. Next 서버 추적에 공개 CA와 SQL001~004가 포함된 것을 확인했다. 클라이언트 TLS의 encrypted/authorized가 모두 true다. Supavisor 뒤의 `pg_stat_ssl` 값은 내부 연결이므로 클라이언트 암호화 판정에 사용하지 않는다.
+
+### 실제 원격 DB 검증
+
+전용 대상을 명시하는 `npm run test:hosted-runtime -- --settings .env.staging.local --project nwicejxousubxiczwwkb`를 추가했다. 연구 모드·명시적 원격 테스트 허용·정확한 제한 계정과 Supabase 프로젝트·인증서 검증 URL이 아니면 실행하지 않는다. 앱 역할로 마이그레이션 체크섬/RLS·DDL 거절·auth.users 접근 거절을 확인했다. 합성 두 계정의 풀이 생성/저장·다른 소유자의 조회 거절·공유/철회·개인 기록 삭제를 하나의 트랜잭션에서 검사하고 전부 롤백했다. 계정 수 복원도 확인했다. 원격 DB 전체 복원이나 실제 이용자 OAuth/결제 테스트를 수행한 것은 아니다.
+
+최신 오프라인 staging 검사의 누락은 `NICEPAY_CLIENT_KEY`, `NICEPAY_SECRET_KEY`의2개다. 이 검사는 외부에 연결하지 않으므로 DB 실검증 결과를 자동 인증하지 않는다. `SAJU_MODE=research`, 카카오 필수 모드와 sandbox 결제 제한은 유지한다. DB 연결 완료를 실제 카카오 로그인·실결제·서버 배포 완료로 표시하지 않는다.
+
+
+검증: 웹152개, 일반 HTTP/모바일28개, 카카오 필수 HTTP/모바일2개, 타입 검사, Next 빌드, 소스 현황 일치, 문서 검사 통과. API 서버 추적에 CA와 마이그레이션4개 포함을 확인했다. 새 hosted-runtime 명령도 실제 제한 계정으로 통과했다. 서버 staging 배포와 실제 OAuth/결제 왕복은 이 검사에 포함되지 않는다.

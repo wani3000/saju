@@ -4,6 +4,8 @@ const config: NextConfig = {
   poweredByHeader: false,
   logging: { incomingRequests: false },
   outputFileTracingRoot: process.cwd(),
+  // pg reads sslrootcert at runtime; retain the public CA in server deployments.
+  outputFileTracingIncludes: { "/*": ["./certs/supabase-prod-ca-2021.crt"] },
   async headers() {
     return [
       {

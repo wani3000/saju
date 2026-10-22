@@ -19,7 +19,8 @@ if(c.policy.version!==policy.engineVersion||r.ruleVersion!==currentReadingVersio
 const skipped=launch.gates.filter((g:any)=>g.status==='skipped-by-user');
 const pending=launch.gates.filter((g:any)=>g.status!=='skipped-by-user');
 if(!skipped.some((g:any)=>g.id==='user-comprehension')||launch.humanParticipantsObserved!==0)throw new Error('EXECUTION_DECISION_REQUIRES_RECONCILIATION');
-const files=['web/src/server/db.ts','web/staging.env.example','web/src/components/App.tsx','web/src/app/globals.css','web/content/journey-copy.json',
+const files=['web/src/server/db.ts','web/staging.env.example','web/next.config.ts','web/certs/supabase-prod-ca-2021.crt',
+ 'web/scripts/check-hosted-runtime.ts','web/src/components/App.tsx','web/src/app/globals.css','web/content/journey-copy.json',
  'web/src/server/kakao-policy.ts','web/src/server/auth.ts','web/src/server/identity.ts','web/src/server/service.ts',
  'web/src/app/api/[...path]/route.ts','web/src/app/auth/callback/route.ts','web/db/migrations/004_kakao_profile.sql',
  'web/src/components/ProfileHistory.tsx','web/src/domain/profile.ts','web/src/server/readings.ts','web/src/server/staging-preflight.ts','web/src/domain/coherent-reading.ts',

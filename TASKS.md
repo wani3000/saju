@@ -447,3 +447,14 @@ IANA 2025b 원본 재컴파일로 28개 전환과 1,918개 입력을 재현했�
 
 - GitHub wani3000·Supabase 관리자 로그인 완료. [현재 상태](docs/external-connection-progress.md). 인증번호·세션은 기록하지 않음. 앱의 실제 카카오 로그인 완료와 구분.
 - 사주 전용 새 Supabase 프로젝트는 활성 무료 프로젝트2개 한도에 막힘. 기존 서비스 중지/삭제나 유료 전환 없이 진행 방식을 사용자에게 요청함. 카카오 앱/전용DB/실제 결제는 아직 미완료.
+
+
+## 2026-10-22 전용 Supabase 원격 DB 연결
+
+- [x] 사용자 승인 후 새 계정의 chunbae-staging Free·서울 프로젝트 생성, 별도 관리자/앱 DB 난수 비밀번호를 Git 제외·권한600 로컬 설정에 보관.
+- [x] SQL001~004,21테이블 RLS, 제한 runtime 계정과 엄격 TLS 연결. 공개 CA 서버 번들 포함. [현재 연결 기록](docs/external-connection-progress.md).
+- [x] 실제 원격 DB에서 풀이 생성·소유권·공유 철회·삭제와 DDL/auth 스키마 접근 거절 검증. 합성 데이터 전부 롤백.
+- [x] Supabase Site URL과 정확한 staging /auth/callback 등록.
+- [ ] 카카오 전용 앱/공급자 및 실제 OAuth, NICEPAY 테스트 키2개와 결제 왕복, 서버 staging 배포, 원격 백업 복원·운영 감시 검증. DB 완료와 구분한다.
+
+- 검증: 웹152개·HTTP·모바일28개·카카오 필수 HTTP/모바일2개·타입·Next 빌드·서버 CA/SQL 추적·소스 현황·문서 검사 통과. 실제 원격 DB 검사 통과, OAuth/결제/원격 복원은 별도 미완료.

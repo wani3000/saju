@@ -64,6 +64,18 @@
       "sha256": "ce3e8ae06d533ac3e622ee2c273f791a8d6f49e43f73d936a15818c2b2fa585d"
     },
     {
+      "file": "web/next.config.ts",
+      "sha256": "e9824bf299fa934b8824955a51a395294a72b939718fe84f9949c93987fb69d0"
+    },
+    {
+      "file": "web/certs/supabase-prod-ca-2021.crt",
+      "sha256": "700723581420dd1ac98fd7e9ac529f0ef210eadcaf87fc868a3ad7d114c2f3b7"
+    },
+    {
+      "file": "web/scripts/check-hosted-runtime.ts",
+      "sha256": "27fcef3a7f555296c06d584750793c48dbc8f0f303833f41d2e4c0c12e7118fa"
+    },
+    {
       "file": "web/src/components/App.tsx",
       "sha256": "bd26bc62c89c882e14d636bd96ed49389d92b065895801f9ebbe1ceba10ef83b"
     },
