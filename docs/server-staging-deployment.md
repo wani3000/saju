@@ -69,3 +69,6 @@ NICEPAY 결제/취소·실제 다른 기기/카카오 인앱 브라우저·프�
 
 
 최종 앱 소스6f1da26를 `dpl_CYzwZMp1Hs3SaNRD4PQr6ReJW4gY`로 배포했다. READY·프로젝트 일치·서울icn1·canonical alias의 같은 deployment ID를 Vercel API로 확인했다. 익명 랜딩200, 개인 API401, 잘못된 JSON400, 형식 유효 비UUID 샘플200/OK, 위조 UUID400을 원격 확인했다. 임시 구조 진단 코드는 최종 산출물에서 제거했다. 자동 hosted return 재검증은 현대카드 앱 인증 대기이며 실제 청구는 차단한다.
+
+
+2026-10-23 후속: 실제 현대카드 인증 후 수정된 자동 hosted return/승인·중복 방지·서명 조회·서비스 결과 열람·전액 테스트 취소·취소 후 접근 거절·합성 개인정보 제거가 통과했다. 기존 사용자/무료권 변경과 실청구 없음. 로컬 루프백 전달/서비스 경로 검사이며 로그인한 앱 UI 구매와 실제 거래 웹훅 전달까지 검증한 것은 아니다. 비식별 근거는 [검증 결과](audits/nicepay-sandbox-roundtrip.json). 앱 코드 변경/추가 배포는 없다.

@@ -1,0 +1,35 @@
+{
+  "date": "2026-10-23",
+  "status": "passed",
+  "appSource": "6f1da26",
+  "deployment": "dpl_CYzwZMp1Hs3SaNRD4PQr6ReJW4gY",
+  "environment": "dedicated-staging-nicepay-sandbox",
+  "amountKRW": 2900,
+  "cardIssuer": "Hyundai",
+  "scope": "synthetic account and order; browser card authentication, loopback forwarder to hosted return, provider API, service result and refund",
+  "checks": {
+    "authResponseReceived": true,
+    "sandboxApproval": true,
+    "duplicateCallback": true,
+    "providerLookup": true,
+    "paidReading": true,
+    "sandboxFullRefund": true,
+    "refundedReadingDenied": true,
+    "syntheticPersonalDataErased": true,
+    "hostedCallbackThroughLocalForwarder": true
+  },
+  "hostedCallbackOutcome": "checked",
+  "callbackOrderState": "paid",
+  "finalOrderState": "refunded",
+  "realUserModified": false,
+  "realChargesEnabled": false,
+  "kakaoLoginIncludedInThisTest": false,
+  "hostedAppUiPurchaseVerified": false,
+  "liveWebhookTransactionDeliveryVerified": false,
+  "limitations": [
+    "Card authentication used the real NICEPAY sandbox window; return was forwarded from the loopback test driver to the deployed return route.",
+    "Paid reading and refund were verified through the service/DB path; this does not verify a purchase through the logged-in hosted app UI.",
+    "Merchant webhook registration and its sample test succeeded separately; this report does not assert delivery of the transaction notification.",
+    "Production payment and public release approval remain separate."
+  ]
+}

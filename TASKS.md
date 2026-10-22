@@ -500,5 +500,5 @@ IANA 2025b 원본 재컴파일로 28개 전환과 1,918개 입력을 재현했�
 - [x] nonce·인증서명·주문/금액/client 검증이 끝난 return만 첫 승인을 실행하도록 수정. 일반 API/대사에서 임의 TID 승인 금지, 다른 주문 응답 거절·응답 유실 회복·중복 return 회귀 유지.
 - [x] 등록 샘플의 비UUID 주문은 거래 처리 없이 폐기. 우리 UUID 주문의 서명/금액/TID/현재 상태 검증 유지. 실제 NICEPAY 신용카드 웹훅 저장과 관리자 TEST호출 성공.
 - [x] 웹165개·타입·Next/Vercel 빌드·일반 HTTP/모바일28개·별도 격리 NICEPAY HTTP 검사 통과. [원인·범위](docs/nicepay-shared-sandbox-review.md).
-- [ ] 수정된 자동 hosted return→승인/결과→중복 return→취소 전체 왕복은 새 합성 주문의 현대카드 앱 재인증 대기. 실제 카카오 사용자와 합성 결제 검증 계정은 분리.
+- [x] 2026-10-23 실제 현대카드 인증 뒤 수정된 hosted return→승인/결과→중복 return→전액 테스트 취소/열람 회수·합성 개인정보 제거 통과. 루프백 전달/서비스 경로이며 실제 카카오 계정의 앱 UI 구매와 구분. [비식별 결과](docs/audits/nicepay-sandbox-roundtrip.json).
 - [ ] 실과금/운영 출시·기기 변경/프로필 미동의 실계정·탈퇴/외부 unlink·장기 운영 감시/전문 승인은 별도.

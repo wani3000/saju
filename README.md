@@ -6,8 +6,8 @@
 
 - 기준일: 2026-10-22.
 - [실제 앱 DB 백업·격리 복원 검증](docs/hosted-backup-restore-check.md): 전용 스테이징21테이블의 데이터·스키마·RLS/권한이 로컬 복원본과 일치하고 제한/익명 접근 검사를 통과했다. 원격은 읽기 전용, 임시본 제거 완료. 인증 공급자/장기 백업·전체 재해 복구·지속 감시는 별도다.
-- [실제 외부 연동 상태](docs/external-connection-progress.md): 전용 서울 Supabase DB와 카카오 앱을 연결하고 서버에서 실제 로그인·프로필 저장·새로고침·재로그인을 확인했다. NICEPAY S2 키 연결과 실제 현대카드 테스트 승인·조회·전액 취소를 확인했다. 자동 return/웹훅 최종 검증과 탈퇴/운영 검증은 진행 중이다.
-- [카카오 로그인 서버 테스트](https://chunbae-staging.vercel.app/): 로그인 후 프로필과 개인 내역을 서버에서 보관하며 NICEPAY 테스트 결제를 연결 중인 연구용 스테이징. [배포·검증 기록](docs/server-staging-deployment.md).
+- [실제 외부 연동 상태](docs/external-connection-progress.md): 전용 서울 Supabase DB와 카카오 앱을 연결하고 서버에서 실제 로그인·프로필 저장·새로고침·재로그인을 확인했다. NICEPAY S2 키 연결과 실제 현대카드 테스트 승인·조회·전액 취소를 확인했다. 수정 후 자동 return·중복 방지·결과 열람/취소 뒤 권한 회수를 합성 계정으로 통과했다. 로그인 앱 UI 구매·실제 거래 웹훅 전달·탈퇴/운영 검증은 별도다.
+- [카카오 로그인 서버 테스트](https://chunbae-staging.vercel.app/): 로그인 후 프로필과 개인 내역을 서버에서 보관하며 NICEPAY 테스트 결제를 연결한 연구용 스테이징. [배포·검증 기록](docs/server-staging-deployment.md).
 - [현재 공개 테스트 링크](https://chunbae-preview-5j5jsxtqv-oxaz1234-gmailcoms-projects.vercel.app): 프로필·조회/모의 결제 내역을 포함한 정적 체험판. [배포·원격 검증 기록](docs/temporary-preview-deployment.md). 실제 카카오 로그인·서버 계정 동기화·실결제는 별도 준비 중이다.
 - 프로필·로그인 후속: [카카오 검수와 조회/결제 내역](docs/kakao-profile-history-review.md). 우측 프로필·내역 두 탭, 로그인 전 서버 차단과 검증 세션 구분을 구현했다. 정적 체험은 로그인 없는 데모다. 서버의 실제 OAuth/프로필 저장은 확인했으며 연결 해제/회원 탈퇴·외부 결제는 미완료다.
 - 새 원전 후속: [가화와 진화 구분](docs/false-transformation-review.md). 1947년 PDF384~386쪽과 가화2명조를 대조한 종합 연구 v4, 전체268개 통과. 일반 강약·중화 임계값과 합화 최종 충분조건·공개 v8 승격은 보류한다.
