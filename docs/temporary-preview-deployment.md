@@ -1,3 +1,16 @@
+# 최신: 프로필·사주 조회/결제 내역 · 2026-10-22
+
+- 공개 체험: https://chunbae-preview-feqn59usz-oxaz1234-gmailcoms-projects.vercel.app
+- 앱 소스 `55d065e`, 배포 `dpl_3dArxM4Vzzztyya22u7cQ3ZFvMmz`, chunbae-preview / preview / Ready. 11:20 KST. 운영 배포로 승격하지 않았다.
+- 우측 프로필 아이콘·사주 조회/결제 내역 두 탭·결과 다시 보기·준비/취소 상태를 추가. [인증 검수와 실제 연동 전 남은 항목](kakao-profile-history-review.md). 공개 풀이 v8과 기존 결과는 유지한다.
+- 웹146개·연구268개·타입·Next/정적 빌드, 로컬 HTTP/모바일28개와 카카오 필수 HTTP/모바일2개 통과. PostgreSQL21테이블 복원에서 프로필·카카오 로그인 표식·복구 세션 구분도 확인했다. 이는 실제 OAuth·PG/운영·명리 감수 승인이 아니다.
+- 인증 쿠키/Authorization 없이 HTTP200, 로그인 리디렉션 없음, noindex/CSP connect-src none 유지. 배포 JS/CSS·공식 카카오 SVG의 SHA-256이 로컬 정적 출력과 일치한다.
+- 원격 Chromium 가상 입력→결과→프로필 기록→새로고침→재열람, 무료 조회와 빈 결제 내역 구분. 320/390px 가로 넘침 없음, pageerror0건. 이어 추가 상대의 모의 결제→승인 내역→모의 취소→취소 내역 유지/결과 열람 차단과 새로고침 보존까지 확인했다. 실제 청구 없음.
+- [조회 내역390px](../web/qa-evidence/chunbae-profile-history-390.jpg) · [모의 취소 내역390px](../web/qa-evidence/chunbae-payment-history-390.jpg). 모두 합성 정보다.
+- 이 주소는 서버 없는 공개 데모다. 실제 카카오 로그인은 준비 중으로 비활성화하며 ‘로그인 없이 체험하기’를 제공한다. 서버 앱의 로그인 필수 모드/영구 계정 저장/실결제는 이 링크에서 동작하지 않는다. 외부 연동은 설정 준비 후 검증한다.
+
+---
+
 # 최신: 개인·궁합 일관성 v8 · 2026-10-22
 
 - 공개 체험: https://chunbae-preview-fjozmyej9-oxaz1234-gmailcoms-projects.vercel.app
