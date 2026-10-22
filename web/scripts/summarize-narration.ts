@@ -1,0 +1,10 @@
+import {readFile,writeFile} from 'node:fs/promises';
+import {resolve} from 'node:path';
+import {summarizeNarrationReviews} from '../src/server/narration-review';
+const run=process.argv[2];
+if(!run)throw new Error('RUN_DIRECTORY_REQUIRED');
+const reviews=JSON.parse(await readFile(resolve(process.argv[3]??resolve(run,'review-template.json')),'utf8'));
+const trials=(await readFile(resolve(run,'results.jsonl'),'utf8')).split('\n').filter(Boolean).map(s=>JSON.parse(s));
+const report=summarizeNarrationReviews(trials,reviews);
+await writeFile(resolve(run,'editorial-summary.json'),JSON.stringify(report,null,2)+'\n',{mode:0o600});
+console.log(JSON.stringify(report,null,2));

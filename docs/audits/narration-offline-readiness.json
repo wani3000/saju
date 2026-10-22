@@ -1,0 +1,47 @@
+{
+  "version": "narration-offline-readiness-v1",
+  "mode": "offline-only",
+  "apiCalls": 0,
+  "qualityEvaluations": 0,
+  "winner": null,
+  "productionApproved": false,
+  "cases": 160,
+  "relations": {
+    "연인": 40,
+    "친구": 40,
+    "가족": 40,
+    "동료": 40
+  },
+  "unknownHourPackets": 116,
+  "unknownHourCountDistribution": {
+    "0": 44,
+    "1": 56,
+    "2": 60
+  },
+  "boundaryReviewPackets": 4,
+  "clockReviewPackets": 12,
+  "candidateFactPackets": 4,
+  "blockRange": [
+    13,
+    23
+  ],
+  "models": {
+    "gpt-6-luna": {
+      "requestsPrepared": 160,
+      "blindFirstPositions": 86,
+      "largestRequestUtf8Bytes": 29771,
+      "planningAllowanceUsd": 1.1358119
+    },
+    "gpt-5-nano": {
+      "requestsPrepared": 160,
+      "blindFirstPositions": 74,
+      "largestRequestUtf8Bytes": 29741,
+      "planningAllowanceUsd": 0.78366595
+    }
+  },
+  "limitations": [
+    "Synthetic input preparation is not model quality or saju accuracy.",
+    "UTF-8 request bytes are not measured API tokens. Planning allowance is not provider billing enforcement.",
+    "The app, worker and public preview do not import or activate the candidate generator."
+  ]
+}

@@ -20,7 +20,11 @@
     "test:journey": "node scripts/check-journey.mjs",
     "check:staging": "tsx scripts/staging.ts",
     "start:staging": "tsx scripts/staging.ts --start",
-    "build:preview": "npm run engine && node preview/build.mjs"
+    "build:preview": "npm run engine && node preview/build.mjs",
+    "narration:prepare": "npm run engine && tsx scripts/compare-narration.ts --offline",
+    "narration:compare": "npm run engine && tsx scripts/compare-narration.ts --live",
+    "narration:summarize": "tsx scripts/summarize-narration.ts",
+    "narration:audit": "npm run engine && tsx scripts/audit-narration-preparation.ts"
   },
   "dependencies": {
     "@electric-sql/pglite": "0.5.9",
