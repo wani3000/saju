@@ -30,4 +30,12 @@
 -968결과 감사와 복구 명세를 CI에 고정 검사로 추가했다. 과거 보고서는 보존했다.
 - 실제 CUA 합성 입력으로 v9 결과 생성과 중복 제거·쉬운 장단점 표시 확인. [화면 증거](../web/qa-evidence/reading-v9-dialogue.png).
 
-외부 카카오/PG 관리자 재로그인·카드 인증·실제 거래 웹훅 재전송은 실행하지 않았다. 기존 [출시 미완료](launch-status-current.md)는 그대로다. GitHub/배포 확인은 후속 기록한다.
+외부 카카오/PG 관리자 재로그인·카드 인증·실제 거래 웹훅 재전송은 실행하지 않았다. 기존 [출시 미완료](launch-status-current.md)는 그대로다.
+
+## GitHub·테스트 서버 반영
+
+앱 소스 [1a247a3](https://github.com/wani3000/saju/commit/1a247a381d9c10a861d5ec375d545d903bca77d9)를 main에 반영했다. CI의 Web39909460310·Research39909460232·Prototype39909460240가 모두 성공했다. 기존 chunbae-staging의 production target에 prebuilt로 배포하고 READY·서울icn1과 로컬/원격 JS SHA-256 일치를 확인한 뒤 같은 산출물을 promote했다.
+
+배포ID `dpl_5CYkZB2oNon1Y6Mrj42rayj1dBHh`, 고정 URL https://chunbae-staging-h3ctma8gu-oxaz1234-gmailcoms-projects.vercel.app, 테스트 주소 https://chunbae-staging.vercel.app 는 같은 배포다. 일반 익명 랜딩200/no-store·개인 API401/no-store, canonical JS 일치, CUA의 공개 제목/카카오 시작·지도 버튼을 확인했다. 배포 후10분 범위 error 로그 조회는 해당 조건 로그 없음이었다. 지속 감시나 새로운 실제 OAuth/결제 왕복의 증거로 쓰지 않는다.
+
+신규 풀이9만 반영하며 과거8 결과를 재작성하지 않았다. 정책 초안은 앱에 게시하지 않았고 호스팅 production target은 연구 스테이징 alias를 위한 구분이다. 운영 공개·실청구 활성화와 별개다. 별도 정적 체험판은 빌드 호환만 검사했고 재배포하지 않았다.
