@@ -1,9 +1,10 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { randomUUID } from "node:crypto";
+import { spawnSync } from "node:child_process";
 import { openDatabase, migrate, one, type Database } from "../src/server/db";
 import { health, maintenance } from "../src/server/operations";
-import { operationalCommand } from "../src/server/operational-command";
+import { operationalCommand, operationalCli } from "../src/server/operational-command";
 import * as s from "../src/server/service";
 import { samplePerson } from "../src/domain/model";
 
@@ -23,6 +24,59 @@ async function queued(db: Database) {
   );
   return { owner, id: comparison.id as string };
 }
+
+test("invalid operational CLI arguments never connect or echo input", async () => {
+  let connections = 0;
+  const connect = async () => {connections++; throw new Error("MUST_NOT_CONNECT");};
+  const expected = {exitCode: 1, report: {status: "error", code: "INVALID_OPERATION_ARGUMENTS"}};
+  for (const args of [["--heath"], ["--health", "--health"], ["--health", "private-secret"], ["private-secret"]]) {
+    assert.deepEqual(await operationalCli("maintenance", args, connect), expected);
+  }
+  for (const args of [["--health"], ["--dry-run"], ["private-secret"]]) {
+    assert.deepEqual(await operationalCli("worker", args, connect), expected);
+  }
+  assert.deepEqual(await operationalCommand("unknown" as never, connect), expected);
+  assert.deepEqual(await operationalCli("unknown" as never, [], connect), expected);
+  assert.equal(connections, 0);
+});
+
+test("real operational entrypoints fail closed for typos and unsupported flags", () => {
+  for (const args of [["scripts/maintenance.ts", "--heath"],
+    ["scripts/maintenance.ts", "--health", "synthetic-private-value"], ["scripts/worker.ts", "--dry-run"]]) {
+    const result = spawnSync(process.execPath, ["--import", "tsx", ...args], {
+      encoding: "utf8", timeout: 10000,
+      env: {PATH: process.env.PATH, NODE_ENV: "test", DATABASE_URL: "postgresql://synthetic:private@127.0.0.1:1/not_a_database", SAJU_MODE: "research"},
+    });
+    assert.equal(result.status, 1);
+    assert.equal(result.stderr, "");
+    assert.deepEqual(JSON.parse(result.stdout), {status: "error", code: "INVALID_OPERATION_ARGUMENTS"});
+  }
+});
+
+test("journey scope typos cannot silently run a default mock verification", () => {
+  for (const args of [["--nicepay-sandbo"], ["--kakao-requird"], ["--nicepay-sandbox", "--kakao-required"],
+    ["--nicepay-sandbox", "synthetic-private-value"]]) {
+    const result = spawnSync(process.execPath, ["scripts/check-journey.mjs", ...args], {
+      encoding: "utf8", timeout: 5000, env: {PATH: process.env.PATH, NODE_ENV: "test"},
+    });
+    assert.equal(result.status, 1);
+    assert.equal(result.stdout, "");
+    assert.equal(result.stderr.trim(), "INVALID_JOURNEY_ARGUMENTS");
+  }
+});
+
+test("CLI health remains read-only even with queued work and expired data", async () => {
+  const db = await setup();
+  const {owner} = await queued(db);
+  await db.query("UPDATE sessions SET expires_at=now()-interval '1 day' WHERE owner_id=$1", [owner]);
+  const expiredBefore = (await one(db, "SELECT count(*)::int AS n FROM sessions WHERE owner_id=$1", [owner]))!.n;
+  const result = await operationalCli("maintenance", ["--health"], async () => ({...db, close: async () => {}}));
+  assert.equal(result.exitCode, 0);
+  assert.equal((await one(db, "SELECT count(*)::int AS n FROM sessions WHERE owner_id=$1", [owner]))!.n, expiredBefore);
+  assert.equal((await one(db, "SELECT count(*)::int AS n FROM results WHERE owner_id=$1", [owner]))!.n, 0);
+  assert.equal((await one(db, "SELECT count(*)::int AS n FROM generation_jobs WHERE owner_id=$1 AND state='queued'", [owner]))!.n, 1);
+  await db.close();
+});
 
 test("health distinguishes normal queue and live leases from failed and expired jobs without exposing data", async () => {
   const db = await setup();

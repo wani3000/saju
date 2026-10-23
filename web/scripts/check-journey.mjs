@@ -6,9 +6,14 @@ import { fileURLToPath } from "node:url";
 import { spawn } from "node:child_process";
 import { createServer } from "node:net";
 import { once } from "node:events";
-const required=process.argv.includes("--kakao-required");
-const nicepay=process.argv.includes("--nicepay-sandbox");
-if(required&&nicepay)throw new Error("CHOOSE_ONE_CHECK_SCOPE");
+const args=process.argv.slice(2);
+if(args.length>1||args.some(a=>!["--kakao-required","--nicepay-sandbox"].includes(a))) {
+  // A typo must not silently pass the default mock journey instead of the
+  // intended authentication/payment scope. Never echo arbitrary arguments.
+  console.error("INVALID_JOURNEY_ARGUMENTS");process.exit(1);
+}
+const required=args[0]==="--kakao-required";
+const nicepay=args[0]==="--nicepay-sandbox";
 const web = fileURLToPath(new URL("../",import.meta.url));
 await access(path.join(web,".next/BUILD_ID"));
 const temp = await mkdtemp(path.join(tmpdir(),"saju-journey-"));

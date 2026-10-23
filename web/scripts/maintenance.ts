@@ -1,6 +1,4 @@
-import { operationalCommand } from "../src/server/operational-command";
-const result = await operationalCommand(
-  process.argv.includes("--health") ? "health" : "maintenance",
-);
+import { operationalCli } from "../src/server/operational-command";
+const result = await operationalCli("maintenance", process.argv.slice(2));
 console.log(JSON.stringify(result.report));
 process.exitCode = result.exitCode;

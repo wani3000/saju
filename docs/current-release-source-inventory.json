@@ -128,6 +128,26 @@
       "sha256": "7b999a5ede446b9c26be3e088f2450b206c10b3d5fcf0922622731e009b5a101"
     },
     {
+      "file": "web/src/server/operations.ts",
+      "sha256": "a4fde032de73b10e58688330f90a304b09ac633addea2717117665916f1dc386"
+    },
+    {
+      "file": "web/src/server/operational-command.ts",
+      "sha256": "a945198e6770ac0969da11545d919dc4a8660e0e61b10e304b0cfcc5f24d3d97"
+    },
+    {
+      "file": "web/scripts/maintenance.ts",
+      "sha256": "cfda235d2f665976f38117fdd67d28fbb865e7c7619bb396caa5f6b19a26fea2"
+    },
+    {
+      "file": "web/scripts/worker.ts",
+      "sha256": "2b615124e6b00f19de04ed271a6e166f6c078652db383971cb7b1fb273b3c706"
+    },
+    {
+      "file": "web/tests/health.test.ts",
+      "sha256": "25dfab064a34d0a9f5ae859e91dcfacd25ae83316cd9a0261a8c3d902f59ecb8"
+    },
+    {
       "file": "web/src/server/nicepay-webhook.ts",
       "sha256": "6fff01a16c386e8cbfd71f914755a567bed8c1826962eccdefd98fdaea45aa65"
     },
@@ -165,7 +185,7 @@
     },
     {
       "file": "web/scripts/check-journey.mjs",
-      "sha256": "731793a103e9b9b6033168446a2b6e747efade4681cb4bb5ed2fcbb233ab7abb"
+      "sha256": "a38f02b3c0d4eb88cbbbb79f8f96c83e5f857e6631fb4a0048a1bf69e571c7bd"
     },
     {
       "file": "web/tests/nicepay.test.ts",

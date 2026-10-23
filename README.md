@@ -5,13 +5,14 @@
 ## 현재 상태
 
 - 기준일: 2026-10-23.
+- [현재 출시 현황과 다음 실행 순서](docs/launch-status-current.md): 실제 로그인/결제·복원 증거와 남은 관리자 로그인·기기 검증·정책/감수·운영 승인을 분리했다. 운영/검증 명령 옵션 오타의 잘못된 실행을 차단했고 읽기 전용 staging 집계는 정상이다.
 - [웹훅 후속](docs/nicepay-webhook-delivery-review.md): 현재 테스트 키의 등록 조회 누락을 확인해 승인된 사주용 card 주소를 등록하고 공급자 샘플 POST200·재조회 일치를 확인했다. 읽기 전용 등록 점검 명령과 신규4개 검사를 추가했다. 실제 거래 알림 재전송/서명·이벤트 저장은 관리자 로그인 후 확인할 단계다.
 - [실제 로그인 앱 통합 검증 완료](docs/hosted-app-ui-verification.md): 카카오 로그인→무료 결과→NICEPAY 현대카드 테스트 승인→유료 결과→프로필 조회/결제 내역→새로고침/재로그인 유지→프로필 전액 테스트 취소·열람 회수/무료 보존 확인. 결제 대기 안내와 빈 결제창을 수정·재배포했다. 실제 거래 웹훅 전달은 미확인이며 실청구/정식 출시는 별도다.
 - [실제 앱 DB 백업·격리 복원 검증](docs/hosted-backup-restore-check.md): 전용 스테이징21테이블의 데이터·스키마·RLS/권한이 로컬 복원본과 일치하고 제한/익명 접근 검사를 통과했다. 원격은 읽기 전용, 임시본 제거 완료. 인증 공급자/장기 백업·전체 재해 복구·지속 감시는 별도다.
 - [실제 외부 연동 상태](docs/external-connection-progress.md): 전용 서울 Supabase DB와 카카오 앱을 연결하고 서버에서 실제 로그인·프로필 저장·새로고침·재로그인을 확인했다. NICEPAY S2 키 연결과 실제 현대카드 테스트 승인·조회·전액 취소를 확인했다. 수정 후 자동 return·중복 방지·결과 열람/취소 뒤 권한 회수를 합성 계정으로 통과했다. 로그인 앱 UI 구매는 위 최종 통합 검증을 통과했다. 실제 거래 웹훅 전달·탈퇴/운영 검증은 별도다.
 - [카카오 로그인 서버 테스트](https://chunbae-staging.vercel.app/): 로그인 후 프로필과 개인 내역을 서버에서 보관하며 NICEPAY 테스트 결제를 연결한 연구용 스테이징. [배포·검증 기록](docs/server-staging-deployment.md).
 - [현재 공개 테스트 링크](https://chunbae-preview-5j5jsxtqv-oxaz1234-gmailcoms-projects.vercel.app): 프로필·조회/모의 결제 내역을 포함한 정적 체험판. [배포·원격 검증 기록](docs/temporary-preview-deployment.md). 실제 카카오 로그인·서버 계정 동기화·실결제는 별도 준비 중이다.
-- 프로필·로그인 후속: [카카오 검수와 조회/결제 내역](docs/kakao-profile-history-review.md). 우측 프로필·내역 두 탭, 로그인 전 서버 차단과 검증 세션 구분을 구현했다. 정적 체험은 로그인 없는 데모다. 서버의 실제 OAuth/프로필 저장은 확인했으며 연결 해제/회원 탈퇴·외부 결제는 미완료다.
+- 프로필·로그인 후속: [카카오 검수와 조회/결제 내역](docs/kakao-profile-history-review.md). 우측 프로필·내역 두 탭, 로그인 전 서버 차단과 검증 세션 구분을 구현했다. 정적 체험은 로그인 없는 데모다. 서버의 실제 OAuth/프로필 저장과 NICEPAY 테스트 앱 왕복은 확인했으며 연결 해제/회원 탈퇴·운영 결제는 미완료다.
 - 새 원전 후속: [가화와 진화 구분](docs/false-transformation-review.md). 1947년 PDF384~386쪽과 가화2명조를 대조한 종합 연구 v4, 전체268개 통과. 일반 강약·중화 임계값과 합화 최종 충분조건·공개 v8 승격은 보류한다.
 - 풀이·출시 후속: [조건 범위와 보류 사유](docs/condition-and-launch-followup.md)를 보완한 종합 연구 v3. 연구264개·웹143개·타입/빌드·모바일26개·로컬 PostgreSQL 21테이블 복원 통과. [현재 소스 현황](docs/current-release-source-inventory.json)은 공개 풀이 v8과 이전 v2 감수 자료를 구분하며 외부/운영/전문 승인7개 미완료를 유지한다.
 - API 후속: [두 모델 비교 준비](docs/narration-comparison-preparation.md)로 160합성입력·블라인드 감수 양식·서버 후보 생성 모듈을 구현했다. 새10개 포함 웹142개·타입·Next 빌드 통과. OpenAI 재인증/키 생성/실제 비교/모델 선택·앱 활성화는 미완료이며 공개 v8 유지.
@@ -22,7 +23,7 @@
 - 10월 12일 ZIP의 체크섬을 대조하고 Git 이력을 복원했다. 10월 14일 별도 분기에서는 [캐릭터 설계](docs/13-character-plan.md)를 선별 통합했다.
 - 현재 작업 위치: `/Users/chulwan/Documents/Codex/2026-10-12/oxaz1234-gmail-com-google-drive-3/saju`.
 - 원격 저장소: https://github.com/wani3000/saju (main).
-- [Next.js 서버 연결 앱](web/README.md)을 구현했다. 입력·결과 DB 저장, 연구 계산, 무료권, 지도·공유 링크와 모의 결제가 동작한다. 정식 인증·실결제·운영 출시는 아직이다. 기존 [클릭 시안](prototype/README.md)은 보존했다.
+- [Next.js 서버 연결 앱](web/README.md)을 구현했다. 입력·결과 DB 저장, 연구 계산, 무료권, 지도·공유 링크와 모의 결제가 동작한다. 카카오 인증과 NICEPAY sandbox 앱 왕복은 확인했으며 실결제·운영 출시는 아직이다. 기존 [클릭 시안](prototype/README.md)은 보존했다.
 - 고정 커밋의 엔진을 복구하여 기존 비교 결과와 어댑터 테스트 12개 통과를 재현했다. 실행 환경은 Node 22.17.0, pnpm 11.25.0이다.
 - [계산 엔진 검증 결과](docs/engine-validation.md)의 운영 채택 조건은 미완료다.
 - [개발 실행 계획](docs/development-plan.md): [역사적 시각 계산 경로](docs/historical-clock-validation.md)를 보강했으며 29개 테스트와 시간대 1,918개 사례·달력 738일·절기 전후 48개 입력 대조를 통과했다.

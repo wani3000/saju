@@ -1,0 +1,39 @@
+{
+  "date": "2026-10-23",
+  "scope": "login-independent-release-preparation",
+  "changes": [
+    "reject-invalid-operational-arguments-before-database-connection",
+    "refuse-unknown-runtime-operation-values",
+    "reject-unknown-or-combined-journey-scopes-before-starting-server",
+    "current-launch-evidence-and-next-actions"
+  ],
+  "verification": {
+    "unitServiceTests": 173,
+    "cliHealthTests": 11,
+    "generalHttp": true,
+    "generalMobileCases": 28,
+    "kakaoRequiredHttp": true,
+    "kakaoRequiredMobileCases": 2,
+    "nicepayHttp": true,
+    "nicepaySyntheticSdkMobileCases": 4,
+    "typescript": true,
+    "nextBuild": true,
+    "isolatedPostgresConcurrency": true,
+    "isolatedPostgresRestoreTables": 21,
+    "sourceInventory": true,
+    "documents": true
+  },
+  "hostedObservation": "docs/audits/operations-readonly-snapshot.json",
+  "appRuntimeChanged": false,
+  "interactiveLoginPerformed": false,
+  "realChargesEnabled": false,
+  "publicReleaseApproved": false,
+  "remaining": [
+    "actual-transaction-webhook-delivery",
+    "other-device-and-profile-consent-cases",
+    "external-account-unlink-and-deletion",
+    "calculation-and-interpretation-signoff",
+    "sales-support-and-data-policies",
+    "durable-monitoring-and-full-disaster-recovery"
+  ]
+}

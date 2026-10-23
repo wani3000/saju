@@ -1,0 +1,40 @@
+{
+  "date": "2026-10-23",
+  "scope": "read-only-staging-readiness-snapshot",
+  "checks": {
+    "configuration": "valid",
+    "privateSettingsMode": "0600",
+    "health": {
+      "mode": "research",
+      "status": "ok",
+      "reasons": [],
+      "jobs": {
+        "queued": 0,
+        "delayedQueued": 0,
+        "oldestQueuedComparisonSeconds": 0,
+        "running": 0,
+        "failed": 0,
+        "expiredLeases": 0,
+        "oldestExpiredLeaseSeconds": 0
+      },
+      "payments": {
+        "confirming": 0,
+        "confirmationUnknown": 0,
+        "refundPending": 0,
+        "oldestPendingOrderSeconds": 0
+      }
+    },
+    "webhookRegistration": {
+      "scope": "sandbox-webhook-registration-only",
+      "transactionDeliveryVerified": false,
+      "realChargesEnabled": false,
+      "status": "registered",
+      "code": "CANONICAL_CARD_WEBHOOK_REGISTERED"
+    }
+  },
+  "mutationsPerformed": false,
+  "interactiveLoginPerformed": false,
+  "scheduleInstalled": false,
+  "productionApproved": false,
+  "checkedAt": "2026-10-23T00:33:45.727Z"
+}

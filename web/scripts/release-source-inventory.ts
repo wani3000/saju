@@ -23,6 +23,7 @@ const files=['web/package.json','web/package-lock.json','web/e2e/journey.spec.ts
  'web/scripts/check-hosted-runtime.ts','web/scripts/check-hosted-restore.ts','web/scripts/hosted-restore-target.ts',
  'web/scripts/check-kakao-provider.ts','web/src/components/App.tsx','web/src/app/globals.css','web/content/journey-copy.json',
  'web/src/server/kakao-policy.ts','web/src/server/auth.ts','web/src/server/identity.ts','web/src/server/service.ts',
+ 'web/src/server/operations.ts','web/src/server/operational-command.ts','web/scripts/maintenance.ts','web/scripts/worker.ts','web/tests/health.test.ts',
  'web/src/server/nicepay-webhook.ts','web/src/app/api/nicepay/webhook/route.ts',
  'web/src/server/nicepay.ts','web/src/server/nicepay-checkout.ts','web/src/app/api/nicepay/return/route.ts',
  'web/scripts/nicepay-registration.ts','web/scripts/check-nicepay-registration.ts','web/tests/nicepay-registration.test.ts',

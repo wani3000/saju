@@ -156,3 +156,9 @@ API·PG 반환·웹훅은 요청 본문을 읽는 중 16KiB를 넘으면 413, �
 ## 실제 스테이징 앱 백업의 로컬 복원 검사
 
 `npm run test:hosted-restore -- --settings .env.staging.local --bootstrap .env.supabase-bootstrap.local --project nwicejxousubxiczwwkb --private-local-copy`는 지정한 연구용 서울 DB를 읽기 전용으로 백업해 자체 생성한 임시 로컬 PostgreSQL17에만 복원한다. 실제 개인정보가 포함될 수 있어 비공개 로컬 복사를 명시해야 한다. 파일 권한600·동일 snapshot·21테이블 데이터/스키마/소유자/RLS/ACL·제한/익명 권한을 확인하고 임시본을 제거한다. 원문·토큰·자격·행 해시는 출력하지 않는다. 관리자를 앱에 등록하거나 원격 복원을 수행하지 않는다. [한계·정리 실패 대응·재현 기록](../docs/hosted-backup-restore-check.md)을 따른다. Supabase auth/스토리지·장기 백업·전체 재해 복구 승인은 포함하지 않는다.
+
+## 운영 명령 인자 보호 · 2026-10-23
+
+health는 maintenance 진입점의 정확한 --health 하나만 허용하며 maintenance와 worker는 추가 인자를 받지 않는다. 옵션 오타·중복·지원하지 않는 dry-run/임의 인자는 DB 연결 전 종료1/INVALID_OPERATION_ARGUMENTS로 거절한다. 입력한 인자 원문은 출력하지 않는다. 카카오/NICEPAY 여정 명령도 정확한 검사 범위 하나만 허용하며 잘못된 인자는 INVALID_JOURNEY_ARGUMENTS로 중단한다. 실제 운영 중 상태만 보려면 npm run health를 사용하고, maintenance/worker는 데이터를 처리한다.
+
+현재 외부 연동/운영 증거와 남은 일은 [출시 현황](../docs/launch-status-current.md)을 따른다.

@@ -2,10 +2,36 @@ import { database, type Database } from "./db";
 import { health, maintenance } from "./operations";
 import { runJobs } from "./service";
 
+const invalidArguments = () => ({
+  exitCode: 1,
+  report: { status: "error", code: "INVALID_OPERATION_ARGUMENTS" },
+});
+
+// Parse before connecting: a misspelled health flag must never run maintenance.
+export async function operationalCli(
+  entry: "maintenance" | "worker",
+  args: readonly string[],
+  connect: () => Promise<Database> = database,
+) {
+  if (entry === "maintenance") {
+    if (!args.length) return operationalCommand("maintenance", connect);
+    if (args.length === 1 && args[0] === "--health")
+      return operationalCommand("health", connect);
+  } else if (entry === "worker" && !args.length) {
+    return operationalCommand("worker", connect);
+  }
+  // Do not echo unknown arguments: they may accidentally contain secrets.
+  return invalidArguments();
+}
+
 export async function operationalCommand(
   command: "health" | "maintenance" | "worker",
   connect: () => Promise<Database> = database,
 ) {
+  // TypeScript types are absent at runtime; refuse unknown values rather than
+  // falling through to the mutating worker branch.
+  if (!["health", "maintenance", "worker"].includes(command))
+    return invalidArguments();
   let db: Database | undefined;
   let result: { exitCode: number; report: unknown };
   const failure = () => ({
