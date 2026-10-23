@@ -61,3 +61,12 @@
 배포 전 신규 산출물 검사에서 서버 함수 경로맵에 로컬 `.env` 설정이 나타나는 문제를 재현했다. 이 산출물은 배포하지 않았다. `outputFileTracingExcludes`로 로컬 환경/개발 DB/검토/배포 도구 디렉터리를 제외하고, `npm run check:build`를 CI에 추가했다. Next 추적9개에서 비공개 경로0개·공개 CA·마이그레이션4개 유지 통과. Vercel 함수에는 매핑과 실제 파일도 검사하며 비공개 파일 또는 필수 런타임 자산 누락 시 중단한다. 공개 산출물의 서버 비밀값 검사는 원문을 출력하지 않는다. 이번 신규 빌드 재현을 과거 배포의 동일 파일 포함이나 외부 노출 확인으로 확대하지 않는다.
 
 Next 제외 후 실제 파일은 없으나 Vercel 빌더가 남긴 dotenv 경로맵12개를 확인했다. `npm run prepare:artifact`는 실제 비공개 파일이 있으면 중단하고, 없는 파일의 메타데이터 참조만 정리한다. 이후 `npm run check:build -- --vercel`로 실제 함수 파일과 매핑 모두 비공개0개·CA/SQL 유지 통과. 공개 빌드에 확인한 서버 비밀값이 없는 것도 원문 출력 없이 검사했다. 실제 비공개 파일을 조용히 삭제해 통과시키거나 외부 환경 변수/키를 변경하지 않는다.
+
+
+## 개별 삭제 후속의 실제 테스트 배포
+
+소스 `30220801cdaeb0fb2e6d11e1ab65f663498be3ce`를 기존 팀/프로젝트 `chunbae-staging`에 prebuilt production target·서울icn1로 배포했다. 배포 `dpl_AzfEbWpcpBtXBe3b4hpe7haFjJtQ`가 READY이고 실제 meta.sourceCommit·프로젝트ID·리전이 일치한다. 고정 URL은 https://chunbae-staging-qipuivvnu-oxaz1234-gmailcoms-projects.vercel.app, 공개 테스트 주소는 https://chunbae-staging.vercel.app 다. 같은 산출물을 promote했고 canonical alias가 이 배포를 가리키는 것을 확인했다.
+
+보호된 고정 URL은 기존 CLI 인증의 vercel curl로 검사했으며 보호 설정/로그인 권한을 확대하지 않았다. canonical은 일반 익명 HTTP로 랜딩200·개인 state401·새 DELETE401/잘못된 Origin403과 no-store를 통과했다. 페이지JS SHA-256 `3556319332c50819a42dedd925705760de3d83f6554b9b501551756197c6fd85`가 로컬 산출물과 같다. CUA에서 공개 제목·카카오 시작/지도 버튼을 확인했다. 배포 후10분 범위 오류 로그 조회는0건이며 지속 감시 성공으로 표시하지 않는다.
+
+중간 임시 배포의 수동 커밋 표기를 발견해 Git에서 소스 SHA를 직접 읽는 방식으로 바로잡은 배포만 최종 연결했다. 이 작업 중 생성한 중간 배포는 정리했고 기존 배포 이력은 삭제하지 않았다. 실제 로그인 계정의 개인 기록 삭제·새 OAuth/카드 왕복·운영 결제·정기 백업/알림·최종 정책 게시는 수행하지 않았다. 앞선 정책/보관/요청 시각 보완도 이번 서버 배포에 포함된다.

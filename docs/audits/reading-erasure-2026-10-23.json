@@ -43,5 +43,59 @@
     "No external OAuth/card roundtrip was repeated.",
     "A backup taken after erasure is not a pre-erasure-backup deletion replay solution.",
     "Financial record separation/purge and external auth erasure remain pending."
-  ]
+  ],
+  "deployment": {
+    "sourceCommit": "30220801cdaeb0fb2e6d11e1ab65f663498be3ce",
+    "id": "dpl_AzfEbWpcpBtXBe3b4hpe7haFjJtQ",
+    "url": "https://chunbae-staging-qipuivvnu-oxaz1234-gmailcoms-projects.vercel.app",
+    "alias": "https://chunbae-staging.vercel.app",
+    "readyState": "READY",
+    "target": "production hosting target of research staging",
+    "region": "icn1",
+    "framework": "Next.js 16.4.2",
+    "localVercelBuildSeconds": 16,
+    "sameArtifactPromoted": true,
+    "cuaPublicLanding": "passed",
+    "errorLogQuery": {
+      "window": "10m",
+      "matchingRecords": 0,
+      "continuousMonitoring": false
+    },
+    "canonicalHttp": {
+      "status": "passed",
+      "alias": "https://chunbae-staging.vercel.app",
+      "checks": [
+        {
+          "path": "/",
+          "method": "GET",
+          "status": 200,
+          "code": null,
+          "noStore": true
+        },
+        {
+          "path": "/api/state",
+          "method": "GET",
+          "status": 401,
+          "code": "UNAUTHORIZED",
+          "noStore": true
+        },
+        {
+          "path": "/api/results/00000000-0000-4000-8000-000000000001",
+          "method": "DELETE",
+          "status": 401,
+          "code": "UNAUTHORIZED",
+          "noStore": true
+        },
+        {
+          "path": "/api/results/00000000-0000-4000-8000-000000000001",
+          "method": "DELETE",
+          "status": 403,
+          "code": "ORIGIN_REJECTED",
+          "noStore": true
+        }
+      ],
+      "asset": "/_next/static/chunks/app/page-8b0a5e08099d9291.js",
+      "assetSha256": "3556319332c50819a42dedd925705760de3d83f6554b9b501551756197c6fd85"
+    }
+  }
 }
