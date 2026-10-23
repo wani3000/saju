@@ -1,0 +1,36 @@
+{
+  "date": "2026-10-23",
+  "scope": "dedicated-staging-nicepay-sandbox-webhook",
+  "status": "registration-repaired-awaiting-transaction-delivery",
+  "registrationLookupBefore": {
+    "http": 200,
+    "resultCode": "U111",
+    "registeredUrlCount": 0
+  },
+  "registrationCreate": {
+    "http": 200,
+    "resultCode": "0000",
+    "method": "card",
+    "url": "https://chunbae-staging.vercel.app/api/nicepay/webhook"
+  },
+  "registrationLookupAfter": {
+    "resultCode": "0000",
+    "canonicalCardWebhookRegistered": true
+  },
+  "providerRegistrationSample": {
+    "hostedPostCount": 1,
+    "http": 200,
+    "transactionDelivery": false
+  },
+  "previousUiOrder": {
+    "state": "refunded",
+    "paymentEventCount": 0
+  },
+  "actualTransactionDeliveryVerified": false,
+  "merchantDeliveryLogInspected": false,
+  "merchantLoginRequired": true,
+  "signaturesBypassed": false,
+  "productionMerchantChanged": false,
+  "appRuntimeChanged": false,
+  "realChargesEnabled": false
+}

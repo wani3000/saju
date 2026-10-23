@@ -57,7 +57,7 @@
   "sourceArtifacts": [
     {
       "file": "web/package.json",
-      "sha256": "fb7934fc5941734df9f6fca81b48da2de2b6a19b7ab92f0774b2b329800937a0"
+      "sha256": "89a12f03b3c7c7f41f3ca8bce561082b4a130cafb05c0fb5a4f6be04965dec0f"
     },
     {
       "file": "web/package-lock.json",
@@ -146,6 +146,18 @@
     {
       "file": "web/src/app/api/nicepay/return/route.ts",
       "sha256": "75908246343bf99711a5951479d533b9b09243aeb48498a8968d0ea98d6dd9c2"
+    },
+    {
+      "file": "web/scripts/nicepay-registration.ts",
+      "sha256": "f37abf50f64d6189a6f53daa9cfbcc222a447aaae19553fec8a37984d1912d2d"
+    },
+    {
+      "file": "web/scripts/check-nicepay-registration.ts",
+      "sha256": "f57dbad7d872383ebd002bab4704b3e3c74945191b63b106a5a763382abe403e"
+    },
+    {
+      "file": "web/tests/nicepay-registration.test.ts",
+      "sha256": "2e907851efba651e3ced3c6b6036332d0b69153d3f0c082811c0d11ca2bb9c9d"
     },
     {
       "file": "web/scripts/check-nicepay-roundtrip.ts",

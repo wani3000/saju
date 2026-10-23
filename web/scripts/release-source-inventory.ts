@@ -25,6 +25,7 @@ const files=['web/package.json','web/package-lock.json','web/e2e/journey.spec.ts
  'web/src/server/kakao-policy.ts','web/src/server/auth.ts','web/src/server/identity.ts','web/src/server/service.ts',
  'web/src/server/nicepay-webhook.ts','web/src/app/api/nicepay/webhook/route.ts',
  'web/src/server/nicepay.ts','web/src/server/nicepay-checkout.ts','web/src/app/api/nicepay/return/route.ts',
+ 'web/scripts/nicepay-registration.ts','web/scripts/check-nicepay-registration.ts','web/tests/nicepay-registration.test.ts',
  'web/scripts/check-nicepay-roundtrip.ts','web/scripts/check-journey.mjs','web/tests/nicepay.test.ts','web/tests/nicepay-http.mjs',
  'web/src/components/nicepay-client.ts','web/src/components/NicepayCheckoutButton.tsx','web/e2e/nicepay-sandbox.spec.ts','web/playwright.config.ts',
  'web/src/app/api/[...path]/route.ts','web/src/app/auth/callback/route.ts','web/db/migrations/004_kakao_profile.sql',
