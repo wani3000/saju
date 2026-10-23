@@ -4,7 +4,7 @@ import { mkdtemp, mkdir, writeFile, rm } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import path from "node:path";
 import { spawnSync } from "node:child_process";
-import { inspectTracePaths, inspectBuild } from "../scripts/check-build-isolation.mjs";
+import { inspectTracePaths, inspectBuild, prepareVercelMappings } from "../scripts/check-build-isolation.mjs";
 const assets = ["../../certs/supabase-prod-ca-2021.crt", ...["001_core", "002_operations", "003_server_access", "004_kakao_profile"].map(n => `../../db/migrations/${n}.sql`)];
 test("build audit keeps required CA/migrations and blocks private setup, review and data files without echoing paths", () => {
   assert.equal(inspectTracePaths(assets).status, "passed");
@@ -33,4 +33,19 @@ test("build isolation CLI fails closed on unsupported flags without echoing arbi
   const result = spawnSync(process.execPath, ["scripts/check-build-isolation.mjs", "--vercl", "synthetic-private-value"], { encoding: "utf8" });
   assert.equal(result.status, 1); assert.equal(result.stderr, "");
   assert.deepEqual(JSON.parse(result.stdout), { status: "invalid", code: "BUILD_ISOLATION_CHECK_FAILED" });
+});
+test("artifact preparation removes only absent private mappings and blocks real private files without deleting them", async () => {
+  const dir = await mkdtemp(path.join(tmpdir(), "saju-artifact-prepare-"));
+  try {
+    const manifest = path.join(dir, ".vc-config.json");
+    const mapping = Object.fromEntries([...assets.map(f => [f, f]), [".env.synthetic.local", ".env.synthetic.local"]]);
+    await writeFile(manifest, JSON.stringify({ filePathMap: mapping }));
+    assert.deepEqual(await prepareVercelMappings(dir), { prunedMappings: 1 });
+    assert.equal((await inspectBuild(dir, true)).status, "passed");
+    assert.deepEqual(await prepareVercelMappings(dir), { prunedMappings: 0 });
+    await writeFile(manifest, JSON.stringify({ filePathMap: mapping }));
+    await writeFile(path.join(dir, ".env.synthetic.local"), "synthetic-only");
+    await assert.rejects(prepareVercelMappings(dir));
+    assert.equal((await inspectBuild(dir, true)).status, "blocked");
+  } finally { await rm(dir, { recursive: true, force: true }); }
 });

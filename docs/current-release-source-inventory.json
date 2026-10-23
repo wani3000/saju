@@ -57,7 +57,7 @@
   "sourceArtifacts": [
     {
       "file": "web/package.json",
-      "sha256": "f26b640770912eb6a27a272226a3ca4819b65b774e8625d8ca8054defc6bf1d4"
+      "sha256": "3bb9eaa556a2c060597dbaec4afac15ee886e5b433fd0640a6787249e6b19c6b"
     },
     {
       "file": "web/package-lock.json",
@@ -197,11 +197,11 @@
     },
     {
       "file": "web/scripts/check-build-isolation.mjs",
-      "sha256": "da1b76a4a3be706ce5e48628f40d04afad1152456d6d942f4f2f8a840b899d8b"
+      "sha256": "c5e77e357940ef6b10f171c63b55dd2992df1c6c64a318bb59b1668b8d3738b6"
     },
     {
       "file": "web/tests/build-isolation.test.ts",
-      "sha256": "167c3e7297ca064d3ca63de0c522c0603e2e1f0444e06bc9799d11d31d789c70"
+      "sha256": "ae553e68b7adde1ea820dd6392d883bc94d07578080db5293a244fffd4473d18"
     },
     {
       "file": ".github/workflows/web-validation.yml",

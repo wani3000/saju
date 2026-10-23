@@ -3,7 +3,7 @@
   "date": "2026-10-23",
   "baseCommit": "d50486407cabf3c910cdae76c38b9810f36fd2ae",
   "checks": {
-    "unitAndServiceTests": 204,
+    "unitAndServiceTests": 205,
     "generalBrowserTests": 34,
     "requiredKakaoBrowserTests": 2,
     "nicepaySyntheticSdkBrowserTests": 4,
@@ -15,7 +15,16 @@
     "erasedDataRemainsAbsentInPostErasureBackup": true,
     "cuaLocalSyntheticFlow": "passed",
     "nextPrivateFileIsolation": "passed",
-    "requiredRuntimeAssets": "public CA and all four migrations retained"
+    "requiredRuntimeAssets": "public CA and all four migrations retained",
+    "vercelPrivateFileIsolation": {
+      "status": "passed",
+      "manifests": 3,
+      "privateFiles": 0,
+      "caIncluded": true,
+      "migrationCount": 4,
+      "absentMappingsPruned": 12
+    },
+    "checkedServerSecretsAbsentFromPublicBuild": true
   },
   "schemaChanges": false,
   "newLoginExecuted": false,
