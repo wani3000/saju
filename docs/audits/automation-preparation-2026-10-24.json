@@ -33,7 +33,8 @@
       "privateFiles": 0,
       "requiredCaIncluded": true,
       "migrations": 4
-    }
+    },
+    "editorialAuditCases": 968
   },
   "externalMessagesSent": 0,
   "externalDatabaseConnectionsByNewTools": 0,
@@ -47,5 +48,61 @@
     "Remote exporter, independent storage, rotation and scheduler remain disconnected.",
     "Alert candidates are not delivery receipts; sender and recipients remain unconfigured.",
     "Current isolated restore test does not approve arbitrary or historical backup recovery."
-  ]
+  ],
+  "deployment": {
+    "id": "dpl_C5Sb5tXnVR9EhR6p6RKc4At1Tiqo",
+    "sourceCommit": "e50d04a383ea85c58a49e6e853491d5f084f2c8f",
+    "readyState": "READY",
+    "region": "icn1",
+    "target": "production hosting target of research staging",
+    "url": "https://chunbae-staging-klfibkoun-oxaz1234-gmailcoms-projects.vercel.app",
+    "alias": "https://chunbae-staging.vercel.app",
+    "sameArtifactPromoted": true,
+    "buildSeconds": 17,
+    "framework": "Next.js 16.4.2",
+    "artifactIsolation": {
+      "privateFileCount": 0,
+      "caIncluded": true,
+      "migrationCount": 4,
+      "prunedDanglingMappings": 12
+    },
+    "canonicalHttp": {
+      "status": "passed",
+      "origin": "https://chunbae-staging.vercel.app",
+      "checks": [
+        {
+          "path": "/",
+          "method": "GET",
+          "status": 200,
+          "code": null
+        },
+        {
+          "path": "/api/state",
+          "method": "GET",
+          "status": 401,
+          "code": "UNAUTHORIZED"
+        },
+        {
+          "path": "/api/results/00000000-0000-4000-8000-000000000001",
+          "method": "DELETE",
+          "status": 401,
+          "code": "UNAUTHORIZED"
+        },
+        {
+          "path": "/api/results/00000000-0000-4000-8000-000000000001",
+          "method": "DELETE",
+          "status": 403,
+          "code": "ORIGIN_REJECTED"
+        }
+      ],
+      "asset": "/_next/static/chunks/app/page-8b0a5e08099d9291.js",
+      "assetSha256": "3556319332c50819a42dedd925705760de3d83f6554b9b501551756197c6fd85"
+    },
+    "cuaPublicLanding": "passed",
+    "errorLogQuery": {
+      "window": "10m",
+      "matchingRecords": 0,
+      "continuousMonitoring": false
+    }
+  }
 }

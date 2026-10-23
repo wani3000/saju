@@ -88,3 +88,10 @@ NICEPAY 결제/취소·실제 다른 기기/카카오 인앱 브라우저·프�
 최신 배포는 소스3022080 / `dpl_AzfEbWpcpBtXBe3b4hpe7haFjJtQ` / READY·icn1이다. 테스트 주소 https://chunbae-staging.vercel.app 는 같은 산출물을 promote한 결과다. [검증·해시·변경 범위](release-preparation-3-4-5.md)의 개별 삭제/취소 대기 안내·30일 초안/요청 시각 보완을 포함한다. 로컬 환경/개발 자료를 Next 추적에서 제외하고, 실제 파일이 없는 비공개 경로맵12개만 제거한 뒤 함수 파일/매핑 비공개0·CA/SQL4개 유지를 확인했다. 기존 ‘관리자 자격 미등록’ 설명을 로컬 파일 추적 검증 증거로 대신하지 않는다. 과거 배포의 같은 파일 포함이나 외부 노출은 이번 검사만으로 확정하지 않는다.
 
 단위205개·모바일40개와 HTTP·빌드·암호화 PG21테이블 복원, 원격 익명200/401/403·canonical JS 일치·CUA 공개 랜딩 확인. 신규 로그인·실카드·스키마/권한·운영 키·유료 플랜·정기 작업/알림/최종 약관 게시는 변경하지 않았다.
+
+
+## 2026-10-24 백업·알림 로컬 도구 준비 재배포
+
+소스e50d04a / `dpl_C5Sb5tXnVR9EhR6p6RKc4At1Tiqo` / READY·서울icn1·Next16.4.2·로컬 Vercel 빌드17초. 기존 연구용 프로젝트의 production 호스팅 target에 같은 산출물을 promote했다. 고정 주소 https://chunbae-staging-klfibkoun-oxaz1234-gmailcoms-projects.vercel.app, 공개 테스트 https://chunbae-staging.vercel.app . [검증 기록](audits/automation-preparation-2026-10-24.json).
+
+공개200·로그인 전 state/DELETE401·다른 Origin403·no-store·JS 해시 일치와 CUA 제목/카카오 시작·지도 버튼을 확인했다. 배포10분 범위 오류 로그0건은 지속 감시 증거가 아니다. 서버 공개 관리 API/cron·원격 DB 내보내기/업로드·자동 파기·키 생성/운영 비밀 설정·스키마·실카드/새 로그인·유료 플랜은 변경하지 않았다. [새 실행 도구](local-operations-automation.md)는 저장소의 로컬 준비이며 Vercel에서 정기 실행하거나 외부 알림을 보낸다는 의미가 아니다.

@@ -2,7 +2,7 @@
 
 최신 운영 준비: [파일 백업 cycle·영속 알림 후보](local-operations-automation.md)를 구현했다. 이전375bf99의 GitHub 검사3종은 최종 성공이다. 원격 exporter/독립 보관/정기 실행/실제 전달·자동 파기는 미연결이고 기존 출시 승인 조건은 유지한다.
 
-최신 테스트 서버: 소스3022080 / dpl_AzfEbWpcpBtXBe3b4hpe7haFjJtQ / READY·서울, https://chunbae-staging.vercel.app 에 재배포했다. 익명 랜딩200·개인 API/삭제401·다른 Origin403·동일 JS 해시와 공개 버튼을 확인했다.
+최신 테스트 서버: 소스e50d04a / dpl_C5Sb5tXnVR9EhR6p6RKc4At1Tiqo / READY·서울, https://chunbae-staging.vercel.app 에 재배포했다. 익명 랜딩200·개인 API/삭제401·다른 Origin403·동일 JS 해시와 공개 버튼을 확인했다.
 
 최신 구현: 프로필의 개별 이야기 삭제·확인/완료·취소 대기 안내를 추가했다. 선택한 생일/차트/결과/공유/같은 입력 초안은 제거하고 주문/소비한 무료 이력은 보존한다. 미확정 거래를 먼저 해결하고 늦은 승인/작업 완료로 삭제 결과가 되살아나지 않게 한다. [검증/배포 후속](release-preparation-3-4-5.md)을 따른다.
 
