@@ -1,0 +1,55 @@
+{
+  "kind": "policy-operations-local-verification-v1",
+  "date": "2026-10-23",
+  "baseCommit": "38fa587d3bbd7dbe6527e4b0f324c21d78ae2646",
+  "policyDefaultsAdopted": true,
+  "policyPublished": false,
+  "remoteDataCleanupExecuted": false,
+  "newExternalLoginExecuted": false,
+  "paidPlanChanged": false,
+  "remoteSchedulerRegistered": false,
+  "externalMessagesSent": 0,
+  "productionBackupProvisioned": false,
+  "realChargesEnabled": false,
+  "checks": {
+    "unitAndServiceTests": 195,
+    "generalBrowserTests": 32,
+    "requiredKakaoBrowserTests": 2,
+    "nicepaySyntheticSdkBrowserTests": 4,
+    "httpJourneys": "passed in disposable local servers",
+    "typecheck": "passed",
+    "nextBuild": "passed",
+    "staticPreviewBuild": "passed",
+    "postgresConcurrencyAndRestrictedPermissions": "passed",
+    "restoredApplicationTables": 21,
+    "encryptedDumpAuthenticatedAndRestored": true,
+    "temporaryClusterAndKeyRemoved": true,
+    "cuaStaticLandingVisualCheck": "passed"
+  },
+  "implemented": [
+    "30-day draft content expiry and read/merge filtering",
+    "revision preserved across expiry; merge does not extend source age",
+    "retention-only CLI without payment reconciliation or generation",
+    "first confirm/refund request timestamp recorded without retry reset",
+    "unknown legacy request age never inferred from order creation",
+    "seven-day voluntary refund assessment with manual statutory-rights review",
+    "private AES-256-GCM file envelope and authenticated no-overwrite decryption",
+    "strict offline alert planning with quiet hours, dedup and recovery"
+  ],
+  "remaining": [
+    "live refund intake and verified payment-time/policy evidence",
+    "financial record separation and timed purge; identity tombstone minimization",
+    "individual result deletion; external auth deletion/unlink",
+    "external backup storage, key custody, hourly scheduling and seven-day rotation",
+    "independent post-backup refund/erasure/share-revocation journal and reconciliation",
+    "complete Supabase/provider recovery and RPO/RTO measurement",
+    "alert recipients, delivery receipts, retry and scheduler integration",
+    "seller/contact/privacy-responsible details and final policy publication"
+  ],
+  "limitations": [
+    "All new data tests use synthetic local accounts; no new real OAuth/card/webhook-delivery verification.",
+    "Refund assessment is prepared, not wired into production intake; sandbox cancellations remain unrestricted.",
+    "Encrypted file test is not recurring off-site backup or a full Supabase disaster-recovery approval.",
+    "Alert plans are not sent messages or delivery acknowledgements."
+  ]
+}

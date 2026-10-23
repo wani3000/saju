@@ -9,6 +9,7 @@ import {
 } from "../domain/model";
 import { engineVersion, validatePair } from "./engine";
 import { one, type Database, type Sql } from "./db";
+import { activeDraftCondition } from "./service-policy";
 export const hash = (s: string) => createHash("sha256").update(s).digest("hex");
 export const token = () => randomBytes(32).toString("base64url");
 export async function lockOwner(tx: Sql, owner: string) {
@@ -242,7 +243,7 @@ export async function state(db: Sql, owner: string) {
   ]);
   const draft = await one(
     db,
-    "SELECT data,revision FROM drafts WHERE owner_id=$1",
+    `SELECT CASE WHEN ${activeDraftCondition} THEN data ELSE NULL END AS data,revision FROM drafts WHERE owner_id=$1`,
     [owner],
   );
   const claim = await one(

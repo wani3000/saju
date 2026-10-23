@@ -4,7 +4,7 @@ import { spawnSync } from "node:child_process";
 import { openDatabase, migrate, one, assertMigrationsApplied } from "../src/server/db";
 import * as s from "../src/server/service";
 import * as p from "../src/server/payments";
-import { erasePersonalData, health } from "../src/server/operations";
+import { erasePersonalData, expireData, health } from "../src/server/operations";
 import { samplePerson } from "../src/domain/model";
 const admin = await openDatabase();
 try {
@@ -161,6 +161,16 @@ try {
     await s.runJobs(b, crashOwner);
     assert.ok(await s.result(a, crashOwner, crashComparison.id));
     assert.equal((await health(a)).status, "ok");
+    const retentionOwner = (await s.newSession(a)).owner;
+    await s.recoveryCode(a, retentionOwner);
+    await s.saveDraft(a, retentionOwner, pair(), 0);
+    await a.query("UPDATE drafts SET updated_at=now()-interval '31 days' WHERE owner_id=$1", [retentionOwner]);
+    assert.equal((await s.state(b, retentionOwner)).draft, null);
+    assert.equal((await expireData(a)).drafts, 1);
+    await assert.rejects(s.saveDraft(b, retentionOwner, pair(), 1), { code: "DRAFT_CONFLICT" });
+    await s.saveDraft(b, retentionOwner, pair(), 2);
+    assert.equal((await s.state(a, retentionOwner)).revision, 3);
+    console.log("PostgreSQL member draft expiry hides/scrubs personal content and rejects stale revisions across pools.");
     console.log(
       "Concurrent exhausted-lease cleanup releases free reservation once; health CLI exits 2 until manual recovery succeeds.",
     );

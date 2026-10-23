@@ -2,6 +2,7 @@ import { one, type Database } from "./db";
 import { runJobs } from "./service";
 import { reconcilePayment, refundPayment } from "./payments";
 import { AppError } from "../domain/model";
+import { servicePolicy } from "./service-policy";
 // Local alarm starting point, not a production SLO or queue residence time.
 export const queuedComparisonAlertSeconds = 300;
 export async function erasePersonalData(
@@ -87,6 +88,10 @@ export async function erasePersonalData(
 }
 export async function expireData(db: Database) {
   const counts = await db.transaction(async (tx) => {
+    const drafts = await tx.query(
+      `UPDATE drafts SET data='{}'::jsonb,revision=revision+1
+       WHERE updated_at<=now()-interval '${servicePolicy.draftDays} days' AND data<>'{}'::jsonb RETURNING owner_id`,
+    );
     const sessions = await tx.query(
       "DELETE FROM sessions WHERE expires_at<now() RETURNING token_hash",
     );
@@ -101,10 +106,10 @@ export async function expireData(db: Database) {
     );
     await tx.query("DELETE FROM nicepay_attempts WHERE expires_at<now()");
     await tx.query(
-      "DELETE FROM operational_events WHERE created_at<now()-interval '30 days'",
+      `DELETE FROM operational_events WHERE created_at<now()-interval '${servicePolicy.operationalLogDays} days'`,
     );
     await tx.query("DELETE FROM rate_limits WHERE resets_at<now()");
-    return { sessions: sessions.rows.length, shares: shares.rows.length };
+    return { sessions: sessions.rows.length, shares: shares.rows.length, drafts: drafts.rows.length };
   });
   // Only inactive, unlinked guests older than 30 days. Members and pending money are untouched.
   const guests =
@@ -116,6 +121,7 @@ export async function expireData(db: Database) {
   let erased = 0;
   for (const g of guests.rows)
     if (await erasePersonalData(db, g.id, true)) erased++;
+  await db.query("INSERT INTO operational_events(kind,outcome) VALUES('retention','completed')");
   return { ...counts, guests: erased };
 }
 export async function maintenance(db: Database) {
@@ -160,12 +166,19 @@ export async function health(db: Database) {
         count(*) FILTER (WHERE j.state='running' AND (lease_until IS NULL OR lease_until<now()))::int AS expired_leases,
         coalesce(floor(max(extract(epoch FROM now()-lease_until)) FILTER (WHERE j.state='running' AND lease_until<now())),0)::float8 AS oldest_expired_lease_seconds
       FROM generation_jobs j JOIN comparisons c ON c.id=j.comparison_id AND c.owner_id=j.owner_id
+    ), pending AS (
+      SELECT o.*,(SELECT min(a.created_at) FROM payment_attempts a
+        WHERE a.order_id=o.id AND a.state='requested' AND a.operation=
+        CASE WHEN o.state='refund_pending' THEN 'refund' ELSE 'confirm' END) AS pending_since
+      FROM orders o WHERE o.state IN ('confirming','confirmation_unknown','refund_pending')
     ), payments AS (
       SELECT count(*) FILTER (WHERE state='confirming')::int AS confirming,
         count(*) FILTER (WHERE state='confirmation_unknown')::int AS confirmation_unknown,
         count(*) FILTER (WHERE state='refund_pending')::int AS refund_pending,
-        coalesce(greatest(0,floor(max(extract(epoch FROM now()-created_at)))),0)::float8 AS oldest_pending_order_seconds
-      FROM orders WHERE state IN ('confirming','confirmation_unknown','refund_pending')
+        coalesce(greatest(0,floor(max(extract(epoch FROM now()-created_at)))),0)::float8 AS oldest_pending_order_seconds,
+        count(*) FILTER (WHERE pending_since<=now()-interval '${servicePolicy.pendingPaymentMinutes} minutes')::int AS overdue_pending,
+        count(*) FILTER (WHERE pending_since IS NULL)::int AS unknown_pending_age
+      FROM pending
     ) SELECT * FROM jobs CROSS JOIN payments`,
     [queuedComparisonAlertSeconds],
   ))!;
@@ -184,6 +197,8 @@ export async function health(db: Database) {
     refundPending: row.refund_pending as number,
     // This is order age, not time spent in its current payment state.
     oldestPendingOrderSeconds: row.oldest_pending_order_seconds as number,
+    overduePending: row.overdue_pending as number,
+    unknownPendingAge: row.unknown_pending_age as number,
   };
   const reasons: string[] = [];
   if (jobs.failed) reasons.push("FAILED_JOBS");

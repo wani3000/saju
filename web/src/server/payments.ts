@@ -235,6 +235,8 @@ export async function confirmPayment(
       "UPDATE orders SET state=CASE WHEN state='created' THEN 'confirming' ELSE state END,payment_key=$2 WHERE id=$1",
       [id, key],
     );
+    if (o.state === "created")
+      await tx.query("INSERT INTO payment_attempts(id,order_id,operation,state) VALUES($1,$2,'confirm','requested')", [randomUUID(), id]);
     return o;
   });
   if (o.state === "paid") return;
@@ -333,6 +335,8 @@ export async function refundPayment(
     await tx.query("UPDATE orders SET state='refund_pending' WHERE id=$1", [
       id,
     ]);
+    if (o.state === "paid")
+      await tx.query("INSERT INTO payment_attempts(id,order_id,operation,state) VALUES($1,$2,'refund','requested')", [randomUUID(), id]);
     await tx.query(
       "UPDATE entitlements SET state='revoked' WHERE comparison_id=$1",
       [o.comparison_id],

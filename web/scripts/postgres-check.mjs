@@ -1,5 +1,6 @@
 // Creates an isolated temporary cluster. Never connects to a user's configured DATABASE_URL.
-import { mkdtemp, rm, readFile } from "node:fs/promises";
+import { mkdtemp, rm, readFile, writeFile, mkdir, chmod } from "node:fs/promises";
+import { randomBytes } from "node:crypto";
 import { tmpdir } from "node:os";
 import path from "node:path";
 import { spawnSync } from "node:child_process";
@@ -118,11 +119,25 @@ try {
     "--dbname",
     testUrl,
   ]);
+  await chmod(path.join(dir, "backup.dump"), 0o600);
+  await mkdir(path.join(dir, "keys"), { mode: 0o700 });
+  const backupKey = path.join(dir, "keys", "backup.key");
+  await writeFile(backupKey, randomBytes(32), { mode: 0o600 });
+  for (const args of [
+    ["seal", "--input", path.join(dir, "backup.dump"), "--key-file", backupKey, "--output", path.join(dir, "encrypted.saju-backup")],
+    ["open", "--input", path.join(dir, "encrypted.saju-backup"), "--key-file", backupKey, "--output", path.join(dir, "verified.dump")],
+  ]) {
+    const report = JSON.parse(run(process.execPath, ["--import", "tsx", "scripts/backup.ts", ...args]));
+    assert.equal(report.status, "completed");
+    assert.equal(report.externalCalls, 0);
+  }
+  assert.deepEqual(await readFile(path.join(dir, "verified.dump")), await readFile(path.join(dir, "backup.dump")));
+  await rm(path.join(dir, "backup.dump"));
   run(path.join(bin, "pg_restore"), [
     "--exit-on-error",
     "--dbname",
     restoreUrl,
-    path.join(dir, "backup.dump"),
+    path.join(dir, "verified.dump"),
   ]);
   const schema = db => run(path.join(bin, "pg_dump"), ["--schema-only", "--no-comments", "--dbname", db])
     // PostgreSQL 17+ random psql restriction keys are not schema differences.
@@ -132,6 +147,7 @@ try {
     env: { ...localEnv, DATABASE_URL: restoreUrl.replace("saju_admin@", "saju_runtime@") },
   }));
   console.log("PostgreSQL separate-DB restore: schema, constraints, indexes, ACLs and RLS policies match; no hosted recovery approval implied.");
+  console.log("Private encrypted backup: synthetic pg_dump sealed, authenticated and restored; temporary key and all copies removed on exit.");
 } catch (error) {
   // This log belongs only to the owned synthetic cluster and contains no service configuration.
   if (!started) console.error(await readFile(path.join(dir, "server.log"), "utf8").catch(() => "Cluster startup failed before log creation."));

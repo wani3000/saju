@@ -15,6 +15,7 @@ for path in required:
     if not path.is_file() or not path.read_text(encoding="utf-8").strip():
         errors.append(f"Missing or empty: {path.relative_to(root)}")
 owned_docs = list(root.glob("*.md")) + list((root / "docs").glob("*.md")) + list((root / "design").rglob("*.md")) + [root / "research/validation/README.md"]
+owned_docs += list((root / "docs/policies").glob("*.md"))
 owned_docs += list((root / "prototype").glob("*.md")) + list((root / "prototype/licenses").glob("*.md"))
 owned_docs += list((root / "web").glob("*.md")) + list((root / "web/licenses").glob("*.md"))
 for path in (p for p in owned_docs if p.exists()):

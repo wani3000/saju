@@ -34,7 +34,10 @@
     "release:inventory": "npm run engine && tsx scripts/release-source-inventory.ts",
     "test:kakao": "node scripts/check-journey.mjs --kakao-required",
     "test:nicepay": "node scripts/check-journey.mjs --nicepay-sandbox",
-    "check:nicepay-webhook": "tsx scripts/check-nicepay-registration.ts"
+    "check:nicepay-webhook": "tsx scripts/check-nicepay-registration.ts",
+    "retention": "tsx scripts/retention.ts",
+    "backup:file": "tsx scripts/backup.ts",
+    "alerts:plan": "tsx scripts/alert-plan.ts"
   },
   "dependencies": {
     "@electric-sql/pglite": "0.5.9",

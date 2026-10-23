@@ -200,6 +200,8 @@ test("health separates pending payment states and reports order age, excluding c
       confirmationUnknown: 0,
       refundPending: 0,
       oldestPendingOrderSeconds: 0,
+      overduePending: 0,
+      unknownPendingAge: 0,
     });
   } finally {
     await db.close();

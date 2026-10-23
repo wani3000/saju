@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { activeDraftCondition, activeStoredDraftCondition } from "./service-policy";
 import { one, type Database, type Sql } from "./db";
 import { hash, token, lockOwner } from "./service";
 import { AppError } from "../domain/model";
@@ -99,7 +100,7 @@ async function birthKeys(tx: Sql, owner: string) {
     "SELECT inputs FROM comparisons WHERE owner_id=$1 AND state<>'cancelled'",
     [owner],
   );
-  const draft = await one(tx, "SELECT data FROM drafts WHERE owner_id=$1", [
+  const draft = await one(tx, `SELECT data FROM drafts WHERE owner_id=$1 AND ${activeDraftCondition}`, [
     owner,
   ]);
   const people = [...rows.rows.map((r) => r.inputs.me), draft?.data?.me].filter(
@@ -198,7 +199,9 @@ export async function finishIdentity(
           [t.target_id, sourceFree.comparison_id],
         );
       await tx.query(
-        "INSERT INTO drafts(owner_id,data,revision) SELECT $2,data,revision FROM drafts WHERE owner_id=$1 ON CONFLICT(owner_id) DO NOTHING",
+        `INSERT INTO drafts(owner_id,data,revision,updated_at) SELECT $2,data,revision,updated_at FROM drafts WHERE owner_id=$1 AND ${activeDraftCondition}
+         ON CONFLICT(owner_id) DO UPDATE SET data=EXCLUDED.data,revision=drafts.revision+1,updated_at=EXCLUDED.updated_at
+         WHERE NOT (${activeStoredDraftCondition})`,
         [source, t.target_id],
       );
       await tx.query("DELETE FROM drafts WHERE owner_id=$1", [source]);

@@ -1,5 +1,5 @@
 import { database, type Database } from "./db";
-import { health, maintenance } from "./operations";
+import { expireData, health, maintenance } from "./operations";
 import { runJobs } from "./service";
 
 const invalidArguments = () => ({
@@ -9,7 +9,7 @@ const invalidArguments = () => ({
 
 // Parse before connecting: a misspelled health flag must never run maintenance.
 export async function operationalCli(
-  entry: "maintenance" | "worker",
+  entry: "maintenance" | "worker" | "retention",
   args: readonly string[],
   connect: () => Promise<Database> = database,
 ) {
@@ -19,18 +19,20 @@ export async function operationalCli(
       return operationalCommand("health", connect);
   } else if (entry === "worker" && !args.length) {
     return operationalCommand("worker", connect);
+  } else if (entry === "retention" && !args.length) {
+    return operationalCommand("retention", connect);
   }
   // Do not echo unknown arguments: they may accidentally contain secrets.
   return invalidArguments();
 }
 
 export async function operationalCommand(
-  command: "health" | "maintenance" | "worker",
+  command: "health" | "maintenance" | "worker" | "retention",
   connect: () => Promise<Database> = database,
 ) {
   // TypeScript types are absent at runtime; refuse unknown values rather than
   // falling through to the mutating worker branch.
-  if (!["health", "maintenance", "worker"].includes(command))
+  if (!["health", "maintenance", "worker", "retention"].includes(command))
     return invalidArguments();
   let db: Database | undefined;
   let result: { exitCode: number; report: unknown };
@@ -49,6 +51,8 @@ export async function operationalCommand(
         exitCode: report.health.status === "ok" && !report.unresolved ? 0 : 2,
         report,
       };
+    } else if (command === "retention") {
+      result = { exitCode: 0, report: { status: "completed", expired: await expireData(db) } };
     } else {
       const jobs = await runJobs(db);
       const status = await health(db);

@@ -162,3 +162,12 @@ API·PG 반환·웹훅은 요청 본문을 읽는 중 16KiB를 넘으면 413, �
 health는 maintenance 진입점의 정확한 --health 하나만 허용하며 maintenance와 worker는 추가 인자를 받지 않는다. 옵션 오타·중복·지원하지 않는 dry-run/임의 인자는 DB 연결 전 종료1/INVALID_OPERATION_ARGUMENTS로 거절한다. 입력한 인자 원문은 출력하지 않는다. 카카오/NICEPAY 여정 명령도 정확한 검사 범위 하나만 허용하며 잘못된 인자는 INVALID_JOURNEY_ARGUMENTS로 중단한다. 실제 운영 중 상태만 보려면 npm run health를 사용하고, maintenance/worker는 데이터를 처리한다.
 
 현재 외부 연동/운영 증거와 남은 일은 [출시 현황](../docs/launch-status-current.md)을 따른다.
+
+
+## 보관·환불·백업·알림 기본값 · 2026-10-23
+
+[채택한 정책과 미연결](../docs/policies/release-decisions.md)을 따른다. 서버 조회는30일 지난 초안 내용을 반환하지 않으며 정리 시 개인 내용을 지우고 수정 번호만 남긴다. 기존 결과/계정 내역은 회원 유지 동안 보관한다. `npm run retention`은 만료 정리만 실행하고 PG/worker를 실행하지 않는다. DB를 변경하는 명령이므로 상태 확인에는 `npm run health`를 사용한다. 어느 정기 작업도 원격에 새로 등록하지 않았다.
+
+승인/환불 최초 요청은 `payment_attempts`에 기록하고 재시도로 시각을 갱신하지 않는다. health의 `overduePending`은 현 작업 요청 후10분 이상, `unknownPendingAge`는 기존 기록의 시각 미확인 건수다. 오래된 주문의 생성일을 환불 대기 시간으로 쓰지 않는다.7일 자율 환불 판정은 검증된 결제시각을 받는 준비 함수이며 운영 접수에는 아직 연결하지 않았고 sandbox 전액 취소도 제한하지 않는다.
+
+`npm run backup:file`은 저장소 밖의 비공개 기존 덤프를 별도 키로 암호화/인증 복호화하는 파일 명령이다. DB·업로드·7일 자동 파기 기능은 없다. `npm run alerts:plan`은 엄격한 집계 JSON으로 알림 후보와 모의 다음 상태만 출력하며 외부 발송하지 않는다. 파일 형식·권한/키 분리·명령 예시는 [운영·복구 준비](../docs/operations-recovery-preparation.md)를 확인한다. `test:postgres`는 합성 덤프를 암호화·복호화한 파일로 격리 복원한 뒤 임시본을 제거한다.
