@@ -1,0 +1,23 @@
+{
+  "version": "chunbae-reviewed-dialogue-v9",
+  "previousVersion": "chunbae-coherent-whole-chart-v8",
+  "scope": "synthetic-editorial-audit-not-expert-approval",
+  "counts": {
+    "crossChart": 480,
+    "sameChart": 480,
+    "boundary": 8,
+    "duplicateBefore": 68,
+    "duplicateAfter": 0,
+    "shortened": 68
+  },
+  "previousOutputsSha256": "8092d19623d0c220f8e9c427d2b1dc83381603b93551126fc14ae58d5fe091c4",
+  "invariants": {
+    "factsAndPersonalCopyPreserved": true,
+    "publicCopyPreservedExceptVersion": true,
+    "unknownTimeNotFilled": true,
+    "relationshipCategoriesSeparated": true,
+    "score": null,
+    "expertApproval": false,
+    "externalCalls": 0
+  }
+}

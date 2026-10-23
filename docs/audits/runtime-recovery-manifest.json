@@ -1,0 +1,37 @@
+{
+  "kind": "runtime-recovery-manifest-v1",
+  "schemaMigrations": [
+    {
+      "name": "001_core.sql",
+      "sha256": "3a8a1ad5eba4af4bfdca20b47297c9560bc1e2c1e6050b44576ae20cd0314f6d"
+    },
+    {
+      "name": "002_operations.sql",
+      "sha256": "ff6e279968cc94469450687ff8306e8c88c5ec946a75c197fa489ff45090b0c1"
+    },
+    {
+      "name": "003_server_access.sql",
+      "sha256": "1d14bd247c2e66bde647988bf0190fd5627801eb7d35cd9d3d7882aff9e76499"
+    },
+    {
+      "name": "004_kakao_profile.sql",
+      "sha256": "168d928bba0be020f0cc24185f89cfea989c1a547ccc90973d069628b372a87b"
+    }
+  ],
+  "engineVersions": [
+    "manseryeok-research-civil-midnight-v5"
+  ],
+  "readingVersions": [
+    "chunbae-coherent-whole-chart-v8",
+    "chunbae-easy-relationship-copy-v5",
+    "chunbae-everyday-copy-v6",
+    "chunbae-relationship-story-v7",
+    "chunbae-reviewed-dialogue-v9",
+    "example-copy-v1",
+    "example-copy-v2",
+    "source-observations-copy-v1",
+    "source-observations-copy-v2",
+    "symbolic-personality-copy-v3",
+    "whole-chart-personality-copy-v4"
+  ]
+}

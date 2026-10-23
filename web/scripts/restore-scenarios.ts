@@ -9,6 +9,9 @@ import * as p from "../src/server/payments";
 import {bindIdentity,startIdentity} from "../src/server/identity";
 import {hasKakaoSession} from "../src/server/kakao-policy";
 import { samplePerson } from "../src/domain/model";
+import {recoveryManifest} from './recovery-manifest';
+import {recoveryCompatibility} from '../src/server/recovery-compatibility';
+import {currentReadingVersion} from '../src/server/readings';
 const [phase, file] = process.argv.slice(2);
 assert.ok(["seed", "verify"].includes(phase) && file);
 assert.equal(process.env.SAJU_RESTORE_CHECK, "isolated-cluster");
@@ -77,6 +80,17 @@ try {
     const f = JSON.parse(await readFile(file, "utf8"));
     await assertMigrationsApplied(db);
     assert.deepEqual(await manifest(db), f.tables, "RESTORED_TABLE_DATA_MISMATCH");
+    const inventory={kind:'recovery-inventory-v1',
+      schemaMigrations:(await db.query('SELECT name,checksum AS sha256 FROM schema_migrations ORDER BY name')).rows,
+      storedEngineVersions:(await db.query('SELECT DISTINCT engine_version AS version FROM comparisons')).rows.map(r=>r.version),
+      storedReadingVersions:(await db.query('SELECT DISTINCT rule_version AS version FROM comparisons')).rows.map(r=>r.version),
+      pendingReadingVersions:(await db.query("SELECT DISTINCT rule_version AS version FROM comparisons WHERE state IN ('awaiting_payment','queued','processing','failed')")).rows.map(r=>r.version)};
+    const runtime=recoveryManifest();
+    assert.equal(recoveryCompatibility(runtime,inventory).status,'compatible');
+    const rollback={...runtime,readingVersions:runtime.readingVersions.filter(v=>v!==currentReadingVersion)};
+    assert.equal(recoveryCompatibility(rollback,inventory).status,'blocked');
+    assert.ok(recoveryCompatibility(rollback,inventory).codes.includes('UNSUPPORTED_PENDING_READING_VERSION'));
+    console.log('Restored inventory: current runtime compatible; older worker without the queued reading version rejected. No external recovery approval.');
     // pg_restore must preserve ACLs/RLS; the application never runs as the DB owner.
     await assert.rejects(db.query("CREATE TABLE forbidden_restore(id int)"), { code: "42501" });
     await assert.rejects(db.query("DROP TABLE accounts"), { code: "42501" });

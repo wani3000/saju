@@ -39,7 +39,7 @@ export default function PersonalityReading({result}:{result:SavedResult}) {
   const story=result.reading.interpretation;
   if(!story) return null;
   const whole=result.reading.wholeChart;
-  const everyday=["chunbae-everyday-copy-v6","chunbae-relationship-story-v7","chunbae-coherent-whole-chart-v8"].includes(whole?.version??"");
+  const everyday=["chunbae-everyday-copy-v6","chunbae-relationship-story-v7","chunbae-coherent-whole-chart-v8","chunbae-reviewed-dialogue-v9"].includes(whole?.version??"");
   const easy=everyday||whole?.version==="chunbae-easy-relationship-copy-v5";
   const name=(side:string)=>side==="me"?result.me.name:result.other.name;
   return <div className="saju-story">

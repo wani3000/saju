@@ -4,7 +4,7 @@
   "versions": {
     "appEngineWrapper": "manseryeok-research-civil-midnight-v5",
     "calculationEngine": "research-civil-midnight-v5",
-    "appReading": "chunbae-coherent-whole-chart-v8",
+    "appReading": "chunbae-reviewed-dialogue-v9",
     "basePolicyReading": "source-observations-copy-v2",
     "preservedLaunchReviewReading": "source-observations-copy-v2",
     "researchSynthesis": "whole-chart-evidence-synthesis-research-v4"
@@ -57,7 +57,7 @@
   "sourceArtifacts": [
     {
       "file": "web/package.json",
-      "sha256": "89a12f03b3c7c7f41f3ca8bce561082b4a130cafb05c0fb5a4f6be04965dec0f"
+      "sha256": "19a750b673fc524c1c9d7d852bc034924524cbf87b2228f6d98d15f475096368"
     },
     {
       "file": "web/package-lock.json",
@@ -65,7 +65,7 @@
     },
     {
       "file": "web/e2e/journey.spec.ts",
-      "sha256": "5d0df1d70417203583a3082863f9f72ad48a8915a2e01b1aa057253ff98df79b"
+      "sha256": "171a2032c813f098850e0f93edd3581ca1923184b5528e880c4d018a2bfa1fab"
     },
     {
       "file": "web/src/server/db.ts",
@@ -121,7 +121,7 @@
     },
     {
       "file": "web/content/landing-sample.json",
-      "sha256": "056b2ead5f96594a5cdd16a561fdfbe64ea81a914cb9a91194c7939f1a3c12d5"
+      "sha256": "83b342add56ca84813b6d3a334b0a57b24950eee1aa9a8bfed7bf7d4724d0d2f"
     },
     {
       "file": "web/scripts/prepare-landing-sample.ts",
@@ -253,7 +253,7 @@
     },
     {
       "file": "web/src/server/readings.ts",
-      "sha256": "aa4cd8f5b9fa86a888821bb6e96d8cdf94667efd4ec77e616524ec80807fc926"
+      "sha256": "432589ab6286874ad548dc3e08431b14de9cc0de618a6078d1d9121dc459136e"
     },
     {
       "file": "web/src/server/staging-preflight.ts",
@@ -262,6 +262,74 @@
     {
       "file": "web/src/domain/coherent-reading.ts",
       "sha256": "da3d5ab88c1adc9138340ea9e7f2eac05f23ef21b29f9f8752078836d49e9ac5"
+    },
+    {
+      "file": "web/src/domain/reviewed-dialogue.ts",
+      "sha256": "5bf627a747915c3867a9483a5da20d6cf6ed52fc480e25469809a915187b6705"
+    },
+    {
+      "file": "web/tests/reviewed-dialogue.test.ts",
+      "sha256": "7e3e27023f99058950de145c52141efcf37230010b3327744b2ab97048ee3a5f"
+    },
+    {
+      "file": "web/scripts/audit-reviewed-dialogue.ts",
+      "sha256": "aebd21a0c069f46368f040663688538c178aeb8904f397643ee19ac2a132fce2"
+    },
+    {
+      "file": "docs/audits/reading-v9-dialogue-review.json",
+      "sha256": "34bffbd1dac869c65a288798f3533bfb1396ace440e6db9dab6516c971954b6b"
+    },
+    {
+      "file": "web/scripts/narration-cases.ts",
+      "sha256": "0952f01beaa3d6d9adb30783fa08c364ef37849e23c0b570ea955c5b855c1f7a"
+    },
+    {
+      "file": "web/tests/narration.test.ts",
+      "sha256": "f3a6e150c34bcb50f73384d31b0ee88cdf023b9596a1c44bcba1d0e14cfe5a94"
+    },
+    {
+      "file": "web/src/server/recovery-compatibility.ts",
+      "sha256": "3e095bde074616e5057085e7770285e10a9f0b3822bbcf70ace3648f7294c179"
+    },
+    {
+      "file": "web/scripts/recovery-manifest.ts",
+      "sha256": "0054a96863ad3ce1e31defdb633021fc7fdaf4b52cfb2cd733df8234109c5841"
+    },
+    {
+      "file": "web/scripts/check-recovery-compatibility.ts",
+      "sha256": "8b9a6eb1f5ce180ca5a2faf5e9e4e753c871c2d6c75d188ea188f8f566c79e52"
+    },
+    {
+      "file": "web/tests/recovery-compatibility.test.ts",
+      "sha256": "5ddcee8f2295e7cff392a54ba93b2b5c086c2e5bdac6243ffc4b923461c5bf43"
+    },
+    {
+      "file": "web/scripts/restore-scenarios.ts",
+      "sha256": "5c794cdb0ba145d349be7cb31bd247827e02ce7e055b26d6edc253c173921c9b"
+    },
+    {
+      "file": "docs/audits/runtime-recovery-manifest.json",
+      "sha256": "26d00c27889614dee6411b7af76bded59b3a4260e8d7222e02494c5714cd49a9"
+    },
+    {
+      "file": "docs/policies/service-terms-draft.md",
+      "sha256": "077f01e9a3d2ffa7c04f95c8ed52efccf31efdc27ba8616ddaf9b792afe119c6"
+    },
+    {
+      "file": "docs/policies/privacy-draft.md",
+      "sha256": "298c591baf517877c3bbdc9ee1bc50a2e28e138d183d232388505056d8c77ff3"
+    },
+    {
+      "file": "docs/policies/refund-draft.md",
+      "sha256": "1c4a8822f32e0ff4665afc5125b9d05419d9a5ec562426f6d3f89a0cb25cba72"
+    },
+    {
+      "file": "docs/policies/release-decisions.md",
+      "sha256": "79f96c752ab98bfbed33ce5dc46403a294364de453f433524e1695b9b41349dc"
+    },
+    {
+      "file": "docs/operations-recovery-preparation.md",
+      "sha256": "8c6725b87bf63773b4e55e9d532b5c8b949e9b4f128d343989d1c46c4a1a752a"
     },
     {
       "file": "web/preview/controller.ts",
@@ -290,7 +358,7 @@
   ],
   "limitations": [
     "This command checks source versions and one synthetic reading; it does not execute the full suites.",
-    "Preserved v2 launch evidence is not a current-v8 expert signoff. No approval or observed user test is inferred.",
+    "Preserved v2 launch evidence is not a current-reading expert signoff. No approval or observed user test is inferred.",
     "A public static preview does not verify hosted server access, auth, payments, backups or production operations.",
     "Offline AI preparation is not live-model quality or an active app integration."
   ]

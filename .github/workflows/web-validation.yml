@@ -22,6 +22,11 @@ jobs:
       - run: pnpm --dir research/validation install --frozen-lockfile --ignore-scripts
       - run: npm ci --prefix web
       - run: npm test --prefix web
+      - name: Frozen editorial audit and recovery manifest
+        working-directory: web
+        run: |
+          npx tsx scripts/audit-reviewed-dialogue.ts --check
+          npx tsx scripts/recovery-manifest.ts --check
       - name: Reconcile current reading and preserved launch evidence
         run: npm run release:inventory --prefix web -- --check
       - run: npm run db:check --prefix web

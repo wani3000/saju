@@ -1,6 +1,6 @@
 {
   "kind": "synthetic-reading-excerpts",
-  "readingVersion": "chunbae-coherent-whole-chart-v8",
+  "readingVersion": "chunbae-reviewed-dialogue-v9",
   "fixtures": "samplePerson: solar 1990-03-12 / 1992-05-21; both hour unknown",
   "readings": [
     {

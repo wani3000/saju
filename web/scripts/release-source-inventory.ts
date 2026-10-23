@@ -32,6 +32,10 @@ const files=['web/package.json','web/package-lock.json','web/e2e/journey.spec.ts
  'web/src/components/nicepay-client.ts','web/src/components/NicepayCheckoutButton.tsx','web/e2e/nicepay-sandbox.spec.ts','web/playwright.config.ts',
  'web/src/app/api/[...path]/route.ts','web/src/app/auth/callback/route.ts','web/db/migrations/004_kakao_profile.sql',
  'web/src/components/ProfileHistory.tsx','web/src/domain/profile.ts','web/src/server/readings.ts','web/src/server/staging-preflight.ts','web/src/domain/coherent-reading.ts',
+ 'web/src/domain/reviewed-dialogue.ts','web/tests/reviewed-dialogue.test.ts','web/scripts/audit-reviewed-dialogue.ts','docs/audits/reading-v9-dialogue-review.json',
+ 'web/scripts/narration-cases.ts','web/tests/narration.test.ts',
+ 'web/src/server/recovery-compatibility.ts','web/scripts/recovery-manifest.ts','web/scripts/check-recovery-compatibility.ts','web/tests/recovery-compatibility.test.ts','web/scripts/restore-scenarios.ts','docs/audits/runtime-recovery-manifest.json',
+ 'docs/policies/service-terms-draft.md','docs/policies/privacy-draft.md','docs/policies/refund-draft.md','docs/policies/release-decisions.md','docs/operations-recovery-preparation.md',
  'web/preview/controller.ts','web/content/research-policy.json','docs/launch-preparation.json',
  'research/validation/reports/whole-chart-synthesis.json','research/validation/reports/condition-boundaries.json',
  'docs/audits/narration-offline-readiness.json'];
@@ -47,7 +51,7 @@ const report={version:'release-source-inventory-v1',status:'source-inventory-onl
  environmentInspected:false,externalCalls:0,databaseConnections:0,
  sourceArtifacts:files.map(file=>({file,sha256:createHash('sha256').update(readFileSync(new URL(file,root))).digest('hex')})),
  limitations:['This command checks source versions and one synthetic reading; it does not execute the full suites.',
-  'Preserved v2 launch evidence is not a current-v8 expert signoff. No approval or observed user test is inferred.',
+  'Preserved v2 launch evidence is not a current-reading expert signoff. No approval or observed user test is inferred.',
   'A public static preview does not verify hosted server access, auth, payments, backups or production operations.',
   'Offline AI preparation is not live-model quality or an active app integration.'],
 };

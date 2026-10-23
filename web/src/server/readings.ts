@@ -39,16 +39,24 @@ import {addEverydayReading,everydayReadingVersion} from "../domain/everyday-read
 import {addRelationshipStory,relationshipStoryVersion} from "../domain/relationship-story";
 
 import {addCoherentReading,coherentReadingVersion} from "../domain/coherent-reading";
+import {addReviewedDialogue,reviewedDialogueVersion} from "../domain/reviewed-dialogue";
 
 const checked = validateReadingCatalog(catalog);
-export const currentReadingVersion = coherentReadingVersion;
+export const currentReadingVersion = reviewedDialogueVersion;
+// Used by offline recovery checks; this is explicit support, not an unknown-version fallback.
+export const supportedReadingVersions=[...new Set([
+  ...checked.releases.map(r=>r.version),reviewedDialogueVersion,coherentReadingVersion,
+  relationshipStoryVersion,everydayReadingVersion,easyReadingVersion,wholeChartVersion,
+  symbolicReadingVersion,selectedReadingPolicy.version,privateBetaScope.readingVersion,
+])].sort();
 export function readingForVersion(version: string, context?: {
   charts: Record<string, unknown>; relation: string;
 }): Reading {
-  if ([coherentReadingVersion,relationshipStoryVersion,everydayReadingVersion,easyReadingVersion,wholeChartVersion,symbolicReadingVersion,selectedReadingPolicy.version,privateBetaScope.readingVersion].includes(version)) {
+  if ([reviewedDialogueVersion,coherentReadingVersion,relationshipStoryVersion,everydayReadingVersion,easyReadingVersion,wholeChartVersion,symbolicReadingVersion,selectedReadingPolicy.version,privateBetaScope.readingVersion].includes(version)) {
     if (!context) throw new AppError("READING_CONTEXT_REQUIRED", 503,
       "저장된 계산을 확인할 수 없어요. 잠시 후 다시 시도해 주세요.");
     try {
+      if(version===reviewedDialogueVersion) return addReviewedDialogue(readingForVersion(coherentReadingVersion,context));
       if(version===coherentReadingVersion) return addCoherentReading(readingForVersion(relationshipStoryVersion,context),context.relation);
       if(version===relationshipStoryVersion) return addRelationshipStory(readingForVersion(everydayReadingVersion,context),context.relation);
       if(version===everydayReadingVersion) return addEverydayReading(readingForVersion(easyReadingVersion,context),context.relation);

@@ -157,6 +157,22 @@ test("input errors, direct edit return and reload preserve the server draft with
   await noOverflow(page);
   await page.screenshot({path:testInfo.outputPath("review-restored.png"),fullPage:true,timeout:5000});
 });
+test('reviewed dialogue renders two turns once and keeps personal traits as easy lists',async({page})=>{
+  await start(page);
+  for(const other of [false,true]){
+    await fillPerson(page,other);
+    for(const [name,value] of [['년','1981'],['월','7'],['일','10']])await page.getByRole('textbox',{name,exact:true}).fill(value);
+    await page.getByRole('button',{name:'다음',exact:true}).click();
+    await expect(page.getByRole('heading',{name:other?'두 사람의 기록 확인':'상대방의 정보',exact:true})).toBeVisible();
+  }
+  await page.getByRole('button',{name:'무료 사주 이야기 보기',exact:true}).click();
+  await expect(page.getByRole('heading',{name:'두 사람의 사주 이야기',exact:true})).toBeVisible();
+  const dialogue=page.locator('.whole-pair-section').filter({has:page.getByRole('heading',{name:'마음이 엇갈릴 때 나눌 대화',exact:true})});
+  await expect(dialogue.getByText('자네: “네 생각은 알겠어. 내가 고를 수 있는 부분도 남겨 줄래?”',{exact:true})).toHaveCount(1);
+  await expect(dialogue.locator('p').filter({hasText:/^(자네|상대):/})).toHaveCount(2);
+  await expect(page.locator('.story-profile').first().locator('.story-traits').first()).toBeVisible();
+  const state=await(await page.request.get('/api/state')).json();expect(state.results[0].reading.ruleVersion).toBe('chunbae-reviewed-dialogue-v9');
+});
 test("free snapshot reload, private evidence, share preview and revocation stay consistent",async({page,context,browser},testInfo)=>{
   const errors:string[]=[];page.on("pageerror",e=>errors.push(e.message));
   await result(page);

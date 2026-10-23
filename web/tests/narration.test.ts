@@ -3,11 +3,17 @@ import assert from 'node:assert/strict';
 import {narrationCases,blindModels,reviewTemplate} from '../scripts/narration-cases';
 import {buildNarrationPacket,validateNarration} from '../src/server/narration-contract';
 import {generateNarrationCandidate,narrationRequest,requestAllowance,estimatedCost} from '../src/server/narration-candidate';
-import {readingForVersion,currentReadingVersion} from '../src/server/readings';
+import {readingForVersion} from '../src/server/readings';
+import {coherentReadingVersion as evaluationReadingVersion} from '../src/domain/coherent-reading';
 import {samplePerson,publicCard} from '../src/domain/model';
 import {chart} from '../src/server/engine';
 import {summarizeNarrationReviews} from '../src/server/narration-review';
 const cases=narrationCases(),packet=cases.find(c=>c.packet.relation==='친구')!.packet;
+test('offline model comparison stays pinned to v8 and does not silently accept a new app release',()=>{
+ const c=chart(samplePerson()),next=readingForVersion('chunbae-reviewed-dialogue-v9',{charts:{me:c,other:c},relation:'친구'});
+ assert.equal(packet.ruleVersion,evaluationReadingVersion);
+ assert.throws(()=>buildNarrationPacket(next,'친구'),/INVALID_NARRATION_CONTEXT/);
+});
 // Fabricated adapter responses test contracts only. These are never model quality evidence.
 const example=()=>({packetId:packet.packetId,relation:packet.relation,blocks:packet.blocks.map(b=>({id:b.id,text:'의견이 다를 때는 먼저 원하는 것을 말해 보게.',evidenceIds:[...b.evidenceIds]}))});
 const response=(output:unknown,extra:Record<string,unknown>={})=>new Response(JSON.stringify({status:'completed',output:[{type:'message',role:'assistant',content:[{type:'output_text',text:JSON.stringify(output)}]}],usage:{input_tokens:200,output_tokens:300,output_tokens_details:{reasoning_tokens:25}},...extra}));
@@ -23,7 +29,7 @@ test('160 synthetic packets contain only allowlisted facts; unknown hours/candid
  }
 });
 test('packet stable across input names, ordering and copies; public reading unchanged',()=>{
- const a=chart(samplePerson()),b=chart(samplePerson(true)),r=readingForVersion(currentReadingVersion,{charts:{me:a,other:b},relation:'친구'}),before=structuredClone(r),p=buildNarrationPacket(r,'친구');
+ const a=chart(samplePerson()),b=chart(samplePerson(true)),r=readingForVersion(evaluationReadingVersion,{charts:{me:a,other:b},relation:'친구'}),before=structuredClone(r),p=buildNarrationPacket(r,'친구');
  const shuffled=structuredClone(r);shuffled.wholeChart!.people.forEach(p=>p.evidence.reverse());
  assert.deepEqual(buildNarrationPacket(shuffled,'친구'),p);assert.deepEqual(r,before);
  assert.deepEqual(publicCard(['가','나'],r),publicCard(['가','나'],before));

@@ -36,7 +36,7 @@ test("selected input-based release requires stored v5 charts and has no legacy f
   const {validatePair} = await import("../src/server/engine");
   const {samplePerson} = await import("../src/domain/model");
   const {charts} = validatePair({me:samplePerson(),other:samplePerson(true)});
-  assert.equal(currentReadingVersion,"chunbae-coherent-whole-chart-v8");
+  assert.equal(currentReadingVersion,"chunbae-reviewed-dialogue-v9");
   assert.throws(()=>readingForVersion(currentReadingVersion),{code:"READING_CONTEXT_REQUIRED"});
   assert.throws(()=>readingForVersion(currentReadingVersion,{charts:{},relation:"친구"}),{code:"READING_CONTEXT_INVALID"});
   const r=readingForVersion(currentReadingVersion,{charts,relation:"친구"});

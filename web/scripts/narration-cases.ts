@@ -1,6 +1,7 @@
 import {chart} from '../src/server/engine';
 import {samplePerson} from '../src/domain/model';
-import {readingForVersion,currentReadingVersion} from '../src/server/readings';
+import {readingForVersion} from '../src/server/readings';
+import {coherentReadingVersion as evaluationReadingVersion} from '../src/domain/coherent-reading';
 import {buildNarrationPacket,relations} from '../src/server/narration-contract';
 import {createHash} from 'node:crypto';
 import {narrationModels} from '../src/server/narration-candidate';
@@ -20,7 +21,8 @@ export function narrationCases(){
  const charts=people.map(p=>chart(p));
  return people.flatMap((_,i)=>relations.map((relation,j)=>{
   const otherIndex=i===2||i===3?9:(i*17+(i%3===0?11:10))%40;
-  const reading=readingForVersion(currentReadingVersion,{charts:{me:charts[i],other:charts[otherIndex]},relation});
+  // Existing offline model evaluation stays pinned; a new app release does not approve a new API contract.
+  const reading=readingForVersion(evaluationReadingVersion,{charts:{me:charts[i],other:charts[otherIndex]},relation});
   return {id:`synthetic-${String(i+1).padStart(2,'0')}-${j+1}`,packet:buildNarrationPacket(reading,relation)};
  }));
 }
