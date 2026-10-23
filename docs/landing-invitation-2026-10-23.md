@@ -27,4 +27,12 @@
 
 계산·풀이 규칙/이전 스냅샷·인증·결제·DB 스키마는 바꾸지 않았다. 실제 거래 웹훅·출시 감수 등은 [현재 출시 현황](launch-status-current.md)을 따른다. 이번 배포도 기존 연구용 staging만 갱신한다.
 
-원격 재배포·배포 후 검증 결과는 후속 기록한다.
+## 재배포와 원격 확인
+
+- 앱 소스 [9a0a02d](https://github.com/wani3000/saju/commit/9a0a02d0f8f6f28998595c4c40e1fa8b8af8adeb)를 기존 chunbae-staging에 prebuilt 배포했다. 배포ID는 `dpl_7NHNeiVrRvXjKSQW3WBybuB69fQd`, 고정 URL은 https://chunbae-staging-7z8o3jq3p-oxaz1234-gmailcoms-projects.vercel.app 이다.
+- READY·전용 프로젝트·함수 서울icn1 확인 후 stage 페이지 JS의 로컬/원격 SHA-256 일치를 확인하고 같은 production 산출물을 promote했다. https://chunbae-staging.vercel.app 의 동일 배포ID를 재확인했다. production은 이 테스트 프로젝트의 alias 구분이며 앱의 정식 운영 출시는 아니다.
+- 일반 익명 HTTP에서 랜딩200/no-store·개인 state401/no-store. IAB의 비로그인 화면에서 네 관계 선택, 활성 카카오 로그인 진입, 지도→로그인 차단, 뒤로가기 확인. 새 회원/주문/결과를 만들지 않았다.
+- CUA에서 실제390×844·1280×720의 공개 배포 화면 확인. 데스크톱 설명 끝365.26px, dock 시작529px로 가림이 없다. [모바일](../web/qa-evidence/landing-2026-10-23/hosted-mobile-390.png)·[데스크톱](../web/qa-evidence/landing-2026-10-23/hosted-desktop-1280.png)·[친구 예시](../web/qa-evidence/landing-2026-10-23/hosted-friend-example.png)를 저장했다. 임시 viewport 설정은 초기화했다.
+- 기존 카카오 세션이 있는 Chrome의 새 탭에서 ‘저장한 입력 이어가기’·프로필/사주 조회 내역·저장 입력 복원 확인. 개인정보를 캡처/문서화하지 않고 생일/주문/무료권을 수정하지 않았다. 이번 작업에서 OAuth 재로그인/카드 인증·새 결제·외부 웹훅 재검증은 실행하지 않았다.
+- 앱 소스의 GitHub CI3개가 성공했다: Web39887870521·Research39887870502·Prototype39887870520. 배포 후10분 범위 error 로그 조회는 해당 조건 로그 없음으로 응답했다. 지속 감시나 오류가 절대 없다는 보증은 아니다.
+- 별도 정적 체험판 프로젝트는 빌드 호환만 검사했고 재배포하지 않았다. 이번 테스트 링크는 서버 앱의 동일 canonical 주소다.
