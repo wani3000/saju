@@ -119,13 +119,11 @@ p {
   color: var(--muted);
   font-size: 20px;
 }
-.home-shell { max-width: 520px; padding: 28px 28px 22px; }
+.home-shell { max-width: 1120px; padding: 0 28px; }
 .home-shell header { margin-bottom: 0; }
-.home-shell .home-photo { display: block; width: 100%; height: auto; margin: 40px auto 36px; }
-.home-shell .home-title { text-align: center; font-size: 32px; line-height: 1.45; font-weight: 400; letter-spacing: -1.1px; margin: 0; }
-.home-invitation { text-align: center; font-family: "Noto Serif KR", serif; font-size: 18px; font-weight: 400; line-height: 1.8; margin: 18px -8px 0; }
-.home-step { font-family: "Noto Serif KR", serif; text-align: center; font-size: 16px; color: var(--muted); margin: 28px 0 0; }
-.home-step::before { content: ""; display: block; width: 30px; border-top: 1px solid #b7a58b; margin: 0 auto 18px; }
+.home-shell .home-photo { display: block; width: 100%; height: auto; margin: 0; }
+.home-shell .home-title { font-size: 32px; line-height: 1.5; font-weight: 500; letter-spacing: -1.1px; margin: 0; }
+.home-invitation { white-space: pre-line; font-size: 18px; line-height: 1.8; margin: 18px 0; }
 .seal-window { display: block; width: 40px; height: 40px; overflow: hidden; margin: 24px auto 20px; }
 .seal-window img { display: block; width: 120px; height: 120px; max-width: none; margin: -40px; }
 .home-actions { width: 100%; }
@@ -461,13 +459,11 @@ footer {
   .shell {
     padding: 18px 16px;
   }
-  .home-shell { padding: 22px 20px; }
+  .home-shell { padding: 0 20px; }
   .home-shell .brand { gap: 8px; }
   .home-shell .brand strong { font-size: 19px; }
   .home-shell .brand small { font-size: 10px; }
-  .home-shell .home-photo { margin-top: 38px; margin-bottom: 32px; }
   .home-shell .home-title { font-size: 28px; }
-  .home-invitation { font-size: 17px; }
   .pair-review {
     grid-template-columns: 1fr;
   }
@@ -607,7 +603,7 @@ footer {
 .compact-brand .guide-avatar, .compact-brand small { display: none; }
 .compact-brand strong { font-size: 18px; }
 .icon-button { display: grid; place-items: center; width: 48px; height: 48px; flex-shrink: 0; padding: 10px; border: 0; background: none; border-radius: 8px; }
-.landing-header { margin: -28px -28px 0; padding: 10px 20px; }
+.home-shell .landing-header { margin: 0 -28px; padding: 10px 20px; }
 .home-information { border: 0; text-align: center; padding: 6px 0 16px; margin: 0; }
 .home-information h2 { font-family: "Noto Serif KR", serif; font-size: 21px; font-weight: 500; line-height: 1.8; }
 .home-information p { font-family: "Noto Serif KR", serif; font-size: 16px; line-height: 2; color: var(--muted); }
@@ -616,7 +612,112 @@ footer {
 .fixed-actions .primary, .fixed-actions .secondary { margin: 0; padding-top: 20px; padding-bottom: 20px; font-family: "Noto Serif KR", serif; font-size: 19px; font-weight: 500; }
 .person-form input, .person-form select, .choice { scroll-margin-top: 90px; scroll-margin-bottom: 220px; }
 @media (min-width: 650px) { .app-header { margin: -30px -36px 20px; padding-inline: 28px; } }
-@media (max-width: 360px) { .app-header { margin: -18px -16px 18px; padding-inline: 8px; } .landing-header { margin: -22px -20px 0; padding-inline: 12px; } .fixed-actions { padding-inline: 20px; } .compact-brand strong { font-size: 16px; } }
+@media (max-width: 360px) { .app-header { margin: -18px -16px 18px; padding-inline: 8px; } .home-shell .landing-header { margin: 0 -20px; padding-inline: 12px; } .fixed-actions { padding-inline: 20px; } .compact-brand strong { font-size: 16px; } }
+
+/* The public invitation uses a wider editorial layout; the input journey stays narrow. */
+.home-shell { margin: 0 auto; padding: 0 28px; min-height: 100dvh; }
+.landing-content { word-break: keep-all; overflow-wrap: anywhere; }
+.landing-content h2, .landing-content h3, .landing-content h4 { font-family: "Noto Serif KR", serif; }
+.landing-hero { display: flex; flex-direction: column; text-align: center; padding: 28px 0 52px; }
+.landing-hero-copy { padding-top: 20px; }
+.landing-eyebrow { font-size: 13px; letter-spacing: .06em; color: var(--muted); margin: 0 0 16px; }
+.landing-hero .landing-eyebrow { display: none; }
+.landing-preview-link { display: inline-flex; align-items: center; gap: 12px; min-height: 44px; text-underline-offset: 6px; font-size: 14px; color: var(--muted); }
+.home-shell .home-information { padding: 12px 0 64px; }
+.home-information .seal-window { margin: 0 auto 24px; }
+.home-information .landing-eyebrow { font-family: "Noto Sans KR", sans-serif; font-size: 13px; line-height: 1.6; }
+.home-information h2 { font-size: 25px; }
+.home-information p { max-width: 600px; margin-inline: auto; font-size: 18px; }
+.landing-section { border-top: 1px solid var(--line); padding: 56px 0; scroll-margin-top: 110px; }
+.landing-section-heading { max-width: 640px; margin-bottom: 28px; }
+.landing-section-heading h2 { font-size: 28px; line-height: 1.65; font-weight: 500; }
+.landing-section-heading > p:last-child { color: var(--muted); }
+.landing-sample-note { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin-bottom: 20px; }
+.landing-sample-note > span { border: 1px solid #b5a38c; padding: 3px 9px; font-size: 13px; }
+.landing-sample-note > p { font-size: 14px; color: var(--muted); margin: 0; }
+.landing-people, .landing-gifts { display: grid; gap: 16px; }
+.landing-person { padding: 26px 22px; border: 1px solid var(--line); background: #fffcf370; }
+.landing-person-name { margin: 0 0 18px; font-size: 14px; color: var(--muted); }
+.landing-person h3 { margin: 0 0 12px; font-size: 21px; font-weight: 500; }
+.landing-watch { border-top: 1px solid var(--line); margin-top: 24px; padding-top: 16px; }
+.landing-watch > span, .landing-practice > span { font-size: 14px; color: #81513c; }
+.landing-watch p { margin-bottom: 0; }
+.landing-footnote { color: var(--muted); font-size: 14px; margin: 20px 0 0; }
+.landing-relation-picker { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 6px; margin-bottom: 28px; }
+.landing-relation-picker button { min-height: 48px; padding: 8px 4px; border: 1px solid var(--line); background: transparent; border-radius: 2px; }
+.landing-relation-picker button[aria-pressed="true"] { color: var(--cream); background: var(--orange); border-color: var(--orange); }
+.landing-relation-example { padding: 26px 22px; background: #ede3d247; border: 1px solid var(--line); }
+.landing-relation-example > h3 { font-size: 24px; line-height: 1.65; margin: 0 0 16px; font-weight: 500; }
+.landing-topics { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; padding: 0; margin: 24px 0; }
+.landing-topics li { font-size: 13px; border-bottom: 1px solid #b5a38c; padding: 4px 0; margin-right: 8px; }
+.landing-gifts { margin-top: 30px; }
+.landing-gifts h4 { font-size: 18px; line-height: 1.7; margin: 0 0 12px; }
+.landing-gifts article + article { border-top: 1px solid var(--line); padding-top: 24px; }
+.landing-gifts p { margin-top: 0; }
+.landing-conversation { border-block: 1px solid var(--line); margin-top: 24px; }
+.landing-conversation summary { font-size: 16px; padding: 20px 0; cursor: pointer; }
+.landing-dialogue { padding: 0 0 12px; }
+.landing-dialogue p { padding: 14px; border-left: 2px solid #b5a38c; background: #fffcf370; font-size: 16px; }
+.landing-practice { padding-top: 24px; }
+.landing-practice p { margin-bottom: 0; }
+.landing-how { list-style: none; display: grid; gap: 24px; margin: 0; padding: 0; }
+.landing-how li > span { color: #9d8063; font-family: "Noto Serif KR", serif; font-size: 18px; }
+.landing-how h3 { font-size: 21px; margin-top: 8px; }
+.landing-how p { font-size: 17px; color: var(--muted); }
+.landing-keep { border-left: 2px solid #b5a38c; padding-left: 18px; margin: 32px 0 0; font-size: 16px; line-height: 1.9; }
+.landing-faq { max-width: 800px; margin: auto; }
+.landing-faq details { border-bottom: 1px solid var(--line); }
+.landing-faq summary { font-size: 17px; padding: 22px 0; cursor: pointer; }
+.landing-faq details > p { margin: 0 0 24px; font-size: 17px; line-height: 1.9; color: var(--muted); }
+.landing-footer { text-align: center; padding: 20px 0 28px; }
+.landing-footer p { font-family: "Noto Serif KR", serif; font-size: 20px; line-height: 1.9; }
+.landing-footer > span { font-size: 12px; color: var(--muted); }
+.landing-desktop-break { display: none; }
+.home-shell :is(a,button,summary) { scroll-margin-top: 110px; scroll-margin-bottom: calc(var(--action-height,210px) + 52px); }
+
+@media (min-width: 760px) {
+  .home-shell { padding-inline: 44px; }
+  .home-shell .landing-header { margin-inline: -44px; padding-inline: 36px; }
+  .landing-hero { display: grid; grid-template-columns: 1.05fr 1fr; align-items: center; gap: 24px; text-align: left; padding: 32px 0 48px; min-height: min(520px,calc(100svh - var(--action-height,210px) - 104px)); }
+  .home-shell .home-photo { grid-column: 2; grid-row: 1; }
+  .landing-hero-copy { grid-column: 1; grid-row: 1; padding: 0; }
+  .landing-hero .landing-eyebrow { display: block; }
+  .home-shell .home-title { font-size: clamp(34px,3.6vw,46px); line-height: 1.55; }
+  .home-invitation { font-size: 18px; }
+  .landing-people, .landing-gifts { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 32px; }
+  .landing-gifts article + article { border-top: 0; padding: 0 0 0 32px; border-left: 1px solid var(--line); }
+  .landing-how { grid-template-columns: repeat(3,minmax(0,1fr)); }
+  .landing-section { padding-block: 72px; }
+  .landing-section-heading h2 { font-size: 34px; }
+  .landing-person, .landing-relation-example { padding: 32px; }
+  .landing-relation-picker { max-width: 420px; }
+  .landing-desktop-break { display: initial; }
+}
+@media (min-width: 760px) and (max-height: 740px) {
+  .landing-hero { padding-top: 20px; }
+  .home-shell .home-title { font-size: 34px; }
+  .landing-hero .home-photo { max-height: 320px; object-fit: contain; }
+  .landing-hero .home-invitation { margin-block: 12px; }
+}
+@media (max-width: 759px) {
+  .landing-hero { max-width: 480px; margin: auto; padding-top: 20px; }
+  .home-shell .home-photo { max-width: 400px; margin: auto; }
+  .home-shell .home-title { font-size: clamp(25px,6.7vw,32px); }
+  .landing-hero-copy { padding-top: 12px; }
+}
+@media (max-width: 360px) {
+  .home-shell { padding-inline: 20px; }
+}
+@media (max-width: 759px) and (max-height: 740px) {
+  .landing-hero { padding-top: 8px; }
+  .landing-hero .home-photo { width: 190px; }
+  .landing-hero .home-title { font-size: 25px; }
+  .landing-hero .home-invitation { font-size: 16px; margin-block: 10px; }
+  .landing-hero-copy { padding-top: 4px; }
+}
+@media (max-width: 759px) and (max-height: 620px) {
+  .landing-hero .home-photo { width: 90px; }
+}
 
 /* Let the teacher's Korean sentences wrap between words on narrow screens. */
 .saju-story p, .saju-story li, .saju-story blockquote { word-break: keep-all; overflow-wrap: anywhere; }

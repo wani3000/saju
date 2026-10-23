@@ -21,7 +21,8 @@ const pending=launch.gates.filter((g:any)=>g.status!=='skipped-by-user');
 if(!skipped.some((g:any)=>g.id==='user-comprehension')||launch.humanParticipantsObserved!==0)throw new Error('EXECUTION_DECISION_REQUIRES_RECONCILIATION');
 const files=['web/package.json','web/package-lock.json','web/e2e/journey.spec.ts','web/src/server/db.ts','web/staging.env.example','web/next.config.ts','web/certs/supabase-prod-ca-2021.crt',
  'web/scripts/check-hosted-runtime.ts','web/scripts/check-hosted-restore.ts','web/scripts/hosted-restore-target.ts',
- 'web/scripts/check-kakao-provider.ts','web/src/components/App.tsx','web/src/app/globals.css','web/content/journey-copy.json',
+ 'web/scripts/check-kakao-provider.ts','web/src/components/App.tsx','web/src/components/Landing.tsx','web/src/app/globals.css','web/content/journey-copy.json',
+ 'web/content/character.json','web/content/landing-sample.json','web/scripts/prepare-landing-sample.ts','web/tests/landing-sample.test.ts',
  'web/src/server/kakao-policy.ts','web/src/server/auth.ts','web/src/server/identity.ts','web/src/server/service.ts',
  'web/src/server/operations.ts','web/src/server/operational-command.ts','web/scripts/maintenance.ts','web/scripts/worker.ts','web/tests/health.test.ts',
  'web/src/server/nicepay-webhook.ts','web/src/app/api/nicepay/webhook/route.ts',

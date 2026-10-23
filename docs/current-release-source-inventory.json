@@ -65,7 +65,7 @@
     },
     {
       "file": "web/e2e/journey.spec.ts",
-      "sha256": "b4d75957590237dbe33f7029fe7f6cb2d3966cd087a2bfca3b650ad9ba719a1f"
+      "sha256": "5d0df1d70417203583a3082863f9f72ad48a8915a2e01b1aa057253ff98df79b"
     },
     {
       "file": "web/src/server/db.ts",
@@ -101,15 +101,35 @@
     },
     {
       "file": "web/src/components/App.tsx",
-      "sha256": "1e9bb2eaa67f5db36c3f2fd368dac864b70eb4eba13ba601696170eaa15cec0b"
+      "sha256": "1fc8bb2181ab0f8b70be442d5940ebadb8bb93ad326c2c862125113f63b1fe8d"
+    },
+    {
+      "file": "web/src/components/Landing.tsx",
+      "sha256": "42c9f0d962be19849a307785723916518344b746f932fee3da4773dc75bf3a5a"
     },
     {
       "file": "web/src/app/globals.css",
-      "sha256": "3ef47c648450fb49d00778eed1377b54592ad813b29bc2c8d9ff838d85d1ff72"
+      "sha256": "486d6505f8aaabfba4c63fed98d9f0664eb7b39956d0708a4e4de346f35e5568"
     },
     {
       "file": "web/content/journey-copy.json",
       "sha256": "33fe2c702fd62cd80118a9e671e5237558e7cd7dce6ffb23ea4071f59689553a"
+    },
+    {
+      "file": "web/content/character.json",
+      "sha256": "c53916d8c3b2880476706a8e179fc63b09f230316955e551b4a1baefcce0011a"
+    },
+    {
+      "file": "web/content/landing-sample.json",
+      "sha256": "056b2ead5f96594a5cdd16a561fdfbe64ea81a914cb9a91194c7939f1a3c12d5"
+    },
+    {
+      "file": "web/scripts/prepare-landing-sample.ts",
+      "sha256": "d3b4a665ccf9ee422e9b3f6a0105c601ea2db7491e837052fe26a31cb17f1ddf"
+    },
+    {
+      "file": "web/tests/landing-sample.test.ts",
+      "sha256": "ce7fb06767436bcd4146356cfc7bc9bbe798a7717e78f0414a04cf3659e49f38"
     },
     {
       "file": "web/src/server/kakao-policy.ts",

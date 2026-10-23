@@ -33,6 +33,38 @@ async function noOverflow(page: Page) {
   const size=await page.evaluate(()=>({viewport:innerWidth,document:document.documentElement.scrollWidth}));
   expect(size.document).toBeLessThanOrEqual(size.viewport);
 }
+test('landing title clears the fixed dock at short and wide sizes; samples never change a draft',async({page})=>{
+  await page.goto('/');
+  const dock=page.getByRole('group',{name:'다음 화면으로'});
+  await expect(dock.getByRole('button',{name:'두 사람의 생일 적기',exact:true})).toBeVisible();
+  for(const [width,height] of [[320,568],[375,667],[390,844],[768,700],[1280,720],[1440,900]]){
+    await page.setViewportSize({width,height});
+    await page.evaluate(()=>window.scrollTo(0,0));
+    await page.evaluate(()=>document.fonts.ready);
+    const title=await page.locator('#landing-title').boundingBox(),invitation=await page.locator('.home-invitation').boundingBox(),buttons=await dock.boundingBox();
+    expect(title!.y).toBeGreaterThanOrEqual(0);
+    expect(invitation!.y+invitation!.height).toBeLessThanOrEqual(buttons!.y-40);
+    await noOverflow(page);
+  }
+  const before=await(await page.request.get('/api/state')).json();
+  const writes:string[]=[];
+  page.on('request',request=>{if(request.method()!=='GET')writes.push(request.url());});
+  const picker=page.getByRole('group',{name:'관계별 풀이 예시'});
+  for(const relation of ['친구','가족','동료','연인']){
+    const button=picker.getByRole('button',{name:relation,exact:true});
+    await button.scrollIntoViewIfNeeded();
+    await button.click();
+    await expect(button).toHaveAttribute('aria-pressed','true');
+    await expect(page.locator('#landing-relation-example')).toContainText(`${relation}의 이야기 · 풀이 예시`);
+  }
+  await page.locator('.landing-conversation summary').click();
+  await expect(page.locator('.landing-dialogue')).toContainText('보라:');
+  await page.getByText('태어난 시간을 몰라도 볼 수 있나요?',{exact:true}).click();
+  await expect(page.getByText(/모르는 시간은 짐작해서 채우지/)).toBeVisible();
+  const after=await(await page.request.get('/api/state')).json();
+  expect(after.draft).toEqual(before.draft);expect(after.revision).toBe(before.revision);
+  expect(after.orders).toEqual(before.orders);expect(writes).toEqual([]);
+});
 test("fixed landing actions, header back and large-text sequential pages stay usable", async ({page}, testInfo) => {
   await page.goto("/");
   const dock = page.getByRole("group", {name:"다음 화면으로"});

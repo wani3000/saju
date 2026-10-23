@@ -8,6 +8,7 @@ import {
   type SavedResult,
 } from "@/domain/model";
 import PersonForm from "./PersonForm";
+import Landing from "./Landing";
 import ProfileHistory, {ProfileAvatar,type HistoryOrder} from "./ProfileHistory";
 import type {ProfileSummary,ReadingHistoryItem} from "@/domain/profile";
 import FixedActions from "./FixedActions";
@@ -380,23 +381,7 @@ export default function App({ request: api = serverApi, preview = false, onReset
         <>
           {view === "home" && (
             <>
-              <img
-                className="home-photo"
-                src={character.photo}
-                alt={character.photoAlt}
-                width={1495}
-                height={1052}
-                fetchPriority="high"
-              />
-              <h1 className="home-title" ref={heading} tabIndex={-1}>{character.homeTitle}</h1>
-              <p className="home-invitation">{character.invitation}</p>
-              <p className="home-step">내 정보부터 차례로 입력해요.</p>
-              <span className="seal-window" aria-hidden="true"><img src={character.seal} alt="" /></span>
-              <section className="home-information" aria-label="김춘배 훈장 소개">
-                <h2>충청북도 괴산의 서당,<br />김춘배 훈장이네.</h2>
-                <p>이 작은 서당에서 글을 가르치고,<br />찾아온 이들의 이야기를 듣고 있지.</p>
-                <p>자네와 소중한 사람의 생일을 적어 주게.<br />타고난 성정과 함께하는 모습을<br />차근차근 풀어 보겠네.</p>
-              </section>
+              <Landing heading={heading}/>
               <FixedActions>
                 <button className="primary" disabled={busy} onClick={() => navigate("me")}>
                   {data.authRequired&&!data.authenticated ? "카카오로 시작하기" : data.draft ? "저장한 입력 이어가기" : "두 사람의 생일 적기"}
