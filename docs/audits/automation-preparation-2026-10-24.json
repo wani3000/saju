@@ -1,0 +1,51 @@
+{
+  "date": "2026-10-24",
+  "scope": "local-backup-cycle-and-offline-alert-queue",
+  "previousCommit": "375bf990c1c78f6ddd95408853fa9bd6227cd407",
+  "previousCi": {
+    "Web validation": {
+      "id": 39924070872,
+      "conclusion": "success"
+    },
+    "Research validation": {
+      "id": 39924070670,
+      "conclusion": "success"
+    },
+    "Prototype validation": {
+      "id": 39924070683,
+      "conclusion": "success"
+    }
+  },
+  "localChecks": {
+    "unitTests": 212,
+    "newTests": 7,
+    "syntheticPostgres": {
+      "tables": 21,
+      "newCycleUsed": true,
+      "separateDatabaseRestored": true,
+      "schemaAclRlsCompared": true
+    },
+    "mobileJourneys": 40,
+    "httpJourneys": "passed",
+    "nextBuild": "passed",
+    "typecheck": "passed",
+    "nextTracing": {
+      "privateFiles": 0,
+      "requiredCaIncluded": true,
+      "migrations": 4
+    }
+  },
+  "externalMessagesSent": 0,
+  "externalDatabaseConnectionsByNewTools": 0,
+  "schedulerInstalled": false,
+  "automaticPruningEnabled": false,
+  "credentialsGenerated": false,
+  "paidPlanChanged": false,
+  "remoteRestorePerformed": false,
+  "limitations": [
+    "File integrity does not certify a PostgreSQL archive or advance lastVerifiedBackupAt.",
+    "Remote exporter, independent storage, rotation and scheduler remain disconnected.",
+    "Alert candidates are not delivery receipts; sender and recipients remain unconfigured.",
+    "Current isolated restore test does not approve arbitrary or historical backup recovery."
+  ]
+}

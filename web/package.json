@@ -39,7 +39,9 @@
     "backup:file": "tsx scripts/backup.ts",
     "alerts:plan": "tsx scripts/alert-plan.ts",
     "check:build": "node scripts/check-build-isolation.mjs",
-    "prepare:artifact": "node scripts/check-build-isolation.mjs --prepare-vercel"
+    "prepare:artifact": "node scripts/check-build-isolation.mjs --prepare-vercel",
+    "backup:cycle": "tsx scripts/run-backup-cycle.ts",
+    "alerts:queue": "tsx scripts/run-alert-queue.ts"
   },
   "dependencies": {
     "@electric-sql/pglite": "0.5.9",

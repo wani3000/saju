@@ -57,7 +57,7 @@
   "sourceArtifacts": [
     {
       "file": "web/package.json",
-      "sha256": "3bb9eaa556a2c060597dbaec4afac15ee886e5b433fd0640a6787249e6b19c6b"
+      "sha256": "8520774bbc92ee0e4a11bb775a59cc7ac216d7b35aa36920ba9b24c6d619f2c1"
     },
     {
       "file": "web/package-lock.json",
@@ -196,6 +196,34 @@
       "sha256": "10c7c935b19569e182f0de77b6d937a1a19d8e5879adc834f85326f7461a97d1"
     },
     {
+      "file": "web/scripts/private-operations.ts",
+      "sha256": "b9746fa5f46992ccb457c29ca99da75e93c8f594801e203f20a16c522af7ac73"
+    },
+    {
+      "file": "web/scripts/backup-cycle.ts",
+      "sha256": "ee8a28097da22cea6859432845d37e3ccdf380eed1b6ade78947444738baf4cf"
+    },
+    {
+      "file": "web/scripts/run-backup-cycle.ts",
+      "sha256": "9f190a69c406f6580fad85f6a86461c5551ce4c65d9c1fabc373d2bc8953307a"
+    },
+    {
+      "file": "web/scripts/alert-queue.ts",
+      "sha256": "6329263f666c83443da28190756fc51efead658716ca3f1da36fbf2d3da0d41c"
+    },
+    {
+      "file": "web/scripts/run-alert-queue.ts",
+      "sha256": "b03ef38a15d56303002c84bc7de255d5ad47eaf8bec35198bd65c5537deab5be"
+    },
+    {
+      "file": "web/tests/operations-preparation.test.ts",
+      "sha256": "7661f68135f96c760e231062beb8c9c87383d026474f69952a71e6eb9ab2a3b9"
+    },
+    {
+      "file": "docs/local-operations-automation.md",
+      "sha256": "054efc949051c101ce400894772f64a1b940ea520b93ed7cb5f5e0e5fabfb9c2"
+    },
+    {
       "file": "web/scripts/check-build-isolation.mjs",
       "sha256": "c5e77e357940ef6b10f171c63b55dd2992df1c6c64a318bb59b1668b8d3738b6"
     },
@@ -237,7 +265,7 @@
     },
     {
       "file": "web/scripts/postgres-check.mjs",
-      "sha256": "7acaad500b0258b1c3c37883b1cc1d79cfb2a2331c0dc47d5fa7c1dbda82eff3"
+      "sha256": "e62bbdad23329507fcc21942771314f5471fa8ac9713cb9eb4195e9cdb44f690"
     },
     {
       "file": "web/scripts/postgres-scenarios.ts",
@@ -401,11 +429,11 @@
     },
     {
       "file": "docs/policies/release-decisions.md",
-      "sha256": "d0607c4797958700fa618c91a00dce0a9fad5c5ad5b2d0bc578d15c59ad0ddbe"
+      "sha256": "63a8fc61c5df5e55bafeebe0333109ed69ecbb029594ce2e5f2cd65e9aca36c5"
     },
     {
       "file": "docs/operations-recovery-preparation.md",
-      "sha256": "7ea17a5cb0963ac7c94be264e570cf3dda9a713a060fabe62d71f71ff513927d"
+      "sha256": "d0e5baa38604b7fb9e81e0bce1d3b05ab5cd9dad985bcb3957de6b72ed3621fe"
     },
     {
       "file": "web/preview/controller.ts",

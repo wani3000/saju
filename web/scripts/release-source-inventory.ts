@@ -27,6 +27,7 @@ const files=['web/package.json','web/package-lock.json','web/e2e/journey.spec.ts
  'web/src/server/operations.ts','web/src/server/operational-command.ts','web/scripts/maintenance.ts','web/scripts/worker.ts','web/tests/health.test.ts',
  'web/src/server/service-policy.ts','web/src/server/alert-plan.ts','web/src/server/payments.ts',
  'web/scripts/retention.ts','web/scripts/backup.ts','web/scripts/private-backup.ts','web/scripts/alert-plan.ts',
+ 'web/scripts/private-operations.ts','web/scripts/backup-cycle.ts','web/scripts/run-backup-cycle.ts','web/scripts/alert-queue.ts','web/scripts/run-alert-queue.ts','web/tests/operations-preparation.test.ts','docs/local-operations-automation.md',
  'web/scripts/check-build-isolation.mjs','web/tests/build-isolation.test.ts','.github/workflows/web-validation.yml','web/tests/reading-erasure.test.ts','web/tests/preview.test.ts','web/tests/http.mjs','web/tests/kakao-required-http.mjs','web/tests/service-policy.test.ts','web/tests/alert-plan.test.ts','web/tests/private-backup.test.ts','web/scripts/postgres-check.mjs','web/scripts/postgres-scenarios.ts',
  'web/src/server/nicepay-webhook.ts','web/src/app/api/nicepay/webhook/route.ts',
  'web/src/server/nicepay.ts','web/src/server/nicepay-checkout.ts','web/src/app/api/nicepay/return/route.ts',

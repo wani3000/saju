@@ -1,5 +1,7 @@
 # 운영·복구 준비 · 2026-10-23
 
+2026-10-24 후속: [로컬 실행 도구와 자동화 전 연결 항목](local-operations-automation.md)에 파일 백업 cycle·영속 알림 후보 대기열을 추가했다. 아래 초기 ‘파일을 쓰지 않는다’는 설명은 기존 `alerts:plan`의 범위다. 신규 `alerts:queue`는 비공개 로컬 상태만 기록하며 송신·자동 등록은 하지 않는다.
+
 현재 범위는 기존 research staging의 운영 준비다. 2026-10-23 사용자가 정책 권장값 반영과 로그인/유료 전환 없는 구현을 지시했다. [채택값/적용 현황](policies/release-decisions.md)을 따른다. 로그인·원격 maintenance/worker·새 스케줄러/알림·유료 플랜·운영 키·실청구·원격 복원/역마이그레이션을 실행하지 않는다. [현재 출시 상태](launch-status-current.md)와 [정책 확정 목록](policies/release-decisions.md)의 미확정은 유지한다.
 
 ## 1. 모니터링 실행안
