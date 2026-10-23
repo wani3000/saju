@@ -8,7 +8,7 @@ import * as service from "@/server/service";
 import { authClient, authEnabled } from "@/server/auth";
 import { startIdentity, finishIdentity } from "@/server/identity";
 import { prepareNicepay } from "@/server/nicepay-checkout";
-import { erasePersonalData } from "@/server/operations";
+import { erasePersonalData, eraseReading } from "@/server/operations";
 import * as payment from "@/server/payments";
 import {kakaoRequired,hasKakaoSession,requireKakaoSession,loggedOutState,kakaoOAuthOptions} from '@/server/kakao-policy';
 export const runtime = "nodejs";
@@ -190,6 +190,10 @@ async function handle(req: NextRequest) {
       throw new AppError("NOT_FOUND", 404);
     if (parts[0] === "results" && parts.length === 2 && req.method === "GET")
       return send(await service.result(db, owner, id));
+    if (parts[0] === "results" && parts.length === 2 && req.method === "DELETE") {
+      await eraseReading(db, owner, id);
+      return send({ ok: true });
+    }
     if (
       parts[0] === "results" &&
       parts.length === 3 &&

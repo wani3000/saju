@@ -183,6 +183,9 @@ export async function applyPayment(
         "결제 상태를 확인 중이에요. 잠시 후 다시 확인해 주세요.",
       );
     if (["refund_pending", "refunded", "cancelled"].includes(o.state)) return;
+    // A verified late approval may update money elsewhere, but must never
+    // recreate entitlements/jobs from a deliberately erased comparison.
+    if (!(await one(tx, "SELECT id FROM comparisons WHERE id=$1 AND owner_id=$2 AND inputs<>'{}'::jsonb", [o.comparison_id, owner]))) return;
     await tx.query(
       "UPDATE orders SET state='paid',payment_key=$2 WHERE id=$1",
       [id, p.paymentKey],

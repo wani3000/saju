@@ -12,6 +12,7 @@ import { samplePerson } from "../src/domain/model";
 import {recoveryManifest} from './recovery-manifest';
 import {recoveryCompatibility} from '../src/server/recovery-compatibility';
 import {currentReadingVersion} from '../src/server/readings';
+import {eraseReading} from '../src/server/operations';
 const [phase, file] = process.argv.slice(2);
 assert.ok(["seed", "verify"].includes(phase) && file);
 assert.equal(process.env.SAJU_RESTORE_CHECK, "isolated-cluster");
@@ -66,10 +67,13 @@ try {
     const purchased = await paid(), refunded = await paid();
     const refundedShare = await s.share(db, owner, refunded.comparison, ["호랑이", "친구"]);
     await p.refundPayment(db, owner, refunded.order);
+    const erased = await paid();
+    const erasedShare = await s.share(db, owner, erased.comparison, ["가상", "친구"]);
+    await eraseReading(db, owner, erased.comparison);
     const pendingOwner = (await s.newSession(db)).owner;
     const pending = await s.createComparison(db, pendingOwner, pair(), randomUUID(), true);
     const fixture = { owner, subject, profile, verifiedSession:verifiedSession.secret, session: session.secret, recovery, draft, free: free.id,
-      purchased, refunded, active, revoked, expired, refundedShare,
+      purchased, refunded, active, revoked, expired, refundedShare, erased, erasedShare,
       pendingOwner, pending: pending.id,
       snapshot: await s.result(db, owner, free.id),
       purchasedSnapshot: await s.result(db, owner, purchased.comparison),
@@ -107,13 +111,18 @@ try {
     assert.deepEqual(await s.result(db, f.owner, f.purchased.comparison), f.purchasedSnapshot);
     await assert.rejects(s.result(db, f.pendingOwner, f.free), { code: "NOT_FOUND" });
     await assert.rejects(s.result(db, f.owner, f.refunded.comparison), { code: "NOT_FOUND" });
+    await assert.rejects(s.result(db, f.owner, f.erased.comparison), { code: "NOT_FOUND" });
+    assert.equal(state.readingHistory.some(r=>r.id===f.erased.comparison),false);
+    assert.equal(state.orders.find(o=>o.id===f.erased.order)?.state,'paid');
+    assert.equal(state.orders.find(o=>o.id===f.erased.order)?.other_name,null);
+    assert.deepEqual((await one(db,'SELECT inputs,charts FROM comparisons WHERE id=$1',[f.erased.comparison])),{inputs:{},charts:{}});
     for (const id of [f.purchased.order, f.refunded.order]) {
       const order = state.orders.find(o => o.id === id)!;
       assert.equal(order.state, id === f.purchased.order ? "paid" : "refunded");
     }
     const secret = (share: { path: string }) => share.path.slice(3);
     assert.ok(await s.publicShare(db, secret(f.active)));
-    for (const share of [f.revoked, f.expired, f.refundedShare])
+    for (const share of [f.revoked, f.expired, f.refundedShare, f.erasedShare])
       assert.equal(await s.publicShare(db, secret(share)), null);
     const runtimeUrl = process.env.DATABASE_URL!;
     process.env.DATABASE_URL = runtimeUrl.replace("saju_runtime@", "saju_anon@");

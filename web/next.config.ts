@@ -6,6 +6,8 @@ const config: NextConfig = {
   outputFileTracingRoot: process.cwd(),
   // pg reads sslrootcert at runtime; retain the public CA in server deployments.
   outputFileTracingIncludes: { "/*": ["./certs/supabase-prod-ca-2021.crt"] },
+  // Runtime credentials come from the platform, never local setup/admin files.
+  outputFileTracingExcludes: { "/*": ["./.env*", "./.data/**/*", "./.local-review/**/*", "./.vercel/**/*"] },
   async headers() {
     return [
       {

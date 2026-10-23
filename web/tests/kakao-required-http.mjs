@@ -10,7 +10,7 @@ async function call(path,body,method=body===undefined?'GET':'POST'){
 assert.equal((await call('session',{})).status,200);
 const state=(await call('state')).body;assert.equal(state.authRequired,true);assert.equal(state.authenticated,false);assert.equal(state.authEnabled,false);assert.equal(state.profile,null);assert.equal(state.draft,null);
 for(const key of ['results','orders','readingHistory','shares','pending'])assert.deepEqual(state[key],[]);
-for(const [path,method] of [['draft','POST'],['comparisons','POST'],['process','POST'],['recover','POST'],['recovery-code','POST'],['account','DELETE'],['results/00000000-0000-4000-8000-000000000000','GET'],['orders/00000000-0000-4000-8000-000000000000/confirm','POST']]){
+for(const [path,method] of [['draft','POST'],['comparisons','POST'],['process','POST'],['recover','POST'],['recovery-code','POST'],['account','DELETE'],['results/00000000-0000-4000-8000-000000000000','GET'],['results/00000000-0000-4000-8000-000000000000','DELETE'],['orders/00000000-0000-4000-8000-000000000000/confirm','POST']]){
  const result=await call(path,method==='POST'?{authenticated:true,provider:'kakao',subject:'fake'}:undefined,method);
  assert.equal(result.status,401,path);assert.equal(result.body.code,'KAKAO_LOGIN_REQUIRED',path);
 }

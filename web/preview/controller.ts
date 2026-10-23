@@ -4,7 +4,7 @@ import { currentReadingVersion, readingForVersion } from "../src/server/readings
 import type { State } from "../src/components/App";
 const storageKey = "chunbae-static-preview-v1";
 type Storage = Pick<globalThis.Storage, "getItem" | "setItem" | "removeItem">;
-type Comparison = { id: string; pair: Pair; charts: Record<string, unknown>; state: string; key: string; order_id: string | null; created_at?:string };
+type Comparison = { id: string; pair: Pair | null; charts: Record<string, unknown>; state: string; key: string; order_id: string | null; created_at?:string };
 type PreviewData = { version: 1; draft: Pair | null; revision: number; results: SavedResult[];
   comparisons: Comparison[]; orders: State["orders"]; free: boolean };
 const empty = (): PreviewData => ({version:1,draft:null,revision:0,results:[],comparisons:[],orders:[],free:true});
@@ -18,7 +18,7 @@ export function previewController(storage?: Storage) {
   } catch { /* Private browsing or malformed temporary storage falls back to memory. */ }
   const persist = () => { try { storage?.setItem(storageKey, JSON.stringify(data)); } catch { /* In-memory preview still works. */ } };
   const state = (): State => ({kind:"preview",authEnabled:false,authLinked:false,authRequired:false,authenticated:false,profile:null,
-    readingHistory:data.comparisons.map(c=>({id:c.id,other_name:c.pair.other.name,relation:c.pair.other.relation,created_at:c.created_at??data.results.find(r=>r.id===c.id)?.createdAt??data.orders.find(o=>o.id===c.order_id)?.created_at??"",state:c.state,can_open:data.results.some(r=>r.id===c.id),entitlement_state:c.state==="cancelled"?"revoked":null})),draft:data.draft,revision:data.revision,
+    readingHistory:data.comparisons.filter(c=>c.pair!==null).map(c=>({id:c.id,other_name:c.pair!.other.name,relation:c.pair!.other.relation,created_at:c.created_at??data.results.find(r=>r.id===c.id)?.createdAt??data.orders.find(o=>o.id===c.order_id)?.created_at??"",state:c.state,can_open:data.results.some(r=>r.id===c.id),entitlement_state:c.state==="cancelled"?"revoked":null})),draft:data.draft,revision:data.revision,
     free:data.free ? "available" : "consumed",results:data.results,
     pending:data.comparisons.filter(c=>!data.results.some(r=>r.id===c.id)&&c.state!=="cancelled").map(c=>{
       const order=data.orders.find(o=>o.id===c.order_id);
@@ -37,7 +37,10 @@ export function previewController(storage?: Storage) {
     if (path === "comparisons" && method === "POST") {
       if (body?.intent !== "request-reading" && body?.consent !== true) throw new AppError("READING_REQUEST_REQUIRED",422,"이야기 보기 버튼을 눌러 다시 요청해 주세요.");
       const existing=data.comparisons.find(c=>c.key===body.key);
-      if (existing) return {id:existing.id};
+      if (existing) {
+        if(!existing.pair)throw new AppError("READING_ERASED",409,"지운 이야기의 요청이에요. 새 이야기로 시작해 주세요.");
+        return {id:existing.id};
+      }
       const checked=validatePair(body.pair);
       const id=crypto.randomUUID(), order_id=data.free ? null : crypto.randomUUID();
       data.comparisons.push({id,pair:checked.pair,charts:checked.charts,state:order_id?"awaiting-payment":"queued",key:body.key,order_id,created_at:new Date().toISOString()});
@@ -47,11 +50,28 @@ export function previewController(storage?: Storage) {
     }
     if (path === "process" && method === "POST") {
       for (const c of data.comparisons.filter(c=>c.state==="queued")) {
+        if(!c.pair)continue;
         const reading=readingForVersion(currentReadingVersion,{charts:c.charts,relation:c.pair.other.relation});
         data.results.push({id:c.id,me:structuredClone(c.pair.me),other:structuredClone(c.pair.other),charts:c.charts,reading,createdAt:new Date().toISOString()});
         c.state="done";
       }
       persist();return {preview:true};
+    }
+    const erase=/^results\/([^/]+)$/.exec(path);
+    if(erase&&method==="DELETE"){
+      const comparison=data.comparisons.find(c=>c.id===erase[1]);
+      if(!comparison)throw new AppError("NOT_FOUND",404);
+      const order=data.orders.find(o=>o.id===comparison.order_id);
+      if(order&&['confirming','confirmation_unknown','refund_pending'].includes(order.state))throw new AppError("PAYMENT_UNRESOLVED",409);
+      if(comparison.pair){
+        if(data.draft?.me.id===comparison.pair.me.id&&data.draft?.other.id===comparison.pair.other.id){data.draft=null;data.revision++;}
+        if(!comparison.order_id&&comparison.state==="queued")data.free=true;
+        if(order){order.other_name=null;if(order.state==="created")order.state="cancelled";}
+        comparison.pair=null;comparison.charts={};comparison.state="cancelled";
+        data.results=data.results.filter(r=>r.id!==comparison.id);
+        persist();
+      }
+      return {preview:true};
     }
     const action=/^orders\/([^/]+)\/(confirm|cancel|refund|reconcile)$/.exec(path);
     if (action && method === "POST") {

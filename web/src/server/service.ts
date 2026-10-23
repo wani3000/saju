@@ -161,6 +161,8 @@ export async function createComparison(
       [owner, key],
     );
     if (existing) {
+      if (!existing.inputs.me)
+        throw new AppError("READING_ERASED", 409, "지운 이야기의 요청이에요. 새 이야기로 시작해 주세요.");
       if (fingerprint(existing.inputs, existing.charts) !== inputHash)
         throw new AppError(
           "IDEMPOTENCY_CONFLICT",
@@ -271,7 +273,7 @@ export async function state(db: Sql, owner: string) {
   const readingHistory=await db.query(`SELECT c.id,c.state,c.created_at,c.inputs->'other'->>'name' AS other_name,c.inputs->'other'->>'relation' AS relation,
    e.state AS entitlement_state,(e.state='active' AND r.comparison_id IS NOT NULL) IS TRUE AS can_open
    FROM comparisons c LEFT JOIN entitlements e ON e.comparison_id=c.id AND e.owner_id=c.owner_id
-   LEFT JOIN results r ON r.comparison_id=c.id AND r.owner_id=c.owner_id WHERE c.owner_id=$1 ORDER BY c.created_at DESC`,[owner]);
+   LEFT JOIN results r ON r.comparison_id=c.id AND r.owner_id=c.owner_id WHERE c.owner_id=$1 AND c.inputs<>'{}'::jsonb ORDER BY c.created_at DESC`,[owner]);
   return {
     kind: account?.kind,
     authLinked: Boolean(

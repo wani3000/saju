@@ -1,0 +1,38 @@
+{
+  "kind": "individual-reading-erasure-local-verification-v1",
+  "date": "2026-10-23",
+  "baseCommit": "d50486407cabf3c910cdae76c38b9810f36fd2ae",
+  "checks": {
+    "unitAndServiceTests": 204,
+    "generalBrowserTests": 34,
+    "requiredKakaoBrowserTests": 2,
+    "nicepaySyntheticSdkBrowserTests": 4,
+    "httpJourneys": "passed",
+    "typecheck": "passed",
+    "nextBuild": "passed",
+    "staticPreviewBuild": "passed",
+    "encryptedPostgresRestoreTables": 21,
+    "erasedDataRemainsAbsentInPostErasureBackup": true,
+    "cuaLocalSyntheticFlow": "passed",
+    "nextPrivateFileIsolation": "passed",
+    "requiredRuntimeAssets": "public CA and all four migrations retained"
+  },
+  "schemaChanges": false,
+  "newLoginExecuted": false,
+  "paidPlanChanged": false,
+  "realChargesEnabled": false,
+  "remotePersonalErasureExecuted": false,
+  "remoteSchedulerRegistered": false,
+  "externalMessagesSent": 0,
+  "preserved": [
+    "other stories and sessions",
+    "paid/refunded order state",
+    "consumed free-use history",
+    "old reading snapshots except intentional erasure"
+  ],
+  "limitations": [
+    "No external OAuth/card roundtrip was repeated.",
+    "A backup taken after erasure is not a pre-erasure-backup deletion replay solution.",
+    "Financial record separation/purge and external auth erasure remain pending."
+  ]
+}

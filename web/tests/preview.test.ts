@@ -61,3 +61,20 @@ test("preview never provides real auth, recovery, external checkout or public sh
  const bad={getItem:()=>"invalid-json",setItem:()=>{throw new Error();},removeItem:()=>{throw new Error();}};
  assert.equal((await previewController(bad).request("state")).results.length,0);
 });
+test("preview individual erasure survives reload, clears only the selected story, keeps paid records and never grants another consumed free use",async()=>{
+ const storage=store(),c=previewController(storage),first=await free(c);
+ await c.request("draft",{pair:first.p,revision:0});
+ const second=await c.request("comparisons",{pair:pair(),key:crypto.randomUUID(),intent:"request-reading"});
+ const order=(await c.request("state")).orders[0];
+ await c.request(`orders/${order.id}/confirm`,{paymentKey:`mock_${order.id}`,amount:2900});await c.request("process",{});
+ await c.request(`results/${first.id}`,undefined,"DELETE");await c.request(`results/${first.id}`,undefined,"DELETE");
+ let state=await previewController(storage).request("state");
+ assert.equal(state.free,"consumed");assert.equal(state.draft,null);assert.equal(state.revision,2);
+ assert.deepEqual(state.readingHistory.map((r:any)=>r.id),[second.id]);
+ await c.request(`results/${second.id}`,undefined,"DELETE");
+ state=await previewController(storage).request("state");
+ assert.equal(state.orders[0].state,"paid");assert.equal(state.orders[0].other_name,null);assert.equal(state.results.length,0);
+ await c.request(`orders/${order.id}/refund`,{});
+ assert.equal((await c.request("state")).orders[0].state,"refunded");
+ await assert.rejects(c.request("results/not-owned",undefined,"DELETE"),{code:"NOT_FOUND"});
+});

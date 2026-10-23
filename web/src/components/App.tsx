@@ -878,6 +878,16 @@ export default function App({ request: api = serverApi, preview = false, onReset
           )}
           {view === "account" && (preview || !data.authRequired || data.authenticated) && <ProfileHistory
             profile={data.profile} preview={preview} readings={data.readingHistory??[]} orders={data.orders} busy={busy}
+            onDelete={id=>{void act(async()=>{
+              // Invalidate scheduled saves, then drain any request already in flight.
+              ownerGeneration.current++;
+              await saveChain.current.catch(()=>{});
+              await api(`results/${id}`,undefined,"DELETE");
+              requestKey.current="";setSelected(null);setShareLink("");clearNavigation();
+              await refresh(true);
+              heading.current?.focus();
+              setNotice("이 이야기를 지웠네. 연결된 공유 링크도 닫았네.");
+            });}}
             onOpen={id=>{setSelected(id);navigate("result");}}
             onOrder={(order,action)=>{if(action==="open"){setSelected(order.comparison_id);navigate("result");return;}void act(async()=>{
               await api(`orders/${order.id}/${action}`,{});if(action==="reconcile")await api("process",{});await refresh();

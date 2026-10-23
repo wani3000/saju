@@ -57,7 +57,7 @@
   "sourceArtifacts": [
     {
       "file": "web/package.json",
-      "sha256": "62f8f104476f14365151938509dc0c4bcb4ea6214c99203b81710bcd1f7b0fd5"
+      "sha256": "f26b640770912eb6a27a272226a3ca4819b65b774e8625d8ca8054defc6bf1d4"
     },
     {
       "file": "web/package-lock.json",
@@ -65,7 +65,7 @@
     },
     {
       "file": "web/e2e/journey.spec.ts",
-      "sha256": "171a2032c813f098850e0f93edd3581ca1923184b5528e880c4d018a2bfa1fab"
+      "sha256": "11382720f7ecd2d1052f152981fc0ee601e1af57629aa663d4d0079d5056cc1d"
     },
     {
       "file": "web/src/server/db.ts",
@@ -77,7 +77,7 @@
     },
     {
       "file": "web/next.config.ts",
-      "sha256": "e9824bf299fa934b8824955a51a395294a72b939718fe84f9949c93987fb69d0"
+      "sha256": "83d26295fb387643c65faeaca634c82a27637e4b7014e823023496ed6b0887b5"
     },
     {
       "file": "web/certs/supabase-prod-ca-2021.crt",
@@ -101,7 +101,7 @@
     },
     {
       "file": "web/src/components/App.tsx",
-      "sha256": "1fc8bb2181ab0f8b70be442d5940ebadb8bb93ad326c2c862125113f63b1fe8d"
+      "sha256": "81d2acbc0743de3adf295d89f7d2960ee62fc9e80ca190608fd3205fff57b652"
     },
     {
       "file": "web/src/components/Landing.tsx",
@@ -145,11 +145,11 @@
     },
     {
       "file": "web/src/server/service.ts",
-      "sha256": "42434fe846c028b8f68ee11cffa511ed52069576bf519c0b2d39d73230fa5728"
+      "sha256": "048683eabe0116854b8a48bef5d17cf4bbb6361dbc515d8af77aeb9f18b0bc43"
     },
     {
       "file": "web/src/server/operations.ts",
-      "sha256": "6465f238e0d4ba6103bd4ba02d1f07d69aad9af1f98074e388e970ba18536d8c"
+      "sha256": "dea23c2046447d86054a558859e528e9ed3328efd5a31a5ea121dc559c59edd6"
     },
     {
       "file": "web/src/server/operational-command.ts",
@@ -177,7 +177,7 @@
     },
     {
       "file": "web/src/server/payments.ts",
-      "sha256": "936f8b4a689b7e87d1a266888dc1e92d2b1aea6e54234f29f11cccf26126b1ac"
+      "sha256": "284c3944e5c8ca6662b29cc7d0200f40e1fca55a1e01066da73c4c9ab3f53dd1"
     },
     {
       "file": "web/scripts/retention.ts",
@@ -194,6 +194,34 @@
     {
       "file": "web/scripts/alert-plan.ts",
       "sha256": "10c7c935b19569e182f0de77b6d937a1a19d8e5879adc834f85326f7461a97d1"
+    },
+    {
+      "file": "web/scripts/check-build-isolation.mjs",
+      "sha256": "da1b76a4a3be706ce5e48628f40d04afad1152456d6d942f4f2f8a840b899d8b"
+    },
+    {
+      "file": "web/tests/build-isolation.test.ts",
+      "sha256": "167c3e7297ca064d3ca63de0c522c0603e2e1f0444e06bc9799d11d31d789c70"
+    },
+    {
+      "file": ".github/workflows/web-validation.yml",
+      "sha256": "d08b9351cbf732f236d9867cf68df838e22bc0e197b8ef5d1b0bae69a087eae2"
+    },
+    {
+      "file": "web/tests/reading-erasure.test.ts",
+      "sha256": "272bfc5a2db7a17b95886994982e39d5e0976912e0f71dd4433d7e38e116445b"
+    },
+    {
+      "file": "web/tests/preview.test.ts",
+      "sha256": "08c96acaf4b3e7627a78046d5f9df6cf4f0b9200afadaf996da5a3f637c8ed4b"
+    },
+    {
+      "file": "web/tests/http.mjs",
+      "sha256": "0bf6da64b09a869f31bd28631eaa7857c84d160747d01fa54c84e70730a4b1a9"
+    },
+    {
+      "file": "web/tests/kakao-required-http.mjs",
+      "sha256": "5052f87a166e9750c06e9ee9fb1c748c381933eafc0f79d61c260c42f9ca543c"
     },
     {
       "file": "web/tests/service-policy.test.ts",
@@ -281,7 +309,7 @@
     },
     {
       "file": "web/src/app/api/[...path]/route.ts",
-      "sha256": "915a2abed3d4011d6325c59fae9bd72944329dc88f148aecc0f5f25f597b5e45"
+      "sha256": "87e6f1335b48e4315e96d1e89c52e9923168b831047581db994274a081869215"
     },
     {
       "file": "web/src/app/auth/callback/route.ts",
@@ -293,7 +321,7 @@
     },
     {
       "file": "web/src/components/ProfileHistory.tsx",
-      "sha256": "92efe3d0844990e3766aba2d8d6e6d3cacb2fc8a60d595f2f71209fa54473638"
+      "sha256": "bc5ea0dc960d8d10d1d84beba2c2157d463a55e36b66704c6792b1161a687f99"
     },
     {
       "file": "web/src/domain/profile.ts",
@@ -353,7 +381,7 @@
     },
     {
       "file": "web/scripts/restore-scenarios.ts",
-      "sha256": "5c794cdb0ba145d349be7cb31bd247827e02ce7e055b26d6edc253c173921c9b"
+      "sha256": "5f5eac0db46a743c6720889b1ce09cdfeff094cbba8d66f833a3fd6d14f890d6"
     },
     {
       "file": "docs/audits/runtime-recovery-manifest.json",
@@ -361,19 +389,19 @@
     },
     {
       "file": "docs/policies/service-terms-draft.md",
-      "sha256": "8581a2db0573ef83e61a9d908c01884217b9d83a273d145415e05e76b5728c2f"
+      "sha256": "10bd642088dc3333a169b77007074174a3e900b87d366acb917188d4372d1e5a"
     },
     {
       "file": "docs/policies/privacy-draft.md",
-      "sha256": "84b7b98814fd4a24c1879fdc820ae55a633981905e0db316f06aae39be3ac2ba"
+      "sha256": "c44e3a9e6cbd642cb398c8dd11a4c00fc7eb64a292355017c59ec697965842dc"
     },
     {
       "file": "docs/policies/refund-draft.md",
-      "sha256": "2b940c0dd970106cfc91a1a7e08bf5a951a9c50fb80a9270b8dce0fd56121d1e"
+      "sha256": "456f4209cd3017bc7cdd79cf356f358ba790ec5f368d550db75e2ce4f3798a50"
     },
     {
       "file": "docs/policies/release-decisions.md",
-      "sha256": "30f632ec186efe180aa6d08e7ba7509021355bdbdb1a09dd80511a6a63080bcb"
+      "sha256": "d0607c4797958700fa618c91a00dce0a9fad5c5ad5b2d0bc578d15c59ad0ddbe"
     },
     {
       "file": "docs/operations-recovery-preparation.md",
@@ -381,7 +409,7 @@
     },
     {
       "file": "web/preview/controller.ts",
-      "sha256": "594843ebd21568d88bf4f6421ec429063348595ddb4b83abe848ac7818141a1a"
+      "sha256": "b2396ca7eda875bdf5f0e80b5ab4aacc53fa5057e6b2fa4b28be7824da3e1c01"
     },
     {
       "file": "web/content/research-policy.json",

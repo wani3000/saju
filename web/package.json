@@ -37,7 +37,8 @@
     "check:nicepay-webhook": "tsx scripts/check-nicepay-registration.ts",
     "retention": "tsx scripts/retention.ts",
     "backup:file": "tsx scripts/backup.ts",
-    "alerts:plan": "tsx scripts/alert-plan.ts"
+    "alerts:plan": "tsx scripts/alert-plan.ts",
+    "check:build": "node scripts/check-build-isolation.mjs"
   },
   "dependencies": {
     "@electric-sql/pglite": "0.5.9",

@@ -360,3 +360,26 @@ test('profile distinguishes free readings, pending purchases, paid readings and 
  await expect(page.getByRole('heading',{name:'나래 · 하루',exact:true})).toBeVisible();
  await noOverflow(page);
 });
+
+test('individual story erasure confirms intent, supports keeping it, survives reload and preserves the consumed free allowance',async({page},testInfo)=>{
+ await result(page);
+ await page.getByRole('button',{name:'내 프로필',exact:true}).click();
+ const story=page.getByRole('article').filter({has:page.getByRole('heading',{name:'하루 · 친구',exact:true})});
+ await story.getByRole('button',{name:'이 이야기 삭제',exact:true}).click();
+ await expect(story.getByRole('group',{name:'이야기 삭제 확인',exact:true})).toBeVisible();
+ await page.screenshot({path:testInfo.outputPath('reading-delete-confirmation.png'),fullPage:true});
+ await story.getByRole('button',{name:'계속 보관하기',exact:true}).click();
+ await expect(story.getByRole('button',{name:'이 이야기 삭제',exact:true})).toBeFocused();
+ await expect(story.getByRole('button',{name:'이야기 다시 보기',exact:true})).toBeVisible();
+ await story.getByRole('button',{name:'이 이야기 삭제',exact:true}).click();
+ await story.getByRole('button',{name:'이야기 지우기',exact:true}).click();
+ await expect(page.getByText('이 이야기를 지웠네. 연결된 공유 링크도 닫았네.',{exact:true})).toBeVisible();
+ await expect(page.getByText('아직 남긴 이야기가 없네. 두 사람의 생일부터 적어 보게.',{exact:true})).toBeVisible();
+ await page.screenshot({path:testInfo.outputPath('reading-delete-completed.png'),fullPage:true});
+ const state=await(await page.request.get('/api/state')).json();
+ expect(state.results).toEqual([]);expect(state.readingHistory).toEqual([]);expect(state.draft).toBeNull();expect(state.free).toBe('consumed');
+ await page.reload();
+ await expect(page.getByRole('heading',{name:'내 프로필',exact:true})).toBeVisible();
+ await expect(page.getByRole('button',{name:'이야기 다시 보기',exact:true})).toHaveCount(0);
+ await noOverflow(page);
+});

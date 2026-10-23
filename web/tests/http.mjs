@@ -93,6 +93,7 @@ const beforeMalformed = await (await request("state")).json();
 for (const [path, method, body] of [
   [`results/${id}/shares/extra`, "POST", {aliases:["나","너"]}],
   [`comparisons/${id}/retry/extra`, "POST", {}],
+  [`results/${id}/extra`, "DELETE", undefined],
 ]) {
   r = await request(path, body, {method});
   assert.equal(r.status,404,path);
@@ -131,6 +132,7 @@ for (const [path,method,body] of [
   [`results/${id}/shares`, "POST", {aliases:["가","나"]}],
   [`shares/${liveLink.id}`, "DELETE", undefined],
   [`comparisons/${id}/retry`, "POST", {}],
+  [`results/${id}`, "DELETE", undefined],
 ]) {
   r = await request(path,body,{method});
   assert.equal(r.status,404,path);
@@ -200,6 +202,18 @@ r = await request("auth/start", {});
 assert.equal(r.status, 503);
 r = await request("auth/finish", { choice: "merge" });
 assert.equal(r.status, 401);
+r = await request(`results/${id}`, undefined, {method:"DELETE",headers:{Origin:"https://unrelated.invalid"}});
+assert.equal(r.status,403);
+r = await request(`results/${id}`, undefined, {method:"DELETE"});
+assert.equal(r.status,200);
+assert.equal((await request(`results/${id}`, undefined, {method:"DELETE"})).status,200);
+assert.equal((await request(`results/${id}`)).status,404);
+const erasedState=await (await request("state")).json();
+assert.equal(erasedState.results.length,0);
+assert.equal(erasedState.readingHistory.some(c=>c.id===id),false);
+assert.equal(erasedState.free,"consumed");
+assert.equal(erasedState.orders.find(o=>o.id===order.id).state,"refunded");
+assert.ok((await (await fetch(base+liveLink.path)).text()).includes("지금은 볼 수 없는"));
 r = await request("account", undefined, { method: "DELETE" });
 assert.equal(r.status, 200);
 r = await request("state");

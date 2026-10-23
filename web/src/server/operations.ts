@@ -1,10 +1,35 @@
 import { one, type Database } from "./db";
-import { runJobs } from "./service";
+import { lockOwner, runJobs } from "./service";
 import { reconcilePayment, refundPayment } from "./payments";
 import { AppError } from "../domain/model";
 import { servicePolicy } from "./service-policy";
 // Local alarm starting point, not a production SLO or queue residence time.
 export const queuedComparisonAlertSeconds = 300;
+export async function eraseReading(db: Database, owner: string, id: string) {
+  return db.transaction(async tx => {
+    // Same lock order as payment, merge and workers. No PG request is made here.
+    await lockOwner(tx, owner);
+    const comparison = await one(tx, "SELECT inputs FROM comparisons WHERE owner_id=$1 AND id=$2 FOR UPDATE", [owner, id]);
+    if (!comparison) throw new AppError("NOT_FOUND", 404, "이야기를 찾을 수 없어요.");
+    if (await one(tx, "SELECT id FROM orders WHERE owner_id=$1 AND comparison_id=$2 AND state IN ('confirming','confirmation_unknown','refund_pending')", [owner, id]))
+      throw new AppError("PAYMENT_UNRESOLVED", 409, "결제·취소를 확인 중이에요. 결제 내역에서 확인을 마친 뒤 지워 주세요.");
+    if (!comparison.inputs.me) return;
+    const pair = comparison.inputs;
+    await tx.query("DELETE FROM shares WHERE owner_id=$1 AND comparison_id=$2", [owner, id]);
+    await tx.query("UPDATE generation_jobs SET state='cancelled',fence=fence+1,lease_until=NULL,error_code=NULL WHERE owner_id=$1 AND comparison_id=$2", [owner, id]);
+    // A consumed free story stays consumed. A not-yet-delivered reservation is
+    // released exactly once; a stale worker cannot finish after the fence changes.
+    await tx.query("UPDATE free_claims SET state='available',comparison_id=NULL,generation=generation+1 WHERE owner_id=$1 AND comparison_id=$2 AND state='reserved'", [owner, id]);
+    await tx.query("UPDATE entitlements SET state='revoked' WHERE owner_id=$1 AND comparison_id=$2", [owner, id]);
+    await tx.query("DELETE FROM results WHERE owner_id=$1 AND comparison_id=$2", [owner, id]);
+    await tx.query("DELETE FROM nicepay_attempts WHERE order_id IN (SELECT id FROM orders WHERE owner_id=$1 AND comparison_id=$2)", [owner, id]);
+    await tx.query("UPDATE orders SET state='cancelled' WHERE owner_id=$1 AND comparison_id=$2 AND state='created'", [owner, id]);
+    await tx.query("UPDATE drafts SET data='{}'::jsonb,revision=revision+1 WHERE owner_id=$1 AND data->'me'->>'id'=$2 AND data->'other'->>'id'=$3", [owner, pair.me.id, pair.other.id]);
+    // Keep an idempotency/financial tombstone, without birth data or fingerprints.
+    await tx.query("UPDATE comparisons SET inputs='{}'::jsonb,charts='{}'::jsonb,input_hash='',state='cancelled' WHERE owner_id=$1 AND id=$2", [owner, id]);
+    await tx.query("INSERT INTO operational_events(kind,outcome) VALUES('reading_erasure','completed')");
+  });
+}
 export async function erasePersonalData(
   db: Database,
   owner: string,
