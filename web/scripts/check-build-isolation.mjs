@@ -8,8 +8,8 @@ export function inspectTracePaths(files) {
   const privateFiles = paths.filter(isPrivate);
   const ca = paths.some(f => f.endsWith("/supabase-prod-ca-2021.crt") || f === "supabase-prod-ca-2021.crt");
   const migrations = new Set(paths.filter(f => /(?:^|\/)db\/migrations\/\d{3}_[a-z_]+\.sql$/.test(f)).map(f => path.posix.basename(f)));
-  return { status: privateFiles.length || !ca || migrations.size < 4 ? "blocked" : "passed",
-    codes: [...(privateFiles.length ? ["PRIVATE_FILE_IN_BUILD"] : []), ...(!ca ? ["PUBLIC_CA_MISSING"] : []), ...(migrations.size < 4 ? ["MIGRATIONS_MISSING"] : [])],
+  return { status: privateFiles.length || !ca || migrations.size < 5 ? "blocked" : "passed",
+    codes: [...(privateFiles.length ? ["PRIVATE_FILE_IN_BUILD"] : []), ...(!ca ? ["PUBLIC_CA_MISSING"] : []), ...(migrations.size < 5 ? ["MIGRATIONS_MISSING"] : [])],
     privateFileCount: privateFiles.length, caIncluded: ca, migrationCount: migrations.size };
 }
 async function walk(directory) {

@@ -24,6 +24,7 @@ const files=['web/package.json','web/package-lock.json','web/e2e/journey.spec.ts
  'web/scripts/check-kakao-provider.ts','web/src/components/App.tsx','web/src/components/Landing.tsx','web/src/app/globals.css','web/content/journey-copy.json',
  'web/content/character.json','web/content/landing-sample.json','web/scripts/prepare-landing-sample.ts','web/tests/landing-sample.test.ts',
  'web/src/server/kakao-policy.ts','web/src/server/auth.ts','web/src/server/identity.ts','web/src/server/service.ts',
+ 'web/db/migrations/005_withdrawal_requests.sql','web/src/server/withdrawal.ts','web/src/server/withdrawal-provider.ts','web/scripts/process-withdrawals.ts','web/scripts/apply-withdrawal-schema.ts','web/tests/migration-readiness.test.ts','web/tests/withdrawal.test.ts',
  'web/src/server/operations.ts','web/src/server/operational-command.ts','web/scripts/maintenance.ts','web/scripts/worker.ts','web/tests/health.test.ts',
  'web/src/server/service-policy.ts','web/src/server/alert-plan.ts','web/src/server/payments.ts',
  'web/scripts/retention.ts','web/scripts/backup.ts','web/scripts/private-backup.ts','web/scripts/alert-plan.ts',

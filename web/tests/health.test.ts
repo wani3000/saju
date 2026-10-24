@@ -118,6 +118,7 @@ test("health distinguishes normal queue and live leases from failed and expired 
       "payments",
       "reasons",
       "status",
+      "withdrawals",
     ]);
     for (const value of [a.owner, a.id, b.id, c.id, samplePerson().name])
       assert.ok(!JSON.stringify(report).includes(value));

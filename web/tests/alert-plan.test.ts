@@ -9,6 +9,16 @@ function sample(at = "2026-10-23T01:00:00Z"): AlertObservation {
       jobs: { queued: 0, delayedQueued: 0, oldestQueuedComparisonSeconds: 0, running: 0, failed: 0, expiredLeases: 0, oldestExpiredLeaseSeconds: 0 },
       payments: { confirming: 0, confirmationUnknown: 0, refundPending: 0, oldestPendingOrderSeconds: 0, overduePending: 0, unknownPendingAge: 0 } } };
 }
+test('withdrawal fault is kept through missing health/old observations, and recovers only with a new queue measurement',()=>{
+  const start=sample();start.health!.withdrawals={pending:1,reviewRequired:1};
+  const fault=planAlerts(start);assert.deepEqual(fault.notifications,[{code:'WITHDRAWAL_REVIEW_REQUIRED',event:'problem',severity:'warning'}]);
+  const missing=planAlerts({...sample('2026-10-23T01:05:00Z'),health:null},fault.nextHistory);
+  assert.ok(missing.nextHistory.incidents.WITHDRAWAL_REVIEW_REQUIRED);
+  const old=planAlerts(sample('2026-10-23T01:10:00Z'),missing.nextHistory);
+  assert.deepEqual(old.notifications,[]);assert.ok(old.nextHistory.incidents.WITHDRAWAL_REVIEW_REQUIRED);
+  const resolved=sample('2026-10-23T01:15:00Z');resolved.health!.withdrawals={pending:0,reviewRequired:0};
+  assert.deepEqual(planAlerts(resolved,old.nextHistory).notifications,[{code:'WITHDRAWAL_REVIEW_REQUIRED',event:'recovery',severity:'warning'}]);
+});
 
 test("two adjacent failures alert, thirty-minute dedup and single recovery; a long gap is not a second failure", () => {
   const a = planAlerts({ ...sample(), health: null });

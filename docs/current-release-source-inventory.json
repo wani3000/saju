@@ -57,7 +57,7 @@
   "sourceArtifacts": [
     {
       "file": "web/package.json",
-      "sha256": "1b5e36d92a2de8fd52377f075f24ecf3710505abd0f4b81192ac42c26ca29029"
+      "sha256": "4a3fb822ed883a5ca41dbc5ceaba5eb689d06a0c7be910352f9e5a983352b5f3"
     },
     {
       "file": "web/package-lock.json",
@@ -85,11 +85,11 @@
     },
     {
       "file": "web/scripts/check-hosted-runtime.ts",
-      "sha256": "8101836b3f8ea67f0565d405e3b9361bab7b4270561cacedd78a46484f13f887"
+      "sha256": "0b85c4cf32f92a290535df44d10ee72bdace5231e13263ac3511844b3b0e9cdd"
     },
     {
       "file": "web/scripts/check-hosted-restore.ts",
-      "sha256": "c88a6d36c874c6581862668fdec0851e9871c8b713291b3bc48d9886afbd5529"
+      "sha256": "7060e421a0011b680e7504649d03818f25553a4e2026194a0b6349e2dc916f44"
     },
     {
       "file": "web/scripts/hosted-restore-target.ts",
@@ -101,7 +101,7 @@
     },
     {
       "file": "web/src/components/App.tsx",
-      "sha256": "81d2acbc0743de3adf295d89f7d2960ee62fc9e80ca190608fd3205fff57b652"
+      "sha256": "89b92a9ff47ce09b964a7eeffd227fe84957dbd82ef3d1a3a050ff335af15aea"
     },
     {
       "file": "web/src/components/Landing.tsx",
@@ -148,8 +148,36 @@
       "sha256": "048683eabe0116854b8a48bef5d17cf4bbb6361dbc515d8af77aeb9f18b0bc43"
     },
     {
+      "file": "web/db/migrations/005_withdrawal_requests.sql",
+      "sha256": "1cf7dbfdadae2676677b97f1b6309af966f2d46210e288cdb43f0b97fb8e9b4c"
+    },
+    {
+      "file": "web/src/server/withdrawal.ts",
+      "sha256": "1c12cfb3f3d3c41c238a4e0f079c50eb20e1d981502859569ce9e96b722b4a0b"
+    },
+    {
+      "file": "web/src/server/withdrawal-provider.ts",
+      "sha256": "f7f35dae56ac74bb8fcbb1fc805e3d53854fd473909c37c7482c4e8c97f6e481"
+    },
+    {
+      "file": "web/scripts/process-withdrawals.ts",
+      "sha256": "b978332f37ea8c527a2ed40c16e6dd5ec235a1710fd773cbb62004c3830954ab"
+    },
+    {
+      "file": "web/scripts/apply-withdrawal-schema.ts",
+      "sha256": "741e9b6439d3c5e336783ffdd7f95a937cefedc5c3fb172af3f031e62c3cd1c6"
+    },
+    {
+      "file": "web/tests/migration-readiness.test.ts",
+      "sha256": "39bdc52de24ae349ff01c1e39752f2ec31ef755b28ab8143627a356f1a318118"
+    },
+    {
+      "file": "web/tests/withdrawal.test.ts",
+      "sha256": "1f2980857d36f849b4d17ad3d6f2e1acbfc298f8761d967c0b27b29b99d9212b"
+    },
+    {
       "file": "web/src/server/operations.ts",
-      "sha256": "1fe18f6a0496e5b2b254b6bd031e6f55ccc874106339459ac8376cf533829c92"
+      "sha256": "b466fe4c001269364ea86ae74c13d51a8d1ce3be211c4187e0617bf386a77f03"
     },
     {
       "file": "web/src/server/operational-command.ts",
@@ -165,7 +193,7 @@
     },
     {
       "file": "web/tests/health.test.ts",
-      "sha256": "efcf6646cadea635711ab6a3ee55e6a7510251651588e10db7f0fe61cd44de87"
+      "sha256": "dd3f586dbc8671aee67fec1d061fa6f8bda052672575cb1d2a0b41e78ad21d62"
     },
     {
       "file": "web/src/server/service-policy.ts",
@@ -173,7 +201,7 @@
     },
     {
       "file": "web/src/server/alert-plan.ts",
-      "sha256": "0add056ef509a2c95705aecaf41a005ea44e0c84652acac70526d620a85d22d7"
+      "sha256": "00d9d444c6f411f083d89070b7f03761c6b0f0356b7cfd08a8ed38c4d15a74ec"
     },
     {
       "file": "web/src/server/payments.ts",
@@ -245,11 +273,11 @@
     },
     {
       "file": "docs/launch-operator-settings.example.json",
-      "sha256": "851d2be71886f39e10ed472e9663c1f33a0c347ad0f33b494950275bcdcc41be"
+      "sha256": "02dd695cf8651f4d7ab0c059ebe87629b70e71be5421f874c8a054c6a054dbdd"
     },
     {
       "file": "docs/remaining-launch-execution.md",
-      "sha256": "13113ae961b6f3529ab91c4a65a40332a2bdb879a144f1ed0654c1bc03a82495"
+      "sha256": "618d697694e020eab24c63ed20f45a7122d3c4501658ed2eaae4bd5216fae18d"
     },
     {
       "file": "web/scripts/private-operations.ts",
@@ -265,7 +293,7 @@
     },
     {
       "file": "web/scripts/alert-queue.ts",
-      "sha256": "6a92e5a129c845aa9c81bf010d872a73056b653feb19793ada6af70b67cf4713"
+      "sha256": "c92d791f1f888cb735f651ee5c33b3e5e324c7837f81f15bd092d2e79e0ad35c"
     },
     {
       "file": "web/scripts/run-alert-queue.ts",
@@ -273,7 +301,7 @@
     },
     {
       "file": "web/tests/operations-preparation.test.ts",
-      "sha256": "4b9e46e37948495c71e63573d2e7f8456b1c30536811fb75c45a001eb02726d1"
+      "sha256": "1b4bad163f9f0b0456e9bae5ea1da4e1d8055c1e4db5e839bd08a3dcc2a60d86"
     },
     {
       "file": "docs/local-operations-automation.md",
@@ -281,11 +309,11 @@
     },
     {
       "file": "web/scripts/check-build-isolation.mjs",
-      "sha256": "c5e77e357940ef6b10f171c63b55dd2992df1c6c64a318bb59b1668b8d3738b6"
+      "sha256": "32c322a2b74927fdef13c53ea546f8e36c29188534f3eb8adbf8969dd49bb15a"
     },
     {
       "file": "web/tests/build-isolation.test.ts",
-      "sha256": "ae553e68b7adde1ea820dd6392d883bc94d07578080db5293a244fffd4473d18"
+      "sha256": "4316b7e04089db4ccd06b36a0d1e8731c1a821d6ceb78ceff1e9fd67a40316c8"
     },
     {
       "file": ".github/workflows/web-validation.yml",
@@ -313,7 +341,7 @@
     },
     {
       "file": "web/tests/alert-plan.test.ts",
-      "sha256": "ec9e507e4a2be16d49eea88f148a4d957c8d1273d82ba33efd36bda60afb7f5b"
+      "sha256": "c44fdd7c86ba592f3b7af7bbe0c0dc2dd447659761fc21acfb68a430072cd97c"
     },
     {
       "file": "web/tests/private-backup.test.ts",
@@ -325,7 +353,7 @@
     },
     {
       "file": "web/scripts/postgres-scenarios.ts",
-      "sha256": "6c31957484ac71053c2edb46543280f43e61bc243cc252fa9d902ee94c6c9bcb"
+      "sha256": "0dc4d58dbccddc11670f23c856f402715d46e47b582ad8c64e888dc298c11f4e"
     },
     {
       "file": "web/src/server/nicepay-webhook.ts",
@@ -465,11 +493,11 @@
     },
     {
       "file": "web/scripts/restore-scenarios.ts",
-      "sha256": "cf19cbe871e4d56628905bf85082b781cdaa179b996a8028e14bb5d50f09a0f3"
+      "sha256": "50055ff0016d04c9c9c0615f3fb84413b3b4b0d20dd286fe65627bf947765ed2"
     },
     {
       "file": "docs/audits/runtime-recovery-manifest.json",
-      "sha256": "26d00c27889614dee6411b7af76bded59b3a4260e8d7222e02494c5714cd49a9"
+      "sha256": "ddddb5a0cf36ff1bc4fd6f679554f048c109126593e9de697c08c47b904cd14c"
     },
     {
       "file": "docs/policies/service-terms-draft.md",
@@ -477,7 +505,7 @@
     },
     {
       "file": "docs/policies/privacy-draft.md",
-      "sha256": "733709f56e4e821033121112ce32be7da55eb07d896cf5e0caf28bb0dce1cba0"
+      "sha256": "371fe2d878f68e476eafa9afb05c7067e906c157205b74382fdbd8afd7edc694"
     },
     {
       "file": "docs/policies/refund-draft.md",

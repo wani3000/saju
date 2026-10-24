@@ -26,3 +26,12 @@ test('runtime verification refuses altered migration evidence instead of changin
   assert.equal((await one(db,"SELECT checksum FROM schema_migrations WHERE name='004_kakao_profile.sql'"))?.checksum,'changed');
  }finally{await db.close();}
 });
+test('external startup requires the withdrawal ledger migration without repairing it',async()=>{
+ const db=await openDatabase('memory://');
+ try{
+  await migrate(db);
+  await db.query("DELETE FROM schema_migrations WHERE name='005_withdrawal_requests.sql'");
+  await assert.rejects(assertMigrationsApplied(db),{message:'RUN_MIGRATIONS_FIRST'});
+  assert.equal(await one(db,"SELECT name FROM schema_migrations WHERE name='005_withdrawal_requests.sql'"),undefined);
+ }finally{await db.close();}
+});

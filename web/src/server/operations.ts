@@ -103,6 +103,11 @@ export async function erasePersonalData(
       [owner],
     );
     await tx.query('UPDATE auth_identities SET display_name=NULL,avatar_url=NULL WHERE owner_id=$1',[owner]);
+    // Commit the external withdrawal request atomically with local erasure.
+    // Linked accounts only: an anonymous guest must never trigger provider APIs.
+    await tx.query(`INSERT INTO withdrawal_requests(owner_id,subject)
+      SELECT owner_id,subject FROM auth_identities WHERE owner_id=$1
+      ON CONFLICT(owner_id) DO NOTHING`, [owner]);
     // Payment/consent/free-use records and auth subject tombstone survive erasure.
     // The latter prevents a deleted account from silently receiving a new free grant.
     await tx.query(
@@ -204,7 +209,12 @@ export async function health(db: Database) {
         count(*) FILTER (WHERE pending_since<=now()-interval '${servicePolicy.pendingPaymentMinutes} minutes')::int AS overdue_pending,
         count(*) FILTER (WHERE pending_since IS NULL)::int AS unknown_pending_age
       FROM pending
-    ) SELECT * FROM jobs CROSS JOIN payments`,
+    ), withdrawals AS (
+      SELECT count(*) FILTER(WHERE state<>'completed')::int AS withdrawal_pending,
+        count(*) FILTER(WHERE state IN ('blocked','unknown') OR (state='running' AND lease_until<now())
+          OR (state<>'completed' AND requested_at<=now()-interval '24 hours'))::int AS withdrawal_review
+      FROM withdrawal_requests
+    ) SELECT * FROM jobs CROSS JOIN payments CROSS JOIN withdrawals`,
     [queuedComparisonAlertSeconds],
   ))!;
   const jobs = {
@@ -226,6 +236,7 @@ export async function health(db: Database) {
     unknownPendingAge: row.unknown_pending_age as number,
   };
   const reasons: string[] = [];
+  const withdrawals = { pending: row.withdrawal_pending as number, reviewRequired: row.withdrawal_review as number };
   if (jobs.failed) reasons.push("FAILED_JOBS");
   if (jobs.expiredLeases) reasons.push("EXPIRED_LEASES");
   if (jobs.delayedQueued) reasons.push("DELAYED_QUEUE");
@@ -235,11 +246,13 @@ export async function health(db: Database) {
     payments.refundPending
   )
     reasons.push("PENDING_PAYMENTS");
+  if (withdrawals.reviewRequired) reasons.push("WITHDRAWAL_REVIEW_REQUIRED");
   return {
     mode: "research" as const,
     status: reasons.length ? ("needs_attention" as const) : ("ok" as const),
     reasons,
     jobs,
     payments,
+    withdrawals,
   };
 }

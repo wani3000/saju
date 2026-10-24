@@ -1,8 +1,8 @@
 import path from "node:path";
 import { z } from "zod";
-import { alertHistorySchema, alertObservationSchema, emptyAlertHistory, planAlerts } from "../src/server/alert-plan";
+import { alertCodes, alertHistorySchema, alertObservationSchema, emptyAlertHistory, planAlerts } from "../src/server/alert-plan";
 import { atomicPrivateJson, privateDirectory, readOptionalJson, readPrivateJson, withPrivateLock } from "./private-operations";
-const candidate = z.object({ code: z.enum(["HEALTH_UNAVAILABLE", "FAILED_JOBS", "EXPIRED_LEASES", "DELAYED_QUEUE", "PAYMENT_OVERDUE", "PAYMENT_AGE_UNKNOWN", "BACKUP_OVERDUE", "RETENTION_OVERDUE"]),
+const candidate = z.object({ code: z.enum(alertCodes),
   event: z.enum(["problem", "recovery"]), severity: z.enum(["critical", "warning"]),
   at: z.string().datetime({ offset: true }), incidentAt: z.string().datetime({ offset: true }) }).strict();
 const queueSchema = z.object({ kind: z.literal("local-alert-queue-v1"), history: alertHistorySchema, candidates: z.array(candidate).max(128) }).strict();

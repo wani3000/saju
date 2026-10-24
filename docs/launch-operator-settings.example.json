@@ -3,7 +3,7 @@
   "seller": {"legalName":"플로렌스랩","representative":null,"businessRegistration":null,"onlineSalesReport":null,"address":null,"supportEmail":null,"privacyOfficer":null},
   "backup": {"independentStorage":false,"keyCustodian":false,"scheduledExportVerified":false,"rotationVerified":false,"latestRecoveryJournal":false},
   "alerts": {"recipient":false,"deliveryReceiptsAndRetries":false},
-  "withdrawal": {"providerCredentials":false,"durableRequestLedger":false,"externalRoundtrip":false,"financialRecordSeparation":false},
+  "withdrawal": {"providerCredentials":false,"durableRequestLedger":true,"externalRoundtrip":false,"financialRecordSeparation":false},
   "review": {"calendarPolicy":false,"readingExpert":false,"legalPolicies":false},
   "payment": {"transactionWebhook":false,"liveMerchantContract":false,"liveCredentials":false,"liveRoundtrip":false}
 }

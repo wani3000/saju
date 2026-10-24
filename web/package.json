@@ -44,6 +44,7 @@
     "alerts:queue": "tsx scripts/run-alert-queue.ts",
     "backup:prune": "tsx scripts/run-backup-prune.ts",
     "alerts:observe": "tsx scripts/run-observe-operations.ts",
+    "withdrawal:worker": "tsx scripts/process-withdrawals.ts",
     "launch:check": "tsx scripts/check-launch-completion.ts"
   },
   "dependencies": {

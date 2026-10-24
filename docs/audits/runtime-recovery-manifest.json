@@ -16,6 +16,10 @@
     {
       "name": "004_kakao_profile.sql",
       "sha256": "168d928bba0be020f0cc24185f89cfea989c1a547ccc90973d069628b372a87b"
+    },
+    {
+      "name": "005_withdrawal_requests.sql",
+      "sha256": "1cf7dbfdadae2676677b97f1b6309af966f2d46210e288cdb43f0b97fb8e9b4c"
     }
   ],
   "engineVersions": [

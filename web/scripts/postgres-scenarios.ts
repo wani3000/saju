@@ -44,6 +44,7 @@ try {
     "operational_events",
     "nicepay_attempts",
     "schema_migrations",
+    "withdrawal_requests",
   ])
     await admin.query(
       `CREATE POLICY saju_server_access ON ${table} TO saju_runtime USING (true) WITH CHECK (true)`,

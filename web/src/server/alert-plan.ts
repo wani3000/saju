@@ -3,15 +3,18 @@ import { servicePolicy } from "./service-policy";
 
 const timestamp = z.string().datetime({ offset: true });
 const count = z.number().int().nonnegative().max(Number.MAX_SAFE_INTEGER);
-const codes = ["HEALTH_UNAVAILABLE", "FAILED_JOBS", "EXPIRED_LEASES", "DELAYED_QUEUE", "PAYMENT_OVERDUE", "PAYMENT_AGE_UNKNOWN", "BACKUP_OVERDUE", "RETENTION_OVERDUE"] as const;
+export const alertCodes = ["HEALTH_UNAVAILABLE", "FAILED_JOBS", "EXPIRED_LEASES", "DELAYED_QUEUE", "PAYMENT_OVERDUE", "PAYMENT_AGE_UNKNOWN", "BACKUP_OVERDUE", "RETENTION_OVERDUE", "WITHDRAWAL_REVIEW_REQUIRED"] as const;
+const codes = alertCodes;
 const code = z.enum(codes);
 const healthSchema = z.object({
   mode: z.literal("research"), status: z.enum(["ok", "needs_attention"]),
-  reasons: z.array(z.enum(["FAILED_JOBS", "EXPIRED_LEASES", "DELAYED_QUEUE", "PENDING_PAYMENTS"])).max(4),
+  reasons: z.array(z.enum(["FAILED_JOBS", "EXPIRED_LEASES", "DELAYED_QUEUE", "PENDING_PAYMENTS", "WITHDRAWAL_REVIEW_REQUIRED"])).max(5),
   jobs: z.object({ queued: count, delayedQueued: count, oldestQueuedComparisonSeconds: count,
     running: count, failed: count, expiredLeases: count, oldestExpiredLeaseSeconds: count }).strict(),
   payments: z.object({ confirming: count, confirmationUnknown: count, refundPending: count,
     oldestPendingOrderSeconds: count, overduePending: count, unknownPendingAge: count }).strict(),
+  // Older saved observations remain readable, but cannot prove recovery.
+  withdrawals: z.object({pending:count,reviewRequired:count}).strict().optional(),
 }).strict();
 export const alertObservationSchema = z.object({
   kind: z.literal("operations-observation-v1"), at: timestamp,
@@ -47,9 +50,10 @@ export function planAlerts(rawObservation: unknown, rawHistory: unknown = emptyA
     if (o.health.jobs.delayedQueued) active.set("DELAYED_QUEUE", "warning");
     if (o.health.payments.overduePending) active.set("PAYMENT_OVERDUE", "critical");
     if (o.health.payments.unknownPendingAge) active.set("PAYMENT_AGE_UNKNOWN", "warning");
+    if (o.health.withdrawals?.reviewRequired || (!o.health.withdrawals && history.incidents.WITHDRAWAL_REVIEW_REQUIRED)) active.set("WITHDRAWAL_REVIEW_REQUIRED", "warning");
   } else {
     // Loss of health visibility is not evidence that earlier job/payment faults recovered.
-    for (const c of ["FAILED_JOBS", "EXPIRED_LEASES", "DELAYED_QUEUE", "PAYMENT_OVERDUE", "PAYMENT_AGE_UNKNOWN"] as const)
+    for (const c of ["FAILED_JOBS", "EXPIRED_LEASES", "DELAYED_QUEUE", "PAYMENT_OVERDUE", "PAYMENT_AGE_UNKNOWN", "WITHDRAWAL_REVIEW_REQUIRED"] as const)
       if (history.incidents[c]) active.set(c, c === "PAYMENT_OVERDUE" ? "critical" : "warning");
   }
   if (!o.lastVerifiedBackupAt || now - Date.parse(o.lastVerifiedBackupAt) > servicePolicy.backupOverdueMinutes * 60000) active.set("BACKUP_OVERDUE", "critical");

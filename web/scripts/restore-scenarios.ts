@@ -31,7 +31,7 @@ async function manifest(db: Database) {
   const tables = (await db.query<{ tablename: string }>(
     "SELECT tablename FROM pg_tables WHERE schemaname='public' ORDER BY tablename",
   )).rows;
-  assert.ok(tables.length >= 21);
+  assert.ok(tables.length >= 22);
   const out: Record<string, { rows: number; sha256: string }> = {};
   for (const { tablename } of tables) {
     // Catalog identifiers only, never input values. Sort full JSON to cover every row/column.

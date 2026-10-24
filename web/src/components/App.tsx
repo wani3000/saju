@@ -1069,7 +1069,8 @@ export default function App({ request: api = serverApi, preview = false, onReset
                 <p>
                   입력한 생일, 결과와 공유 링크를 지워요. 복구 코드로도 되돌릴
                   수 없어요. 주문·동의·무료 이용 기록은 남으며 삭제가 환불을
-                  뜻하지는 않아요. 카카오와 Supabase 계정의 연결 해제는 별도로 준비 중이에요.
+                  뜻하지는 않아요. 카카오 연결 해제와 로그인 계정 삭제 요청도 함께 남겨요.
+                  외부 처리는 아직 준비 중이라 바로 끝나지는 않아요.
                 </p>
                 <label>
                   <input

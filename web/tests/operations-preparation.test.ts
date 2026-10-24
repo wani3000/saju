@@ -20,6 +20,18 @@ async function fixture() {
 }
 const observation = (time = at, failing = true) => ({ kind: "operations-observation-v1", at: time,
   health: null, lastVerifiedBackupAt: failing ? null : time, lastRetentionSuccessAt: time });
+test('withdrawal review alert persists in the private candidate queue without duplicate delivery claims',async()=>{
+  const f=await fixture();
+  try{
+    const o={...observation('2026-10-24T01:00:00Z',false),health:{mode:'research',status:'needs_attention',reasons:['WITHDRAWAL_REVIEW_REQUIRED'],
+      jobs:{queued:0,delayedQueued:0,oldestQueuedComparisonSeconds:0,running:0,failed:0,expiredLeases:0,oldestExpiredLeaseSeconds:0},
+      payments:{confirming:0,confirmationUnknown:0,refundPending:0,oldestPendingOrderSeconds:0,overduePending:0,unknownPendingAge:0},withdrawals:{pending:1,reviewRequired:1}}};
+    const first=await queueAlerts(o,path.join(f.dir,'alerts'));assert.equal(first.pendingCandidates,1);
+    const next=await queueAlerts({...o,at:'2026-10-24T01:05:00Z'},path.join(f.dir,'alerts'));assert.equal(next.pendingCandidates,1);assert.equal(next.externalMessagesSent,0);
+    const state=JSON.parse(await readFile(path.join(f.dir,'alerts','alerts.json'),'utf8'));
+    assert.equal(state.candidates[0].code,'WITHDRAWAL_REVIEW_REQUIRED');
+  }finally{await rm(f.dir,{recursive:true,force:true});}
+});
 
 test("backup cycle commits only after authenticated roundtrip and never claims restore or backup health", async () => {
   const f = await fixture();

@@ -5,7 +5,7 @@ import { tmpdir } from "node:os";
 import path from "node:path";
 import { spawnSync } from "node:child_process";
 import { inspectTracePaths, inspectBuild, prepareVercelMappings } from "../scripts/check-build-isolation.mjs";
-const assets = ["../../certs/supabase-prod-ca-2021.crt", ...["001_core", "002_operations", "003_server_access", "004_kakao_profile"].map(n => `../../db/migrations/${n}.sql`)];
+const assets = ["../../certs/supabase-prod-ca-2021.crt", ...["001_core", "002_operations", "003_server_access", "004_kakao_profile", "005_withdrawal_requests"].map(n => `../../db/migrations/${n}.sql`)];
 test("build audit keeps required CA/migrations and blocks private setup, review and data files without echoing paths", () => {
   assert.equal(inspectTracePaths(assets).status, "passed");
   for (const file of ["../../.env.staging.local", ".env.supabase-bootstrap.local", "../../.local-review/private.json", "..\\.data\\postgres\\secret", "../../.vercel/.env.production.local"]) {

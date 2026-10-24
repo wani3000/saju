@@ -51,7 +51,7 @@ try {
   step = "migration-checksums";
   await assertMigrationsApplied(db);
   const protectedTables = (await client.query("SELECT count(*)::int AS total,count(*) FILTER(WHERE c.relrowsecurity)::int AS protected FROM pg_class c JOIN pg_namespace n ON n.oid=c.relnamespace WHERE n.nspname='public' AND c.relkind='r'")).rows[0];
-  assert.equal(protectedTables.total, 21); assert.equal(protectedTables.protected, 21);
+  assert.equal(protectedTables.total, 22); assert.equal(protectedTables.protected, 22);
   const before = (await client.query("SELECT count(*)::int AS n FROM accounts")).rows[0].n;
   await client.query("BEGIN"); begun = true;
   step = "ddl-denial";
@@ -86,14 +86,15 @@ try {
   assert.equal((await service.state(db,owner.owner)).free,'consumed');
   step = "synthetic-erasure";
   await erasePersonalData(db, owner.owner);
+  assert.equal((await db.query('SELECT count(*)::int AS n FROM withdrawal_requests WHERE owner_id=$1 AND subject=$2 AND state=\'pending\'',[owner.owner,subject])).rows[0].n,1);
   await assert.rejects(service.result(db, owner.owner, comparison.id), { code: "NOT_FOUND" });
   step = "fixture-rollback";
   await client.query("ROLLBACK"); begun = false;
   assert.equal((await client.query("SELECT count(*)::int AS n FROM accounts")).rows[0].n, before);
   console.log(JSON.stringify({ status: "passed", scope: "hosted-runtime-service-check", tlsVerified: true, restrictedRole: true,
-    tablesWithRls: 21, migrationChecksumsVerified: true, ddlDenied: true, authSchemaDenied: true,
+    tablesWithRls: 22, migrationChecksumsVerified: true, ddlDenied: true, authSchemaDenied: true,
     reading: true, ownership: true, shareRevocation: true, returningAccount: true, guestNotAuthenticated: true,
-    erasure: true, fixtureRolledBack: true,
+    erasure: true, withdrawalRequestRecorded: true, fixtureRolledBack: true,
     browserOAuthVerified: false, paymentProviderVerified: false, hostedRestoreVerified: false }));
 } catch (error) {
   const code = (error as { code?: unknown }).code;

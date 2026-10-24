@@ -81,7 +81,7 @@ try {
   assert.equal(Math.floor(Number((await remote.query("SHOW server_version_num")).rows[0].server_version_num)/10000),17);
   await assertMigrationsApplied(remote);
   const tables=(await remote.query(tablesSql)).rows.map(r=>r.relname as string);
-  assert.equal(tables.length,21);
+  assert.equal(tables.length,22);
   // Dedicated app schema only, never restore hosted functions/extensions or auth/storage schemas.
   assert.equal((await remote.query("SELECT count(*)::int AS n FROM pg_proc p JOIN pg_namespace n ON n.oid=p.pronamespace WHERE n.nspname='public'")).rows[0].n,0);
   assert.equal((await remote.query("SELECT count(*)::int AS n FROM pg_extension e JOIN pg_namespace n ON n.oid=e.extnamespace WHERE n.nspname='public'")).rows[0].n,0);
