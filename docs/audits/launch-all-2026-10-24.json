@@ -59,5 +59,77 @@
     "privateFiles": 0,
     "caIncluded": true,
     "migrationCount": 4
+  },
+  "deployment": {
+    "id": "dpl_7QE1tUzwYYu5VHx6fJqsCisKdLYu",
+    "url": "https://chunbae-staging-p7p5wf0cy-oxaz1234-gmailcoms-projects.vercel.app",
+    "sourceCommit": "8139e82098b5a6daafffc7ab2e61b0e1354cbfe5",
+    "readyState": "READY",
+    "region": "icn1",
+    "target": "production hosting target of research staging",
+    "asset": "/_next/static/chunks/app/page-8b0a5e08099d9291.js",
+    "assetSha256": "3556319332c50819a42dedd925705760de3d83f6554b9b501551756197c6fd85",
+    "stagedChecks": [
+      {
+        "path": "/api/state",
+        "method": "GET",
+        "status": 401,
+        "code": "UNAUTHORIZED"
+      },
+      {
+        "path": "/api/results/00000000-0000-4000-8000-000000000001",
+        "method": "DELETE",
+        "status": 401,
+        "code": "UNAUTHORIZED"
+      },
+      {
+        "path": "/api/results/00000000-0000-4000-8000-000000000001",
+        "method": "DELETE",
+        "status": 403,
+        "code": "ORIGIN_REJECTED"
+      }
+    ],
+    "alias": "https://chunbae-staging.vercel.app",
+    "sameArtifactPromoted": true,
+    "canonicalChecks": [
+      {
+        "path": "/",
+        "method": "GET",
+        "status": 200,
+        "code": null
+      },
+      {
+        "path": "/api/state",
+        "method": "GET",
+        "status": 401,
+        "code": "UNAUTHORIZED"
+      },
+      {
+        "path": "/api/results/00000000-0000-4000-8000-000000000001",
+        "method": "DELETE",
+        "status": 401,
+        "code": "UNAUTHORIZED"
+      },
+      {
+        "path": "/api/results/00000000-0000-4000-8000-000000000001",
+        "method": "DELETE",
+        "status": 403,
+        "code": "ORIGIN_REJECTED"
+      }
+    ],
+    "framework": "Next.js 16.4.2",
+    "localBuildSeconds": 38,
+    "cuaPublicLanding": "passed",
+    "artifactIsolation": {
+      "privateFileCount": 0,
+      "caIncluded": true,
+      "migrationCount": 4,
+      "prunedDanglingMappings": 12
+    },
+    "errorLogQuery": {
+      "window": "10m",
+      "matchingRecords": 0,
+      "continuousMonitoring": false
+    }
   }
 }

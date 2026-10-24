@@ -95,3 +95,10 @@ NICEPAY 결제/취소·실제 다른 기기/카카오 인앱 브라우저·프�
 소스e50d04a / `dpl_C5Sb5tXnVR9EhR6p6RKc4At1Tiqo` / READY·서울icn1·Next16.4.2·로컬 Vercel 빌드17초. 기존 연구용 프로젝트의 production 호스팅 target에 같은 산출물을 promote했다. 고정 주소 https://chunbae-staging-klfibkoun-oxaz1234-gmailcoms-projects.vercel.app, 공개 테스트 https://chunbae-staging.vercel.app . [검증 기록](audits/automation-preparation-2026-10-24.json).
 
 공개200·로그인 전 state/DELETE401·다른 Origin403·no-store·JS 해시 일치와 CUA 제목/카카오 시작·지도 버튼을 확인했다. 배포10분 범위 오류 로그0건은 지속 감시 증거가 아니다. 서버 공개 관리 API/cron·원격 DB 내보내기/업로드·자동 파기·키 생성/운영 비밀 설정·스키마·실카드/새 로그인·유료 플랜은 변경하지 않았다. [새 실행 도구](local-operations-automation.md)는 저장소의 로컬 준비이며 Vercel에서 정기 실행하거나 외부 알림을 보낸다는 의미가 아니다.
+
+
+## 2026-10-24 전체 출시 기술 후속 재배포
+
+소스8139e82 / `dpl_7QE1tUzwYYu5VHx6fJqsCisKdLYu` / READY·icn1·Next16.4.2·로컬 빌드38초. 고정 주소 https://chunbae-staging-p7p5wf0cy-oxaz1234-gmailcoms-projects.vercel.app 와 공개 테스트 https://chunbae-staging.vercel.app 는 같은 산출물의 promote 결과다. [검증 기록](audits/launch-all-2026-10-24.json)에서 소스/리전·익명200/401/403·no-store·JS 해시 일치·CUA 제목/카카오 시작/지도와10분 오류0건을 확인했다. 지속 감시/인증된 실제 사용자 삭제·운영 재해 복구 검증으로 확대하지 않는다.
+
+백업 수집/격리 복원 확인/순환·실제 읽기 전용 관측·과거 사본 이후 삭제/환불 재반영 도구와 계정 삭제의 작업 lease/error 제거를 포함한다. 신규 도구는 로컬 실행 경로이며 공개 관리 API/cron·장기 보관·실제 발송을 켜지 않는다. 저장소/수신처·외부 탈퇴 관리자 자격·관리자 웹훅 로그·사업자 정책 정보/전문 감수·운영 결제 조건은 미완료다. 기존 카카오 필수/연구/NICEPAY sandbox·DB 스키마와 비밀 설정은 유지한다.
