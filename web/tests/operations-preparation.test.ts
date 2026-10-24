@@ -96,7 +96,7 @@ test("alert queue survives restart, deduplicates one incident and keeps recovery
     let state = JSON.parse(await readFile(file, "utf8"));
     assert.equal(state.candidates.filter((c: {code:string}) => c.code === "BACKUP_OVERDUE").length, 1);
     const report = await queueAlerts(observation("2026-10-24T01:40:00Z", false), directory);
-    assert.equal(report.externalMessagesSent, 0); assert.equal(report.senderConfigured, false);
+    assert.equal(report.externalMessagesSent, 0); assert.equal(report.senderConfigured, false); assert.ok(report.activeIncidents>=1);
     state = JSON.parse(await readFile(file, "utf8"));
     assert.equal(state.candidates.filter((c: {code:string,event:string}) => c.code === "BACKUP_OVERDUE" && c.event === "recovery").length, 1);
     assert.equal(JSON.stringify(state).includes("delivered"), false);

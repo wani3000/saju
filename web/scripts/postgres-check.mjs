@@ -122,6 +122,7 @@ try {
     testUrl,
   ]);
   await chmod(path.join(dir, "source", "backup.dump"), 0o600);
+  console.log(run(process.execPath,["--import","tsx","scripts/restore-scenarios.ts","after-backup",fixture],{env:{...localEnv,DATABASE_URL:testUrl.replace("saju_admin@","saju_runtime@")}}));
   await mkdir(path.join(dir, "keys"), { mode: 0o700 });
   const backupKey = path.join(dir, "keys", "backup.key");
   await writeFile(backupKey, randomBytes(32), { mode: 0o600 });
@@ -150,6 +151,8 @@ try {
   console.log(run(process.execPath, ["--import", "tsx", "scripts/restore-scenarios.ts", "verify", fixture], {
     env: { ...localEnv, DATABASE_URL: restoreUrl.replace("saju_admin@", "saju_runtime@") },
   }));
+  console.log(run(process.execPath,["--import","tsx","scripts/restore-scenarios.ts","attest",fixture],{env:{...localEnv,DATABASE_URL:restoreUrl.replace("saju_admin@","saju_runtime@")}}));
+  console.log(run(process.execPath,["--import","tsx","scripts/restore-scenarios.ts","overlay",fixture],{env:{...localEnv,DATABASE_URL:restoreUrl.replace("saju_admin@","saju_runtime@")}}));
   console.log("PostgreSQL separate-DB restore: schema, constraints, indexes, ACLs and RLS policies match; no hosted recovery approval implied.");
   console.log("Private encrypted backup: synthetic pg_dump cycle catalogued after authenticated byte verification, then separately restored; temporary key and all copies removed on exit.");
 } catch (error) {

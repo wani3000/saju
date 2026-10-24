@@ -12,14 +12,17 @@ import { samplePerson } from "../src/domain/model";
 import {recoveryManifest} from './recovery-manifest';
 import {recoveryCompatibility} from '../src/server/recovery-compatibility';
 import {currentReadingVersion} from '../src/server/readings';
-import {eraseReading} from '../src/server/operations';
+import {eraseReading,erasePersonalData} from '../src/server/operations';
+import {recordVerifiedRestore,latestVerifiedBackup} from "./backup-verification";
+import {fingerprint} from "./backup-cycle";
+import {captureRecoveryOverlay,applyIsolatedRecoveryOverlay} from "../src/server/recovery-overlay";
 const [phase, file] = process.argv.slice(2);
-assert.ok(["seed", "verify"].includes(phase) && file);
+assert.ok(["seed", "verify", "after-backup", "overlay", "attest"].includes(phase) && file);
 assert.equal(process.env.SAJU_RESTORE_CHECK, "isolated-cluster");
 const url = new URL(process.env.DATABASE_URL!);
 assert.equal(url.hostname, "localhost");
 assert.equal(url.username, "saju_runtime");
-assert.equal(url.pathname, phase === "seed" ? "/saju_test" : "/saju_restore");
+assert.equal(url.pathname, ["seed","after-backup"].includes(phase) ? "/saju_test" : "/saju_restore");
 assert.equal(url.searchParams.get("host"), path.dirname(file));
 assert.ok(path.basename(path.dirname(file)).startsWith("saju-pg-"));
 const db = await openDatabase();
@@ -75,11 +78,42 @@ try {
     const fixture = { owner, subject, profile, verifiedSession:verifiedSession.secret, session: session.secret, recovery, draft, free: free.id,
       purchased, refunded, active, revoked, expired, refundedShare, erased, erasedShare,
       pendingOwner, pending: pending.id,
+      backupAt:new Date().toISOString(),
       snapshot: await s.result(db, owner, free.id),
       purchasedSnapshot: await s.result(db, owner, purchased.comparison),
       tables: await manifest(db) };
     await writeFile(file, JSON.stringify(fixture), { mode: 0o600, flag: "wx" });
     console.log(`Restore fixture: ${Object.keys(fixture.tables).length} tables fingerprinted; synthetic data only.`);
+  } else if(phase==="after-backup") {
+    const f=JSON.parse(await readFile(file,"utf8"));
+    await eraseReading(db,f.owner,f.free);
+    await p.refundPayment(db,f.owner,f.purchased.order);
+    await erasePersonalData(db,f.pendingOwner);
+    await writeFile(file+".overlay",JSON.stringify(await captureRecoveryOverlay(db)),{mode:0o600,flag:"wx"});
+    console.log("Post-backup source changes captured privately: story erased, purchase refunded, account erased.");
+  } else if(phase==="attest") {
+    const directory=path.join(path.dirname(file),"backups");
+    const catalog=JSON.parse(await readFile(path.join(directory,"catalog.json"),"utf8"));
+    const digest=(await fingerprint(path.join(path.dirname(file),"verified.dump"))).sha256;
+    assert.equal(digest,catalog.entries[0].sourceSha256);
+    await recordVerifiedRestore(directory,digest,catalog.entries[0].snapshotAt);
+    assert.equal(await latestVerifiedBackup(directory),catalog.entries[0].snapshotAt);
+    console.log("Actual isolated restore attested to the exact encrypted catalog entry; backup health uses its original snapshot time.");
+  } else if(phase==="overlay") {
+    const f=JSON.parse(await readFile(file,"utf8"));
+    const overlay=JSON.parse(await readFile(file+".overlay","utf8"));
+    const report=await applyIsolatedRecoveryOverlay(db,overlay,f.backupAt);
+    assert.equal(report.serviceResumeApproved,false);
+    await assert.rejects(s.result(db,f.owner,f.free));
+    await assert.rejects(s.result(db,f.owner,f.purchased.comparison));
+    assert.equal((await one(db,"SELECT state FROM orders WHERE id=$1",[f.purchased.order]))!.state,"refunded");
+    assert.equal((await one(db,"SELECT inputs FROM comparisons WHERE id=$1",[f.free]))!.inputs.me,undefined);
+    assert.ok((await one(db,"SELECT deleted_at FROM accounts WHERE id=$1",[f.pendingOwner]))!.deleted_at);
+    assert.equal((await one(db,"SELECT count(*)::int AS n FROM shares"))!.n,0);
+    assert.equal(Boolean(await s.sessionOwner(db,f.session)),false);
+    const again=await applyIsolatedRecoveryOverlay(db,overlay,f.backupAt);
+    assert.equal(again.serviceResumeApproved,false);
+    console.log("Old backup overlay rehearsal passed: later deletion/refund/account erasure reapplied, all links/sessions closed; no production resume approval.");
   } else {
     const f = JSON.parse(await readFile(file, "utf8"));
     await assertMigrationsApplied(db);

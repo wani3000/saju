@@ -1,5 +1,7 @@
 # 현재 출시 준비 현황 · 2026-10-24
 
+최신 전체 후속: [남은 여섯 항목 실행](remaining-launch-execution.md)에서 백업 수집/복원 확인/순환·실제 DB 관측·과거 백업 후 삭제/환불 재반영을 보완했다. 실제 staging 읽기 전용21테이블 격리 복원7초 통과·임시본 제거, health ok, 거래 웹훅 이벤트0개다. 저장소/수신처는 사용자 답변 미정이며 외부 탈퇴 관리자 자격·관리자 로그인·사업자 정책 정보·전문 감수·운영 키/실결제 조건은 여전히 필요하다.
+
 최신 운영 준비: [파일 백업 cycle·영속 알림 후보](local-operations-automation.md)를 구현했다. 이전375bf99의 GitHub 검사3종은 최종 성공이다. 원격 exporter/독립 보관/정기 실행/실제 전달·자동 파기는 미연결이고 기존 출시 승인 조건은 유지한다.
 
 최신 테스트 서버: 소스e50d04a / dpl_C5Sb5tXnVR9EhR6p6RKc4At1Tiqo / READY·서울, https://chunbae-staging.vercel.app 에 재배포했다. 익명 랜딩200·개인 API/삭제401·다른 Origin403·동일 JS 해시와 공개 버튼을 확인했다.

@@ -11,9 +11,10 @@ const configSchema = z.object({ kind: z.literal("backup-cycle-file-v1"), input: 
 const entrySchema = z.object({ id: z.string().uuid(), snapshotAt: timestamp, completedAt: timestamp,
   keyVersion: z.string().regex(/^[a-zA-Z0-9_-]{1,32}$/), encryptedSha256: z.string().regex(/^[a-f0-9]{64}$/),
   sourceSha256: z.string().regex(/^[a-f0-9]{64}$/), bytes: z.number().int().positive(),
-  verification: z.literal("authenticated-byte-roundtrip"), restoreVerifiedAt: z.null() }).strict();
-const catalogSchema = z.object({ kind: z.literal("private-backup-catalog-v1"), entries: z.array(entrySchema).max(512) }).strict();
-async function fingerprint(file: string) {
+  verification: z.literal("authenticated-byte-roundtrip"), restoreVerifiedAt: timestamp.nullable() }).strict();
+export const backupCatalogSchema = z.object({ kind: z.literal("private-backup-catalog-v1"), entries: z.array(entrySchema).max(512),
+  prunePending: z.array(z.string().uuid()).max(512).optional(), lastPrunedAt: timestamp.optional() }).strict().refine(c => new Set(c.entries.map(e=>e.id)).size===c.entries.length, "DUPLICATE_BACKUP_ID");
+export async function fingerprint(file: string) {
   const h = await open(file, constants.O_RDONLY | constants.O_NOFOLLOW | constants.O_NONBLOCK);
   try {
     const before = await h.stat();
@@ -35,7 +36,8 @@ export async function backupCycle(raw: unknown, observedAt?: string) {
   if (!keyInfo.isFile() || (keyInfo.mode & 0o077) || keyInfo.nlink !== 1 || (process.getuid && keyInfo.uid !== process.getuid())) throw new Error("PRIVATE_KEY_REQUIRED");
   return withPrivateLock(directory, async () => {
     const file = path.join(directory, "catalog.json");
-    const catalog = catalogSchema.parse(await readOptionalJson(file) ?? { kind: "private-backup-catalog-v1", entries: [] });
+    const catalog = backupCatalogSchema.parse(await readOptionalJson(file) ?? { kind: "private-backup-catalog-v1", entries: [] });
+    if (catalog.prunePending?.length) throw new Error("PRUNE_RECOVERY_REQUIRED");
     if (catalog.entries.some(e => Date.parse(e.snapshotAt) >= snapshot || Date.parse(e.completedAt) > current)) throw new Error("NON_MONOTONIC_BACKUP");
     // Bound local state without silently deleting receipts or encrypted copies.
     // Expired entries are candidates only until reviewed rotation is configured.
@@ -52,7 +54,7 @@ export async function backupCycle(raw: unknown, observedAt?: string) {
       catalog.entries.push({ id, snapshotAt: c.snapshotAt, completedAt: observedAt ?? new Date().toISOString(), keyVersion: c.keyVersion,
         encryptedSha256: encrypted.sha256, sourceSha256: before.sha256, bytes: before.bytes,
         verification: "authenticated-byte-roundtrip", restoreVerifiedAt: null });
-      catalogSchema.parse(catalog);
+      backupCatalogSchema.parse(catalog);
       await atomicPrivateJson(file, catalog); committed = true;
       return { status: "completed", scope: "local-file-backup-cycle", catalogEntries: catalog.entries.length,
         expiredCopyCandidates: catalog.entries.filter(e => current - Date.parse(e.snapshotAt) >= 7 * 86400000).length,

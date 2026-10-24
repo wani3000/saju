@@ -72,7 +72,7 @@ export async function erasePersonalData(
       );
     await tx.query("DELETE FROM shares WHERE owner_id=$1", [owner]);
     await tx.query(
-      "UPDATE generation_jobs SET state='cancelled',fence=fence+1 WHERE owner_id=$1",
+      "UPDATE generation_jobs SET state='cancelled',fence=fence+1,lease_until=NULL,error_code=NULL WHERE owner_id=$1",
       [owner],
     );
     await tx.query(

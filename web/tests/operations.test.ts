@@ -133,7 +133,10 @@ test("deletion revokes sessions and public links, scrubs snapshots, stops stale 
   const running = await s.newSession(db);
   await s.createComparison(db, running.owner, pair(), randomUUID(), true);
   const job = await s.claimJob(db, running.owner);
+  await db.query("UPDATE generation_jobs SET error_code='WORKER_FAILED' WHERE owner_id=$1",[running.owner]);
   await erasePersonalData(db, running.owner);
+  const erasedJob=(await one(db,"SELECT lease_until,error_code FROM generation_jobs WHERE owner_id=$1",[running.owner]))!;
+  assert.equal(erasedJob.lease_until,null);assert.equal(erasedJob.error_code,null);
   await assert.rejects(s.finishJob(db, job!));
 });
 test("retention deletes only inactive guests and rechecks activity after locking", async () => {

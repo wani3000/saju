@@ -20,7 +20,7 @@ export async function queueAlerts(raw: unknown, directory: string) {
     // Observation/history and candidates commit together; no false delivery receipts.
     state.history = plan.nextHistory;
     await atomicPrivateJson(file, state);
-    return { status: "queued-locally", scope: "offline-alert-queue", pendingCandidates: state.candidates.length,
+    return { status: "queued-locally", scope: "offline-alert-queue", pendingCandidates: state.candidates.length, activeIncidents: Object.keys(plan.nextHistory.incidents).length,
       externalMessagesSent: 0, senderConfigured: false, schedulerInstalled: false } as const;
   });
 }

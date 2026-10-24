@@ -41,7 +41,10 @@
     "check:build": "node scripts/check-build-isolation.mjs",
     "prepare:artifact": "node scripts/check-build-isolation.mjs --prepare-vercel",
     "backup:cycle": "tsx scripts/run-backup-cycle.ts",
-    "alerts:queue": "tsx scripts/run-alert-queue.ts"
+    "alerts:queue": "tsx scripts/run-alert-queue.ts",
+    "backup:prune": "tsx scripts/run-backup-prune.ts",
+    "alerts:observe": "tsx scripts/run-observe-operations.ts",
+    "launch:check": "tsx scripts/check-launch-completion.ts"
   },
   "dependencies": {
     "@electric-sql/pglite": "0.5.9",

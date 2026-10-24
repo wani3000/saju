@@ -1,0 +1,63 @@
+{
+  "date": "2026-10-24",
+  "scope": "remaining-launch-work-technical-followup",
+  "unitTests": 222,
+  "newTests": 10,
+  "syntheticPostgres": {
+    "tables": 21,
+    "encryptedCycleRestoreAttestation": true,
+    "postBackupDeletionRefundAccountErasureReapplied": true,
+    "allLinksAndSessionsClosed": true,
+    "productionResumeApproved": false
+  },
+  "hostedReadOnlyCheck": {
+    "tables": 21,
+    "allDataSchemaAclRlsMatched": true,
+    "restrictedRuntimeAndAnonymousChecksPassed": true,
+    "elapsedSeconds": 7,
+    "privateCopyRemoved": true,
+    "encryptedBackupRetained": false,
+    "sourceWrites": false
+  },
+  "hostedObservation": {
+    "health": "ok",
+    "activeIncidents": 2,
+    "localCandidates": 2,
+    "exitCode": 2,
+    "reason": "backup-and-retention-evidence-missing",
+    "externalMessagesSent": 0,
+    "temporaryQueueRemoved": true
+  },
+  "nicepay": {
+    "registration": "canonical-card-registered",
+    "webhookEvents": 0,
+    "refundedTestOrders": 3,
+    "transactionDeliveryVerified": false,
+    "adminSession": "login-required"
+  },
+  "externalWithdrawal": {
+    "supabaseAdminConfigured": false,
+    "kakaoAdminConfigured": false,
+    "actualAccountsDeleted": false
+  },
+  "operatorChoices": {
+    "backupStorage": "undecided-by-user",
+    "alertRecipient": "undecided-by-user",
+    "sellerFields": "pending",
+    "expertSignoff": "not-observed"
+  },
+  "productionApproved": false,
+  "realChargesEnabled": false,
+  "newSchedulerInstalled": false,
+  "newCredentialsGenerated": false,
+  "mobileJourneys": 40,
+  "httpJourneys": "passed",
+  "typecheck": "passed",
+  "nextBuild": "passed",
+  "editorialCases": 968,
+  "nextTraces": {
+    "privateFiles": 0,
+    "caIncluded": true,
+    "migrationCount": 4
+  }
+}

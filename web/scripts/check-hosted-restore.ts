@@ -9,6 +9,9 @@ import {parseEnv,promisify} from "node:util";
 import {Client} from "pg";
 import {assertMigrationsApplied} from "../src/server/db";
 import {health} from "../src/server/operations";
+import {backupCycle,fingerprint} from "./backup-cycle";
+import {recordVerifiedRestore,hostedBackupArguments} from "./backup-verification";
+import {privateDirectory} from "./private-operations";
 import {hostedRestoreTarget} from "./hosted-restore-target";
 
 const exec = promisify(execFile);
@@ -57,7 +60,8 @@ async function schema(db:Client) {
 }
 try {
   const args=process.argv.slice(2);
-  assert.ok(args.length===7 && args[0]==="--settings" && args[2]==="--bootstrap" && args[4]==="--project" && args[6]==="--private-local-copy");
+  const retain=hostedBackupArguments(args);
+  if(retain){await privateDirectory(retain.directory);await privateDirectory(path.dirname(retain.keyFile));}
   const settings=await privateSettings(args[1]), bootstrap=await privateSettings(args[3]);
   const source=hostedRestoreTarget(settings,bootstrap,args[5]);
   dir=await mkdtemp(path.join(tmpdir(),"saju-hosted-restore-"));
@@ -83,7 +87,9 @@ try {
   assert.equal((await remote.query("SELECT count(*)::int AS n FROM pg_extension e JOIN pg_namespace n ON n.oid=e.extnamespace WHERE n.nspname='public'")).rows[0].n,0);
   const size=(await remote.query("SELECT sum(pg_total_relation_size(c.oid))::float8 AS bytes FROM pg_class c JOIN pg_namespace n ON n.oid=c.relnamespace WHERE n.nspname='public' AND c.relkind='r'")).rows[0].bytes;
   assert.ok(size<64*1024*1024,"SMALL_STAGING_CHECK_ONLY");
-  const snapshot=(await remote.query("SELECT pg_export_snapshot() AS snapshot")).rows[0].snapshot as string;
+  const exported=(await remote.query("SELECT pg_export_snapshot() AS snapshot,transaction_timestamp() AS snapshot_at")).rows[0];
+  const snapshotAt=new Date(exported.snapshot_at).toISOString();
+  const snapshot=exported.snapshot as string;
   assert.match(snapshot,/^[A-Fa-f0-9-]+$/);
   const before=await manifest(remote,tables), beforeSchema=await schema(remote);
   const roles=(await remote.query("SELECT rolname FROM pg_roles WHERE rolname !~ '^pg_' ORDER BY rolname")).rows.map(r=>r.rolname as string);
@@ -144,9 +150,16 @@ try {
   step="restored-anonymous-insert-denial";
   await assert.rejects(local.query("INSERT INTO public.accounts(id) VALUES(gen_random_uuid())"),{code:"42501"});
   await local.query("RESET ROLE");
+  let encryptedBackupRetained=false;
+  if(retain){
+    step="verified-encrypted-backup-cycle";
+    await backupCycle({kind:"backup-cycle-file-v1",input:dump,snapshotAt,...retain});
+    await recordVerifiedRestore(retain.directory,(await fingerprint(dump)).sha256,snapshotAt);
+    encryptedBackupRetained=true;
+  }
   // The restore must not change remote records or consume/replay sessions, payments or jobs.
   report={status:"passed",scope:"hosted-public-backup-to-isolated-local-restore",tables:tables.length,
-    sameSnapshot:true,tlsVerified:true,sourceReadOnly:true,allTableDataMatched:true,
+    sameSnapshot:true,tlsVerified:true,encryptedBackupRetained,sourceReadOnly:true,allTableDataMatched:true,
     schemaConstraintsIndexesRlsAclMatched:true,runtimeReadMatched:true,runtimeDdlDenied:true,
     anonymousRowsDenied:true,sourceHealth:currentHealth.status,sourceHealthReasons:currentHealth.reasons,
     authSchemaBackedUp:false,providerCredentialsBackedUp:false,hostedDisasterRecoveryApproved:false};

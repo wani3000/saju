@@ -57,7 +57,7 @@
   "sourceArtifacts": [
     {
       "file": "web/package.json",
-      "sha256": "8520774bbc92ee0e4a11bb775a59cc7ac216d7b35aa36920ba9b24c6d619f2c1"
+      "sha256": "1b5e36d92a2de8fd52377f075f24ecf3710505abd0f4b81192ac42c26ca29029"
     },
     {
       "file": "web/package-lock.json",
@@ -89,7 +89,7 @@
     },
     {
       "file": "web/scripts/check-hosted-restore.ts",
-      "sha256": "61d7c142f0af0bb7cde7557bc2d912cbe4bb04f37faf754e435d04a98dc83c19"
+      "sha256": "c88a6d36c874c6581862668fdec0851e9871c8b713291b3bc48d9886afbd5529"
     },
     {
       "file": "web/scripts/hosted-restore-target.ts",
@@ -149,7 +149,7 @@
     },
     {
       "file": "web/src/server/operations.ts",
-      "sha256": "dea23c2046447d86054a558859e528e9ed3328efd5a31a5ea121dc559c59edd6"
+      "sha256": "1fe18f6a0496e5b2b254b6bd031e6f55ccc874106339459ac8376cf533829c92"
     },
     {
       "file": "web/src/server/operational-command.ts",
@@ -196,12 +196,68 @@
       "sha256": "10c7c935b19569e182f0de77b6d937a1a19d8e5879adc834f85326f7461a97d1"
     },
     {
+      "file": "web/scripts/backup-prune.ts",
+      "sha256": "4c80e805fd3e257fefaa875a69cba7690e607a94959f1eaa1be0b18c6088e61a"
+    },
+    {
+      "file": "web/scripts/run-backup-prune.ts",
+      "sha256": "516056165528b259bd997de33bb7d7244e4560821e04d294edec8a420700eba3"
+    },
+    {
+      "file": "web/scripts/backup-verification.ts",
+      "sha256": "4dfb4471b9758a991f7959e5868a1b64531106ecc7c8b418004c44b302eadb98"
+    },
+    {
+      "file": "web/scripts/observe-operations.ts",
+      "sha256": "9276078875fd0ffaf45e096cc8cce5908de9e1b409798edb5036e7cf0e84db1a"
+    },
+    {
+      "file": "web/scripts/run-observe-operations.ts",
+      "sha256": "562769edfddee46a6f3386cd37d12d0f0e2fc2072eb90461d88baa55c05ca4dc"
+    },
+    {
+      "file": "web/scripts/check-launch-completion.ts",
+      "sha256": "db49e162a158f8aee89bcf58c12814480047f1935dade47d8a47c981edbf44fc"
+    },
+    {
+      "file": "web/src/server/operation-observation.ts",
+      "sha256": "8aa5254dc9bd4d3301fb7966b5faff712667d4afbfc6372507f187f370daa394"
+    },
+    {
+      "file": "web/src/server/recovery-overlay.ts",
+      "sha256": "3fdd517894f7aac4589f068958fb1ce460ac6ee08b8b5a2c0b17138ba9ec5a63"
+    },
+    {
+      "file": "web/src/server/launch-completion.ts",
+      "sha256": "340b57afd8d9c747daf4c681633803d2911cf1f5603eabf7536eb9cfc92a16b1"
+    },
+    {
+      "file": "web/tests/launch-operations.test.ts",
+      "sha256": "8bd5301443d42bd4933bef6ff7a96afefa567ce82de18628e98721e52f36f887"
+    },
+    {
+      "file": "web/tests/launch-completion.test.ts",
+      "sha256": "24ad34732f2a6686466071bd61ca247da43e8a81dfd6b262c21f5e2b542458c6"
+    },
+    {
+      "file": "web/tests/operations.test.ts",
+      "sha256": "3a123c8aa6529d3833f20d6c636eac7688caef83e339b365ad3c4f8b89d84222"
+    },
+    {
+      "file": "docs/launch-operator-settings.example.json",
+      "sha256": "851d2be71886f39e10ed472e9663c1f33a0c347ad0f33b494950275bcdcc41be"
+    },
+    {
+      "file": "docs/remaining-launch-execution.md",
+      "sha256": "13113ae961b6f3529ab91c4a65a40332a2bdb879a144f1ed0654c1bc03a82495"
+    },
+    {
       "file": "web/scripts/private-operations.ts",
       "sha256": "b9746fa5f46992ccb457c29ca99da75e93c8f594801e203f20a16c522af7ac73"
     },
     {
       "file": "web/scripts/backup-cycle.ts",
-      "sha256": "ee8a28097da22cea6859432845d37e3ccdf380eed1b6ade78947444738baf4cf"
+      "sha256": "2f55affe31f6835aa2e82643b40540109097e64b46429138612f6a0bbb17c75e"
     },
     {
       "file": "web/scripts/run-backup-cycle.ts",
@@ -209,7 +265,7 @@
     },
     {
       "file": "web/scripts/alert-queue.ts",
-      "sha256": "6329263f666c83443da28190756fc51efead658716ca3f1da36fbf2d3da0d41c"
+      "sha256": "6a92e5a129c845aa9c81bf010d872a73056b653feb19793ada6af70b67cf4713"
     },
     {
       "file": "web/scripts/run-alert-queue.ts",
@@ -217,11 +273,11 @@
     },
     {
       "file": "web/tests/operations-preparation.test.ts",
-      "sha256": "7661f68135f96c760e231062beb8c9c87383d026474f69952a71e6eb9ab2a3b9"
+      "sha256": "4b9e46e37948495c71e63573d2e7f8456b1c30536811fb75c45a001eb02726d1"
     },
     {
       "file": "docs/local-operations-automation.md",
-      "sha256": "054efc949051c101ce400894772f64a1b940ea520b93ed7cb5f5e0e5fabfb9c2"
+      "sha256": "c50be02b3481e104b23c629fec49f42cd3c1db0c59b4acbe332c40798abc989f"
     },
     {
       "file": "web/scripts/check-build-isolation.mjs",
@@ -265,7 +321,7 @@
     },
     {
       "file": "web/scripts/postgres-check.mjs",
-      "sha256": "e62bbdad23329507fcc21942771314f5471fa8ac9713cb9eb4195e9cdb44f690"
+      "sha256": "dc11fc2c78944f45983d9f0b1fce13ef241d60feef6005956ac8c6e303b5d9ec"
     },
     {
       "file": "web/scripts/postgres-scenarios.ts",
@@ -409,7 +465,7 @@
     },
     {
       "file": "web/scripts/restore-scenarios.ts",
-      "sha256": "5f5eac0db46a743c6720889b1ce09cdfeff094cbba8d66f833a3fd6d14f890d6"
+      "sha256": "cf19cbe871e4d56628905bf85082b781cdaa179b996a8028e14bb5d50f09a0f3"
     },
     {
       "file": "docs/audits/runtime-recovery-manifest.json",
@@ -421,7 +477,7 @@
     },
     {
       "file": "docs/policies/privacy-draft.md",
-      "sha256": "c44e3a9e6cbd642cb398c8dd11a4c00fc7eb64a292355017c59ec697965842dc"
+      "sha256": "733709f56e4e821033121112ce32be7da55eb07d896cf5e0caf28bb0dce1cba0"
     },
     {
       "file": "docs/policies/refund-draft.md",
@@ -433,7 +489,7 @@
     },
     {
       "file": "docs/operations-recovery-preparation.md",
-      "sha256": "d0e5baa38604b7fb9e81e0bce1d3b05ab5cd9dad985bcb3957de6b72ed3621fe"
+      "sha256": "e31b8d99b6a0c67b49d173fb4619061ff14514311aee7de37a7151c7d06ad2d2"
     },
     {
       "file": "web/preview/controller.ts",
